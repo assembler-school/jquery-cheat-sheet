@@ -1,0 +1,12 @@
+body {
+  background-color: burlywood;
+}
+
+main {
+  padding-left: 50px;
+  width: 70%;
+}
+
+.wrapper {
+  display: flex;
+}
