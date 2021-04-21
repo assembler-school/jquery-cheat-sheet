@@ -4,8 +4,8 @@
 
 ```html
 <script>
-  document.addEventListener("click", function (event) {
-    alert("You just clicked on button");
+  document.getElementById("e8Js").addEventListener("submit", function () {
+    alert("The form was submitted");
   });
 </script>
 ```
@@ -19,8 +19,8 @@
 
 ```html
 <script>
-  $(document).ready(function () {
-    console.log("DOM loaded from jQuery");
+  $("#e8JQuery").on("submit", function () {
+    alert("The form was submitted");
   });
 </script>
 ```
