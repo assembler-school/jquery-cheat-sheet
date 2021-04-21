@@ -56,6 +56,11 @@ function addListeners(e) {
     jq.fnMouseMove();
   }
 
+  if (el.matches('[title="onChange.md"]')) {
+    js.fnOnChange();
+    jq.fnOnChange();
+  }
+
   //   if (el.matches('[title="mouseMove.md"]')) {
   //     js.
   //     jq.

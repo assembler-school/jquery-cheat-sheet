@@ -32,3 +32,10 @@ export function fnMouseMove() {
     $("#e4JQueryDemo").html(coor);
   });
 }
+
+// Mouse move event
+export function fnOnChange() {
+  $("#e5JQuery").on("change", function (e) {
+    $(this).val($(this).val().toUpperCase());
+  });
+}

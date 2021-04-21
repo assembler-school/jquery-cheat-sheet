@@ -36,3 +36,12 @@ export function fnMouseMove() {
     document.getElementById("e4JsDemo").innerHTML = coor;
   });
 }
+
+// on change event
+export function fnOnChange() {
+  const input = document.getElementById("e5Js");
+  input.addEventListener("change", function (e) {
+    let x = document.getElementById("e5Js");
+    x.value = x.value.toUpperCase();
+  });
+}
