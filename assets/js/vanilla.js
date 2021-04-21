@@ -81,3 +81,11 @@ export function fnChangeSelect() {
     alert("You selected: " + value);
   });
 }
+
+// mouse over event
+export function fnMouseOver() {
+  const selector = document.getElementById("e10Js");
+  selector.addEventListener("mouseover", function (e) {
+    document.getElementById("e10Js").style.color = "red";
+  });
+}

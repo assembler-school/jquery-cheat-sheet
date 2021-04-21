@@ -81,10 +81,10 @@ function addListeners(e) {
     jq.fnChangeSelect();
   }
 
-  //   if (el.matches('[title="mouseOver.md"]')) {
-  //     js.
-  //     jq.
-  //   }
+  if (el.matches('[title="mouseOver.md"]')) {
+    js.fnMouseOver();
+    jq.fnMouseOver();
+  }
 
   //   if (el.matches('[title="checked.md"]')) {
   //     js.

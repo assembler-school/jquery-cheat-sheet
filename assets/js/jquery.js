@@ -70,3 +70,10 @@ export function fnChangeSelect() {
     alert("You selected: " + value);
   });
 }
+
+// mouse over event
+export function fnMouseOver() {
+  $("#e10JQuery").on("mouseover", function (e) {
+    $(this).css("color", "red");
+  });
+}
