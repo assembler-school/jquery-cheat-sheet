@@ -65,3 +65,10 @@ export function fnOnImgFailed() {
     document.getElementById("e7JsDemo").textContent = "Image Failed.";
   };
 }
+
+// on form submit event
+export function fnFormSubmit() {
+  document.getElementById("e8Js").addEventListener("submit", function () {
+    alert("The form was submitted");
+  });
+}

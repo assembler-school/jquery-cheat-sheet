@@ -55,3 +55,10 @@ export function fnOnImgFailed() {
     $("#e7JQueryDemo").text("Image failed.");
   });
 }
+
+// on form submit event
+export function fnFormSubmit() {
+  $("#e8JQuery").on("submit", function () {
+    alert("The form was submitted");
+  });
+}

@@ -71,10 +71,10 @@ function addListeners(e) {
     jq.fnOnImgFailed();
   }
 
-  //   if (el.matches('[title="formSubmit.md"]')) {
-  //     js.
-  //     jq.
-  //   }
+  if (el.matches('[title="formSubmit.md"]')) {
+    js.fnFormSubmit();
+    jq.fnFormSubmit();
+  }
 
   //   if (el.matches('[title="change.md"]')) {
   //     js.
