@@ -42,6 +42,7 @@ h2 {
 
 /*Style for header*/
 header {
+  user-select: none;
   background-color: var(--lightYellow);
   font-family: "Niagara Engraved";
   font-size: 25px;
@@ -66,7 +67,7 @@ section {
   /* min-height: 500px; */
 }
 .eventsSection,
-.selectorsSection  {
+.selectorsSection {
   background-color: var(--darkGreen);
   color: var(--lightGreen);
 }
@@ -86,29 +87,27 @@ section {
   min-width: 400px;
 }
 
-.functionSpan{
+.functionSpan {
   height: 8px;
   width: 8px;
   border-radius: 50%;
   display: inline-block;
-  margin-bottom: 4px;
-  margin-right: 10px
+  margin-bottom: 2px;
+  margin-right: 10px;
 }
 .eventsSpan,
-.selectorsSpan{
+.selectorsSpan {
   background-color: var(--lightGreen);
 }
-.functionsSpan{
+.functionsSpan {
   background-color: var(--darkGreen);
 }
-
-
 
 .functionTitle {
   cursor: pointer;
 }
 .eventsFunctionalities .functionTitle:hover,
-.selectorsFunctionalities .functionTitle:hover{
+.selectorsFunctionalities .functionTitle:hover {
   color: var(--mostLightGreen);
 }
 .functionsFunctionalities .functionTitle:hover {
@@ -117,12 +116,14 @@ section {
 
 /*Styles for the demo window*/
 .demo {
-  padding-left: 120px;
-  padding-right: 60px;
+  margin-left: 120px;
+  margin-right: 60px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* border: var(--darkGreen) solid 10px; */
+  /* border-radius: 5px; */
 }
 .demoHeader {
   display: flex;
@@ -142,13 +143,40 @@ section {
 }
 .demoContainer {
   height: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 .eventsDemoContainer,
 .selectorsDemoContainer {
   background-color: var(--lightGreen);
+  color: var(--darkGreen);
 }
 .functionsDemoContainer {
   background-color: var(--darkGreen);
+}
+.codeDiv {
+  width: 50%;
+  font-size: 20px;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.eventsCodeDiv,
+.selectorsCodeDiv {
+  color: var(--darkGreen);
+}
+.functionsCodeDiv {
+  color: var(--lightGreen);
+}
+.outputDiv {
+  font-size: 20px;
+  padding: 20px;
+}
+.eventsOutputDiv,
+.selectorsOutputDiv {
+  color: var(--darkGreen);
+}
+.functionsOutputDiv {
+  color: var(--lightGreen);
 }
 
 /*Checkboxes style*/

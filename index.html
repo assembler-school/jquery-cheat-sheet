@@ -14,19 +14,48 @@
       <h2 class="sectionTitle">Events</h2>
       <div class="sectionContent eventsContent">
         <div class="functionalities eventsFunctionalities">
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>HTML document has been loaded</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>clicked</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>double clicked</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>presses a key</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>moves the mouse cursor</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>changes a value</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>image is loaded</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>image fails to load</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>form is submitted</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>changes the option of a select element</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>position the mouse over an element</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>checked or unchecked</p>
-          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>list item is clicked</p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>HTML document has been
+            loaded
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>clicked
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>double clicked
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>presses a key
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>moves the mouse cursor
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>changes a value
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>image is loaded
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>image fails to load
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>form is submitted
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>changes the option of a
+            select element
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>position the mouse over
+            an element
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>checked or unchecked
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan eventsSpan"></span>list item is clicked
+          </p>
         </div>
         <div class="demo eventsDemo">
           <div class="demoHeader eventsDemoHeader">
@@ -36,6 +65,7 @@
                   id="jsVanillaEventsCheckbox"
                   type="checkbox"
                   name="checkbox"
+                  checked
                 />
                 <span class="checkboxControl jsVanillaEventsCheckbox"></span>
               </span>
@@ -53,7 +83,20 @@
               <h2 class="eventLabel" id="descriptionLabel">jQuery</h2>
             </label>
           </div>
-          <div class="demoContainer eventsDemoContainer"></div>
+          <div class="demoContainer eventsDemoContainer">
+            <div class="codeDiv eventsCodeDiv">
+              <p>
+                $("#link").attr("href"); $("#link").attr(
+                "href",'https://htmlg.com'); $("#link").attr({ "href" :
+                "https://htmlg.com", "title" : "HTML Editor" });
+                $("#link").attr("href", function(i, origValue){ return origValue
+                + "/help"; })
+              </p>
+            </div>
+            <div class="outputDiv eventsOutputDiv">
+              <p>Output</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -61,25 +104,68 @@
       <h2 class="sectionTitle">Functions</h2>
       <div class="sectionContent functionsContent">
         <div class="functionalities functionsFunctionalities">
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Create</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Remove</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Append</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Prepend</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>after</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>before</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Clone</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Add a class</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Remove a class</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Toggle a class</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Add a disabled attribute</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Remove the disabled attribute</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Set a data-src attribute</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Remove the data-src attribute</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Hide</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Show</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Fade in</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Fade out</p>
-          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Iterate a collection of elements</p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Create
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Remove
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Append
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Prepend
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>after
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>before
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Clone
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Add a class
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Remove a class
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Toggle a class
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Add a disabled
+            attribute
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Remove the disabled
+            attribute
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Set a data-src
+            attribute
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Remove the data-src
+            attribute
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Hide
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Show
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Fade in
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Fade out
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan functionsSpan"></span>Iterate a collection
+            of elements
+          </p>
         </div>
         <div class="demo functionsDemo">
           <div class="demoHeader functionsDemoHeader">
@@ -89,6 +175,7 @@
                   id="jsVanillaFunctionsCheckbox"
                   type="checkbox"
                   name="checkbox"
+                  checked
                 />
                 <span class="checkboxControl jsVanillaFunctionsCheckbox"></span>
               </span>
@@ -106,7 +193,20 @@
               <h2 class="eventLabel" id="descriptionLabel">jQuery</h2>
             </label>
           </div>
-          <div class="demoContainer functionsDemoContainer"></div>
+          <div class="demoContainer functionsDemoContainer">
+            <div class="codeDiv functionsCodeDiv">
+              <p>
+                $("#link").attr("href"); $("#link").attr(
+                "href",'https://htmlg.com'); $("#link").attr({ "href" :
+                "https://htmlg.com", "title" : "HTML Editor" });
+                $("#link").attr("href", function(i, origValue){ return origValue
+                + "/help"; })
+              </p>
+            </div>
+            <div class="outputDiv functionsOutputDiv">
+              <p>Output</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -114,22 +214,42 @@
       <h2 class="sectionTitle">Selectors</h2>
       <div class="sectionContent selectorsContent">
         <div class="functionalities selectorsFunctionalities">
-          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Get the parent element</p>
-          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Get the collection of children</p>
-          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>
+          <p class="functionTitle">
+            <span class="functionSpan SelectorsSpan"></span>Get the parent
+            element
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan SelectorsSpan"></span>Get the collection
+            of children
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan SelectorsSpan"></span>
             Get all the elements that have a certain class
           </p>
-          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Get an item by id</p>
-          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Get all the elements</p>
-          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>
+          <p class="functionTitle">
+            <span class="functionSpan SelectorsSpan"></span>Get an item by id
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan SelectorsSpan"></span>Get all the elements
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan SelectorsSpan"></span>
             Get the options of a select element that are selected
           </p>
-          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Change the href attribute</p>
-          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>
+          <p class="functionTitle">
+            <span class="functionSpan SelectorsSpan"></span>Change the href
+            attribute
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan SelectorsSpan"></span>
             Show an alert with the value of the first input of the page
           </p>
-          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Remove all items</p>
-          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Animate an item</p>
+          <p class="functionTitle">
+            <span class="functionSpan SelectorsSpan"></span>Remove all items
+          </p>
+          <p class="functionTitle">
+            <span class="functionSpan SelectorsSpan"></span>Animate an item
+          </p>
         </div>
         <div class="demo selectorsDemo">
           <div class="demoHeader selectorsDemoHeader">
@@ -139,6 +259,7 @@
                   id="jsVanillaSelectorsCheckbox"
                   type="checkbox"
                   name="checkbox"
+                  checked
                 />
                 <span class="checkboxControl jsVanillaSelectorsCheckbox"></span>
               </span>
@@ -156,13 +277,25 @@
               <h2 class="eventLabel" id="descriptionLabel">jQuery</h2>
             </label>
           </div>
-          <div class="demoContainer selectorsDemoContainer"></div>
+          <div class="demoContainer selectorsDemoContainer">
+            <div class="codeDiv selectorsCodeDiv">
+              <p>
+                $("#link").attr("href"); $("#link").attr(
+                "href",'https://htmlg.com'); $("#link").attr({ "href" :
+                "https://htmlg.com", "title" : "HTML Editor" });
+                $("#link").attr("href", function(i, origValue){ return origValue
+                + "/help"; })
+              </p>
+            </div>
+            <div class="outputDiv selectorsOutputDiv">
+              <p>Output</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </body>
   <footer></footer>
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="assets/js/cheatsheet.js"></script>
   <script src="assets/js/vanilla.js"></script>
