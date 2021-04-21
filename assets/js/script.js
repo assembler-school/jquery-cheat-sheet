@@ -1,3 +1,6 @@
+/* -------------------------------------------------------------------------- */
+/*                              GENERAL VARIABLES                             */
+/* -------------------------------------------------------------------------- */
 let events = [
   "Loaded document",
   "Element clicked",
@@ -48,3 +51,54 @@ let selectors = [
   "Remove all items of a selector",
   "Animate an item after 2 seconds",
 ];
+
+let categoryTitles = document.querySelectorAll(".category");
+let eventsContainer = $("#events-examples");
+let functionsContainer = $("#functions-examples");
+let selectorsContainer = $("#selectors-examples");
+
+/* -------------------------------------------------------------------------- */
+/*                                  FUNCTIONS                                 */
+/* -------------------------------------------------------------------------- */
+function setExamples(container, array) {
+  for (let e of array) {
+    // Creating the div
+    let newExample = $("<div>");
+    newExample.addClass("example");
+    newExample.html(e);
+    // Adding examples in container
+    $(container).append(newExample);
+  }
+}
+
+function showContainer(title) {
+  $(title).click(function () {
+    // Get the element that is displayed
+    $(".displayed").toggleClass("displayed");
+
+    $(this).next().addClass("displayed");
+  });
+}
+
+function arrowTranslation(arrow, container) {
+  $(arrow).click(function () {
+    if ($(arrow).hasClass("up-arrrow")) {
+      $(container).css("transform", "translateY(300px)");
+    } else {
+      $(container).css("transform", "translateY(-310px)");
+    }
+  });
+}
+
+arrowTranslation($(".down-arrow-events"), $("#events-examples"));
+
+// Appending examples
+setExamples(eventsContainer, events);
+setExamples(functionsContainer, functions);
+setExamples(selectorsContainer, selectors);
+
+// Assigning display container to three titles
+for (var t = 0; t <= categoryTitles.length; t++) {
+  showContainer(categoryTitles[t]);
+  console.log(t);
+}
