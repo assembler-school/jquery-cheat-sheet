@@ -4,16 +4,24 @@
 
 // click event
 export function fnClick() {
-  const btn = document.querySelector(".e0Js");
+  const btn = document.querySelector(".e1Js");
   btn.addEventListener("click", function (event) {
     alert("Js vanilla code");
   });
 }
 
-// click event
+// double click event
+export function fnDblClick() {
+  const btn = document.querySelector(".e2Js");
+  btn.addEventListener("dblclick", function (event) {
+    alert("Js vanilla - double click");
+  });
+}
+
+// press key event
 export function fnPressKey() {
-  const btn = document.querySelector(".mdJs");
-  btn.addEventListener("keypress", function (event) {
-    alert("Js vanilla - you pressed: ", e.code);
+  const input = document.getElementById("e3Js");
+  input.addEventListener("keypress", function (event) {
+    input.style.backgroundColor = "red";
   });
 }

@@ -4,14 +4,21 @@
 
 // click event
 export function fnClick() {
-  $(".e0JQuery").on("click", function (event) {
+  $(".e1JQuery").on("click", function (event) {
     alert("jQuery code");
   });
 }
 
-// click event
+// double click event
+export function fnDblClick() {
+  $(".e2JQuery").on("dblclick", function (event) {
+    alert("jQuery - double click");
+  });
+}
+
+// press key event
 export function fnPressKey() {
-  $(".e0JQuery").on("click", function (event) {
-    alert("jQuery code");
+  $("#e3JQuery").on("keypress", function (event) {
+    $("#e3JQuery").css("backgroundColor", "blue");
   });
 }

@@ -41,6 +41,11 @@ function addListeners(e) {
     jq.fnClick();
   }
 
+  if (el.matches('[title="dblClick.md"]')) {
+    js.fnDblClick();
+    jq.fnDblClick();
+  }
+
   if (el.matches('[title="pressKey.md"]')) {
     js.fnPressKey();
     jq.fnPressKey();
