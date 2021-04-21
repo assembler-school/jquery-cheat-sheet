@@ -41,8 +41,10 @@ body {
 }
 main {
   padding: 0px 5px;
+  display: flex;
+  flex-wrap: wrap;
 }
-/* Terminal-like windows ----------------------------- */
+/* IDE-like windows ----------------------------- */
 .terminal-window {
   background: var(--backgroundColor);
   padding: 5px;
@@ -92,25 +94,64 @@ pre span.count:before {
   font-weight: 200;
 }
 
-/* Unused for the moment */
-.circle {
+/* Mac Console mock -------------------------------------  */
+.console {
+  padding: 30px 17px 20px;
+  background-color: #1e1e1e;
+  color: white;
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 360px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  border-top: 28px solid #d5d5d5;
+}
+.console p {
+  margin: 0 0 15px 0;
+}
+.console p:before {
+  content: ">";
+  padding-right: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dots-container {
+  position: absolute;
+  top: -28px;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px;
+}
+.dots-container .dot {
   width: 12px;
   height: 12px;
-  display: inline-block;
-  border-radius: 15px;
-  margin-left: 2px;
-  border-width: 1px;
-  border-style: solid;
+  border-radius: 50%;
+  margin-right: 7px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
-.red {
-  background: var(--myRed);
-  border-color: #d04e42;
+.dot:first-child {
+  background-color: var(--myRed);
 }
-.green {
-  background: var(--myBlue);
-  border-color: #4ea73b;
+
+.dot:not(:first-child):not(:last-child) {
+  background-color: var(--myYellow);
 }
-.yellow {
-  background: var(--myYellow);
-  border-color: #d6a13d;
+
+.dot:last-child {
+  background-color: var(--myBlue);
+}
+
+.hide {
+  display: none;
 }
