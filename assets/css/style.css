@@ -1,0 +1,207 @@
+/*Fonts*/
+@font-face {
+  font-family: "Niagara Solid";
+  src: url("../fonts/NIAGSOL.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura LtCn BT";
+  src: url("../fonts/FuturaLightfont.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Niagara Engraved";
+  src: url("../fonts/NIAGENG.ttf") format("truetype");
+  font-style: normal;
+}
+
+/*General variables*/
+:root {
+  /* Colors */
+  --mostDarkGreen: #12443a;
+  --darkGreen: #358873;
+  --lightGreen: #b4d6c1;
+  --mostLightGreen: #dfeae2;
+  --lightYellow: #ffba49;
+  --white: white;
+}
+
+/*General variables*/
+* {
+  padding: 0px;
+  margin: 0px;
+  /* outline: 1px black solid; */
+}
+
+h2 {
+  font-family: "Niagara Solid";
+  font-size: 30px;
+}
+
+/*Style for header*/
+header {
+  background-color: var(--lightYellow);
+  font-family: "Niagara Engraved";
+  font-size: 25px;
+  color: var(--white);
+  height: 100px;
+  padding-left: 80px;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  margin-left: 10px;
+}
+
+body {
+  font-family: "Futura LtCn BT";
+}
+
+/*Style for sections*/
+section {
+  padding: 40px 80px;
+  padding-left: 80px;
+  /* min-height: 500px; */
+}
+.eventsSection,
+.selectorsSection  {
+  background-color: var(--darkGreen);
+  color: var(--lightGreen);
+}
+.functionsSection {
+  background-color: var(--lightGreen);
+  color: var(--darkGreen);
+}
+.sectionTitle {
+  border-bottom: 2px solid var(--lightYellow);
+  margin-bottom: 30px;
+}
+.sectionContent {
+  display: flex;
+}
+.functionalities {
+  font-size: 25px;
+  min-width: 400px;
+}
+
+.functionSpan{
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 4px;
+  margin-right: 10px
+}
+.eventsSpan,
+.selectorsSpan{
+  background-color: var(--lightGreen);
+}
+.functionsSpan{
+  background-color: var(--darkGreen);
+}
+
+
+
+.functionTitle {
+  cursor: pointer;
+}
+.eventsFunctionalities .functionTitle:hover,
+.selectorsFunctionalities .functionTitle:hover{
+  color: var(--mostLightGreen);
+}
+.functionsFunctionalities .functionTitle:hover {
+  color: var(--mostDarkGreen);
+}
+
+/*Styles for the demo window*/
+.demo {
+  padding-left: 120px;
+  padding-right: 60px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.demoHeader {
+  display: flex;
+  padding: 10px;
+  user-select: none;
+}
+.eventsDemoHeader,
+.selectorsDemoHeader {
+  color: var(--darkGreen);
+  background-color: var(--lightGreen);
+  border-bottom: var(--darkGreen) solid 2px;
+}
+.functionsDemoHeader {
+  color: var(--lightGreen);
+  background-color: var(--darkGreen);
+  border-bottom: var(--lightGreen) solid 2px;
+}
+.demoContainer {
+  height: 100%;
+}
+.eventsDemoContainer,
+.selectorsDemoContainer {
+  background-color: var(--lightGreen);
+}
+.functionsDemoContainer {
+  background-color: var(--darkGreen);
+}
+
+/*Checkboxes style*/
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+.checkboxLabel {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+}
+.checkboxLabel:hover {
+  cursor: pointer;
+}
+/* Hide default radio/checkbox button */
+.checkboxInput input {
+  opacity: 0%;
+  width: 0;
+  height: 0;
+}
+.checkboxControl {
+  display: block;
+  margin-right: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.jqueryEventsCheckbox,
+.jsVanillaEventsCheckbox,
+.jquerySelectorsCheckbox,
+.jsVanillaSelectorsCheckbox {
+  border: var(--darkGreen) solid 3px;
+}
+.checkboxInput input:checked + .jqueryEventsCheckbox,
+.checkboxInput input:checked + .jsVanillaEventsCheckbox,
+.checkboxInput input:checked + .jquerySelectorsCheckbox,
+.checkboxInput input:checked + .jsVanillaSelectorsCheckbox {
+  background-color: var(--darkGreen);
+  border: var(--darkGreen) solid 3px;
+}
+.jqueryFunctionsCheckbox,
+.jsVanillaFunctionsCheckbox {
+  border: var(--lightGreen) solid 3px;
+}
+.checkboxInput input:checked + .jqueryFunctionsCheckbox,
+.checkboxInput input:checked + .jsVanillaFunctionsCheckbox {
+  background-color: var(--lightGreen);
+  border: var(--lightGreen) solid 3px;
+}
+
+.checkboxLabel input {
+  position: relative;
+  z-index: -9999;
+}

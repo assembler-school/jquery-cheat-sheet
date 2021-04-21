@@ -1,0 +1,170 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>My jQuery Cheatsheet</title>
+  </head>
+  <header>
+    <img src="./assets/img/headericon.png" style="height: 50px" alt="" />
+    <h1>My jQuery Cheatsheet</h1>
+  </header>
+  <body>
+    <section class="eventsSection">
+      <h2 class="sectionTitle">Events</h2>
+      <div class="sectionContent eventsContent">
+        <div class="functionalities eventsFunctionalities">
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>HTML document has been loaded</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>clicked</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>double clicked</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>presses a key</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>moves the mouse cursor</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>changes a value</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>image is loaded</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>image fails to load</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>form is submitted</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>changes the option of a select element</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>position the mouse over an element</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>checked or unchecked</p>
+          <p class="functionTitle"><span class="functionSpan eventsSpan"></span>list item is clicked</p>
+        </div>
+        <div class="demo eventsDemo">
+          <div class="demoHeader eventsDemoHeader">
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jsVanillaEventsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                />
+                <span class="checkboxControl jsVanillaEventsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">JS Vanilla</h2>
+            </label>
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jqueryEventsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                />
+                <span class="checkboxControl jqueryEventsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">jQuery</h2>
+            </label>
+          </div>
+          <div class="demoContainer eventsDemoContainer"></div>
+        </div>
+      </div>
+    </section>
+    <section class="functionsSection">
+      <h2 class="sectionTitle">Functions</h2>
+      <div class="sectionContent functionsContent">
+        <div class="functionalities functionsFunctionalities">
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Create</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Remove</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Append</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Prepend</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>after</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>before</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Clone</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Add a class</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Remove a class</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Toggle a class</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Add a disabled attribute</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Remove the disabled attribute</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Set a data-src attribute</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Remove the data-src attribute</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Hide</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Show</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Fade in</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Fade out</p>
+          <p class="functionTitle"><span class="functionSpan functionsSpan"></span>Iterate a collection of elements</p>
+        </div>
+        <div class="demo functionsDemo">
+          <div class="demoHeader functionsDemoHeader">
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jsVanillaFunctionsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                />
+                <span class="checkboxControl jsVanillaFunctionsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">JS Vanilla</h2>
+            </label>
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jqueryFunctionsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                />
+                <span class="checkboxControl jqueryFunctionsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">jQuery</h2>
+            </label>
+          </div>
+          <div class="demoContainer functionsDemoContainer"></div>
+        </div>
+      </div>
+    </section>
+    <section class="selectorsSection">
+      <h2 class="sectionTitle">Selectors</h2>
+      <div class="sectionContent selectorsContent">
+        <div class="functionalities selectorsFunctionalities">
+          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Get the parent element</p>
+          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Get the collection of children</p>
+          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>
+            Get all the elements that have a certain class
+          </p>
+          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Get an item by id</p>
+          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Get all the elements</p>
+          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>
+            Get the options of a select element that are selected
+          </p>
+          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Change the href attribute</p>
+          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>
+            Show an alert with the value of the first input of the page
+          </p>
+          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Remove all items</p>
+          <p class="functionTitle"><span class="functionSpan SelectorsSpan"></span>Animate an item</p>
+        </div>
+        <div class="demo selectorsDemo">
+          <div class="demoHeader selectorsDemoHeader">
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jsVanillaSelectorsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                />
+                <span class="checkboxControl jsVanillaSelectorsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">JS Vanilla</h2>
+            </label>
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jquerySelectorsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                />
+                <span class="checkboxControl jquerySelectorsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">jQuery</h2>
+            </label>
+          </div>
+          <div class="demoContainer selectorsDemoContainer"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer></footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/cheatsheet.js"></script>
+  <script src="assets/js/vanilla.js"></script>
+  <script src="assets/js/jquery.js"></script>
+</html>
