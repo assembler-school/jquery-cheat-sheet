@@ -82,6 +82,7 @@ main {
   font-size: 140px;
   height: 140px;
   transform: translateY(-15px);
+  overflow: hidden;
 }
 
 .content {
@@ -108,7 +109,8 @@ main {
 }
 
 .examples-wrapper {
-  overflow: hidden;
+  overflow: scroll;
+  flex: 1 1 300px;
 }
 
 .examples {
@@ -125,6 +127,7 @@ main {
   font-size: 40px;
   transition: 0.4s;
   margin-bottom: 2px;
+  cursor: pointer;
 }
 
 .example:hover {
@@ -211,10 +214,12 @@ main {
 #macro-text {
   font-family: "Recursive", monospace;
   font-weight: 300;
+  white-space: pre-line;
 }
 
 #output-panel {
   outline: var(--border-size) solid var(--accent-color);
+  background-color: var(--dark-color);
 }
 
 footer {

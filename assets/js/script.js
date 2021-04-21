@@ -53,52 +53,95 @@ let selectors = [
 ];
 
 let categoryTitles = document.querySelectorAll(".category");
+
 let eventsContainer = $("#events-examples");
 let functionsContainer = $("#functions-examples");
 let selectorsContainer = $("#selectors-examples");
 
+let macroText = $("#macro-text");
+
+let tab = "\t";
+
 /* -------------------------------------------------------------------------- */
 /*                                  FUNCTIONS                                 */
 /* -------------------------------------------------------------------------- */
-function setExamples(container, array) {
+
+// Set containers' examples
+function setExamples(container, array, type) {
+  let i = 1;
   for (let e of array) {
     // Creating the div
     let newExample = $("<div>");
     newExample.addClass("example");
+    newExample.addClass(type + "-" + i);
     newExample.html(e);
     // Adding examples in container
     $(container).append(newExample);
+
+    i++;
   }
 }
 
+// Showing examples containers
 function showContainer(title) {
   $(title).click(function () {
-    // Get the element that is displayed
-    $(".displayed").toggleClass("displayed");
-
-    $(this).next().addClass("displayed");
-  });
-}
-
-function arrowTranslation(arrow, container) {
-  $(arrow).click(function () {
-    if ($(arrow).hasClass("up-arrrow")) {
-      $(container).css("transform", "translateY(300px)");
+    // Hide container if it is displayed
+    if ($(this).next().hasClass("displayed")) {
+      $(this).next().toggleClass("displayed");
+      // Display another one
     } else {
-      $(container).css("transform", "translateY(-310px)");
+      // Get the element that is displayed
+      $(".displayed").toggleClass("displayed");
+      $(this).next().addClass("displayed");
     }
   });
 }
 
+// Arrow animations
+function arrowTranslation(arrow, container) {
+  $(arrow).click(function (event) {
+    let contHeight = container.height();
+
+    if ($(arrow).hasClass("up-arrow")) {
+      $(container).css("transform", "translateY(0px)");
+      console.log("Up arrow");
+    } else {
+      $(container).css("transform", `translateY(-${contHeight}px)`);
+      console.log("Down arrow");
+    }
+  });
+}
+
+// Arrows for each category
 arrowTranslation($(".down-arrow-events"), $("#events-examples"));
+arrowTranslation($(".up-arrow-events"), $("#events-examples"));
+
+arrowTranslation($(".down-arrow-functions"), $("#functions-examples"));
+arrowTranslation($(".up-arrow-functions"), $("#functions-examples"));
+
+arrowTranslation($(".down-arrow-selectors"), $("#selectors-examples"));
+arrowTranslation($(".up-arrow-selectors"), $("#selectors-examples"));
 
 // Appending examples
-setExamples(eventsContainer, events);
-setExamples(functionsContainer, functions);
-setExamples(selectorsContainer, selectors);
+setExamples(eventsContainer, events, "event");
+setExamples(functionsContainer, functions, "functions");
+setExamples(selectorsContainer, selectors, "selectors");
 
 // Assigning display container to three titles
 for (var t = 0; t <= categoryTitles.length; t++) {
   showContainer(categoryTitles[t]);
-  console.log(t);
 }
+
+// Clickable examples
+$(".example").click(function () {
+  macroText.text($(this).html());
+});
+
+let test = `This
+      is a
+multilin
+e
+string
+`;
+
+macroText.text(test);
