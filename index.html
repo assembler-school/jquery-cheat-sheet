@@ -25,24 +25,74 @@
 
     <main>
       <div id="main-left">
+        <!-- Events -->
         <div id="event-cat" class="category">EVENTS</div>
+        <!-- Content -->
         <div id="event-content" class="content displayed-content">
           <div class="arrow-wrapper">
             <div class="up-arrow">&uarr;</div>
             <div class="down-arrow">&darr;</div>
           </div>
-          <div id="event-examples"></div>
+          <div id="events-examples"></div>
         </div>
+
+        <!-- Functions -->
         <div id="functions-cat" class="category">FUNCTIONS</div>
-        <div id="functions-conent" class="content"></div>
+        <!-- Content -->
+        <div id="functions-conent" class="content">
+          <div class="arrow-wrapper">
+            <div class="up-arrow">&uarr;</div>
+            <div class="down-arrow">&darr;</div>
+          </div>
+          <div id="functions-examples"></div>
+        </div>
+
+        <!-- Selectors -->
         <div id="selectors-cat" class="category">SELECTORS</div>
-        <div id="selectors-content" class="content"></div>
+        <!-- Content -->
+        <div id="selectors-content" class="content">
+          <div class="arrow-wrapper">
+            <div class="up-arrow">&uarr;</div>
+            <div class="down-arrow">&darr;</div>
+          </div>
+          <div id="functions-examples"></div>
+        </div>
       </div>
 
       <div id="main-right">
         <div id="macro-panel" class="panel">
-          <div id="macro-top"></div>
-          <div id="macro-bottom"></div>
+          <div id="macro-top">
+            <!-- Vanilla -->
+            <label class="radio">
+              <span class="radio-input">
+                <input
+                  id="vanilla-radio"
+                  class="js-type"
+                  type="radio"
+                  name="js-radio"
+                  checked
+                />
+                <span class="radio-control"></span>
+              </span>
+              <span class="radio-label">Vanilla</span>
+            </label>
+            <!-- Extra  -->
+            <label class="radio">
+              <span class="radio-input">
+                <input
+                  id="jquery-radio"
+                  class="js-type"
+                  type="radio"
+                  name="js-radio"
+                />
+                <span class="radio-control"></span>
+              </span>
+              <span class="radio-label">jQuery</span>
+            </label>
+          </div>
+          <div id="macro-bottom">
+            <div id="macro-text">Monospacedm</div>
+          </div>
         </div>
         <div id="output-panel" class="panel"></div>
       </div>

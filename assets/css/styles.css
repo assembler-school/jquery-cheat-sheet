@@ -86,10 +86,11 @@ main {
 }
 
 .content {
-  display: flex;
+  display: none;
 }
 
 .displayed-content {
+  display: flex;
   flex-grow: 1;
 }
 
@@ -117,6 +118,7 @@ main {
 #output-panel {
   padding: 20px;
 }
+
 #macro-panel {
   background: var(--accent-color);
   display: flex;
@@ -125,13 +127,60 @@ main {
 
 #macro-top {
   padding: 0 20px 0 20px;
-  height: 40px;
+  height: 50px;
   display: flex;
   border-bottom: var(--border-size) solid var(--dark-color);
 }
 
+.radio {
+  color: var(--dark-green);
+  /* Display elements as grid */
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.75em;
+  align-items: center; /* Give elements a space between */
+  width: fit-content;
+  margin-right: calc(var(--margin) * 1.5);
+}
+.radio-label {
+  font-size: 20px;
+  font-weight: var(--medium);
+}
+
+/* Hide default radio/checkbox button */
+.radio-input input {
+  opacity: 0%;
+  width: 0;
+  height: 0;
+}
+
+/* Center new radio to text */
+.radio-input {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling owr own radio/checkbox button */
+.radio-control {
+  display: block;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: var(--border-size) solid var(--dark-color);
+}
+
+/* Checked radio */
+.radio-input input:checked + .radio-control {
+  background-color: var(--dark-color);
+}
+
 #macro-bottom {
   flex-grow: 1;
+}
+
+#macro-text {
+  font-family: "Recursive", monospace;
 }
 
 #output-panel {
