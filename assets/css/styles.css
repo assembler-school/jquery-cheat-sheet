@@ -209,12 +209,17 @@ main {
 
 #macro-bottom {
   flex-grow: 1;
+  white-space: pre;
+  display: flex;
+  flex-direction: column;
 }
 
 #macro-text {
   font-family: "Recursive", monospace;
   font-weight: 300;
-  white-space: pre-line;
+  white-space: pre-wrap;
+  height: 100%;
+  overflow: scroll;
 }
 
 #output-panel {

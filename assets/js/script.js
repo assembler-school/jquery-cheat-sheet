@@ -137,11 +137,11 @@ $(".example").click(function () {
   macroText.text($(this).html());
 });
 
-let test = `This
-      is a
-multilin
-e
-string
+let test = `// This is a comment
+function testName(event){
+  is a multiline
+  string
+};
 `;
 
 macroText.text(test);
