@@ -1,3 +1,11 @@
+:root {
+  --myYellow: #f6bd60;
+  --myLinen: #f7ede2;
+  --myPink: #f5cac3;
+  --myBlue: #84a59d;
+  --myRed: #f28482;
+}
+
 * {
   font-family: "Lexend", sans-serif;
 }
