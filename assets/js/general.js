@@ -66,10 +66,10 @@ function addListeners(e) {
     jq.fnOnImgLoaded();
   }
 
-  //   if (el.matches('[title="imgFailLoad.md"]')) {
-  //     js.
-  //     jq.
-  //   }
+  if (el.matches('[title="imgFailLoad.md"]')) {
+    js.fnOnImgFailed();
+    jq.fnOnImgFailed();
+  }
 
   //   if (el.matches('[title="formSubmit.md"]')) {
   //     js.

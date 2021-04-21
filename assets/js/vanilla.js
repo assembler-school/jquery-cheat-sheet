@@ -55,3 +55,13 @@ export function fnOnImgLoaded() {
     document.getElementById("e6JsDemo").textContent = "Image loaded.";
   };
 }
+
+// on image failed to load event
+export function fnOnImgFailed() {
+  let img1 = document.createElement("img");
+  img1.src = "./assets/img/assemblers.png";
+  document.getElementById("e7Js").append(img1);
+  img1.onerror = function () {
+    document.getElementById("e7JsDemo").textContent = "Image Failed.";
+  };
+}

@@ -47,3 +47,11 @@ export function fnOnImgLoaded() {
     $("#e6JQueryDemo").text("Image loaded.");
   });
 }
+
+// on image loaded event
+export function fnOnImgFailed() {
+  $("#e7JQuery").append($("<img>", { src: "./assets/img/assemblers.png" }));
+  $("img").on("error", function () {
+    $("#e7JQueryDemo").text("Image failed.");
+  });
+}
