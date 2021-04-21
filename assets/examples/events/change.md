@@ -4,8 +4,10 @@
 
 ```html
 <script>
-  document.addEventListener("click", function (event) {
-    alert("You just clicked on button");
+  const selector = document.getElementById("e9Js");
+  selector.addEventListener("change", function (e) {
+    let value = e.target.value;
+    alert("You selected: " + value);
   });
 </script>
 ```
