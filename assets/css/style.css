@@ -40,6 +40,22 @@ h2 {
   font-size: 30px;
 }
 
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Abril Fatface", serif;
+  font-size: 20px;
+} */
+
+/* h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+ } */
+
 /*Style for header*/
 header {
   user-select: none;
@@ -126,6 +142,7 @@ section {
 .demoHeader {
   display: flex;
   padding: 10px;
+  padding-bottom: 0px;
   user-select: none;
 }
 .eventsDemoHeader,
