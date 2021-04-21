@@ -61,20 +61,10 @@ function addListeners(e) {
     jq.fnOnChange();
   }
 
-  //   if (el.matches('[title="mouseMove.md"]')) {
-  //     js.
-  //     jq.
-  //   }
-
-  //   if (el.matches('[title="onChange.md"]')) {
-  //     js.
-  //     jq.
-  //   }
-
-  //   if (el.matches('[title="imgLoad.md"]')) {
-  //     js.
-  //     jq.
-  //   }
+  if (el.matches('[title="imgLoad.md"]')) {
+    js.fnOnImgLoaded();
+    jq.fnOnImgLoaded();
+  }
 
   //   if (el.matches('[title="imgFailLoad.md"]')) {
   //     js.

@@ -1,4 +1,4 @@
-# Document Loaded
+# Document Loaded event
 
 ## Javascript
 

@@ -1,4 +1,4 @@
-# Click event
+# Change event
 
 ## Javascript
 

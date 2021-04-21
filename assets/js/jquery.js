@@ -33,9 +33,17 @@ export function fnMouseMove() {
   });
 }
 
-// Mouse move event
+// on change event
 export function fnOnChange() {
   $("#e5JQuery").on("change", function (e) {
     $(this).val($(this).val().toUpperCase());
+  });
+}
+
+// on image loaded event
+export function fnOnImgLoaded() {
+  $("#e6JQuery").append($("<img>", { src: "./assets/img/assembler.png" }));
+  $("img").on("load", function () {
+    $("#e6JQueryDemo").text("Image loaded.");
   });
 }

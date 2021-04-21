@@ -10,7 +10,7 @@
 </script>
 ```
 
-<button class="e0Js">Click Me!</button>
+<button class="e1Js">Click Me!</button>
 
 ## jQuery
 
@@ -22,4 +22,4 @@
 </script>
 ```
 
-<button class="e0JQuery">Click Me!</button>
+<button class="e1JQuery">Click Me!</button>

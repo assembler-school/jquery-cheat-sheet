@@ -45,3 +45,13 @@ export function fnOnChange() {
     x.value = x.value.toUpperCase();
   });
 }
+
+// on image loaded event
+export function fnOnImgLoaded() {
+  let img1 = document.createElement("img");
+  img1.src = "./assets/img/assembler.png";
+  document.getElementById("e6Js").append(img1);
+  img1.onload = function () {
+    document.getElementById("e6JsDemo").textContent = "Image loaded.";
+  };
+}
