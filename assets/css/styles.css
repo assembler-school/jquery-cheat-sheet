@@ -88,11 +88,6 @@ main {
   display: none;
 }
 
-.displayed-content {
-  display: flex;
-  flex-grow: 1;
-}
-
 .arrow-wrapper {
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
@@ -100,6 +95,40 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-right: var(--margin);
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.displayed {
+  display: flex;
+  flex-grow: 1;
+}
+
+.examples-wrapper {
+  overflow: hidden;
+}
+
+.examples {
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  transition: 0.4s ease-in;
+}
+
+.example {
+  color: var(--accent-color);
+  font-weight: var(--light);
+  font-size: 40px;
+  transition: 0.4s;
+  margin-bottom: 2px;
+}
+
+.example:hover {
+  font-weight: var(--semiBold);
 }
 
 #main-right {
@@ -136,11 +165,12 @@ main {
   /* Display elements as grid */
   display: grid;
   grid-template-columns: min-content auto;
-  grid-gap: 0.75em;
+  grid-gap: 0.5em;
   align-items: center; /* Give elements a space between */
   width: fit-content;
   margin-right: calc(var(--margin) * 1.5);
 }
+
 .radio-label {
   font-size: 20px;
   font-weight: var(--medium);
@@ -163,8 +193,8 @@ main {
 .radio-control {
   display: block;
   margin-right: 5px;
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   border: var(--border-size) solid var(--dark-color);
 }
