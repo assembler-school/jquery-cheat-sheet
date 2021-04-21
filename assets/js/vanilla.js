@@ -104,3 +104,14 @@ export function fnChecked() {
     }
   });
 }
+
+// event target
+export function fnEventTarget() {
+  const selector = document.getElementById("e12Js").children;
+
+  for (const li of selector) {
+    li.addEventListener("click", function (e) {
+      alert(e.target.textContent);
+    });
+  }
+}

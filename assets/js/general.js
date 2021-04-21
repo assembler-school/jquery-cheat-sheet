@@ -21,7 +21,7 @@ links.forEach((element) => {
         addListeners(e);
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
         // let message = err.statusText || "Error";
       });
   });
@@ -91,8 +91,8 @@ function addListeners(e) {
     jq.fnChecked();
   }
 
-  //   if (el.matches('[title="eventTarget.md"]')) {
-  //     js.
-  //     jq.
-  //   }
+  if (el.matches('[title="eventTarget.md"]')) {
+    js.fnEventTarget();
+    jq.fnEventTarget();
+  }
 }

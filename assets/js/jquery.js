@@ -72,6 +72,13 @@ export function fnChangeSelect() {
 }
 
 // mouse over event
+export function fnMouseOver() {
+  $("#e10JQuery").on("mouseover", function (e) {
+    $(this).css("color", "red");
+  });
+}
+
+// mouse over event
 export function fnChecked() {
   $("#e11JQuery").on("click", function (e) {
     let checkBox = $("#e11JQuery");
@@ -83,4 +90,13 @@ export function fnChecked() {
       text.css("display", "none");
     }
   });
+}
+
+// event target
+export function fnEventTarget() {
+  $("#e12JQuery")
+    .children()
+    .on("click", function (e) {
+      alert($(this).text());
+    });
 }
