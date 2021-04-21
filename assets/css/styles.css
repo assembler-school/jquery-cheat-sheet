@@ -10,3 +10,10 @@ main {
 .wrapper {
   display: flex;
 }
+
+#e4Js,
+#e4JQuery {
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+}

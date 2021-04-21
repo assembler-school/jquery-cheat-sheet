@@ -1,5 +1,5 @@
 /*
- * EVENTS
+ * SECTION OF EVENTS
  */
 
 // click event
@@ -23,5 +23,16 @@ export function fnPressKey() {
   const input = document.getElementById("e3Js");
   input.addEventListener("keypress", function (event) {
     input.style.backgroundColor = "red";
+  });
+}
+
+// Mouse move event
+export function fnMouseMove() {
+  const input = document.getElementById("e4Js");
+  input.addEventListener("mousemove", function (e) {
+    let x = e.clientX;
+    let y = e.clientY;
+    let coor = "Coordinates: (" + x + "," + y + ")";
+    document.getElementById("e4JsDemo").innerHTML = coor;
   });
 }

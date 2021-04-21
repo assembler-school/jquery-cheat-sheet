@@ -51,6 +51,11 @@ function addListeners(e) {
     jq.fnPressKey();
   }
 
+  if (el.matches('[title="mouseMove.md"]')) {
+    js.fnMouseMove();
+    jq.fnMouseMove();
+  }
+
   //   if (el.matches('[title="mouseMove.md"]')) {
   //     js.
   //     jq.

@@ -1,5 +1,5 @@
 /*
- * EVENTS
+ * SECTION OF EVENTS
  */
 
 // click event
@@ -20,5 +20,15 @@ export function fnDblClick() {
 export function fnPressKey() {
   $("#e3JQuery").on("keypress", function (event) {
     $("#e3JQuery").css("backgroundColor", "blue");
+  });
+}
+
+// Mouse move event
+export function fnMouseMove() {
+  $("#e4JQuery").on("mousemove", function (e) {
+    let x = e.clientX;
+    let y = e.clientY;
+    let coor = "Coordinates: (" + x + "," + y + ")";
+    $("#e4JQueryDemo").html(coor);
   });
 }
