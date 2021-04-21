@@ -10,6 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Recursive&display=swap"
       rel="stylesheet"
     />
+    <!-- Icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+    />
     <!-- Tab title -->
     <title>jQuery Cheat sheet</title>
   </head>
@@ -21,7 +26,13 @@
     <main>
       <div id="main-left">
         <div id="event-cat" class="category">EVENTS</div>
-        <div id="event-content" class="content"></div>
+        <div id="event-content" class="content displayed-content">
+          <div class="arrow-wrapper">
+            <div class="up-arrow">&uarr;</div>
+            <div class="down-arrow">&darr;</div>
+          </div>
+          <div id="event-examples"></div>
+        </div>
         <div id="functions-cat" class="category">FUNCTIONS</div>
         <div id="functions-conent" class="content"></div>
         <div id="selectors-cat" class="category">SELECTORS</div>
@@ -29,7 +40,10 @@
       </div>
 
       <div id="main-right">
-        <div id="macro-panel" class="panel"></div>
+        <div id="macro-panel" class="panel">
+          <div id="macro-top"></div>
+          <div id="macro-bottom"></div>
+        </div>
         <div id="output-panel" class="panel"></div>
       </div>
     </main>
