@@ -89,3 +89,18 @@ export function fnMouseOver() {
     document.getElementById("e10Js").style.color = "red";
   });
 }
+
+// click event on checkbox
+export function fnChecked() {
+  const selector = document.getElementById("e11Js");
+  selector.addEventListener("click", function (e) {
+    let checkBox = document.getElementById("e11Js");
+    let text = document.getElementById("e11JsDemo");
+
+    if (checkBox.checked == true) {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+  });
+}

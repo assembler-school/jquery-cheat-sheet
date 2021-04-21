@@ -86,10 +86,11 @@ function addListeners(e) {
     jq.fnMouseOver();
   }
 
-  //   if (el.matches('[title="checked.md"]')) {
-  //     js.
-  //     jq.
-  //   }
+  if (el.matches('[title="checked.md"]')) {
+    js.fnChecked();
+    jq.fnChecked();
+  }
+
   //   if (el.matches('[title="eventTarget.md"]')) {
   //     js.
   //     jq.
