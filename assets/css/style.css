@@ -63,8 +63,6 @@ body {
 /*Style for sections*/
 section {
   padding: 40px 80px;
-  padding-left: 80px;
-  /* min-height: 500px; */
 }
 .eventsSection,
 .selectorsSection {
