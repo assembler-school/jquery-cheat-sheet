@@ -7,7 +7,7 @@
 
 :root {
   /* Colors */
-  --accent-color: rgb(251, 245, 71);
+  --accent-color: rgb(244, 220, 17);
   --dark-color: rgb(11, 10, 9);
   --light-color: rgb(227, 227, 227);
   /* Font weights */
@@ -21,6 +21,7 @@
   --mono-font: "Recursive", monospace;
   /* Sizes */
   --margin: 20px;
+  --border-size: 3px;
 }
 
 /* General styling */
@@ -44,18 +45,59 @@ body {
   color: var(--accent-color);
 }
 
-/* MAIN */
-
 header {
   height: 50px;
-  font-size: 20px;
+  font-size: 40px;
+  font-weight: var(--bold);
   align-items: flex-start;
   margin-bottom: var(--margin);
 }
 
+/* MAIN */
 main {
   flex: 1 1 900px;
   margin-bottom: var(--margin);
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-left {
+  width: 60%;
+  margin-right: var(--margin);
+  color: var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.category {
+  font-weight: var(--extraLight);
+  font-size: 140px;
+  height: 120px;
+  transform: translateY(-15px);
+}
+
+.content {
+  display: none;
+}
+
+#main-right {
+  flex: 1 1 37%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.panel {
+  height: 48%;
+}
+
+#macro-panel {
+  background: var(--accent-color);
+}
+
+#output-panel {
+  outline: var(--border-size) solid var(--accent-color);
 }
 
 footer {
