@@ -1,0 +1,85 @@
+:root{
+    --color-orange: #ffe3b3;
+    --color-green: #d0e6a5;
+    --color-blue: #86e3ce;
+}
+
+* {
+    /* outline: 1px solid black; */
+}
+
+body{
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: ghostwhite;
+}
+
+/* Header Style */
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+}
+
+.page-title-class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.quick-access-class{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+}
+
+.quick-access-class div{
+    display: flex;
+    align-items: center;
+}
+
+/* Main Style */
+
+.main-init{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+.column-init{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px  gray;
+}
+
+.bg-blue{
+    background-color: var(--color-blue);
+}
+
+.bg-orange{
+    background-color: var(--color-orange);
+}
+
+.bg-green{
+    background-color: var(--color-green);
+}
+
+/* Footer Style */
+
+footer{
+    height: 40px;
+}
