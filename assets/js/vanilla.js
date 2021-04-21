@@ -72,3 +72,12 @@ export function fnFormSubmit() {
     alert("The form was submitted");
   });
 }
+
+// change select event
+export function fnChangeSelect() {
+  const selector = document.getElementById("e9Js");
+  selector.addEventListener("change", function (e) {
+    let value = e.target.value;
+    alert("You selected: " + value);
+  });
+}

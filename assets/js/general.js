@@ -76,10 +76,10 @@ function addListeners(e) {
     jq.fnFormSubmit();
   }
 
-  //   if (el.matches('[title="change.md"]')) {
-  //     js.
-  //     jq.
-  //   }
+  if (el.matches('[title="change.md"]')) {
+    js.fnChangeSelect();
+    jq.fnChangeSelect();
+  }
 
   //   if (el.matches('[title="mouseOver.md"]')) {
   //     js.

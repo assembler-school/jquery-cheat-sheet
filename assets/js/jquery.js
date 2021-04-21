@@ -62,3 +62,11 @@ export function fnFormSubmit() {
     alert("The form was submitted");
   });
 }
+
+// change select event
+export function fnChangeSelect() {
+  $("#e9JQuery").on("change", function (e) {
+    let value = e.target.value;
+    alert("You selected: " + value);
+  });
+}
