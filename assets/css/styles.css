@@ -26,7 +26,6 @@
   --semiBold: 600;
   --bold: 700;
   /* Other font */
-  --mono-font: "Recursive", monospace;
   /* Sizes */
   --margin: 20px;
   --border-size: 3px;
@@ -38,7 +37,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Clash";
-  outline: 2px red solid;
+  /* outline: 2px red solid; */
 }
 
 body {
@@ -181,6 +180,7 @@ main {
 
 #macro-text {
   font-family: "Recursive", monospace;
+  font-weight: 300;
 }
 
 #output-panel {
@@ -189,4 +189,7 @@ main {
 
 footer {
   height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
