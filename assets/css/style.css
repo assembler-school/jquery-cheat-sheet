@@ -4,8 +4,113 @@
   --myPink: #f5cac3;
   --myBlue: #84a59d;
   --myRed: #f28482;
+  --backgroundColor: #24292e;
+  --darkAccent: #1f2428;
+  --grayAccent: #444d56;
 }
 
 * {
+  padding: 0px;
+  margin: 0px;
+}
+/* Header section ------------------------------------- */
+
+header {
+  background-color: var(--darkAccent);
   font-family: "Lexend", sans-serif;
+  color: var(--myLinen);
+  padding: 0px 5px;
+  height: fit-content;
+}
+.tab {
+  padding: 10px;
+  background-color: var(--backgroundColor);
+  font-weight: lighter;
+  border-style: solid solid none solid;
+  border-color: rgba(0, 0, 0, 0.384);
+  border-width: 1px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+/* Body section ------------------------------------- */
+body {
+  font-family: "Lexend", sans-serif;
+  background-color: var(--darkAccent);
+  color: var(--myLinen);
+}
+main {
+  padding: 0px 5px;
+}
+/* Terminal-like windows ----------------------------- */
+.terminal-window {
+  background: var(--backgroundColor);
+  padding: 5px;
+  /* border-radius: 5px; */
+  border: rgba(0, 0, 0, 0.384) 1px solid;
+  border-top: none;
+  height: fit-content;
+  width: fit-content;
+  margin-bottom: 0.8rem;
+}
+.terminal-highlight {
+  background-color: var(--grayAccent);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px;
+}
+/* IDE like pre-numbering ---------------------------------------- */
+pre {
+  font-family: "Fira Mono", monospace;
+  margin: 0.2rem auto;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.45);
+  line-height: 0;
+  counter-reset: line;
+}
+pre span {
+  display: block;
+  line-height: 1.5rem;
+}
+.code-highlight {
+  /* font-weight: 600; */
+  background-color: var(--darkAccent);
+  line-height: 2rem;
+  text-align: center;
+  /*   border-bottom: 1px var(--myPink) dashed; */
+}
+pre span.count:before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  border-right: 1px solid #ddd;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  color: #888;
+  width: 1rem;
+  font-weight: 200;
+}
+
+/* Unused for the moment */
+.circle {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 15px;
+  margin-left: 2px;
+  border-width: 1px;
+  border-style: solid;
+}
+.red {
+  background: var(--myRed);
+  border-color: #d04e42;
+}
+.green {
+  background: var(--myBlue);
+  border-color: #4ea73b;
+}
+.yellow {
+  background: var(--myYellow);
+  border-color: #d6a13d;
 }
