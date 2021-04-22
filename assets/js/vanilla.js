@@ -26,7 +26,7 @@ document.onload(function(){
 });`;
 
   // Output
-  outputVanilla.innerHTML = "HTML file loaded!";
+  outputVanilla.innerHTML = "> HTML file loaded!";
 }
 
 //1

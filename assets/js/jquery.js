@@ -29,7 +29,8 @@ $( document ).ready(function() {
   macroJquery.text(macroString);
 
   // Output
-  outputJquery.text("HTML file loaded!");
+  outputJquery.text(">   HTML file loaded!");
+  // outputJquery.css("color", "grey");
 }
 
 //1
@@ -78,7 +79,7 @@ $(element).dblclick(function(){
 function keyPressed() {
   // Macro
   macroString = `// Return a message on a pressed key
-      
+
 $(document).keypress(function(){
   console.log("Key pressed!");
 }`;
