@@ -148,6 +148,7 @@ main {
 #macro-bottom,
 #output-panel {
   padding: 20px;
+  overflow: scroll;
 }
 
 #macro-panel {
