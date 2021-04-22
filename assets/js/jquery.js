@@ -40,7 +40,7 @@ function clickedItem() {
 
 $(element).click(function(){
   $(this).text("Clicked!");
-}`;
+};`;
 
   macroJquery.text(macroString);
 
@@ -61,7 +61,7 @@ function dblClickedItem() {
     
 $(element).dblclick(function(){
   $(this).text("Clicked!");
-}`;
+};`;
 
   macroJquery.text(macroString);
 
@@ -82,7 +82,7 @@ function keyPressed() {
 
 $(document).keypress(function(){
   console.log("Key pressed!");
-}`;
+};`;
 
   macroJquery.text(macroString);
 
@@ -98,17 +98,19 @@ $(document).keypress(function(){
 //4 ----------------------------------------------------------
 function mouseMoved() {
   // Macro
-  macroString = `// Return a message on a pressed key
+  macroString = `// Show mouse movement
 
-$(document).keypress(function(){
-  console.log("Key pressed!");
-}`;
+$(document).mousemove(function(e){
+  console.log("Mouse at: ("
+  + e.pageX+", "
+  + e.pageX +")");
+};`;
 
   macroJquery.text(macroString);
 
   // Output
-  $(outputJquery).mousemove(function (event) {
-    console.log(event.pageX, event.pageX);
+  $(document).mousemove(function (event) {
+    outputJquery.text("> Mouse at: (" + event.pageX + ", " + event.pageX + ")");
   });
 }
 

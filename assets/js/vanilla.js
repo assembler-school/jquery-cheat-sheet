@@ -36,7 +36,7 @@ function clickedItem() {
 
 element.onclick = function(){
   this.innerText = "Clicked!";
-}`;
+};`;
 
   // Output
   let newButton = document.createElement("div");
@@ -55,7 +55,7 @@ function dblClickedItem() {
 
 element.ondblclick = function(){
   this.innerText = "Clicked!";
-}`;
+};`;
 
   // Output
   let newButton = document.createElement("div");
@@ -74,7 +74,7 @@ function keyPressed() {
 
 element.onkeypress = function(){
   this.innerText = "Key pressed!";
-}`;
+};`;
 
   // Output
   outputVanilla.innerText = "";
@@ -82,6 +82,23 @@ element.onkeypress = function(){
   document.onkeypress = function () {
     outputVanilla.innerText = outputText;
     outputText += "> Key pressed! \n";
+  };
+}
+
+//4 ----------------------------------------------------------
+function mouseMoved() {
+  // Macro
+  macroTextVanilla.innerText = `// Show mouse movement
+
+document.onmousemove = function(e){
+  console.log("> Mouse at:("
+  + e.pageX + ", "
+  + e.pageY + ")");
+};`;
+
+  // Output
+  document.onmousemove = function (e) {
+    outputVanilla.innerText = "> Mouse at: (" + e.pageX + ", " + e.pageY + ")";
   };
 }
 
@@ -104,5 +121,9 @@ export const vanillaExamples = [
   // 3
   function () {
     keyPressed();
+  },
+  // 4
+  function () {
+    mouseMoved();
   },
 ];

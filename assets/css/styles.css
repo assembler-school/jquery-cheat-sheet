@@ -217,7 +217,7 @@ main {
 
 #macro-bottom {
   flex-grow: 1;
-  white-space: pre-line;
+  white-space: pre-wrap;
   display: flex;
   flex-direction: column;
   font-size: 16px;
