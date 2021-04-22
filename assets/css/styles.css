@@ -180,6 +180,7 @@ main {
   align-items: center; /* Give elements a space between */
   width: fit-content;
   margin-right: calc(var(--margin) * 1.5);
+  cursor: pointer;
 }
 
 .radio-label {
