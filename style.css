@@ -112,6 +112,11 @@ header{
     font-size: 20px;
     font-weight: 100;
     white-space: nowrap;
+    cursor: pointer;
+}
+
+.links-column:hover{
+    font-weight: 500;
 }
 
 /* Footer Style */
