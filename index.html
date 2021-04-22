@@ -173,7 +173,32 @@
       </div>
       <section class="modal-background hidden">
         <div class="modal-content">
-          <div class="modal-examples"></div>
+          <div class="flex-column">
+            <div class="two-columns" id="modal1">
+              <h3>jQuery Code</h3>
+              <div class="demo-code">
+                <code id="code1"></code>
+              </div>
+              <h3>Demo</h3>
+              <div class="demo" id="demo1">
+                <div class="mid-boxes" id="grandparent">
+                  Grandparent
+                  <div class="mid-boxes" id="parent">Parent
+                    <div class="mid-boxes" id="child">Child</div>
+                  </div>
+                </div>
+              </div>
+              <button class="test" id="test1">Test it!</button>
+            </div>
+            <div class="two-columns" id="modal2">
+              <h3>Vanilla JS Code</h3>
+              <div class="demo-code">
+                <code id="code2"></code>
+              </div>
+              <h3>Demo</h3>
+              <div class="demo" id="demo2"></div>
+              <button class="test" id="test2">Test it!</button>
+          </div>
           <div class="dots-container">
             <div class="dot" id="close-modal"></div>
             <div class="dot"></div>
