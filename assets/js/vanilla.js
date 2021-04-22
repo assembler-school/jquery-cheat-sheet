@@ -193,3 +193,21 @@ export function fnAddClass() {
     para.classList.add("red-text");
   });
 }
+
+export function fnRemoveClass() {
+  const selector = document.getElementById("f8Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f8JsDemo");
+    para.classList.remove("red-text");
+  });
+}
+
+export function fnToggleClass() {
+  const selector = document.getElementById("f9Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f9JsDemo");
+    para.classList.toggle("red-text");
+  });
+}

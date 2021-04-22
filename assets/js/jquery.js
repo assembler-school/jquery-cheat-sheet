@@ -159,3 +159,15 @@ export function fnAddClass() {
     let cln = $("#f7JQueryDemo").addClass("red-text");
   });
 }
+
+export function fnRemoveClass() {
+  $("#f8JQuery").on("click", function (e) {
+    let cln = $("#f8JQueryDemo").removeClass("red-text");
+  });
+}
+
+export function fnToggleClass() {
+  $("#f9JQuery").on("click", function (e) {
+    let cln = $("#f9JQueryDemo").toggleClass("red-text");
+  });
+}
