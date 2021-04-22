@@ -47,6 +47,7 @@ html {
 }
 main {
   padding: 0px 5px;
+  counter-reset: line;
   /*   display: flex;
   flex-wrap: wrap; */
 }
@@ -82,7 +83,6 @@ pre {
   border-radius: 0.25em;
   box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.45);
   line-height: 0;
-  counter-reset: line;
 }
 pre span {
   display: block;
@@ -148,7 +148,7 @@ pre span.count:before {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
     0 2px 4px -1px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  border-top: 28px solid var(--myLinen);
+  border-top: 28px solid var(--myPink);
 }
 .console p {
   overflow-y: scroll;
@@ -251,12 +251,12 @@ pre span.count:before {
   width: 90vw;
   height: 100px;
   background-color: var(--backgroundColor);
-  color: var(--myLinen);
+  color: var(--myPink);
   margin: 20vh auto;
   padding: 20px;
   border: 1px solid var(--darkestGray);
   border-radius: 5px;
   position: relative;
   z-index: 2;
-  border-top: 28px solid var(--myLinen);
+  border-top: 28px solid var(--myPink);
 }
