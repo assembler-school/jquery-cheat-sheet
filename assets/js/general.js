@@ -122,4 +122,9 @@ function addListeners(e) {
     js.fnAppend();
     jq.fnAppend();
   }
+
+  if (el.matches('[title="prepend.md"]')) {
+    js.fnPrepend();
+    jq.fnPrepend();
+  }
 }

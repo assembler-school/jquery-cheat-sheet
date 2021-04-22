@@ -125,3 +125,10 @@ export function fnAppend() {
     $("#f2JQueryDemo").append(para);
   });
 }
+
+export function fnPrepend() {
+  $("#f3JQuery").on("click", function (e) {
+    let para = $("<button>", { text: "Click Me!" });
+    $("#f3JQueryDemo").prepend(para);
+  });
+}

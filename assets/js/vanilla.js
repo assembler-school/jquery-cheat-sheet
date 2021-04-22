@@ -137,12 +137,12 @@ export function fnRemove() {
   });
 }
 
-export function fnAppend() {
-  const selector = document.getElementById("f2Js");
+export function fnPrepend() {
+  const selector = document.getElementById("f3Js");
 
   selector.addEventListener("click", function (e) {
     let para = document.createElement("button");
     para.innerText = "Click Me!";
-    document.getElementById("f2JsDemo").appendChild(para);
+    document.getElementById("f3JsDemo").prepend(para);
   });
 }
