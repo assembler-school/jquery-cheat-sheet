@@ -44,6 +44,7 @@ header{
 .quick-access-class div{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 /* Main Style */
