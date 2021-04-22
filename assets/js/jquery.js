@@ -18,7 +18,7 @@ let examplesJquery = $(".example");
 /* -------------------------------------------------------------------------- */
 // Events
 
-//0
+//0 ----------------------------------------------------------
 function htmlLoaded() {
   // Macro
   macroString = `// Loading html
@@ -30,7 +30,7 @@ $(document).ready(function() {
   macroJquery.text(macroString);
 
   // Output
-  outputJquery.text(">   HTML file loaded!");
+  outputJquery.text("> HTML file loaded!");
   // outputJquery.css("color", "grey");
 }
 
