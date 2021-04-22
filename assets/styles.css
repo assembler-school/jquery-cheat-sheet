@@ -8,14 +8,54 @@ section.reference{
 ul{
     list-style: none;
 }
+h3{
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+}
 h2{
     display: flex;
     justify-content: center;
 }
+
 h1{
     display: flex;
     justify-content: center;
 }
+p{
+    display: flex;
+    justify-content: center;
+}
+.showComandContent{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    position: fixed;
+    top: 0%;
+    background-color: white;
+    width: 80%;
+    height: 50%;
+    top:25%;
+    left: 10%;
+}h2.title{
+    grid-column: 1/4;
+}
+h3.jQueryCom{
+
+}
+h3.VailllaCom{
+
+}
+p.jQueryText{
+
+}
+p.result{
+
+}
+p.vanillaText{
+
+}
+
 li.specificEvent{
     max-width: 70%;
     background: linear-gradient(5deg,rgb(103, 182, 228),rgb(255,255,255) );
