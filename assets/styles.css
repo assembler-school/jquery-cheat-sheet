@@ -1,0 +1,36 @@
+section.reference{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+
+
+}
+ul{
+    list-style: none;
+}
+h2{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+li.specificEvent{
+    max-width: 70%;
+    background: linear-gradient(5deg,rgb(103, 182, 228),rgb(255,255,255) );
+    margin-bottom: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+}
+li.specificSelector{
+    max-width: 70%;
+    background: linear-gradient(5deg,rgb(228, 184, 103),rgb(255,255,255) );
+    margin-bottom: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+}
+ul.selectors{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
