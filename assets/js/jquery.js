@@ -21,9 +21,9 @@ let examplesJquery = $(".example");
 //0 ----------------------------------------------------------
 function htmlLoaded() {
   // Macro
-  macroString = `// Loading html
+  macroString = `// Loading an html file
 
-$(document).ready(function() {
+$(document).ready(function(){
   console.log("HTML file loaded!");
 });
   `;

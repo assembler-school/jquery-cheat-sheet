@@ -21,7 +21,7 @@ let examples = document.getElementsByClassName("example");
 //0 ----------------------------------------------------------
 function htmlLoaded() {
   // Macro
-  macroTextVanilla.innerText = `// Loading an html
+  macroTextVanilla.innerText = `// Loading an html file
 
 document.onload(function(){
   console.log("HTML file loaded!");

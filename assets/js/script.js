@@ -211,6 +211,13 @@ function removeEventJQuery(target, type, insideFunction, array) {
   console.log("Removed event listener '" + type + "' in " + target);
 }
 
+// Clear output panel
+// $(window).keydown(function (event) {
+//   if (event.ctrlKey && event.keyCode === 75) {
+//     $("#output-panel").html("");
+//     event.preventDefault();
+//   }
+// });
 /* -------------------------------------------------------------------------- */
 /*                                    TEST                                    */
 /* -------------------------------------------------------------------------- */
