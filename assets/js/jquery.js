@@ -183,3 +183,15 @@ export function fnRemoveAttr() {
     $("#f11JQueryDemo").removeAttr("disabled");
   });
 }
+
+export function fnToggleDataAttr() {
+  $("#f12JQueryb1").on("click", function () {
+    $("#f12JQueryImg").attr("data-src", "./assembler.png");
+    alert("data-src is: " + $("#f12JQueryImg").attr("data-src"));
+  });
+
+  $("#f12JQueryb2").on("click", function () {
+    $("#f12JQueryImg").removeAttr("data-src");
+    alert("data-src is: " + $("#f12JQueryImg").attr("data-src"));
+  });
+}

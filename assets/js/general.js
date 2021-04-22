@@ -167,4 +167,9 @@ function addListeners(e) {
     js.fnRemoveAttr();
     jq.fnRemoveAttr();
   }
+
+  if (el.matches('[title="removeDataAttr.md"]')) {
+    js.fnToggleDataAttr();
+    jq.fnToggleDataAttr();
+  }
 }

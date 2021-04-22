@@ -229,3 +229,20 @@ export function fnRemoveAttr() {
     para.removeAttribute("disabled");
   });
 }
+
+export function fnToggleDataAttr() {
+  const btn1 = document.getElementById("f12Jsb1");
+  const btn2 = document.getElementById("f12Jsb2");
+
+  btn1.addEventListener("click", function (e) {
+    const img = document.getElementById("f12JsImg");
+    img.dataset.src = "./assembler.png";
+    alert("data-src is: " + img.dataset.src);
+  });
+
+  btn2.addEventListener("click", function (e) {
+    const img = document.getElementById("f12JsImg");
+    img.removeAttribute("data-src");
+    alert("data-src  is: " + img.dataset.src);
+  });
+}
