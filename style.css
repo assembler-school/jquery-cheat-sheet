@@ -1,35 +1,83 @@
 /* CSS - Vars */
 
 :root {
-    --background-div: rgba(0, 0, 0, 0.5);
-    --background-text: rgba(32, 24, 98);
+    --background-div: rgb(0, 0, 0);
+    --background-text: rgb(28, 160, 41);
     --background-buttons: rgb(255, 255, 255);
-    --font: 'VT323', monospace;
+    --font: 'Zen Dots', cursive;
 }
 
 
 /* CSS - Root */
 
 * {
-    border: 1px solid rgb(255, 255, 255);
+    /* border: 1px solid rgb(255, 255, 255); */
     font-family: var(--font);
-    color: rgb(255, 255, 255);
+    color: rgb(253, 253, 253);
     font-size: small;
     text-align: center;
-    cursor: url("Assets/gun-target.png") 32 32, auto;
+    /* cursor: url("Assets/gun-target.png") 32 32, auto; */
+}
+
+p:hover,
+h1:hover,
+li:hover {
+    background-color: yellowgreen;
 }
 
 
 /* CSS - Body */
 
 body {
-    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 0;
     height: 100vh;
+    /* Background-gradient */
+    background: linear-gradient(134deg, #d21717, #ffaa00, #e1e870, #0fa114, #0006ff, #6519bf, #bb12bd);
+    background-size: 1400% 1400%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 20%
+    }
+    50% {
+        background-position: 100% 81%
+    }
+    100% {
+        background-position: 0% 20%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 20%
+    }
+    50% {
+        background-position: 100% 81%
+    }
+    100% {
+        background-position: 0% 20%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 20%
+    }
+    50% {
+        background-position: 100% 81%
+    }
+    100% {
+        background-position: 0% 20%
+    }
+    /* Background-gradient */
 }
 
 
@@ -40,17 +88,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--background-div);
+    /* background-color: var(--background-div); */
     background-size: cover;
     width: 10%;
     height: 70%;
     margin-left: 4%;
     margin-right: 2%;
-    border: 10px solid var(--background-buttons);
-    border-radius: 40px;
+    /* border: 2px solid var(--background-buttons);
+    border-radius: 10px; */
 }
 
 .main-header-class h1 {
+    display: flex;
     font-size: xx-large;
 }
 
@@ -68,8 +117,8 @@ body {
     height: 70%;
     margin-left: 4%;
     margin-right: 2%;
-    border: 10px solid var(--background-buttons);
-    border-radius: 40px;
+    border: 2px solid var(--background-buttons);
+    border-radius: 10px;
 }
 
 
@@ -85,21 +134,18 @@ body {
     height: 70%;
     margin-left: 2%;
     margin-right: 4%;
-    border: 10px solid var(--background-buttons);
-    border-radius: 40px;
+    border: 2px solid var(--background-buttons);
+    border-radius: 10px;
 }
 
-.jquery-to-jsVanilla {
+.jquery-to-jsVanilla-class {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     background-color: var(--background-div);
     width: 70%;
     height: 70%;
-    margin-top: 30%;
-    margin-left: 2%;
-    margin-right: 4%;
-    border: 10px solid var(--background-buttons);
-    border-radius: 40px;
+    border: 2px solid var(--background-buttons);
+    border-radius: 10px;
 }
