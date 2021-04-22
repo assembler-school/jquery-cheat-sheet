@@ -1,5 +1,3 @@
-// $('.functionsDemo').height($('.functionsFunctionalities').height());
-
-//Function to switch checkbox
-
-
+$("#eventOutputButton").click(function () {
+  $("#eventOutputP").html("Button clicked");
+});

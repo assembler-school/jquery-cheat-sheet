@@ -40,22 +40,6 @@ h2 {
   font-size: 30px;
 }
 
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Abril Fatface", serif;
-  font-size: 20px;
-} */
-
-/* h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-style: italic;
- } */
-
 /*Style for header*/
 header {
   user-select: none;
@@ -174,7 +158,7 @@ section {
   font-size: 20px;
   padding: 20px;
   overflow-y: scroll;
-  line-height : 30px;
+  line-height: 30px;
   white-space: pre-wrap;
 }
 .eventsCodeDiv,

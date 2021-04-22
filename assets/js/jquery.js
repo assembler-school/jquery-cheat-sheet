@@ -6,13 +6,9 @@ var idFunctionGlobal;
 var idSelectorGlobal;
 var eventsContentjQuery = [
   {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
+    code: `$("#eventOutputButton").click(function () {
+        $("#eventOutputP").html("Button clicked");
+      });`,
     output: "<h1>My jQuery Cheatsheet</h1>",
   },
   {
@@ -441,15 +437,15 @@ $(".eventsTitle").each(function () {
 });
 $("input#jqueryEventsCheckbox").change(displayEventsConsolejQuery);
 
-// $(".functionsTitle").each(function () {
-//   $(this).click(displayFunctionsConsolejQuery);
-// });
-// $("input#jqueryFunctionsCheckbox").change(displayFunctionsConsolejQuery);
+$(".functionsTitle").each(function () {
+  $(this).click(displayFunctionsConsolejQuery);
+});
+$("input#jqueryFunctionsCheckbox").change(displayFunctionsConsolejQuery);
 
-// $(".selectorsTitle").each(function () {
-//   $(this).click(displaySelectorsConsolejQuery);
-// });
-// $("input#jquerySelectorsCheckbox").change(displaySelectorsConsolejQuery);
+$(".selectorsTitle").each(function () {
+  $(this).click(displaySelectorsConsolejQuery);
+});
+$("input#jquerySelectorsCheckbox").change(displaySelectorsConsolejQuery);
 
 //------------------------------------------------------------------------
 // GENERAL FUNCTIONS FOR PAGE
@@ -515,36 +511,36 @@ function displayEventsConsolejQuery() {
   }
 }
 
-// function displayFunctionsConsolejQuery() {
-//   let idFunction = $(this).attr("id");
-//   if (idFunction === "jqueryFunctionsCheckbox") {
-//     idFunction = idFunctionGlobal;
-//   } else {
-//     idFunctionGlobal = idFunction;
-//   }
-//   idFunction = idFunction.match(/\d/g);
-//   idFunction = parseInt(idFunction.join(""));
-//   if ($("input#jqueryFunctionsCheckbox").is(":checked")) {
-//     $(".functionsCodeDiv").html(functionsContentjQuery[idFunction - 1].code);
-//     $(".functionsOutputDiv").html(
-//       functionsContentjQuery[idFunction - 1].output
-//     );
-//   }
-// }
+function displayFunctionsConsolejQuery() {
+  let idFunction = $(this).attr("id");
+  if (idFunction === "jqueryFunctionsCheckbox") {
+    idFunction = idFunctionGlobal;
+  } else {
+    idFunctionGlobal = idFunction;
+  }
+  idFunction = idFunction.match(/\d/g);
+  idFunction = parseInt(idFunction.join(""));
+  if ($("input#jqueryFunctionsCheckbox").is(":checked")) {
+    $(".functionsCodeDiv").html(functionsContentjQuery[idFunction - 1].code);
+    $(".functionsOutputDiv").html(
+      functionsContentjQuery[idFunction - 1].output
+    );
+  }
+}
 
-// function displaySelectorsConsolejQuery() {
-//   let idSelector = $(this).attr("id");
-//   if (idSelector === "jquerySelectorsCheckbox") {
-//     idSelector = idSelectorGlobal;
-//   } else {
-//     idSelectorGlobal = idSelector;
-//   }
-//   idSelector = idSelector.match(/\d/g);
-//   idSelector = parseInt(idSelector.join(""));
-//   if ($("input#jquerySelectorsCheckbox").is(":checked")) {
-//     $(".selectorsCodeDiv").html(selectorsContentjQuery[idSelector - 1].code);
-//     $(".selectorsOutputDiv").html(
-//       selectorsContentjQuery[idSelector - 1].output
-//     );
-//   }
-// }
+function displaySelectorsConsolejQuery() {
+  let idSelector = $(this).attr("id");
+  if (idSelector === "jquerySelectorsCheckbox") {
+    idSelector = idSelectorGlobal;
+  } else {
+    idSelectorGlobal = idSelector;
+  }
+  idSelector = idSelector.match(/\d/g);
+  idSelector = parseInt(idSelector.join(""));
+  if ($("input#jquerySelectorsCheckbox").is(":checked")) {
+    $(".selectorsCodeDiv").html(selectorsContentjQuery[idSelector - 1].code);
+    $(".selectorsOutputDiv").html(
+      selectorsContentjQuery[idSelector - 1].output
+    );
+  }
+}
