@@ -44,6 +44,7 @@ header{
 .quick-access-class div{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 /* Main Style */
@@ -55,13 +56,22 @@ header{
     justify-content: space-evenly;
 }
 
+.wrapper-column{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin: 0 4% 0 4%;
+    justify-content: space-between;
+}
+
 .column-init{
     width: 30%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 700;
     border-radius: 20px;
     box-shadow: 5px 5px 20px  gray;
 }
@@ -76,6 +86,32 @@ header{
 
 .bg-green{
     background-color: var(--color-green);
+}
+
+/* Data inside column */
+
+.title-data-column{
+    font-size: 35px;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+    margin-left: 55px;
+}
+
+#data-column{
+    height: 90%;
+    margin-bottom: 45px;
+    margin-left: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.links-column{
+    font-size: 20px;
+    font-weight: 100;
+    white-space: nowrap;
 }
 
 /* Footer Style */
