@@ -146,3 +146,31 @@ export function fnPrepend() {
     document.getElementById("f3JsDemo").prepend(para);
   });
 }
+
+export function fnAfter() {
+  const selector = document.getElementById("f4Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelectorAll(".f4JsDemo");
+
+    para.forEach((element) => {
+      let btn = document.createElement("button");
+      btn.textContent = "Click";
+      element.insertAdjacentElement("afterend", btn);
+    });
+  });
+}
+
+export function fnBefore() {
+  const selector = document.getElementById("f5Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelectorAll(".f5JsDemo");
+
+    para.forEach((element) => {
+      let btn = document.createElement("button");
+      btn.textContent = "Click";
+      element.insertAdjacentElement("beforebegin", btn);
+    });
+  });
+}

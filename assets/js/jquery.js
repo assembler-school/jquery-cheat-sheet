@@ -132,3 +132,17 @@ export function fnPrepend() {
     $("#f3JQueryDemo").prepend(para);
   });
 }
+
+export function fnAfter() {
+  $("#f4JQuery").on("click", function (e) {
+    let para = $("<button>", { text: "Click" });
+    $(".f4JQueryDemo").after(para);
+  });
+}
+
+export function fnBefore() {
+  $("#f5JQuery").on("click", function (e) {
+    let para = $("<button>", { text: "Click" });
+    $(".f5JQueryDemo").before(para);
+  });
+}

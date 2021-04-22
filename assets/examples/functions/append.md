@@ -4,8 +4,12 @@
 
 ```html
 <script>
-  document.addEventListener("click", function (event) {
-    alert("Js vanilla code");
+  const selector = document.getElementById("f2Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.createElement("button");
+    para.innerText = "Click Me!";
+    document.getElementById("f2JsDemo").appendChild(para);
   });
 </script>
 ```
@@ -20,8 +24,9 @@ Click the button to append a button
 
 ```html
 <script>
-  $(document).ready(function () {
-    alert("jQuery code");
+  $("#f2JQuery").on("click", function (e) {
+    let para = $("<button>", { text: "Click Me!" });
+    $("#f2JQueryDemo").append(para);
   });
 </script>
 ```

@@ -127,4 +127,14 @@ function addListeners(e) {
     js.fnPrepend();
     jq.fnPrepend();
   }
+
+  if (el.matches('[title="after.md"]')) {
+    js.fnAfter();
+    jq.fnAfter();
+  }
+
+  if (el.matches('[title="before.md"]')) {
+    js.fnBefore();
+    jq.fnBefore();
+  }
 }

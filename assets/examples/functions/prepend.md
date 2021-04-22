@@ -14,11 +14,11 @@
 </script>
 ```
 
-Click the button to prepend a button
+Insert span element after each p element
 
-<button id="f3Js">Try it</button>
+<button id="f4Js">Try it</button>
 
-<div id="f3JsDemo">This is a div</div>
+<div id="f4JsDemo">This is a div</div>
 
 ## jQuery
 
