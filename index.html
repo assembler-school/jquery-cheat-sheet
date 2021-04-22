@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                 <h2>EVENTS</h2>
                 <section id="section-1" class="section-class">
                     <h4>Browser Events</h4>
-                    <ul>
+                    <ul id="section-1-ul" class="pepe">
                         <li>When the HTML document has been loaded and you can manipulate it with JavaScript</li>
                         <li>When an HTML item has been clicked</li>
                         <li>When an HTML item has been double clicked</li>
@@ -98,24 +99,19 @@
                     </ul>
                 </section>
             </div>
-            <!-- Section -->
-            <!-- Section -->
-            <div id="container-1" class="container-class">
-                <section id="section-1" class="section-class">
-                    <h4>Event Handler Attachment</h4>
-                    <ul>
-                        <li>Function()</li>
-                        <li>Function()</li>
-                        <li>Function()</li>
-                    </ul>
-                </section>
-            </div>
-            <!-- Section -->
-        </article>
+            <script src="main.js" type="text/javascript"></script>
+
+            </section>
+    </div>
+    <!-- Section -->
+    </article>
     </div>
     <div class="container-right-class" id="container-right">
-        <div class="jquery-to-jsVanilla-class">RESPUESTA</div>
+        <div class="jquery-to-jsVanilla-class">
+            <input type="button" name="jsVanilla" id="jsVanilla" class="button-class glow-button">JS <br>
+            <input type="button" name="jQuery" id="jQuery" class="button-class glow-button">JQ <br>
+        </div>
     </div>
-
+</body>
 
 </html>

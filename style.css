@@ -1,186 +1,200 @@
-/* CSS - Vars */
-
-:root {
-    --background-div: rgb(0, 0, 0);
-    --background-text: rgb(28, 160, 41);
-    --background-buttons: rgb(255, 255, 255);
-    --font: 'Zen Dots', cursive;
-}
-
-
-/* CSS - Root */
-
-* {
-    /* border: 1px solid rgb(255, 255, 255); */
-    font-family: var(--font);
-    color: rgb(253, 253, 253);
-    font-size: xx-small;
-    text-align: center;
-    /* cursor: url("Assets/gun-target.png") 32 32, auto; */
-}
-
-
-/* CSS - Generals */
-
-ul {
-    list-style-type: none;
-    max-width: 70%;
-}
-
-li {
-    text-align: left;
-}
-
-li:hover {
-    font-size: 5px;
-    color: #fff;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-    }
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
-}
-
-ul li::marker {
-    content: "▶";
-}
-
-h1 {
-    font-size: 10vw;
-    text-shadow: 4px 4px 0px #000000;
-    mix-blend-mode: screen;
-    animation: fadeIn 2.5s linear forwards;
-}
-
-
-/* CSS - Body */
-
-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    height: 100vh;
-    /* Background-gradient */
-    background: linear-gradient(134deg, #d21717, #ffaa00, #e1e870, #0fa114, #0006ff, #6519bf, #bb12bd);
-    background-size: 1400% 1400%;
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 20%
-    }
-    50% {
-        background-position: 100% 81%
-    }
-    100% {
-        background-position: 0% 20%
-    }
-}
-
-@-moz-keyframes AnimationName {
-    0% {
-        background-position: 0% 20%
-    }
-    50% {
-        background-position: 100% 81%
-    }
-    100% {
-        background-position: 0% 20%
-    }
-}
-
-@keyframes AnimationName {
-    0% {
-        background-position: 0% 20%
-    }
-    50% {
-        background-position: 100% 81%
-    }
-    100% {
-        background-position: 0% 20%
-    }
-    /* Background-gradient */
-}
-
-
-/* CSS - Div - Header */
-
-.main-header-class {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    text-transform: uppercase;
-    width: 10%;
-    height: 70%;
-    margin-left: 4%;
-    margin-right: 2%;
-    /* border: 2px solid var(--background-buttons);
+        /* CSS - Vars */
+        
+         :root {
+            --background-div: rgb(0, 0, 0);
+            --background-text: rgb(28, 160, 41);
+            --background-buttons: rgb(255, 255, 255);
+            --font: 'Zen Dots', cursive;
+            --spotOne: #26115a;
+            --spotTwo: #ec008c;
+            --spotThree: #ff0000;
+        }
+        /* CSS - Root */
+        
+        * {
+            /* border: 1px solid rgb(255, 255, 255); */
+            font-family: var(--font);
+            color: rgb(253, 253, 253);
+            font-size: xx-small;
+            text-align: center;
+            /* cursor: url("Assets/gun-target.png") 32 32, auto; */
+        }
+        /* CSS - Generals */
+        
+        ul {
+            list-style-type: none;
+            max-width: 70%;
+        }
+        
+        li {
+            text-align: left;
+        }
+        
+        li:hover {
+            font-size: 5px;
+            color: #fff;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+        }
+        
+        ul li::marker {
+            content: "▶";
+        }
+        
+        h1 {
+            font-size: 10vw;
+            text-shadow: 4px 4px 0px #000000;
+            mix-blend-mode: screen;
+            animation: fadeIn 2.5s linear forwards;
+        }
+        /* CSS - Body */
+        
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            /* Background-gradient */
+            background: linear-gradient(134deg, #d21717, #ffaa00, #e1e870, #0fa114, #0006ff, #6519bf, #bb12bd);
+            background-size: 1400% 1400%;
+            -webkit-animation: AnimationName 30s ease infinite;
+            -moz-animation: AnimationName 30s ease infinite;
+            animation: AnimationName 30s ease infinite;
+        }
+        
+        @-webkit-keyframes AnimationName {
+            0% {
+                background-position: 0% 20%
+            }
+            50% {
+                background-position: 100% 81%
+            }
+            100% {
+                background-position: 0% 20%
+            }
+        }
+        
+        @-moz-keyframes AnimationName {
+            0% {
+                background-position: 0% 20%
+            }
+            50% {
+                background-position: 100% 81%
+            }
+            100% {
+                background-position: 0% 20%
+            }
+        }
+        
+        @keyframes AnimationName {
+            0% {
+                background-position: 0% 20%
+            }
+            50% {
+                background-position: 100% 81%
+            }
+            100% {
+                background-position: 0% 20%
+            }
+            /* Background-gradient */
+        }
+        /* CSS - Div - Header */
+        
+        .main-header-class {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            text-transform: uppercase;
+            width: 10%;
+            height: 70%;
+            margin-left: 4%;
+            margin-right: 2%;
+            /* border: 2px solid var(--background-buttons);
     border-radius: 10px; */
-}
-
-.main-header-class h1 {
-    display: flex;
-    font-size: xx-large;
-}
-
-
-/* CSS - Div - Left */
-
-.all-container-class {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--background-div);
-    background-size: cover;
-    width: 30%;
-    height: 70%;
-    margin-left: 4%;
-    margin-right: 2%;
-    border: 2px solid var(--background-buttons);
-    border-radius: 10px;
-    word-wrap: break-word;
-}
-
-
-/* CSS - Div - Right */
-
-.container-right-class {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: var(--background-div);
-    width: 30%;
-    height: 70%;
-    margin-left: 2%;
-    margin-right: 4%;
-    border: 2px solid var(--background-buttons);
-    border-radius: 10px;
-    word-wrap: break-word;
-}
-
-.jquery-to-jsVanilla-class {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--background-div);
-    width: 70%;
-    height: 70%;
-    border: 2px solid var(--background-buttons);
-    border-radius: 10px;
-    word-wrap: break-word;
-}
+        }
+        
+        .main-header-class h1 {
+            display: flex;
+            font-size: xx-large;
+        }
+        /* CSS - Div - Left */
+        
+        .all-container-class {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--background-div);
+            background-size: cover;
+            width: 30%;
+            height: 70%;
+            margin-left: 4%;
+            margin-right: 2%;
+            border: 2px solid var(--background-buttons);
+            border-radius: 10px;
+            word-wrap: break-word;
+        }
+        /* CSS - Div - Right */
+        
+        .container-right-class {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: var(--background-div);
+            width: 30%;
+            height: 70%;
+            margin-left: 2%;
+            margin-right: 4%;
+            border: 2px solid var(--background-buttons);
+            border-radius: 10px;
+            word-wrap: break-word;
+        }
+        
+        .jquery-to-jsVanilla-class {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background: rgb(255, 255, 255);
+            color: black;
+            width: 90%;
+            height: 25%;
+            border: 2px solid var(--background-buttons);
+            border-radius: 10px;
+            margin-top: 5%;
+            word-wrap: break-word;
+            display: block;
+            text-align: center;
+        }
+        /* CSS - Button */
+        
+        .button-class {
+            height: 4rem;
+            width: 4rem;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgb(145, 92, 182);
+            border-radius: 4px;
+            font-weight: normal;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            margin-top: 5%;
+        }
+        
+        .glow-button:hover {
+            color: rgba(255, 255, 255, 1);
+            box-shadow: 0 5px 15px rgba(34, 190, 41, 0.4);
+        }
