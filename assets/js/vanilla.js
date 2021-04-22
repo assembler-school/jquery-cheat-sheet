@@ -115,3 +115,16 @@ export function fnEventTarget() {
     });
   }
 }
+
+/*
+ * SECTION OF FUNCTIONS & SELECTORS
+ */
+export function fnCreate() {
+  const selector = document.getElementById("f0Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.createElement("P");
+    para.innerText = "This is a paragraph.";
+    document.getElementById("f0JsDemo").appendChild(para);
+  });
+}

@@ -9,7 +9,13 @@ const links = document.querySelectorAll("li > a");
 
 links.forEach((element) => {
   element.addEventListener("click", function (e) {
-    const srcFile = "./assets/examples/events/" + e.target.title;
+    let srcFile;
+    if (e.target.classList.contains("ev")) {
+      srcFile = "./assets/examples/events/" + e.target.title;
+    } else {
+      srcFile = "./assets/examples/functions/" + e.target.title;
+    }
+
     fetch(srcFile)
       .then((res) => (res.ok ? res.text() : Promise.reject(res)))
       .then((text) => {
@@ -33,6 +39,9 @@ links.forEach((element) => {
 function addListeners(e) {
   const el = e.target;
 
+  /*
+   * SECTION OF EVENTS
+   */
   if (el.matches('[title="documentLoaded.md"]')) {
   }
 
@@ -94,5 +103,13 @@ function addListeners(e) {
   if (el.matches('[title="eventTarget.md"]')) {
     js.fnEventTarget();
     jq.fnEventTarget();
+  }
+
+  /*
+   * SECTION OF FUNCTIONS & SELECTORS
+   */
+  if (el.matches('[title="create.md"]')) {
+    js.fnCreate();
+    jq.fnCreate();
   }
 }

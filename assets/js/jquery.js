@@ -100,3 +100,15 @@ export function fnEventTarget() {
       alert($(this).text());
     });
 }
+
+/*
+ * SECTION OF FUNCTIONS & SELECTORS
+ */
+export function fnCreate() {
+  $("#f0JQuery").on("click", function (e) {
+    let para = $("<p>", { text: "This is a paragraph." });
+    //or
+    // let para = $("<p>").text("This is a paragraph.");
+    $("#f0JQueryDemo").append(para);
+  });
+}
