@@ -196,9 +196,9 @@ function removeEventVanilla(target, type, insideFunction, array) {
   for (let e of array) {
     e.addEventListener("click", function () {
       target.removeEventListener(type, insideFunction);
-      console.log("Removed event listener " + type + "in " + target);
     });
   }
+  console.log("Removed event listener " + type + " in " + target);
 }
 
 // Remove event listeners (used in jquery.js)
@@ -206,9 +206,9 @@ function removeEventJQuery(target, type, insideFunction, array) {
   $(array).each(function () {
     $(this).click(function () {
       $(target).off(type, insideFunction);
-      console.log("Removed event listener " + type + "in " + target);
     });
   });
+  console.log("Removed event listener '" + type + "' in " + target);
 }
 
 /* -------------------------------------------------------------------------- */
