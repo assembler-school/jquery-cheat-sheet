@@ -1,57 +1,105 @@
-* {
-    box-sizing: border-box;
-    background-color: darkblue;
+/* CSS - Vars */
+
+:root {
+    --background-div: rgba(0, 0, 0, 0.5);
+    --background-text: rgba(32, 24, 98);
+    --background-buttons: rgb(255, 255, 255);
+    --font: 'VT323', monospace;
 }
+
+
+/* CSS - Root */
+
+* {
+    border: 1px solid rgb(255, 255, 255);
+    font-family: var(--font);
+    color: rgb(255, 255, 255);
+    font-size: small;
+    text-align: center;
+    cursor: url("Assets/gun-target.png") 32 32, auto;
+}
+
+
+/* CSS - Body */
 
 body {
-    margin: 0;
-    font-family: Arial;
-    background-color: darkmagenta;
-}
-
-.main-header {
-    text-align: center;
-    padding: 32px;
-    background-color: darkorange;
-}
-
-.row {
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
     display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-    background-color: darkseagreen;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
 }
 
 
-/* Create four equal columns that sits next to each other */
+/* CSS - Div - Header */
 
-.column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
+.main-header-class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-div);
+    background-size: cover;
+    width: 10%;
+    height: 70%;
+    margin-left: 4%;
+    margin-right: 2%;
+    border: 10px solid var(--background-buttons);
+    border-radius: 40px;
 }
 
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
+.main-header-class h1 {
+    font-size: xx-large;
 }
 
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* CSS - Div - Left */
 
-@media (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 50%;
-    }
+.all-container-class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-div);
+    background-size: cover;
+    width: 30%;
+    height: 70%;
+    margin-left: 4%;
+    margin-right: 2%;
+    border: 10px solid var(--background-buttons);
+    border-radius: 40px;
 }
 
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* CSS - Div - Right */
 
-@media (max-width: 600px) {
-    .column {
-        flex: 100%;
-        max-width: 100%;
-    }
+.container-right-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--background-div);
+    width: 30%;
+    height: 70%;
+    margin-left: 2%;
+    margin-right: 4%;
+    border: 10px solid var(--background-buttons);
+    border-radius: 40px;
+}
+
+.jquery-to-jsVanilla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--background-div);
+    width: 70%;
+    height: 70%;
+    margin-top: 30%;
+    margin-left: 2%;
+    margin-right: 4%;
+    border: 10px solid var(--background-buttons);
+    border-radius: 40px;
 }
