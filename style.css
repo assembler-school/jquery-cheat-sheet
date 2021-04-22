@@ -5,7 +5,7 @@
 }
 
 * {
-    /* outline: 1px solid black; */
+    outline: 1px solid black;
 }
 
 body{
@@ -55,15 +55,24 @@ header{
     justify-content: space-evenly;
 }
 
+.wrapper-column{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin: 0 4% 0 4%;
+    justify-content: space-between;
+}
+
 .column-init{
     width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 700;
     border-radius: 20px;
     box-shadow: 5px 5px 20px  gray;
+    overflow: hidden;
 }
 
 .bg-blue{
