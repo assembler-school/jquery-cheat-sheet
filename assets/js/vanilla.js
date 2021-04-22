@@ -97,9 +97,9 @@ document.onmousemove = function(e){
 };`;
 
   // Output
-  document.onmousemove = function (e) {
+  document.addEventListener("mousemove", function (e) {
     outputVanilla.innerText = "> Mouse at: (" + e.pageX + ", " + e.pageY + ")";
-  };
+  });
 }
 
 //5 ----------------------------------------------------------
@@ -125,6 +125,28 @@ element.onchange = function(){
   };
 }
 
+//6 ----------------------------------------------------------
+function loadedImage() {
+  // Macro
+  macroTextVanilla.innerText = `// Loaded image
+
+element.onchange = function(){
+  this.style.color = "yellow";
+  this.style.color = "2px solid yellow";
+  this.style.color = "black";
+};`;
+
+  // Output
+  let exampleInput = document.createElement("input");
+  exampleInput.classList.add("example-input");
+  exampleInput.setAttribute("type", "text");
+  outputVanilla.appendChild(exampleInput);
+  exampleInput.onchange = function () {
+    (this.style.color = "var(--accent-color)"),
+      (this.style.outline = "2px solid var(--accent-color)"),
+      (this.style.backgroundColor = "var(--dark-color");
+  };
+}
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -145,12 +167,16 @@ export const vanillaExamples = [
   function () {
     keyPressed();
   },
-  // 4
-  function () {
-    mouseMoved();
-  },
-  // 5
-  function () {
-    changedInput();
-  },
+  // // 4
+  // function () {
+  //   mouseMoved();
+  // },
+  // // 5
+  // function () {
+  //   changedInput();
+  // },
+  // // 6
+  // function () {
+  //   loadedImage();
+  // }
 ];

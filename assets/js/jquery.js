@@ -109,7 +109,19 @@ $(document).mousemove(function(e){
   macroJquery.text(macroString);
 
   // Output
-  $("body").on("mousemove", mouseMoveInside);
+  function mouseFunction(e) {
+    outputJquery.text("> Mouse at: (" + e.pageX + ", " + e.pageY + ")");
+  }
+
+  $(document).on("mousemove", mouseFunction);
+
+  // Removing event listeners
+  $(".example").each(function () {
+    $(this).click(function () {
+      $(document).off("mousemove", mouseFunction);
+      console.log("Removed mousemove");
+    });
+  });
 }
 
 //5 ----------------------------------------------------------
@@ -171,14 +183,3 @@ export const jQueryExamples = [
     changedInput();
   },
 ];
-
-function mouseMoveInside(event) {
-  outputJquery.text("> Mouse at: (" + event.pageX + ", " + event.pageY + ")");
-}
-
-$(".example").each(function () {
-  $(this).click(function () {
-    $("body").off("mousemove", mouseMoveInside);
-    console.log("Removed mousemove");
-  });
-});
