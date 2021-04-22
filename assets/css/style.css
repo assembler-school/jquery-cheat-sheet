@@ -137,7 +137,7 @@ pre span.count:before {
   padding: 10px;
   font-family: "Fira Mono", monospace;
   width: calc(100% - 20px);
-  height: calc(80vh - (192px + 46px));
+  height: 80vh;
   background-color: #1e1e1e;
   color: var(--myYellow);
   display: inline-flex;
