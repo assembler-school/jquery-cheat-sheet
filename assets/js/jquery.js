@@ -18,16 +18,18 @@ let macroString;
 // Events
 
 //0
-function HTMLloaded() {
+function htmlLoaded() {
   // Macro
-  macroString = ` jQuery Example
-  with some line breaks
-        and 
-    tabulations.
+  macroString = `// Loading html
+
+$( document ).ready(function() {
+  console.log("HTML file loaded!");
+});
   `;
   macroJquery.text(macroString);
 
   // Output
+  outputJquery.text("HTML file loaded!");
 }
 
 /* -------------------------------------------------------------------------- */
@@ -36,6 +38,6 @@ function HTMLloaded() {
 export const jQueryExamples = [
   // 0
   function () {
-    HTMLloaded();
+    htmlLoaded();
   },
 ];

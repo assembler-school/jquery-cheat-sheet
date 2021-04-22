@@ -8,7 +8,6 @@ console.log("Vanilla JS file loaded!");
 /* -------------------------------------------------------------------------- */
 /*                            GENERAL VARIABLES                            */
 /* -------------------------------------------------------------------------- */
-
 let macroTextVanilla = document.getElementById("macro-text");
 let outputVanilla = document.getElementById("output-panel");
 
@@ -18,14 +17,35 @@ let outputVanilla = document.getElementById("output-panel");
 // Events
 
 //0
-function HTMLloaded() {
-  blankMacroOutput();
+function htmlLoaded() {
   // Macro
   macroTextVanilla.innerText = `// Loading an html
-    code that will
-    go here.
-    `;
+
+document.onload(function(){
+  console.log("HTML file loaded!");
+});`;
+
   // Output
+  outputVanilla.innerHTML = "HTML file loaded!";
+}
+
+//1
+function clickedItem() {
+  // Macro
+  macroTextVanilla.innerText = `// Clicked element
+
+element.onclick = function(){
+  this.innerText = "Clicked!";
+}`;
+
+  // Output
+  let newButton = document.createElement("div");
+  newButton.setAttribute("class", "example-button");
+  newButton.innerText = "Click me";
+  newButton.onclick = function () {
+    this.innerText = "Clicked!";
+  };
+  outputVanilla.appendChild(newButton);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -34,6 +54,10 @@ function HTMLloaded() {
 export const vanillaExamples = [
   // 0
   function () {
-    HTMLloaded();
+    htmlLoaded();
+  },
+  // 1
+  function () {
+    clickedItem();
   },
 ];
