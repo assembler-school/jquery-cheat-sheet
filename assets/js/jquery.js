@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                               IMPORTS/EXPORTS                              */
 /* -------------------------------------------------------------------------- */
-import { blankMacroOutput } from "./script.js";
+import { removeEventJQuery } from "./script.js";
 
 console.log("jQuery JS file loaded!");
 
@@ -11,6 +11,7 @@ console.log("jQuery JS file loaded!");
 let macroJquery = $("#macro-text");
 let outputJquery = $("#output-panel");
 let macroString;
+let examplesJquery = $(".example");
 
 /* -------------------------------------------------------------------------- */
 /*                                  FUNCTIONS                                 */
@@ -89,10 +90,16 @@ $(document).keypress(function(){
   // Output
   outputJquery.text("");
   let outputText = "> Key pressed!\n";
-  $(document).keypress(function () {
+
+  function keyPressedInside() {
     outputJquery.text(outputText);
     outputText += "> Key pressed!\n";
-  });
+  }
+
+  $(document).on("keypress", keyPressedInside);
+
+  // Removing event listener if example is clicked
+  removeEventJQuery(document, "keypress", keyPressedInside, ".example");
 }
 
 //4 ----------------------------------------------------------
@@ -114,14 +121,8 @@ $(document).mousemove(function(e){
   }
 
   $(document).on("mousemove", mouseMoveInside);
-
-  // Removing event listeners
-  $(".example").each(function () {
-    $(this).click(function () {
-      $(document).off("mousemove", mouseMoveInside);
-      console.log("Removed mousemove");
-    });
-  });
+  // Removing event listener if example is clicked
+  removeEventJQuery(document, "mousemove", mouseMoveInside, ".example");
 }
 
 //5 ----------------------------------------------------------

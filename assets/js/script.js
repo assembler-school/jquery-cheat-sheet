@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 import { vanillaExamples } from "./vanilla.js";
 import { jQueryExamples } from "./jquery.js";
-export { blankMacroOutput, removeEventVanilla };
+export { blankMacroOutput, removeEventVanilla, removeEventJQuery };
 
 /* -------------------------------------------------------------------------- */
 /*                              GENERAL VARIABLES                             */
