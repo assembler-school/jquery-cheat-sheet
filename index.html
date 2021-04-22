@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="module" src="vanilla.js"></script>
+    <script type="module" src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;400;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,800&display=swap"
+        rel="stylesheet">
+    <title>JQuery | Cheat Sheet</title>
+</head>
+
+<body>
+    <h1>JQuery | Cheat Sheet</h1>
+    <div id="searchEngine">
+        <input id="searchInput" type="text" placeholder=" Search">
+        <!--<button id="search"><img src="img/search.png" width="24px" height="24px"></button>-->
+    </div>
+    <main>
+        <div id="divEventFunctions">
+            <h2>Event Functions</h2>
+            <div id="eventFunctions"></div>
+        </div>
+        <div id="divListFunctions">
+            <h2>List Functions</h2>
+            <div id="listFunctions"></div>
+        </div>
+        <div id="divSelectFunctions">
+            <h2>Selectors</h2>
+            <div id="selectFunctions"></div>
+        </div>
+    </main>
+    <template class="templateModal">
+        <div id="modal">
+            <div id="modalTitle">
+                <div id="closeButton"><img src="img/close.png" width="24px" height="24px"></div>
+                <h3>Get value form an element with ID</h3>
+            </div>
+            <div id="modalWrapper">
+                <div id="leftModalContent">
+                    <button type="button" class="collapsible">Java Script</button>
+                    <div class="content">
+                        <p>var element = document.getElementById('id of element').value</p>
+                    </div>
+                    <button type="button" class="collapsible">JQuery</button>
+                    <div class="content">
+                        <p>var element = $('#id').val()</p>
+                    </div>
+                </div>
+                <div id="rightModalContent">
+                    <button id="runCode">Run</button>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</html>
