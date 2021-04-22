@@ -110,7 +110,7 @@ function setExamples(container, array, type) {
     // Creating the div
     let newExample = $("<div>");
     newExample.addClass("example");
-    newExample.addClass(type + "-" + i);
+    // newExample.addClass(type + "-" + i);
     newExample.html(e);
     // Adding examples in container
     $(container).append(newExample);

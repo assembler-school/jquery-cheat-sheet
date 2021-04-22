@@ -236,6 +236,8 @@ main {
   background-color: var(--dark-color);
   color: whitesmoke;
   font-size: 18px;
+  max-height: 350px;
+  white-space: pre-wrap;
 }
 
 footer {

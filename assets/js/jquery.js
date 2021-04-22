@@ -22,7 +22,7 @@ function htmlLoaded() {
   // Macro
   macroString = `// Loading html
 
-$( document ).ready(function() {
+$(document).ready(function() {
   console.log("HTML file loaded!");
 });
   `;
@@ -33,11 +33,11 @@ $( document ).ready(function() {
   // outputJquery.css("color", "grey");
 }
 
-//1
+//1 ----------------------------------------------------------
 function clickedItem() {
   // Macro
   macroString = `// Clicked element
-  
+
 $(element).click(function(){
   $(this).text("Clicked!");
 }`;
@@ -54,7 +54,7 @@ $(element).click(function(){
   outputJquery.append(newButton);
 }
 
-//2
+//2 ----------------------------------------------------------
 function dblClickedItem() {
   // Macro
   macroString = `// Double clicked element
@@ -75,7 +75,7 @@ $(element).dblclick(function(){
   outputJquery.append(newButton);
 }
 
-//3
+//3 ----------------------------------------------------------
 function keyPressed() {
   // Macro
   macroString = `// Return a message on a pressed key
@@ -88,10 +88,27 @@ $(document).keypress(function(){
 
   // Output
   outputJquery.text("");
-  let outputText = "Key pressed! ";
+  let outputText = "> Key pressed!\n";
   $(document).keypress(function () {
-    outputJquery.text(outputText + "\n");
-    outputText += "Key pressed!";
+    outputJquery.text(outputText);
+    outputText += "> Key pressed!\n";
+  });
+}
+
+//4 ----------------------------------------------------------
+function mouseMoved() {
+  // Macro
+  macroString = `// Return a message on a pressed key
+
+$(document).keypress(function(){
+  console.log("Key pressed!");
+}`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  $(outputJquery).mousemove(function (event) {
+    console.log(event.pageX, event.pageX);
   });
 }
 
@@ -114,5 +131,9 @@ export const jQueryExamples = [
   // 3
   function () {
     keyPressed();
+  },
+  // 4
+  function () {
+    mouseMoved();
   },
 ];

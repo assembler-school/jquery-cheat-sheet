@@ -16,7 +16,7 @@ let outputVanilla = document.getElementById("output-panel");
 /* -------------------------------------------------------------------------- */
 // Events
 
-//0
+//0 ----------------------------------------------------------
 function htmlLoaded() {
   // Macro
   macroTextVanilla.innerText = `// Loading an html
@@ -29,7 +29,7 @@ document.onload(function(){
   outputVanilla.innerHTML = "> HTML file loaded!";
 }
 
-//1
+//1 ----------------------------------------------------------
 function clickedItem() {
   // Macro
   macroTextVanilla.innerText = `// Clicked element
@@ -48,7 +48,7 @@ element.onclick = function(){
   outputVanilla.appendChild(newButton);
 }
 
-//2
+//2 ----------------------------------------------------------
 function dblClickedItem() {
   // Macro
   macroTextVanilla.innerText = `// Double clicked element
@@ -67,7 +67,7 @@ element.ondblclick = function(){
   outputVanilla.appendChild(newButton);
 }
 
-//3
+//3 ----------------------------------------------------------
 function keyPressed() {
   // Macro
   macroTextVanilla.innerText = `// Return a message on a pressed key
@@ -78,10 +78,10 @@ element.onkeypress = function(){
 
   // Output
   outputVanilla.innerText = "";
-  let outputText = "Key pressed!";
+  let outputText = "> Key pressed! \n";
   document.onkeypress = function () {
-    outputVanilla.innerText = outputText + "\n";
-    outputText += "Key pressed!";
+    outputVanilla.innerText = outputText;
+    outputText += "> Key pressed! \n";
   };
 }
 
