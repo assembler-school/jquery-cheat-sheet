@@ -118,3 +118,10 @@ export function fnRemove() {
     $("#f1JQueryDemo").remove();
   });
 }
+
+export function fnAppend() {
+  $("#f2JQuery").on("click", function (e) {
+    let para = $("<button>", { text: "Click Me!" });
+    $("#f2JQueryDemo").append(para);
+  });
+}

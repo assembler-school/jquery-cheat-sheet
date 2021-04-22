@@ -136,3 +136,13 @@ export function fnRemove() {
     document.getElementById("f1JsDemo").remove();
   });
 }
+
+export function fnAppend() {
+  const selector = document.getElementById("f2Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.createElement("button");
+    para.innerText = "Click Me!";
+    document.getElementById("f2JsDemo").appendChild(para);
+  });
+}

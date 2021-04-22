@@ -117,4 +117,9 @@ function addListeners(e) {
     js.fnRemove();
     jq.fnRemove();
   }
+
+  if (el.matches('[title="append.md"]')) {
+    js.fnAppend();
+    jq.fnAppend();
+  }
 }
