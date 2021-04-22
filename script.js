@@ -139,7 +139,7 @@ function showContent(column){
         $("#events-column").append($("<div>").addClass("title-data-column").text("Events"));
         $("#events-column").append($("<div>").attr("id", "data-column"));
         for (let i = 0; i < dataEvents.length; i++) {
-            let element = $("<div>").addClass("links-column").text(dataEvents[i]);
+            let element = $("<div>").addClass("links-column").attr("id", i).text(dataEvents[i]).on("click", comparisonModalEvents);
             $("#data-column").append(element);
         }
     }
@@ -147,7 +147,7 @@ function showContent(column){
         $("#functions-column").append($("<div>").addClass("title-data-column").text("Functions"));
         $("#functions-column").append($("<div>").attr("id", "data-column"));
         for (let i = 0; i < dataFunctions.length; i++) {
-            let element = $("<div>").addClass("links-column").text(dataFunctions[i]);
+            let element = $("<div>").addClass("links-column").attr("id", i).text(dataFunctions[i]).on("click", comparisonModalFunctions);
             $("#data-column").append(element);
         }
     }
@@ -155,8 +155,20 @@ function showContent(column){
         $("#selectors-column").append($("<div>").addClass("title-data-column").text("Selectors"));
         $("#selectors-column").append($("<div>").attr("id", "data-column"));
         for (let i = 0; i < dataSelectors.length; i++) {
-            let element = $("<div>").addClass("links-column").text(dataSelectors[i]);
+            let element = $("<div>").addClass("links-column").attr("id", i).text(dataSelectors[i]).on("click", comparisonModalSelectors);
             $("#data-column").append(element);
         }
     }
+}
+
+function comparisonModalEvents(){
+    console.log("Events:" + $(this).attr("id"));
+}
+
+function comparisonModalFunctions(){
+    console.log("Functions:" + $(this).attr("id"));
+}
+
+function comparisonModalSelectors(){
+    console.log("Selectors:" + $(this).attr("id"));
 }
