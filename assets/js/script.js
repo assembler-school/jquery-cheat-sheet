@@ -1,4 +1,13 @@
 /* -------------------------------------------------------------------------- */
+/*                               IMPORTS/EXPORTS                              */
+/* -------------------------------------------------------------------------- */
+import { vanillaExamples } from "./vanilla.js";
+import { jQueryExamples } from "./jquery.js";
+export { blankMacroOutput };
+
+console.log(vanillaExamples, jQueryExamples);
+
+/* -------------------------------------------------------------------------- */
 /*                              GENERAL VARIABLES                             */
 /* -------------------------------------------------------------------------- */
 let events = [
@@ -52,15 +61,13 @@ let selectors = [
   "Animate an item after 2 seconds",
 ];
 
-let categoryTitles = document.querySelectorAll(".category");
+let categoryTitles = $(".category");
 
 let eventsContainer = $("#events-examples");
 let functionsContainer = $("#functions-examples");
 let selectorsContainer = $("#selectors-examples");
 
 let macroText = $("#macro-text");
-
-let tab = "\t";
 
 /* -------------------------------------------------------------------------- */
 /*                              CALLING FUNCTIONS                             */
@@ -137,9 +144,13 @@ function arrowTranslation(arrow, container) {
   });
 }
 
+$(".example").each(function () {
+  console.log(this);
+  i++;
+});
 // Clickable examples
 $(".example").click(function () {
-  macroText.text($(this).html());
+  // macroText.text($(this).html());
 });
 
 // Deleting macro & output content
@@ -151,11 +162,10 @@ function blankMacroOutput() {
 /* -------------------------------------------------------------------------- */
 /*                                    TEST                                    */
 /* -------------------------------------------------------------------------- */
-let test = `// This is a comment
-function testName(event){
-  is a multiline
-  string
-};
-`;
+// let test = `// This is a comment
+// function testName(event){
+//   is a multiline
+//   string
+// };`;
 
-macroText.text(test);
+// macroText.text(test);
