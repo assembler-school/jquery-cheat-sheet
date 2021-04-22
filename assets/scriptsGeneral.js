@@ -12,8 +12,13 @@ function callTemp(){
     let temp=document.querySelector("template.showComand");
     const tempConte=document.importNode(temp.content,true);
     $('body').append(tempConte);
+    $('.backgound').click(closeTemp);
 };
+function closeTemp(){
+    $(this).remove()
+    $('.showComandContent').remove()
 
+}
 
 
 function textLaunch(event){
@@ -21,14 +26,9 @@ function textLaunch(event){
     console.log($(selected).attr('id'));
     $('.title').text($(selected).text());
     if($(selected).attr('id')=='command 0'){
-        $('.jQueryText').text('texto jQuery');
-        $('.vanillaText').text('texto JavaScript');
+        $('.jQueryText').text('Node.onload = function(){myScript}');
+        $('.vanillaText').text(	`$( "#idOfNode" ).load( "file to execute" )`);
         
-    }else if
-    ($(selected).attr('id')=='command 0')
-    {
-        $('.jQueryText').text('texto jQuery0');
-        $('.vanillaText').text('texto JavaScript0');
     }else if
     ($(selected).attr('id')=='command 1')
     {

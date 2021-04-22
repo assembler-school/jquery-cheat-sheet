@@ -8,14 +8,10 @@ section.reference{
 ul{
     list-style: none;
 }
-h3{
-    display: flex;
-    justify-content: center;
-    padding: 10%;
-}
+
 h2{
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 h1{
@@ -25,35 +21,72 @@ h1{
 p{
     display: flex;
     justify-content: center;
+    text-align: center;
+    min-width: 80%;
+}
+
+.backgound{
+    position: absolute;
+    z-index: 0.5;
+    width: 100%;
+    height: 100%;
+    
+    top:0%;
+    left:0%;
+    background-color: rgba(37, 39, 37, 0.8);
 }
 .showComandContent{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 1fr 3fr;
-    position: fixed;
+    position: absolute;
     top: 0%;
-    background-color: white;
-    width: 80%;
-    height: 50%;
-    top:25%;
-    left: 10%;
+    color:white;
+    width: 70%;
+    height: 70%;
+    top:15%;
+    left: 15%;
+    z-index: 1;
+    pointer-events: none;
 }h2.title{
     grid-column: 1/4;
 }
-h3.jQueryCom{
-
+div.vanillaBox{
+    grid-column: 1/3;
 }
-h3.VailllaCom{
-
+div.jQueryBox{
+    grid-column: 1/3;
 }
-p.jQueryText{
-
+code.jQueryText{
+    
+    font-size: 16px;
 }
 p.result{
+  font-size: 50px;
+  grid-column: 1/3;
+  justify-self: center;
+    align-self: center;
 
 }
-p.vanillaText{
+button.ejempleButJq{
+    height: 40%;
+    justify-self: center;
+    align-self: center;
+}
+button.ejempleButVani{
+    height: 40%;
+    justify-self: center;
+    align-self: center;
+}
+button.run{
+    height: 40%;
+    justify-self: center;
+    align-self: center;
+}
 
+code.vanillaText{
+    grid-column: 1/3;
+    font-size: 16px;
 }
 
 li.specificEvent{
