@@ -77,6 +77,7 @@ element.onkeypress = function(){
 }`;
 
   // Output
+  outputVanilla.innerText = "";
   let outputText = "Key pressed!";
   document.onkeypress = function () {
     outputVanilla.innerText = outputText + "\n";

@@ -86,7 +86,8 @@ $(document).keypress(function(){
   macroJquery.text(macroString);
 
   // Output
-  let outputText = "Key pressed!";
+  outputJquery.text("");
+  let outputText = "Key pressed! ";
   $(document).keypress(function () {
     outputJquery.text(outputText + "\n");
     outputText += "Key pressed!";
