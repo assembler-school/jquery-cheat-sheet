@@ -1,3 +1,7 @@
+const scriptFinish = document.createElement('script');
+scriptFinish.src = './vanilla.js';
+document.head.append(scriptFinish)
+
 let events = ['When the HTML document has been loaded and you can manipulate it with JavaScript', 'When an HTML item has been clicked', 'When an HTML item has been double clicked', 'When the user presses a key on the keyboard',
     'When the user moves the mouse cursor', 'When the user changes a value of an text input', 'When an image is loaded', 'When an image fails to load', 'When a form is submitted', 'When the user changes the option of a select element', 'When you position the mouse over an element',
     'When a checkbox is checked or unchecked', 'When a ul list item is clicked, show the item that was clicked'];
@@ -125,9 +129,8 @@ function showModal() {
     $("body").append(importNewEvent);
 
     var coll = document.getElementsByClassName("collapsible");
-    var i;
 
-    for (i = 0; i < coll.length; i++) {
+    for (var i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
@@ -152,11 +155,164 @@ $('#selectorList li').each(function () {
     $(this).click(function () {
         showModal();
     });
+
+    var itemId = $(this).attr('id');
+    $(this).click(function () {
+        console.log(itemId);
+
+        switch (itemId) {
+            case 'select0':
+                $('#itemTitle').html(localStorage.getItem('s0'));
+                $('#jsCode').html('<code>element.parentElement.style.fontWeight = "bold");</code>');
+                $('#jqCode').html('<code>$(element).parent().css("font-weight":"bold"});</code>');
+
+                let flag = 0;
+                $('#jqButton').click(function () {
+                    if (!flag > 0) {
+                        $('#runCode').one('click', function () {
+                            flag++;
+                            jqChangeParentWeight();
+                        })
+                    }
+                });
+
+                let flag1 = 0;
+                $('#jsButton').click(function () {
+                    if (!flag1 > 0) {
+                        $('#runCode').one('click', function () {
+                            flag1++;
+                            jsChangeParentWeight();
+                        })
+                    }
+                });
+                break;
+            case 'select1':
+                $('#itemTitle').html(localStorage.getItem('s1'));
+                $('#jsCode').html('<code>var childElem = document.getElementById("elementID").children;<br>for (let i = 0; i < childElem.length; i++)<br>{<br>childElem[i].style.fontWeight = "bold";<br>}</code>');
+                $('#jqCode').html('<code>$("#elementID").children().css({ "font-weight":"bold" });</code>');
+
+                let flag2 = 0;
+                $('#jqButton').click(function () {
+                    if (!flag2 > 0) {
+                        $('#runCode').one('click', function () {
+                            flag2++;
+                            jqChangeCollectionWeight();
+                        })
+                    }
+                });
+
+                let flag3 = 0;
+                $('#jsButton').click(function () {
+                    if (!flag3 > 0) {
+                        $('#runCode').one('click', function () {
+                            flag3++;
+                            jsChangeCollectionWeight();
+                        })
+                    }
+                });
+                break;
+            case 'select2':
+                $('#itemTitle').html(localStorage.getItem('s2'));
+                $('#jsCode').html('<code>document.querySelector(".changeWeight").style.fontWeight = "bold";</code>');
+                $('#jqCode').html('<code>$(".elementClass").css({ "font-weight":"bold" });</code>');
+
+                let flag4 = 0;
+                $('#jqButton').click(function () {
+                    if (!flag4 > 0) {
+                        $('#runCode').one('click', function () {
+                            flag4++;
+                            jqChangeClassWeight();
+                        })
+                    }
+                });
+
+                let flag5 = 0;
+                $('#jsButton').click(function () {
+                    if (!flag5 > 0) {
+                        $('#runCode').one('click', function () {
+                            flag5++;
+                            jsChangeClassWeight();
+                        })
+                    }
+                });
+                break;
+            case 'select3':
+                $('#itemTitle').html(localStorage.getItem('s3'));
+                $('#jsCode').html('<code>document.getElementById("pId").style.fontWeight = "bold";</code>');
+                $('#jqCode').html('<code>$("#pId").css({ "font-weight": "bold" });</code>');
+
+                let flag6 = 0;
+                $('#jqButton').click(function () {
+                    if (!flag6 > 0) {
+                        $('#runCode').one('click', function () {
+                            flag6++;
+                            jqChangeIdWeight();
+                        })
+                    }
+                });
+
+                let flag7 = 0;
+                $('#jsButton').click(function () {
+                    if (!flag7 > 0) {
+                        $('#runCode').one('click', function () {
+                            flag7++;
+                            jsChangeIdWeight();
+                        })
+                    }
+                });
+                break;
+            case 'select4':
+                $('#itemTitle').html(localStorage.getItem('s4'));
+                $('#jsCode').html('<code>document.getElementById("pId").style.fontWeight = "bold";</code>');
+                $('#jqCode').html('<code>if ($(".changeWeight").css("display") == "none" )<br>{<br>$(".changeWeight").css({ "display": "block" });<br>$(".changeWeight").css({ "font-weight":"bold" });<br>}</code>');
+
+                $('.changeWeight').css({'display':'none'});
+                let flag8 = 0;
+                $('#jqButton').click(function () {
+                    if (!flag8 > 0) {
+                        $('#runCode').one('click', function () {
+                            flag8++;
+                            jqClassAndDisplay();
+                        })
+                    }
+                });
+
+                let flag9 = 0;
+                $('#jsButton').click(function () {
+                    if (!flag9 > 0) {
+                        $('#runCode').one('click', function () {
+                            flag9++;
+                            jqClassAndDisplay();
+                        })
+                    }
+                });
+                break;
+            case 'select5':
+                break;
+            case 'select6':
+                break;
+            case 'select7':
+                break;
+            case 'select8':
+                break;
+            case 'select9':
+                break;
+            default:
+                alert('Nobody Wins!');
+        }
+    });
 });
 
 $('#listFunctions li').each(function () {
     $(this).click(function () {
         showModal();
+    });
+    var itemId = $(this).attr('id');
+    $(this).click(function () {
+        console.log(itemId);
+        if (itemId == 'data0') {
+            $('#jsCode').html('Funciona');
+        }
     });
 });
 
@@ -164,4 +320,34 @@ $('#eventFunctions li').each(function () {
     $(this).click(function () {
         showModal();
     });
+    var itemId = $(this).attr('id');
+    $(this).click(function () {
+        if (itemId == 'event0') {
+            $('#jsCode').html('Funciona');
+        }
+    });
 });
+
+//__Selector Functions
+function jqChangeParentWeight() {
+    $('#pId').parent().css({ 'font-weight': 'bold' });
+}
+
+function jqChangeCollectionWeight() {
+    $('#runID').children().css({ 'font-weight': 'bold' });
+}
+
+function jqChangeClassWeight() {
+    $('.changeWeight').css({ 'font-weight': 'bold' });
+}
+
+function jqChangeIdWeight() {
+    $('#pId').css({ 'font-weight': 'bold' });
+}
+
+function jqClassAndDisplay() {
+    if ($('.changeWeight').css('display') == 'none' ) {
+        $('.changeWeight').css({ 'display': 'block' });
+        $('.changeWeight').css({ 'font-weight': 'bold' });
+    }
+}

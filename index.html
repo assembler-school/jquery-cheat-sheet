@@ -38,22 +38,28 @@
         <div id="modal">
             <div id="modalTitle">
                 <div id="closeButton"><img src="img/close.png" width="24px" height="24px"></div>
-                <h3>Get value form an element with ID</h3>
+                <h3 id="itemTitle"></h3>
             </div>
             <div id="modalWrapper">
                 <div id="leftModalContent">
-                    <button type="button" class="collapsible">Java Script</button>
-                    <div class="content">
-                        <p>var element = document.getElementById('id of element').value</p>
+                    <button id="jsButton" type="button" class="collapsible">Java Script</button>
+                    <div class="content" id="jsCode">
+                        <p></p>
                     </div>
-                    <button type="button" class="collapsible">JQuery</button>
-                    <div class="content">
-                        <p>var element = $('#id').val()</p>
+                    <button id="jqButton" type="button" class="collapsible">JQuery</button>
+                    <div class="content" id="jqCode">
+                        <p></p>
                     </div>
                 </div>
                 <div id="rightModalContent">
-                    <button id="runCode">Run</button>
+                    <div id="runID">
+                        <p class="changeWeight">Si queremos que todo siga como está,</p>
+                        <p id="pId">es necesario que todo cambie.</p>
+                    </div>
                 </div>
+            </div>
+            <div id="buttonContainer">
+                <button id="runCode">Run</button>
             </div>
         </div>
     </template>
