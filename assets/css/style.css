@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+:root {
+  --colorOne: #003f5c;
+  --colorTwo: #58508d;
+  --colorThree: #bc5090;
+  --colorThreeLight: #c287aa;
+  --colorFour: #ff6361;
+  --colorFourLight: #fd9896;
+  --colorFive: #f8e9ce;
+  --colorSix: #faebab;
+  --colorSixPress: #fbe273;
+  --divBg: #fcfae0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "VT323", monospace;
+  /* outline: 1px solid red !important; */
+}
+html {
+  width: 100%;
+  height: 100%;
+  background-color: var(--colorFive);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+aside {
+  position: fixed;
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  z-index: 2;
+}
+
+/* ----- ASIDE ----- */
+.aside-menu {
+  font-size: 3rem;
+  color: white;
+  overflow-y: hidden;
+}
+
+.aside-button {
+  position: relative;
+  width: 50vw;
+  border: 0;
+}
+
+.aside-title {
+  display: flex;
+  width: 40vw;
+  background-color: var(--colorTwo);
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-one {
+  background-color: var(--colorFour);
+}
+
+.btn-one:hover {
+  background-color: var(--colorFourLight);
+}
+
+.btn-two {
+  background-color: var(--colorThree);
+}
+
+.btn-two:hover {
+  background-color: var(--colorThreeLight);
+}
+
+/* ----- MAIN CONTENT ----- */
+.main-content {
+  position: relative;
+  width: 98vw;
+  height: 100%;
+  top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0.5vw;
+  background-color: var(--colorFive);
+}
+
+.main-content > div {
+  min-height: 200px;
+  background-color: var(--divBg);
+  display: flex;
+  flex-direction: column;
+  margin: 0.5%;
+}
+
+.title {
+  display: flex;
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  text-justify: inter-word;
+  padding: 3%;
+}
+
+.e {
+  display: grid;
+}
+
+.f {
+  display: grid;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open-modal-btn {
+  width: 50%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: var(--divBg);
+}
+
+.open-modal-btn:hover {
+  background-color: var(--colorSixPress);
+}
+
+.content img {
+  width: 30px;
+  height: 30px;
+}
+
+/* ----- MODAL ----- */
+.modal {
+  display: none;
+  position: fixed;
+  width: 70vw;
+  height: 80vh;
+  top: 10vh;
+  left: 15vw;
+  background-color: var(--divBg);
+  color: var(--colorOne);
+  border: 10px solid var(--colorOne);
+  border-radius: 10px;
+  padding: 1%;
+}
+
+.modal-title {
+  height: 10%;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  height: 60%;
+  display: flex;
+}
+
+.languaje {
+  width: 50%;
+}
+
+.languaje-title {
+  display: flex;
+  height: 10%;
+  font-size: 2rem;
+  justify-content: center;
+}
+
+.modal-result {
+  height: 30%;
+}

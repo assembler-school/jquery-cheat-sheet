@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="import" href="templates.html" onload="getTemplate(event)" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main id="main">
+      <aside>
+        <button class="aside-menu aside-button btn-one" id="aside-btn-one">
+          Functions & Selectors
+        </button>
+        <button class="aside-menu aside-button btn-two" id="aside-btn-two">
+          Events
+        </button>
+      </aside>
+    </main>
+  </body>
+
+  <!--TEMPLATES-->
+  <!--Functions & Sections-->
+  <template id="f">
+    <section class="main-content f" id="main-f">
+      <div>
+        <div class="title">Create an HTML element with any text value</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-1">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Remove an HTML element with any text value</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-2">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Append an HTML element with any text value to a parent element
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-3">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Prepend an HTML element with any text value to a parent element
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-4">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Create and add an HTML element with any text value after another
+          element
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-5">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Create and add an HTML element with any text value before another
+          element
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-6">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Clone an HTML element within other element</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-7">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Add a class to an HTML item</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-8">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Remove a class to an HTML item</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-9">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Toggle a class of an HTML item</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-10">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Add a disabled attribute to an HTML button</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-11">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Remove the disabled attribute of an HTML button</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-12">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Set a data-src attribute to a img element</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-13">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Remove the data-src attribute of the img element
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-14">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Hide an HTML element on click (display: none)</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-15">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Show an HTML element on click (display: block)</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-16">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Fade in an HTML element using jQuery</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-17">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Fade out an HTML element using jQuery</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-18">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Iterate a collection of elements and apply a change of style on them
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-19">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Get the parent element of a certain element and change its font weight
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-20">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Get the collection of children of a certain element and change its
+          font weight
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-21">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Get all the elements that have a certain class and change their font
+          weight
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-22">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Get an item by id and change its font weight</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-23">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Get all the elements that have a certain class and the display
+          property of none and change their font color
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-24">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Get the options of a select element that are selected (attribute
+          selected)
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-25">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Change the href attribute of the first &lt;a> element (You have to
+          create several &lt;a> elements)
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-26">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Show an alert with the value of the first &lt;input/> of the page
+          (Create an &lt;input/> element to test this case)
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-27">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">Remove all items from a specific selector</div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-28">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          Animate an item after 2 seconds from the initial page load
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="f-29">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <!--Events-->
+  <template id="e">
+    <section class="main-content e" id="main-e">
+      <div>
+        <div class="title">
+          When the HTML document has been loaded and you can manipulate it
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-1">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">When an HTML item has been clicked</div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-2">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">When an HTML item has been double clicked</div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-3">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">When the user presses a key on the keyboard</div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-4">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">When the user moves the mouse cursor</div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-5">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">When the user changes a value of an text input</div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-6">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">When an image is loaded</div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-7">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          When an image fails to load, (if you write an incorrect image url the
+          loading of the image will fail)
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-8">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">When a form is submitted</div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-9">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          When the user changes the option of a select element
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-10">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">When you position the mouse over an element</div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-11">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">When a checkbox is checked or unchecked</div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-12">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+      <div>
+        <div class="title">
+          When a ul list item is clicked, show the item that was clicked
+        </div>
+        <div class="content">
+          <button class="open-modal-btn" id="e-13">View code</button>
+          <img src="assets/img/js.svg" />
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <!--MODAL-->
+  <section class="modal">
+    <div class="modal-title">-MODAL TITLE</div>
+    <div class="modal-content">
+      <div class="languaje">
+        <div class="languaje-title">JavaScript:</div>
+        <div class="languaje-content"></div>
+      </div>
+      <div class="languaje">
+        <div class="languaje-title">JQuery:</div>
+        <div class="languaje-content"></div>
+      </div>
+    </div>
+    <div class="modal-result">
+      <div class="languaje-title">Example:</div>
+      <div class="languaje-content"></div>
+    </div>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="assets/js/functions.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+</html>
