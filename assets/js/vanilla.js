@@ -128,3 +128,11 @@ export function fnCreate() {
     document.getElementById("f0JsDemo").appendChild(para);
   });
 }
+
+export function fnRemove() {
+  const selector = document.getElementById("f1Js");
+
+  selector.addEventListener("click", function (e) {
+    document.getElementById("f1JsDemo").remove();
+  });
+}

@@ -112,4 +112,9 @@ function addListeners(e) {
     js.fnCreate();
     jq.fnCreate();
   }
+
+  if (el.matches('[title="remove.md"]')) {
+    js.fnRemove();
+    jq.fnRemove();
+  }
 }

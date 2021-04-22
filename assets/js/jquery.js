@@ -112,3 +112,9 @@ export function fnCreate() {
     $("#f0JQueryDemo").append(para);
   });
 }
+
+export function fnRemove() {
+  $("#f1JQuery").on("click", function (e) {
+    $("#f1JQueryDemo").remove();
+  });
+}
