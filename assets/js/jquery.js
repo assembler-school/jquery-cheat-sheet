@@ -74,6 +74,25 @@ $(element).dblclick(function(){
   outputJquery.append(newButton);
 }
 
+//3
+function keyPressed() {
+  // Macro
+  macroString = `// Return a message on a pressed key
+      
+$(document).keypress(function(){
+  console.log("Key pressed!");
+}`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  let outputText = "Key pressed!";
+  $(document).keypress(function () {
+    outputJquery.text(outputText + "\n");
+    outputText += "Key pressed!";
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -89,5 +108,9 @@ export const jQueryExamples = [
   // 2
   function () {
     dblClickedItem();
+  },
+  // 3
+  function () {
+    keyPressed();
   },
 ];

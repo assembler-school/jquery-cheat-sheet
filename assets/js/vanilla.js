@@ -67,6 +67,23 @@ element.ondblclick = function(){
   outputVanilla.appendChild(newButton);
 }
 
+//3
+function keyPressed() {
+  // Macro
+  macroTextVanilla.innerText = `// Return a message on a pressed key
+
+element.onkeypress = function(){
+  this.innerText = "Key pressed!";
+}`;
+
+  // Output
+  let outputText = "Key pressed!";
+  document.onkeypress = function () {
+    outputVanilla.innerText = outputText + "\n";
+    outputText += "Key pressed!";
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -82,5 +99,9 @@ export const vanillaExamples = [
   // 2
   function () {
     dblClickedItem();
+  },
+  // 3
+  function () {
+    keyPressed();
   },
 ];
