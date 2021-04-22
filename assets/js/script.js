@@ -5,8 +5,6 @@ import { vanillaExamples } from "./vanilla.js";
 import { jQueryExamples } from "./jquery.js";
 export { blankMacroOutput };
 
-console.log(vanillaExamples, jQueryExamples);
-
 /* -------------------------------------------------------------------------- */
 /*                              GENERAL VARIABLES                             */
 /* -------------------------------------------------------------------------- */
@@ -67,7 +65,13 @@ let eventsContainer = $("#events-examples");
 let functionsContainer = $("#functions-examples");
 let selectorsContainer = $("#selectors-examples");
 
+let vanillaCheckbox = $("#vanilla-radio");
+let jQueryCheckbox = $("#jquery-radio");
+console.log(vanillaCheckbox, jQueryCheckbox);
+
 let macroText = $("#macro-text");
+
+let idIndex = 0;
 
 /* -------------------------------------------------------------------------- */
 /*                              CALLING FUNCTIONS                             */
@@ -144,13 +148,22 @@ function arrowTranslation(arrow, container) {
   });
 }
 
+// Assigning ex-ID and accessing each example
 $(".example").each(function () {
-  console.log(this);
-  i++;
-});
-// Clickable examples
-$(".example").click(function () {
-  // macroText.text($(this).html());
+  $(this).attr("id", "ex" + idIndex);
+  // Clickable element
+  $(this).click(function () {
+    blankMacroOutput();
+    let exampleIndex = $(this).attr("id").replace("ex", "");
+    // Vanilla or jQuery
+    if (vanillaCheckbox.prop("checked")) {
+      macroText.text(vanillaExamples[exampleIndex]);
+    } else {
+      blankMacroOutput();
+      macroText.text(jQueryExamples[exampleIndex]);
+    }
+  });
+  idIndex++;
 });
 
 // Deleting macro & output content

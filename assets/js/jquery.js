@@ -34,7 +34,8 @@ function HTMLloaded() {
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
 export const jQueryExamples = [
+  // 0
   function () {
     HTMLloaded();
-  }, // 0
+  },
 ];

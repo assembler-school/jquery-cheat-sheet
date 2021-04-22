@@ -21,9 +21,9 @@ let outputVanilla = document.getElementById("output-panel");
 function HTMLloaded() {
   blankMacroOutput();
   // Macro
-  macroTextVanilla.innerText = ` This
-        code that will
-        go here.
+  macroTextVanilla.innerText = `// Loading an html
+    code that will
+    go here.
     `;
   // Output
 }
@@ -32,7 +32,8 @@ function HTMLloaded() {
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
 export const vanillaExamples = [
+  // 0
   function () {
     HTMLloaded();
-  }, // 0
+  },
 ];
