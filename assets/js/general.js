@@ -172,4 +172,21 @@ function addListeners(e) {
     js.fnToggleDataAttr();
     jq.fnToggleDataAttr();
   }
+
+  if (el.matches('[title="hide.md"]')) {
+    js.fnHide();
+    jq.fnHide();
+  }
+  if (el.matches('[title="show.md"]')) {
+    js.fnShow();
+    jq.fnShow();
+  }
+  if (el.matches('[title="fadeIn.md"]')) {
+    js.fnFadeIn();
+    jq.fnFadeIn();
+  }
+  if (el.matches('[title="fnFadeOut.md"]')) {
+    js.fnFadeOut();
+    jq.fnFadeOut();
+  }
 }

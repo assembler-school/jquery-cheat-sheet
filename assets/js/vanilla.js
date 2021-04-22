@@ -246,3 +246,21 @@ export function fnToggleDataAttr() {
     alert("data-src  is: " + img.dataset.src);
   });
 }
+
+export function fnHide() {
+  const selector = document.getElementById("f13Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f13JsDemo");
+    para.style.display = "none";
+  });
+}
+
+export function fnShow() {
+  const selector = document.getElementById("f14Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f14JsDemo");
+    para.style.display = "block";
+  });
+}

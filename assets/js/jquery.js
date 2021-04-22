@@ -195,3 +195,15 @@ export function fnToggleDataAttr() {
     alert("data-src is: " + $("#f12JQueryImg").attr("data-src"));
   });
 }
+
+export function fnHide() {
+  $("#f13JQuery").on("click", function (e) {
+    $("#f13JQueryDemo").hide();
+  });
+}
+
+export function fnShow() {
+  $("#f14JQuery").on("click", function (e) {
+    $("#f14JQueryDemo").show();
+  });
+}
