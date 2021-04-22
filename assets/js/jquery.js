@@ -219,3 +219,27 @@ export function fnFadeOut() {
     $("#f16JQueryDemo").fadeOut();
   });
 }
+
+export function fnIterator() {
+  $("#f17JQuery").on("click", function (e) {
+    $("#f17JQueryDemo li").each(function (index) {
+      $(this).css("color", "red");
+    });
+  });
+}
+
+export function fnChildren() {
+  $("#f18JQuery").on("click", function (e) {
+    $("#f18JQueryDemo")
+      .children()
+      .each(function (index, element) {
+        $(element).css("color", "red");
+      });
+  });
+}
+
+export function fnParent() {
+  $("#f19JQuery").on("click", function (e) {
+    $("#f19JQueryDemo li").parent().css("background", "red");
+  });
+}

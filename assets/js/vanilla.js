@@ -283,3 +283,34 @@ export function fnFadeOut() {
     para.classList.add("fade-out");
   });
 }
+
+export function fnIterator() {
+  const selector = document.getElementById("f17Js");
+
+  selector.addEventListener("click", function (e) {
+    let lis = document.querySelectorAll("#f17JsDemo li");
+    lis.forEach((element) => {
+      element.style.color = "red";
+    });
+  });
+}
+
+export function fnChildren() {
+  const selector = document.getElementById("f18Js");
+
+  selector.addEventListener("click", function (e) {
+    let lis = document.querySelectorAll("#f18JsDemo")[0].children;
+    for (const iterator of lis) {
+      iterator.style.color = "red";
+    }
+  });
+}
+
+export function fnParent() {
+  const selector = document.getElementById("f19Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f19JsDemo li").parentElement;
+    para.style.background = "red";
+  });
+}

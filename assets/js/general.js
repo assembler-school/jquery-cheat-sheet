@@ -177,16 +177,34 @@ function addListeners(e) {
     js.fnHide();
     jq.fnHide();
   }
+
   if (el.matches('[title="show.md"]')) {
     js.fnShow();
     jq.fnShow();
   }
+
   if (el.matches('[title="fadeIn.md"]')) {
     js.fnFadeIn();
     jq.fnFadeIn();
   }
+
   if (el.matches('[title="fadeOut.md"]')) {
     js.fnFadeOut();
     jq.fnFadeOut();
+  }
+
+  if (el.matches('[title="iterator.md"]')) {
+    js.fnIterator();
+    jq.fnIterator();
+  }
+
+  if (el.matches('[title="parent.md"]')) {
+    js.fnParent();
+    jq.fnParent();
+  }
+
+  if (el.matches('[title="children.md"]')) {
+    js.fnChildren();
+    jq.fnChildren();
   }
 }
