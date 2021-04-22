@@ -58,9 +58,9 @@ function dblClickedItem() {
   // Macro
   macroString = `// Double clicked element
     
-  $(element).dblclick(function(){
-    $(this).text("Clicked!");
-  }`;
+$(element).dblclick(function(){
+  $(this).text("Clicked!");
+}`;
 
   macroJquery.text(macroString);
 
