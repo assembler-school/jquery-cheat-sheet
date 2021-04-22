@@ -77,13 +77,25 @@ function firstRun() {
   typeLine(line);
 }
 function tryIt(tag) {
-  $(".modal-examples").text(`Ejecutando demo. Tag: ${tag}`);
+  $(".modal-examples").prepend($("<p>").text(`Ejecutando demo. Tag: ${tag}`));
+  jqueryImplementation(tag);
+  vanillaImplementation(tag);
   openModal();
 }
 function openModal() {
   $(".modal-background").removeClass("hidden");
   $("#close-modal").on("click", closeModal);
+  $(".modal-background").on("click", closeModal);
+  $(".modal-content").on("click", stopPropagation);
 }
 function closeModal() {
   $(".modal-background").addClass("hidden");
+  $("#close-modal").off("click", closeModal);
+  $("#test1").off();
+  $("#test2").off();
+  $(".modal-background").off("click", closeModal);
+  $(".modal-content").off("click", stopPropagation);
+}
+function stopPropagation(event) {
+  event.stopPropagation();
 }
