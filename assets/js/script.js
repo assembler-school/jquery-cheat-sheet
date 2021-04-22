@@ -63,9 +63,34 @@ let macroText = $("#macro-text");
 let tab = "\t";
 
 /* -------------------------------------------------------------------------- */
+/*                              CALLING FUNCTIONS                             */
+/* -------------------------------------------------------------------------- */
+// Arrows for each category
+arrowTranslation($(".down-arrow-events"), $("#events-examples"));
+arrowTranslation($(".up-arrow-events"), $("#events-examples"));
+
+arrowTranslation($(".down-arrow-functions"), $("#functions-examples"));
+arrowTranslation($(".up-arrow-functions"), $("#functions-examples"));
+
+arrowTranslation($(".down-arrow-selectors"), $("#selectors-examples"));
+arrowTranslation($(".up-arrow-selectors"), $("#selectors-examples"));
+
+// Appending examples
+setExamples(eventsContainer, events, "event");
+setExamples(functionsContainer, functions, "functions");
+setExamples(selectorsContainer, selectors, "selectors");
+
+// Deleting macro & output content
+blankMacroOutput();
+
+// Assigning display container to three titles
+for (var t = 0; t <= categoryTitles.length; t++) {
+  showContainer(categoryTitles[t]);
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                  FUNCTIONS                                 */
 /* -------------------------------------------------------------------------- */
-
 // Set containers' examples
 function setExamples(container, array, type) {
   let i = 1;
@@ -112,31 +137,20 @@ function arrowTranslation(arrow, container) {
   });
 }
 
-// Arrows for each category
-arrowTranslation($(".down-arrow-events"), $("#events-examples"));
-arrowTranslation($(".up-arrow-events"), $("#events-examples"));
-
-arrowTranslation($(".down-arrow-functions"), $("#functions-examples"));
-arrowTranslation($(".up-arrow-functions"), $("#functions-examples"));
-
-arrowTranslation($(".down-arrow-selectors"), $("#selectors-examples"));
-arrowTranslation($(".up-arrow-selectors"), $("#selectors-examples"));
-
-// Appending examples
-setExamples(eventsContainer, events, "event");
-setExamples(functionsContainer, functions, "functions");
-setExamples(selectorsContainer, selectors, "selectors");
-
-// Assigning display container to three titles
-for (var t = 0; t <= categoryTitles.length; t++) {
-  showContainer(categoryTitles[t]);
-}
-
 // Clickable examples
 $(".example").click(function () {
   macroText.text($(this).html());
 });
 
+// Deleting macro & output content
+function blankMacroOutput() {
+  $("#macro-text").html("");
+  $("#output-panel").html("");
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    TEST                                    */
+/* -------------------------------------------------------------------------- */
 let test = `// This is a comment
 function testName(event){
   is a multiline
