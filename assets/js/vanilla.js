@@ -211,3 +211,21 @@ export function fnToggleClass() {
     para.classList.toggle("red-text");
   });
 }
+
+export function fnAddAttr() {
+  const selector = document.getElementById("f10Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f10Js");
+    para.setAttribute("disabled", "true");
+  });
+}
+
+export function fnRemoveAttr() {
+  const selector = document.getElementById("f11Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f11JsDemo");
+    para.removeAttribute("disabled");
+  });
+}

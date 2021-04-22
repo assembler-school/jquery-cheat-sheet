@@ -171,3 +171,15 @@ export function fnToggleClass() {
     let cln = $("#f9JQueryDemo").toggleClass("red-text");
   });
 }
+
+export function fnAddAttr() {
+  $("#f10JQuery").on("click", function (e) {
+    $(this).attr("disabled", "true");
+  });
+}
+
+export function fnRemoveAttr() {
+  $("#f11JQuery").on("click", function (e) {
+    $("#f11JQueryDemo").removeAttr("disabled");
+  });
+}
