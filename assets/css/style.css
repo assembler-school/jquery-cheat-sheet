@@ -40,6 +40,7 @@ body {
   font-family: "Lexend", sans-serif;
   background-color: var(--darkAccent);
   color: var(--myLinen);
+  overflow: hidden;
 }
 html {
   font-size: 14px;
@@ -147,7 +148,7 @@ pre span.count:before {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
     0 2px 4px -1px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  border-top: 28px solid #d5d5d5;
+  border-top: 28px solid var(--myLinen);
 }
 .console p {
   overflow-y: scroll;
@@ -190,6 +191,7 @@ pre span.count:before {
   flex-direction: row;
   align-items: center;
   padding: 0 15px;
+  z-index: inherit;
 }
 .dots-container .dot {
   width: 12px;
@@ -198,6 +200,9 @@ pre span.count:before {
   margin-right: 7px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
+}
+.dot {
+  z-index: inherit;
 }
 .dot:first-child {
   background-color: var(--myRed);
@@ -213,4 +218,45 @@ pre span.count:before {
 /* General use style ------------------------------ */
 .hide {
   display: none;
+}
+
+/* Try It! Modal */
+.modal-background {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.4s, background-color 0.4s 0.2s,
+    backdrop-filter 0.8s 0.2s;
+  opacity: 1;
+  backdrop-filter: blur(3px);
+}
+
+.hidden {
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  transition: opacity 0.2s, backdrop-filter 0.2s, background-color 0.2s,
+    opacity 0.2s, height 0s 0.4s;
+  background-color: rgba(255, 255, 255, 0);
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 100px;
+  background-color: var(--backgroundColor);
+  color: var(--myLinen);
+  margin: 20vh auto;
+  padding: 20px;
+  border: 1px solid var(--darkestGray);
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+  border-top: 28px solid var(--myLinen);
 }

@@ -21,7 +21,7 @@ function clickOnTag(event) {
   if (!consoleIsWriting) {
     const line1 = jqueryListItems(tag);
     const line2 = vanillaListItems(tag);
-    typeLine(line1 + "~" + line2, 0, tag);
+    typeLine(line1 + "~" + line2 + "¡", 0, tag);
   }
 }
 
@@ -32,7 +32,6 @@ function randomWait(min, max) {
 Function to animate text in console.
 */
 function typeLine(line, index, tag) {
-  console.log(tag);
   consoleIsWriting = true;
   const elem = document.getElementById("console-text-input");
   const CURSOR = "";
@@ -65,7 +64,7 @@ function typeLine(line, index, tag) {
   if (line.length > index) {
     setTimeout(function () {
       typeLine(line, index + 1, tag);
-    }, randomWait(5, 10)); //TODO change time to slower
+    }, randomWait(1, 5)); //TODO change time to slower
   } else {
     elem.innerHTML = elem.innerHTML.substring(
       0,
@@ -82,4 +81,12 @@ function firstRun() {
 }
 function tryIt(tag) {
   console.log("ejecutando prueba, tag: " + tag);
+  openModal();
+}
+function openModal() {
+  $(".modal-background").removeClass("hidden");
+  $("#close-modal").on("click", closeModal);
+}
+function closeModal() {
+  $(".modal-background").addClass("hidden");
 }
