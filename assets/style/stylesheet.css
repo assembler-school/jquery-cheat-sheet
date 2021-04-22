@@ -18,9 +18,14 @@ header {
   text-align: center;
 }
 
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
 .central {
   background-color: white;
-  width: 100%;
+  width: 80%;
 }
 
 aside {
@@ -47,4 +52,40 @@ aside {
   color: black;
   cursor: pointer;
   transition: background-color 0.6s, color 0.6s;
+}
+
+section {
+  margin: 5% 0;
+}
+
+.article__list {
+  list-style: none;
+}
+
+.article__title {
+  margin-top: 15px;
+  padding: 2%;
+  border: 1px solid black;
+}
+
+.article__content {
+  background-color: black;
+  display: none;
+}
+
+.article__language {
+  width: 80%;
+  padding: 1%;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.article__language--jquery {
+  color: #0769ad;
+  border-bottom: 3px solid #0769ad;
+}
+
+.article__language--javascript {
+  color: #f0db4f;
+  border-bottom: 3px solid #f0db4f;
 }

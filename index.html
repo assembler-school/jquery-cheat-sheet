@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -24,39 +24,576 @@
     </header>
     <main>
       <aside>
-        <div class="aside__section" id="aside__">Events</div>
-        <div class="aside__section">Functions</div>
-        <div class="aside__section">Selectors</div>
+        <div class="aside__section" id="aside__events">Events</div>
+        <div class="aside__section" id="aside__functions">Functions</div>
+        <div class="aside__section" id="aside__selectors">Selectors</div>
       </aside>
-      <div class="central"></div>
+      <div class="central" id="central"></div>
     </main>
 
+    <!-- ! Events Template -->
     <template id="events">
       <section>
-        <ul>
+        <ul class="article__list">
           <li>
-            When the HTML document has been loaded and you can manipulate it
-            with JavaScript
+            <article>
+              <div class="article__title">
+                When the HTML document has been loaded and you can manipulate it
+                with JavaScript
+              </div>
+              <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
           </li>
-          <li>When an HTML item has been clicked</li>
-          <li>When an HTML item has been double clicked</li>
-          <li>When the user presses a key on the keyboard</li>
-          <li>When the user moves the mouse cursor</li>
-          <li>When the user changes a value of an text input</li>
-          <li>When an image is loaded</li>
           <li>
-            When an image fails to load, (if you write an incorrect image url
-            the loading of the image will fail)
+            <article>
+              <div class="article__title">
+                When an HTML item has been clicked
+              </div>
+              <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
           </li>
-          <li>When a form is submitted</li>
-          <li>When the user changes the option of a select element</li>
-          <li>When you position the mouse over an element</li>
-          <li>When a checkbox is checked or unchecked</li>
           <li>
-            When a ul list item is clicked, show the item that was clicked
+            <article>
+              <div class="article__title">
+                When an HTML item has been double clicked
+              </div>
+              <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                When the user presses a key on the keyboard
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                When the user moves the mouse cursor
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                When the user changes a value of an text input
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">When an image is loaded</div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                When an image fails to load, (if you write an incorrect image
+                url the loading of the image will fail)
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">When a form is submitted</div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                When the user changes the option of a select element
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                When you position the mouse over an element
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                When a checkbox is checked or unchecked
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                When a ul list item is clicked, show the item that was clicked
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
           </li>
         </ul>
       </section>
+      <script src="./assets/scripts/main.js" type="module"></script>
     </template>
+
+    <!-- ! Functions Template -->
+    <template id="functions">
+      <section>
+        <ul class="article__list">
+          <li>
+            <article>
+              <div class="article__title">
+                Create an HTML element with any text value
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Remove an HTML element with any text value
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Append an HTML element with any text value to a parent element
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Prepend an HTML element with any text value to a parent element
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Create and add an HTML element with any text value after another
+                element
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Create and add an HTML element with any text value before
+                another element
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Clone an HTML element within other element
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">Add a class to an HTML item</div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">Remove a class to an HTML item</div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">Toggle a class of an HTML item</div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Add a disabled attribute to an HTML button
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Remove the disabled attribute of an HTML button
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Set a data-src attribute to a img element
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Remove the data-src attribute of the img element
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Hide an HTML element on click (display: none)
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Show an HTML element on click (display: block)
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Fade in an HTML element using jQuery
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Fade out an HTML element using jQuery
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <script src="./assets/scripts/main.js" type="module"></script>
+    </template>
+
+    <!-- ! Selectors Template -->
+    <template id="selectors">
+      <section>
+        <ul class="article__list">
+          <li>
+            <article>
+              <div class="article__title">
+                Iterate a collection of elements and apply a change of style on them
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Get the parent element of a certain element and change its font weight
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Get the collection of children of a certain element and change its font weight
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Get all the elements that have a certain class and change their font weight
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Get an item by id and change its font weight
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Get all the elements that have a certain class and the display property of none and change their font color
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">Get the options of a select element that are selected (attribute selected)</div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Change the href attribute of the first <a> element (You have to create several <a> elements)
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)</div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Remove all items from a specific selector
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="article__title">
+                Animate an item after 2 seconds from the initial page load
+              </div>
+                <div class="article__content">
+                <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__code"></div>
+                <div class="article__language article__language--javascript">JavaScript</div>
+                <div class="article__code"></div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <script src="./assets/scripts/main.js" type="module"></script>
+    </template>
+
+    <script src="./assets/scripts/templates.js"></script>
   </body>
 </html>
