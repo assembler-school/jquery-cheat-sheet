@@ -102,6 +102,29 @@ document.onmousemove = function(e){
   };
 }
 
+//5 ----------------------------------------------------------
+function changedInput() {
+  // Macro
+  macroTextVanilla.innerText = `// Changed input behaviour
+
+element.onchange = function(){
+  this.style.color = "yellow";
+  this.style.color = "2px solid yellow";
+  this.style.color = "black";
+};`;
+
+  // Output
+  let exampleInput = document.createElement("input");
+  exampleInput.classList.add("example-input");
+  exampleInput.setAttribute("type", "text");
+  outputVanilla.appendChild(exampleInput);
+  exampleInput.onchange = function () {
+    (this.style.color = "var(--accent-color)"),
+      (this.style.outline = "2px solid var(--accent-color)"),
+      (this.style.backgroundColor = "var(--dark-color");
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -125,5 +148,9 @@ export const vanillaExamples = [
   // 4
   function () {
     mouseMoved();
+  },
+  // 5
+  function () {
+    changedInput();
   },
 ];

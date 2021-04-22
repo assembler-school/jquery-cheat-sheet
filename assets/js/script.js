@@ -191,13 +191,10 @@ function blankMacroOutput() {
   $("#output-panel").html("");
 }
 
+function removedTest() {
+  console.log("Mousemove removed");
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                    TEST                                    */
 /* -------------------------------------------------------------------------- */
-// let test = `// This is a comment
-// function testName(event){
-//   is a multiline
-//   string
-// };`;
-
-// macroText.text(test);

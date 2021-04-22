@@ -55,6 +55,11 @@ body {
   flex-direction: column;
 }
 
+input,
+button {
+  outline: none;
+}
+
 .text {
   color: var(--accent-color);
 }
@@ -138,6 +143,10 @@ main {
 }
 
 .example:hover {
+  font-weight: var(--semiBold);
+}
+
+.selected-example {
   font-weight: var(--semiBold);
 }
 
@@ -251,6 +260,7 @@ footer {
 /* -------------------------------------------------------------------------- */
 /*                              EXAMPLES ELEMENTS                             */
 /* -------------------------------------------------------------------------- */
+
 .example-button {
   background-color: var(--light-color);
   color: var(--dark-color);
@@ -259,7 +269,16 @@ footer {
   max-width: 200px;
   height: fit-content;
   text-align: center;
-  border-radius: 5px;
   font-weight: var(--bold);
   cursor: pointer;
+  border-radius: 5px;
+}
+
+.example-input {
+  width: 50%;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  border: none;
+  font-size: 18px;
+  padding-left: 5px;
 }

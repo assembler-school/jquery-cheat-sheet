@@ -45,20 +45,20 @@ $(element).click(function(){
   macroJquery.text(macroString);
 
   // Output
-  let newButton = $("<div>");
-  newButton.addClass("example-button");
-  newButton.text("Click me");
-  newButton.click(function () {
+  let exampleButton = $("<div>");
+  exampleButton.addClass("example-button");
+  exampleButton.text("Click me");
+  exampleButton.click(function () {
     $(this).text("Clicked!");
   });
-  outputJquery.append(newButton);
+  outputJquery.append(exampleButton);
 }
 
 //2 ----------------------------------------------------------
 function dblClickedItem() {
   // Macro
   macroString = `// Double clicked element
-    
+
 $(element).dblclick(function(){
   $(this).text("Clicked!");
 };`;
@@ -66,13 +66,13 @@ $(element).dblclick(function(){
   macroJquery.text(macroString);
 
   // Output
-  let newButton = $("<div>");
-  newButton.addClass("example-button");
-  newButton.text("Double click me");
-  newButton.dblclick(function () {
+  let exampleButton = $("<div>");
+  exampleButton.addClass("example-button");
+  exampleButton.text("Double click me");
+  exampleButton.dblclick(function () {
     $(this).text("Clicked!");
   });
-  outputJquery.append(newButton);
+  outputJquery.append(exampleButton);
 }
 
 //3 ----------------------------------------------------------
@@ -109,8 +109,36 @@ $(document).mousemove(function(e){
   macroJquery.text(macroString);
 
   // Output
-  $(document).mousemove(function (event) {
-    outputJquery.text("> Mouse at: (" + event.pageX + ", " + event.pageX + ")");
+  $("body").on("mousemove", mouseMoveInside);
+}
+
+//5 ----------------------------------------------------------
+function changedInput() {
+  // Macro
+  macroString = `// Changed input behaviour
+
+$("input").change(function(){
+  $(this).css({
+  "color": "yellow;
+  "outline": "2px solid yellow";
+  "backgroundColor": "black"
+  })
+};`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  let exampleInput = $("<input>");
+  exampleInput.addClass("example-input");
+  exampleInput.attr("type", "text");
+  outputJquery.append(exampleInput).focus();
+
+  $(".example-input").change(function () {
+    $(this).css({
+      color: "var(--accent-color)",
+      outline: "2px solid var(--accent-color)",
+      backgroundColor: "var(--dark-color",
+    });
   });
 }
 
@@ -138,4 +166,19 @@ export const jQueryExamples = [
   function () {
     mouseMoved();
   },
+  // 5
+  function () {
+    changedInput();
+  },
 ];
+
+function mouseMoveInside(event) {
+  outputJquery.text("> Mouse at: (" + event.pageX + ", " + event.pageY + ")");
+}
+
+$(".example").each(function () {
+  $(this).click(function () {
+    $("body").off("mousemove", mouseMoveInside);
+    console.log("Removed mousemove");
+  });
+});
