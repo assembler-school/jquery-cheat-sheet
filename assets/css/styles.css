@@ -212,6 +212,7 @@ main {
   white-space: pre;
   display: flex;
   flex-direction: column;
+  font-size: 16px;
 }
 
 #macro-text {
@@ -225,6 +226,8 @@ main {
 #output-panel {
   outline: var(--border-size) solid var(--accent-color);
   background-color: var(--dark-color);
+  color: whitesmoke;
+  font-size: 18px;
 }
 
 footer {
