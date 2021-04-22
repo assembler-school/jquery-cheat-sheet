@@ -207,3 +207,15 @@ export function fnShow() {
     $("#f14JQueryDemo").show();
   });
 }
+
+export function fnFadeIn() {
+  $("#f15JQuery").on("click", function (e) {
+    $("#f15JQueryDemo").fadeIn();
+  });
+}
+
+export function fnFadeOut() {
+  $("#f16JQuery").on("click", function (e) {
+    $("#f16JQueryDemo").fadeOut();
+  });
+}

@@ -185,7 +185,7 @@ function addListeners(e) {
     js.fnFadeIn();
     jq.fnFadeIn();
   }
-  if (el.matches('[title="fnFadeOut.md"]')) {
+  if (el.matches('[title="fadeOut.md"]')) {
     js.fnFadeOut();
     jq.fnFadeOut();
   }

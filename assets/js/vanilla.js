@@ -264,3 +264,22 @@ export function fnShow() {
     para.style.display = "block";
   });
 }
+
+export function fnFadeIn() {
+  const selector = document.getElementById("f15Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f15JsDemo");
+    para.classList.add("fade-in");
+    para.classList.remove("none");
+  });
+}
+
+export function fnFadeOut() {
+  const selector = document.getElementById("f16Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f16JsDemo");
+    para.classList.add("fade-out");
+  });
+}
