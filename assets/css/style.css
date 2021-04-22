@@ -149,6 +149,14 @@ pre span.count:before {
   margin: 0 auto;
   border-top: 28px solid #d5d5d5;
 }
+.console p {
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.console p::-webkit-scrollbar {
+  width: 0em;
+}
 @keyframes cursor-blink {
   0% {
     opacity: 0;
