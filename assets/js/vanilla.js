@@ -97,8 +97,18 @@ document.onmousemove = function(e){
 };`;
 
   // Output
-  document.addEventListener("mousemove", function (e) {
+  function mouseFunction(e) {
     outputVanilla.innerText = "> Mouse at: (" + e.pageX + ", " + e.pageY + ")";
+  }
+
+  document.addEventListener("mousemove", mouseFunction);
+
+  // Removing event listeners
+  $(".example").each(function () {
+    $(this).click(function () {
+      document.removeEventListener("mousemove", mouseFunction);
+      console.log("Removed mousemove");
+    });
   });
 }
 
@@ -167,16 +177,16 @@ export const vanillaExamples = [
   function () {
     keyPressed();
   },
-  // // 4
-  // function () {
-  //   mouseMoved();
-  // },
-  // // 5
-  // function () {
-  //   changedInput();
-  // },
-  // // 6
-  // function () {
-  //   loadedImage();
-  // }
+  // 4
+  function () {
+    mouseMoved();
+  },
+  // 5
+  function () {
+    changedInput();
+  },
+  // 6
+  function () {
+    loadedImage();
+  },
 ];
