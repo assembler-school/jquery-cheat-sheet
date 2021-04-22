@@ -14,15 +14,47 @@
     /* border: 1px solid rgb(255, 255, 255); */
     font-family: var(--font);
     color: rgb(253, 253, 253);
-    font-size: small;
+    font-size: xx-small;
     text-align: center;
     /* cursor: url("Assets/gun-target.png") 32 32, auto; */
 }
 
-p:hover,
-h1:hover,
+
+/* CSS - Generals */
+
+ul {
+    list-style-type: none;
+    max-width: 70%;
+}
+
+li {
+    text-align: left;
+}
+
 li:hover {
-    background-color: yellowgreen;
+    font-size: 5px;
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+ul li::marker {
+    content: "▶";
+}
+
+h1 {
+    font-size: 10vw;
+    text-shadow: 4px 4px 0px #000000;
+    mix-blend-mode: screen;
+    animation: fadeIn 2.5s linear forwards;
 }
 
 
@@ -88,8 +120,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--background-div); */
     background-size: cover;
+    text-transform: uppercase;
     width: 10%;
     height: 70%;
     margin-left: 4%;
@@ -119,6 +151,7 @@ body {
     margin-right: 2%;
     border: 2px solid var(--background-buttons);
     border-radius: 10px;
+    word-wrap: break-word;
 }
 
 
@@ -136,6 +169,7 @@ body {
     margin-right: 4%;
     border: 2px solid var(--background-buttons);
     border-radius: 10px;
+    word-wrap: break-word;
 }
 
 .jquery-to-jsVanilla-class {
@@ -148,4 +182,5 @@ body {
     height: 70%;
     border: 2px solid var(--background-buttons);
     border-radius: 10px;
+    word-wrap: break-word;
 }
