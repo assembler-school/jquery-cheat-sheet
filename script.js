@@ -60,8 +60,8 @@ $("#selectors-column").on("click", function () {
 
 function showColumn(column){
     $("#" + column +"-column").animate({
-             "width": "100%"
-        }, timeHideShow);
+        "width": "100%"
+    }, timeHideShow);
 }
 
 function hideColumn(column){
