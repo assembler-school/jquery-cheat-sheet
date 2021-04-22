@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                               IMPORTS/EXPORTS                              */
 /* -------------------------------------------------------------------------- */
-import { blankMacroOutput } from "./script.js";
+import { removeEventVanilla } from "./script.js";
 
 console.log("Vanilla JS file loaded!");
 
@@ -10,6 +10,8 @@ console.log("Vanilla JS file loaded!");
 /* -------------------------------------------------------------------------- */
 let macroTextVanilla = document.getElementById("macro-text");
 let outputVanilla = document.getElementById("output-panel");
+
+let examples = document.getElementsByClassName("example");
 
 /* -------------------------------------------------------------------------- */
 /*                                  FUNCTIONS                                 */
@@ -79,10 +81,14 @@ element.onkeypress = function(){
   // Output
   outputVanilla.innerText = "";
   let outputText = "> Key pressed! \n";
-  document.onkeypress = function () {
+
+  function keyPressedInside() {
     outputVanilla.innerText = outputText;
     outputText += "> Key pressed! \n";
-  };
+  }
+  document.addEventListener("keypress", keyPressedInside);
+  // Removing event listener if example is clicked
+  removeEventVanilla(document, "keypress", keyPressedInside, examples);
 }
 
 //4 ----------------------------------------------------------
@@ -97,19 +103,12 @@ document.onmousemove = function(e){
 };`;
 
   // Output
-  function mouseFunction(e) {
+  function mouseMoveInside(e) {
     outputVanilla.innerText = "> Mouse at: (" + e.pageX + ", " + e.pageY + ")";
   }
-
-  document.addEventListener("mousemove", mouseFunction);
-
-  // Removing event listeners
-  $(".example").each(function () {
-    $(this).click(function () {
-      document.removeEventListener("mousemove", mouseFunction);
-      console.log("Removed mousemove");
-    });
-  });
+  document.addEventListener("mousemove", mouseMoveInside);
+  // Removing event listener if example is clicked
+  removeEventVanilla(document, "mousemove", mouseMoveInside, examples);
 }
 
 //5 ----------------------------------------------------------

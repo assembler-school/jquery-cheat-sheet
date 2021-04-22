@@ -109,16 +109,16 @@ $(document).mousemove(function(e){
   macroJquery.text(macroString);
 
   // Output
-  function mouseFunction(e) {
+  function mouseMoveInside(e) {
     outputJquery.text("> Mouse at: (" + e.pageX + ", " + e.pageY + ")");
   }
 
-  $(document).on("mousemove", mouseFunction);
+  $(document).on("mousemove", mouseMoveInside);
 
   // Removing event listeners
   $(".example").each(function () {
     $(this).click(function () {
-      $(document).off("mousemove", mouseFunction);
+      $(document).off("mousemove", mouseMoveInside);
       console.log("Removed mousemove");
     });
   });
