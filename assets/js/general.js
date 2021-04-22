@@ -207,4 +207,14 @@ function addListeners(e) {
     js.fnChildren();
     jq.fnChildren();
   }
+
+  if (el.matches('[title="classSelector.md"]')) {
+    js.fnClassSelector();
+    jq.fnClassSelector();
+  }
+
+  if (el.matches('[title="idSelector.md"]')) {
+    js.fnIdSelector();
+    jq.fnIdSelector();
+  }
 }

@@ -243,3 +243,15 @@ export function fnParent() {
     $("#f19JQueryDemo li").parent().css("background", "red");
   });
 }
+
+export function fnClassSelector() {
+  $("#f20JQuery").on("click", function (e) {
+    $(".f20JQueryDemo").text("Hello World!");
+  });
+}
+
+export function fnIdSelector() {
+  $("#f21JQuery").on("click", function (e) {
+    $("#f21JQueryDemo").text("Hello World!");
+  });
+}

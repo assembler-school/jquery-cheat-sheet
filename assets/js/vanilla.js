@@ -314,3 +314,21 @@ export function fnParent() {
     para.style.background = "red";
   });
 }
+
+export function fnClassSelector() {
+  const selector = document.getElementById("f20Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector(".f20JsDemo");
+    para.textContent = "Hello World!";
+  });
+}
+
+export function fnIdSelector() {
+  const selector = document.getElementById("f21Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f21JsDemo");
+    para.textContent = "Hello World!";
+  });
+}
