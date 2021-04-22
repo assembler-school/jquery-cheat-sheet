@@ -48,6 +48,25 @@ element.onclick = function(){
   outputVanilla.appendChild(newButton);
 }
 
+//2
+function dblClickedItem() {
+  // Macro
+  macroTextVanilla.innerText = `// Double clicked element
+
+element.ondblclick = function(){
+  this.innerText = "Clicked!";
+}`;
+
+  // Output
+  let newButton = document.createElement("div");
+  newButton.setAttribute("class", "example-button");
+  newButton.innerText = "Double click me";
+  newButton.ondblclick = function () {
+    this.innerText = "Clicked!";
+  };
+  outputVanilla.appendChild(newButton);
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -59,5 +78,9 @@ export const vanillaExamples = [
   // 1
   function () {
     clickedItem();
+  },
+  // 2
+  function () {
+    dblClickedItem();
   },
 ];

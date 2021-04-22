@@ -53,6 +53,27 @@ $(element).click(function(){
   outputJquery.append(newButton);
 }
 
+//2
+function dblClickedItem() {
+  // Macro
+  macroString = `// Double clicked element
+    
+  $(element).dblclick(function(){
+    $(this).text("Clicked!");
+  }`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  let newButton = $("<div>");
+  newButton.addClass("example-button");
+  newButton.text("Double click me");
+  newButton.dblclick(function () {
+    $(this).text("Clicked!");
+  });
+  outputJquery.append(newButton);
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -64,5 +85,9 @@ export const jQueryExamples = [
   // 1
   function () {
     clickedItem();
+  },
+  // 2
+  function () {
+    dblClickedItem();
   },
 ];
