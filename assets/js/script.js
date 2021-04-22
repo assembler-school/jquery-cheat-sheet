@@ -60,6 +60,7 @@ let selectors = [
 ];
 
 let categoryTitles = $(".category");
+let selectedExample = $(".selected-example");
 
 let eventsContainer = $("#events-examples");
 let functionsContainer = $("#functions-examples");
@@ -153,17 +154,35 @@ $(".example").each(function () {
   $(this).attr("id", "ex" + idIndex);
   // Clickable element
   $(this).click(function () {
+    $(".selected-example").removeClass("selected-example");
+    $(this).addClass("selected-example");
+
     blankMacroOutput();
+    //Accessing only its id
     let exampleIndex = $(this).attr("id").replace("ex", "");
     // Vanilla or jQuery
     if (vanillaCheckbox.prop("checked")) {
       macroText.text(vanillaExamples[exampleIndex]);
     } else {
-      blankMacroOutput();
       macroText.text(jQueryExamples[exampleIndex]);
     }
   });
   idIndex++;
+});
+
+$(".js-type").click(function () {
+  if ($(".selected-example").length > 0) {
+    blankMacroOutput();
+    let exampleIndex = $(".selected-example").attr("id").replace("ex", "");
+    // Vanilla or jQuery
+    if ($(this).attr("id") === "vanilla-radio") {
+      macroText.text(vanillaExamples[exampleIndex]);
+    } else {
+      macroText.text(jQueryExamples[exampleIndex]);
+    }
+  } else {
+    console.log("No selected example");
+  }
 });
 
 // Deleting macro & output content
