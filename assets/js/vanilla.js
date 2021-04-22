@@ -174,3 +174,22 @@ export function fnBefore() {
     });
   });
 }
+
+export function fnClone() {
+  const selector = document.getElementById("f6Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f6JsDemo");
+    let cln = para.cloneNode(true);
+    para.insertAdjacentElement("afterbegin", cln);
+  });
+}
+
+export function fnAddClass() {
+  const selector = document.getElementById("f7Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelector("#f7JsDemo");
+    para.classList.add("red-text");
+  });
+}

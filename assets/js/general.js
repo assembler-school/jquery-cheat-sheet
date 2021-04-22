@@ -137,4 +137,34 @@ function addListeners(e) {
     js.fnBefore();
     jq.fnBefore();
   }
+
+  if (el.matches('[title="clone.md"]')) {
+    js.fnClone();
+    jq.fnClone();
+  }
+
+  if (el.matches('[title="addClass.md"]')) {
+    js.fnAddClass();
+    jq.fnAddClass();
+  }
+
+  if (el.matches('[title="removeClass.md"]')) {
+    js.fnRemoveClass();
+    jq.fnRemoveClass();
+  }
+
+  if (el.matches('[title="toggleClass.md"]')) {
+    js.fnToggleClass();
+    jq.fnToggleClass();
+  }
+
+  if (el.matches('[title="addAttr.md"]')) {
+    js.fnAddAttr();
+    jq.fnAddAttr();
+  }
+
+  if (el.matches('[title="removeAttr.md"]')) {
+    js.fnRemoveAttr();
+    jq.fnRemoveAttr();
+  }
 }

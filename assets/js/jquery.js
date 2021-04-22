@@ -146,3 +146,16 @@ export function fnBefore() {
     $(".f5JQueryDemo").before(para);
   });
 }
+
+export function fnClone() {
+  $("#f6JQuery").on("click", function (e) {
+    let cln = $("#f6JQueryDemo").clone();
+    $("#f6JQueryDemo").after(cln);
+  });
+}
+
+export function fnAddClass() {
+  $("#f7JQuery").on("click", function (e) {
+    let cln = $("#f7JQueryDemo").addClass("red-text");
+  });
+}
