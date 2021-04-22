@@ -94,80 +94,85 @@
       <span class="tab">jquery-cheat-sheet.js</span>
     </header>
     <main>
-      <section class="terminal-window">
-        <h3 class="terminal-highlight">Events</h3>
-        <pre>
-          <span class="code-highlight">HTML</span>
-          <span class="count">HTML document has been loaded</span>
-          <span class="code-highlight">Cursor</span>
-          <span class="count">Click</span>
-          <span class="count">Double click</span>
-          <span class="count">Cursor movement</span>
-          <span class="count">Mouse over</span>
-          <span class="code-highlight">Keyboard</span>
-          <span class="count">Keypress</span>
-          <span class="code-highlight">Images</span>
-          <span class="count">An image is loaded</span>
-          <span class="count">An image fails to load</span>
-          <span class="code-highlight">Data</span>
-          <span class="count">Form is submitted</span>
-          <span class="count">Input value change</span>
-          <span class="count">Checkbox un/check</span>
-          <span class="count">Select element</span>
-          <span></span>
-        </pre>
-      </section>
-      <section class="terminal-window">
-        <h3 class="terminal-highlight">Function and Selectors</h3>
-        <pre>
-          <span class="code-highlight">HTML Elements</span>
-          <span class="count">Create HTML element</span>
-          <span class="count">Remove HTML element</span>
-          <span class="count">Clone HTML element</span>
-          <span class="code-highlight">DOM Manipulation</span>
-          <span class="count">Append HTML element</span>
-          <span class="count">Prepend HTML element</span>
-          <span class="count">Create HTML element + Add after another</span>
-          <span class="count">Create HTML element + Add before another</span>
-          <span class="code-highlight">Classes</span>
-          <span class="count">Add class to an HTML element</span>
-          <span class="count">Remove class to an HTML element</span>
-          <span class="count">Toggle class to an HTML element</span>
-          <span class="code-highlight">Attributes</span>
-          <span class="count">Add a disabled attribute</span>
-          <span class="count">Remove a disabled attribute</span>
-          <span class="count">Set 'data-src' attribute</span>
-          <span class="count">Remove 'data-src' attribute</span>
-          <span class="count">Hide HTML element on click</span>
-          <span class="count">Show HTML element on click</span>
-          <span class="count">Fade in an HTML element</span>
-          <span class="count">Fade out an HTML element</span>
-          <span class="count">Iteration across a collection of elements</span>
-          <span class="code-highlight">Selectors</span>
+      <div class="left-side">
+        <section class="terminal-window">
+          <h3 class="terminal-highlight">Selectors</h3>
+          <pre>
+          <span class="code-highlight">Get...</span>
           <span class="count">Parent element</span>
           <span class="count">Children elements</span>
           <span class="count">Children collection</span>
-          <span class="count">Get a collection by class</span>
-          <span class="count">Get an element by Id</span>
-          <span class="count">Get collection by class and attribute</span>
-          <span class="count">Get selected options of select element</span>
-          <span class="count">Change href attribute</span>
-          <span class="count">Get input value</span>
-          <span class="count">Remove all items of selector</span>
-          <span class="count">Delayed animate after page load</span>
+          <span class="count">Collection by class</span>
+          <span class="count">Element by Id</span>
+          <span class="count">Collection by class & attribute</span>
         </pre>
-      </section>
-
-      <div class="console hide">
-        <p>npm install -g @angular/cli</p>
-        <p>ng new my-dream-app</p>
-        <p>cd my-dream-app</p>
-        <p>ng serve</p>
-        <div class="dots-container">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
+          <div class="console">
+            <div class="dots-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <p id="console-text-input"></p>
+          </div>
+        </section>
+        <section class="terminal-window">
+          <h3 class="terminal-highlight">Events</h3>
+          <pre>
+            <span class="code-highlight">HTML</span>
+            <span class="count">Document has been loaded</span>
+            <span class="code-highlight">Cursor</span>
+            <span class="count">Click</span>
+            <span class="count">Double click</span>
+            <span class="count">Cursor movement</span>
+            <span class="count">Mouse over</span>
+            <span class="code-highlight">Keyboard</span>
+            <span class="count">Keypress</span>
+            <span class="code-highlight">Images</span>
+            <span class="count">An image is loaded</span>
+            <span class="count">An image fails to load</span>
+            <span class="code-highlight">Data</span>
+            <span class="count">Form is submitted</span>
+            <span class="count">Input value change</span>
+            <span class="count">Checkbox un/check</span>
+            <span class="count">Select element</span>
+            <span></span>
+          </pre>
+        </section>
+        <section class="terminal-window">
+          <h3 class="terminal-highlight">Function</h3>
+          <pre>
+            <span class="code-highlight">HTML Elements</span>
+            <span class="count">Create HTML element</span>
+            <span class="count">Remove HTML element</span>
+            <span class="count">Clone HTML element</span>
+            <span class="code-highlight">DOM Manipulation</span>
+            <span class="count">Append HTML element</span>
+            <span class="count">Prepend HTML element</span>
+            <span class="count">Add after another</span>
+            <span class="count">Add before another</span>
+            <span class="code-highlight">Classes</span>
+            <span class="count">Add class to an HTML element</span>
+            <span class="count">Remove class to an HTML element</span>
+            <span class="count">Toggle class to an HTML element</span>
+            <span class="code-highlight">Attributes</span>
+            <span class="count">Add a disabled attribute</span>
+            <span class="count">Remove a disabled attribute</span>
+            <span class="count">Set 'data-src' attribute</span>
+            <span class="count">Remove 'data-src' attribute</span>
+            <span class="count">Change href attribute</span>
+            <span class="code-highlight">Element display</span>
+            <span class="count">Hide HTML element on click</span>
+            <span class="count">Show HTML element on click</span>
+            <span class="count">Fade in an HTML element</span>
+            <span class="count">Fade out an HTML element</span>
+            <span class="count">Delayed animate after page load</span>
+            <span class="code-highlight">Functions</span>
+            <span class="count">Iterate collection of elements</span>
+            <span class="count">Get selected options of <i>select</i></span>
+            <span class="count">Get input value</span>
+            <span class="count">Remove all items of selector</span>
+          </pre>
+        </section>
       </div>
     </main>
     <footer></footer>
