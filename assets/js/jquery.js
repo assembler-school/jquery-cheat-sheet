@@ -32,6 +32,27 @@ $( document ).ready(function() {
   outputJquery.text("HTML file loaded!");
 }
 
+//1
+function clickedItem() {
+  // Macro
+  macroString = `// Clicked element
+  
+$(element).click(function(){
+  $(this).text("Clicked!");
+}`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  let newButton = $("<div>");
+  newButton.addClass("example-button");
+  newButton.text("Click me");
+  newButton.click(function () {
+    $(this).text("Clicked!");
+  });
+  outputJquery.append(newButton);
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -39,5 +60,9 @@ export const jQueryExamples = [
   // 0
   function () {
     htmlLoaded();
+  },
+  // 1
+  function () {
+    clickedItem();
   },
 ];
