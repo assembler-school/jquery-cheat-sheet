@@ -54,9 +54,13 @@ $(element).click(function(){
     exampleButton.addClass("example-button");
     exampleButton.text("Click me");
 
-    exampleButton.click(function () {
+    function clickedItemInside(event) {
       $(this).text("Clicked!");
-    });
+    }
+
+    exampleButton.on("click", clickedItemInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(exampleButton, "click", clickedItemInside, ".example");
 
     // Resetting output if it's filled
     if (outputJquery.children()) {
@@ -82,9 +86,19 @@ $(element).dblclick(function(){
     let exampleButton = $("<div>");
     exampleButton.addClass("example-button");
     exampleButton.text("Double click me");
-    exampleButton.dblclick(function () {
+
+    function dblClickItemInside(event) {
       $(this).text("Clicked!");
-    });
+    }
+
+    exampleButton.on("dblclick", dblClickItemInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(
+      exampleButton,
+      "dblclick",
+      dblClickItemInside,
+      ".example"
+    );
 
     // Resetting output if it's filled
     if (outputJquery.children()) {
@@ -136,13 +150,13 @@ $(document).mousemove(function(e){
 
   // Output
   runButtonJquery.click(function () {
-    function mouseMoveInside(e) {
+    function mouseMovedInside(e) {
       outputJquery.text("> Mouse at: (" + e.pageX + ", " + e.pageY + ")");
     }
 
-    $(document).on("mousemove", mouseMoveInside);
+    $(document).on("mousemove", mouseMovedInside);
     // Removing event listener if example is clicked
-    removeEventJQuery(document, "mousemove", mouseMoveInside, ".example");
+    removeEventJQuery(document, "mousemove", mouseMovedInside, ".example");
   });
 }
 
@@ -167,13 +181,18 @@ $("input").change(function(){
     exampleInput.addClass("example-input");
     exampleInput.attr("type", "text");
 
-    $(exampleInput).change(function () {
+    function changedInputInside(event) {
       $(this).css({
         color: "var(--accent-color)",
         outline: "2px solid var(--accent-color)",
         backgroundColor: "var(--dark-color",
       });
-    });
+      console.log($(this));
+    }
+
+    exampleInput.on("change", changedInputInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(exampleInput, "change", changedInputInside, ".example");
 
     // Resetting output if it's filled
     if (outputJquery.children()) {
@@ -205,9 +224,13 @@ $("img").load(function(){
     exampleImage.attr("alt", "Monty Python");
     exampleImage.attr("src", "./assets/img/montypython.jpg");
 
-    $(exampleImage).ready(function () {
+    function loadedImageInside() {
       console.log("Image loaded!");
-    });
+    }
+
+    $(exampleImage).on("ready", loadedImageInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(exampleImage, "ready", loadedImageInside, ".example");
 
     // Resetting output if it's filled
     if (outputJquery.children()) {
@@ -236,9 +259,13 @@ $("img").on("error", function(){
     exampleImage.attr("alt", "Monty Python");
     exampleImage.attr("src", "./assets/img/montypythonerror.jpg");
 
-    $(exampleImage).on("error", function () {
+    function errorImageInside() {
       console.log("Image not loaded!");
-    });
+    }
+
+    $(exampleImage).on("error", errorImageInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(exampleImage, "error", errorImageInside, ".example");
 
     // Resetting output if it's filled
     if (outputJquery.children()) {

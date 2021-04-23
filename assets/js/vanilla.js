@@ -49,9 +49,13 @@ element.onclick = function(){
     exampleButton.setAttribute("class", "example-button");
     exampleButton.innerText = "Click me";
 
-    exampleButton.onclick = function () {
-      this.innerText = "Clicked!";
-    };
+    function clickItemInside(event) {
+      event.target.innerText = "Clicked!";
+    }
+
+    exampleButton.addEventListener("click", clickItemInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleButton, "click", clickItemInside, examples);
 
     // Resetting output if it's filled
     if (outputVanilla.hasChildNodes()) {
@@ -76,9 +80,13 @@ element.ondblclick = function(){
     exampleButton.setAttribute("class", "example-button");
     exampleButton.innerText = "Double click me";
 
-    exampleButton.ondblclick = function () {
-      this.innerText = "Clicked!";
-    };
+    function dblClickItemInside(event) {
+      event.target.innerText = "Clicked!";
+    }
+
+    exampleButton.addEventListener("dblclick", dblClickItemInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleButton, "dblclick", dblClickItemInside, examples);
 
     // Resetting output if it's filled
     if (outputVanilla.hasChildNodes()) {
@@ -126,14 +134,14 @@ document.onmousemove = function(e){
 
   // Output
   runButton.onclick = function () {
-    function mouseMoveInside(e) {
+    function mouseMovedInside(e) {
       outputVanilla.innerText =
         "> Mouse at: (" + e.pageX + ", " + e.pageY + ")";
     }
 
-    document.addEventListener("mousemove", mouseMoveInside);
+    document.addEventListener("mousemove", mouseMovedInside);
     // Removing event listener if example is clicked
-    removeEventVanilla(document, "mousemove", mouseMoveInside, examples);
+    removeEventVanilla(document, "mousemove", mouseMovedInside, examples);
   };
 }
 
@@ -154,11 +162,15 @@ element.onchange = function(){
     exampleInput.classList.add("example-input");
     exampleInput.setAttribute("type", "text");
 
-    exampleInput.onchange = function () {
-      (this.style.color = "var(--accent-color)"),
-        (this.style.outline = "2px solid var(--accent-color)"),
-        (this.style.backgroundColor = "var(--dark-color");
-    };
+    function changedInputInside(event) {
+      event.target.style.color = "var(--accent-color)";
+      event.target.style.outline = "2px solid var(--accent-color)";
+      event.target.style.backgroundColor = "var(--dark-color";
+    }
+
+    exampleInput.addEventListener("change", changedInputInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleInput, "change", changedInputInside, examples);
 
     // Resetting output if it's filled
     if (outputVanilla.hasChildNodes()) {
@@ -184,9 +196,13 @@ image.onload = function(){
     exampleImage.setAttribute("alt", "Monty Python");
     exampleImage.setAttribute("src", "./assets/img/montypython.jpg");
 
-    exampleImage.onload = function () {
+    function loadedImageInside() {
       console.log("Image loaded!");
-    };
+    }
+
+    exampleImage.addEventListener("load", loadedImageInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleImage, "load", loadedImageInside, examples);
 
     // Resetting output if it's filled
     if (outputVanilla.hasChildNodes()) {
@@ -213,9 +229,13 @@ image.error = function(){
     exampleImage.setAttribute("alt", "Monty Python");
     exampleImage.setAttribute("src", "./assets/img/montypythonerror.jpg");
 
-    exampleImage.onerror = function () {
+    function errorImageInside() {
       console.log("Image not loaded!");
-    };
+    }
+
+    exampleImage.addEventListener("error", errorImageInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleImage, "error", errorImageInside, examples);
 
     // Resetting output if it's filled
     if (outputVanilla.hasChildNodes()) {
