@@ -264,3 +264,12 @@ export function fnPropSelector() {
     });
   });
 }
+
+export function fnSelectedOption() {
+  $("#f23JQuery").on("click", function (e) {
+    let para = $("#f23JQueryDemo option:selected").text();
+    // Or value
+    // $("f23JsDemo").val();
+    $("#f23JQueryP").text("Selected: " + para);
+  });
+}

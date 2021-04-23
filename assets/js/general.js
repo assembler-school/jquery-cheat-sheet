@@ -224,27 +224,27 @@ function addListeners(e) {
   }
 
   if (el.matches('[title="selectedOption.md"]')) {
-    js.fnselectedOption();
-    jq.fnselectedOption();
+    js.fnSelectedOption();
+    jq.fnSelectedOption();
   }
 
   if (el.matches('[title="changeFirst.md"]')) {
-    js.fnchangeFirst();
-    jq.fnchangeFirst();
+    js.fnChangeFirst();
+    jq.fnChangeFirst();
   }
 
   if (el.matches('[title="valueFirst.md"]')) {
-    js.fnvalueFirst();
-    jq.fnvalueFirst();
+    js.fnValueFirst();
+    jq.fnValueFirst();
   }
 
   if (el.matches('[title="removeAll.md"]')) {
-    js.fnremoveAll();
-    jq.fnremoveAll();
+    js.fnRemoveAll();
+    jq.fnRemoveAll();
   }
 
   if (el.matches('[title="animate.md"]')) {
-    js.fnanimate();
-    jq.fnanimate();
+    js.fnAnimate();
+    jq.fnAnimate();
   }
 }

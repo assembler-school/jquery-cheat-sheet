@@ -345,3 +345,13 @@ export function fnPropSelector() {
     });
   });
 }
+
+export function fnSelectedOption() {
+  const selector = document.getElementById("f23Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.getElementById("f23JsDemo").value;
+    let p = document.getElementById("f23JsP");
+    p.textContent = "Selected: " + para;
+  });
+}
