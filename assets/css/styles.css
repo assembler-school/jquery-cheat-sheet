@@ -171,6 +171,7 @@ main {
   background: var(--accent-color);
   display: flex;
   flex-direction: column;
+  max-height: 350px;
 }
 
 #macro-top {
@@ -231,6 +232,7 @@ main {
   display: flex;
   flex-direction: column;
   font-size: 16px;
+  align-items: flex-end;
 }
 
 #macro-text {
@@ -238,7 +240,27 @@ main {
   font-weight: 300;
   white-space: pre-wrap;
   height: 100%;
+  width: 100%;
   overflow: scroll;
+}
+
+#run-button {
+  background-color: var(--dark-color);
+  color: var(--accent-color);
+  width: fit-content;
+  height: fit-content;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: var(--border-size) solid var(--dark-color);
+  outline: none;
+  transition: 0.2s;
+}
+
+#run-button:hover {
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+  border: var(--border-size) solid var(--dark-color);
 }
 
 #output-panel {
