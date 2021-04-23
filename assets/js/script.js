@@ -195,7 +195,9 @@ $(".js-type").click(function () {
 
 // Deleting macro & output content
 function blankMacroOutput() {
+  $("#macro-text").children().remove();
   $("#macro-text").html("");
+  $("#output-panel").children().remove();
   $("#output-panel").html("");
 }
 

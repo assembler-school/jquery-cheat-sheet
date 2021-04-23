@@ -31,6 +31,7 @@ document.onload = function(){
   // Output
   runButton.onclick = function () {
     outputVanilla.innerHTML = "> HTML file loaded!";
+    console.log("HTML file loaded!");
   };
 }
 
