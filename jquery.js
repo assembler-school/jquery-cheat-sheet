@@ -156,146 +156,200 @@ $('#selectorList li').each(function () {
         showModal();
     });
 
+    var selectElement = '<select id="selectOptions"><option value="volvo">Volvo</option><option value="saab">Saab</option><option value="mercedes">Mercedes</option><option value="audi">Audi</option></select>';
+    var divElement = '<div id="resultFunction"></div>';
+    var linkElement = '<p>GitHub link: </p><a href="https://github.com/">https://github.com/</a><p>React link: </p><a href="https://reactjs.org/">https://reactjs.org/</a>';
+    var inputElement = '<p>User name</p><input placeholder="User"><p>Password</p></input><input placeholder="Password"></input>'
+
     var itemId = $(this).attr('id');
     $(this).click(function () {
         console.log(itemId);
-
         switch (itemId) {
             case 'select0':
                 $('#itemTitle').html(localStorage.getItem('s0'));
                 $('#jsCode').html('<code>element.parentElement.style.fontWeight = "bold");</code>');
                 $('#jqCode').html('<code>$(element).parent().css("font-weight":"bold"});</code>');
+                $('#runID').css({ 'font-weight': 'normal' });
 
-                let flag = 0;
                 $('#jqButton').click(function () {
-                    if (!flag > 0) {
-                        $('#runCode').one('click', function () {
-                            flag++;
-                            jqChangeParentWeight();
-                        })
-                    }
+                    $('#runCode').one('click', function () {
+                        jqChangeParentWeight();
+                    })
                 });
 
-                let flag1 = 0;
                 $('#jsButton').click(function () {
-                    if (!flag1 > 0) {
-                        $('#runCode').one('click', function () {
-                            flag1++;
-                            jsChangeParentWeight();
-                        })
-                    }
+                    $('#runCode').one('click', function () {
+                        jsChangeParentWeight();
+                    })
                 });
                 break;
             case 'select1':
                 $('#itemTitle').html(localStorage.getItem('s1'));
                 $('#jsCode').html('<code>var childElem = document.getElementById("elementID").children;<br>for (let i = 0; i < childElem.length; i++)<br>{<br>childElem[i].style.fontWeight = "bold";<br>}</code>');
                 $('#jqCode').html('<code>$("#elementID").children().css({ "font-weight":"bold" });</code>');
+                $('#runID').css({ 'font-weight': 'normal' });
 
-                let flag2 = 0;
                 $('#jqButton').click(function () {
-                    if (!flag2 > 0) {
-                        $('#runCode').one('click', function () {
-                            flag2++;
-                            jqChangeCollectionWeight();
-                        })
-                    }
+                    $('#runCode').one('click', function () {
+                        jqChangeCollectionWeight();
+                    })
                 });
 
-                let flag3 = 0;
                 $('#jsButton').click(function () {
-                    if (!flag3 > 0) {
-                        $('#runCode').one('click', function () {
-                            flag3++;
-                            jsChangeCollectionWeight();
-                        })
-                    }
+                    $('#runCode').one('click', function () {
+                        jsChangeCollectionWeight();
+                    })
                 });
                 break;
             case 'select2':
                 $('#itemTitle').html(localStorage.getItem('s2'));
                 $('#jsCode').html('<code>document.querySelector(".changeWeight").style.fontWeight = "bold";</code>');
                 $('#jqCode').html('<code>$(".elementClass").css({ "font-weight":"bold" });</code>');
+                $('#runID').css({ 'font-weight': 'normal' });
 
-                let flag4 = 0;
                 $('#jqButton').click(function () {
-                    if (!flag4 > 0) {
-                        $('#runCode').one('click', function () {
-                            flag4++;
-                            jqChangeClassWeight();
-                        })
-                    }
+                    $('#runCode').one('click', function () {
+                        jqChangeClassWeight();
+                    })
                 });
 
-                let flag5 = 0;
+
                 $('#jsButton').click(function () {
-                    if (!flag5 > 0) {
-                        $('#runCode').one('click', function () {
-                            flag5++;
-                            jsChangeClassWeight();
-                        })
-                    }
+
+                    $('#runCode').one('click', function () {
+                        jsChangeClassWeight();
+                    })
+
                 });
                 break;
             case 'select3':
                 $('#itemTitle').html(localStorage.getItem('s3'));
                 $('#jsCode').html('<code>document.getElementById("pId").style.fontWeight = "bold";</code>');
                 $('#jqCode').html('<code>$("#pId").css({ "font-weight": "bold" });</code>');
+                $('#runID').css({ 'font-weight': 'normal' });
 
-                let flag6 = 0;
                 $('#jqButton').click(function () {
-                    if (!flag6 > 0) {
-                        $('#runCode').one('click', function () {
-                            flag6++;
-                            jqChangeIdWeight();
-                        })
-                    }
+                    $('#runCode').one('click', function () {
+                        jqChangeIdWeight();
+                    })
                 });
 
-                let flag7 = 0;
                 $('#jsButton').click(function () {
-                    if (!flag7 > 0) {
-                        $('#runCode').one('click', function () {
-                            flag7++;
-                            jsChangeIdWeight();
-                        })
-                    }
+                    $('#runCode').one('click', function () {
+                        jsChangeIdWeight();
+                    })
                 });
                 break;
             case 'select4':
                 $('#itemTitle').html(localStorage.getItem('s4'));
-                $('#jsCode').html('<code>document.getElementById("pId").style.fontWeight = "bold";</code>');
+                $('#jsCode').html('<code>var elemDisplay = document.querySelector(".changeWeight").style.display;<br>if (elemDisplay == "none") {<br>document.querySelector(".changeWeight").style.display = "block";<br>document.querySelector(".changeWeight").style.color = "blue";<br>document.querySelector(".changeWeight").style.fontWeight = "bold";<br>}</code>');
                 $('#jqCode').html('<code>if ($(".changeWeight").css("display") == "none" )<br>{<br>$(".changeWeight").css({ "display": "block" });<br>$(".changeWeight").css({ "font-weight":"bold" });<br>}</code>');
+                $('.changeWeight').css({ 'display': 'none' });
 
-                $('.changeWeight').css({'display':'none'});
-                let flag8 = 0;
                 $('#jqButton').click(function () {
-                    if (!flag8 > 0) {
-                        $('#runCode').one('click', function () {
-                            flag8++;
-                            jqClassAndDisplay();
-                        })
-                    }
+                    $('#runCode').one('click', function () {
+                        jqClassAndDisplay();
+                    })
                 });
-
-                let flag9 = 0;
                 $('#jsButton').click(function () {
-                    if (!flag9 > 0) {
-                        $('#runCode').one('click', function () {
-                            flag9++;
-                            jqClassAndDisplay();
-                        })
-                    }
+                    $('#runCode').one('click', function () {
+                        jsClassAndDisplay();
+                    })
                 });
                 break;
             case 'select5':
+                $('#itemTitle').html(localStorage.getItem('s5'));
+                $('#jsCode').html('<code>document.getElementById("pId").style.fontWeight = "bold";</code>');
+                $('#jqCode').html('<code>$("select").change(function () {<br>var selected = $(this).children("option:selected").val();<br>alert(selected);<br>});</code>');
+                $('#runID').empty();
+                $('#runID').append(selectElement);
+                $('#runID').append(divElement);
+
+                $('#jqButton').one('click', function () {
+                    $('#runCode').one('click', function () {
+                        jqGetFromSelect();
+                    })
+                });
+
+                $('#jsButton').one('click', function () {
+                    $('#runCode').one('click', function () {
+                        jsGetFromSelect();
+                    })
+                });
                 break;
             case 'select6':
+                $('#itemTitle').html(localStorage.getItem('s6'));
+                $('#runID').empty();
+                $('#jsCode').html('<code>document.getElementsByTagName("a")[0].href = "https://es.wikipedia.org/wiki/GitHub";</code>');
+                $('#jqCode').html('<code>$("a2).first().attr("href","https://es.wikipedia.org/wiki/GitHub");</code>');
+                $('#runID').append(linkElement);
+
+                $('#jqButton').one('click', function () {
+                    $('#runCode').one('click', function () {
+                        jqChangeLink();
+                    })
+                });
+
+                $('#jsButton').one('click', function () {
+                    $('#runCode').one('click', function () {
+                        jsChangeLink();
+                    })
+                });
                 break;
             case 'select7':
+                $('#itemTitle').html(localStorage.getItem('s7'));
+                $('#runID').empty();
+                $('#jsCode').html('<code>var value = document.querySelector("#runID input").value;<br>alert(value);</code>');
+                $('#jqCode').html('<code>var value = $("#runID input").first().val();<br>alert(value);</code>');
+                $('#runID').append(inputElement);
+
+                $('#jqButton').one('click', function () {
+                    $('#runCode').one('click', function () {
+                        jqAlertInput();
+                    })
+                });
+
+                $('#jsButton').one('click', function () {
+                    $('#runCode').one('click', function () {
+                        jsAlertInput();
+                    })
+                });
                 break;
             case 'select8':
+                $('#itemTitle').html(localStorage.getItem('s7'));
+                $('#runID').empty();
+                $('#jsCode').html('<code>var selectBox = document.getElementById("selectOptions");<br>var optionsList = selectBox.options;<br>for (let i = optionsList.length; i >= 0 ; i--) {<br>selectBox.remove(i);<br>}</code>');
+                $('#jqCode').html('<code>$("#selectOptions").find("option").remove();</code>');
+                $('#runID').append(selectElement);
+
+                $('#jqButton').one('click', function () {
+                    $('#runCode').one('click', function () {
+                        jqRemoveOption();
+                    })
+                });
+
+                $('#jsButton').one('click', function () {
+                    $('#runCode').one('click', function () {
+                        jsRemoveOption();
+                    })
+                });
                 break;
             case 'select9':
+                $('#itemTitle').html(localStorage.getItem('s9'));
+                $('#jsCode').html('<code>var selectBox = document.getElementById("selectOptions");<br>var optionsList = selectBox.options;<br>for (let i = optionsList.length; i >= 0 ; i--) {<br>selectBox.remove(i);<br>}</code>');
+                $('#jqCode').html('<code>$("#selectOptions").find("option").remove();</code>');
+
+                $('#jqButton').one('click', function () {
+                    $('#runCode').one('click', function () {
+                        jqAnimateLoad();
+                    })
+                });
+
+                $('#jsButton').one('click', function () {
+                    $('#runCode').one('click', function () {
+                        //jsRemoveOption();
+                    })
+                });
                 break;
             default:
                 alert('Nobody Wins!');
@@ -328,6 +382,33 @@ $('#eventFunctions li').each(function () {
     });
 });
 
+/*
+function dinamicCode(key,code1,code2,jqFunction,jsFunction) {
+    $('#itemTitle').html(localStorage.getItem(key));
+    $('#jsCode').html('<code>'+code1+'</code>');
+    $('#jqCode').html('<code>'+code2+'</code>');
+
+    let flag = 0;
+    $('#jqButton').click(function () {
+        if (!flag > 0) {
+            $('#runCode').one('click', function () {
+                flag++;
+                jqFunction();
+            })
+        }
+    });
+
+    let flag1 = 0;
+    $('#jsButton').click(function () {
+        if (!flag1 > 0) {
+            $('#runCode').one('click', function () {
+                flag1++;
+                jsFunction();
+            })
+        }
+    });
+}*/
+
 //__Selector Functions
 function jqChangeParentWeight() {
     $('#pId').parent().css({ 'font-weight': 'bold' });
@@ -346,8 +427,39 @@ function jqChangeIdWeight() {
 }
 
 function jqClassAndDisplay() {
-    if ($('.changeWeight').css('display') == 'none' ) {
+    if ($('.changeWeight').css('display') == 'none') {
         $('.changeWeight').css({ 'display': 'block' });
-        $('.changeWeight').css({ 'font-weight': 'bold' });
+        $('.changeWeight').css({ 'color': 'blue' });
     }
+}
+
+function jqGetFromSelect() {
+    $("select").change(function () {
+        $('#resultFunction').children().last().remove();
+        var selected = $(this).children("option:selected").val();
+        var p = $('<p>');
+        p.html('Option: ' + selected);
+        $('#resultFunction').append(p);
+    });
+}
+
+function jqChangeLink() {
+    $('a').first().attr('href', 'https://es.wikipedia.org/wiki/GitHub');
+    $('#runID p').first().html("GitHub wiki: ");
+    $('a').first().html("https://es.wikipedia.org/wiki/GitHub");
+}
+
+function jqAlertInput() {
+    var value = $('#runID input').first().val();
+    alert(value);
+}
+
+function jqRemoveOption() {
+    $('#selectOptions').find('option').remove();
+}
+
+function jqAnimateLoad() {
+        $("#runID p").animate({
+            "color": "green"
+        }, 2000);
 }

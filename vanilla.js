@@ -20,8 +20,38 @@ function jsChangeIdWeight() {
 
 function jsClassAndDisplay() {
     var elemDisplay = document.querySelector('.changeWeight').style.display;
-    if ( elemDisplay == 'none' ) {
-        elemDisplay.style.display = 'block';
-        elemDisplay.style.fontWeight = 'bold';
+    if (elemDisplay == 'none') {
+        document.querySelector('.changeWeight').style.display = 'block';
+        document.querySelector('.changeWeight').style.color = 'blue';
+        document.querySelector('.changeWeight').style.fontWeight = 'bold';
+    }
+}
+
+function jsGetFromSelect() {
+    var e = document.getElementById('selectOptions');
+    e.onchange = function () {
+        var divResult = document.querySelector('#resultFunction');
+        var strUser = "Option: " + e.value;
+        divResult.innerHTML = "";
+        divResult.append(strUser);
+    }
+}
+
+function jsChangeLink() {
+    document.getElementsByTagName('a')[0].href = "https://es.wikipedia.org/wiki/GitHub";
+    document.getElementsByTagName('a')[0].innerText = "https://es.wikipedia.org/wiki/GitHub"
+    document.querySelector('#runID p').innerText = "GitHub wiki: ";
+}
+
+function jsAlertInput() {
+    var value = document.querySelector('#runID input').value;
+    alert(value);
+}
+
+function jsRemoveOption() {
+    var selectBox = document.getElementById('selectOptions');
+    var optionsList = selectBox.options;
+    for (let i = optionsList.length; i >= 0 ; i--) {
+        selectBox.remove(i);
     }
 }
