@@ -39,6 +39,12 @@
   .result-button {
     width: 80%;
   }
+
+  .result-button button {
+    font-size: 1.2rem;
+    height: 100%;
+  }
+
   .aside-menu {
     font-size: 2rem;
   }
