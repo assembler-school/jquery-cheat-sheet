@@ -1,29 +1,193 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+/*
+!=======================================
+! Custom properties
+!=======================================
+*/
+:root {
+    --darkestGray: #313535;
+    --darkGray: #3D4141;
+    --lightGray: #7F817F;
+    --lightestGray: #9A9C9A;
+    --eventBlue: #43a3c9;
+    --eventGreen: #2A9D8F;
+    --eventRed: #fb5656;
+    --eventOrange: #F4A261;
+    --springGreen: #bcf66c;
+    --summerSand: #ffd184;
+    --autumnOrange: #faa410;
+    --winterSnow: #fdfdfd;
+}
 * {
     margin: 0;
-    outline: auto;
+    /* outline: auto; */
 }
 header {
     justify-content: center;
     align-items: center;
     display: flex;
     height: 10vh;
-    background-color: green;
+    font-size: 30px;
 }
 main {
     display: flex;
-    height: 90vh;
+    height: auto;
+}
+body {
+    background-color: var(--eventGreen);
 }
 
 .red-square {
-    width: 50%;
-    background-color: red;
-    font-size: 25px;
-    color: white;
+    border: solid 2px var(--darkestGray);
+    border-radius: 50px;
+    width: 40%;
+    margin: 0 50px 0 150px;
+    background-color: var(--eventRed);
+    font-size: 20px;
+    color:   var(--winterSnow);
+;
 }
 .blue-square {
-    width: 50%;
-    background-color: blue;
-    font-size: 25px;
+    border: solid 2px var(--darkestGray);
+    border-radius: 50px;
+    width: 40%;
+    background-color: var(--eventBlue);
+    font-size: 20px;
     color: white;
+    padding-bottom: 20px;
 }
+.title {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+.text {
+    padding: 5px 30px 20px;
+    cursor: pointer;
+}
+.text:hover,
+.text:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--darkestGray);
+    transform: translateY(-0.25em);
+}
+
+/*
+!=======================================
+! Modal
+!=======================================
+*/
+.x-button {
+    height: 44px;
+    width: 44px;
+    background-color: var(--darkestGray);
+}
+#modal-section.hidden {
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    transition: opacity 0.2s, backdrop-filter 0.2s, background-color 0.2s, opacity 0.2s, height 0s 0.4s;
+    background-color: rgba(255, 255, 255, 0);
+}
+#modal-section {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: -80px;
+    height: 200vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    transition: opacity 0.4s, background-color 0.4s 0.2s, backdrop-filter 0.8s 0.2s;
+    opacity: 1;
+    backdrop-filter: blur(3px);
+}
+#modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    /* min-width: 320px;
+    max-width: 380px; */
+    background-color: whitesmoke;
+    margin: 20vh auto;
+    padding: 20px;
+    border: 1px solid var(--lightestGray);
+    border-radius: 5px;
+    overflow: auto;
+}
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.modal-header > h1 {
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    margin-left: 32px;
+}
+.modal-button.fa-window-close {
+    cursor: pointer;
+    align-self: flex-end;
+    font-size: xx-large;
+    color: var(--darkestGray);
+    background-color: transparent;
+}
+.modal-button.fa-window-close:hover {
+    transform: scale(1.05);
+}
+
+label {
+    text-align: center;
+    font-size: 30px;
+}
+.modal-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "left right"
+    "left right"
+    ;
+}
+.modal-EX {
+    display: flex;
+    flex-direction: column;
+    grid-area: left;
+}
+.modal-Exa {
+    display: flex;
+    flex-direction: column;
+    grid-area: right;
+
+}
+.JS-example {
+    color: var(--darkestGray);
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    height: 125px;
+    background-color: var(--summerSand);
+    border: solid 2px black;
+}
+.Jquery-example {
+    color: var(--darkestGray);
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    height: 125px;
+    background-color: var(--autumnOrange);
+    border: solid 2px black;
+}
+.text-example {
+    color: var(--winterSnow);
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    height: 290px;
+    background-color: var(--lightestGray);
+    border: solid 2px black;
+}
+
