@@ -163,10 +163,10 @@ $(".example").each(function () {
     let exampleIndex = $(this).attr("id").replace("ex", "");
     // Vanilla or jQuery
     if (vanillaCheckbox.prop("checked")) {
-      runButton.prop("onclick", null);
+      removeRunListeners();
       macroText.text(vanillaExamples[exampleIndex]);
     } else {
-      runButton.prop("onclick", null);
+      removeRunListeners();
       macroText.text(jQueryExamples[exampleIndex]);
     }
   });
@@ -179,10 +179,10 @@ $(".js-type").click(function () {
     let exampleIndex = $(".selected-example").attr("id").replace("ex", "");
     // Vanilla or jQuery
     if ($(this).attr("id") === "vanilla-radio") {
-      runButton.prop("onclick", null);
+      removeRunListeners();
       macroText.text(vanillaExamples[exampleIndex]);
     } else {
-      runButton.prop("onclick", null);
+      removeRunListeners();
       macroText.text(jQueryExamples[exampleIndex]);
     }
   } else {
@@ -194,6 +194,12 @@ $(".js-type").click(function () {
 function blankMacroOutput() {
   $("#macro-text").html("");
   $("#output-panel").html("");
+}
+
+// Remove event listeners on run button
+function removeRunListeners() {
+  runButton.prop("onclick", null);
+  runButton.unbind();
 }
 
 // Remove event listeners (used in vanilla.js)
