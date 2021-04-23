@@ -3,11 +3,18 @@
 ## Javascript
 
 ```html
+<p class="text">This is a paragraph 1</p>
+<p class="text">This is a paragraph 2</p>
+<p class="text">This is a paragraph 3</p>
+
 <script>
-  const selector = document.getElementById("f1Js");
+  const selector = document.getElementById("f26Js");
 
   selector.addEventListener("click", function (e) {
-    document.getElementById("f1JsDemo").remove();
+    let para = document.querySelectorAll(".text");
+    para.forEach((element) => {
+      element.remove();
+    });
   });
 </script>
 ```
@@ -23,9 +30,13 @@ toggle class CSS
 ## jQuery
 
 ```html
+<p class="textjq">This is a paragraph 1</p>
+<p class="textjq">This is a paragraph 2</p>
+<p class="textjq">This is a paragraph 3</p>
+
 <script>
-  $("#f1JQuery").on("click", function (e) {
-    $("#f1JQueryDemo").remove();
+  $("#f26JQuery").on("click", function (e) {
+    $(".textjq").remove();
   });
 </script>
 ```
