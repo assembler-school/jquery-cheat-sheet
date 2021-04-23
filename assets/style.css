@@ -62,7 +62,7 @@
 .jquery,
 .output{
   display: flex;
-  flex-grow: 0.32;
+  flex-grow: 0.3;
   justify-content: space-around;
   flex-direction: column;
   
@@ -73,5 +73,20 @@
   text-align: center;
 }
 .code{
+  flex-grow: 0.90;
+  padding: 5px;
+  white-space: pre-wrap;
+}
+
+.outputCode{
   flex-grow: 0.85;
+  white-space: pre-wrap;
+}
+
+#testArea{
+  display:none;
+}
+
+#footer{
+  margin-top: 15px;
 }
