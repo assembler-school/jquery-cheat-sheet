@@ -72,6 +72,7 @@ console.log(vanillaCheckbox, jQueryCheckbox);
 
 let macroText = $("#macro-text");
 
+let runButton = $("#run-button");
 let idIndex = 0;
 
 /* -------------------------------------------------------------------------- */
@@ -162,8 +163,10 @@ $(".example").each(function () {
     let exampleIndex = $(this).attr("id").replace("ex", "");
     // Vanilla or jQuery
     if (vanillaCheckbox.prop("checked")) {
+      runButton.prop("onclick", null);
       macroText.text(vanillaExamples[exampleIndex]);
     } else {
+      runButton.prop("onclick", null);
       macroText.text(jQueryExamples[exampleIndex]);
     }
   });
@@ -176,8 +179,10 @@ $(".js-type").click(function () {
     let exampleIndex = $(".selected-example").attr("id").replace("ex", "");
     // Vanilla or jQuery
     if ($(this).attr("id") === "vanilla-radio") {
+      runButton.prop("onclick", null);
       macroText.text(vanillaExamples[exampleIndex]);
     } else {
+      runButton.prop("onclick", null);
       macroText.text(jQueryExamples[exampleIndex]);
     }
   } else {
@@ -211,13 +216,6 @@ function removeEventJQuery(target, type, insideFunction, array) {
   console.log("Removed event listener '" + type + "' in " + target);
 }
 
-// Clear output panel
-// $(window).keydown(function (event) {
-//   if (event.ctrlKey && event.keyCode === 75) {
-//     $("#output-panel").html("");
-//     event.preventDefault();
-//   }
-// });
 /* -------------------------------------------------------------------------- */
 /*                                    TEST                                    */
 /* -------------------------------------------------------------------------- */
