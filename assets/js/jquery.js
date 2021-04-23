@@ -603,7 +603,85 @@ $("#functionOutputButton").on("click", createHtmlElement);`
         /*Disabling all eventlistener*/
         $(".functionTitle").each(function () {
           $(this).click(function () {
-            $("#eventOutputButton").off("click", clickfunction);
+            $("#functionOutputButton").off("click", createHtmlElement);
+            // $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 2:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(
+          `function removeHtmlElement() {
+        $("#functionOutputP").remove();
+}
+$("#functionOutputButton").on("click", removeHtmlElement);`
+        );
+        /*Coding applied*/
+        resetFuntionsConsole();
+        function removeHtmlElement() {
+          $("#functionOutputP").hide();
+        }
+        $("#functionOutputButton").show();
+        $("#functionOutputP").html("Element to remove");
+        $("#functionOutputP").show();
+        $("#functionOutputButton").on("click", removeHtmlElement);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#functionOutputButton").off("click", removeHtmlElement);
+            // $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 3:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(
+          `function appendElement() {
+        let myNewP = $("p");
+        myNewP.html("Element appended");
+        $("#functionsOutputContent").append(myNewP);
+}
+$("#functionOutputButton").on("click", appendElement);`
+        );
+        /*Coding applied*/
+        resetFuntionsConsole();
+        function appendElement() {
+          $("#functionSecondOutputP").html("Element appended");
+          $("#functionSecondOutputP").show();
+        }
+        $("#functionOutputButton").show();
+        $("#functionOutputButton").on("click", appendElement);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#functionOutputButton").off("click", appendElement);
+            //     $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 4:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(
+          `function prependElement() {
+        let myNewP = $("p");
+        myNewP.html("Element prepended");
+        $("#functionsOutputContent").prepend(myNewP);
+}
+$("#functionOutputButton").on("click", prependElement);`
+        );
+        /*Coding applied*/
+        resetFuntionsConsole();
+        function prependElement() {
+          $("#functionOutputP").html("Element prepended");
+          $("#functionOutputP").show();
+        }
+        $("#functionOutputButton").show();
+        $("#functionOutputButton").on("click", prependElement);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#functionOutputButton").off("click", prependElement);
+            //     $("#functionOutputButton").off();
           });
         });
         break;
@@ -638,4 +716,5 @@ function resetEventsConsole() {
 function resetFuntionsConsole() {
   $("#functionOutputP").hide();
   $("#functionOutputButton").hide();
+  $("#functionSecondOutputP").hide();
 }
