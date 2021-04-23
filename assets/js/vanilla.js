@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 import { removeEventVanilla } from "./script.js";
 
-console.log("Vanilla JS file loaded!");
+// console.log("Vanilla JS file loaded!");
 
 /* -------------------------------------------------------------------------- */
 /*                            GENERAL VARIABLES                            */

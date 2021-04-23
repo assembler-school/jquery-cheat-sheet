@@ -68,7 +68,6 @@ let selectorsContainer = $("#selectors-examples");
 
 let vanillaCheckbox = $("#vanilla-radio");
 let jQueryCheckbox = $("#jquery-radio");
-console.log(vanillaCheckbox, jQueryCheckbox);
 
 let macroText = $("#macro-text");
 

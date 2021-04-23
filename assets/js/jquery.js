@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 import { removeEventJQuery } from "./script.js";
 
-console.log("jQuery JS file loaded!");
+// console.log("jQuery JS file loaded!");
 
 /* -------------------------------------------------------------------------- */
 /*                            GENERAL VARIABLES                            */
