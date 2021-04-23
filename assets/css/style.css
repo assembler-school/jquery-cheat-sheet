@@ -216,6 +216,15 @@ pre span.count:before {
 .dot:last-child {
   background-color: var(--myBlue);
 }
+.tryIt {
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s;
+  color: var(--myRed);
+}
+.tryIt:hover {
+  transform: translateX(10px);
+}
 /* General use style ------------------------------ */
 .hide {
   display: none;
@@ -289,11 +298,45 @@ code {
 .mid-boxes {
   height: 80%;
   width: 80%;
-  outline: var(--myYellow) 1px solid;
+  outline: var(--myPink) 1px solid;
   position: absolute;
   bottom: 0;
   right: 0;
   text-justify: end;
-  font-weight: normal;
+  font-weight: lighter;
   transition: all 0.5s ease-in-out;
+}
+.brother-boxes {
+  width: 20%;
+  height: 90%;
+  outline: var(--myPink) 1px solid;
+  display: inline-block;
+  font-weight: lighter;
+}
+.mid-opacity {
+  opacity: 0.5;
+}
+.half-opacity {
+  opacity: 0.5;
+}
+.test {
+  background-color: var(--myPink);
+  color: var(--darkAccent);
+  border: none;
+  padding: 4px;
+  border-radius: 2px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.test:hover {
+  transform: scale(1.05);
+}
+.test:active {
+  transform: scale(0.95);
+}
+.test:disabled {
+  transform: none !important;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
