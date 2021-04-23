@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./node_modules/jquery/dist/jquery.slim.js"></script>
+    <link rel="stylesheet" href="./assets/css/modal.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <title>JQuery Cheat Sheet</title>
 </head>
 <body>
     <header class="main-header">
         <h1><strong>
-            <a href="http://jquery.com/">jQuery</a>
+            <a title="JQuery API Documentation" href="https://api.jquery.com/">jQuery</a>
         </strong> Cheat Sheet</h1>
     </header>
     <div class="main-content">
@@ -17,7 +18,7 @@
             <h1>Events</h1>
             <div>
                 <ul>
-                    <li><a>HTML Document has been loaded</a></li>
+                    <li><a data-functionName="hasLoaded">HTML Document has been loaded</a></li>
                     <li><a>HTML Element has been clicked</a></li>
                     <li><a>HTML Element has been double clicked</a></li>
                     <li><a>On key press on the keyboard</a></li>
@@ -70,7 +71,27 @@
             </div>
         </article>
     </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="btn-group">
+                    <button class="btn" id="js-btn" disabled><img src="/jquery-cheat-sheet/assets/img/javascriptbtn.png" alt="JavaScript"></button>
+                    <button class="btn" id="jq-btn"><img src="/jquery-cheat-sheet/assets/img/jquerybtn.png" alt="JQuery"></button>
+                </div>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-codeheader html-header">JS</div>
+                <div id="modal-codebox">var apple = "Apple California";</div>
+                <div class="modal-codeheader js-header">JS</div>
+                <div id="modal-codebox">var apple = "Apple California";</div>
+                <div class="modal-codeheader example-header">Example</div>
+                <div id="modal-codebox">var apple = "Apple California";</div>
+            </div>
+        </div>
+    </div>
     <script src="./assets/js/javascript.js"></script>
     <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
