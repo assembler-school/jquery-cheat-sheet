@@ -290,3 +290,9 @@ export function fnValueFirst() {
     alert("Your name is: " + para);
   });
 }
+
+export function fnRemoveAll() {
+  $("#f26JQuery").on("click", function (e) {
+    $(".textjq").remove();
+  });
+}

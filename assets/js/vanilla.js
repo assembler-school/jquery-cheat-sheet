@@ -375,3 +375,14 @@ export function fnValueFirst() {
     alert("Your name is: " + para.value);
   });
 }
+
+export function fnRemoveAll() {
+  const selector = document.getElementById("f26Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelectorAll(".text");
+    para.forEach((element) => {
+      element.remove();
+    });
+  });
+}
