@@ -1,4 +1,4 @@
-addNewTemplate("main", "e");
+addNewTemplate("main", "f");
 
 //Menu navigation
 $("#aside-btn-one").click(() => {
