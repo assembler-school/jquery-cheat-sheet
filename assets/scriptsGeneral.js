@@ -24,41 +24,46 @@ function closeTemp(){
 function textLaunch(event){
     let selected=event.target;
     console.log($(selected).attr('id'));
-    $('.title').text($(selected).text());
+    
     if($(selected).attr('id')=='command 0'){
         $('.jQueryText').text('Node.onload = function(){myScript}');
         $('.vanillaText').text(	`$( "#idOfNode" ).load( "file to execute" )`);
+        $('.jsclas').text('onload ()');
+        $('.jQclas').text('load ()');
         
     }else if
     ($(selected).attr('id')=='command 1')
     {
         $('.jQueryText').text('texto jQuery1');
         $('.vanillaText').text('texto JavaScript1');
+        $('.jsclas').text('otro');
+        $('.jQclas').text('click ()');
+        
     }else if
     ($(selected).attr('id')=='command 2')
     {
         $('.jQueryText').text('texto jQuery2');
-        $('.vanillaText').text('texto JavaScript2');
+        $('.vanillaText').text('dblclick ()');
     }else if
     ($(selected).attr('id')=='command 3')
     {
         $('.jQueryText').text('texto jQuery3');
-        $('.vanillaText').text('texto JavaScript3');
+        $('.vanillaText').text('keypress ()');
     }else if
     ($(selected).attr('id')=='command 4')
     {
         $('.jQueryText').text('texto jQuery4');
-        $('.vanillaText').text('texto JavaScript4');
+        $('.vanillaText').text('mousemove ()');
     }else if
     ($(selected).attr('id')=='command 5')
     {
         $('.jQueryText').text('texto jQuery5');
-        $('.vanillaText').text('texto JavaScript5');
+        $('.vanillaText').text('change ()');
     }else if
     ($(selected).attr('id')=='command 6')
     {
         $('.jQueryText').text('texto jQuery6');
-        $('.vanillaText').text('texto JavaScript6');
+        $('.vanillaText').text('ready ()');
     }else if
     ($(selected).attr('id')=='command 7')
     {

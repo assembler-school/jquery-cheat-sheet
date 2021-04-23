@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Roboto+Mono:wght@100;400&family=IBM+Plex+Mono:wght@100&display=swap" rel="stylesheet">
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
     <title>Document</title>
@@ -12,13 +14,17 @@
 <template class="showComand">
     
     <div class="showComandContent">
-        <h2 class="title"></h2>
+        <div class="t1">
+            <h2 class="jsclas"></h2>
+            
+            <h2 class="jQclas"></h2>
+        </div>
         
         <div class="jQueryBox">
             <h3>jQuery command</h3>
             <code class="jQueryText"></code>
         </div>
-        <button class="ejempleButJq">ejemple</button>
+        <button class="ejempleButJq"><p>ejemple</p></button>
         <p class="result">Text to change</p>
         <button class="run">try</button>
         <div class="vanillaBox">
@@ -26,7 +32,7 @@
             <code class="vanillaText"></code>
         </div>
         
-        <button class="ejempleButVani">ejemple</button>
+        <button class="ejempleButVani"><p>ejemple</p></button>
         
         
     </div>
@@ -35,15 +41,17 @@
 
 <body>
     <header>
-       <h1>Welcom to the JikiQuery</h1>
+       <h2 class="welcome">Welcome to the </h2>
+       <h1 class="JikiQuery"> JikiQuery</h1>
+       
     </header>
     <main>
        
         <section class="reference">
             <div class="eventBox">
-                <h2>Events</h2>
+                <h2 class="eventTitle">Events</h2>
                 <ul class="events">
-                    <li class="specificEvent">When the HTML document has been loaded and you can manipulate it with JavaScript
+                    <li  class="specificEvent">When the HTML document has been loaded and you can manipulate it with JavaScript
                     </li>
                     <li class="specificEvent">Clicked</li>
                     <li class="specificEvent">Double clicked</li>
@@ -61,7 +69,7 @@
                 </ul>
             </div>
             <div class="selectorsBox">
-                <h2>Selectors</h2>
+                <h2 class="selectorTitle">Selectors</h2>
                 <ul class="selectors">
                     <li class="specificSelector">Create </li>
                     <li class="specificSelector">Remove </li>

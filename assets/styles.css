@@ -1,8 +1,33 @@
+body{
+    margin: 0px;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+h2.welcome{
+    justify-self: right;
+    padding-right:20px ;
+    font-family: 'Antonio', sans-serif;
+    font-size: 40px;
+}
+h1.JikiQuery{
+    justify-self: left;
+    
+    color: white;
+    background-color: black;
+    font-family: 'Antonio', sans-serif;
+    font-size: 100px;
+    margin:3%;
+    width: 100%;
+   padding: 2%;
+    justify-content: center;
+
+}
 section.reference{
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-
 
 }
 ul{
@@ -12,11 +37,15 @@ ul{
 h2{
     display: flex;
     justify-content: left;
+    margin-left: 40px;
+    font-family: 'Antonio', sans-serif;
 }
 
 h1{
     display: flex;
     justify-content: center;
+    font-family: 'Antonio', sans-serif;
+    
 }
 p{
     display: flex;
@@ -24,16 +53,58 @@ p{
     text-align: center;
     min-width: 80%;
 }
+.eventBox{
+    background-color: black;
+}
+.selectorsBox{
+    background-color: white;
+}
 
+h2.eventTitle{
+    
+    border-right: 5px solid white;
+    max-width: 80%;
+    color: white;
+    min-height: 100px;
+    font-size: 30px;
+}
+li.specificEvent{
+    max-width: 80%;
+    min-height: 50px;
+    border-left: 2px solid white;
+    margin-bottom: 10px;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    padding-left: 10px;
+}
+h2.selectorTitle{
+    
+    color: black;
+    border-right: 5px solid black;
+    max-width: 80%;
+    min-height: 100px;
+    font-size: 30px;
+}
+li.specificSelector{
+    max-width: 80%;
+    min-height: 50px;
+    color: black;
+    margin-bottom: 10px;
+    border-left: 2px solid black;
+    font-family: 'Roboto Mono', monospace;
+    padding-left: 10px;
+}
+
+/*_________________template*/
 .backgound{
     position: absolute;
     z-index: 0.5;
     width: 100%;
     height: 100%;
-    
     top:0%;
     left:0%;
-    background-color: rgba(37, 39, 37, 0.8);
+    background-color: rgba(37, 39, 37, 0.5);
 }
 .showComandContent{
     display: grid;
@@ -44,13 +115,29 @@ p{
     color:white;
     width: 70%;
     height: 70%;
-    top:15%;
-    left: 15%;
+    top:12%;
+    left: 12%;
     z-index: 1;
     pointer-events: none;
-}h2.title{
-    grid-column: 1/4;
+    background-color: black;
+    padding: 50px;
 }
+div.t1{
+    justify-content: center;
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: row;
+
+}
+h2.jsclas{
+    padding: 10px;
+}
+h2.jQclas{
+    color: black;
+    background-color: white;
+    padding: 10px;
+}
+
 div.vanillaBox{
     grid-column: 1/3;
 }
@@ -69,41 +156,45 @@ p.result{
 
 }
 button.ejempleButJq{
-    height: 40%;
+    width: 50%;
+    height: 100%;
     justify-self: center;
     align-self: center;
+    background-color: white;
+    border: none;
+    font-family: 'Roboto Mono', monospace;
+    
+    padding: 10px;
 }
 button.ejempleButVani{
-    height: 40%;
+    width: 50%;
+    height: 100%;
     justify-self: center;
     align-self: center;
+    background-color: white;
+    border: none;
+    font-family: 'Roboto Mono', monospace;
+    
+    padding: 10px;
 }
 button.run{
-    height: 40%;
+    width: 50%;
+    height: 100%;
     justify-self: center;
     align-self: center;
+    background-color: white;
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+   
+    padding: 10px;
 }
 
 code.vanillaText{
     grid-column: 1/3;
     font-size: 16px;
 }
+/*__________________*/
 
-li.specificEvent{
-    max-width: 70%;
-    background: linear-gradient(5deg,rgb(103, 182, 228),rgb(255,255,255) );
-    margin-bottom: 10px;
-    border-radius: 5px;
-    min-height: 50px;
-}
-li.specificSelector{
-    max-width: 70%;
-    background: linear-gradient(5deg,rgb(228, 184, 103),rgb(255,255,255) );
-    margin-bottom: 10px;
-    border-radius: 5px;
-    min-height: 50px;
-}
-ul.selectors{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
