@@ -160,8 +160,8 @@
             <span class="code-highlight">Element display</span>
             <span class="count">Hide HTML element on click</span>
             <span class="count">Show HTML element on click</span>
-            <span class="count">Fade in an HTML element</span>
-            <span class="count">Fade out an HTML element</span>
+            <span class="count">Fade in an HTML element (jQuery)</span>
+            <span class="count">Fade out an HTML element (jQuery)</span>
             <span class="count">Delayed animate after page load</span>
             <span class="code-highlight">Functions</span>
             <span class="count">Iterate collection of elements</span>
@@ -180,15 +180,17 @@
                 <code id="code1"></code>
               </div>
               <h3>Demo</h3>
-              <div class="demo" id="demo1">
-                <div class="mid-boxes" id="grandparent">
-                  Grandparent
-                  <div class="mid-boxes" id="parent">Parent
-                    <div class="mid-boxes" id="child">Child</div>
+              <div class="demo" id="demo1"> <!-- ! Testing area --> <!-- TODO -->
+                  <div class="mid-boxes" id="parent1">Parent
+                    <form>
+                      <label for="fname">First name:</label>
+                      <input type="text" id="fname" name="fname"><br><br>
+                      <label for="lname">Last name:</label>
+                      <input type="text" id="lname" name="lname"><br><br>
+                      <input type="button" id="formButton1">
+                    </form>
                   </div>
                 </div>
-              </div>
-              <button class="test" id="test1">Test it!</button>
             </div>
             <div class="two-columns" id="modal2">
               <h3>Vanilla JS Code</h3>
@@ -197,7 +199,6 @@
               </div>
               <h3>Demo</h3>
               <div class="demo" id="demo2"></div>
-              <button class="test" id="test2">Test it!</button>
           </div>
           <div class="dots-container">
             <div class="dot" id="close-modal"></div>
