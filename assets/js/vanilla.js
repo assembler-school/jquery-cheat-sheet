@@ -168,6 +168,35 @@ element.onchange = function(){
   };
 }
 
+//6 ----------------------------------------------------------
+function loadedImage() {
+  // Macro
+  macroTextVanilla.innerText = `// Loaded image
+
+image.onload = function(){
+  console.log("Image loaded!");
+};`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleImage = document.createElement("img");
+    exampleImage.classList.add("example-image");
+    exampleImage.setAttribute("alt", "Monty Python");
+    exampleImage.setAttribute("src", "./assets/img/montypython.jpg");
+
+    exampleImage.onload = function () {
+      console.log("Image loaded!");
+    };
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleImage);
+    outputVanilla.innerHTML += "\n\n> Image loaded!";
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */

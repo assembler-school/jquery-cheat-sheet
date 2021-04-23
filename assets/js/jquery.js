@@ -183,6 +183,41 @@ $("input").change(function(){
   });
 }
 
+//6 ----------------------------------------------------------
+function loadedImage() {
+  // Macro
+  macroString = `// Loaded image
+
+$("img").load(function(){
+  $(this).css({
+  "color": "yellow;
+  "outline": "2px solid yellow";
+  "backgroundColor": "black"
+  })
+});`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleImage = $("<img>");
+    exampleImage.addClass("example-image");
+    exampleImage.attr("alt", "Monty Python");
+    exampleImage.attr("src", "./assets/img/montypython.jpg");
+
+    $(exampleImage).ready(function () {
+      console.log("Image loaded! jquery");
+    });
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(exampleImage);
+    outputJquery.append("\n\n> Image loaded!");
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -210,5 +245,8 @@ export const jQueryExamples = [
   // 5
   function () {
     changedInput();
+  }, // 6
+  function () {
+    loadedImage();
   },
 ];
