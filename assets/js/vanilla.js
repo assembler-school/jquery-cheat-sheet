@@ -247,6 +247,47 @@ image.error = function(){
   };
 }
 
+//8 ----------------------------------------------------------
+function submittedForm() {
+  // Macro
+  macroTextVanilla.innerText = `// Not loaded image
+
+image.error = function(){
+  console.log("Image not loaded!");
+};`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleForm = document.createElement("form");
+    exampleForm.classList.add("example-form");
+    let exampleInput = document.createElement("input");
+    exampleInput.classList.add("example-input");
+    exampleInput.required = true;
+    let exampleSubmit = document.createElement("input");
+    exampleSubmit.classList.add("example-submit");
+    exampleSubmit.setAttribute("type", "submit");
+    exampleSubmit.innerText = "Submit";
+
+    exampleForm.appendChild(exampleInput);
+    exampleForm.appendChild(exampleSubmit);
+
+    function submittedFormInside() {
+      console.log("Submitted form!");
+    }
+
+    exampleForm.addEventListener("submit", submittedFormInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleForm, "submit", submittedFormInside, examples);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleForm);
+    // outputVanilla.innerHTML += "\n\n> Image not loaded!";
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -282,5 +323,9 @@ export const vanillaExamples = [
   // 7
   function () {
     errorImage();
+  },
+  // 8
+  function () {
+    submittedForm();
   },
 ];
