@@ -157,8 +157,9 @@ $(".example").each(function () {
   $(this).click(function () {
     $(".selected-example").removeClass("selected-example");
     $(this).addClass("selected-example");
-
     blankMacroOutput();
+    console.clear();
+
     //Accessing only its id
     let exampleIndex = $(this).attr("id").replace("ex", "");
     // Vanilla or jQuery
@@ -176,6 +177,8 @@ $(".example").each(function () {
 $(".js-type").click(function () {
   if ($(".selected-example").length > 0) {
     blankMacroOutput();
+    console.clear();
+
     let exampleIndex = $(".selected-example").attr("id").replace("ex", "");
     // Vanilla or jQuery
     if ($(this).attr("id") === "vanilla-radio") {
