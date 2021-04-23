@@ -136,7 +136,7 @@ $("input").change(function(){
   "outline": "2px solid yellow";
   "backgroundColor": "black"
   })
-};`;
+});`;
 
   macroJquery.text(macroString);
 

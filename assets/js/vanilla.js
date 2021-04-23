@@ -23,9 +23,9 @@ function htmlLoaded() {
   // Macro
   macroTextVanilla.innerText = `// Loading an html file
 
-document.onload(function(){
+document.onload = function(){
   console.log("HTML file loaded!");
-});`;
+};`;
 
   // Output
   outputVanilla.innerHTML = "> HTML file loaded!";
