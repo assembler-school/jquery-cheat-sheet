@@ -366,3 +366,12 @@ export function fnChangeFirst() {
     para.textContent = "Go to Google";
   });
 }
+
+export function fnValueFirst() {
+  const selector = document.getElementById("f25Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelectorAll("input")[0];
+    alert("Your name is: " + para.value);
+  });
+}

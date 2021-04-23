@@ -283,3 +283,10 @@ export function fnChangeFirst() {
       .text("Go to Google");
   });
 }
+
+export function fnValueFirst() {
+  $("#f25JQuery").on("click", function (e) {
+    let para = $("#f25JQueryDemo input").first().val();
+    alert("Your name is: " + para);
+  });
+}
