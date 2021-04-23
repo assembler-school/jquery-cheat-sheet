@@ -210,5 +210,28 @@ code.vanillaText{
     grid-column: 1/3;
     font-size: 16px;
 }
+.inpText{
+    color:white;
+    background-color: black;
+    outline: none;
+    border: none;
+    font-size: 50px;
+    border-bottom: rgba(255, 255, 255, 0.438) 0.1px solid;
+    width: 80%;
+    height: 80%;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    cursor: pointer;
+}
+.sendText{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+
+}
+.imag{
+    width: 100px;
+    height: 100px;
+}
 /*__________________*/
 

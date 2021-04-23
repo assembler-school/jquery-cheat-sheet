@@ -26,53 +26,59 @@ function textLaunch(event){
     console.log($(selected).attr('id'));
     
     if($(selected).attr('id')=='command 0'){
-        
+        $( ".run" ).text("click to active");
         $('.jsclas').text('DOMContentLoaded');
         $('.jQclas').text('ready');
-        $('.run').on('click',ready());
+        $('.run').on('click',ready);
         
     }else if
     ($(selected).attr('id')=='command 1')
     {
-        
+        $( ".run" ).text("click");
         $('.jsclas').text('cliked');
         $('.jQclas').text('data("cliked",true)');
+        $('.run').on('click',clicked);
         
     }else if
     ($(selected).attr('id')=='command 2')
-    {
-      
+    {   $( ".run" ).text("duble click");
         $('.jsclas').text('dblclick');
         $('.jQclas').text('dblclick');
+        $('.run').on('click',dubl);
     }else if
     ($(selected).attr('id')=='command 3')
-    {
-     
+    {   $( ".run" ).text("click");
         $('.jsclas').text('onkeypress');
         $('.jQclas').text('keypress');
+        $('.run').on('click',keyP);
     }else if
     ($(selected).attr('id')=='command 4')
     {
-        
+        $( ".run" ).text("click");
         $('.jsclas').text('onmousemove');
         $('.jQclas').text('mousemove');
+        $('.run').on('click',mousMv);
     }else if
     ($(selected).attr('id')=='command 5')
     {
-       
+        $( ".run" ).text("click");
         $('.jsclas').text('value');
         $('.jQclas').text('val');
+        $('.run').on('click',textVal);
     }else if
     ($(selected).attr('id')=='command 6')
     {
-    
+        $( ".run" ).text("click to show image");
         $('.jsclas').text('onload');
         $('.jQclas').text('load');
+        $('.run').on('click',loadAction);
     }else if
     ($(selected).attr('id')=='command 7')
-    {
+    {   
+        $( ".run" ).text("click to show image");
         $('.jsclas').text('onerror');
         $('.jQclas').text('error');
+        $('.run').on('click',errAction);
     
     }else if
     ($(selected).attr('id')=='command 8')
