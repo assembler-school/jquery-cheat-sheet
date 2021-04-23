@@ -34,6 +34,7 @@ $(document).ready(function(){
   // Output
   runButtonJquery.click(function () {
     outputJquery.text("> HTML file loaded!");
+    console.log("HTML file loaded!");
   });
 }
 
