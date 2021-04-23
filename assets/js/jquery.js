@@ -11,7 +11,9 @@ console.log("jQuery JS file loaded!");
 let macroJquery = $("#macro-text");
 let outputJquery = $("#output-panel");
 let macroString;
+
 let examplesJquery = $(".example");
+let runButtonJquery = $("#run-button");
 
 /* -------------------------------------------------------------------------- */
 /*                                  FUNCTIONS                                 */
@@ -30,8 +32,9 @@ $(document).ready(function(){
   macroJquery.text(macroString);
 
   // Output
-  outputJquery.text("> HTML file loaded!");
-  // outputJquery.css("color", "grey");
+  runButtonJquery.click(function () {
+    outputJquery.text("> HTML file loaded!");
+  });
 }
 
 //1 ----------------------------------------------------------
@@ -46,13 +49,21 @@ $(element).click(function(){
   macroJquery.text(macroString);
 
   // Output
-  let exampleButton = $("<div>");
-  exampleButton.addClass("example-button");
-  exampleButton.text("Click me");
-  exampleButton.click(function () {
-    $(this).text("Clicked!");
+  runButtonJquery.click(function () {
+    let exampleButton = $("<div>");
+    exampleButton.addClass("example-button");
+    exampleButton.text("Click me");
+
+    exampleButton.click(function () {
+      $(this).text("Clicked!");
+    });
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(exampleButton);
   });
-  outputJquery.append(exampleButton);
 }
 
 //2 ----------------------------------------------------------
@@ -67,13 +78,20 @@ $(element).dblclick(function(){
   macroJquery.text(macroString);
 
   // Output
-  let exampleButton = $("<div>");
-  exampleButton.addClass("example-button");
-  exampleButton.text("Double click me");
-  exampleButton.dblclick(function () {
-    $(this).text("Clicked!");
+  runButtonJquery.click(function () {
+    let exampleButton = $("<div>");
+    exampleButton.addClass("example-button");
+    exampleButton.text("Double click me");
+    exampleButton.dblclick(function () {
+      $(this).text("Clicked!");
+    });
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(exampleButton);
   });
-  outputJquery.append(exampleButton);
 }
 
 //3 ----------------------------------------------------------
@@ -88,18 +106,19 @@ $(document).keypress(function(){
   macroJquery.text(macroString);
 
   // Output
-  outputJquery.text("");
-  let outputText = "> Key pressed!\n";
+  runButtonJquery.click(function () {
+    outputJquery.text("");
+    let outputText = "> Key pressed!\n";
 
-  function keyPressedInside() {
-    outputJquery.text(outputText);
-    outputText += "> Key pressed!\n";
-  }
+    function keyPressedInside() {
+      outputJquery.text(outputText);
+      outputText += "> Key pressed!\n";
+    }
 
-  $(document).on("keypress", keyPressedInside);
-
-  // Removing event listener if example is clicked
-  removeEventJQuery(document, "keypress", keyPressedInside, ".example");
+    $(document).on("keypress", keyPressedInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(document, "keypress", keyPressedInside, ".example");
+  });
 }
 
 //4 ----------------------------------------------------------
@@ -116,13 +135,15 @@ $(document).mousemove(function(e){
   macroJquery.text(macroString);
 
   // Output
-  function mouseMoveInside(e) {
-    outputJquery.text("> Mouse at: (" + e.pageX + ", " + e.pageY + ")");
-  }
+  runButtonJquery.click(function () {
+    function mouseMoveInside(e) {
+      outputJquery.text("> Mouse at: (" + e.pageX + ", " + e.pageY + ")");
+    }
 
-  $(document).on("mousemove", mouseMoveInside);
-  // Removing event listener if example is clicked
-  removeEventJQuery(document, "mousemove", mouseMoveInside, ".example");
+    $(document).on("mousemove", mouseMoveInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(document, "mousemove", mouseMoveInside, ".example");
+  });
 }
 
 //5 ----------------------------------------------------------
@@ -141,17 +162,24 @@ $("input").change(function(){
   macroJquery.text(macroString);
 
   // Output
-  let exampleInput = $("<input>");
-  exampleInput.addClass("example-input");
-  exampleInput.attr("type", "text");
-  outputJquery.append(exampleInput).focus();
+  runButtonJquery.click(function () {
+    let exampleInput = $("<input>");
+    exampleInput.addClass("example-input");
+    exampleInput.attr("type", "text");
 
-  $(".example-input").change(function () {
-    $(this).css({
-      color: "var(--accent-color)",
-      outline: "2px solid var(--accent-color)",
-      backgroundColor: "var(--dark-color",
+    $(exampleInput).change(function () {
+      $(this).css({
+        color: "var(--accent-color)",
+        outline: "2px solid var(--accent-color)",
+        backgroundColor: "var(--dark-color",
+      });
     });
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(exampleInput);
   });
 }
 

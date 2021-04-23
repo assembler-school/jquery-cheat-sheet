@@ -32,8 +32,6 @@ document.onload = function(){
   runButton.onclick = function () {
     outputVanilla.innerHTML = "> HTML file loaded!";
   };
-
-  // Removing event listener if example is clicked
 }
 
 //1 ----------------------------------------------------------
@@ -46,13 +44,21 @@ element.onclick = function(){
 };`;
 
   // Output
-  let newButton = document.createElement("div");
-  newButton.setAttribute("class", "example-button");
-  newButton.innerText = "Click me";
-  newButton.onclick = function () {
-    this.innerText = "Clicked!";
+  runButton.onclick = function () {
+    let exampleButton = document.createElement("div");
+    exampleButton.setAttribute("class", "example-button");
+    exampleButton.innerText = "Click me";
+
+    exampleButton.onclick = function () {
+      this.innerText = "Clicked!";
+    };
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleButton);
   };
-  outputVanilla.appendChild(newButton);
 }
 
 //2 ----------------------------------------------------------
@@ -65,13 +71,21 @@ element.ondblclick = function(){
 };`;
 
   // Output
-  let newButton = document.createElement("div");
-  newButton.setAttribute("class", "example-button");
-  newButton.innerText = "Double click me";
-  newButton.ondblclick = function () {
-    this.innerText = "Clicked!";
+  runButton.onclick = function () {
+    let exampleButton = document.createElement("div");
+    exampleButton.setAttribute("class", "example-button");
+    exampleButton.innerText = "Double click me";
+
+    exampleButton.ondblclick = function () {
+      this.innerText = "Clicked!";
+    };
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleButton);
   };
-  outputVanilla.appendChild(newButton);
 }
 
 //3 ----------------------------------------------------------
@@ -84,16 +98,19 @@ element.onkeypress = function(){
 };`;
 
   // Output
-  outputVanilla.innerText = "";
-  let outputText = "> Key pressed! \n";
+  runButton.onclick = function () {
+    outputVanilla.innerText = "";
+    let outputText = "> Key pressed! \n";
 
-  function keyPressedInside() {
-    outputVanilla.innerText = outputText;
-    outputText += "> Key pressed! \n";
-  }
-  document.addEventListener("keypress", keyPressedInside);
-  // Removing event listener if example is clicked
-  removeEventVanilla(document, "keypress", keyPressedInside, examples);
+    function keyPressedInside() {
+      outputVanilla.innerText = outputText;
+      outputText += "> Key pressed! \n";
+    }
+
+    document.addEventListener("keypress", keyPressedInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(document, "keypress", keyPressedInside, examples);
+  };
 }
 
 //4 ----------------------------------------------------------
@@ -108,12 +125,16 @@ document.onmousemove = function(e){
 };`;
 
   // Output
-  function mouseMoveInside(e) {
-    outputVanilla.innerText = "> Mouse at: (" + e.pageX + ", " + e.pageY + ")";
-  }
-  document.addEventListener("mousemove", mouseMoveInside);
-  // Removing event listener if example is clicked
-  removeEventVanilla(document, "mousemove", mouseMoveInside, examples);
+  runButton.onclick = function () {
+    function mouseMoveInside(e) {
+      outputVanilla.innerText =
+        "> Mouse at: (" + e.pageX + ", " + e.pageY + ")";
+    }
+
+    document.addEventListener("mousemove", mouseMoveInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(document, "mousemove", mouseMoveInside, examples);
+  };
 }
 
 //5 ----------------------------------------------------------
@@ -128,39 +149,25 @@ element.onchange = function(){
 };`;
 
   // Output
-  let exampleInput = document.createElement("input");
-  exampleInput.classList.add("example-input");
-  exampleInput.setAttribute("type", "text");
-  outputVanilla.appendChild(exampleInput);
-  exampleInput.onchange = function () {
-    (this.style.color = "var(--accent-color)"),
-      (this.style.outline = "2px solid var(--accent-color)"),
-      (this.style.backgroundColor = "var(--dark-color");
+  runButton.onclick = function () {
+    let exampleInput = document.createElement("input");
+    exampleInput.classList.add("example-input");
+    exampleInput.setAttribute("type", "text");
+
+    exampleInput.onchange = function () {
+      (this.style.color = "var(--accent-color)"),
+        (this.style.outline = "2px solid var(--accent-color)"),
+        (this.style.backgroundColor = "var(--dark-color");
+    };
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleInput);
   };
 }
 
-//6 ----------------------------------------------------------
-function loadedImage() {
-  // Macro
-  macroTextVanilla.innerText = `// Loaded image
-
-element.onchange = function(){
-  this.style.color = "yellow";
-  this.style.color = "2px solid yellow";
-  this.style.color = "black";
-};`;
-
-  // Output
-  let exampleInput = document.createElement("input");
-  exampleInput.classList.add("example-input");
-  exampleInput.setAttribute("type", "text");
-  outputVanilla.appendChild(exampleInput);
-  exampleInput.onchange = function () {
-    (this.style.color = "var(--accent-color)"),
-      (this.style.outline = "2px solid var(--accent-color)"),
-      (this.style.backgroundColor = "var(--dark-color");
-  };
-}
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
