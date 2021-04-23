@@ -206,7 +206,7 @@ $("img").load(function(){
     exampleImage.attr("src", "./assets/img/montypython.jpg");
 
     $(exampleImage).ready(function () {
-      console.log("Image loaded! jquery");
+      console.log("Image loaded!");
     });
 
     // Resetting output if it's filled
@@ -215,6 +215,37 @@ $("img").load(function(){
     }
     outputJquery.append(exampleImage);
     outputJquery.append("\n\n> Image loaded!");
+  });
+}
+
+//7 ----------------------------------------------------------
+function errorImage() {
+  // Macro
+  macroString = `// Not loaded image
+
+$("img").on("error", function(){
+  console.log("Image not loaded!")
+});`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleImage = $("<img>");
+    exampleImage.addClass("example-image");
+    exampleImage.attr("alt", "Monty Python");
+    exampleImage.attr("src", "./assets/img/montypythonerror.jpg");
+
+    $(exampleImage).on("error", function () {
+      console.log("Image not loaded!");
+    });
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(exampleImage);
+    outputJquery.append("\n\n> Image not loaded!");
   });
 }
 
@@ -248,5 +279,9 @@ export const jQueryExamples = [
   }, // 6
   function () {
     loadedImage();
+  },
+  // 7
+  function () {
+    errorImage();
   },
 ];

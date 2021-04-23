@@ -197,6 +197,35 @@ image.onload = function(){
   };
 }
 
+//7 ----------------------------------------------------------
+function errorImage() {
+  // Macro
+  macroTextVanilla.innerText = `// Not loaded image
+
+image.error = function(){
+  console.log("Image not loaded!");
+};`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleImage = document.createElement("img");
+    exampleImage.classList.add("example-image");
+    exampleImage.setAttribute("alt", "Monty Python");
+    exampleImage.setAttribute("src", "./assets/img/montypythonerror.jpg");
+
+    exampleImage.onerror = function () {
+      console.log("Image not loaded!");
+    };
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleImage);
+    outputVanilla.innerHTML += "\n\n> Image not loaded!";
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -228,5 +257,9 @@ export const vanillaExamples = [
   // 6
   function () {
     loadedImage();
+  },
+  // 7
+  function () {
+    errorImage();
   },
 ];
