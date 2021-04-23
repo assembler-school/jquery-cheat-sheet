@@ -67,7 +67,7 @@ header{
 .column-init{
     width: 30%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 30px;
@@ -90,25 +90,31 @@ header{
 
 /* Data inside column */
 
+#information-column{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+}
+
 .title-data-column{
+    margin: 55px 55px 0 55px;
     font-size: 35px;
-    height: 10%;
+    height: 9%;
     display: flex;
     align-items: center;
-    margin-top: 45px;
-    margin-left: 55px;
 }
 
 #data-column{
-    height: 90%;
-    margin-bottom: 45px;
-    margin-left: 55px;
+    margin: 0 55px 55px 55px;
+    height: 91%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
 .links-column{
+    width: fit-content;
     font-size: 20px;
     font-weight: 100;
     white-space: nowrap;
@@ -117,6 +123,64 @@ header{
 
 .links-column:hover{
     font-weight: 500;
+}
+
+/* Modal Style */
+
+.modal-comparison{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 100%;
+    font-size: 25px;
+}
+
+#select-option{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 8%;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px  gray;
+    background-color: floralwhite;
+}
+
+.option-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 7px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px  gray;
+    background-color: cadetblue;
+}
+
+#text-boxes{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 70%;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px  gray;
+    background-color: floralwhite;
+}
+
+.text-box-modal{
+    display: flex;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px;
+    border: black 1px solid;
 }
 
 /* Footer Style */
