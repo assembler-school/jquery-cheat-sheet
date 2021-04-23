@@ -11,6 +11,7 @@
   --colorSix: #faebab;
   --colorSixPress: #fbe273;
   --divBg: #fcfae0;
+  --languajeBg: #ebe7c4;
 }
 
 * {
@@ -38,6 +39,11 @@ aside {
   height: 5vh;
   display: flex;
   z-index: 2;
+}
+
+li {
+  display: inline-flex;
+  list-style: none;
 }
 
 /* ----- ASIDE ----- */
@@ -142,8 +148,14 @@ aside {
 }
 
 /* ----- MODAL ----- */
+.modal-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+}
+
 .modal {
-  display: none;
   position: fixed;
   width: 70vw;
   height: 80vh;
@@ -154,22 +166,51 @@ aside {
   border: 10px solid var(--colorOne);
   border-radius: 10px;
   padding: 1%;
+  z-index: 5;
+}
+
+.modal-close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -10px;
+  right: -10px;
+  border: 10px solid var(--colorOne);
+  border-radius: 10px;
+  background-color: var(--colorFour);
+  color: white;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  cursor: default;
 }
 
 .modal-title {
-  height: 10%;
+  height: 20%;
   font-size: 3rem;
   align-items: center;
   justify-content: center;
 }
 
 .modal-content {
-  height: 60%;
+  height: 50%;
   display: flex;
+  column-gap: 5px;
+  gap: black;
 }
 
 .languaje {
+  padding: 10px;
   width: 50%;
+  margin: 5px;
+  background-color: var(--languajeBg);
+  border-radius: 20px;
+  border: 1px solid var(--colorOne);
+}
+
+.double {
+  width: 100%;
 }
 
 .languaje-title {
@@ -179,6 +220,166 @@ aside {
   justify-content: center;
 }
 
+.languaje-content {
+  padding: 10px;
+  height: 90%;
+  font-size: 1.5rem;
+  overflow: auto;
+}
+
 .modal-result {
-  height: 30%;
+  height: 25%;
+  font-size: 1.5rem;
+  border: 5px solid var(--colorOne);
+  border-radius: 20px;
+  margin-top: 3%;
+  padding-top: 5px;
+}
+
+.result-title {
+  display: flex;
+  height: 15%;
+  font-size: 2rem;
+  justify-content: center;
+}
+
+.result-content {
+  display: flex;
+  height: 85%;
+  margin-top: 10px;
+}
+
+.result-button {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-button button {
+  font-size: 1.5rem;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: var(--divBg);
+}
+
+.result-button button:hover {
+  background-color: var(--colorSixPress);
+}
+
+.result {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 10px;
+}
+
+/* ----- EXAMPLES ----- */
+.t-f-8 {
+  font-weight: bold;
+  padding: 20px;
+  border: 5px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+
+.t-f-13 {
+  width: 50%;
+  height: 50%;
+  background-image: url(https://api.jquery.com/jquery-wp-content/themes/jquery/images/logo-jquery.png);
+  background-color: black;
+}
+
+.t-f-16 {
+  display: none;
+}
+
+.t-f-17 {
+  display: none;
+}
+
+#r-f-18 > ul {
+  display: inline-flex;
+}
+
+#r-f-18 > ul > li {
+  padding-left: 10px;
+}
+
+#r-f-19 > ul > li {
+  padding: 5px;
+}
+
+.t-f-19 {
+  background-color: var(--colorSixPress);
+  transition: background-color 1s;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--colorOne);
+}
+
+#t-f-20 {
+  font-weight: normal;
+}
+
+#r-f-21 > ul > li {
+  padding: 5px;
+}
+
+#r-f-22 > ul > li {
+  padding: 5px;
+}
+
+#r-f-23 > ul > li {
+  padding: 5px;
+}
+
+#r-f-24 ul li {
+  padding: 5px;
+}
+
+.t-f-24 {
+  display: none;
+}
+
+.t-f-25 {
+  font-size: 2rem;
+}
+
+.btn-t-f-25 {
+  width: 50%;
+}
+
+.t-f-27 {
+  width: 200px;
+  height: 50px;
+  font-size: 2rem;
+}
+
+#r-f-29 {
+  position: relative;
+}
+
+#r-f-29 > div {
+  position: relative;
+}
+
+#t-e-6 {
+  width: 200px;
+  height: 50px;
+  font-size: 2rem;
+}
+
+#r-e-7 img {
+  width: 200px;
+  height: 50px;
+  background-color: black;
 }
