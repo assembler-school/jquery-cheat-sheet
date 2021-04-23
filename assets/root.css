@@ -157,4 +157,6 @@ table {
   box-sizing: border-box;
   cursor: default;
   transition: 0.15s ease-out;
+  font-size: larger;
+  color: var(--pink);
 }
