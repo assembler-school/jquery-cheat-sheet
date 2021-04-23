@@ -8,6 +8,21 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+code {
+  word-wrap: break-word;
+}
+
+button {
+  padding: 3%;
+  font-size: 1rem;
+}
+
+input {
+  padding: 2%;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
 header {
   background-color: black;
   color: white;
@@ -70,12 +85,18 @@ section {
 
 .article__content {
   background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.article__content--hidden {
   display: none;
 }
 
 .article__language {
   width: 80%;
   padding: 1%;
+  grid-column: 3 span;
   font-size: 1.3rem;
   font-weight: bold;
 }
@@ -88,4 +109,79 @@ section {
 .article__language--javascript {
   color: #f0db4f;
   border-bottom: 3px solid #f0db4f;
+}
+
+.article__code {
+  width: 95%;
+  padding: 3%;
+  margin: 2% 0;
+  grid-column: span 2;
+  align-self: center;
+  justify-self: center;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.article__ex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 0;
+  color: white;
+}
+
+.ex3jq__dot,
+.ex3js__dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: red;
+}
+
+.ex3jq__p,
+.ex3js__p {
+  margin-top: 15px;
+}
+
+.ex7js_img,
+.ex7jq_img,
+.ex8js_img,
+.ex8jq_img {
+  height: 200px;
+}
+
+.ex9jq_p,
+.ex9js_p {
+  margin-top: 35px;
+  align-self: flex-start;
+}
+
+.ex10jq_p,
+.ex10js_p {
+  margin-top: 20px;
+}
+
+.ex10jq_p div {
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+}
+
+.ex11jq_div,
+.ex11js_div {
+  background-color: white;
+  margin-top: 25px;
+}
+
+.ex12jq_p,
+.ex12js_p {
+  margin-top: 20px;
+}
+
+.ex13jq_li,
+.ex13js_li {
+  margin-top: 10px;
+  cursor: pointer;
 }
