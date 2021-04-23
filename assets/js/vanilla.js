@@ -12,6 +12,7 @@ let macroTextVanilla = document.getElementById("macro-text");
 let outputVanilla = document.getElementById("output-panel");
 
 let examples = document.getElementsByClassName("example");
+let runButton = document.getElementById("run-button");
 
 /* -------------------------------------------------------------------------- */
 /*                                  FUNCTIONS                                 */
@@ -28,7 +29,11 @@ document.onload = function(){
 };`;
 
   // Output
-  outputVanilla.innerHTML = "> HTML file loaded!";
+  runButton.onclick = function () {
+    outputVanilla.innerHTML = "> HTML file loaded!";
+  };
+
+  // Removing event listener if example is clicked
 }
 
 //1 ----------------------------------------------------------
