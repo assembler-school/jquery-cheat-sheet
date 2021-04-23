@@ -1,0 +1,29 @@
+
+* {
+    margin: 0;
+    outline: auto;
+}
+header {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 10vh;
+    background-color: green;
+}
+main {
+    display: flex;
+    height: 90vh;
+}
+
+.red-square {
+    width: 50%;
+    background-color: red;
+    font-size: 25px;
+    color: white;
+}
+.blue-square {
+    width: 50%;
+    background-color: blue;
+    font-size: 25px;
+    color: white;
+}
