@@ -273,3 +273,13 @@ export function fnSelectedOption() {
     $("#f23JQueryP").text("Selected: " + para);
   });
 }
+
+export function fnChangeFirst() {
+  $("#f24JQuery").on("click", function (e) {
+    let para = $("#f24JQueryDemo a")
+      .first()
+      .attr("href", "https://www.google.com/")
+      .attr("target", "_blank")
+      .text("Go to Google");
+  });
+}

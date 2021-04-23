@@ -355,3 +355,14 @@ export function fnSelectedOption() {
     p.textContent = "Selected: " + para;
   });
 }
+
+export function fnChangeFirst() {
+  const selector = document.getElementById("f24Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.getElementById("f24JsDemo").firstElementChild;
+    para.href = "https://www.google.com/";
+    para.target = "_blank";
+    para.textContent = "Go to Google";
+  });
+}
