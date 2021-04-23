@@ -325,7 +325,6 @@ var functionsContentVanilla = [
         });`,
     output: "<h1>Vanilla</h1>",
   },
-
 ];
 
 var selectorsContentVanilla = [
@@ -482,8 +481,71 @@ function displayEventsConsoleVanilla() {
   idEvent = idEvent.match(/\d/g);
   idEvent = parseInt(idEvent.join(""));
   if (jsVanillaEventsCheckbox.checked === true) {
-    eventsCodeDiv.innerHTML = eventsContentVanilla[idEvent - 1].code;
-    eventsOutputDiv.innerHTML = eventsContentVanilla[idEvent - 1].output;
+    switch (idEvent) {
+      case 1:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(
+          `(function() {
+        document.querySelector('#eventOutputP').innerHTML("Page loaded");
+        document.querySelector('#eventOutputP').style.display = "inline";
+})();`
+        );
+        /*Coding applied*/
+        resetEventsConsole();
+        $("#eventOutputP").html("Page loaded");
+        $("#eventOutputP").show();
+        break;
+      case 2:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(
+          `document.querySelector("#eventOutputButton").addEventListener("click", 
+function () {
+        document.querySelector("#eventOutputP")
+        .innerHTML = "Button clicked";
+});`
+        );
+        /*Coding applied*/
+        resetEventsConsole();
+        $("#eventOutputButton").show();
+        function clickfunction() {
+          $("#eventOutputP").html("Button clicked");
+          $("#eventOutputP").show();
+        }
+        $("#eventOutputButton").on("click", clickfunction);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#eventOutputButton").off("click", clickfunction);
+          });
+        });
+        break;
+      case 3:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(
+          `document.querySelector("#eventOutputButton").addEventListener("dblclick", 
+function () {
+        document.querySelector("#eventOutputP")
+        .innerHTML = "Button double clicked";
+});`
+        );
+        /*Coding applied*/
+        resetEventsConsole();
+        $("#eventOutputButton").show();
+        function dblclickfunction() {
+          $("#eventOutputP").html("Button double clicked");
+          $("#eventOutputP").show();
+        }
+        $("#eventOutputButton").on("dblclick", dblclickfunction);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#eventOutputButton").off("dblclick", dblclickfunction);
+          });
+        });
+        break;
+      default:
+        break;
+    }
   }
 }
 
@@ -497,9 +559,36 @@ function displayFunctionsConsoleVanilla() {
   idFunction = idFunction.match(/\d/g);
   idFunction = parseInt(idFunction.join(""));
   if (jsVanillaFunctionsCheckbox.checked === true) {
-    functionsCodeDiv.innerHTML = functionsContentVanilla[idFunction - 1].code;
-    functionsOutputDiv.innerHTML =
-      functionsContentVanilla[idFunction - 1].output;
+    switch (idFunction) {
+      case 1:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(
+          `function createHtmlElement() {
+        let myNewP = $("p");
+        myNewP.html("Element created");
+        $("#functionsOutputContent").append(myNewP);
+}
+document.querySelector('#functionOutputButton')
+.addEventListener("click", createHtmlElement);`
+        );
+        /*Coding applied*/
+        resetFuntionsConsole();
+        function createHtmlElement() {
+          $("#functionOutputP").html("Element created");
+          $("#functionOutputP").show();
+        }
+        $("#functionOutputButton").show();
+        $("#functionOutputButton").on("click", createHtmlElement);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#functionOutputButton").off("click", createHtmlElement);
+          });
+        });
+        break;
+      default:
+        break;
+    }
   }
 }
 

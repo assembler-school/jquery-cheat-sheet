@@ -157,20 +157,23 @@ section {
   width: 50%;
   font-size: 20px;
   padding: 20px;
-  overflow-y: scroll;
+  overflow-y: auto;
   line-height: 30px;
   white-space: pre-wrap;
 }
 .eventsCodeDiv,
 .selectorsCodeDiv {
   color: var(--darkGreen);
+  border-right: var(--darkGreen) solid 2px;
 }
 .functionsCodeDiv {
   color: var(--lightGreen);
+  border-right: var(--lightGreen) solid 2px;
 }
 .outputDiv {
+  flex-grow: 1;
   font-size: 20px;
-  padding: 20px;
+  padding: 0px 20px;
 }
 .eventsOutputDiv,
 .selectorsOutputDiv {
@@ -179,6 +182,41 @@ section {
 .functionsOutputDiv {
   color: var(--lightGreen);
 }
+
+code {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/*Style for output content*/
+.outputContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.outputButton {
+  font-family: "Futura LtCn BT";
+  font-size: 22px;
+  height: 40px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+}
+.outputButton:hover {
+  cursor: pointer;
+}
+.eventOutputButton,
+.selectorOutputButton {
+  background-color: var(--darkGreen);
+  color: var(--lightGreen);
+}
+.functionOutputButton {
+  background-color: var(--lightGreen);
+  color: var(--darkGreen);
+}
+
 
 /*Checkboxes style*/
 .checkbox {

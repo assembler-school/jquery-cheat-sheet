@@ -433,7 +433,7 @@ var selectorsContentjQuery = [
 // ADD EVENT LISTENERS
 //------------------------------------------------------------------------
 $(".eventsTitle").each(function () {
-  $(this).click(displayEventsConsolejQuery);
+  $(this).on("click", displayEventsConsolejQuery);
 });
 $("input#jqueryEventsCheckbox").change(displayEventsConsolejQuery);
 
@@ -496,6 +496,7 @@ $("input#jquerySelectorsCheckbox").change(function () {
 //------------------------------------------------------------------------
 // FUNCTIONS
 //------------------------------------------------------------------------
+
 function displayEventsConsolejQuery() {
   let idEvent = $(this).attr("id");
   if (idEvent === "jqueryEventsCheckbox") {
@@ -506,8 +507,67 @@ function displayEventsConsolejQuery() {
   idEvent = idEvent.match(/\d/g);
   idEvent = parseInt(idEvent.join(""));
   if ($("input#jqueryEventsCheckbox").is(":checked")) {
-    $(".eventsCodeDiv").html(eventsContentjQuery[idEvent - 1].code);
-    $(".eventsOutputDiv").html(eventsContentjQuery[idEvent - 1].output);
+    switch (idEvent) {
+      case 1:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(
+          `$(document).ready(function(){
+        $("#eventOutputP").html("Page loaded");
+        $("#eventOutputP").show();
+});`
+        );
+        /*Coding applied*/
+        resetEventsConsole();
+        $("#eventOutputP").html("Page loaded");
+        $("#eventOutputP").show();
+        break;
+      case 2:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(
+          `$("#eventOutputButton").on("click", function () {
+        $("#eventOutputP").html("Button clicked");
+});`
+        );
+        /*Coding applied*/
+        resetEventsConsole();
+        $("#eventOutputButton").show();
+        function clickfunction() {
+          $("#eventOutputP").html("Button clicked");
+          $("#eventOutputP").show();
+        }
+        $("#eventOutputButton").on("click", clickfunction);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#eventOutputButton").off("click", clickfunction);
+          });
+        });
+        break;
+      case 3:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(
+          `$("#eventOutputButton").on("dblclick", function () {
+        $("#eventOutputP").html("Button double clicked");
+});`
+        );
+        /*Coding applied*/
+        resetEventsConsole();
+        $("#eventOutputButton").show();
+        function dblclickfunction() {
+          $("#eventOutputP").html("Button double clicked");
+          $("#eventOutputP").show();
+        }
+        $("#eventOutputButton").on("dblclick", dblclickfunction);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#eventOutputButton").off("dblclick", dblclickfunction);
+          });
+        });
+        break;
+      default:
+        break;
+    }
   }
 }
 
@@ -521,10 +581,35 @@ function displayFunctionsConsolejQuery() {
   idFunction = idFunction.match(/\d/g);
   idFunction = parseInt(idFunction.join(""));
   if ($("input#jqueryFunctionsCheckbox").is(":checked")) {
-    $(".functionsCodeDiv").html(functionsContentjQuery[idFunction - 1].code);
-    $(".functionsOutputDiv").html(
-      functionsContentjQuery[idFunction - 1].output
-    );
+    switch (idFunction) {
+      case 1:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(
+          `function createHtmlElement() {
+        let myNewP = $("p");
+        myNewP.html("Element created");
+        $("#functionsOutputContent").append(myNewP);
+}
+$("#functionOutputButton").on("click", createHtmlElement);`
+        );
+        /*Coding applied*/
+        resetFuntionsConsole();
+        function createHtmlElement() {
+          $("#functionOutputP").html("Element created");
+          $("#functionOutputP").show();
+        }
+        $("#functionOutputButton").show();
+        $("#functionOutputButton").on("click", createHtmlElement);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#eventOutputButton").off("click", clickfunction);
+          });
+        });
+        break;
+      default:
+        break;
+    }
   }
 }
 
@@ -543,4 +628,14 @@ function displaySelectorsConsolejQuery() {
       selectorsContentjQuery[idSelector - 1].output
     );
   }
+}
+
+function resetEventsConsole() {
+  $("#eventOutputP").hide();
+  $("#eventOutputButton").hide();
+}
+
+function resetFuntionsConsole() {
+  $("#functionOutputP").hide();
+  $("#functionOutputButton").hide();
 }

@@ -1,3 +1,2 @@
-$("#eventOutputButton").click(function () {
-  $("#eventOutputP").html("Button clicked");
-});
+document.querySelector('#eventOutputP').innerHTML("Page loaded");
+document.querySelector('#eventOutputP').style.display = "inline";
