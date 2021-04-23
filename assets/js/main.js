@@ -50,9 +50,9 @@ function typeLine(line, index, tag) {
   } else if (char === "¡") {
     elem.innerHTML =
       content +
-      "<p onclick='tryIt(" +
+      "<p class='tryIt' onclick='tryIt(" +
       tag +
-      ")'>------+<br> |TRY IT|<br> +------+<br><p>" +
+      ")'>-------+<br> |TRY IT!|<br> +-------+<br><p>" +
       CURSOR;
   } else {
     elem.innerHTML = content + char + CURSOR;
@@ -77,24 +77,31 @@ function firstRun() {
   typeLine(line);
 }
 function tryIt(tag) {
-  $(".modal-examples").prepend($("<p>").text(`Ejecutando demo. Tag: ${tag}`));
+  openModal();
   jqueryImplementation(tag);
   vanillaImplementation(tag);
-  openModal();
 }
 function openModal() {
-  $(".modal-background").removeClass("hidden");
   $("#close-modal").on("click", closeModal);
   $(".modal-background").on("click", closeModal);
   $(".modal-content").on("click", stopPropagation);
+  $("#modal1").append(
+    $("<button>").text("Test it!").addClass("test").attr("id", "test1")
+  );
+  $("#modal2").append(
+    $("<button>").text("Test it!").addClass("test").attr("id", "test2")
+  );
+  $(".modal-background").removeClass("hidden");
 }
 function closeModal() {
   $(".modal-background").addClass("hidden");
   $("#close-modal").off("click", closeModal);
-  $("#test1").off();
-  $("#test2").off();
+  $("#test1, #test2").remove();
   $(".modal-background").off("click", closeModal);
   $(".modal-content").off("click", stopPropagation);
+  $("#demo1, #demo2").children().remove();
+  $("#code1, #code2").html("");
+  $(document).off();
 }
 function stopPropagation(event) {
   event.stopPropagation();
