@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Cheat Sheet</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="screen.css">
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>My jQuery Cheat Sheet</h1>
+        </div>
+
+        <nav>
+            <ul class="navLinks">
+                <li>Home</li>
+                <li>Event</li>
+                <li>HTML/CSS|Selectors</li>
+                <li>Effects|Traversing</li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div id="imageContainer">
+            <img src="/images/js-square-svgrepo-com.svg" alt="javascriptImage">
+            <img src="/images/exchange-svgrepo-com.svg" alt="converterImage" id="converterImg">
+            <img src="/images/jquery-1-logo-svgrepo-com.svg" alt="jQueryImage">
+        </div>
+    </section>
+
+    <section id="event" style="display: none;">
+
+        <table id="eventTable" class="contentTable">
+            <tr>
+                <th>
+                    <h1>Event</h1>
+                </th>
+            </tr>
+        </table>
+    </section>
+
+    <section id="functions" style="display: none;">
+        <table id="functionTable" class="contentTable">
+            <tr>
+                <th>
+                    <h1>HTML/CSS & Selectors</h1>
+                </th>
+            </tr>
+        </table>
+    </section>
+
+    <section id="effects" style="display: none;">
+        <table id="effectTable" class="contentTable">
+            <tr>
+                <th>
+                    <h1>Effects & Traversing</h1>
+                </th>
+            </tr>
+        </table>
+    </section>
+
+  
+    <div id="sheetModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modalContent">
+            <h2 class="nameOfContent"></h2>
+            <div class="contentContainer">
+                <div class="codeBoxesWrapper">
+                    <div class="codeWrapper">
+                        <button id="javaScriptBtn" class="button">JavaScript</button>
+                        <div class="codeBox"></div>
+                    </div>
+                    <div class="codeWrapper">
+                        <button id="jQueryBtn" class="button">jQuery</button>
+                        <div class="codeBox"></div>
+                    </div>
+                </div>
+                <div class="screen"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="/main.js" type="module"></script>
+<script src="/js/jQuery.js" type="module"></script>
+<script src="/js/vanilla.js" type="module"></script>
+<script src="/data.js" type="module"></script>
+</html>
