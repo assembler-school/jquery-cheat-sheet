@@ -305,3 +305,8 @@ footer {
   font-size: 18px;
   padding: 10px 10px;
 }
+
+.example-image {
+  width: 70%;
+  height: auto;
+}
