@@ -320,7 +320,7 @@ export function fnClassSelector() {
 
   selector.addEventListener("click", function (e) {
     let para = document.querySelector(".f20JsDemo");
-    para.textContent = "Hello World!";
+    para.style.fontWeight = "Bold";
   });
 }
 
@@ -329,6 +329,19 @@ export function fnIdSelector() {
 
   selector.addEventListener("click", function (e) {
     let para = document.querySelector("#f21JsDemo");
-    para.textContent = "Hello World!";
+    para.style.fontWeight = "Bold";
+  });
+}
+
+export function fnPropSelector() {
+  const selector = document.getElementById("f22Js");
+
+  selector.addEventListener("click", function (e) {
+    let para = document.querySelectorAll('.textJs[style="display:none;"]');
+
+    para.forEach((element) => {
+      element.style.display = "block";
+      element.style.color = "red";
+    });
   });
 }

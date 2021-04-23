@@ -3,6 +3,8 @@
 ## Javascript
 
 ```html
+<p id="f21JsDemo">This is a paragraph with class = "f21JsDemo"</p>
+
 <script>
   const selector = document.getElementById("f21Js");
 
@@ -22,6 +24,9 @@ click to chande paragraph text
 ## jQuery
 
 ```html
+<p id="f21JsDemo">This is a paragraph with class = "f21JsDemo"</p>
+;
+
 <script>
   $("#f21JQuery").on("click", function (e) {
     $("#f21JQueryDemo").text("Hello World!");

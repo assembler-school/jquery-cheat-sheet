@@ -246,12 +246,21 @@ export function fnParent() {
 
 export function fnClassSelector() {
   $("#f20JQuery").on("click", function (e) {
-    $(".f20JQueryDemo").text("Hello World!");
+    $(".f20JQueryDemo").css("font-weight", "Bold");
   });
 }
 
 export function fnIdSelector() {
   $("#f21JQuery").on("click", function (e) {
-    $("#f21JQueryDemo").text("Hello World!");
+    $("#f21JQueryDemo").css("font-weight", "Bold");
+  });
+}
+
+export function fnPropSelector() {
+  $("#f22JQuery").on("click", function (e) {
+    $('.textJq[style="display:none;"]').css({
+      color: "red",
+      display: "block",
+    });
   });
 }

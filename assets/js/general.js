@@ -217,4 +217,34 @@ function addListeners(e) {
     js.fnIdSelector();
     jq.fnIdSelector();
   }
+
+  if (el.matches('[title="propSelector.md"]')) {
+    js.fnPropSelector();
+    jq.fnPropSelector();
+  }
+
+  if (el.matches('[title="selectedOption.md"]')) {
+    js.fnselectedOption();
+    jq.fnselectedOption();
+  }
+
+  if (el.matches('[title="changeFirst.md"]')) {
+    js.fnchangeFirst();
+    jq.fnchangeFirst();
+  }
+
+  if (el.matches('[title="valueFirst.md"]')) {
+    js.fnvalueFirst();
+    jq.fnvalueFirst();
+  }
+
+  if (el.matches('[title="removeAll.md"]')) {
+    js.fnremoveAll();
+    jq.fnremoveAll();
+  }
+
+  if (el.matches('[title="animate.md"]')) {
+    js.fnanimate();
+    jq.fnanimate();
+  }
 }
