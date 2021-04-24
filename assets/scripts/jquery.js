@@ -6,9 +6,9 @@ $("#ex1.article__content").ready(function () {
 // When an HTML item has been clicked
 $("#events__section .article__ex--2jq button").on("click", function () {
   $(this).text("Well clicked, Sir");
-  let timeOut1 = setTimeout(function () {
+  let timeOut2 = setTimeout(function () {
     $("#events__section .article__ex--2jq button").text("Click me!");
-    clearTimeout(timeOut1);
+    clearTimeout(timeOut2);
   }, 3000);
 });
 
@@ -46,11 +46,12 @@ $(".ex6jq_input").on("input", function () {
 //When an image is loaded
 $(".ex7").on("click", function () {
   if ($(".ex7").attr("display") != "none") {
-    setTimeout(function () {
+    let timeOut7 = setTimeout(function () {
       $(".ex7jq_img").attr(
         "src",
         "https://images.unsplash.com/photo-1546419031-2f09ee2293d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80"
       );
+      clearTimeout(timeOut7);
     }, 4000);
   }
 });
@@ -62,8 +63,9 @@ $(".ex7jq_img").on("load", function () {
 //When an image fails to load
 $(".ex8").on("click", function () {
   if ($(".ex8").attr("display") != "none") {
-    setTimeout(function () {
+    let timeOut8 = setTimeout(function () {
       $(".ex8jq_img").attr("src", "ups");
+      clearTimeout(timeOut8);
     }, 4000);
   }
 });
@@ -108,4 +110,97 @@ $(".ex13jq_li").on("click", function () {
     "font-weight": "normal",
   });
   $(this).css({ "text-decoration": "none", "font-weight": "bold" });
+});
+
+// Create an HTML element with any text value
+$(".ex14jq_btn").on("click", function () {
+  $(".ex14jq").append($("p").text("Are you my mummy?"));
+});
+
+// Remove an HTML element with any text value
+$(".ex15jq_btn").on("click", function () {
+  $(".ex15jq_p").remove();
+});
+
+// Append an HTML element with any text value to a parent element
+$(".ex16jq_btn").on("click", function () {
+  $(".ex16jq").append($("<p>").text("Nothing special..."));
+});
+
+// Prepend an HTML element with any text value to a parent element
+$(".ex17jq_btn").on("click", function () {
+  $(".ex17jq").prepend($("<p>").text("Watch your back!"));
+});
+
+// Create and add an HTML element with any text value after another element
+$(".ex18jq_btn").on("click", function () {
+  $(".ex18jq_li").after($("<li>").text("Aha, you didn't expected me!"));
+});
+
+// Create and add an HTML element with any text value before another element
+$(".ex19jq_btn").on("click", function () {
+  $(".ex19jq_li").before($("<li>").text("It's a coding trick!"));
+});
+
+// Clone an HTML element within other element
+$(".ex20jq_btn").on("click", function () {
+  $(".ex20div_blue").append($("#stormtrooper_jq").clone());
+});
+
+// Add a class to an HTML item
+$(".ex21jq_btn").on("click", function () {
+  $(".ex21jq").addClass("ex21jq--change");
+});
+
+// Remove a class to an HTML item
+$(".ex22jq_btn").on("click", function () {
+  $("#ex22jq").removeClass("ex21jq--change");
+});
+
+// Toggle a class of an HTML item
+$(".ex23jq_btn").on("click", function () {
+  $("#ex23jq").toggleClass("ex23jq--change");
+});
+
+// Add a disabled attribute to an HTML button
+$(".ex24jq_btn").on("click", function () {
+  $(".ex24jq_btn").attr("disabled", "true");
+});
+
+// Remove the disabled attribute of an HTML button
+$("#ex25jq_boss").on("click", function () {
+  $(".ex25jq_btn").removeAttr("disabled");
+  $(".ex25jq_btn").text("Working hard Sir");
+});
+
+// Set a data-src attribute to a img element
+$(".ex26jq_btn").on("click", function () {
+  $("#ex26jq").data("language", "Woof woof woof");
+  $(".ex26jq_btn").text($("#ex26jq").data("language"));
+});
+
+// Remove the data-src attribute of the img element
+$(".ex27jq_btn").on("click", function () {
+  $("#ex27jq").removeAttr("data-language");
+  $(".ex27jq_btn").text("");
+});
+
+// Hide an HTML element on click (display: none)
+$(".ex28jq_btn").on("click", function () {
+  $("#ex28jq").toggle();
+});
+
+// Show an HTML element on click (display: block)
+$(".ex29jq_btn").on("click", function () {
+  $("#ex29jq").toggle();
+});
+
+// Fade in an HTML element using jQuery
+$(".ex30jq_btn").on("click", function () {
+  $("#ex30jq").fadeIn(2000);
+});
+
+//Fade out an HTML element using jQuery
+$(".ex31jq_btn").on("click", function () {
+  $("#ex31jq").fadeOut(2000);
 });

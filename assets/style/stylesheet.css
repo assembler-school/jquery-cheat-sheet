@@ -73,6 +73,10 @@ section {
   margin: 5% 0;
 }
 
+.section--hide {
+  display: none;
+}
+
 .article__list {
   list-style: none;
 }
@@ -133,7 +137,9 @@ section {
 }
 
 .ex3jq__dot,
-.ex3js__dot {
+.ex3js__dot,
+.ex21jq,
+.ex21js {
   width: 40px;
   height: 40px;
   border-radius: 25px;
@@ -148,7 +154,11 @@ section {
 .ex7js_img,
 .ex7jq_img,
 .ex8js_img,
-.ex8jq_img {
+.ex8jq_img,
+#ex26jq,
+#ex26js,
+#ex27jq,
+#ex27js {
   height: 200px;
 }
 
@@ -156,11 +166,6 @@ section {
 .ex9js_p {
   margin-top: 35px;
   align-self: flex-start;
-}
-
-.ex10jq_p,
-.ex10js_p {
-  margin-top: 20px;
 }
 
 .ex10jq_p div {
@@ -175,8 +180,15 @@ section {
   margin-top: 25px;
 }
 
-.ex12jq_p,
-.ex12js_p {
+.ex16jq p,
+.ex16js p,
+.ex21jq,
+.ex21js,
+.ex25jq_btn,
+.ex25js_btn,
+.ex26js_btn,
+.ex26js_btn,
+.top20 {
   margin-top: 20px;
 }
 
@@ -184,4 +196,50 @@ section {
 .ex13js_li {
   margin-top: 10px;
   cursor: pointer;
+}
+
+.red_base {
+  min-width: 100px;
+  background-color: darkred;
+}
+
+.blue_base {
+  min-width: 100px;
+  min-height: 100px;
+  background-color: darkblue;
+}
+
+.ex21jq--change {
+  background-color: blueviolet;
+}
+
+.ex21js--change {
+  width: 60px;
+  height: 60px;
+}
+
+.ex23jq--change {
+  border: 1px solid darkred;
+  background-color: black;
+}
+
+.ex23js--change {
+  width: 60px;
+  height: 60px;
+  background-color: darkgreen;
+}
+
+#ex28js,
+#ex28jq,
+#ex29jq,
+#ex29js,
+.blue_box {
+  width: 40px;
+  height: 40px;
+  background-color: darkblue;
+}
+
+.ex29jq--display,
+.ex29js--display {
+  display: none;
 }

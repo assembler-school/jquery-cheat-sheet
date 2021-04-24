@@ -5,9 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // When an HTML item has been clicked
-let buttonEx1 = document.querySelector(
-  "#events__section .article__ex--2js button"
-);
+let buttonEx1 = document.querySelector(".article__ex--2js button");
 buttonEx1.addEventListener("click", function () {
   buttonEx1.innerHTML = "Well clicked, Sir";
   let tou1 = setTimeout(function () {
@@ -55,11 +53,12 @@ let p7 = document.querySelector(".ex7js_p");
 
 document.querySelector(".ex7").addEventListener("click", function () {
   if (document.querySelector(".ex8").style.display != "none") {
-    setTimeout(function () {
+    let tou7 = setTimeout(function () {
       image7.setAttribute(
         "src",
         "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1510&q=80"
       );
+      clearTimeout(tou7);
     }, 4000);
   }
 });
@@ -74,8 +73,9 @@ let p8 = document.querySelector(".ex8js_p");
 
 document.querySelector(".ex8").addEventListener("click", function () {
   if (document.querySelector(".ex8").style.display != "none") {
-    setTimeout(function () {
+    let tou8 = setTimeout(function () {
       image8.setAttribute("src", "ups");
+      clearTimeout(tou8);
     }, 4000);
   }
 });
@@ -130,4 +130,118 @@ li13.forEach(function (li) {
     e.target.style.textDecoration = "none";
     e.target.style.fontWeight = "bold";
   });
+});
+
+// Create an HTML element with any text value
+document.querySelector(".ex14js_btn").addEventListener("click", function () {
+  let secondP = document.createElement("p");
+  document.querySelector(".ex14js").append((secondP.innerHTML = "It's alive!"));
+});
+
+// Remove an HTML element with any text value
+document.querySelector(".ex15js_btn").addEventListener("click", function () {
+  if (document.querySelector(".ex15js_p")) {
+    document.querySelector(".ex15js_p").remove();
+  }
+});
+
+// Append an HTML element with any text value to a parent element
+document.querySelector(".ex16js_btn").addEventListener("click", function () {
+  let ex16p = document.createElement("p");
+  ex16p.innerHTML = "Three? Three is a crowd!";
+  document.querySelector(".ex16js").append(ex16p);
+});
+
+// Prepend an HTML element with any text value to a parent element
+document.querySelector(".ex17js_btn").addEventListener("click", function () {
+  let ex17p = document.createElement("p");
+  ex17p.innerHTML = "Behind you!";
+  document.querySelector(".ex17js").prepend(ex17p);
+});
+
+// Create and add an HTML element with any text value after another element
+document.querySelector(".ex18js_btn").addEventListener("click", function () {
+  let ex18li = document.createElement("li");
+  ex18li.innerHTML = "Ducks don't produce echo!";
+  document
+    .querySelector(".ex18js_li")
+    .insertAdjacentElement("afterend", ex18li);
+});
+
+// Create and add an HTML element with any text value before another element
+document.querySelector(".ex19js_btn").addEventListener("click", function () {
+  let ex19li = document.createElement("li");
+  ex19li.innerHTML = "ECHO";
+  document
+    .querySelector(".ex19js_li")
+    .insertAdjacentElement("beforebegin", ex19li);
+});
+
+// Clone an HTML element within other element
+document.querySelector(".ex20js_btn").addEventListener("click", function () {
+  let jedi = document.getElementById("jedi_js").cloneNode(true);
+  document.querySelector(".ex20js_blue").append(jedi);
+});
+
+// Add a class to an HTML item
+document.querySelector(".ex21js_btn").addEventListener("click", function () {
+  document.querySelector(".ex21js").classList.add("ex21js--change");
+});
+
+// Remove a class to an HTML item
+document.querySelector(".ex22js_btn").addEventListener("click", function () {
+  document.getElementById("ex22js").classList.remove("ex21js--change");
+});
+
+// Toggle a class of an HTML item
+document.querySelector(".ex23js_btn").addEventListener("click", function () {
+  document.getElementById("ex23js").classList.toggle("ex23js--change");
+});
+
+// Add a disabled attribute to an HTML button
+let button24 = document.querySelector(".ex24js_btn");
+button24.addEventListener("click", function () {
+  button24.setAttribute("disabled", "true");
+});
+
+// Remove the disabled attribute of an HTML button
+let button25 = document.querySelector(".ex25js_btn");
+document.getElementById("ex25js_boss").addEventListener("click", function () {
+  button25.removeAttribute("disabled");
+  button25.innerHTML = "I was doing something!";
+});
+
+// Set a data-src attribute to a img element
+document.querySelector(".ex26js_btn").addEventListener("click", function () {
+  let img26 = document.getElementById("ex26js");
+  img26.setAttribute("data-japanese", "凄い");
+  document.querySelector(".ex26js_btn").innerHTML = img26.dataset.japanese;
+});
+
+// Remove the data-src attribute of the img element
+document.querySelector(".ex27js_btn").addEventListener("click", function () {
+  document.getElementById("ex27js").removeAttribute("data-japanese");
+  document.querySelector(".ex27js_btn").innerHTML = "";
+});
+
+// Hide an HTML element on click (display: none)
+document.querySelector(".ex28js_btn").addEventListener("click", function () {
+  document.getElementById("ex28js").style.display = "none";
+});
+
+// Show an HTML element on click (display: block)
+document.querySelector(".ex29js_btn").addEventListener("click", function () {
+  document.getElementById("ex29js").style.display = "block";
+});
+
+// Fade in an HTML element using jQuery
+document.querySelector(".ex30js_btn").addEventListener("click", function () {
+  document.getElementById("ex30js").style.transition = "opacity 5s";
+  document.getElementById("ex30js").style.opacity = "1";
+});
+
+//Fade out an HTML element using jQuery
+document.querySelector(".ex31js_btn").addEventListener("click", function () {
+  document.getElementById("ex31js").style.transition = "opacity 5s";
+  document.getElementById("ex31js").style.opacity = "0";
 });
