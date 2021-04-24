@@ -556,7 +556,54 @@ element.onclick = function(){
     if (outputVanilla.hasChildNodes()) {
       outputVanilla.innerHTML = null;
     }
+
     outputVanilla.appendChild(exampleButton);
+  };
+}
+
+//14 ----------------------------------------------------------
+function removeHTML() {
+  // Macro
+  macroTextVanilla.innerText = `// Remove an html element
+
+let container = document.createElement("div");
+let child = document.getElementById("child");
+
+element.onclick = function(){
+  container.removeChild(child);
+};`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleButton = document.createElement("div");
+    exampleButton.setAttribute("class", "example-button");
+    exampleButton.innerText = "Delete";
+    exampleButton.style.marginBottom = "var(--margin)";
+
+    let exampleParagraph = document.createElement("p");
+    exampleParagraph.classList.add("example-element");
+    exampleParagraph.innerText = "Element to remove";
+
+    function deleteHTMLInside() {
+      if (outputVanilla.contains(exampleParagraph)) {
+        outputVanilla.removeChild(exampleParagraph);
+        console.log("Element deleted in vanilla!");
+      } else {
+        console.log("Element already removed");
+      }
+    }
+
+    exampleButton.addEventListener("click", deleteHTMLInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleButton, "click", deleteHTMLInside, examples);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleButton);
+    outputVanilla.appendChild(exampleParagraph);
   };
 }
 
@@ -624,5 +671,9 @@ export const vanillaExamples = [
   // 13
   function () {
     createHTML();
+  },
+  // 14
+  function () {
+    removeHTML();
   },
 ];

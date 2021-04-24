@@ -601,7 +601,56 @@ $(element).click(function(){
     if (outputJquery.children()) {
       outputJquery.html(null);
     }
+
     outputJquery.append(exampleButton);
+  });
+}
+
+//14 ----------------------------------------------------------
+function removeHTML() {
+  // Macro
+  macroString = `// Remove an html element
+
+let container = $("<div>");
+let child = $("#child");
+
+$(element).click(function(){
+  child.remove();
+};`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleButton = $("<div>");
+    exampleButton.addClass("example-button");
+    exampleButton.text("Delete");
+    exampleButton.css("marginBottom", "var(--margin)");
+
+    let exampleParagraph = $("<p>");
+    exampleParagraph.addClass("example-element");
+    exampleParagraph.text("Element to remove");
+
+    function deleteHTMLInside() {
+      if (outputJquery.children(exampleParagraph)) {
+        exampleParagraph.remove();
+        console.log("Element deleted in jQuery!");
+      } else {
+        console.log("Element already removed");
+      }
+    }
+
+    exampleButton.on("click", deleteHTMLInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(exampleButton, "click", deleteHTMLInside, ".example");
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleButton);
+    outputJquery.append(exampleParagraph);
   });
 }
 
@@ -668,5 +717,9 @@ export const jQueryExamples = [
   // 13
   function () {
     createHTML();
+  },
+  // 14
+  function () {
+    removeHTML();
   },
 ];
