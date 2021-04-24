@@ -561,10 +561,56 @@ liElements.each(function(){
     });
   });
 }
+
+// Functions
+//13 ----------------------------------------------------------
+function createHTML() {
+  // Macro
+  macroString = `// Create an html element
+
+let container = $("<div>");
+
+$(element).click(function(){
+  let newElement = $("<p>");
+  newElement.text("Element created");
+  container.append(newElement);
+};`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleButton = $("<div>");
+    exampleButton.addClass("example-button");
+    exampleButton.text("Create");
+    exampleButton.css("marginBottom", "var(--margin)");
+
+    function createHTMLInside() {
+      let exampleParagraph = $("<p>");
+      exampleParagraph.addClass("example-element");
+      exampleParagraph.text("Element created");
+      outputJquery.append(exampleParagraph);
+      console.log("Element created in jQuery!");
+    }
+
+    exampleButton.on("click", createHTMLInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(exampleButton, "click", createHTMLInside, ".example");
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(exampleButton);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
 export const jQueryExamples = [
+  // Events
+
   // 0
   function () {
     htmlLoaded();
@@ -615,5 +661,12 @@ export const jQueryExamples = [
   // 12
   function () {
     ulSelection();
+  },
+
+  // Functions
+
+  // 13
+  function () {
+    createHTML();
   },
 ];

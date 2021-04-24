@@ -392,3 +392,7 @@ footer {
   margin-left: var(--margin);
   cursor: pointer;
 }
+
+.example-element {
+  font-weight: var(--medium);
+}

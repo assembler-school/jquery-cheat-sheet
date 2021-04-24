@@ -519,10 +519,53 @@ for (let l of liElements{
   };
 }
 
+// Functions
+//13 ----------------------------------------------------------
+function createHTML() {
+  // Macro
+  macroTextVanilla.innerText = `// Create an html element
+
+let container = document.createElement("div");
+
+element.onclick = function(){
+  let newElement = document.createElement("p");
+  newElement.innerText = "Element created"
+  container.appendChild(newElement);
+};`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleButton = document.createElement("div");
+    exampleButton.setAttribute("class", "example-button");
+    exampleButton.innerText = "Create";
+    exampleButton.style.marginBottom = "var(--margin)";
+
+    function createHTMLInside() {
+      let exampleParagraph = document.createElement("p");
+      exampleParagraph.classList.add("example-element");
+      exampleParagraph.innerText = "Element created";
+      outputVanilla.appendChild(exampleParagraph);
+      console.log("Element created in vanilla!");
+    }
+
+    exampleButton.addEventListener("click", createHTMLInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleButton, "click", createHTMLInside, examples);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleButton);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
 export const vanillaExamples = [
+  // Events
+
   // 0
   function () {
     htmlLoaded();
@@ -574,5 +617,12 @@ export const vanillaExamples = [
   // 12
   function () {
     ulSelection();
+  },
+
+  // Functions
+
+  // 13
+  function () {
+    createHTML();
   },
 ];
