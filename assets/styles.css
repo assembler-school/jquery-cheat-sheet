@@ -76,6 +76,7 @@ li.specificEvent{
     font-family: 'Roboto Mono', monospace;
     font-weight: 100;
     padding-left: 10px;
+    font-size: 20px;
 }
 h2.selectorTitle{
     
@@ -92,6 +93,7 @@ li.specificSelector{
     margin-bottom: 10px;
     border-left: 2px solid black;
     font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
     padding-left: 10px;
     font-weight: 100;
 }
@@ -115,8 +117,8 @@ li.specificSelector{
     color:white;
     width: 70%;
     height: 70%;
-    top:12%;
-    left: 12%;
+    top:15%;
+    left: 15%;
     z-index: 1;
     
     background-color: black;
@@ -136,8 +138,14 @@ h2.jsclas{
 h2.jQclas{
     color: black;
     background-color: white;
-    padding: 10px;
+    padding: 30px 10px;
     margin-left: 0%;
+    height: 121%;
+    min-width:20%;
+    border-bottom-left-radius: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
 }
 
 div.vanillaBox{
@@ -147,11 +155,13 @@ div.vanillaBox{
 }
 div.jQueryBox{
     grid-column: 3/4;
+    
     text-align: right;
     color: black;
     background-color: white;
     padding: 10px;
     border: none;
+    border-bottom: 20px;
 }
 code.jQueryText{
     

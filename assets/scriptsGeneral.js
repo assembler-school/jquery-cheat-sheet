@@ -83,134 +83,185 @@ function textLaunch(event){
     }else if
     ($(selected).attr('id')=='command 8')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('submit');
         $('.jQclas').text('submit');
+        $('.run').on('click',iSubm);
     }else if
     ($(selected).attr('id')=='command 9')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('change');
         $('.jQclas').text('change');
+        $('.run').on('click',isChange);
     }else if
     ($(selected).attr('id')=='command 10')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('onmouseover');
         $('.jQclas').text('mouseover');
+        $('.run').on('click',isOver);
     }else if
     ($(selected).attr('id')=='command 11')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('.checked');
         $('.jQclas').text(':checked');
+        $('.run').on('click',isCliked);
     }else if
     ($(selected).attr('id')=='command 12')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('(this).click');
         $('.jQclas').text('(this).on');
+        $('.run').on('click',selectOpt);
     }else if
     ($(selected).attr('id')=='command 13')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('create');
         $('.jQclas').text('add');
+        $('.run').on('click',inElement);
     }else if
     ($(selected).attr('id')=='command 14')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('remove');
         $('.jQclas').text('remove');
+        $('.run').on('click',killElement);
     }else if
     ($(selected).attr('id')=='command 15')
     {
-        $('.jsclas').text('appendChild');
+        $( ".run" ).text("click");
+        $('.jsclas').text('insertAdjesent(after)');
         $('.jQclas').text('append');
+        $('.run').on('click',newLastCh);
     }else if
     ($(selected).attr('id')=='command 16')
     {
-        $('.jsclas').text('prepend');
+        $( ".run" ).text("click");
+        $('.jsclas').text('insertAdjesent(before)');
         $('.jQclas').text('prepend');
+        $('.run').on('click',newFirstCh);
     }else if
     ($(selected).attr('id')=='command 17')
     {
-        $('.jsclas').text('insertAdjesent(after)');
+        $( ".run" ).text("click");
+        $('.jsclas').text('append');
         $('.jQclas').text('after');
+        $('.run').on('click',elementAfter);
     }else if
     ($(selected).attr('id')=='command 18')
     {
-        $('.jsclas').text('insertAdjesent(before)');
+        $( ".run" ).text("click");
+        $('.jsclas').text('prepend');
         $('.jQclas').text('before');
+        $('.run').on('click',elementBefore);
     }else if
     ($(selected).attr('id')=='command 19')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('cloneNode(true)');
         $('.jQclas').text('clone');
+        $('.run').on('click',colantion);
     }else if
     ($(selected).attr('id')=='command 20')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('classList.add');
         $('.jQclas').text('addClass');
+        $('.run').on('click',addingClass);
     }else if
     ($(selected).attr('id')=='command 21')
     {
-        
+        $( ".run" ).text("click");
         $('.jsclas').text('classList.remove');
         $('.jQclas').text('removeClass');
+        $('.run').on('click',removingClass);
     }else if
     ($(selected).attr('id')=='command 22')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('classList.toggle');
         $('.jQclas').text('toggle');
+        $('.run').on('click',toggClass);
     }else if
     ($(selected).attr('id')=='command 23')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('setAttribute("disabled")');
         $('.jQclas').text('attr("disabled")');
+        $('.run').on('click',newAtribute);
     }else if
     ($(selected).attr('id')=='command 24')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('removeAttribute("disabled")');
         $('.jQclas').text('removeAttr("disabled")');
+        $('.run').on('click',deteAtribute);
     }else if
     ($(selected).attr('id')=='command 25')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('setAttribute("data-src","name")');
         $('.jQclas').text('attr("data-src","name")');
+        $('.run').on('click',dataSrc);
     }else if
     ($(selected).attr('id')=='command 26')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('removeAttribute("data-src")');
         $('.jQclas').text('removeAttr("data-src")');
+        $('.run').on('click',deleDataSrc);
     }else if
     ($(selected).attr('id')=='command 27')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('visibility = "hidden"');
         $('.jQclas').text('hide');
+        $('.run').on('click',noShow);
     }else if
     ($(selected).attr('id')=='command 28')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('style.visibility = "visible"');
         $('.jQclas').text('show');
+        $('.run').on('click',siShow);
     }else if
     ($(selected).attr('id')=='command 29')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('style.opacity+');
         $('.jQclas').text('fadeIn');
+        $('.run').on('click',opacityUp);
     }else if
     ($(selected).attr('id')=='command 30')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('style.opacity-');
         $('.jQclas').text('fadeOut');
+        $('.run').on('click',opacityDown);
     }else if
     ($(selected).attr('id')=='command 31')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('forEach');
         $('.jQclas').text('each');
+        $('.run').on('click',runArray);
     }else if
     ($(selected).attr('id')=='command 32')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('parentNode');
         $('.jQclas').text('parent');
+        $('.run').on('click',PapaNode);
     }else if
     ($(selected).attr('id')=='command 33')
     {
+        $( ".run" ).text("click");
         $('.jsclas').text('childNodes');
         $('.jQclas').text('children');
+        $('.run').on('click',sonNode);
     }
   
   
