@@ -2,7 +2,11 @@ const exerciseFunctions = {
     hasLoaded: {js: hasLoadedJS, jquery: hasLoadedJQuery},
     hasElementClicked: {js: hasElementClickedJS, jquery: hasElementClickedJQuery},
     hasElementDoubleClicked: {js: hasElementDoubleClickedJS, jquery: hasElementDoubleClickedJQuery},
-    onKeyPress: {js: onKeyPressJS, jquery: onKeyPressJQuery}
+    onKeyPress: {js: onKeyPressJS, jquery: onKeyPressJQuery},
+    onMouseMoving: {js: onMouseMovingJS, jquery: onMouseMovingJQuery},
+    changeInput: {js: changeInputJS, jquery: changeInputJQuery},
+    imageLoaded: {js: imageLoadedJS, jquery: imageLoadedJQuery},
+    imageFailLoading: {js: imageFailLoadingJS, jquery: imageFailLoadingJQuery}
 };
 
 (function initialize() {
@@ -30,7 +34,10 @@ const exerciseFunctions = {
 function cleanCodebox() {
     $('#js-codebox').empty();
     $('#example-codebox').empty();
-    document.removeEventListener("keypress", keypress);
+    document.removeEventListener("keypress", keypressJS);
+    $(document).off('keypress');
+    document.removeEventListener('mousemove', mouseMove);
+    $(document).off('mousemove');
 }
 function hideModal() {
     cleanCodebox();
