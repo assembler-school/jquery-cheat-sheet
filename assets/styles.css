@@ -267,5 +267,8 @@ font-size: 50px;
 font-weight: 100;
 pointer-events: none;
 }
+span{
+    color: white;
+}
 /*__________________*/
 

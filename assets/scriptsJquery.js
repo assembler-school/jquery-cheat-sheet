@@ -114,11 +114,10 @@ function selectOpt(){
     });
 }
 function inElement(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    
+    $('p.result').add("div");
+    //$('.result span').text('you added this text, congratulations');
+   
 }
 function killElement(){
     $( ".run" ).text("");
@@ -128,32 +127,21 @@ function killElement(){
     });*/
 }
 function newLastCh(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("apend in this box");
+    $('.showComandContent').append("<p>Congratulations you added a text</p>");
+   
 }
 function newFirstCh(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("prepend in this box");
+    $('.showComandContent').prepend("<p>Congratulations you preadded a text</p>");
 }
 function elementAfter(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("create after this button");
+    $('.run').after("<p>Congratulations crate this</p>");
 }
 function elementBefore(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("create before this button");
+    $('.run').before("<p>Congratulations crate this</p>");
 }
 function colantion(){
     $( ".run" ).text("");
