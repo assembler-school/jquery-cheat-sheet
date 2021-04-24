@@ -607,6 +607,46 @@ element.onclick = function(){
   };
 }
 
+//15 ----------------------------------------------------------
+function appendElement() {
+  // Macro
+  macroTextVanilla.innerText = `// Append an html element
+
+let container = document.getElementById("#parent");
+let child = document.createElement("div");
+
+// Appending the child after 2 seconds
+setTimeout(function(){
+  container.appendChild(child);
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleParent = document.createElement("div");
+    exampleParent.setAttribute("class", "example-parent");
+    exampleParent.innerText = "Parent";
+
+    let exampleChild = document.createElement("div");
+    exampleChild.classList.add("example-child");
+    exampleChild.innerText = "Child";
+
+    setTimeout(function () {
+      let appendedChild = exampleChild.cloneNode(true);
+      appendedChild.classList.add("example-appended-child");
+      appendedChild.innerText = "Appended child!";
+      exampleParent.appendChild(appendedChild);
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    exampleParent.appendChild(exampleChild);
+    outputVanilla.appendChild(exampleParent);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -675,5 +715,9 @@ export const vanillaExamples = [
   // 14
   function () {
     removeHTML();
+  },
+  // 15
+  function () {
+    appendElement();
   },
 ];

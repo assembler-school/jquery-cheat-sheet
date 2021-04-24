@@ -654,6 +654,48 @@ $(element).click(function(){
   });
 }
 
+//15 ----------------------------------------------------------
+function appendElement() {
+  // Macro
+  macroString = `// Append an html element
+
+let container = $("#parent");
+let child = $("<div>");
+
+// Appending the child after 2 seconds
+setTimeout(function(){
+  container.append(child);
+}, 2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleParent = $("<div>");
+    exampleParent.addClass("example-parent");
+    exampleParent.text("Parent");
+
+    let exampleChild = $("<div>");
+    exampleChild.addClass("example-child");
+    exampleChild.text("Child");
+
+    setTimeout(function () {
+      let appendedChild = exampleChild.clone();
+      appendedChild.addClass("example-appended-child");
+      appendedChild.text("Appended child!");
+      exampleParent.append(appendedChild);
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    exampleParent.append(exampleChild);
+    outputJquery.append(exampleParent);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -721,5 +763,9 @@ export const jQueryExamples = [
   // 14
   function () {
     removeHTML();
+  },
+  // 15
+  function () {
+    appendElement();
   },
 ];

@@ -396,3 +396,25 @@ footer {
 .example-element {
   font-weight: var(--medium);
 }
+
+.example-parent {
+  width: 100%;
+  outline: var(--border-size) solid var(--light-color);
+  color: var(--light-color);
+  font-weight: var(--medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: calc(var(--margin) / 2);
+}
+
+.example-child {
+  margin-top: calc(var(--margin) / 2);
+  padding: calc(var(--margin) / 2);
+  outline: var(--border-size) solid var(--light-color);
+}
+
+.example-appended-child {
+  outline: var(--border-size) solid var(--accent-color);
+  color: var(--accent-color);
+}
