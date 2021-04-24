@@ -84,19 +84,74 @@ function showHideSolutions(){
     }
 }
 
-// Sets values for every code and otput solution array
-function setArrays(){
-    vanillaCodes.push(vanilla.onLoadVanillaCode());
-    jqueryCodes.push(jquery.onLoadJqueryCode());
-    outputSolutions.push(vanilla.onLoadVanillaOutput());
+// Injects the content to their corresponding divs
+function injectionSwitch(){
+    let codeContainer;
+    //Events divs
+    for(let e = 1; e < 14; e++){
+        let id = "e" + e;
+        switch(id){
+
+            case "e1":
+
+                break;
+
+            case "e2":
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onClickVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = "";
+                vanilla.onClickVanillaOutput(codeContainer);
+                break;
+
+            case "e3":
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onDblClickVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = "";
+                vanilla.onDblClickVanillaOutput(codeContainer);
+                break;
+
+            case "e4":
+                break;
+
+            case "e5":
+                break;
+
+            case "e6":
+                break;
+
+            case "e7":
+                break;
+
+            case "e8":
+                break;
+
+            case "e9":
+                break;
+
+            case "e10":
+                break;
+
+            case "e11":
+                break;
+
+            case "e12":
+                break;
+
+            case "e13":
+                break;
+        }
+    }
+    // vanillaCodes.push(vanilla.onLoadVanillaCode());
+    // jqueryCodes.push(jquery.onLoadJqueryCode());
+    // outputSolutions.push(vanilla.onLoadVanillaOutput());
 }
 
-// Injects the content of the arrays to their corresponding divs
+
 function injectArraysContent(){
     for(let i = 0; i < codeContainers.length; i++){
-        codeContainers[i].children[0].children[1].innerText = vanillaCodes[i];
-        codeContainers[i].children[1].children[1].innerText = jqueryCodes[i];;
-        codeContainers[i].children[2].children[1].innerText = outputSolutions[i];;
+        codeContainers[i].children[0].children[1].innerHTML = vanillaCodes[i];
+        codeContainers[i].children[1].children[1].innerHTML = jqueryCodes[i];
+        codeContainers[i].children[2].children[1].innerHTML = outputSolutions[i];
     }
 }
 //========================================//
@@ -105,6 +160,6 @@ function injectArraysContent(){
 //=========== Functions Calls ============//
 setTopicListItemListeners();
 showHideSolutions();
-setArrays()
-injectArraysContent();
+injectionSwitch();
+// injectArraysContent();
 //========================================//

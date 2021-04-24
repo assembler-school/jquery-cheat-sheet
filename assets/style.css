@@ -76,6 +76,7 @@
   flex-grow: 0.90;
   padding: 5px;
   white-space: pre-wrap;
+  /*text-align: center;*/
 }
 
 .outputCode{
@@ -84,7 +85,8 @@
 }
 
 #testArea{
-  display:none;
+  display:flex;
+  height: 100px;
 }
 
 #footer{
