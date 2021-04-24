@@ -829,6 +829,44 @@ setTimeout(function(){
   };
 }
 
+//20 ----------------------------------------------------------
+function addedClass() {
+  // Macro
+  macroTextVanilla.innerText = `// Add class to an html element
+
+setTimeout(function(){
+  element.classList.add("newClass");
+  console.log(element.outerHTML);
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleElement = document.createElement("div");
+    exampleElement.setAttribute("class", "example-element");
+    exampleElement.innerText = "Spam!";
+    exampleElement.style.marginBottom = "var(--margin)";
+
+    let exampleParagraph = document.createElement("p");
+    exampleParagraph.innerText = "Spam!";
+    exampleParagraph.innerText = "> " + exampleParagraph.outerHTML;
+
+    setTimeout(function () {
+      exampleParagraph.classList.add("newClass");
+      exampleParagraph.innerText = "Spam!";
+      exampleParagraph.innerText = "> " + exampleParagraph.outerHTML;
+      console.log(exampleParagraph.outerHTML);
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleElement);
+    outputVanilla.appendChild(exampleParagraph);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -917,5 +955,9 @@ export const vanillaExamples = [
   // 19
   function () {
     cloneWithin();
+  },
+  // 20
+  function () {
+    addedClass();
   },
 ];

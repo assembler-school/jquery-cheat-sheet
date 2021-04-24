@@ -507,7 +507,7 @@ let liElements = $("li");
 
 liElements.each(function(){
   $(this).on("click", function{
-    console.log($(this).get());
+    console.log($(this).prop("outerHTML"));
   })
 });`;
 
@@ -891,6 +891,45 @@ setTimeout(function(){
   });
 }
 
+//20 ----------------------------------------------------------
+function addedClass() {
+  // Macro
+  macroString = `// Add class to an html element
+
+setTimeout(function(){
+  element.addClass("newClass");
+  console.log(element.prop("outerHTML");
+}, 2000)`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleElement = $("<div>");
+    exampleElement.addClass("example-element");
+    exampleElement.text("Spam!");
+    exampleElement.css("marginBottom", "var(--margin)");
+
+    let exampleParagraph = $("<p>");
+    exampleParagraph.text("Spam!");
+    exampleParagraph.text("> " + exampleParagraph.prop("outerHTML"));
+
+    setTimeout(function () {
+      exampleParagraph.addClass("newClass");
+      exampleParagraph.text("Spam!");
+      exampleParagraph.text("> " + exampleParagraph.prop("outerHTML"));
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleElement);
+    outputJquery.append(exampleParagraph);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -978,5 +1017,9 @@ export const jQueryExamples = [
   // 19
   function () {
     cloneWithin();
+  },
+  // 20
+  function () {
+    addedClass();
   },
 ];
