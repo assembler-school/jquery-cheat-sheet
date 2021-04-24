@@ -737,6 +737,56 @@ setTimeout(function(){
   };
 }
 
+//18 ----------------------------------------------------------
+function addBefore() {
+  // Macro
+  macroTextVanilla.innerText = `// Create & add element before
+
+let container = document.getElementById("#parent");
+let child = document.createElement("div");
+
+// Creating & adding element after 2 seconds
+setTimeout(function(){
+  container.insertBefore(child, container.childNodes[1]);
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleParent = document.createElement("div");
+    exampleParent.setAttribute("class", "example-parent");
+    exampleParent.innerText = "Parent";
+
+    let exampleChild1 = document.createElement("div");
+    exampleChild1.classList.add("example-child");
+    exampleChild1.innerText = "Child 1";
+
+    let exampleChild2 = document.createElement("div");
+    exampleChild2.classList.add("example-child");
+    exampleChild2.innerText = "Child 2";
+
+    let exampleChild3 = document.createElement("div");
+    exampleChild3.classList.add("example-child");
+    exampleChild3.innerText = "Child 3";
+
+    setTimeout(function () {
+      let appendedChild = exampleChild1.cloneNode(true);
+      appendedChild.classList.add("example-appended-child");
+      appendedChild.innerText = "Inserted before Child 2!";
+      exampleParent.insertBefore(appendedChild, exampleChild2);
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    exampleParent.appendChild(exampleChild1);
+    exampleParent.appendChild(exampleChild2);
+    exampleParent.appendChild(exampleChild3);
+    outputVanilla.appendChild(exampleParent);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -817,5 +867,9 @@ export const vanillaExamples = [
   // 17
   function () {
     addAfter();
+  },
+  // 18
+  function () {
+    addBefore();
   },
 ];

@@ -792,6 +792,59 @@ setTimeout(function(){
   });
 }
 
+//18 ----------------------------------------------------------
+function addBefore() {
+  // Macro
+  macroString = `// Create & add element after
+
+let container = $("#parent");
+let child = $("<div>");
+
+// Creating & adding element after 2 seconds
+setTimeout(function(){
+  container.children().eq(1).before(child);
+}, 2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleParent = $("<div>");
+    exampleParent.addClass("example-parent");
+    exampleParent.text("Parent");
+
+    let exampleChild1 = $("<div>");
+    exampleChild1.addClass("example-child");
+    exampleChild1.text("Child 1");
+
+    let exampleChild2 = $("<div>");
+    exampleChild2.addClass("example-child");
+    exampleChild2.text("Child 2");
+
+    let exampleChild3 = $("<div>");
+    exampleChild3.addClass("example-child");
+    exampleChild3.text("Child 3");
+
+    setTimeout(function () {
+      let appendedChild = exampleChild1.clone();
+      appendedChild.addClass("example-appended-child");
+      appendedChild.text("Inserted before Child 2!");
+      exampleChild2.before(appendedChild);
+      console.log("Done");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    exampleParent.append(exampleChild1);
+    exampleParent.append(exampleChild2);
+    exampleParent.append(exampleChild3);
+    outputJquery.append(exampleParent);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -871,5 +924,9 @@ export const jQueryExamples = [
   // 17
   function () {
     addAfter();
+  },
+  // 18
+  function () {
+    addBefore();
   },
 ];
