@@ -1,3 +1,7 @@
+/* 
+This function returns the text to display on the console mock for each
+list element
+*/
 function jqueryListItems(tag) {
   let line = "----------jQuery-------------------~";
   switch (tag) {
@@ -5,20 +9,20 @@ function jqueryListItems(tag) {
       line += "To get the first parent of a ¿ use ¿.parent()~";
       line += "To get the all the parents of a ¿ use ¿.parents()";
       break;
-    case 1: //Children collection
+    case 1:
       line += "To get all the children of a ¿ use ¿.children()~";
       line += "This method only travels a single level down the DOM tree";
       break;
-    case 2: //Collection by class
+    case 2:
       line += `The class selector is $(".class")~`;
       line +=
         "It returns a collection or a single ¿ depending on what it finds";
       break;
-    case 3: //Element by Id
+    case 3:
       line += `The id selector is $("#id")~`;
       line += `It returns a ¿ with matching id`;
       break;
-    case 4: //Collection by class & attribute
+    case 4:
       line += `To get ¿ with a certain class and attribute the selector is $(".class[attribute='value']")~`;
       line += `If you don't want to filter per value you can use $(".class[attribute]")~`;
       line += `It's also possible tu use the negation on values like $(".class[attribute!='value']")`;
@@ -98,7 +102,6 @@ function jqueryListItems(tag) {
       break;
     case 26:
       line += `To remove a disabled attribute you can use ¿.prop("disabled", false)`;
-      line += ``;
       break;
     case 27:
       line += `The data-src attribute has nothing to do with the data attribute, they just share part of their name~`;
@@ -134,35 +137,29 @@ function jqueryListItems(tag) {
       });`;
       break;
     case 35:
-      line += ``;
-      line += ``;
+      line += `To iterate thru a collection of elements you can use jQueryCollection.each(handler)~`;
+      line += `But if you want to affect a single property like the style you can use jQueryCollection.css("color", "blue") or the property you want to affect`;
       break;
     case 36:
-      line += ``;
-      line += ``;
+      line += `To get the selected elements of a select html element you can use ¿.val() ~`;
+      line += `If there are multiple elements selected it will return an array of the options`;
       break;
     case 37:
-      line += ``;
-      line += ``;
+      line += `To know the value of an input it is as easy as ¿.val()`;
       break;
     case 38:
-      line += ``;
-      line += ``;
-      break;
-    case 39:
-      line += ``;
-      line += ``;
-      break;
-    case 40:
-      line += ``;
-      line += ``;
+      line += `To remove multiple items in a selector it is the same as to remove a single one~`;
+      line += `Just use collection.remove() and it removes all items in the collection`;
       break;
     default:
       break;
   }
   return line;
 }
-
+/* 
+This function injects in DOM the demo for the jquery examples
+depending of the list item
+*/
 function jqueryImplementation(tag) {
   let code, demo;
   const button = $("#test1");
@@ -233,8 +230,6 @@ function jqueryImplementation(tag) {
         $(".mid-opacity[style*='display: none']").css("color", "red");
         button.prop("disabled", true);
       });
-      break;
-    case 5: //No clickable
       break;
     case 6:
       code = `button.on("click", function () {
@@ -385,8 +380,6 @@ function jqueryImplementation(tag) {
         button.prop("disabled", true);
       });
       break;
-    case 15:
-      break;
     case 16:
       code = `$("#child1").remove();`;
       demo = `<div class="mid-boxes" id="parent1">Parent
@@ -397,8 +390,6 @@ function jqueryImplementation(tag) {
         $("#child1").remove();
         button.prop("disabled", true);
       });
-      break;
-    case 17:
       break;
     case 18:
       code = `$("#child1").append($("<p>").text("Appended p element"));`;
@@ -528,30 +519,48 @@ function jqueryImplementation(tag) {
       });
       break; */
     case 35:
-      code = ``;
-      demo = ``;
+      code = `$("#parent1 .brother-boxes").css("background-color", "red");`;
+      demo = `<div class="mid-boxes" id="parent1">Parent
+                    <div class="brother-boxes">Bro</div>
+                    <div class="brother-boxes">Bro</div>
+                    <div class="brother-boxes">Bro</div>
+                  </div>`;
       button.on("click", function () {
+        $("#parent1 .brother-boxes").css("background-color", "red");
         button.prop("disabled", true);
       });
       break;
     case 36:
-      code = ``;
-      demo = ``;
+      code = `$("#carSelected1").text("The selected option is: " + $("#cars1").val());`;
+      demo = `<label for="cars">Choose a car:</label>
+              <select name="cars" id="cars1">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+              <p id="carSelected1"></p>`;
       button.on("click", function () {
-        button.prop("disabled", true);
+        $("#carSelected1").text("The selected option is: " + $("#cars1").val());
       });
       break;
     case 37:
-      code = ``;
-      demo = ``;
+      code = `$("#inputContent1").text("The input contains: " + $("#fname1").val());`;
+      demo = `<label for="fname">First name:</label>
+  <input type="text" id="fname1" name="fname"><br><p id="inputContent1"></p>`;
       button.on("click", function () {
-        button.prop("disabled", true);
+        $("#inputContent1").text("The input contains: " + $("#fname1").val());
       });
       break;
     case 38:
-      code = ``;
-      demo = ``;
+      code = `$("#parent1 .brother-boxes").remove();`;
+      demo = `<div class="mid-boxes" id="parent1">Parent
+                    <div class="brother-boxes">Bro</div>
+                    <div class="brother-boxes">Bro</div>
+                    <div class="brother-boxes">Bro</div>
+                  </div>`;
       button.on("click", function () {
+        $("#parent1 .brother-boxes").remove();
         button.prop("disabled", true);
       });
       break;

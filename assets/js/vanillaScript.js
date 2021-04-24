@@ -1,3 +1,7 @@
+/* 
+This function returns the text to display on the console mock for each
+list element
+*/
 function vanillaListItems(tag) {
   let line = "----------Vanilla JS---------------~";
   switch (tag) {
@@ -123,30 +127,30 @@ function vanillaListItems(tag) {
         });});`;
       break;
     case 35:
-      line += ``;
+      line += `To iterate thru a collection of elements you can use collection.forEach(handler)~`;
+      line += `An alternative is to use a for (element of collection) {element.style.color = "blue"}~¡`;
       break;
     case 36:
-      line += ``;
+      line += `To get the selected elements on a multiple select element it is a little more tedious~`;
+      line += `To get the selected value if it isn't a multiple select you can use ç.value~¡`;
       break;
     case 37:
-      line += ``;
+      line += `To know the value of an input you can do ç.value~¡`;
       break;
     case 38:
-      line += ``;
+      line += `To remove multiple items in a selector you have to iterate thru the collection as in collection.forEach(element => {
+    element.parentNode.remove();
+});~¡`;
       break;
-    case 39:
-      line += ``;
-      break;
-    case 40:
-      line += ``;
-      break;
-
     default:
       break;
   }
   return line;
 }
-
+/* 
+This function injects in DOM the demo for the jquery examples
+depending of the list item
+*/
 function vanillaImplementation(tag) {
   let code, demo;
   const button = document.getElementById("test2");
@@ -231,8 +235,6 @@ function vanillaImplementation(tag) {
           .forEach((element) => (element.style.color = "red"));
         button.disabled = true;
       });
-      break;
-    case 5: //No clickable
       break;
     case 6:
       code = `button.addEventListener("click", function () {
@@ -427,8 +429,6 @@ function vanillaImplementation(tag) {
         button.disabled = true;
       });
       break;
-    case 15:
-      break;
     case 16:
       code = `document.getElementById("child2").remove();`;
       demo = `<div class="mid-boxes" id="parent2">Parent
@@ -439,8 +439,6 @@ function vanillaImplementation(tag) {
         document.getElementById("child2").remove();
         button.disabled = true;
       });
-      break;
-    case 17:
       break;
     case 18:
       code = `let newElem = document.createElement("p");
@@ -585,30 +583,64 @@ function vanillaImplementation(tag) {
       });
       break; */
     case 35:
-      code = ``;
-      demo = ``;
+      code = `document.querySelectorAll("#parent2 .brother-boxes").forEach((element) => {
+          element.style.backgroundColor = "red";
+        });`;
+      demo = `<div class="mid-boxes" id="parent2">Parent
+                    <div class="brother-boxes">Bro</div>
+                    <div class="brother-boxes">Bro</div>
+                    <div class="brother-boxes">Bro</div>
+                  </div>`;
       button.addEventListener("click", function () {
+        document
+          .querySelectorAll("#parent2 .brother-boxes")
+          .forEach((element) => {
+            element.style.backgroundColor = "red";
+          });
         button.disabled = true;
       });
       break;
     case 36:
-      code = ``;
-      demo = ``;
+      code = ` document.getElementById("carSelected2").textContent =
+          "The selected option is: " + document.getElementById("cars2").value;`;
+      demo = `<label for="cars">Choose a car:</label>
+
+<select name="cars" id="cars2">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+<p id="carSelected2"></p>`;
       button.addEventListener("click", function () {
-        button.disabled = true;
+        document.getElementById("carSelected2").textContent =
+          "The selected option is: " + document.getElementById("cars2").value;
       });
       break;
     case 37:
-      code = ``;
-      demo = ``;
+      code = `document.getElementById("inputContent2").textContent =
+          "The input contains: " + document.getElementById("fname2").value;
+      });`;
+      demo = `<label for="fname">First name:</label>
+  <input type="text" id="fname2" name="fname"><br><p id="inputContent2"></p>`;
       button.addEventListener("click", function () {
-        button.disabled = true;
+        document.getElementById("inputContent2").textContent =
+          "The input contains: " + document.getElementById("fname2").value;
       });
       break;
     case 38:
-      code = ``;
-      demo = ``;
+      code = ` document.querySelectorAll("#parent2 .brother-boxes").forEach(element => {element.remove();});`;
+      demo = `<div class="mid-boxes" id="parent2">Parent
+                    <div class="brother-boxes">Bro</div>
+                    <div class="brother-boxes">Bro</div>
+                    <div class="brother-boxes">Bro</div>
+                  </div>`;
       button.addEventListener("click", function () {
+        document
+          .querySelectorAll("#parent2 .brother-boxes")
+          .forEach((element) => {
+            element.remove();
+          });
         button.disabled = true;
       });
       break;
