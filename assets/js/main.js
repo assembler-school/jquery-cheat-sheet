@@ -1,19 +1,25 @@
-const eventFunctions = {
-    hasLoaded: {js: hasLoadedJS, jquery: hasLoadedJQuery}
+const exerciseFunctions = {
+    hasLoaded: {js: hasLoadedJS, jquery: hasLoadedJQuery},
+    hasElementClicked: {js: hasElementClickedJS, jquery: hasElementClickedJQuery},
+    hasElementDoubleClicked: {js: hasElementDoubleClickedJS, jquery: hasElementDoubleClickedJQuery},
+    onKeyPress: {js: onKeyPressJS, jquery: onKeyPressJQuery}
 };
 
 (function initialize() {
-    $(".close").on('click', _ => {
-        hideModal();
-    });
+    $(".close").on('click', hideModal);
 
     window.onclick = (event) => {
         if (event.target === $("#modal")[0]) {
             hideModal();
         }
     };
+    document.onkeyup = e => {
+        if ((e.key === "Escape") && $('.modal').is(":visible")) {
+            hideModal();
+        }
+    };
 
-    $('li a').each((elementIndex, element) => {
+    $('li > a').each((elementIndex, element) => {
         $(element).on("click", openModal);
     });
 
@@ -21,23 +27,49 @@ const eventFunctions = {
         $(e.target.parentElement).prop('disabled', true).siblings().prop('disabled', false);
     });
 }())
-
-
-
-function hideModal() {
-    $("#modal").hide();
-    $('#js-btn').prop('disabled', true);
-    $('#jq-btn').prop('disabled', false);
+function cleanCodebox() {
+    $('#js-codebox').empty();
+    $('#example-codebox').empty();
+    document.removeEventListener("keypress", keypress);
 }
+function hideModal() {
+    cleanCodebox();
+    $("#modal").hide();
+    $('#js-btn').prop('disabled', true).off();
+    $('#jq-btn').prop('disabled', false).off();
+}
+
 function showModal() {
     $("#modal").show();
 }
 
-function openModal(event) {
-    let functionName = event.target.getAttribute('data-functionName');
-    if (functionName && eventFunctions.hasOwnProperty(functionName)) {
-        showModal();
-        eventFunctions[functionName]['js']();
-    }
+function callExerciseFunction(functionName, type) {
+    cleanCodebox();
+    exerciseFunctions[functionName][type]();
+}
 
+function bindButtons(functionName, title) {
+    $('#js-btn').on('click', _ => {
+        if (!$('#js-btn').is('[disabled=""]')) {
+            callExerciseFunction(functionName, 'js');
+            $('.js-header').text('JS Vanilla: ' + title);
+        }
+    });
+    $('#jq-btn').on('click', _ => {
+        if (!$('#jq-btn').is('[disabled=""]')) {
+            callExerciseFunction(functionName, 'jquery');
+            $('.js-header').text('JS + JQuery: ' + title);
+        }
+    });
+}
+
+function openModal(event) {
+    let functionName = $(event.target).data('functionname');
+    if (functionName && exerciseFunctions.hasOwnProperty(functionName)) {
+        showModal();
+        let title = event.target.text;
+        bindButtons(functionName, title);
+        $('.js-header').text('JS Vanilla: ' + title);
+        exerciseFunctions[functionName]['js']();
+    }
 }
