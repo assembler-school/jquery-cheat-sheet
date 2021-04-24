@@ -385,3 +385,10 @@ footer {
   font-weight: var(--medium);
   cursor: pointer;
 }
+
+.example-ul {
+  color: var(--accent-color);
+  font-weight: var(--medium);
+  margin-left: var(--margin);
+  cursor: pointer;
+}

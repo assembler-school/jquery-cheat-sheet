@@ -497,6 +497,70 @@ element.on("click", function(){
     outputJquery.append(exampleParagraph);
   });
 }
+
+//12 ----------------------------------------------------------
+function ulSelection() {
+  // Macro
+  macroString = `// Return li element
+
+let liElements = $("li");
+
+liElements.each(function(){
+  $(this).on("click", function{
+    console.log($(this).get());
+  })
+});`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleUL = $("<ul>");
+    exampleUL.addClass("example-ul");
+
+    let ulItem1 = $("<li>");
+    ulItem1.text("Graham Chapman");
+    let ulItem2 = $("<li>");
+    ulItem2.text("Terry Jones");
+    let ulItem3 = $("<li>");
+    ulItem3.text("Terry Gilliam");
+    let ulItem4 = $("<li>");
+    ulItem4.text("Eric Idle");
+    let ulItem5 = $("<li>");
+    ulItem5.text("John Cleese");
+    let ulItem6 = $("<li>");
+    ulItem6.text("Michael Pallin");
+
+    exampleUL.append(ulItem1);
+    exampleUL.append(ulItem2);
+    exampleUL.append(ulItem3);
+    exampleUL.append(ulItem4);
+    exampleUL.append(ulItem5);
+    exampleUL.append(ulItem6);
+
+    let exampleParagraph = $("<p>");
+
+    function ulSelectionInside() {
+      exampleParagraph.text("\n> " + $(this).prop("outerHTML"));
+      console.log(this);
+    }
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleUL);
+    outputJquery.append(exampleParagraph);
+
+    let liElements = $("li");
+    liElements.each(function () {
+      $(this).on("click", ulSelectionInside);
+      // Removing event listener if example is clicked
+      removeEventJQuery($(this), "click", ulSelectionInside, ".example");
+    });
+  });
+}
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -547,5 +611,9 @@ export const jQueryExamples = [
   // 11
   function () {
     checkBoxOnOff();
+  },
+  // 12
+  function () {
+    ulSelection();
   },
 ];

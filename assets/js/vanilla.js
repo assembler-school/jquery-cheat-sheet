@@ -457,6 +457,68 @@ element.onclick = function(event){
   };
 }
 
+//12 ----------------------------------------------------------
+function ulSelection() {
+  // Macro
+  macroTextVanilla.innerText = `// Return li element
+
+let liElements = document.getElementsByTagName("li");
+
+for (let l of liElements{
+  l.onclick = function(){
+    console.log(this.outerHTML);
+  }
+});`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleUL = document.createElement("ul");
+    exampleUL.classList.add("example-ul");
+
+    let ulItem1 = document.createElement("li");
+    ulItem1.innerText = "Graham Chapman";
+    let ulItem2 = document.createElement("li");
+    ulItem2.innerText = "Terry Jones";
+    let ulItem3 = document.createElement("li");
+    ulItem3.innerText = "Terry Gilliam";
+    let ulItem4 = document.createElement("li");
+    ulItem4.innerText = "Eric Idle";
+    let ulItem5 = document.createElement("li");
+    ulItem5.innerText = "John Clesse";
+    let ulItem6 = document.createElement("li");
+    ulItem6.innerText = "Michael Pallin";
+
+    exampleUL.appendChild(ulItem1);
+    exampleUL.appendChild(ulItem2);
+    exampleUL.appendChild(ulItem3);
+    exampleUL.appendChild(ulItem4);
+    exampleUL.appendChild(ulItem5);
+    exampleUL.appendChild(ulItem6);
+
+    let exampleParagraph = document.createElement("p");
+
+    function ulSelectionInside() {
+      exampleParagraph.innerText = "\n> " + this.outerHTML;
+      console.log(this);
+    }
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleUL);
+    outputVanilla.appendChild(exampleParagraph);
+
+    let liElements = $("li");
+    for (let l of liElements) {
+      l.addEventListener("click", ulSelectionInside);
+      // Removing event listener if example is clicked
+      removeEventVanilla(l, "click", ulSelectionInside, examples);
+    }
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -508,5 +570,9 @@ export const vanillaExamples = [
   // 11
   function () {
     checkBoxOnOff();
+  },
+  // 12
+  function () {
+    ulSelection();
   },
 ];
