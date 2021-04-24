@@ -162,6 +162,7 @@ element.onchange = function(){
     let exampleInput = document.createElement("input");
     exampleInput.classList.add("example-input");
     exampleInput.setAttribute("type", "text");
+    exampleInput.setAttribute("placeholder", "Text goes here");
 
     function changedInputInside(event) {
       event.target.style.color = "var(--accent-color)";
@@ -949,6 +950,36 @@ element.onclick = function(){
   };
 }
 
+//23 ----------------------------------------------------------
+function addedDisable() {
+  // Macro
+  macroTextVanilla.innerText = `// Add disable attribute
+
+setTimeout(function(){
+  element.disabled = true;
+});`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleInput = document.createElement("input");
+    exampleInput.classList.add("example-input");
+    exampleInput.setAttribute("type", "text");
+    exampleInput.setAttribute("placeholder", "Text goes here");
+
+    setTimeout(function () {
+      exampleInput.disabled = true;
+      exampleInput.style.opacity = "50%";
+      exampleInput.setAttribute("placeholder", "Disabled");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleInput);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1049,5 +1080,9 @@ export const vanillaExamples = [
   // 22
   function () {
     toggledClass();
+  },
+  // 23
+  function () {
+    addedDisable();
   },
 ];

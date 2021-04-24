@@ -181,6 +181,7 @@ $("input").change(function(){
     let exampleInput = $("<input>");
     exampleInput.addClass("example-input");
     exampleInput.attr("type", "text");
+    exampleInput.attr("type", "Text goes here");
 
     function changedInputInside(event) {
       $(this).css({
@@ -1016,6 +1017,38 @@ element.on("click", function(){
   });
 }
 
+//23 ----------------------------------------------------------
+function addedDisable() {
+  // Macro
+  macroString = `// Add disable attribute
+
+setTimeout(function(){
+  element.attr("disabled", "true");
+});`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleInput = $("<input>");
+    exampleInput.addClass("example-input");
+    exampleInput.attr("type", "text");
+    exampleInput.attr("placeholder", "Text goes here");
+
+    setTimeout(function () {
+      exampleInput.attr("disabled", "true");
+      exampleInput.css("opacity", "50%");
+      exampleInput.attr("placeholder", "Disabled");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(exampleInput);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1115,5 +1148,9 @@ export const jQueryExamples = [
   // 22
   function () {
     toggledClass();
+  },
+  // 23
+  function () {
+    addedDisable();
   },
 ];
