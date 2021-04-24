@@ -44,7 +44,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  outline: 2px red solid;
+  /* outline: 2px red solid; */
 }
 
 body {
@@ -56,7 +56,8 @@ body {
 }
 
 input,
-button {
+button,
+select {
   outline: none;
 }
 
@@ -347,4 +348,11 @@ footer {
 .example-form {
   display: flex;
   flex-direction: column;
+}
+
+.example-select {
+  width: 70%;
+  font-size: 18px;
+  border: none;
+  padding: 5px 10px;
 }
