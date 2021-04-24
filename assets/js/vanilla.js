@@ -288,6 +288,56 @@ form.onsubmit = function(){
   };
 }
 
+//9 ----------------------------------------------------------
+function selectedOption() {
+  // Macro
+  macroTextVanilla.innerText = `// Selected option
+
+select.onchange = function(){
+  console.log("Movie: " + select.value");
+};`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleSelect = document.createElement("select");
+    exampleSelect.classList.add("example-select");
+
+    let option1 = document.createElement("option");
+    option1.innerText = "The Life of Brian";
+    option1.setAttribute("value", option1.innerText);
+
+    let option2 = document.createElement("option");
+    option2.innerText = "Spamalot";
+    option2.setAttribute("value", option2.innerText);
+
+    let option3 = document.createElement("option");
+    option3.innerText = "The meaning of Life";
+    option3.setAttribute("value", option3.innerText);
+
+    exampleSelect.appendChild(option1);
+    exampleSelect.appendChild(option2);
+    exampleSelect.appendChild(option3);
+
+    let selected = document.createElement("p");
+
+    function selectedOptionInside(event) {
+      console.log("Movie: " + event.target.value);
+      selected.innerText = "\n> Movie: " + event.target.value;
+    }
+
+    exampleSelect.addEventListener("change", selectedOptionInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleSelect, "change", selectedOptionInside, examples);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleSelect);
+    outputVanilla.appendChild(selected);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -327,5 +377,9 @@ export const vanillaExamples = [
   // 8
   function () {
     submittedForm();
+  },
+  // 9
+  function () {
+    selectedOption();
   },
 ];

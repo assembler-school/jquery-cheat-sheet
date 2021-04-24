@@ -320,6 +320,63 @@ $("form").on("submit", function(){
   });
 }
 
+//9 ----------------------------------------------------------
+function selectedOption() {
+  // Macro
+  macroString = `// Selected option
+
+$("select").on("change", function(){
+  console.log("Movie: " + $(this).value");
+});`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleSelect = $("<select>");
+    exampleSelect.addClass("example-select");
+
+    let option1 = $("<option>");
+    option1.text("The Life of Brian");
+    option1.val(option1.text());
+
+    let option2 = $("<option>");
+    option2.text("Spamalot");
+    option2.val(option2.text());
+
+    let option3 = $("<option>");
+    option3.text("The meaning of Life");
+    option3.val(option3.text());
+
+    exampleSelect.append(option1);
+    exampleSelect.append(option2);
+    exampleSelect.append(option3);
+
+    let selected = $("<p>");
+
+    function selectedOptionInside(event) {
+      console.log("Movie: " + event.target.value);
+      selected.text("\n> Movie: " + event.target.value);
+    }
+
+    $(exampleSelect).on("change", selectedOptionInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(
+      exampleSelect,
+      "change",
+      selectedOptionInside,
+      ".example"
+    );
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(exampleSelect);
+    outputJquery.append(selected);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -358,5 +415,9 @@ export const jQueryExamples = [
   // 8
   function () {
     submittedForm();
+  },
+  // 9
+  function () {
+    selectedOption();
   },
 ];
