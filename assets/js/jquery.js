@@ -930,6 +930,47 @@ setTimeout(function(){
   });
 }
 
+//21 ----------------------------------------------------------
+function removedClass() {
+  // Macro
+  macroString = `// Remove class to an html element
+
+setTimeout(function(){
+  element.removeClass("class2");
+  console.log(element.prop("outerHTML");
+}, 2000)`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleElement = $("<div>");
+    exampleElement.addClass("example-element");
+    exampleElement.text("Spam!");
+    exampleElement.css("marginBottom", "var(--margin)");
+
+    let exampleParagraph = $("<p>");
+    exampleParagraph.text("Spam!");
+    exampleParagraph.addClass("class1");
+    exampleParagraph.addClass("class2");
+    exampleParagraph.text("> " + exampleParagraph.prop("outerHTML"));
+
+    setTimeout(function () {
+      exampleParagraph.text("Spam!");
+      exampleParagraph.removeClass("class2");
+      exampleParagraph.text("> " + exampleParagraph.prop("outerHTML"));
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleElement);
+    outputJquery.append(exampleParagraph);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1021,5 +1062,9 @@ export const jQueryExamples = [
   // 20
   function () {
     addedClass();
+  },
+  // 21
+  function () {
+    removedClass();
   },
 ];
