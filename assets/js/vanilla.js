@@ -343,15 +343,15 @@ function mouseOver() {
   // Macro
   macroTextVanilla.innerText = `// Mouse over element
 
-element.on("mouseover", function(){
+element.onmouseover = function(){
   this.text("Mouse over");
-})
+};
 
 // Mouse out element
 
-element.on("mouseout", function(){
+element.onmouseout = function(){
   this.text("Mouse out");
-})`;
+}`;
 
   // Output
   runButton.onclick = function () {
@@ -381,6 +381,79 @@ element.on("mouseout", function(){
       outputVanilla.innerHTML = null;
     }
     outputVanilla.appendChild(exampleButton);
+  };
+}
+
+//11 ----------------------------------------------------------
+function checkBoxOnOff() {
+  // Macro
+  macroTextVanilla.innerText = `// Checked unchecked checkbox
+
+element.onclick = function(event){
+  if (event.target.checked == true){
+    console.log("Welcome to the Ministry of Silly Walks!")
+  } else {
+    console.log("How you dare?")
+  }
+}`;
+
+  // Output
+  runButton.onclick = function () {
+    // Checkbox wrapper
+    let checkboxWrapper = document.createElement("label");
+    checkboxWrapper.classList.add("checkbox");
+
+    // Hidden input + styled span
+    let inputWrapper = document.createElement("span");
+    inputWrapper.classList.add("checkbox-input");
+
+    let exampleInput = document.createElement("input");
+    exampleInput.setAttribute("type", "checkbox");
+    exampleInput.setAttribute("id", "exampleCheck");
+
+    let exampleCheck = document.createElement("span");
+    exampleCheck.classList.add("checkbox-control");
+    exampleCheck.classList.add("example-checkbox");
+
+    inputWrapper.appendChild(exampleInput);
+    inputWrapper.appendChild(exampleCheck);
+
+    let exampleLabel = document.createElement("label");
+    exampleLabel.innerText = "I am a Monty Python fan";
+    exampleLabel.setAttribute("for", "exampleCheck");
+    exampleLabel.classList.add("example-label");
+
+    checkboxWrapper.appendChild(inputWrapper);
+    checkboxWrapper.appendChild(exampleLabel);
+
+    let exampleParagraph = document.createElement("p");
+
+    function checkBoxOnOffInside(event) {
+      if (event.target.checked == true) {
+        exampleParagraph.innerText =
+          "\n> Welcome to the Ministry of Silly Walks!";
+        console.log("I'm a fan");
+      } else {
+        exampleParagraph.innerText = "\n> How you dare?";
+        console.log("I'm not a fan");
+      }
+    }
+
+    inputWrapper.addEventListener("click", checkBoxOnOffInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(
+      inputWrapper,
+      "mouseover",
+      checkBoxOnOffInside,
+      examples
+    );
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(checkboxWrapper);
+    outputVanilla.appendChild(exampleParagraph);
   };
 }
 
@@ -431,5 +504,9 @@ export const vanillaExamples = [
   // 10
   function () {
     mouseOver();
+  },
+  // 11
+  function () {
+    checkBoxOnOff();
   },
 ];

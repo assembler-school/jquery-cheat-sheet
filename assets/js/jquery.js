@@ -395,7 +395,6 @@ element.on("mouseout", function(){
   macroJquery.text(macroString);
 
   // Output
-  // Output
   runButtonJquery.click(function () {
     let exampleButton = $("<div>");
     exampleButton.addClass("example-button");
@@ -427,6 +426,75 @@ element.on("mouseout", function(){
       outputJquery.html(null);
     }
     outputJquery.append(exampleButton);
+  });
+}
+
+//11 ----------------------------------------------------------
+function checkBoxOnOff() {
+  // Macro
+  macroString = `// Checked unchecked checkbox
+
+element.on("click", function(){
+  if ($(this).prop("checked") == true){
+    console.log("Welcome to the Ministry of Silly Walks!")
+  else {
+    console.log("How you dare?")
+  };
+})`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    // Checkbox wrapper
+    let checkboxWrapper = $("<label>");
+    checkboxWrapper.addClass("checkbox");
+
+    // Hidden input + styled span
+    let inputWrapper = $("<span>");
+    inputWrapper.addClass("checkbox-input");
+
+    let exampleInput = $("<input>");
+    exampleInput.attr("type", "checkbox");
+    exampleInput.attr("id", "exampleCheck");
+
+    let exampleCheck = $("<span>");
+    exampleCheck.addClass("checkbox-control");
+    exampleCheck.addClass("example-checkbox");
+
+    inputWrapper.append(exampleInput);
+    inputWrapper.append(exampleCheck);
+
+    let exampleLabel = $("<label>");
+    exampleLabel.text("I am a Monty Python fan");
+    exampleLabel.attr("for", "exampleCheck");
+    exampleLabel.addClass("example-label");
+
+    checkboxWrapper.append(inputWrapper);
+    checkboxWrapper.append(exampleLabel);
+
+    let exampleParagraph = $("<p>");
+
+    function checkBoxOnOffInside(event) {
+      if (event.target.checked == true) {
+        exampleParagraph.text("\n> Welcome to the Ministry of Silly Walks!");
+        console.log("I'm a fan");
+      } else {
+        exampleParagraph.text("\n> How you dare?");
+        console.log("I'm not a fan");
+      }
+    }
+
+    inputWrapper.on("click", checkBoxOnOffInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(inputWrapper, "click", checkBoxOnOffInside, ".example");
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(checkboxWrapper);
+    outputJquery.append(exampleParagraph);
   });
 }
 /* -------------------------------------------------------------------------- */
@@ -475,5 +543,9 @@ export const jQueryExamples = [
   // 10
   function () {
     mouseOver();
+  },
+  // 11
+  function () {
+    checkBoxOnOff();
   },
 ];
