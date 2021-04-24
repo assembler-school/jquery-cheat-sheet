@@ -663,6 +663,7 @@ let container = $("#parent");
 let child = $("<div>");
 
 // Appending the child after 2 seconds
+
 setTimeout(function(){
   container.append(child);
 }, 2000);`;
@@ -684,6 +685,50 @@ setTimeout(function(){
       appendedChild.addClass("example-appended-child");
       appendedChild.text("Appended child!");
       exampleParent.append(appendedChild);
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    exampleParent.append(exampleChild);
+    outputJquery.append(exampleParent);
+  });
+}
+
+//16 ----------------------------------------------------------
+function prependElement() {
+  // Macro
+  macroString = `// Prepend an html element
+
+let container = $("#parent");
+let child = $("<div>");
+
+// Prepending the child after 2 seconds
+
+setTimeout(function(){
+  container.prepend(child);
+}, 2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleParent = $("<div>");
+    exampleParent.addClass("example-parent");
+    exampleParent.text("Parent");
+
+    let exampleChild = $("<div>");
+    exampleChild.addClass("example-child");
+    exampleChild.text("Child");
+
+    setTimeout(function () {
+      let appendedChild = exampleChild.clone();
+      appendedChild.addClass("example-appended-child");
+      appendedChild.text("Prepended child!");
+      appendedChild.insertBefore(exampleChild);
+      console.log("Done");
     }, 2000);
 
     // Resetting output if it's filled
@@ -767,5 +812,9 @@ export const jQueryExamples = [
   // 15
   function () {
     appendElement();
+  },
+  // 16
+  function () {
+    prependElement();
   },
 ];

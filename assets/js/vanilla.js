@@ -616,6 +616,7 @@ let container = document.getElementById("#parent");
 let child = document.createElement("div");
 
 // Appending the child after 2 seconds
+
 setTimeout(function(){
   container.appendChild(child);
 }, 2000);`;
@@ -635,6 +636,47 @@ setTimeout(function(){
       appendedChild.classList.add("example-appended-child");
       appendedChild.innerText = "Appended child!";
       exampleParent.appendChild(appendedChild);
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    exampleParent.appendChild(exampleChild);
+    outputVanilla.appendChild(exampleParent);
+  };
+}
+
+//16 ----------------------------------------------------------
+function prependElement() {
+  // Macro
+  macroTextVanilla.innerText = `// Prepend an html element
+
+let container = document.getElementById("#parent");
+let child = document.createElement("div");
+
+// Prepending the child after 2 seconds
+
+setTimeout(function(){
+  container.insertBefore(child, container.firstChild);
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleParent = document.createElement("div");
+    exampleParent.setAttribute("class", "example-parent");
+    exampleParent.innerText = "Parent";
+
+    let exampleChild = document.createElement("div");
+    exampleChild.classList.add("example-child");
+    exampleChild.innerText = "Child";
+
+    setTimeout(function () {
+      let appendedChild = exampleChild.cloneNode(true);
+      appendedChild.classList.add("example-appended-child");
+      appendedChild.innerText = "Prepended child!";
+      exampleParent.insertBefore(appendedChild, exampleParent.childNodes[1]);
     }, 2000);
 
     // Resetting output if it's filled
@@ -719,5 +761,9 @@ export const vanillaExamples = [
   // 15
   function () {
     appendElement();
+  },
+  // 16
+  function () {
+    prependElement();
   },
 ];
