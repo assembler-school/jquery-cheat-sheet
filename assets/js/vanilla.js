@@ -932,6 +932,7 @@ element.onclick = function(){
       exampleParagraph.classList.toggle("toggledClass");
       exampleParagraph.innerText = "Toggle class";
       exampleParagraph.innerText = "> " + exampleParagraph.outerHTML;
+      console.log("Toggled class");
     }
 
     exampleButton.addEventListener("click", toggledClassInside);
