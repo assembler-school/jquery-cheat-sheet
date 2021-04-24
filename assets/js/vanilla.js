@@ -787,6 +787,48 @@ setTimeout(function(){
   };
 }
 
+//19 ----------------------------------------------------------
+function cloneWithin() {
+  // Macro
+  macroTextVanilla.innerText = `// Clone element within html element
+
+let container1 = document.createElement("#parent1");
+let container2 = document.createElement("#parent2");
+
+// Cloning the child after 2 seconds
+setTimeout(function(){
+  let container3 = container2.cloneNode(true);
+  container1.appendChild(container3);
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleParent1 = document.createElement("div");
+    exampleParent1.setAttribute("class", "example-parent");
+    exampleParent1.innerText = "Parent";
+
+    let exampleParent2 = document.createElement("div");
+    exampleParent2.classList.add("example-appended-child");
+    exampleParent2.style.padding = "calc(var(--margin) / 2)";
+    exampleParent2.style.marginTop = "var(--margin)";
+    exampleParent2.innerText = "Element to clone";
+
+    setTimeout(function () {
+      let clonedChild = exampleParent2.cloneNode(true);
+      clonedChild.classList.add("example-appended-child");
+      exampleParent1.appendChild(clonedChild);
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleParent1);
+    outputVanilla.appendChild(exampleParent2);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -871,5 +913,9 @@ export const vanillaExamples = [
   // 18
   function () {
     addBefore();
+  },
+  // 19
+  function () {
+    cloneWithin();
   },
 ];

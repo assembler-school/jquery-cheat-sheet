@@ -845,6 +845,52 @@ setTimeout(function(){
   });
 }
 
+//19 ----------------------------------------------------------
+function cloneWithin() {
+  // Macro
+  macroString = `// Clone element within html element
+
+let container1 = $("#parent1");
+let container2 = $("#parent2");
+
+// Cloning the element after 2 seconds
+setTimeout(function(){
+  let container3 = container2.clone()
+  container3.appendTo(container1);
+}, 2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleParent1 = $("<div>");
+    exampleParent1.addClass("example-parent");
+    exampleParent1.text("Parent");
+
+    let exampleParent2 = $("<div>");
+    exampleParent2.addClass("example-appended-child");
+    exampleParent2.css({
+      padding: "calc(var(--margin) / 2)",
+      "margin-top": "var(--margin)",
+    });
+    exampleParent2.text("Element to clone");
+
+    setTimeout(function () {
+      let clonedChild = exampleParent2.clone();
+      clonedChild.addClass("example-appended-child");
+      clonedChild.appendTo(exampleParent1);
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleParent1);
+    outputJquery.append(exampleParent2);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -928,5 +974,9 @@ export const jQueryExamples = [
   // 18
   function () {
     addBefore();
+  },
+  // 19
+  function () {
+    cloneWithin();
   },
 ];
