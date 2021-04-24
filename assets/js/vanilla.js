@@ -338,6 +338,52 @@ select.onchange = function(){
   };
 }
 
+//10 ----------------------------------------------------------
+function mouseOver() {
+  // Macro
+  macroTextVanilla.innerText = `// Mouse over element
+
+element.on("mouseover", function(){
+  this.text("Mouse over");
+})
+
+// Mouse out element
+
+element.on("mouseout", function(){
+  this.text("Mouse out");
+})`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleButton = document.createElement("div");
+    exampleButton.setAttribute("class", "example-button");
+    exampleButton.innerText = "Mouse out";
+    exampleButton.style.cursor = "auto";
+
+    function mouseOverInside() {
+      this.innerText = "Mouse over";
+    }
+
+    function mouseOverInsideOut() {
+      this.innerText = "Mouse out";
+    }
+
+    exampleButton.addEventListener("mouseover", mouseOverInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleButton, "mouseover", mouseOverInside, examples);
+
+    exampleButton.addEventListener("mouseout", mouseOverInsideOut);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleButton, "mouseout", mouseOverInsideOut, examples);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleButton);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -381,5 +427,9 @@ export const vanillaExamples = [
   // 9
   function () {
     selectedOption();
+  },
+  // 10
+  function () {
+    mouseOver();
   },
 ];

@@ -377,6 +377,58 @@ $("select").on("change", function(){
   });
 }
 
+//10 ----------------------------------------------------------
+function mouseOver() {
+  // Macro
+  macroString = `// Mouse over element
+
+element.on("mouseover", function(){
+  $(this).text("Mouse over");
+})
+
+// Mouse out element
+
+element.on("mouseout", function(){
+  $(this).text("Mouse out");
+})`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  // Output
+  runButtonJquery.click(function () {
+    let exampleButton = $("<div>");
+    exampleButton.addClass("example-button");
+    exampleButton.text("Mouse out");
+
+    function mouseOverInside() {
+      $(this).text("Mouse over");
+    }
+
+    function mouseOverInsideOut() {
+      $(this).text("Mouse out");
+    }
+
+    exampleButton.on("mouseover", mouseOverInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(exampleButton, "mouseover", mouseOverInside, ".example");
+
+    exampleButton.on("mouseout", mouseOverInsideOut);
+    // Removing event listener if example is clicked
+    removeEventJQuery(
+      exampleButton,
+      "mouseout",
+      mouseOverInsideOut,
+      ".example"
+    );
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(exampleButton);
+  });
+}
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -419,5 +471,9 @@ export const jQueryExamples = [
   // 9
   function () {
     selectedOption();
+  },
+  // 10
+  function () {
+    mouseOver();
   },
 ];
