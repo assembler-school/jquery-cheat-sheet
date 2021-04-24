@@ -3,6 +3,8 @@ let itemList = document.querySelectorAll("li");
 let vanillaButton = document.getElementById("jsVanilla");
 let jqueryButton = document.getElementById("jQuery");
 let clearButton = document.getElementById("clear");
+let outputButton = document.getElementById("output");
+
 
 
 //Cogemos todos los elementos li
@@ -13,10 +15,11 @@ itemList.forEach(function(myli) {
     myli.addEventListener("mouseover", insertDataDescription);
     myli.addEventListener("mouseout", clearDataDescription);
     myli.addEventListener("click", selectDesiredFunction);
-    clearButton.addEventListener("click", clearDesiredFunction);
-
-
 });
+//Buttons - events
+clearButton.addEventListener("click", clearDesiredFunction);
+vanillaButton.addEventListener("click", vanillaSelected);
+// //a.addEventListener("mouseout", clearVanillaSelected);
 
 //Insertamos los datos en descripción, del li target
 function insertDataDescription(event) {
@@ -59,9 +62,7 @@ function clearDesiredFunction(event) {
     selectedFunction.remove();
 }
 
-//Boton JS Vanilla
-vanillaButton.addEventListener("click", vanillaSelected);
-// //a.addEventListener("mouseout", clearVanillaSelected);
+
 
 function vanillaSelected(event) {
 

@@ -38,10 +38,10 @@
         
         @-webkit-keyframes glow {
             from {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3013d6, 0 0 40px #3013d6, 0 0 50px #3013d6, 0 0 60px #3013d6, 0 0 70px #3013d6;
             }
             to {
-                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+                text-shadow: 0 0 20px #fff, 0 0 30px #4dff5cb2, 0 0 40px #4dff5cb2, 0 0 50px #4dff5cb2, 0 0 60px #4dff5cb2, 0 0 70px #4dff5cb2, 0 0 80px #4dff5cb2;
             }
         }
         
@@ -72,7 +72,7 @@
             margin: 0;
             height: 100vh;
             /* Background-gradient */
-            background: linear-gradient(134deg, #d21717, #ffaa00, #e1e870, #0fa114, #0006ff, #6519bf, #bb12bd);
+            background: linear-gradient(134deg, #000000, #2b2a29, #0b3b0b, #0fa114, #54c421, #28b40c4f, #5bd4143d);
             background-size: 1400% 1400%;
             -webkit-animation: AnimationName 30s ease infinite;
             -moz-animation: AnimationName 30s ease infinite;
@@ -160,8 +160,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            background-color: var(--background-div);
-            width: 60%;
+            background-color: rgb(0, 0, 0);
+            width: 70%;
             height: 70%;
             margin-left: 2%;
             margin-right: 4%;
@@ -175,10 +175,9 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            background: rgb(255, 255, 255);
-            color: black;
+            color: rgb(29, 179, 79);
             width: 90%;
-            height: 20%;
+            height: 21%;
             border: 2px solid var(--background-buttons);
             border-radius: 10px;
             margin-top: 5%;
@@ -189,12 +188,11 @@
         /* CSS - Button */
         
         .button-class {
-            height: 4rem;
-            width: 4rem;
+            height: 2rem;
+            width: 2rem;
             text-decoration: none;
-            color: rgba(255, 255, 255, 0.8);
-            background: rgb(145, 92, 182);
-            border-radius: 4px;
+            background: rgb(0, 0, 0);
+            border-radius: 200px;
             font-weight: normal;
             text-transform: uppercase;
             transition: all 0.2s ease-in-out;
@@ -211,7 +209,7 @@
             font-size: small;
             list-style-type: none;
             text-align: center;
-            color: black;
+            color: rgb(46, 43, 190);
         }
         
         .description-text:hover {
@@ -222,12 +220,12 @@
             font-size: small;
             list-style-type: none;
             text-align: center;
-            color: black;
+            color: rgb(46, 43, 190);
         }
         
         .code-text {
             font-size: small;
             list-style-type: none;
             text-align: center;
-            color: black;
+            color: rgb(46, 43, 190);
         }
