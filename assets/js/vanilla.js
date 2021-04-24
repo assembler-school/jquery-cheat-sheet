@@ -906,6 +906,48 @@ setTimeout(function(){
   };
 }
 
+//22 ----------------------------------------------------------
+function toggledClass() {
+  // Macro
+  macroTextVanilla.innerText = `// Toggle class to an html element
+
+element.onclick = function(){
+  this.classList.toggle("toggledClass");
+  console.log("Toggled class");
+};`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleButton = document.createElement("div");
+    exampleButton.setAttribute("class", "example-button");
+    exampleButton.innerText = "Toggle class";
+    exampleButton.style.marginBottom = "var(--margin)";
+
+    let exampleParagraph = document.createElement("div");
+    exampleParagraph.innerText = "Toggle class";
+    exampleParagraph.classList.add("class1");
+    exampleParagraph.innerText = "> " + exampleParagraph.outerHTML;
+
+    function toggledClassInside() {
+      exampleParagraph.classList.toggle("toggledClass");
+      exampleParagraph.innerText = "Toggle class";
+      exampleParagraph.innerText = "> " + exampleParagraph.outerHTML;
+    }
+
+    exampleButton.addEventListener("click", toggledClassInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleButton, "click", toggledClassInside, examples);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleButton);
+    outputVanilla.appendChild(exampleParagraph);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1002,5 +1044,9 @@ export const vanillaExamples = [
   // 21
   function () {
     removedClass();
+  },
+  // 22
+  function () {
+    toggledClass();
   },
 ];

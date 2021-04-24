@@ -971,6 +971,51 @@ setTimeout(function(){
   });
 }
 
+//22 ----------------------------------------------------------
+function toggledClass() {
+  // Macro
+  macroString = `// Toggle class to an html element
+
+element.on("click", function(){
+  this.toggleClass("toggledClass");
+  console.log("Toggled class");
+});`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleButton = $("<div>");
+    exampleButton.addClass("example-button");
+    exampleButton.text("Toggle class");
+    exampleButton.css("marginBottom", "var(--margin)");
+
+    let exampleParagraph = $("<div>");
+    exampleParagraph.text("Toggle class");
+    exampleParagraph.addClass("class1");
+    exampleParagraph.text("> " + exampleParagraph.prop("outerHTML"));
+
+    function toggledClassInside() {
+      exampleParagraph.toggleClass("toggledClass");
+      exampleParagraph.text("Toggle class");
+      exampleParagraph.text("> " + exampleParagraph.prop("outerHTML"));
+      console.log("Toggled class");
+    }
+
+    exampleButton.on("click", toggledClassInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(exampleButton, "click", toggledClassInside, ".example");
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleButton);
+    outputJquery.append(exampleParagraph);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1066,5 +1111,9 @@ export const jQueryExamples = [
   // 21
   function () {
     removedClass();
+  },
+  // 22
+  function () {
+    toggledClass();
   },
 ];
