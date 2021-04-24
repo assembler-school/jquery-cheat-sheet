@@ -70,6 +70,8 @@ eventData.forEach((dataItem, index) => {
       codeBoxes[0].setAttribute("id", `jsEvent${index}`);
       codeBoxes[1].setAttribute("id", `jQueryEvent${index}`);
     });
+    jsDisplay(index);
+    jQueryDisplay(index);
   };
 });
 

@@ -118,3 +118,49 @@ export const jQueryFuncData = [
   '$("a").first().attr("href", "https://www.google.es/");',
   'alert("Hello," + $("input:text").first().val());',
 ];
+
+export const jsEventData = [
+  "js",
+  `document.querySelector("#myDiv h2").style.backgroundColor = "yellow";
+  document.querySelector("#myDiv h2").innerHTML = "clicked";`,
+  `document.querySelector("#myDiv .circle")
+  .addEventListener("dblclick", function() {
+    document.querySelector("#myDiv .circle").style.backgroundColor = "yellow";
+  })`,
+  `document.getElementById("target")
+  .addEventListener('keypress', function() {
+    alert('You pressed a key');   
+  });`,
+  `document.querySelector("#myDiv .circle")
+  .addEventListener("mousemove", function(event){
+    if(document.querySelector("#myDiv .circle").offsetWidth <= 500 ) {
+        $( this ).css({width: "+=20", height: "+=20"}) 
+    } 
+});`,
+`document.querySelector("#myDiv h1")
+.addEventListener("mouseout", function() {
+  document.querySelector("#myDiv h1").style.backgroundColor = "pink"
+})`
+]
+
+export const jQueryEventData = [
+  ` $(document).ready(function() {
+    $("#loadedDiv h2").css("color", "green").text("Loaded");
+});`,
+`$("#myDiv h2").css("background-color", "yellow").text("clicked");`,
+`$("#myDiv .circle").dblclick(function () {
+      $("#myDiv .circle").css("background-color", "yellow");
+});`,
+`$("#target").keypress(function(event){
+  alert('You pressed a key');    
+});`,
+`$("#myDiv .circle")
+.mousemove(function(event){
+  if($( this ).width() <= 500 ) {
+      $( this ).css({width: "+=20", height: "+=20"}) 
+  } 
+});`,
+` $("#myDiv h1").mouseout(function(event) {
+  $(this).css("background-color", "pink");
+});`,
+]

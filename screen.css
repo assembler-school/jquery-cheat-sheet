@@ -33,6 +33,15 @@ a:visited {
 }
 
 
+#myDiv .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: aqua;
+    text-align: center;
+    margin: auto;
+}
+
 input {
     height: 30px;
     width: 150px;
