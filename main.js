@@ -16,6 +16,7 @@ itemList.forEach(function(myli) {
     myli.addEventListener("mouseout", clearDataDescription);
     myli.addEventListener("click", selectDesiredFunction);
 });
+
 //Buttons - events
 clearButton.addEventListener("click", clearDesiredFunction);
 vanillaButton.addEventListener("click", vanillaSelected);
@@ -49,7 +50,7 @@ function selectDesiredFunction() {
 
     let functionList = document.querySelector(".code-class");
     if (selectedItemList !== false) {
-        functionList.insertAdjacentHTML('beforeend', '<li class=code-text>' + `${textSelectedItemList}` + '</li>');
+        functionList.insertAdjacentHTML('beforeend', '<li class=code-text id=vanillajs>' + `${textSelectedItemList}` + '</li>');
     } else {
         console.warning("Se ha encontrado un error al intentar guardar el item seleccionado")
     }
