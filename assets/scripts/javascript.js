@@ -245,3 +245,44 @@ document.querySelector(".ex31js_btn").addEventListener("click", function () {
   document.getElementById("ex31js").style.transition = "opacity 5s";
   document.getElementById("ex31js").style.opacity = "0";
 });
+
+// Iterate a collection of elements and apply a change of style on them
+document.querySelector(".ex32js_btn").addEventListener("click", function () {
+  document.querySelectorAll("#ex32js li").forEach((li) => {
+    li.style.fontStyle = "italic";
+  });
+});
+
+// Get the parent element of a certain element and change its font weight
+document.querySelector(".ex33js_btn").addEventListener("click", function () {
+  let parent33 = document.querySelector(".ex33js_btn").parentNode;
+  parent33.style.fontWeight = "bold";
+});
+
+// Get the collection of children of a certain element and change its font weight
+document.querySelector(".ex34js_btn").addEventListener("click", function () {
+  document.querySelectorAll("#ex34js li").forEach((li) => {
+    li.style.fontWeight = "normal";
+  });
+});
+
+// Get all the elements that have a certain class and change their font weight
+document.querySelector(".ex35js_btn").addEventListener("click", function () {
+  document.querySelectorAll(".special35js").forEach((special) => {
+    special.style.fontWeight = "bold";
+  });
+});
+
+// Get an item by id and change its font weight
+document.querySelector(".ex36js_btn").addEventListener("click", function () {
+  document.getElementById("impostor36js").style.fontWeight = "bold";
+});
+
+// Get all the elements that have a certain class and the display property of none and change their font color
+document.querySelector(".ex37js_btn").addEventListener("click", function () {
+  document
+    .querySelector(".ninja37js[style='display: none;']")
+    .forEach((hidden) => {
+      hidden.style.color = "blue";
+    });
+});

@@ -1096,17 +1096,41 @@
                   <div class="article__content article__content--hidden">
                   <div class="article__language article__language--jquery">jQuery</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      $("#ex32jq li").each(function (index, element) {<br>
+                        &nbsp;&nbsp;$(element).css("font-weight", "bold");
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <button class="ex32jq_btn">Get bold!</button>
+                    <ul id="ex32jq" class="top20">
+                      <li>Pike</li>
+                      <li>Chekov</li>
+                      <li>Uhura</li>
+                      <li>Tiberius</li>
+                    </ul>
+                  </div>
                   <div class="article__language article__language--javascript">JavaScript</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                        document.querySelectorAll("#ex32js li").forEach((li) => {<br>
+                          &nbsp;&nbsp;li.style.fontStyle = "italic";<br>
+                        });
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <button class="ex32js_btn">Get dizzy!</button>
+                    <ul id="ex32js" class="top20">
+                      <li>Dunham</li>
+                      <li>Bishop</li>
+                      <li>Broyles</li>
+                      <li>Farnsworth</li>
+                    </ul>
+                  </div>
                 </div>
               </article>
             </li>
+
             <li>
               <article>
                 <div class="article__title">
@@ -1115,17 +1139,33 @@
                   <div class="article__content article__content--hidden">
                   <div class="article__language article__language--jquery">jQuery</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      $(".ex33jq_btn").parent().css("font-weight", "bold");
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <div>
+                      I'm the parent
+                    <button class="ex33jq_btn top20">And I'm the son</button>
+                    </div>
+                  </div>
                   <div class="article__language article__language--javascript">JavaScript</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      let parent33 = document.querySelector(".ex32js_btn").parentNode;<br>
+                      parent33.style.fontWeight = "bold";
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <div>
+                      Don't be annoying!
+                    <button class="ex33js_btn top20">I can't promise that...</button>
+                    </div>
+                  </div>
                 </div>
               </article>
             </li>
+
             <li>
               <article>
                 <div class="article__title">
@@ -1134,17 +1174,40 @@
                   <div class="article__content article__content--hidden">
                   <div class="article__language article__language--jquery">jQuery</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      $(".ex34 li").css("font-weight", "bold");
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <button class="ex34jq_btn">Listen me!</button>
+                    <ul id="ex34jq" class="top20">
+                      <li>Finn</li>
+                      <li>Jake</li>
+                      <li>Marceline</li>
+                      <li>Lumpy</li>
+                    </ul>
+                  </div>
                   <div class="article__language article__language--javascript">JavaScript</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      document.querySelectorAll("#ex34js li").forEach((li) => {<br>
+                        &nbsp;&nbsp;li.style.fontWeight = "normal";<br>
+                      });
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <button class="ex34js_btn">Ok, I'm done</button>
+                    <ul id="ex34js" class="top20">
+                      <li>Fionna</li>
+                      <li>Cake</li>
+                      <li>Marshall</li>
+                      <li>Lumpy</li>
+                    </ul>
+                  </div>
                 </div>
               </article>
             </li>
+
             <li>
               <article>
                 <div class="article__title">
@@ -1153,17 +1216,40 @@
                   <div class="article__content article__content--hidden">
                   <div class="article__language article__language--jquery">jQuery</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      $(".special35jq").css("font-weight", "bold");
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <button class="ex35jq_btn">Who wants to be special?</button>
+                    <ul id="ex35jq" class="top20">
+                      <li class="special35jq">Meh</li>
+                      <li>I want!</li>
+                      <li class="special35jq">Not for a moment...</li>
+                      <li>I'm already special!!!</li>
+                    </ul>
+                  </div>
                   <div class="article__language article__language--javascript">JavaScript</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      document.querySelectorAll(".special35js").forEach((special) => {<br>
+                        &nbsp;&nbsp;special.style.fontWeight = "bold";<br>
+                      });
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <button class="ex35js_btn">Let's get the even numbers</button>
+                    <ul id="ex35js" class="top20">
+                      <li>1</li>
+                      <li class="special35js">2</li>
+                      <li>3</li>
+                      <li class="special35js">4</li>
+                    </ul>
+                  </div>
                 </div>
               </article>
             </li>
+
             <li>
               <article>
                 <div class="article__title">
@@ -1172,17 +1258,36 @@
                   <div class="article__content article__content--hidden">
                   <div class="article__language article__language--jquery">jQuery</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      $("#impostor36jq").css("font-weight", "bold");
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <button class="ex36jq_btn">Who is the impostor?</button>
+                    <ul class="top20">
+                      <li>Red</li>
+                      <li>Blue</li>
+                      <li id="impostor36jq">Green</li>
+                    </ul>
+                  </div>
                   <div class="article__language article__language--javascript">JavaScript</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      document.getElementById("impostor36js").style.fontWeight = "bold";
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <button class="ex36js_btn">And now?</button>
+                    <ul class="top20">
+                      <li id="impostor36js">Red</li>
+                      <li>Blue</li>
+                      <li>Green</li>
+                    </ul>
+                  </div>
                 </div>
               </article>
             </li>
+
             <li>
               <article>
                 <div class="article__title">
@@ -1191,14 +1296,40 @@
                   <div class="article__content article__content--hidden">
                   <div class="article__language article__language--jquery">jQuery</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      $(".ninja37jq[style='display: none;']").css("color", "red");
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <button class="ex37jq_btn">Change it!</button>
+                    <ul class="top20">
+                      <li>There are among us...</li>
+                      <li class="ninja37jq" style="display: none;">I'm here!</li>
+                      <li>But we can't see them!</li>
+                      <li class="ninja37jq">Can't you see me?</li>
+                      <li class="ninja37jq" style="display: none;">Hehehe</li>
+                      <li>Oh no!</li>
+                    </ul>
+                  </div>
                   <div class="article__language article__language--javascript">JavaScript</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      .querySelector(".ninja37js[style='display: none;']").forEach((hidden) => {<br>
+                        &nbsp;&nbsp;hidden.style.color = "blue";<br>
+                      });
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <button class="ex37js_btn">Now blue</button>
+                    <ul class="top20">
+                      <li class="ninja37js" style="display: none;">Some of us are invisible</li>
+                      <li>More of them!</li>
+                      <li>But I can see some of them</li>
+                      <li class="ninja37js">But not all of us</li>
+                      <li>I don't understand...</li>
+                      <li class="ninja37js" style="display: none;">I'm invisible</li>
+                    </ul>
+                  </div>
                 </div>
               </article>
             </li>

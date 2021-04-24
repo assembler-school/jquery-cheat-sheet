@@ -243,3 +243,7 @@ section {
 .ex29js--display {
   display: none;
 }
+
+#ex34js {
+  font-weight: bold;
+}

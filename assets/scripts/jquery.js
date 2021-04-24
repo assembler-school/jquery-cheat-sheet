@@ -204,3 +204,35 @@ $(".ex30jq_btn").on("click", function () {
 $(".ex31jq_btn").on("click", function () {
   $("#ex31jq").fadeOut(2000);
 });
+
+// Iterate a collection of elements and apply a change of style on them
+$(".ex32jq_btn").on("click", function () {
+  $("#ex32jq li").each(function (index, element) {
+    $(element).css("font-weight", "bold");
+  });
+});
+
+// Get the parent element of a certain element and change its font weight
+$(".ex33jq_btn").on("click", function () {
+  $(".ex33jq_btn").parent().css("font-weight", "bold");
+});
+
+// Get the collection of children of a certain element and change its font weight
+$(".ex34jq_btn").on("click", function () {
+  $("#ex34jq li").css("font-weight", "bold");
+});
+
+// Get all the elements that have a certain class and change their font weight
+$(".ex35jq_btn").on("click", function () {
+  $(".special35jq").css("font-weight", "bold");
+});
+
+// Get an item by id and change its font weight
+$(".ex36jq_btn").on("click", function () {
+  $("#impostor36jq").css("font-weight", "bold");
+});
+
+// Get all the elements that have a certain class and the display property of none and change their font color
+$(".ex37jq_btn").on("click", function () {
+  $(".ninja37jq[style='display: none;']").css("color", "red");
+});
