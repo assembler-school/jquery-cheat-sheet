@@ -277,6 +277,49 @@ $("img").on("error", function(){
   });
 }
 
+//8 ----------------------------------------------------------
+function submittedForm() {
+  // Macro
+  macroString = `// Submitted form
+
+$("form").on("submit", function(){
+  console.log("Submitted form!")
+});`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleForm = $("<form>");
+    exampleForm.addClass("example-form");
+    let exampleInput = $("<input>");
+    exampleInput.addClass("example-input");
+    exampleInput.attr("placeholder", "Text goes here");
+    exampleInput.attr("required", "true");
+    let exampleSubmit = $("<input>");
+    exampleSubmit.addClass("example-submit");
+    exampleSubmit.attr("type", "submit");
+    exampleSubmit.text("Submit jquery!");
+
+    exampleForm.append(exampleInput);
+    exampleForm.append(exampleSubmit);
+
+    function submittedFormInside() {
+      console.log("Submitted form!");
+    }
+
+    $(exampleForm).on("submit", submittedFormInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(exampleForm, "submit", submittedFormInside, ".example");
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(exampleForm);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -311,5 +354,9 @@ export const jQueryExamples = [
   // 7
   function () {
     errorImage();
+  },
+  // 8
+  function () {
+    submittedForm();
   },
 ];

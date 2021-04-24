@@ -250,10 +250,10 @@ image.error = function(){
 //8 ----------------------------------------------------------
 function submittedForm() {
   // Macro
-  macroTextVanilla.innerText = `// Not loaded image
+  macroTextVanilla.innerText = `// Submitted form
 
-image.error = function(){
-  console.log("Image not loaded!");
+form.onsubmit = function(){
+  console.log("Submitted form!");
 };`;
 
   // Output
@@ -262,6 +262,7 @@ image.error = function(){
     exampleForm.classList.add("example-form");
     let exampleInput = document.createElement("input");
     exampleInput.classList.add("example-input");
+    exampleInput.setAttribute("placeholder", "Text goes here");
     exampleInput.required = true;
     let exampleSubmit = document.createElement("input");
     exampleSubmit.classList.add("example-submit");
@@ -284,7 +285,6 @@ image.error = function(){
       outputVanilla.innerHTML = null;
     }
     outputVanilla.appendChild(exampleForm);
-    // outputVanilla.innerHTML += "\n\n> Image not loaded!";
   };
 }
 
