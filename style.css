@@ -10,10 +10,15 @@ body {
   display: flex;
   background-color: rgb(16, 16, 16);
   flex-direction: column;
+  opacity: 0;
 }
 
 main {
   display: flex;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -97,11 +102,35 @@ button:active {
   outline: none;
 }
 
-img {
+#closeButton img {
   transition: all 0.2s ease-in-out;
 }
-img:hover {
+#closeButton img:hover {
   transform: scale(1.2);
+}
+
+#jsButton img {
+  transition: all 0.2s ease-in-out;
+}
+
+#jsButton img:hover {
+  transform: scale(1.2);
+  margin-right: 20px;
+}
+
+#jqButton img {
+  transition: all 0.2s ease-in-out;
+}
+
+#jqButton img:hover {
+  transform: scale(1.2);
+  margin-right: 20px;
+}
+
+
+#rightModalContent img{
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #listFunctions {
@@ -122,20 +151,11 @@ img:hover {
   overflow-y: scroll;
 }
 
-#divEventFunctions {
+.listContainer {
   width: 33%;
   padding: 2% 2% 0% 2%;
 }
 
-#divListFunctions {
-  width: 33%;
-  padding: 2% 2% 0% 2%;
-}
-
-#divSelectFunctions {
-  width: 33%;
-  padding: 2% 2% 0% 2%;
-}
 
 ul {
   padding: 0% 4% 4% 4%;
@@ -158,7 +178,7 @@ ul {
   border-radius: 10px;
 }
 
-li {
+.listContainer li {
   color: white;
   margin-top: 3%;
   list-style: none;
@@ -171,7 +191,7 @@ li {
   background-color: rgb(0, 94, 255);
 }
 
-li:hover {
+.listContainer li:hover {
   transform: scale(1.05);
   font-weight: 800;
   box-shadow: 0 0 0pt 02pt rgb(255, 255, 255);
@@ -213,8 +233,10 @@ li:hover {
   width: 50%;
   background-color: rgb(245, 245, 245);
   margin: 10px;
+  word-wrap: break-word;
   height: 300px;
   align-items: center;
+  text-align: center;
   border-radius: 10px;
 }
 
@@ -252,10 +274,6 @@ li:hover {
   margin-top: 10px;
 }
 
-.collapsible img:hover {
-  margin-right: 20px;
-}
-
 .active,
 .collapsible:hover {
   background-color: rgb(0, 94, 255);
@@ -285,7 +303,7 @@ li:hover {
     align-items: center;
     display: flex;
     font-weight: bold;
-    padding-top: 25%;
+    padding: 10%;
     flex-direction: column;
     justify-content: space-between;
     font-family: "Montserrat", sans-serif;
@@ -324,4 +342,27 @@ select {
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.10);;
+}
+
+.newClass {
+  color: rgb(0, 94, 255);
+}
+
+#runID button {
+  padding: 20px 40px 20px 40px;
+  box-shadow: 0px 0px 15px 1px rgb(0 0 0 / 10%);
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#runID button:hover:enabled {
+  background-color: rgb(0, 94, 255);
+  color: white;
+}
+
+.generated {
+  list-style: circle;
+  background-color: rgb(245, 245, 245);
+  color: black;
 }

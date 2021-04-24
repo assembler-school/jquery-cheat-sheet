@@ -51,7 +51,157 @@ function jsAlertInput() {
 function jsRemoveOption() {
     var selectBox = document.getElementById('selectOptions');
     var optionsList = selectBox.options;
-    for (let i = optionsList.length; i >= 0 ; i--) {
+    for (let i = optionsList.length; i >= 0; i--) {
         selectBox.remove(i);
     }
+}
+
+//__Selector Functions
+let parag;
+function addTextContent(text, id, style1, style2) {
+    parag = document.createElement('p');
+    parag.setAttribute('id', id);
+    parag.textContent = text;
+    parag.style.marginLeft = style1;
+    parag.style.marginTop = style2;
+}
+
+function styleOne(style1, style2) {
+    parag.style.marginLeft = style1;
+    parag.style.marginTop = style2;
+}
+
+function styleTwo(style1, style2) {
+    parag.style.marginBottom = style1;
+    parag.style.textDecoration = style2;
+}
+
+//Not finished
+function jsAnimateLoad() {
+
+}
+
+function jsAppendElement() {
+    var select = document.getElementById('runID');
+    select.removeChild(select.lastChild);
+
+    addTextContent('- Enric Juliana -', 'addedParag');
+    styleOne('150px', '20px');
+
+    document.querySelectorAll('#runID p')[1].appendChild(parag);
+}
+
+function jsRemoveElement() {
+    document.getElementById('pId').remove();
+}
+
+function jsAppendParentElement() {
+    var select = document.getElementById('runID');
+    select.removeChild(select.lastChild);
+
+    addTextContent('- Enric Juliana -', 'addedParag');
+    styleOne('150px', '20px');
+
+    document.getElementById('runID').appendChild(parag);
+}
+
+function jsPrependParentElement() {
+    var select = document.getElementById('runID');
+    select.removeChild(select.firstChild);
+
+    addTextContent('Filosofía y Letras', 'prependParag');
+    styleTwo('10px', 'underline black');
+
+    document.getElementById('runID').prepend(parag);
+}
+
+function jsApppendAfterElement() {
+    var childrens = document.getElementById('rightModalContent').children;
+    if (childrens.length > 1) {
+        childrens[1].remove();
+    }
+
+    addTextContent('Empezando por ti mismo', 'afterParag');
+    styleTwo('10px', 'underline black');
+
+    document.getElementById('runID').after(parag);
+}
+
+function jsApppendBeforeElement() {
+    var childrens = document.getElementById('rightModalContent').children;
+    if (childrens.length > 1) {
+        childrens[0].remove();
+    }
+
+    addTextContent('Filosofía y Letras', 'BeforeParag');
+    styleTwo('0', 'underline black');
+
+    document.getElementById('runID').before(parag);
+}
+
+function jsCloneElement() {
+    var childrens = document.getElementById('rightModalContent').children;
+    if (childrens.length > 1) {
+        childrens[1].remove();
+    }
+    var clonedElement = document.getElementById('runID').cloneNode(true);
+    document.getElementById('rightModalContent').appendChild(clonedElement);
+}
+
+function jsAddClass() {
+    var elementParag = document.querySelectorAll('#runID p');
+    elementParag[0].classList.add('newClass');
+    elementParag[1].classList.add('newClass');
+}
+
+function jsRemoveClass() {
+    var elementParag = document.querySelectorAll('#runID p');
+    elementParag[0].classList.remove('changeWeight');
+}
+
+function jsToggleClass() {
+    var elementParag = document.querySelectorAll('#runID p');
+    elementParag[0].classList.toggle('newClass');
+    elementParag[1].classList.toggle('newClass');
+}
+
+function jsAddDisabled() {
+    var button = document.querySelector('#runID button');
+    button.setAttribute('disabled', true);
+}
+
+function jsRemoveDisabled() {
+    var button = document.querySelector('#runID button');
+    button.removeAttribute('disabled');
+}
+
+function jsSetData() {
+    var img = document.querySelector('#rightModalContent img');
+    img.setAttribute('data-src', 'This is the DATA-SRC: https://i.pinimg.com/originals/bd/c0/99/bdc099373d6acbce20fe7179ba9372e4.jpg')
+}
+
+function jsRemoveData() {
+    var img = document.querySelector("#rightModalContent img");
+    img.removeAttribute("data-src");
+}
+
+//Start multiple function
+function hiddeElement() {
+    document.querySelector('#runID p').style.display = 'none';
+}
+
+function jsHiddeElement() {
+    document.querySelector('#runID p').setAttribute('onclick', 'hiddeElement()');
+}
+//End multiple function
+
+function jsShowElement() {
+    document.querySelector('#runID p').style.display = 'block';
+}
+
+function jsIterateStyle() {
+    var items = document.querySelectorAll('#runID li');
+    items.forEach((value) => {
+        value.style.color = '#005eff';
+    });
 }
