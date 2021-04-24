@@ -16,7 +16,7 @@ function clicked(){
     });
 }function keyP(){
     $( ".run" ).text("press any key");
-    $( ".run" ).keypress(function() {
+    $(document).keypress(function() {
         $('.result').text('You press a key, good job!!');
     });
 }function mousMv(){
@@ -61,32 +61,57 @@ function iSubm(){
     });
 }
 function isChange(){
-    $( ".run" ).text("");
-    $('.result').text("");
-    /*$( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".result" ).text("");
+    $('.result').append("<select class='sOptions'><option class='Options'> option 1</option><option class='Options'> option 2</option></select>");
+    
+    $('.sOptions').change(function() {
+        $('.run').text('option changed');
+    });
 }
 function isOver(){
-    $( ".run" ).text("");
-    $('.result').text("");
-    /*$( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("put the cursor over the sphere");
+    $('.result').append("<div class='circle'></div>");
+    let x=2;
+    let y=2;
+    $('.circle').mouseover(function() {
+        
+       
+        $('.showComandContent').prepend('<p class="text">you are on</p>');
+        console.log('llega')
+        $('.text').css('transform',`translate(${x}px,${y}px)`);
+        $('.text').css('transform',`scale(${x/2},${y/2})`);
+        console.log('akitmb')
+        x+=Math.random()*(-10);
+        y+=Math.random()*10;
+    });
 }
 function isCliked(){
-    $( ".run" ).text("");
-    $('.result').text("");
-    /*$( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("click checkbox below");
+    $('.result').append("<input id='but' type='checkbox'>Check that");
+    $('.result').css('fontSize','40px');
+    $('#but').css('width','40px');
+    $('#but').css('height','40px');
+    $('#but').on('click',chk);
+    function chk(){
+        if($('#but').is(':checked')){
+        
+        $('.result').text('God job you checked!!');
+        } 
+    }
 }
 function selectOpt(){
-    $( ".run" ).text("");
-    $('.result').text("");
-    /*$( ''). (function() {
-        $('.result').text('');
-    });*/
+    $(".run" ).text("click an element of the list");
+    $('.result').append("<ul class=list><li>hello</li><li>bye bye</li></ul>");
+    $('ul').css('font-size','25px')
+    $('ul.list li').each(function() {
+        $(this).on('click',function(){
+           $('.result').append(this) ;
+           $('ul.list').remove();
+           $('.run').off('click');
+           
+        });
+        
+    });
 }
 function inElement(){
     $( ".run" ).text("");

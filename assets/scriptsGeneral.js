@@ -111,7 +111,7 @@ function textLaunch(event){
     }else if
     ($(selected).attr('id')=='command 12')
     {
-        $( ".run" ).text("click");
+        $( ".run" ).text("Display list");
         $('.jsclas').text('(this).click');
         $('.jQclas').text('(this).on');
         $('.run').on('click',selectOpt);
