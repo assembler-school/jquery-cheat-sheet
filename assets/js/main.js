@@ -23,7 +23,9 @@ function clickOnTag(event) {
     typeLine(line1 + "~" + line2 + "~", 0, tag);
   }
 }
-
+/* 
+Functions to return a random number between a maximum and a minimum
+*/
 function randomWait(min, max) {
   return Math.ceil(Math.random() * (max - min) + min);
 }
@@ -61,7 +63,7 @@ function typeLine(line, index, tag) {
   if (line.length > index) {
     setTimeout(function () {
       typeLine(line, index + 1, tag);
-    }, randomWait(1, 5)); //TODO change time to slower
+    }, randomWait(20, 35)); //TODO change time to slower
   } else {
     elem.innerHTML = elem.innerHTML.substring(
       0,
@@ -76,6 +78,7 @@ function firstRun() {
     "Welcome to Mathias' jQuery Cheat Sheet~To watch it work, just click on a numbered item~";
   typeLine(line);
 }
+/* Function executed when clicking 'Try it!' button */
 function tryIt(tag) {
   openModal();
   jqueryImplementation(tag);
