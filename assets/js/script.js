@@ -5,6 +5,8 @@ import { vanillaExamples } from "./vanilla.js";
 import { jQueryExamples } from "./jquery.js";
 export { blankMacroOutput, removeEventVanilla, removeEventJQuery };
 
+// console.log("Script JS file loaded!");
+
 /* -------------------------------------------------------------------------- */
 /*                              GENERAL VARIABLES                             */
 /* -------------------------------------------------------------------------- */
@@ -72,6 +74,10 @@ let jQueryCheckbox = $("#jquery-radio");
 let macroText = $("#macro-text");
 
 let runButton = $("#run-button");
+let clearButton = $("#clear-button");
+
+let outputPanel = $("#output-panel");
+
 let idIndex = 0;
 
 /* -------------------------------------------------------------------------- */
@@ -173,6 +179,7 @@ $(".example").each(function () {
   idIndex++;
 });
 
+// Change example on checkbox checked
 $(".js-type").click(function () {
   if ($(".selected-example").length > 0) {
     blankMacroOutput();
@@ -194,10 +201,10 @@ $(".js-type").click(function () {
 
 // Deleting macro & output content
 function blankMacroOutput() {
-  $("#macro-text").children().remove();
-  $("#macro-text").html("");
-  $("#output-panel").children().remove();
-  $("#output-panel").html("");
+  macroText.children().remove();
+  macroText.html("");
+  outputPanel.children().remove();
+  outputPanel.html("");
 }
 
 // Remove event listeners on run button
@@ -215,6 +222,13 @@ function removeEventVanilla(target, type, insideFunction, array) {
   }
   console.log("Removed event listener " + type + " in " + target);
 }
+
+// Remove the content in output when clicking "Clear" button
+clearButton.on("click", function () {
+  outputPanel.text(null);
+  outputPanel.children().remove();
+  outputPanel.html("");
+});
 
 // Remove event listeners (used in jquery.js)
 function removeEventJQuery(target, type, insideFunction, array) {
