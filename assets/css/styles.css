@@ -324,3 +324,8 @@ footer {
   width: 70%;
   height: auto;
 }
+
+.example-form {
+  display: flex;
+  flex-direction: column;
+}
