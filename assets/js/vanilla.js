@@ -1675,6 +1675,42 @@ firstA.setAttribute("href", "newUrl");`;
   };
 }
 
+//39 ----------------------------------------------------------
+function inputAlert() {
+  // Macro
+  macroTextVanilla.innerText = `// Alert with first input value
+
+let firstInput = document.querySelector("input")
+alert(firstInput.value);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleInput1 = document.createElement("input");
+    exampleInput1.classList.add("example-input");
+    exampleInput1.setAttribute("type", "text");
+    exampleInput1.setAttribute("placeholder", "We have eggs, bacon & Spam!");
+
+    let exampleInput2 = document.createElement("input");
+    exampleInput2.classList.add("example-input");
+    exampleInput2.setAttribute("type", "text");
+    exampleInput2.setAttribute("placeholder", "We also have bacon & Spam!");
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleInput1);
+    outputVanilla.appendChild(exampleInput2);
+    let allInputs = document.querySelectorAll("input");
+
+    setTimeout(function () {
+      allInputs[2].value = allInputs[2].getAttribute("placeholder");
+      alert(allInputs[2].value);
+    }, 2000);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1841,5 +1877,9 @@ export const vanillaExamples = [
   // 38
   function () {
     changeHref();
+  },
+  // 39
+  function () {
+    inputAlert();
   },
 ];

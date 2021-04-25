@@ -1758,6 +1758,46 @@ $("a").first().attr("href", "newUrl");
   });
 }
 
+//39 ----------------------------------------------------------
+function inputAlert() {
+  // Macro
+  macroString = `// Changed input behaviour
+
+let firstInput = $("input").first();
+alert(firstInput.val());`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleInput1 = $("<input>");
+    exampleInput1.addClass("example-input");
+    exampleInput1.attr("type", "text");
+    exampleInput1.attr("placeholder", "We have eggs, bacon & Spam!");
+
+    let exampleInput2 = $("<input>");
+    exampleInput2.addClass("example-input");
+    exampleInput2.attr("type", "text");
+    exampleInput2.attr("placeholder", "We also have bacon & Spam!");
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleInput1);
+    outputJquery.append(exampleInput2);
+    let allInputs = $("input");
+
+    let targetInput = allInputs[2];
+
+    setTimeout(function () {
+      $(targetInput).val($(targetInput).attr("placeholder"));
+      alert($(targetInput).val());
+    }, 2000);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1923,5 +1963,9 @@ export const jQueryExamples = [
   // 38
   function () {
     changeHref();
+  },
+  // 39
+  function () {
+    inputAlert();
   },
 ];
