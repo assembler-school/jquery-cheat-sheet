@@ -1162,6 +1162,46 @@ setTimeout(function(){
   });
 }
 
+//27 ----------------------------------------------------------
+function displayNone() {
+  // Macro
+  macroString = `// Hide element on click (display: none)
+
+button.on("click", function(){
+  element.css("display", "none");
+});`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleButton = $("<div>");
+    exampleButton.addClass("example-button");
+    exampleButton.text("Click to hide");
+
+    let exampleChild = $("<div>");
+    exampleChild.addClass("example-child");
+    exampleChild.addClass("example-appended-child");
+    exampleChild.css({ marginTop: "var(--margin)", width: "200px" });
+    exampleChild.text("Hide me");
+
+    function displayNoneInside() {
+      exampleChild.css("display", "none");
+    }
+
+    exampleButton.on("click", displayNoneInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(exampleButton, "click", displayNoneInside, ".example");
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleButton);
+    outputJquery.append(exampleChild);
+  });
+}
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1277,5 +1317,9 @@ export const jQueryExamples = [
   // 26
   function () {
     removeDataSrc();
+  },
+  // 27
+  function () {
+    displayNone();
   },
 ];

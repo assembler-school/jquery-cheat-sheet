@@ -1087,6 +1087,46 @@ setTimeout(function(){
   };
 }
 
+//27 ----------------------------------------------------------
+function displayNone() {
+  // Macro
+  macroTextVanilla.innerText = `// Hide element on click (display: none)
+
+button.onclick = function(){
+  element.style.display = "none";
+};`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleButton = document.createElement("div");
+    exampleButton.setAttribute("class", "example-button");
+    exampleButton.innerText = "Click to hide";
+
+    let exampleChild = document.createElement("div");
+    exampleChild.classList.add("example-child");
+    exampleChild.classList.add("example-appended-child");
+    exampleChild.style.marginTop = "var(--margin)";
+    exampleChild.style.width = "200px";
+    exampleChild.innerText = "Hide me";
+
+    function displayNoneInside() {
+      exampleChild.style.display = "none";
+    }
+
+    exampleButton.addEventListener("click", displayNoneInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleButton, "click", displayNoneInside, examples);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleButton);
+    outputVanilla.appendChild(exampleChild);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1203,5 +1243,9 @@ export const vanillaExamples = [
   // 26
   function () {
     removeDataSrc();
+  },
+  // 27
+  function () {
+    displayNone();
   },
 ];
