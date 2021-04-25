@@ -5,6 +5,7 @@ import * as jq from "./jquery.js";
 document.querySelector(" header > h1").addEventListener("click", function () {
   loadFile("./assets/examples/mainPage.md");
 });
+
 /*
  * Here I get the files based on the
  * section wanted in HTML
@@ -21,6 +22,7 @@ links.forEach((element) => {
     } else {
       srcFile = "./assets/examples/functions/" + e.target.title;
     }
+
     loadFile(srcFile, e);
   });
 });
@@ -42,6 +44,12 @@ function loadFile(src, e) {
     });
 }
 
+function setSelected(e) {
+  links.forEach((el) => {
+    if (el.classList.contains("selected")) el.classList.remove("selected");
+  });
+  e.target.classList.add("selected");
+}
 /*
  * Here I declare global listeners
  */

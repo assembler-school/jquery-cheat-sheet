@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
@@ -119,6 +123,9 @@ img {
   margin: 0 auto;
 }
 
+.selected {
+  background-color: rgba(4, 170, 109, 0.2);
+}
 /* 
 =======================================
 *           Animations
