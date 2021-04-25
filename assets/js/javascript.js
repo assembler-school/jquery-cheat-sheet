@@ -391,7 +391,7 @@ function iterateCollectionExampleJS() {
 
 function selectorPropertyNoneJS() {
     let codeElement = document.createElement('code');
-    codeElement.textContent = "document.querySelectorAll('.hiddenLabel[style='display: none;']')"
+    codeElement.textContent = "document.querySelectorAll('.hiddenLabel[style*='display: none;']')"
         +"\n\t\t\t.forEach(element => {"
     +"\n\t\t\t\telement.style.color = 'red';"
     +"\n\t\t});";
@@ -419,13 +419,13 @@ function selectorPropertyNoneJS() {
     });
 
     clickMeBtn2.addEventListener('click', _ => {
-        document.querySelectorAll('.hiddenLabel[style="display: none;"]').forEach(element => {
+        document.querySelectorAll('.hiddenLabel[style*="display: none;"]').forEach(element => {
             element.style.color = 'red';
         });
     });
 
     clickMeBtn3.addEventListener('click', _ => {
-        document.querySelectorAll('.hiddenLabel[style="display: none;"]').forEach(element => {
+        document.querySelectorAll('.hiddenLabel[style*="display: none;"]').forEach(element => {
             element.style.color = 'blue';
         });
     });
