@@ -36,7 +36,7 @@ export const functionData = [
   "Get all the elements that have a certain class and a certain property",
   "Get the options of a selected element that are selected(attribute selected)",
   "Change the href attribute of the first 'a' element",
-  "Show an alert with the value of the first 'input'"
+  "Show an alert with the value of the first 'input'",
 ];
 
 export const effectTraversingData = [
@@ -114,7 +114,7 @@ export const jQueryFuncData = [
   '$(".city").css("font-weight", 700);',
   '$("#myCity").css("font-weight", 700);',
   '$(".country:hidden").css("color", "red").show();',
-  '$("option").last().prop("selected");',
+  '$("#myDiv select option").last().attr("selected", true);',
   '$("a").first().attr("href", "https://www.google.es/");',
   'alert("Hello," + $("input:text").first().val());',
 ];
@@ -131,36 +131,158 @@ export const jsEventData = [
   .addEventListener('keypress', function() {
     alert('You pressed a key');   
   });`,
-  `document.querySelector("#myDiv .circle")
-  .addEventListener("mousemove", function(event){
-    if(document.querySelector("#myDiv .circle").offsetWidth <= 500 ) {
-        $( this ).css({width: "+=20", height: "+=20"}) 
-    } 
-});`,
-`document.querySelector("#myDiv h1")
+  `document.querySelector("#myDiv .square").addEventListener("mousemove", function(event) {
+    myFunction(event);
+  });
+  
+  function myFunction(e) {
+    let x = e.clientX;
+    let y = e.clientY;
+    let pageCoords = "Coordinates: (" + x + "," + y + ")";
+    document.querySelector("#myDiv p").innerHTML = pageCoords;
+  }`,
+  `document.querySelector("#myDiv h1").addEventListener("mouseover", function() {
+    document.querySelector("#myDiv h1").style.backgroundColor = "pink"
+  })`,
+  `document.querySelector("#myDiv h1")
 .addEventListener("mouseout", function() {
-  document.querySelector("#myDiv h1").style.backgroundColor = "pink"
-})`
-]
+  document.querySelector("#myDiv h1").style.backgroundColor = "gray"
+})`,
+  `document.querySelector("#myDiv img").onload = function () {
+  let newParagraph = document.createElement("p");
+  newParagraph.innerText = "image loaded";
+  document.getElementById("myDiv").appendChild(newParagraph);
+}`,
+  `document.querySelector("#myDiv img").onload = function () {
+  let newParagraph = document.createElement("p");
+  newParagraph.innerText = "image loaded";
+  document.getElementById("myDiv").appendChild(newParagraph);
+}
+document.querySelector("#myDiv img").onerror = function () {
+  let newParagraph = document.createElement("p");
+  newParagraph.innerText = "failed loading the image";
+  document.getElementById("myDiv").appendChild(newParagraph);
+}`,
+  `document.querySelector("#myDiv form")
+.addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Submitted");
+  let firstName = document.querySelectorAll("#myDiv form input")[0].value;
+  let lastName = document.querySelectorAll("#myDiv form input")[1].value;
+  document.querySelector("#myDiv p").innerText = "Submitted: " + firstName + lastName
+})`,
+  `document.querySelectorAll("#myDiv li").forEach((ele) => {
+  ele.addEventListener("click", function () {
+    ele.innerText = "clicked";
+    ele.style.backgroundColor = "yellow";
+  });
+});`,
+];
 
 export const jQueryEventData = [
   ` $(document).ready(function() {
-    $("#loadedDiv h2").css("color", "green").text("Loaded");
+    $("#myDiv h2").css("color", "green").text("Loaded");
 });`,
-`$("#myDiv h2").css("background-color", "yellow").text("clicked");`,
-`$("#myDiv .circle").dblclick(function () {
+  `$("#myDiv h2").css("background-color", "yellow").text("clicked");`,
+  `$("#myDiv .circle").dblclick(function () {
       $("#myDiv .circle").css("background-color", "yellow");
 });`,
-`$("#target").keypress(function(event){
+  `$("#target").keypress(function(event){
   alert('You pressed a key');    
 });`,
-`$("#myDiv .circle")
-.mousemove(function(event){
-  if($( this ).width() <= 500 ) {
-      $( this ).css({width: "+=20", height: "+=20"}) 
-  } 
+  ` $( "#myDiv .square" ).mousemove(function( event ) {
+  let pageCoords = "Coordinates: ( " + event.pageX + ", " + event.pageY + " )";
+  $( "p" ).text( pageCoords );
 });`,
-` $("#myDiv h1").mouseout(function(event) {
+  ` $("#myDiv h1").mouseover(function (event) {
   $(this).css("background-color", "pink");
 });`,
-]
+  ` $("#myDiv h1").mouseout(function(event) {
+  $(this).css("background-color", "gray");
+});`,
+  `$("#myDiv img").on("load", function() {
+  $("<p>image loaded</p>").appendTo("#myDiv");
+})`,
+  `$("#myDiv img").on("load", function() {
+  $("<p>image loaded</p>").appendTo("#myDiv");
+}).on("error", function() {
+  $("<p>failed loading the image</p>").appendTo("#myDiv");
+});`,
+  `$("form").submit(function (e) {
+  e.preventDefault();
+  alert("Submitted");
+  let firstName = $("form [name=FirstName]").val();
+  let lastName = $("form [name=LastName]").val();
+  $("p").text("Submitted: " + firstName + lastName);
+});`,
+  ` $("#myDiv li").each(function() {
+  $( this ).click(function() {
+    $( this ).text("clicked").css("background-color", "yellow");
+  })
+}); `,
+  `$("#myDiv li").each(function() {
+  $( this ).click(function() {
+    $( this ).text("clicked").css("background-color", "yellow");
+  })
+});`,
+];
+
+export const jsEffectData = [
+  `document.querySelectorAll("#myDiv li").forEach(ele => {
+  ele.style.backgroundColor = "pink";
+  ele.style.fontStyle = "italic";
+})
+});`,
+  ` document.querySelectorAll("#myDiv span").forEach(ele => {
+  ele.parentElement.style.backgroundColor = "pink";
+  ele.parentElement.style.fontStyle = "italic";
+})`,
+  `document.querySelectorAll("#myDiv p").forEach(ele => {
+  ele.children[1].style.backgroundColor = "pink";
+  ele.children[1].style.fontStyle = "italic";
+  ele.children[1].innerText = "children"
+})`,
+  `document.querySelectorAll("#myDiv p").forEach(ele => {
+  ele.children[1].style.display = "none"
+})`,
+  `  document.querySelectorAll("#myDiv p").forEach(ele => {
+  ele.children[1].style.display = "block"
+ ele.children[1].style.backgroundColor = "pink"    
+})`,
+  'let fadeTargets = document.querySelectorAll("#myDiv h1");\n fadeTargets.forEach((ele, index) => {\n ele.style.animation = `fadeIn ${index+1}s`})',
+  'let fadeTargets = document.querySelectorAll("#myDiv h1");\nfadeTargets.forEach((ele, index) => {\n ele.style.animation = `fadeOut ${ 3-index}s`;\n ele.style.animationFillMode = "forwards"})',
+];
+
+export const jQueryEffectData = [
+  ` $("#myDiv li").each(function () {
+  $(this).css({ 
+    "background-color": "pink", 
+    "font-style": "italic" });
+});`,
+  `  $("#myDiv span").each(function () {
+  $(this).parent().css({ 
+    "background-color": "pink", 
+    "font-style": "italic" 
+  });
+});`,
+  ` $("#myDiv p").each(function () {
+  $(this).children().css({ "background-color": "pink", "font-style": "italic" })
+    .text("children");
+}); `,
+  `$("#myDiv p").each(function () {
+  $(this).children().css({ "background-color": "pink", "font-style": "italic" }).text("children");
+}); `,
+  `$("#myDiv p").each(function () {
+  $(this).children().hide();
+});`,
+  ` $("#myDiv p").each(function () {
+  $(this).children().css({"background-color": "pink", "display": "block"}).show();
+}); `,
+  `$("#myDiv h1").hide();
+$("#myDiv h1").first().fadeIn(1000)
+$("#myDiv h1:nth-child(3)").fadeIn(2000);
+$("#myDiv h1").last().fadeIn(3000);`,
+`$("#myDiv h1").first().fadeOut(3000);
+$("#myDiv h1:nth-child(3)").fadeOut(2000);
+$("#myDiv h1").last().fadeOut(1000);`,
+];

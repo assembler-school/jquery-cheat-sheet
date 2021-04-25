@@ -17,7 +17,6 @@ const modalContent = document.querySelector(".modalContent");
 const nameOfContent = document.querySelector(".nameOfContent");
 
 // boxes to display each code
-const codeWrapper = document.querySelectorAll(".codeWrapper");
 const codeBoxes = document.querySelectorAll(".codeBox");
 
 
@@ -45,7 +44,7 @@ navLinks.forEach((navLink, index) => {
         homeSection.style.display = "none";
         eventSection.style.display = "none";
         effectSection.style.display = "block";
-        modalContent.setAttribute("id", "selectorModal");
+        modalContent.setAttribute("id", "effectModal");
         break;
 
       default:
@@ -74,6 +73,7 @@ eventData.forEach((dataItem, index) => {
     jQueryDisplay(index);
   };
 });
+
 
 functionData.forEach((dataItem, index) => {
   functionTable.insertRow(
@@ -111,8 +111,8 @@ effectTraversingData.forEach((dataItem, index) => {
       .setAttribute("id", "effectScreen" + index);
 
     codeBoxes.forEach((codeBox, i) => {
-      codeBoxes[0].setAttribute("id", `jsFunc${index}`);
-      codeBoxes[1].setAttribute("id", `jQueryFunc${index}`);
+      codeBoxes[0].setAttribute("id", `jsEffect${index}`);
+      codeBoxes[1].setAttribute("id", `jQueryEffect${index}`);
     });
     //console.log(document.getElementById(`"jsFunc${index}"`))
     jsDisplay(index);
@@ -128,5 +128,10 @@ window.onclick = function (event) {
   if (event.target == sheetModal) {
     sheetModal.style.display = "none";
     document.querySelector(".screen").innerHTML = null;
+    document.querySelectorAll(".contentContainer button").forEach(btn => btn.classList.remove("activeBtn"));
+    document.querySelectorAll(".codeBox").forEach(codeBoxEle => codeBoxEle.style.visibility = "hidden" )
   }
 };
+
+
+
