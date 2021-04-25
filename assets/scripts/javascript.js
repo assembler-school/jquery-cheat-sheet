@@ -286,3 +286,40 @@ document.querySelector(".ex37js_btn").addEventListener("click", function () {
       hidden.style.color = "blue";
     });
 });
+
+// Get the options of a select element that are selected (attribute selected)
+document.querySelector(".ex38js_btn").addEventListener("click", function () {
+  let select38 = document.getElementById("tv38");
+  document.getElementById("ex38js").innerHTML =
+    "Popcorn ready to see " + select38.value;
+});
+
+// Change the href attribute of the first <a> element (You have to create several <a> elements)
+document.querySelector(".ex39js_btn").addEventListener("click", function () {
+  document
+    .querySelector("#ex39js a:first-child")
+    .setAttribute("href", "https://youtu.be/qL1cjugbaXM");
+});
+
+// Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)
+document.querySelector(".ex40js_btn").addEventListener("click", function () {
+  alert(document.querySelector("#ex40js > input").value);
+});
+
+// Remove all items from a specific selector
+document.querySelector(".ex41js_btn").addEventListener("click", function () {
+  document
+    .querySelectorAll("#ex41js li:nth-child(even)")
+    .forEach((liElement) => {
+      liElement.remove();
+    });
+});
+
+// Animate an item after 2 seconds from the initial page load
+document.getElementById("ex42").addEventListener("click", function () {
+  let tou42 = setTimeout(function () {
+    document.getElementById("ex42js").style.transition = "all 2s";
+    document.getElementById("ex42js").style.width = "20px";
+    clearTimeout(tou42);
+  }, 2000);
+});

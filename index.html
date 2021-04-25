@@ -29,37 +29,46 @@
         <div class="aside__section" id="aside__selectors">Selectors</div>
       </aside>
       <div class="central" id="central">
-
         <!-- ! Events Template -->
         <section id="events__section" class="section--hide">
           <ul class="article__list">
             <li>
               <article id="ex1">
                 <div class="article__title">
-                  When the HTML document has been loaded and you can manipulate it
-                  with JavaScript
+                  When the HTML document has been loaded and you can manipulate
+                  it with JavaScript
                 </div>
                 <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(document).ready(function () {<br>
-                        &nbsp;&nbsp;$(".ex1jq").append($("&#60;p&#62;").text("The web is loaded!"));<br>
+                      $(document).ready(function () {<br />
+                      &nbsp;&nbsp;$(".ex1jq").append($("&#60;p&#62;").text("The
+                      web is loaded!"));<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex ex1jq"></div>
 
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      document.addEventListener("DOMContentLoaded", function () {<br>
-                        &nbsp;&nbsp;let div1 = document.querySelector(".ex1js");<br>
-                        &nbsp;&nbsp;div1.innerHTML = "What the other text said...";<br>
+                      document.addEventListener("DOMContentLoaded", function ()
+                      {<br />
+                      &nbsp;&nbsp;let div1 =
+                      document.querySelector(".ex1js");<br />
+                      &nbsp;&nbsp;div1.innerHTML = "What the other text
+                      said...";<br />
                       });
                     </code>
                   </div>
-                  <div class="article__ex ex1js">What the other text said...</div>
+                  <div class="article__ex ex1js">
+                    What the other text said...
+                  </div>
                 </div>
               </article>
             </li>
@@ -70,23 +79,28 @@
                   When an HTML item has been clicked
                 </div>
                 <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".article__ex--2jq button").on("click", function () {<br>
-                        &nbsp;&nbsp;$(this).text("Well clicked, Sir");<br>
+                      $(".article__ex--2jq button").on("click", function () {<br />
+                      &nbsp;&nbsp;$(this).text("Well clicked, Sir");<br />
                       });
-                  </code>
+                    </code>
                   </div>
                   <div class="article__ex article__ex--2jq">
                     <button>Click me!</button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let buttonEx1 = document.querySelector(".article__ex--2js button");<br>
-                      buttonEx1.addEventListener("click", function () {<br>
-                        &nbsp;&nbsp;buttonEx1.innerHTML = "Well clicked, Sir";<br>
+                      let buttonEx1 = document.querySelector(".article__ex--2js
+                      button");<br />
+                      buttonEx1.addEventListener("click", function () {<br />
+                      &nbsp;&nbsp;buttonEx1.innerHTML = "Well clicked, Sir";<br />
                       });
                     </code>
                   </div>
@@ -103,11 +117,13 @@
                   When an HTML item has been double clicked
                 </div>
                 <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex3jq__dot").on("dblclick", function () {<br>
-                        &nbsp;&nbsp;$(this).next().text("That's right!");<br>
+                      $(".ex3jq__dot").on("dblclick", function () {<br />
+                      &nbsp;&nbsp;$(this).next().text("That's right!");<br />
                       });
                     </code>
                   </div>
@@ -115,12 +131,15 @@
                     <div class="ex3jq__dot"></div>
                     <p class="ex3jq__p"></p>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let doubleDot = document.querySelector(".ex3js__dot");<br>
-                      doubleDot.addEventListener("dblclick", function () {<br>
-                        &nbsp;&nbsp;document.querySelector(".ex3js__p").innerHTML = "That's right!";<br>
+                      let doubleDot = document.querySelector(".ex3js__dot");<br />
+                      doubleDot.addEventListener("dblclick", function () {<br />
+                      &nbsp;&nbsp;document.querySelector(".ex3js__p").innerHTML
+                      = "That's right!";<br />
                       });
                     </code>
                   </div>
@@ -137,21 +156,27 @@
                 <div class="article__title">
                   When the user presses a key on the keyboard
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(document).on("keydown", function (e) {<br>
-                        &nbsp;&nbsp;$(".ex4jq_p").text("What are you trying to say with '" + e.key + "'?");<br>
+                      $(document).on("keydown", function (e) {<br />
+                      &nbsp;&nbsp;$(".ex4jq_p").text("What are you trying to say
+                      with '" + e.key + "'?");<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex"><p class="ex4jq_p"></p></div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      document.addEventListener("keydown", function (e) {<br>
-                        &nbsp;&nbsp;document.querySelector(".ex4js_p").innerHTML = "What are you trying to say with '" + e.key + "'?";<br>
+                      document.addEventListener("keydown", function (e) {<br />
+                      &nbsp;&nbsp;document.querySelector(".ex4js_p").innerHTML =
+                      "What are you trying to say with '" + e.key + "'?";<br />
                       });
                     </code>
                   </div>
@@ -165,23 +190,30 @@
                 <div class="article__title">
                   When the user moves the mouse cursor
                 </div>
-                  <div class="article__content article__content--hidden ex5">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden ex5">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex5").on("mousemove", function () {<br>
-                        &nbsp;&nbsp;$(".ex5jq_p").text("Please stop moving...");<br>
+                      $(".ex5").on("mousemove", function () {<br />
+                      &nbsp;&nbsp;$(".ex5jq_p").text("Please stop
+                      moving...");<br />
                       });
-                  </code>
+                    </code>
                   </div>
                   <div class="article__ex">
                     <p class="ex5jq_p">Please don't move...</p>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      document.querySelector(".ex5").addEventListener("mousemove", function () {<br>
-                        &nbsp;&nbsp;document.querySelector(".ex5js_p").innerHTML = "I said still!!!";<br>
+                      document.querySelector(".ex5").addEventListener("mousemove",
+                      function () {<br />
+                      &nbsp;&nbsp;document.querySelector(".ex5js_p").innerHTML =
+                      "I said still!!!";<br />
                       });
                     </code>
                   </div>
@@ -197,30 +229,44 @@
                 <div class="article__title">
                   When the user changes a value of a text input
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex6jq_input").on("input", function () {<br>
-                        &nbsp;&nbsp;$(".ex6jq_p").text("Write it back!");<br>
+                      $(".ex6jq_input").on("input", function () {<br />
+                      &nbsp;&nbsp;$(".ex6jq_p").text("Write it back!");<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex">
                     <p class="ex6jq_p">Please don't change this text.</p>
-                    <input type="text" class="ex6jq_input ex6_input" value="Jeronimo!">
+                    <input
+                      type="text"
+                      class="ex6jq_input ex6_input"
+                      value="Jeronimo!"
+                    />
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      document.querySelector('.ex6js_input').addEventListener('input', function(e) {<br>
-                        &nbsp;&nbsp;document.querySelector('.ex6js_p').innerHTML = "That's better!";<br>
-                    });
+                      document.querySelector('.ex6js_input').addEventListener('input',
+                      function(e) {<br />
+                      &nbsp;&nbsp;document.querySelector('.ex6js_p').innerHTML =
+                      "That's better!";<br />
+                      });
                     </code>
                   </div>
                   <div class="article__ex">
                     <p class="ex6js_p">Please feel free to change this text.</p>
-                    <input type="text" class="ex6js_input ex6_input" value="I'm a dumb text!">
+                    <input
+                      type="text"
+                      class="ex6js_input ex6_input"
+                      value="I'm a dumb text!"
+                    />
                   </div>
                 </div>
               </article>
@@ -229,30 +275,33 @@
             <li>
               <article class="ex7">
                 <div class="article__title">When an image is loaded</div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex7jq_img").on("load", function () {<br>
-                        &nbsp;&nbsp;$(".ex7jq_p").text("I've told you!");<br>
+                      $(".ex7jq_img").on("load", function () {<br />
+                      &nbsp;&nbsp;$(".ex7jq_p").text("I've told you!");<br />
                       });
-                      
                     </code>
                   </div>
                   <div class="article__ex">
-                    <img class="ex7jq_img" src="" alt="Pawsome">
+                    <img class="ex7jq_img" src="" alt="Pawsome" />
                     <p class="ex7jq_p">It's worth waiting!</p>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      image7.addEventListener("load", function () {<br>
-                        &nbsp;&nbsp;p7.innerHTML = "Surprise!";<br>
+                      image7.addEventListener("load", function () {<br />
+                      &nbsp;&nbsp;p7.innerHTML = "Surprise!";<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex">
-                    <img class="ex7js_img" src="" alt="Surprise">
+                    <img class="ex7js_img" src="" alt="Surprise" />
                     <p class="ex7js_p">Waiting for the image to load.</p>
                   </div>
                 </div>
@@ -261,32 +310,42 @@
 
             <li>
               <article class="ex8">
-                <div class="article__title">
-                  When an image fails to load
-                </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__title">When an image fails to load</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                    $(".ex8jq_img").on("error", function () {<br>
-                      &nbsp;&nbsp;$(".ex8jq_p").text("Noooooo...");<br>
-                    });
-                  </code>
-                  </div>
-                  <div class="article__ex">
-                    <img class="ex8jq_img" src="https://images.unsplash.com/photo-1546419031-2f09ee2293d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80" alt="Pawsome">
-                    <p class="ex8jq_p">Have you seen the tiebow?</p>
-                  </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
-                  <div class="article__code">
-                    <code>
-                      image8.addEventListener("error", function () {<br>
-                        &nbsp;&nbsp;p8.innerHTML = "Oh no, what happened?";<br>
+                      $(".ex8jq_img").on("error", function () {<br />
+                      &nbsp;&nbsp;$(".ex8jq_p").text("Noooooo...");<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex">
-                    <img class="ex8js_img" src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1510&q=80" alt="Surprise">
+                    <img
+                      class="ex8jq_img"
+                      src="https://images.unsplash.com/photo-1546419031-2f09ee2293d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80"
+                      alt="Pawsome"
+                    />
+                    <p class="ex8jq_p">Have you seen the tiebow?</p>
+                  </div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
+                  <div class="article__code">
+                    <code>
+                      image8.addEventListener("error", function () {<br />
+                      &nbsp;&nbsp;p8.innerHTML = "Oh no, what happened?";<br />
+                      });
+                    </code>
+                  </div>
+                  <div class="article__ex">
+                    <img
+                      class="ex8js_img"
+                      src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1510&q=80"
+                      alt="Surprise"
+                    />
                     <p class="ex8js_p">Funny, isn't it?</p>
                   </div>
                 </div>
@@ -296,42 +355,51 @@
             <li>
               <article>
                 <div class="article__title">When a form is submitted</div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex9jq_form").on("submit", function (e) {<br>
-                        &nbsp;&nbsp;e.preventDefault();<br>
-                        <br>
-                        &nbsp;&nbsp;$(".ex9jq_p").text("Thank you for choosing jQuery");<br>
+                      $(".ex9jq_form").on("submit", function (e) {<br />
+                      &nbsp;&nbsp;e.preventDefault();<br />
+                      <br />
+                      &nbsp;&nbsp;$(".ex9jq_p").text("Thank you for choosing
+                      jQuery");<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex">
                     <form class="ex9jq_form">
-                      <label for="ex9jq_input">What do you prefer, jQuery or JavaScript?</label>
-                      <input type="text" id="ex9jq_input">
-                      <input type="submit" value='Submit'>
+                      <label for="ex9jq_input"
+                        >What do you prefer, jQuery or JavaScript?</label
+                      >
+                      <input type="text" id="ex9jq_input" />
+                      <input type="submit" value="Submit" />
                     </form>
                     <p class="ex9jq_p"></p>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      document.querySelector(".ex9js_form").addEventListener("submit", function (e) {<br>
-                        &nbsp;&nbsp;e.preventDefault();<br>
-                        <br>
-                        &nbsp;&nbsp;document.querySelector(".ex9js_p").innerHTML = "Yes, we know jQuery is better.";<br>
+                      document.querySelector(".ex9js_form").addEventListener("submit",
+                      function (e) {<br />
+                      &nbsp;&nbsp;e.preventDefault();<br />
+                      <br />
+                      &nbsp;&nbsp;document.querySelector(".ex9js_p").innerHTML =
+                      "Yes, we know jQuery is better.";<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex">
-                      <form class="ex9js_form">
-                        <label for="ex9js_input">Why do you prefer it?</label>
-                        <input type="text" id="ex9js_input">
-                        <input type="submit" value='Submit'>
-                      </form>
-                      <p class="ex9js_p"></p>
+                    <form class="ex9js_form">
+                      <label for="ex9js_input">Why do you prefer it?</label>
+                      <input type="text" id="ex9js_input" />
+                      <input type="submit" value="Submit" />
+                    </form>
+                    <p class="ex9js_p"></p>
                   </div>
                 </div>
               </article>
@@ -342,15 +410,19 @@
                 <div class="article__title">
                   When the user changes the option of a select element
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $("#ex10jq_colors").on("change", function () {<br>
-                        &nbsp;&nbsp;$(".ex10jq_p").html("You like <div></div>");<br>
-                        &nbsp;&nbsp;$(".ex10jq_p div").css("background-color", $("#ex10jq_colors").val());<br>
+                      $("#ex10jq_colors").on("change", function () {<br />
+                      &nbsp;&nbsp;$(".ex10jq_p").html("You like
+                      <div></div>
+                      ");<br />
+                      &nbsp;&nbsp;$(".ex10jq_p div").css("background-color",
+                      $("#ex10jq_colors").val());<br />
                       });
-                      
                     </code>
                   </div>
                   <div class="article__ex">
@@ -365,19 +437,25 @@
                     <p class="ex10jq_p top20"></p>
                   </div>
 
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let selection10 = document.getElementById("ex10js_colors");<br>
-                      selection10.addEventListener("change", function () {<br>
-                        &nbsp;&nbsp;document.querySelector(".ex10js_p").innerHTML = "You like " + selection10.value;<br>
+                      let selection10 =
+                      document.getElementById("ex10js_colors");<br />
+                      selection10.addEventListener("change", function () {<br />
+                      &nbsp;&nbsp;document.querySelector(".ex10js_p").innerHTML
+                      = "You like " + selection10.value;<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex">
                     <label for="ex10js_colors">Favourite vowel?</label>
                     <select name="colors" id="ex10js_colors">
-                      <option value="rumba catalana!">Burriquito como tu</option>
+                      <option value="rumba catalana!">
+                        Burriquito como tu
+                      </option>
                       <option value="the A.">A</option>
                       <option value="the E.">E</option>
                       <option value="the I.">I</option>
@@ -395,25 +473,34 @@
                 <div class="article__title">
                   When you position the mouse over an element
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex11jq_div").on("mouseover", function () {<br>
-                        &nbsp;&nbsp;$(".ex11jq_div").css("color", "black");<br>
+                      $(".ex11jq_div").on("mouseover", function () {<br />
+                      &nbsp;&nbsp;$(".ex11jq_div").css("color", "black");<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex">
-                    <p>The Answer to the Ultimate Question of Life, The Universe, and Everything:</p>
+                    <p>
+                      The Answer to the Ultimate Question of Life, The Universe,
+                      and Everything:
+                    </p>
                     <div class="ex11jq_div">The answer is 42</div>
                   </div>
 
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      document.querySelector(".ex11js_div").addEventListener("mouseover", function () {<br>
-                        &nbsp;&nbsp;document.querySelector(".ex11js_div").style.color = "black";<br>
+                      document.querySelector(".ex11js_div").addEventListener("mouseover",
+                      function () {<br />
+                      &nbsp;&nbsp;document.querySelector(".ex11js_div").style.color
+                      = "black";<br />
                       });
                     </code>
                   </div>
@@ -430,35 +517,41 @@
                 <div class="article__title">
                   When a checkbox is checked or unchecked
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $("#ex12jq_check").on("change", function () {<br>
-                        &nbsp;&nbsp;$("#ex12jq_check:checked").val() ? $(".ex12jq_p").text('The box is unchecked.') : $(".ex12jq_p").text('The box is checked.');<br>
+                      $("#ex12jq_check").on("change", function () {<br />
+                      &nbsp;&nbsp;$("#ex12jq_check:checked").val() ?
+                      $(".ex12jq_p").text('The box is unchecked.') :
+                      $(".ex12jq_p").text('The box is checked.');<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex">
                     <p>The other always lies.</p>
-                    <input id="ex12jq_check" type="checkbox">
+                    <input id="ex12jq_check" type="checkbox" />
                     <p class="ex12jq_p top20">The box is checked.</p>
                   </div>
 
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let check12 = document.getElementById("ex12js_check");<br>
-                      let p12 = document.querySelector(".ex12js_p");<br>
-                      check12.addEventListener("change", function () {<br>
-                        &nbsp;&nbsp;check12.checked ? (p12.innerHTML = "The box is checked.") : (p12.innerHTML = "The box is unchecked.");<br>
+                      let check12 = document.getElementById("ex12js_check");<br />
+                      let p12 = document.querySelector(".ex12js_p");<br />
+                      check12.addEventListener("change", function () {<br />
+                      &nbsp;&nbsp;check12.checked ? (p12.innerHTML = "The box is
+                      checked.") : (p12.innerHTML = "The box is unchecked.");<br />
                       });
-
                     </code>
                   </div>
                   <div class="article__ex">
                     <p>The other always lies.</p>
-                    <input id="ex12js_check" type="checkbox">
+                    <input id="ex12js_check" type="checkbox" />
                     <p class="ex12js_p top20">The box is unchecked.</p>
                   </div>
                 </div>
@@ -470,13 +563,17 @@
                 <div class="article__title">
                   When a ul list item is clicked, show the item that was clicked
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex13jq_li").on("click", function () {<br>
-                        &nbsp;&nbsp;$(".ex13jq_li").css({ "text-decoration": "line-through", "font-weight": "normal" });<br>
-                        &nbsp;&nbsp;$(this).css({ "text-decoration": "none", "font-weight": "bold" });<br>
+                      $(".ex13jq_li").on("click", function () {<br />
+                      &nbsp;&nbsp;$(".ex13jq_li").css({ "text-decoration":
+                      "line-through", "font-weight": "normal" });<br />
+                      &nbsp;&nbsp;$(this).css({ "text-decoration": "none",
+                      "font-weight": "bold" });<br />
                       });
                     </code>
                   </div>
@@ -489,19 +586,25 @@
                     </ul>
                   </div>
 
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let li13 = document.querySelectorAll(".ex13js_li");<br>
-                      li13.forEach(function (li) {<br>
-                        &nbsp;&nbsp;li.addEventListener("click", function (e) {<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;li13.forEach((element) => {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.style.textDecoration = "line-through";<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.style.fontWeight = "normal";<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;});<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;e.target.style.textDecoration = "none";<br>
-                          &nbsp;&nbsp;&nbsp;&nbsp;e.target.style.fontWeight = "bold";<br>
-                          &nbsp;&nbsp;});<br>
+                      let li13 = document.querySelectorAll(".ex13js_li");<br />
+                      li13.forEach(function (li) {<br />
+                      &nbsp;&nbsp;li.addEventListener("click", function (e) {<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;li13.forEach((element) => {<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.style.textDecoration
+                      = "line-through";<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.style.fontWeight
+                      = "normal";<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;});<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;e.target.style.textDecoration =
+                      "none";<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;e.target.style.fontWeight =
+                      "bold";<br />
+                      &nbsp;&nbsp;});<br />
                       });
                     </code>
                   </div>
@@ -519,7 +622,6 @@
           </ul>
         </section>
 
-
         <!-- ! Functions Template -->
         <section id="functions__section" class="section--hide">
           <ul class="article__list">
@@ -529,22 +631,30 @@
                   Create an HTML element with any text value
                 </div>
                 <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex14jq_btn").on("click", function () {<br>
-                        &nbsp;&nbsp;$(".ex14jq").append($("&lt;p&gt;").text("It's alive!"));<br>
+                      $(".ex14jq_btn").on("click", function () {<br />
+                      &nbsp;&nbsp;$(".ex14jq").append($("&lt;p&gt;").text("It's
+                      alive!"));<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex ex14jq">
-                    <button class="ex14jq_btn">Create your first element</button>
+                    <button class="ex14jq_btn">
+                      Create your first element
+                    </button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let secondP = document.createElement('p');<br>
-                      document.querySelector('.ex14js').append(secondP.innerHTML = "It's alive!");
+                      let secondP = document.createElement('p');<br />
+                      document.querySelector('.ex14js').append(secondP.innerHTML
+                      = "It's alive!");
                     </code>
                   </div>
                   <div class="article__ex ex14js">
@@ -559,25 +669,27 @@
                 <div class="article__title">
                   Remove an HTML element with any text value
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                        &nbsp;&nbsp;$(".ex15jq_p").remove();<br>
-                    </code>
+                    <code> &nbsp;&nbsp;$(".ex15jq_p").remove();<br /> </code>
                   </div>
                   <div class="article__ex">
                     <button class="ex15jq_btn">It's time to go...</button>
                     <p class="ex15jq_p top20">Please, don't!</p>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
-                    <code>
-                      document.querySelector(".ex15js_p").remove();
-                    </code>
+                    <code> document.querySelector(".ex15js_p").remove(); </code>
                   </div>
                   <div class="article__ex">
-                    <button class="ex15js_btn">Another one bites the dust!</button>
+                    <button class="ex15js_btn">
+                      Another one bites the dust!
+                    </button>
                     <p class="ex15js_p top20">I'll be back.</p>
                   </div>
                 </div>
@@ -589,22 +701,27 @@
                 <div class="article__title">
                   Append an HTML element with any text value to a parent element
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex16jq").append($("<p>").text("Nothing special..."));
-                    </code>
+                      $(".ex16jq").append($("
+                      <p>").text("Nothing special..."));</p></code
+                    >
                   </div>
                   <div class="article__ex ex16jq">
                     <button class="ex16jq_btn">What h-append?</button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let ex16p = document.createElement("p");<br>
-                      ex16p.innerHTML = "Three? Three is a crowd!";<br>
-                      document.querySelector(".ex16js").append(ex16p);<br>
+                      let ex16p = document.createElement("p");<br />
+                      ex16p.innerHTML = "Three? Three is a crowd!";<br />
+                      document.querySelector(".ex16js").append(ex16p);<br />
                     </code>
                   </div>
                   <div class="article__ex ex16js">
@@ -617,23 +734,31 @@
             <li>
               <article>
                 <div class="article__title">
-                  Prepend an HTML element with any text value to a parent element
+                  Prepend an HTML element with any text value to a parent
+                  element
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex17jq").prepend($("<p>").text("Watch your back!"));
-                    </code>
+                      $(".ex17jq").prepend($("
+                      <p>").text("Watch your back!"));</p></code
+                    >
                   </div>
                   <div class="article__ex ex17jq">
-                    <button class="ex17jq_btn">Where is this voice coming from?</button>
+                    <button class="ex17jq_btn">
+                      Where is this voice coming from?
+                    </button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let ex17p = document.createElement("p");<br>
-                      ex17p.innerHTML = "Behind you!";<br>
+                      let ex17p = document.createElement("p");<br />
+                      ex17p.innerHTML = "Behind you!";<br />
                       document.querySelector(".ex17js").prepend(ex17p);
                     </code>
                   </div>
@@ -646,15 +771,18 @@
             <li>
               <article>
                 <div class="article__title">
-                  Create and add an HTML element with any text value after another
-                  element
+                  Create and add an HTML element with any text value after
+                  another element
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex18jq_li").after($("<li>").text("Aha, you didn't expected me!"));
-                    </code>
+                      $(".ex18jq_li").after($("
+                      <li>").text("Aha, you didn't expected me!"));</li></code
+                    >
                   </div>
                   <div class="article__ex">
                     <button class="ex18jq_btn">It has disappeared!</button>
@@ -663,12 +791,15 @@
                       <li>Don't know...</li>
                     </ul>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let ex18li = document.createElement("li");<br>
-                      ex18li.innerHTML = "Ducks don't produce echo!";<br>
-                      document.querySelector(".ex18js_li").insertAdjacentElement("afterend", ex18li);
+                      let ex18li = document.createElement("li");<br />
+                      ex18li.innerHTML = "Ducks don't produce echo!";<br />
+                      document.querySelector(".ex18js_li").insertAdjacentElement("afterend",
+                      ex18li);
                     </code>
                   </div>
                   <div class="article__ex">
@@ -688,12 +819,15 @@
                   Create and add an HTML element with any text value before
                   another element
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ex19jq_li").before($("<li>").text("It's a coding trick!"));
-                    </code>
+                      $(".ex19jq_li").before($("
+                      <li>").text("It's a coding trick!"));</li></code
+                    >
                   </div>
                   <div class="article__ex">
                     <button class="ex19jq_btn">How does he do it?</button>
@@ -702,12 +836,15 @@
                       <li class="ex19jq_li">It will appear soon...</li>
                     </ul>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let ex19li = document.createElement("li");<br>
-                      ex19li.innerHTML = "ECHO";<br>
-                      document.querySelector(".ex19js_li").insertAdjacentElement("beforebegin", ex19li);<br>
+                      let ex19li = document.createElement("li");<br />
+                      ex19li.innerHTML = "ECHO";<br />
+                      document.querySelector(".ex19js_li").insertAdjacentElement("beforebegin",
+                      ex19li);<br />
                     </code>
                   </div>
                   <div class="article__ex">
@@ -726,8 +863,10 @@
                 <div class="article__title">
                   Clone an HTML element within other element
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
                       $(".ex20div_blue").append($("#stormtrooper_jq").clone());
@@ -741,10 +880,13 @@
                     </div>
                     <div class="blue_base ex20div_blue top20"></div>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let jedi = document.getElementById("jedi_js").cloneNode();<br>
+                      let jedi =
+                      document.getElementById("jedi_js").cloneNode();<br />
                       document.querySelector(".ex20js_blue").append(jedi);
                     </code>
                   </div>
@@ -763,18 +905,20 @@
             <li>
               <article>
                 <div class="article__title">Add a class to an HTML item</div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $(".ex21jq").addClass("ex21jq--change");
-                    </code>
+                    <code> $(".ex21jq").addClass("ex21jq--change"); </code>
                   </div>
                   <div class="article__ex">
                     <button class="ex21jq_btn">I want to be cool</button>
                     <div class="ex21jq"></div>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
                       document.querySelector(".ex21js").classList.add("ex21js--change");
@@ -791,18 +935,22 @@
             <li>
               <article>
                 <div class="article__title">Remove a class to an HTML item</div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $("#ex22jq").removeClass("ex21jq--change");
-                    </code>
+                    <code> $("#ex22jq").removeClass("ex21jq--change"); </code>
                   </div>
                   <div class="article__ex">
-                    <button class="ex22jq_btn">Oh no, red was better for me</button>
-                    <div id='ex22jq' class="ex21jq ex21jq--change"></div>
+                    <button class="ex22jq_btn">
+                      Oh no, red was better for me
+                    </button>
+                    <div id="ex22jq" class="ex21jq ex21jq--change"></div>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
                       document.getElementById("ex22js").classList.remove("ex21js--change");
@@ -819,18 +967,20 @@
             <li>
               <article>
                 <div class="article__title">Toggle a class of an HTML item</div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $("#ex23jq").toggleClass("ex23jq--change");
-                    </code>
+                    <code> $("#ex23jq").toggleClass("ex23jq--change"); </code>
                   </div>
                   <div class="article__ex">
                     <button class="ex23jq_btn">I want to be Sue Storm!</button>
-                    <div id='ex23jq' class="ex21jq"></div>
+                    <div id="ex23jq" class="ex21jq"></div>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
                       document.getElementById("ex23js").classList.toggle("ex23js--change");
@@ -849,20 +999,24 @@
                 <div class="article__title">
                   Add a disabled attribute to an HTML button
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $(".ex24jq_btn").attr("disabled", "true");
-                    </code>
+                    <code> $(".ex24jq_btn").attr("disabled", "true"); </code>
                   </div>
                   <div class="article__ex">
-                    <button class="ex24jq_btn">I don't want to work anymore</button>
+                    <button class="ex24jq_btn">
+                      I don't want to work anymore
+                    </button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let button24 = document.querySelector(".ex24js_btn");<br>
+                      let button24 = document.querySelector(".ex24js_btn");<br />
                       button24.setAttribute("disabled", "true");
                     </code>
                   </div>
@@ -878,22 +1032,24 @@
                 <div class="article__title">
                   Remove the disabled attribute of an HTML button
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $(".ex25jq_btn").removeAttr("disabled");
-                    </code>
+                    <code> $(".ex25jq_btn").removeAttr("disabled"); </code>
                   </div>
                   <div class="article__ex">
                     <button id="ex25jq_boss">*Boss appearing*</button>
-                    <button class="ex25jq_btn" disabled>I don't want to work anymore</button>
+                    <button class="ex25jq_btn" disabled>
+                      I don't want to work anymore
+                    </button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
-                    <code>
-                      button24.removeAttribute("disabled");
-                    </code>
+                    <code> button24.removeAttribute("disabled"); </code>
                   </div>
                   <div class="article__ex">
                     <button id="ex25js_boss">*Sees boss*</button>
@@ -908,26 +1064,40 @@
                 <div class="article__title">
                   Set a data-src attribute to a img element
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
                       $("#ex26jq").data("language", "Woof woof woof");
                     </code>
                   </div>
                   <div class="article__ex">
-                    <img src="https://images.unsplash.com/photo-1502673530728-f79b4cab31b1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Let me explaing in dog" id="ex26jq">
-                    <button class="ex26jq_btn top20">What are you trying to tell me?</button>
+                    <img
+                      src="https://images.unsplash.com/photo-1502673530728-f79b4cab31b1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+                      alt="Let me explaing in dog"
+                      id="ex26jq"
+                    />
+                    <button class="ex26jq_btn top20">
+                      What are you trying to tell me?
+                    </button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let img26 = document.getElementById("ex26js");<br>
+                      let img26 = document.getElementById("ex26js");<br />
                       img26.setAttribute("data-japanese", "凄い");
                     </code>
                   </div>
                   <div class="article__ex">
-                    <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80" alt="Japan" id="ex26js">
+                    <img
+                      src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80"
+                      alt="Japan"
+                      id="ex26js"
+                    />
                     <button class="ex26js_btn top20">Sugoi!</button>
                   </div>
                 </div>
@@ -939,25 +1109,37 @@
                 <div class="article__title">
                   Remove the data-src attribute of the img element
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $("#ex27jq").removeData("language");
-                    </code>
+                    <code> $("#ex27jq").removeData("language"); </code>
                   </div>
                   <div class="article__ex">
-                    <img src="https://images.unsplash.com/photo-1502673530728-f79b4cab31b1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Let me explaing in dog" id="ex27jq" data-language="Woof woof woof">
+                    <img
+                      src="https://images.unsplash.com/photo-1502673530728-f79b4cab31b1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+                      alt="Let me explaing in dog"
+                      id="ex27jq"
+                      data-language="Woof woof woof"
+                    />
                     <button class="ex27jq_btn top20">Woof woof woof</button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
                       document.getElementById("ex27js").removeAttribute("data-japanese");
                     </code>
                   </div>
                   <div class="article__ex">
-                    <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80" alt="Japan" id="ex27js" data-japanese="凄い">
+                    <img
+                      src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80"
+                      alt="Japan"
+                      id="ex27js"
+                      data-japanese="凄い"
+                    />
                     <button class="ex27js_btn top20">凄い</button>
                   </div>
                 </div>
@@ -968,18 +1150,22 @@
                 <div class="article__title">
                   Hide an HTML element on click (display: none)
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $("#ex28jq").toggle();
-                    </code>
+                    <code> $("#ex28jq").toggle(); </code>
                   </div>
                   <div class="article__ex">
                     <div id="ex28jq"></div>
-                    <button class="ex28jq_btn top20">Let's play hide and seek</button>
+                    <button class="ex28jq_btn top20">
+                      Let's play hide and seek
+                    </button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
                       document.getElementById("ex28js").style.display = "none";
@@ -997,26 +1183,32 @@
                 <div class="article__title ex29">
                   Show an HTML element on click (display: block)
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $("#ex29jq").toggle();
-                    </code>
+                    <code> $("#ex29jq").toggle(); </code>
                   </div>
                   <div class="article__ex">
-                    <div id="ex29jq" style="display: none;"></div>
-                    <button class="ex29jq_btn top20">I'm tired of hiding...</button>
+                    <div id="ex29jq" style="display: none"></div>
+                    <button class="ex29jq_btn top20">
+                      I'm tired of hiding...
+                    </button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
                       document.getElementById("ex29js").style.display = "block";
                     </code>
                   </div>
                   <div class="article__ex">
-                    <div id="ex29js" style="display: none;"></div>
-                    <button class="ex29js_btn top20">Then the game is over</button>
+                    <div id="ex29js" style="display: none"></div>
+                    <button class="ex29js_btn top20">
+                      Then the game is over
+                    </button>
                   </div>
                 </div>
               </article>
@@ -1026,27 +1218,36 @@
                 <div class="article__title">
                   Fade in an HTML element using jQuery
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $("#ex30jq").fadeIn(2000);
-                    </code>
+                    <code> $("#ex30jq").fadeIn(2000); </code>
                   </div>
                   <div class="article__ex">
-                    <div id="ex30jq" class="blue_box" style="display: none;"></div>
+                    <div
+                      id="ex30jq"
+                      class="blue_box"
+                      style="display: none"
+                    ></div>
                     <button class="ex30jq_btn top20">We appear here...</button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      document.getElementById("ex30js").style.transition = "opacity 5s";<br>
+                      document.getElementById("ex30js").style.transition =
+                      "opacity 5s";<br />
                       document.getElementById("ex30js").style.opacity = "1";
                     </code>
                   </div>
                   <div class="article__ex">
-                    <div id="ex30js" class="blue_box" style="opacity: 0;"></div>
-                    <button class="ex30js_btn top20">... like nothing happened</button>
+                    <div id="ex30js" class="blue_box" style="opacity: 0"></div>
+                    <button class="ex30js_btn top20">
+                      ... like nothing happened
+                    </button>
                   </div>
                 </div>
               </article>
@@ -1056,49 +1257,58 @@
                 <div class="article__title">
                   Fade out an HTML element using jQuery
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $("#ex31jq").fadeOut(2000);
-                    </code>
+                    <code> $("#ex31jq").fadeOut(2000); </code>
                   </div>
                   <div class="article__ex">
                     <div id="ex31jq" class="blue_box"></div>
-                    <button class="ex31jq_btn top20">We are like ninjas...</button>
+                    <button class="ex31jq_btn top20">
+                      We are like ninjas...
+                    </button>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      document.getElementById("ex31js").style.transition = "opacity 5s";<br>
+                      document.getElementById("ex31js").style.transition =
+                      "opacity 5s";<br />
                       document.getElementById("ex31js").style.opacity = "0";
                     </code>
                   </div>
                   <div class="article__ex">
                     <div id="ex31js" class="blue_box"></div>
-                    <button class="ex31js_btn top20">We disappear at will!</button>
+                    <button class="ex31js_btn top20">
+                      We disappear at will!
+                    </button>
                   </div>
                 </div>
               </article>
             </li>
           </ul>
         </section>
-      
-      
+
         <!-- ! Selectors Template -->
         <section id="selectors_section" class="section--hide">
           <ul class="article__list">
             <li>
               <article>
                 <div class="article__title">
-                  Iterate a collection of elements and apply a change of style on them
+                  Iterate a collection of elements and apply a change of style
+                  on them
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $("#ex32jq li").each(function (index, element) {<br>
-                        &nbsp;&nbsp;$(element).css("font-weight", "bold");
+                      $("#ex32jq li").each(function (index, element) {<br />
+                      &nbsp;&nbsp;$(element).css("font-weight", "bold");
                     </code>
                   </div>
                   <div class="article__ex">
@@ -1110,12 +1320,15 @@
                       <li>Tiberius</li>
                     </ul>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                        document.querySelectorAll("#ex32js li").forEach((li) => {<br>
-                          &nbsp;&nbsp;li.style.fontStyle = "italic";<br>
-                        });
+                      document.querySelectorAll("#ex32js li").forEach((li) =>
+                      {<br />
+                      &nbsp;&nbsp;li.style.fontStyle = "italic";<br />
+                      });
                     </code>
                   </div>
                   <div class="article__ex">
@@ -1134,10 +1347,13 @@
             <li>
               <article>
                 <div class="article__title">
-                  Get the parent element of a certain element and change its font weight
+                  Get the parent element of a certain element and change its
+                  font weight
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
                       $(".ex33jq_btn").parent().css("font-weight", "bold");
@@ -1146,20 +1362,25 @@
                   <div class="article__ex">
                     <div>
                       I'm the parent
-                    <button class="ex33jq_btn top20">And I'm the son</button>
+                      <button class="ex33jq_btn top20">And I'm the son</button>
                     </div>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      let parent33 = document.querySelector(".ex32js_btn").parentNode;<br>
+                      let parent33 =
+                      document.querySelector(".ex32js_btn").parentNode;<br />
                       parent33.style.fontWeight = "bold";
                     </code>
                   </div>
                   <div class="article__ex">
                     <div>
                       Don't be annoying!
-                    <button class="ex33js_btn top20">I can't promise that...</button>
+                      <button class="ex33js_btn top20">
+                        I can't promise that...
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1169,14 +1390,15 @@
             <li>
               <article>
                 <div class="article__title">
-                  Get the collection of children of a certain element and change its font weight
+                  Get the collection of children of a certain element and change
+                  its font weight
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $(".ex34 li").css("font-weight", "bold");
-                    </code>
+                    <code> $(".ex34 li").css("font-weight", "bold"); </code>
                   </div>
                   <div class="article__ex">
                     <button class="ex34jq_btn">Listen me!</button>
@@ -1187,11 +1409,14 @@
                       <li>Lumpy</li>
                     </ul>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      document.querySelectorAll("#ex34js li").forEach((li) => {<br>
-                        &nbsp;&nbsp;li.style.fontWeight = "normal";<br>
+                      document.querySelectorAll("#ex34js li").forEach((li) =>
+                      {<br />
+                      &nbsp;&nbsp;li.style.fontWeight = "normal";<br />
                       });
                     </code>
                   </div>
@@ -1211,14 +1436,15 @@
             <li>
               <article>
                 <div class="article__title">
-                  Get all the elements that have a certain class and change their font weight
+                  Get all the elements that have a certain class and change
+                  their font weight
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
-                    <code>
-                      $(".special35jq").css("font-weight", "bold");
-                    </code>
+                    <code> $(".special35jq").css("font-weight", "bold"); </code>
                   </div>
                   <div class="article__ex">
                     <button class="ex35jq_btn">Who wants to be special?</button>
@@ -1229,16 +1455,21 @@
                       <li>I'm already special!!!</li>
                     </ul>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      document.querySelectorAll(".special35js").forEach((special) => {<br>
-                        &nbsp;&nbsp;special.style.fontWeight = "bold";<br>
+                      document.querySelectorAll(".special35js").forEach((special)
+                      => {<br />
+                      &nbsp;&nbsp;special.style.fontWeight = "bold";<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex">
-                    <button class="ex35js_btn">Let's get the even numbers</button>
+                    <button class="ex35js_btn">
+                      Let's get the even numbers
+                    </button>
                     <ul id="ex35js" class="top20">
                       <li>1</li>
                       <li class="special35js">2</li>
@@ -1255,8 +1486,10 @@
                 <div class="article__title">
                   Get an item by id and change its font weight
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
                       $("#impostor36jq").css("font-weight", "bold");
@@ -1270,10 +1503,13 @@
                       <li id="impostor36jq">Green</li>
                     </ul>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      document.getElementById("impostor36js").style.fontWeight = "bold";
+                      document.getElementById("impostor36js").style.fontWeight =
+                      "bold";
                     </code>
                   </div>
                   <div class="article__ex">
@@ -1291,149 +1527,329 @@
             <li>
               <article>
                 <div class="article__title">
-                  Get all the elements that have a certain class and the display property of none and change their font color
+                  Get all the elements that have a certain class and the display
+                  property of none and change their font color
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
                   <div class="article__code">
                     <code>
-                      $(".ninja37jq[style='display: none;']").css("color", "red");
+                      $(".ninja37jq[style='display: none;']").css("color",
+                      "red");
                     </code>
                   </div>
                   <div class="article__ex">
                     <button class="ex37jq_btn">Change it!</button>
                     <ul class="top20">
                       <li>There are among us...</li>
-                      <li class="ninja37jq" style="display: none;">I'm here!</li>
+                      <li class="ninja37jq" style="display: none">I'm here!</li>
                       <li>But we can't see them!</li>
                       <li class="ninja37jq">Can't you see me?</li>
-                      <li class="ninja37jq" style="display: none;">Hehehe</li>
+                      <li class="ninja37jq" style="display: none">Hehehe</li>
                       <li>Oh no!</li>
                     </ul>
                   </div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
                   <div class="article__code">
                     <code>
-                      .querySelector(".ninja37js[style='display: none;']").forEach((hidden) => {<br>
-                        &nbsp;&nbsp;hidden.style.color = "blue";<br>
+                      .querySelector(".ninja37js[style='display:
+                      none;']").forEach((hidden) => {<br />
+                      &nbsp;&nbsp;hidden.style.color = "blue";<br />
                       });
                     </code>
                   </div>
                   <div class="article__ex">
                     <button class="ex37js_btn">Now blue</button>
                     <ul class="top20">
-                      <li class="ninja37js" style="display: none;">Some of us are invisible</li>
+                      <li class="ninja37js" style="display: none">
+                        Some of us are invisible
+                      </li>
                       <li>More of them!</li>
                       <li>But I can see some of them</li>
                       <li class="ninja37js">But not all of us</li>
                       <li>I don't understand...</li>
-                      <li class="ninja37js" style="display: none;">I'm invisible</li>
+                      <li class="ninja37js" style="display: none">
+                        I'm invisible
+                      </li>
                     </ul>
                   </div>
                 </div>
               </article>
             </li>
-            <li>
-              <article>
-                <div class="article__title">Get the options of a select element that are selected (attribute selected)</div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
-                  <div class="article__code">
-                    <code></code>
-                  </div>
-                  <div class="article__ex"></div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
-                  <div class="article__code">
-                    <code></code>
-                  </div>
-                  <div class="article__ex"></div>
-                </div>
-              </article>
-            </li>
+
             <li>
               <article>
                 <div class="article__title">
-                  Change the href attribute of the first <a> element (You have to create several <a> elements)
+                  Get the options of a select element that are selected
+                  (attribute selected)
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
-                  <div class="article__code">
-                    <code></code>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
                   </div>
-                  <div class="article__ex"></div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      $("#ex38jq").text("Here is your " + $("#fruits38").val());
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <label for="fruits38">Favourite fruit:</label>
+                    <select name="fruits" id="fruits38">
+                      <option value="apple">Apple</option>
+                      <option value="banana">Banana</option>
+                      <option value="strawberry">Strawberry</option>
+                      <option value="peach">Peach</option>
+                      <option value="Peer">Peer</option>
+                    </select>
+                    <button class="ex38jq_btn top20">I get it for you</button>
+                    <p id="ex38jq" class="top20"></p>
+                  </div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
+                  <div class="article__code">
+                    <code>
+                      let select38 = document.getElementById("tv38");<br />
+                      document.getElementById("ex38js").innerHTML = "Popcorn
+                      ready to see " + select38.value;
+                    </code>
+                  </div>
+                  <div class="article__ex">
+                    <label for="tv38">Favourite classic TV show:</label>
+                    <select name="tv" id="tv38">
+                      <option value="A Team">A Team</option>
+                      <option value="Macgyver">Macgyver</option>
+                      <option value="Alf">Alf</option>
+                      <option value="Plats Bruts">Plats Bruts</option>
+                      <option value="X Files">X Files</option>
+                    </select>
+                    <button class="ex38js_btn top20">Let's watch it!</button>
+                    <p id="ex38js" class="top20"></p>
+                  </div>
                 </div>
               </article>
             </li>
+
             <li>
               <article>
-                <div class="article__title">Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)</div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
-                  <div class="article__code">
-                    <code></code>
+                <div class="article__title">
+                  Change the href attribute of the first &#60;a&#62; element
+                  (You have to create several &#60;a&#62; elements)
+                </div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
                   </div>
-                  <div class="article__ex"></div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      $("#ex39jq a:first-child").attr("href",
+                      "https://youtu.be/Gc2u6AFImn8");
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <p>Useful web developing videos</p>
+                    <ul id="ex39jq">
+                      <li>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"
+                          >Programming basics</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://youtu.be/Qf-wVa9y9V4" target="_blank"
+                          >CSS display explained</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://youtu.be/gaminoBsQx0" target="_blank"
+                          >How to debug code</a
+                        >
+                      </li>
+                    </ul>
+                    <button class="ex39jq_btn top20">
+                      Ok, now let's be serious
+                    </button>
+                  </div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
+                  <div class="article__code">
+                    <code>
+                      document.querySelector("#ex39jsa:first-child").setAttribute("href","https://youtu.be/qL1cjugbaXM");
+                    </code>
+                  </div>
+                  <div class="article__ex">
+                    <p>Good music to code with</p>
+                    <ul id="ex39js">
+                      <li>
+                        <a href="https://youtu.be/FBn7QPQaVPo" target="_blank"
+                          >Let's swing!</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://youtu.be/M0iwxnHCtQI" target="_blank"
+                          >Good old blues</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://youtu.be/5qap5aO4i9A" target="_blank"
+                          >Low the vibe with lowfi</a
+                        >
+                      </li>
+                    </ul>
+                    <button class="ex39js_btn top20">
+                      Something more energetic?
+                    </button>
+                  </div>
                 </div>
               </article>
             </li>
+
+            <li>
+              <article>
+                <div class="article__title">
+                  Show an alert with the value of the first &#60;input&#62; of
+                  the page (Create an &#60;input&#62; element to test this case)
+                </div>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
+                  </div>
+                  <div class="article__code">
+                    <code> alert($("#ex40jq > input").val()); </code>
+                  </div>
+                  <div class="article__ex" id="ex40jq">
+                    <label for="ex40jq_input"
+                      >What are you trying to say?</label
+                    >
+                    <input type="text" id="ex40jq_input2" />
+                    <label for="ex40jq_input2" class="top20"
+                      >Ignore this one</label
+                    >
+                    <input type="text" id="ex40jq_input" />
+                    <button class="ex40jq_btn top20">Scream!</button>
+                  </div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
+                  <div class="article__code">
+                    <code>
+                      alert(document.querySelector("#ex40js > input").value);
+                    </code>
+                  </div>
+                  <div class="article__ex" id="ex40js">
+                    <label for="ex40js_input"
+                      >What are you thinking about?</label
+                    >
+                    <input type="text" id="ex40js_input2" />
+                    <label for="ex40js_input2" class="top20"
+                      >Ignore this one</label
+                    >
+                    <input type="text" id="ex40js_input" />
+                    <button class="ex40js_btn top20">I read your mind</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+
             <li>
               <article>
                 <div class="article__title">
                   Remove all items from a specific selector
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
-                  <div class="article__code">
-                    <code></code>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
                   </div>
-                  <div class="article__ex"></div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
                   <div class="article__code">
-                    <code></code>
+                    <code> $("#ex41jq li:nth-child(odd)").remove(); </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <ul id="ex41jq">
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                    </ul>
+                    <button class="ex41jq_btn top20">
+                      Exterminate the odd ones
+                    </button>
+                  </div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
+                  <div class="article__code">
+                    <code>
+                      document.querySelectorAll("#ex41js
+                      li:nth-child(even)").forEach((liElement) => {<br />
+                      &nbsp;&nbsp;liElement.remove();<br />
+                      });
+                    </code>
+                  </div>
+                  <div class="article__ex">
+                    <ul id="ex41js">
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                    </ul>
+                    <button class="ex41js_btn top20">
+                      Exterminate the even ones
+                    </button>
+                  </div>
                 </div>
               </article>
             </li>
+
             <li>
               <article>
-                <div class="article__title">
+                <div class="article__title" id="ex42">
                   Animate an item after 2 seconds from the initial page load
                 </div>
-                  <div class="article__content article__content--hidden">
-                  <div class="article__language article__language--jquery">jQuery</div>
-                  <div class="article__code">
-                    <code></code>
+                <div class="article__content article__content--hidden">
+                  <div class="article__language article__language--jquery">
+                    jQuery
                   </div>
-                  <div class="article__ex"></div>
-                  <div class="article__language article__language--javascript">JavaScript</div>
                   <div class="article__code">
-                    <code></code>
+                    <code>
+                      let timeOut42 = setTimeout(function () {<br />
+                      &nbsp;&nbsp;$("#ex42jq").animate({ width:"+=50px" });<br />
+                      clearTimeout(timeOut42); }, 2000);
+                    </code>
                   </div>
-                  <div class="article__ex"></div>
+                  <div class="article__ex">
+                    <div class="blue_box" id="ex42jq"></div>
+                  </div>
+                  <div class="article__language article__language--javascript">
+                    JavaScript
+                  </div>
+                  <div class="article__code">
+                    <code>
+                      let tou42 = setTimeout(function () {<br />
+                      &nbsp;&nbsp;document.getElementById("ex42js").style.transition="all
+                      2s";<br />
+                      &nbsp;&nbsp;document.getElementById("ex42js").style.width="20px";<br />
+                      clearTimeout(tou42); }, 2000);
+                    </code>
+                  </div>
+                  <div class="article__ex">
+                    <div class="blue_box" id="ex42js"></div>
+                  </div>
                 </div>
               </article>
             </li>
           </ul>
         </section>
-
-
       </div>
     </main>
 
     <script src="./assets/scripts/main.js"></script>
     <script src="./assets/scripts/jquery.js"></script>
     <script src="./assets/scripts/javascript.js"></script>
-    
   </body>
 </html>

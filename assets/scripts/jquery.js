@@ -236,3 +236,32 @@ $(".ex36jq_btn").on("click", function () {
 $(".ex37jq_btn").on("click", function () {
   $(".ninja37jq[style='display: none;']").css("color", "red");
 });
+
+// Get the options of a select element that are selected (attribute selected)
+$(".ex38jq_btn").on("click", function () {
+  $("#ex38jq").text("Here is your " + $("#fruits38").val());
+});
+
+// Change the href attribute of the first <a> element (You have to create several <a> elements)
+$(".ex39jq_btn").on("click", function () {
+  $("#ex39jq a:first-child").attr("href", "https://youtu.be/Gc2u6AFImn8");
+});
+
+// Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)
+$(".ex40jq_btn").on("click", function () {
+  alert($("#ex40jq > input").val());
+});
+
+// Remove all items from a specific selector
+$(".ex41jq_btn").on("click", function () {
+  $("#ex41jq li:nth-child(odd)").remove();
+});
+
+// Animate an item after 2 seconds from the initial page load
+$("#ex42").on("click", function () {
+  let timeOut42 = setTimeout(function () {
+    console.log("hola");
+    $("#ex42jq").animate({ width: "+=50px" });
+    clearTimeout(timeOut42);
+  }, 2000);
+});

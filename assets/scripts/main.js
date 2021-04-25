@@ -1,5 +1,6 @@
 function loadArticles() {
   $(".article__title").on("click", function () {
+    $(".article__title").next().addClass("article__content--hidden");
     $(this).next().toggleClass("article__content--hidden");
   });
 }
