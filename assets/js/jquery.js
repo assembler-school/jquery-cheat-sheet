@@ -1301,10 +1301,8 @@ function styleCollection() {
   // Macro
   macroString = `// Style collection items
 
-let liElements = $("li");
-
-liElements.each(function(){
-  $(this).on("click", function{
+$("li") .each(function(){
+  $(this).css("text-transform", "uppercase");
   console.log("Styled collection");
 });`;
 
