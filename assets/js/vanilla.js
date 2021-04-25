@@ -1014,6 +1014,34 @@ setTimeout(function(){
   };
 }
 
+//25 ----------------------------------------------------------
+function setDataSrc() {
+  // Macro
+  macroTextVanilla.innerText = `// Set data-src to img
+
+image.setAttribute("data-src", "addedDataSrc");`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleImage = document.createElement("img");
+    exampleImage.classList.add("example-image");
+    exampleImage.style.width = "50%";
+    exampleImage.setAttribute("alt", "Monty Python");
+    exampleImage.setAttribute("src", "./assets/img/spamalot.jpg");
+    exampleImage.setAttribute("data-src", "addedDataSrc");
+
+    let exampleParagraph = document.createElement("div");
+    exampleParagraph.innerText = "> " + exampleImage.outerHTML;
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleImage);
+    outputVanilla.appendChild(exampleParagraph);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1122,5 +1150,9 @@ export const vanillaExamples = [
   // 24
   function () {
     removedDisable();
+  },
+  // 25
+  function () {
+    setDataSrc();
   },
 ];

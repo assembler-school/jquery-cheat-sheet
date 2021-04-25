@@ -1085,6 +1085,37 @@ setTimeout(function(){
   });
 }
 
+//25 ----------------------------------------------------------
+function setDataSrc() {
+  // Macro
+  macroString = `// Set data-src to img
+
+$("img").attr("data-src", "addedDataSrc");`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleImage = $("<img>");
+    exampleImage.addClass("example-image");
+    exampleImage.css("width", "50%");
+    exampleImage.attr("alt", "Monty Python");
+    exampleImage.attr("src", "./assets/img/spamalot.jpg");
+    exampleImage.attr("data-src", "addedDataSrc");
+
+    let exampleParagraph = $("<div>");
+    exampleParagraph.text("> " + exampleImage.prop("outerHTML"));
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleImage);
+    outputJquery.append(exampleParagraph);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1192,5 +1223,9 @@ export const jQueryExamples = [
   // 24
   function () {
     removedDisable();
+  },
+  // 25
+  function () {
+    setDataSrc();
   },
 ];
