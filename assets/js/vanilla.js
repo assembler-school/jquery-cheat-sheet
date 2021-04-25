@@ -1711,6 +1711,54 @@ alert(firstInput.value);`;
   };
 }
 
+//40 ----------------------------------------------------------
+function deleteSelectors() {
+  // Macro
+  macroTextVanilla.innerText = `// Delete all given selectors
+
+  document.querySelectorAll('li').forEach((e) => e.remove());`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleUL = document.createElement("ul");
+    exampleUL.classList.add("example-ul");
+
+    let ulItem1 = document.createElement("li");
+    ulItem1.innerText = "Graham Chapman";
+    let ulItem2 = document.createElement("li");
+    ulItem2.innerText = "Terry Jones";
+    let ulItem3 = document.createElement("li");
+    ulItem3.innerText = "Terry Gilliam";
+    let ulItem4 = document.createElement("li");
+    ulItem4.innerText = "Eric Idle";
+    let ulItem5 = document.createElement("li");
+    ulItem5.innerText = "John Clesse";
+    let ulItem6 = document.createElement("li");
+    ulItem6.innerText = "Michael Pallin";
+
+    exampleUL.appendChild(ulItem1);
+    exampleUL.appendChild(ulItem2);
+    exampleUL.appendChild(ulItem3);
+    exampleUL.appendChild(ulItem4);
+    exampleUL.appendChild(ulItem5);
+    exampleUL.appendChild(ulItem6);
+
+    let liElements = document.getElementsByTagName("li");
+
+    setTimeout(function () {
+      document.querySelectorAll("li").forEach((e) => e.remove());
+      console.log("Deleted all <li> elements");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleUL);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1881,5 +1929,9 @@ export const vanillaExamples = [
   // 39
   function () {
     inputAlert();
+  },
+  // 40
+  function () {
+    deleteSelectors();
   },
 ];

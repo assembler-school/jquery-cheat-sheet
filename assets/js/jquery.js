@@ -1301,7 +1301,7 @@ function styleCollection() {
   // Macro
   macroString = `// Style collection items
 
-$("li") .each(function(){
+$("li").each(function(){
   $(this).css("text-transform", "uppercase");
   console.log("Styled collection");
 });`;
@@ -1798,6 +1798,54 @@ alert(firstInput.val());`;
   });
 }
 
+//40 ----------------------------------------------------------
+function deleteSelectors() {
+  // Macro
+  macroString = `// Delete all given selectors
+
+$("li")..remove();`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleUL = $("<ul>");
+    exampleUL.addClass("example-ul");
+
+    let ulItem1 = $("<li>");
+    ulItem1.text("Graham Chapman");
+    let ulItem2 = $("<li>");
+    ulItem2.text("Terry Jones");
+    let ulItem3 = $("<li>");
+    ulItem3.text("Terry Gilliam");
+    let ulItem4 = $("<li>");
+    ulItem4.text("Eric Idle");
+    let ulItem5 = $("<li>");
+    ulItem5.text("John Cleese");
+    let ulItem6 = $("<li>");
+    ulItem6.text("Michael Pallin");
+
+    exampleUL.append(ulItem1);
+    exampleUL.append(ulItem2);
+    exampleUL.append(ulItem3);
+    exampleUL.append(ulItem4);
+    exampleUL.append(ulItem5);
+    exampleUL.append(ulItem6);
+
+    setTimeout(function () {
+      $("li").remove();
+      console.log("Deleted all <li> elements");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleUL);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1967,5 +2015,9 @@ export const jQueryExamples = [
   // 39
   function () {
     inputAlert();
+  },
+  // 40
+  function () {
+    deleteSelectors();
   },
 ];
