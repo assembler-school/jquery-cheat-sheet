@@ -1206,7 +1206,7 @@ button.on("click", function(){
 //28 ----------------------------------------------------------
 function displayBlock() {
   // Macro
-  macroString = `/// Show element on click (display: block)
+  macroString = `// Show element on click (display: block)
 
 button.on("click", function(){
   element.css("display", "block");
@@ -1244,6 +1244,33 @@ button.on("click", function(){
     outputJquery.append(exampleChild);
   });
 }
+
+//29 ----------------------------------------------------------
+function fadedIn() {
+  // Macro
+  macroString = `// Fade in element in 2 seconds
+
+element.fadeIn(2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleParent = $("<div>");
+    exampleParent.addClass("example-parent");
+    exampleParent.text("Fading in");
+    exampleParent.hide();
+    exampleParent.fadeIn(2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleParent);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1367,5 +1394,9 @@ export const jQueryExamples = [
   // 28
   function () {
     displayBlock();
+  },
+  // 29
+  function () {
+    fadedIn();
   },
 ];

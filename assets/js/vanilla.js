@@ -1168,6 +1168,35 @@ button.onclick = function(){
   };
 }
 
+//29 ----------------------------------------------------------
+function fadedIn() {
+  // Macro
+  macroTextVanilla.innerText = `// Fade in element in 2 seconds
+
+element.style.animation = "fadeIn 2s";
+
+/* CSS animation */
+@keyframes fadeIn {
+  0% {opacity:0%;}
+  100% {opacity:100%;}
+}`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleParent = document.createElement("div");
+    exampleParent.classList.add("example-parent");
+    exampleParent.innerText = "Fading in";
+    exampleParent.style.animation = "fadeIn 2s";
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleParent);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1292,5 +1321,9 @@ export const vanillaExamples = [
   // 28
   function () {
     displayBlock();
+  },
+  // 29
+  function () {
+    fadedIn();
   },
 ];
