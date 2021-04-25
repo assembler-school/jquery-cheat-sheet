@@ -372,6 +372,7 @@ button:disabled {
   h2 {
     font-weight: var(--regular);
     font-size: 18px;
+    height: max-content;
   }
 
   p {
@@ -391,14 +392,14 @@ button:disabled {
   .rectangle {
     width: 100%;
     min-height: 250px;
-    max-height: 450px;
+    /* height: 450px; */
+    height: 100%;
   }
 
   .square {
     width: 100%;
     min-width: 0;
-    min-height: 450px;
-    height: 450px;
+    height: max-content;
   }
 
   .console-container {
@@ -409,5 +410,10 @@ button:disabled {
 
   .general-title {
     order: -1;
+  }
+
+  .ex-container {
+    overflow: hidden;
+    height: max-content;
   }
 }
