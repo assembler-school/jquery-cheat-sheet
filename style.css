@@ -141,7 +141,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 70%;
+    width: 90%;
     height: 8%;
     border: 1px solid black;
     border-radius: 5px;
@@ -166,7 +166,7 @@ header{
 #text-boxes{
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 90%;
     height: 70%;
     /* border: 1px solid black; */
     border-radius: 5px;
@@ -175,11 +175,12 @@ header{
 }
 
 .text-box-modal{
-    display: flex;
+    overflow: auto;
     width: 50%;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 100;
     margin: 10px;
+    padding: 10px;
     border: black 1px solid;
 }
 
