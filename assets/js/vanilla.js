@@ -1513,12 +1513,11 @@ setTimeout(function(){
     let numCells = 25;
 
     for (let i = 1; i <= numCells; i++) {
-      var cell = document.createElement("div");
+      let cell = document.createElement("div");
       exampleGrid.appendChild(cell);
       cell.setAttribute("id", "cell" + i);
       cell.classList.add("example-parent");
       cell.classList.add("example-cell");
-      cell.style.textAlign = "center";
       cell.innerHTML = i;
     }
 

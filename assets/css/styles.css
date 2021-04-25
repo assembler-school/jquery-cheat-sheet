@@ -446,6 +446,11 @@ footer {
   gap: calc(var(--margin) / 2);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.example-cell {
+  text-align: center;
 }
 
 .example-hidden-cell {

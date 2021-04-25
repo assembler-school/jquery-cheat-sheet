@@ -1576,6 +1576,68 @@ setTimeout(function(){
   });
 }
 
+//35 ----------------------------------------------------------
+function styleHiddenId() {
+  // Macro
+  macroString = `// Style element by id
+
+setTimeout(function(){
+  $("#element-2").css({
+    fontWeight: "light",
+    outline: "1px solid white",
+  };
+}, 2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleGrid = $("<div>");
+    exampleGrid.addClass("example-grid");
+
+    let numCells = 25;
+
+    for (let i = 1; i <= numCells; i++) {
+      let cell = $("<div>");
+      exampleGrid.append(cell);
+      cell.attr("id", "cell" + i);
+      cell.addClass("example-parent");
+      cell.addClass("example-cell");
+      cell.text(i);
+    }
+
+    // ----> Loop goes here
+    setTimeout(function () {
+      $(".example-cell").each(function () {
+        if ($(this).css("display") === "none") {
+          $(this).css({
+            display: "block",
+            outlineColor: "var(--accent-color)",
+            color: "var(--accent-color)",
+          });
+        }
+      });
+      console.log("Styled hidden elements with example-cell class");
+    }, 2000);
+    //
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleGrid);
+
+    $("#cell4").css({ display: "none", color: "var(--accent-color)" });
+    $("#cell7").css({ display: "none", color: "var(--accent-color)" });
+    $("#cell10").css({ display: "none", color: "var(--accent-color)" });
+    $("#cell11").css({ display: "none", color: "var(--accent-color)" });
+    $("#cell15").css({ display: "none", color: "var(--accent-color)" });
+    $("#cell17").css({ display: "none", color: "var(--accent-color)" });
+    $("#cell19").css({ display: "none", color: "var(--accent-color)" });
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1729,5 +1791,9 @@ export const jQueryExamples = [
   // 35
   function () {
     styleId();
+  },
+  // 35
+  function () {
+    styleHiddenId();
   },
 ];
