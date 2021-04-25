@@ -1559,6 +1559,49 @@ setTimeout(function(){
   };
 }
 
+//37 ----------------------------------------------------------
+function selectedAttribute() {
+  // Macro
+  macroTextVanilla.innerText = `// Select option with selected attribute
+
+document.querySelector("[selected]");`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleSelect = document.createElement("select");
+    exampleSelect.classList.add("example-select");
+
+    let option1 = document.createElement("option");
+    option1.innerText = "The Life of Brian";
+    option1.setAttribute("value", option1.innerText);
+
+    let option2 = document.createElement("option");
+    option2.innerText = "Spamalot";
+    option2.setAttribute("value", option2.innerText);
+    option2.setAttribute("selected", "true");
+
+    let option3 = document.createElement("option");
+    option3.innerText = "The meaning of Life";
+    option3.setAttribute("value", option3.innerText);
+
+    exampleSelect.appendChild(option1);
+    exampleSelect.appendChild(option2);
+    exampleSelect.appendChild(option3);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleSelect);
+    let selectedElement = document.querySelector("[selected]");
+
+    let exampleParagraph = document.createElement("p");
+    exampleParagraph.innerText = "\n> " + selectedElement.outerHTML;
+    outputVanilla.appendChild(exampleParagraph);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1717,5 +1760,9 @@ export const vanillaExamples = [
   // 36
   function () {
     styleHiddenId();
+  },
+  // 37
+  function () {
+    selectedAttribute();
   },
 ];

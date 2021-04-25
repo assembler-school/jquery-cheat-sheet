@@ -1576,16 +1576,17 @@ setTimeout(function(){
   });
 }
 
-//35 ----------------------------------------------------------
+//36 ----------------------------------------------------------
 function styleHiddenId() {
   // Macro
-  macroString = `// Style element by id
+  macroString = `// Style element by class and display none
 
 setTimeout(function(){
-  $("#element-2").css({
-    fontWeight: "light",
-    outline: "1px solid white",
-  };
+  $("#targetClass").each(function(){
+    if ($(this).css(display) === "none"){
+      $(this).css("display", "block");
+    }
+  });
 }, 2000);`;
 
   macroJquery.text(macroString);
@@ -1635,6 +1636,52 @@ setTimeout(function(){
     $("#cell15").css({ display: "none", color: "var(--accent-color)" });
     $("#cell17").css({ display: "none", color: "var(--accent-color)" });
     $("#cell19").css({ display: "none", color: "var(--accent-color)" });
+  });
+}
+
+//37 ----------------------------------------------------------
+function selectedAttribute() {
+  // Macro
+  macroString = `// Select option with selected attribute
+
+$(":selected");`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleSelect = $("<select>");
+    exampleSelect.addClass("example-select");
+
+    let option1 = $("<option>");
+    option1.text("The Life of Brian");
+    option1.val(option1.text());
+
+    let option2 = $("<option>");
+    option2.text("Spamalot");
+    option2.val(option2.text());
+    option2.attr("selected", true);
+
+    let option3 = $("<option>");
+    option3.text("The meaning of Life");
+    option3.val(option3.text());
+
+    exampleSelect.append(option1);
+    exampleSelect.append(option2);
+    exampleSelect.append(option3);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleSelect);
+    let selectedElement = $(":selected");
+    console.log(selectedElement);
+
+    let exampleParagraph = $("<p>");
+    exampleParagraph.text("\n> " + selectedElement.prop("outerHTML"));
+    outputJquery.append(exampleParagraph);
   });
 }
 
@@ -1792,8 +1839,12 @@ export const jQueryExamples = [
   function () {
     styleId();
   },
-  // 35
+  // 36
   function () {
     styleHiddenId();
+  },
+  // 37
+  function () {
+    selectedAttribute();
   },
 ];
