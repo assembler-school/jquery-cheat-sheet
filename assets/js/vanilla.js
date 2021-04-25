@@ -1285,6 +1285,45 @@ for (let l of liElements){
   };
 }
 
+// Selectors
+//32 ----------------------------------------------------------
+function styleParent() {
+  // Macro
+  macroTextVanilla.innerText = `// Change parent's font-weight after 2 seconds
+
+setTimeout(function(){
+  let parent = element.parentNode;
+  parent.style.fontWeight = "light";
+  parent.style.outline = "1px solid white";
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleParent = document.createElement("div");
+    exampleParent.setAttribute("class", "example-parent");
+    exampleParent.innerText = "Parent";
+
+    let exampleChild = document.createElement("div");
+    exampleChild.classList.add("example-child");
+    exampleChild.innerText = "Child";
+
+    setTimeout(function () {
+      let parent = exampleChild.parentElement;
+      parent.style.fontWeight = "var(--extraLight)";
+      parent.style.outline = "1px solid var(--light-color)";
+      console.log("Styled parent");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    exampleParent.appendChild(exampleChild);
+    outputVanilla.appendChild(exampleParent);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1421,5 +1460,11 @@ export const vanillaExamples = [
   // 31
   function () {
     styleCollection();
+  },
+
+  // Selectors
+  // 32
+  function () {
+    styleParent();
   },
 ];

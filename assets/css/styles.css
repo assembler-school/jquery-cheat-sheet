@@ -431,6 +431,7 @@ footer {
 
 .example-child {
   margin-top: calc(var(--margin) / 2);
+  font-weight: var(--medium);
   padding: calc(var(--margin) / 2);
   outline: var(--border-size) solid var(--light-color);
 }

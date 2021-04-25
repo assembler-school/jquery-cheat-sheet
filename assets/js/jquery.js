@@ -1353,6 +1353,49 @@ $("li") .each(function(){
   });
 }
 
+// Selectors
+//32 ----------------------------------------------------------
+function styleParent() {
+  // Macro
+  macroString = `// Change parent's font-weight after 2 seconds
+
+setTimeout(function(){
+  let parent = element.parent();
+  parent.css({
+    fontWeight: "light",
+    outline: ""1px solid white"})
+}, 2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleParent = $("<div>");
+    exampleParent.addClass("example-parent");
+    exampleParent.text("Parent");
+
+    let exampleChild = $("<div>");
+    exampleChild.addClass("example-child");
+    exampleChild.text("Child");
+
+    setTimeout(function () {
+      let parent = exampleChild.parent();
+      parent.css({
+        fontWeight: "var(--extraLight)",
+        outline: "1px solid var(--light-color)",
+      });
+      console.log("Styled parent");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    exampleParent.append(exampleChild);
+    outputJquery.append(exampleParent);
+  });
+}
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1488,5 +1531,11 @@ export const jQueryExamples = [
   // 31
   function () {
     styleCollection();
+  },
+
+  // Selectors
+  // 32
+  function () {
+    styleParent();
   },
 ];
