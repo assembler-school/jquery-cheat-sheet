@@ -1,3 +1,5 @@
+
+
 function ready(){
     
     $( document ).ready(function() {
@@ -37,13 +39,13 @@ function clicked(){
     });
 }function loadAction(){
     $( ".run" ).text("Wait to image");
-    $('.result').append('<img src="assets/ShinChan1.jpg" alt="culo" class="imag">');
+    $('.result').append('<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">');
     $('.result').load('.imag',function() {
         $('.run').text('Enjoy this image!');
     });
 }function errAction(){
-    $('.result').append('<img src="assets/scriptsNative.js" alt="culo" class="imatg">');
-    $( '.imatg').error(function() {
+    $('.result').append('<img src="assets/scriptsNative.js" class="imatg">');
+    $( '.imatg').on('error',function() {
         $('.result').text('there is an error charging the image!');
     });
 }
@@ -144,100 +146,203 @@ function elementBefore(){
     $('.run').before("<p>Congratulations crate this</p>");
 }
 function colantion(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("clone me please!!");
+    $('.run').clone().appendTo(".result");
 }
 function addingClass(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("add a class to the p element below");
+    $('.result').text("<p class='result'>I need a new class</p>");
+    
+    $('.run').on('click', function(){
+        $('.result').addClass('newClass');
+        $('.newClass').text("<p class='result newClass'>thanks</p>");
+    })
 }
 function removingClass(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $('.result').addClass('newClass');
+    $( ".run" ).text("remove the newClass");
+    $('.result').text("<p class='result newClass'>to many classse ,plese remove one</p>");
+    
+    $('.run').on('click', function(){
+        $('.result').removeClass('newClass')
+        $('.result').text("<p class='result'>thanks</p>");
+    })
 }
 function toggClass(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $('.result').attr('id','newId');
+    $( ".run" ).text("active and deactive the result class");
+    $('.result').text("The class is activate");
+    
+    $('.run').on('click', function(){
+        
+        $('#newId').toggleClass('result');
+       $('#newId').text("deactivate");
+    })
 }
 function newAtribute(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
-}
-function deteAtribute(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("Disable me!!");
+    $('.result').text("Disable him");
+   $('.run').prop('disabled',true)
+   if($('.run:disabled')){
+        $( ".run" ).text("¡¡¡oh,no you disabled me!!!!");
+        $('.result').text("The input is disabled");
+        $('.run').css('background-color','grey')
+        $('.result').append("<button class='run' id='newbut'>Make the button able here!!!,come on!!</button>");
+        $( "#newbut" ).css('background-color','red');
+        $( "#newbut" ).on('click',function(){
+            $('.run').css('background-color','black');
+            $('.run').prop('disabled',false);
+            $( ".run" ).text("Disable me!!");
+            $('.result').text("Disable him");
+        })
+    }
 }
 function dataSrc(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $('.result').addClass('newClass');
+    $( ".run" ).text("add an image with data-src");
+    $('.result').append('<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">');
+    $('.imag').attr('data-src',"I'm data");
+    $('.result').append('<p>');
+    $('.result p').text('<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag" data-src="I,m data">');
+    $( ".run" ).text("remove data-src");
+    $( ".run" ).on("click",function(){
+        $('.result').empty();
+        $('.result').append('<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">');
+        $('.result').append('<p>');     
+        $('.result p').text('<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">');
+        $('.imag').removeAttr('data-src');
+        $( ".run" ).text("data-src have been removed");
+    });
+   
 }
+
 function noShow(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("hide the text");
+    $('.result').text("Come on hide me!!!");
+    $( '.run').on('click',function() {
+        $('.result').hide();
+        $( ".run" ).text("The text have been hidden,show it!!");
+        $( '.run').on('click',function(){
+            $( ".run" ).text("Here we have again");
+            $('.result').show();
+        })
+    });
 }
-function siShow(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
-}
+
 function opacityUp(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("Say no Hello!!!");
+    $('.result').text("HOLA");
+    $( ".run" ).on("click",function(){
+        $( ".run" ).text(" naw Say HeLLooo !!!");
+        $('.result').fadeOut('slow');
+        $( ".run" ).on("click",function(){
+            $( ".run" ).text("Say HeLLooo!!!");
+            $('.result').fadeIn('slow');
+        })
+    });
 }
-function opacityDown(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
-}
+
 function runArray(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("Send the items in the list");
+    $('.result').append("<ul><li>hola</li> <li>ketal?</li> <li>estaís?</li> </ul><button id='lis' class='run'>styles</button>");
+    $( "#lis" ).on("click",function(){
+        $('.result li').each(function(){
+            $(this).css('font-weight','400');
+            $(this).css('color','red');
+        })
+    });
+   
 }
-function PapaNode(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+function papaNode(){
+    $(".run").text("Get the my parent");
+    $('.result').text("Its also mine");
+    $('.run').on('click',function() {
+        console.log($('.run').parent())
+        $('.run').text('The console.log show: ');
+        $('.result').text('div.showComandContent');
+        $('.result').css('color', 'violet')
+    });        
 }
 function sonNode(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $(".run").text("Get me and my brothers");
+    $('.result').text("Its also mine");
+    $('.run').on('click',function() {
+        console.log($('.showComandContent').children())
+        $('.run').text('The console.log show: ');
+        $('.result').text('div.t1, div.vanillaBox, div.jQueryBox, button.ejempleButJq, button.run, button.ejempleButVani, p.result');
+        $('.result').css('color', 'violet')
+        $('.result').css('font-size', '15px')
+    });
+}
+function clssN(){
+    $(".run").text("Get al the elements with the class: specificEvent");
+    $('.run').on('click',function() {
+        $('.specificEvent').css('color', 'yellow');
+       
+        $('.run').text('Good job!!');
+        $('.result').text('Now check the Events descriptions');
+        
+    });
+    
+}
+function idN(){
+    $(".run").text("Get al the element with the iD: tiitle");
+    $('.run').on('click',function() {
+        $('#tiitle').css('font-weight', '100');
+        $('#tiitle').css('color', 'yellow');
+        $('.run').text('Good job!!');
+        $('.result').text('Now check the Title of the web');
+        
+    });
+
+}
+function classNone(){
+    $('.jsclas').hide();
+    $(".run").text("change display none elements");
+    
+    $('.result').append('<button class="run" id="but">show the title and change styles</button>')
+    $('h2:hidden').css('color','yellow')
+    $('#but').on('click',function(){
+        $('.jsclas').show();
+    });
+    
+   
+}
+function selecD(){
+    $(".run").text("Get me and my brothers");
+    
+    $('.result').append(" <select class='sOptions'><option class='Options'>goode morning</option><option class='Options'>good night</option><option class='Options'>I,m finally crazy?</option><option class='Options'> How long?</option></select>");
+    $('.result').prepend('<button class="run" id="but">Witch I selected ? </button>')
+    $("#but").on('click',function(){
+        $('.result').text($('.Options:selected').text())
+        $(".run").off('click');
+    });
+}
+function aHref(){
+    $(".run").text("Get me and my brothers");
+    $('.result').append("<a>hola</a>");
+    $('.result').append("<a>ketal?</a>");
+    $('.result').append("<a>estaís?</a>");
+    $('.result').append("<button id='lis' class='run'>change the color and url of the first</button>");
+    $('.result a').attr('href','https://images-na.ssl-images-amazon.com/images/I/81EOy3o-eJL.jpg')
+    $('#lis').on('click',function(){
+        $('.result a:first-child').attr('href','https://www.google.com/imgres?imgurl=https%3A%2F%2Fthehighdefinitionwallpapers.com%2Fwp-content%2Fuploads%2F2020%2F02%2FNaturalFlowerNatural-Orange-butterfly-on-yellow-flowers-nice-background.jpg&imgrefurl=https%3A%2F%2Fthehighdefinitionwallpapers.com%2Fnatural-orange-butterfly-on-yellow-flowers-nice-background%2F&tbnid=U1D1C3OEPpzqQM&vet=12ahUKEwjt3ZaV_JnwAhUS04UKHYjtCQoQMygdegUIARDNAg..i&docid=qUF1M32c321_gM&w=1920&h=1200&q=flowers%20nice&ved=2ahUKEwjt3ZaV_JnwAhUS04UKHYjtCQoQMygdegUIARDNAg')
+        $('.result a:first-child').css('color','yellow')
+        $(".run").off('click')
+    })
+
+}
+function frst(){
+    $(".run").text("Get me and my brothers");
+    $('.result').text("Its also mine");
+  
+}
+function killThemAll(){
+     $('div.showComandContent').empty()
+    
+}
+function move(){
+    $(".run").text("Get me and my brothers");
+    $('.result').text("Its also mine");
+   
 }

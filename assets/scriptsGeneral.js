@@ -183,99 +183,126 @@ function textLaunch(event){
     {
         $( ".run" ).text("click");
         $('.jsclas').text('classList.toggle');
-        $('.jQclas').text('toggle');
+        $('.jQclas').text('toggleClass');
         $('.run').on('click',toggClass);
     }else if
     ($(selected).attr('id')=='command 23')
     {
         $( ".run" ).text("click");
         $('.jsclas').text('setAttribute("disabled")');
-        $('.jQclas').text('attr("disabled")');
+        $('.jQclas').text('prop');
         $('.run').on('click',newAtribute);
+    
     }else if
     ($(selected).attr('id')=='command 24')
-    {
-        $( ".run" ).text("click");
-        $('.jsclas').text('removeAttribute("disabled")');
-        $('.jQclas').text('removeAttr("disabled")');
-        $('.run').on('click',deteAtribute);
-    }else if
-    ($(selected).attr('id')=='command 25')
     {
         $( ".run" ).text("click");
         $('.jsclas').text('setAttribute("data-src","name")');
         $('.jQclas').text('attr("data-src","name")');
         $('.run').on('click',dataSrc);
+    
+    }else if
+    ($(selected).attr('id')=='command 25')
+    {
+        $( ".run" ).text("click");
+        $('.jsclas').text('display = "none/block"');
+        $('.jQclas').text('hide/show');
+        $('.run').on('click',noShow);
+    
     }else if
     ($(selected).attr('id')=='command 26')
     {
         $( ".run" ).text("click");
-        $('.jsclas').text('removeAttribute("data-src")');
-        $('.jQclas').text('removeAttr("data-src")');
-        $('.run').on('click',deleDataSrc);
-    }else if
-    ($(selected).attr('id')=='command 27')
-    {
-        $( ".run" ).text("click");
-        $('.jsclas').text('visibility = "hidden"');
-        $('.jQclas').text('hide');
-        $('.run').on('click',noShow);
-    }else if
-    ($(selected).attr('id')=='command 28')
-    {
-        $( ".run" ).text("click");
-        $('.jsclas').text('style.visibility = "visible"');
-        $('.jQclas').text('show');
-        $('.run').on('click',siShow);
-    }else if
-    ($(selected).attr('id')=='command 29')
-    {
-        $( ".run" ).text("click");
-        $('.jsclas').text('style.opacity+');
-        $('.jQclas').text('fadeIn');
+        $('.jsclas').text('style.opacity +/-');
+        $('.jQclas').text('fadeIn / fadeOut');
         $('.run').on('click',opacityUp);
     }else if
-    ($(selected).attr('id')=='command 30')
-    {
-        $( ".run" ).text("click");
-        $('.jsclas').text('style.opacity-');
-        $('.jQclas').text('fadeOut');
-        $('.run').on('click',opacityDown);
-    }else if
-    ($(selected).attr('id')=='command 31')
+    ($(selected).attr('id')=='command 27')
     {
         $( ".run" ).text("click");
         $('.jsclas').text('forEach');
         $('.jQclas').text('each');
         $('.run').on('click',runArray);
     }else if
-    ($(selected).attr('id')=='command 32')
+    ($(selected).attr('id')=='command 28')
     {
         $( ".run" ).text("click");
         $('.jsclas').text('parentNode');
         $('.jQclas').text('parent');
-        $('.run').on('click',PapaNode);
+        $('.run').on('click',papaNode);
     }else if
-    ($(selected).attr('id')=='command 33')
+    ($(selected).attr('id')=='command 29')
     {
         $( ".run" ).text("click");
         $('.jsclas').text('childNodes');
         $('.jQclas').text('children');
         $('.run').on('click',sonNode);
     }
+    else if
+    ($(selected).attr('id')=='command 30')
+    {
+        $( ".run" ).text("click");
+        $('.jsclas').text('query.selectorAll(".className")');
+        $('.jQclas').text('$(.className)');
+        $('.run').on('click',clssN);
+    }
+    else if
+    ($(selected).attr('id')=='command 31')
+    {
+        $( ".run" ).text("click");
+        $('.jsclas').text('query.selectorAll("#idName")');
+        $('.jQclas').text('$(#idName)');
+        $('.run').on('click',idN);
+    }
+    else if
+    ($(selected).attr('id')=='command 32')
+    {
+        $( ".run" ).text("click");
+        $('.jsclas').text('childNodes');
+        $('.jQclas').text('tag:hidden');
+        $('.run').on('click',classNone);
+    }
+    else if
+    ($(selected).attr('id')=='command 33')
+    {
+        $( ".run" ).text("click");
+        $('.jsclas').text('childNodes');
+        $('.jQclas').text(':selected');
+        $('.run').on('click',selecD);
+    }
+    else if
+    ($(selected).attr('id')=='command 34')
+    {
+        $( ".run" ).text("click");
+        $('.jsclas').text('childNodes');
+        $('.jQclas').text('attr("href", direction');
+        $('.run').on('click',aHref);
+    }
+    else if
+    ($(selected).attr('id')=='command 35')
+    {
+        $( ".run" ).text("click");
+        $('.jsclas').text('childNodes');
+        $('.jQclas').text('.first');
+        $('.run').on('click',frst);
+    }
+    else if
+    ($(selected).attr('id')=='command 36')
+    {
+        $(".run").text("press here to.. KILL THEM ALL!!");
+        $('.result').text("No please don't do it!!x(");
+        $('.jsclas').text('childNodes');
+        $('.jQclas').text('.empty');
+        $('.run').on('click',killThemAll);
+    }
+    else if
+    ($(selected).attr('id')=='command 37')
+    {
+        $( ".run" ).text("click");
+       
+        $('.jsclas').text('childNodes');
+        $('.jQclas').text('.animate');
+        $('.run').on('click',move);
+    }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
 }
