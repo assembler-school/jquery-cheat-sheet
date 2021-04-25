@@ -1,10 +1,43 @@
 /* Events functions*/
 
 export function HTMLLoaded(){
-    console.log("First function jQuery");
+    let textCode =
+`$(document).ready(function () {
+    $("#element1").hide();
+    $("#button1").on("click", function () {
+        $("#element1").show();
+    });
+});`;
+
+    let HTML = `<div id='element1'>Element 1 Text</div>
+    <button id='button1'>Show Element</button>`;
+
+    $("#code-modal").html(textCode);
+    $("#html-modal").html(HTML);
+
+    /* Code in Textcode Area */
+    $("#element1").hide();
+    $("#button1").on("click", function () {
+        $("#element1").show();
+    });
 }
 
 export function Click(){
+    let textCode =
+`$("#button2").on("click", function () {
+    $("#element2").css("color", "red");
+});`;
+
+    let HTML = `<div id='element2'>Element 2 Text Style</div>
+    <button id='button2'>Change Color</button>`;
+
+    $("#code-modal").html(textCode);
+    $("#html-modal").html(HTML);
+
+    /* Code in Textcode Area */
+    $("#button2").on("click", function () {
+        $("#element2").css("color", "red");
+    });
 }
 
 export function DoubleClick(){
