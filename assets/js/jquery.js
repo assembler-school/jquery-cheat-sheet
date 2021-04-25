@@ -1685,6 +1685,79 @@ $(":selected");`;
   });
 }
 
+//38 ----------------------------------------------------------
+function changeHref() {
+  // Macro
+  macroString = `// Change href of the first <a>
+
+$("a").first().attr("href", "newUrl");
+`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleUL = $("<ul>");
+    exampleUL.addClass("example-ul");
+
+    let ulItem1 = $("<li>");
+    let ulItem2 = $("<li>");
+    let ulItem3 = $("<li>");
+    let ulItem4 = $("<li>");
+    let ulItem5 = $("<li>");
+    let ulItem6 = $("<li>");
+
+    let aItem1 = $("<a>");
+    aItem1.attr("href", "https://ca.wikipedia.org/wiki/Graham_Chapman");
+    aItem1.text("Graham Chapman");
+    let aItem2 = $("<a>");
+    aItem2.attr("href", "https://ca.wikipedia.org/wiki/Terry_Jones");
+    aItem2.text("Terry Jones");
+    let aItem3 = $("<a>");
+    aItem3.attr("href", "https://ca.wikipedia.org/wiki/Terry_Gilliam");
+    aItem3.text("Terry Gilliam");
+    let aItem4 = $("<a>");
+    aItem4.attr("href", "https://ca.wikipedia.org/wiki/Eric_Idle");
+    aItem4.text("Eric Idle");
+    let aItem5 = $("<a>");
+    aItem5.attr("href", "https://ca.wikipedia.org/wiki/John_Cleese");
+    aItem5.text("John Cleese");
+    let aItem6 = $("<a>");
+    aItem6.attr("href", "https://ca.wikipedia.org/wiki/Michael_Palin");
+    aItem6.text("Michael Pallin");
+
+    ulItem1.append(aItem1);
+    ulItem2.append(aItem2);
+    ulItem3.append(aItem3);
+    ulItem4.append(aItem4);
+    ulItem5.append(aItem5);
+    ulItem6.append(aItem6);
+
+    exampleUL.append(ulItem1);
+    exampleUL.append(ulItem2);
+    exampleUL.append(ulItem3);
+    exampleUL.append(ulItem4);
+    exampleUL.append(ulItem5);
+    exampleUL.append(ulItem6);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleUL);
+    let firstLink = $("a").first();
+    console.log("This is first link: ", firstLink);
+
+    setTimeout(function () {
+      $("a")
+        .first()
+        .attr("href", "https://blog.sirena.app/hubfs/02%20LATA%20SPAM.jpg");
+      console.log("This is first link again: ", firstLink);
+    }, 2000);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1846,5 +1919,9 @@ export const jQueryExamples = [
   // 37
   function () {
     selectedAttribute();
+  },
+  // 38
+  function () {
+    changeHref();
   },
 ];

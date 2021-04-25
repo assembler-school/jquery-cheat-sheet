@@ -458,3 +458,8 @@ footer {
   color: var(--accent-color);
   outline-color: var(--accent-color);
 }
+
+a {
+  width: 100%;
+  color: var(--accent-color);
+}

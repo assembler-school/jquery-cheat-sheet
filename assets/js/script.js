@@ -55,7 +55,7 @@ let selectors = [
   "Get item by id & change font weight",
   "Get elements by class & display none & change their font color",
   "Get selected options of a select element",
-  "Change href attribute of the first <a>",
+  "Change href attribute of the first link",
   "Show an alert with the value of the first input",
   "Remove all items of a selector",
   "Animate an item after 2 seconds",

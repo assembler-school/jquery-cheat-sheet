@@ -1602,6 +1602,79 @@ document.querySelector("[selected]");`;
   };
 }
 
+//38 ----------------------------------------------------------
+function changeHref() {
+  // Macro
+  macroTextVanilla.innerText = `// Change href of the first <a>
+
+let firstA = document.querySelector("a");
+firstA.setAttribute("href", "newUrl");`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleUL = document.createElement("ul");
+    exampleUL.classList.add("example-ul");
+
+    let ulItem1 = document.createElement("li");
+
+    let ulItem2 = document.createElement("li");
+    let ulItem3 = document.createElement("li");
+    let ulItem4 = document.createElement("li");
+    let ulItem5 = document.createElement("li");
+    let ulItem6 = document.createElement("li");
+
+    let aItem1 = document.createElement("a");
+    aItem1.setAttribute("href", "https://ca.wikipedia.org/wiki/Graham_Chapman");
+    aItem1.innerText = "Graham Chapman";
+    let aItem2 = document.createElement("a");
+    aItem2.setAttribute("href", "https://ca.wikipedia.org/wiki/Terry_Jones");
+    aItem2.innerText = "Terry Jones";
+    let aItem3 = document.createElement("a");
+    aItem3.setAttribute("href", "https://ca.wikipedia.org/wiki/Terry_Gilliam");
+    aItem3.innerText = "Terry Gilliam";
+    let aItem4 = document.createElement("a");
+    aItem4.setAttribute("href", "https://ca.wikipedia.org/wiki/Eric_Idle");
+    aItem4.innerText = "Eric Idle";
+    let aItem5 = document.createElement("a");
+    aItem5.setAttribute("href", "https://ca.wikipedia.org/wiki/John_Cleese");
+    aItem5.innerText = "John Clesse";
+    let aItem6 = document.createElement("a");
+    aItem6.setAttribute("href", "https://ca.wikipedia.org/wiki/Michael_Palin");
+    aItem6.innerText = "Michael Pallin";
+
+    ulItem1.appendChild(aItem1);
+    ulItem2.appendChild(aItem2);
+    ulItem3.appendChild(aItem3);
+    ulItem4.appendChild(aItem4);
+    ulItem5.appendChild(aItem5);
+    ulItem6.appendChild(aItem6);
+
+    exampleUL.appendChild(ulItem1);
+    exampleUL.appendChild(ulItem2);
+    exampleUL.appendChild(ulItem3);
+    exampleUL.appendChild(ulItem4);
+    exampleUL.appendChild(ulItem5);
+    exampleUL.appendChild(ulItem6);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleUL);
+    let firstLink = document.querySelector("li a");
+    console.log("Initial first <a>", firstLink);
+
+    setTimeout(function () {
+      firstLink.setAttribute(
+        "href",
+        "https://blog.sirena.app/hubfs/02%20LATA%20SPAM.jpg"
+      );
+      console.log("Final first <a>", firstLink);
+    }, 2000);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1764,5 +1837,9 @@ export const vanillaExamples = [
   // 37
   function () {
     selectedAttribute();
+  },
+  // 38
+  function () {
+    changeHref();
   },
 ];
