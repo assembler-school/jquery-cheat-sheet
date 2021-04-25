@@ -23,20 +23,25 @@ function cleanTestArea(){
 }
 
 /*========= Excercise functions ==========*/
-// 01 Onload event
-// window.addEventListener("load", function(event){
-//     console.log("Onload");
-// });
 
-export function onLoadVanillaCode(){
-    return `
-window.addEventListener("load", function(event){
-    console.log("Onload");
-});`;
+// Events
+// 01 Onload event
+export function domContentLoadedVanillaOutput(element){
+
+    document.addEventListener("DOMContentLoaded", loadedDOM);
+
+    function loadedDOM(){
+        element.children[2].children[1].insertAdjacentHTML('beforeend', "<p>The DOM has been loaded</p>");
+    }
 }
 
-export function onLoadVanillaOutput(element){
-element.children[2].children[1].insertAdjacentHTML('beforeend', "<p>This event makes a change on the page when the page loads. In this case it outputs the Onload message on console</p>");
+export function domContentLoadedVanillaCode(){
+    return `
+document.addEventListener("DOMContentLoaded", loadedDOM);
+
+function loadedDOM(){
+    element.insertAdjacentHTML('beforeend', "&ltp>The DOM has been loaded&lt/p>");
+}`;
 }
 
 //02 OnClick Event
@@ -195,6 +200,179 @@ export function onLoadImageFailVanillaOutput(element){
     function imageOnLoadFail(){
         document.getElementById("onLoadOutputFail").textContent = "Image failed to load";
     }
+}
+
+// 09 OnSubmit for form 
+export function onSubmitVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltform id='forme9'>&ltinput type='submit' value='submit'>&lt/form>");
+
+document.getElementById("forme9").addEventListener("submit", onFormSubmit);
+
+function onFormSubmit(event){
+    event.preventDefault();
+    element.insertAdjacentHTML('beforeend', "&ltp id='onSubmitOutput'>&lt/p>");
+    document.getElementById("onSubmitOutput").textContent = "Form submited";
+}`
+}
+
+export function onSubmitVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<form id='forme9'><input type='submit' value='submit'></form>");
+    
+    document.getElementById("forme9").addEventListener("submit", onFormSubmit);
+
+    function onFormSubmit(event){
+        event.preventDefault();
+        element.children[2].children[1].insertAdjacentHTML('beforeend', "<p id='onSubmitOutput'></p>");
+        document.getElementById("onSubmitOutput").textContent = "Form submited";
+    }
+}
+
+// 10 OnChange Event for an option selection element
+export function onChangeOptionSelectionVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&lt select id='selecte10'> &ltoption value='1'>Option1&lt/option>&ltoption value='2'>Option2&lt/option>&lt/select>");
+
+element.insertAdjacentHTML('beforeend', "&ltp id='onChangeSelectionOutput'> Changed to option 1&lt/p>")
+
+document.getElementById("selecte10").addEventListener("change", onChangeOption);
+
+function onChangeOption(){
+    document.getElementById("onChangeSelectionOutput").textContent = "Changed to option " + document.getElementById("selecte10").value;
+}`
+}
+
+export function onChangeOptionSelectionVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<select id='selecte10'><option value='1'>Option1</option> <option value='2'>Option2</option> </select>");
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<p id='onChangeSelectionOutput'> Changed to option 1</p>")
+
+    document.getElementById("selecte10").addEventListener("change", onChangeOption);
+
+    function onChangeOption(){
+
+        document.getElementById("onChangeSelectionOutput").textContent = "Changed to option " + document.getElementById("selecte10").value;
+    }
+}
+
+// 11 OnMouseOver event
+export function onMouseOverVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltdiv id='dive11' style='background-color:red; height:100px; width:100px'>&lt/div>");
+
+document.getElementById("dive11").addEventListener("mouseover", onMouseOver);
+
+function onMouseOver(){
+    if(document.getElementById("dive11").style.backgroundColor === "red"){
+        document.getElementById("dive11").style.backgroundColor = "green";
+    }else{
+        document.getElementById("dive11").style.backgroundColor = "red";
+    }
+}`
+}
+
+export function onMouseOverVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='dive11' style='background-color:red; height:100px; width:100px'></div>");
+    
+    document.getElementById("dive11").addEventListener("mouseover", onMouseOver);
+
+    function onMouseOver(){
+        if(document.getElementById("dive11").style.backgroundColor === "red"){
+            document.getElementById("dive11").style.backgroundColor = "green";
+        }else{
+            document.getElementById("dive11").style.backgroundColor = "red";
+        }
+    }
+}
+
+// 12 OnChange Event for checkbox
+export function onChangeCheckboxVanillaCode(){
+    return `
+element.children[2].children[1].insertAdjacentHTML('beforeend', "&ltinput id='checkboxe12' type='checkbox'>");
+element.children[2].children[1].insertAdjacentHTML('beforeend', "&ltp id='onChangeCheckOutput'>Checkbox is &lt/p>");
+
+document.getElementById("checkboxe12").addEventListener("change", onChangeCheckbox);
+
+function onChangeCheckbox(){
+    if(document.getElementById("checkboxe12").checked){
+        document.getElementById("onChangeCheckOutput").textContent = "Checkbox is checked";
+    }else{
+        document.getElementById("onChangeCheckOutput").textContent = "Checkbox is unchecked";
+    }
+}`
+}
+
+export function onChangeCheckboxVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<input id='checkboxe12' type='checkbox'>");
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<p id='onChangeCheckOutput'>Checkbox is </p>");
+    
+    document.getElementById("checkboxe12").addEventListener("change", onChangeCheckbox);
+
+    function onChangeCheckbox(){
+        if(document.getElementById("checkboxe12").checked){
+            document.getElementById("onChangeCheckOutput").textContent = "Checkbox is checked";
+        }else{
+            document.getElementById("onChangeCheckOutput").textContent = "Checkbox is unchecked";
+        }
+    }
+}
+
+// 13 OnClick Event for ul list item (show clicked element)
+export function onClickUlLiItemVanillaCode(){
+    return `
+element.children[2].children[1].insertAdjacentHTML('beforeend', "&ltul id='ule13'>&lt/ul>");
+
+document.getElementById("ule13").insertAdjacentHTML('beforeend', "&ltli id='e13Item1' class='ulItem'> Item1 &lt/li> &ltli id='e13Item2' class='ulItem'> Item2 &lt/li>&ltli id='e13Item3' class='ulItem'> Item3 &lt/li>");
+
+element.children[2].children[1].insertAdjacentHTML('beforeend', "&ltdiv id='ulLiItemOutput'>&lt/div>");
+
+document.querySelectorAll(".ulItem").forEach(function(element){
+    element.addEventListener("click", onClickShowUlLiItem);
+});
+
+function onClickShowUlLiItem(event){
+    if(event.target){
+        document.getElementById("ulLiItemOutput").textContent = event.target.textContent;
+    }
+}`
+}
+
+export function onClickUlLiItemVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<ul id='ule13'></ul>");
+    document.getElementById("ule13").insertAdjacentHTML('beforeend', "<li id='e13Item1' class='ulItem'> Item1 </li> <li id='e13Item2' class='ulItem'> Item2 </li><li id='e13Item3' class='ulItem'> Item3 </li>");
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='ulLiItemOutput'></div>");
+    
+    document.querySelectorAll(".ulItem").forEach(function(element){
+        element.addEventListener("click", onClickShowUlLiItem);
+    });
+
+    function onClickShowUlLiItem(event){
+        if(event.target){
+            document.getElementById("ulLiItemOutput").textContent = event.target.textContent;
+        }
+    }
+}
+
+// Functions and Selectors
+
+// 01 Create an HTML element with any text value
+export function createHTMLElementVanillaCode(){
+    return `
+let newElement = document.createElement("div");
+newElement.textContent = "I am a new div";
+element.appendChild(newElement);`
+}
+
+export function createHTMLElementVanillaOutput(element){
+    
+    let newElement = document.createElement("div");
+    newElement.textContent = "I am a new div";
+    element.children[2].children[1].appendChild(newElement);
+
 }
 /*====================================*/
 

@@ -42,7 +42,7 @@
 
 /* Functions and Selectors container*/
 #funSelDivContainer{
-  display: none;
+  display: block;
 }
 
 /* List and list items*/

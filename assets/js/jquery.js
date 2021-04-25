@@ -10,18 +10,20 @@ function scenario1(){
 
 /*========= Excercise functions ==========*/
 // 01 OnLoad Event
-// $(window).on("load", function(event){
-//     console.log("Onload");
-// });
-
-export function onLoadJqueryCode(){
-    return `    $(window).on("load", function(event){
-                    console.log("Onload");
-    });`;
+export function onReadyJqueryTest(){
+    
+    $(document).ready(loadedDOM);
+    function loadedDOM(){
+        $("#testArea").append("<p>The DOM has been loaded</p>");
+    }
 }
 
-export function onLoadJqueryOutput(){
-    return "This event makes a change on the page when the page loads";
+export function onReadyJqueryCode(){
+    return `        
+$(document).ready(loadedDOM);
+function loadedDOM(){
+    $("#testArea").append("&ltp>The DOM has been loaded&lt/p>");
+}`;
 }
 
 //02 OnClick Event
@@ -151,20 +153,19 @@ export function onLoadImageJqueryTest(){
     }
 }
 
-// 07 OnLoad Event to load Image
+// 08 OnError Event to load Image 
 export function onLoadImageFailJqueryCode(){
     return `
 $("#testArea").append("&ltimg id = 'imge8' src='./katara.jpeg' alt='loaded image' width ='50px' height='50px'>");
 $("#testArea").append("&ltp id = 'onLoadOutputTestFail'>&lt/p>");
 
-$("#imge8").on("error", imageOnLoad);
+$("#imge8").on("error", imageOnLoadFail);
 
-function imageOnLoad(){
+function imageOnLoadFail(){
     $("#onLoadOutputTestFail").text("Image load failure");
 }`
 }
 
-// 08 OnError Event to load Image 
 export function onLoadImageFailJqueryTest(){
     
     $("#testArea").append("<img id = 'imge8' src='./katara.jpeg' alt='katara' width ='50px' height='50px'>");
@@ -174,12 +175,172 @@ export function onLoadImageFailJqueryTest(){
 
     function imageOnLoadFail(){
         $("#onLoadOutputTestFail").text("Image load failure");
-
     }
 }
+
+// 09 OnSubmit for form 
+export function onSubmitJqueryCode(){
+    return `
+$("#testArea").append("&ltform id='forme9'>&ltinput type='submit' value='submit'>&lt/form>");
+
+$("#forme9").on("submit", onFormSubmit);
+
+function onFormSubmit(event){
+    event.preventDefault();
+    $("#testArea").append("&ltp id ='onSubmitOutput'>&lt/p>");
+    $("#onSubmitOutput").text("Form submited");
+}`
+}
+
+export function onSubmitJqueryTest(){
+    
+    $("#testArea").append("<form id='forme9'><input type='submit' value='submit'></form>");
+
+    $("#forme9").on("submit", onFormSubmit);
+
+    function onFormSubmit(event){
+        event.preventDefault();
+        $("#testArea").append("<p id ='onSubmitOutput'></p>");
+        $("#onSubmitOutput").text("Form submited");
+    }
+}
+
+// 10 OnChange Event for an option selection element
+export function onChangeOptionSelectionJqueryCode(){
+    return `
+$("#testArea").append("&ltform id='forme9'>&ltinput type='submit' value='submit'>&lt/form>");
+
+$("#forme9").on("submit", onFormSubmit);
+
+function onFormSubmit(event){
+    event.preventDefault();
+    $("#testArea").append("&ltp id ='onSubmitOutput'>&lt/p>");
+    $("#onSubmitOutput").text("Form submited");
+}`
+}
+
+export function onChangeOptionSelectionJqueryTest(){
+    
+    $("#testArea").append("<select id='selecte10'><option value='1'>Option1</option><option value='2'>Option2</option></select>");
+    $("#testArea").append("<p id ='onChangeSelectionOutput'>Changed to option 1</p>");
+    $("#selecte10").on("change", onChangeOption);
+
+    function onChangeOption(){
+
+        $("#onChangeSelectionOutput").text("Changed to option" + $("#selecte10").val());
+    }
+}
+
+// 11 // OnMouseOver event
+export function onMouseOverJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='dive11' style='background-color:rgb(255, 0, 0); height:100px; width:100px'>&lt/div>");
+
+$("#dive11").on("mouseover", onMouseOver);
+
+function onMouseOver(){
+
+    if($("#dive11").css("backgroundColor") === "rgb(255, 0, 0)"){
+        $("#dive11").css("backgroundColor","rgb(0, 128, 0)");
+    }else{
+        $("#dive11").css("backgroundColor","rgb(255, 0, 0)");
+    }
+}`
+}
+
+export function onMouseOverJqueryTest(){
+    
+    $("#testArea").append("<div id='dive11' style='background-color:rgb(255, 0, 0); height:100px; width:100px'></div>");
+
+    $("#dive11").on("mouseover", onMouseOver);
+
+    function onMouseOver(){
+
+        if($("#dive11").css("backgroundColor") === "rgb(255, 0, 0)"){
+            $("#dive11").css("backgroundColor","rgb(0, 128, 0)");
+        }else{
+            $("#dive11").css("backgroundColor","rgb(255, 0, 0)");
+        }
+    }
+}
+
+// 12 OnChange Event for checkbox
+export function onChangeCheckboxJqueryCode(){
+    return `
+$("#testArea").append("&ltinput id='checkboxe12' type='checkbox'>");
+$("#testArea").append("&ltp id='onChangeCheckOutput'>Checkbox is &lt/p>");
+
+$("#checkboxe12").on("change", onChangeCheckbox);
+
+function onChangeCheckbox(){
+    if($("#checkboxe12").prop("checked") === true){
+        $("#onChangeCheckOutput").text("Checkbox is checked");
+    }else{
+        $("#onChangeCheckOutput").text("Checkbox is unchecked");
+    }
+}`
+}
+export function onChangeCheckboxJqueryTest(){
+    
+    $("#testArea").append("<input id='checkboxe12' type='checkbox'>");
+    $("#testArea").append("<p id='onChangeCheckOutput'>Checkbox is </p>");
+    
+    $("#checkboxe12").on("change", onChangeCheckbox);
+
+    function onChangeCheckbox(){
+        if($("#checkboxe12").prop("checked") === true){
+            $("#onChangeCheckOutput").text("Checkbox is checked");
+        }else{
+            $("#onChangeCheckOutput").text("Checkbox is unchecked");
+        }
+    }
+}
+
+// 13 OnClick Event for ul list item (show clicked element)
+export function onClickUlLiItemJqueryCode(){
+    return `
+$("#testArea").append("&ltul id='ule13'>&lt/ul>");
+
+$("#ule13").append("&ltli id='e13Item1' class='ulItem'> Item1 &lt/li> &ltli id='e13Item2' class='ulItem'> Item2 &lt/li>&ltli id='e13Item3' class='ulItem'> Item3 &lt/li>");
+
+$("#testArea").append("&ltdiv id='ulLiItemOutput'>&lt/div>");
+
+$(".ulItem").each(function(){
+    $(this).on("click", onClickShowUlLiItem);
+});
+
+function onClickShowUlLiItem(){
+    if($(this)){
+        $("#ulLiItemOutput").text($(this).text());
+    }
+}`
+}
+
+export function onClickUlLiItemJqueryTest(){
+    
+    $("#testArea").append("<ul id='ule13'></ul>");
+    $("#ule13").append("<li id='e13Item1' class='ulItem'> Item1 </li> <li id='e13Item2' class='ulItem'> Item2 </li><li id='e13Item3' class='ulItem'> Item3 </li>");
+    $("#testArea").append("<div id='ulLiItemOutput'></div>");
+    
+    $(".ulItem").each(function(){
+        $(this).on("click", onClickShowUlLiItem);
+    });
+
+    function onClickShowUlLiItem(){
+        if($(this)){
+            $("#ulLiItemOutput").text($(this).text());
+        }
+    }
+}
+
+// Functions and Selectors
+
 /*======================================*/
 
 /*=============== Tests ================*/
+// Events
+
+// onLoadJqueryTest();
 // onMouseMoveJqueryTest();
 // onDblClickJqueryTest();
 // onClickJqueryTest();
@@ -187,4 +348,12 @@ export function onLoadImageFailJqueryTest(){
 // onChangeInputTextJqueryTest();
 // onLoadImageJqueryTest();
 // onLoadImageFailJqueryTest();
+// onSubmitJqueryTest();
+// onMouseOverJqueryTest();
+// onChangeCheckboxJqueryTest();
+// onClickUlLiItemJqueryTest();
+
+// Functions and Selectors
+
+
 /*======================================*/
