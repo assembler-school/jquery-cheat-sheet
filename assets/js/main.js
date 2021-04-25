@@ -9,13 +9,13 @@ $(".nav-btn").each(function (i) {
     if (i === 0) {
       techName = "van";
       tecTitle.text("Vanilla JS Cheat Sheet");
-      tecTitle.css("color", "var(--bg");
+      tecTitle.css("color", "var(--bg)");
       $(".nav-btn").last().removeClass("active");
       $(".nav-btn").first().toggleClass("active");
     } else if (i === 1) {
       techName = "jq";
       tecTitle.text("jQuery Cheat Sheet");
-      tecTitle.css("color", "var(--bg");
+      tecTitle.css("color", "var(--bg)");
       $(".nav-btn").first().removeClass("active");
       $(".nav-btn").last().toggleClass("active");
     }
