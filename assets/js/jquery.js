@@ -1454,6 +1454,65 @@ setTimeout(function(){
   });
 }
 
+//34 ----------------------------------------------------------
+function styleClass() {
+  // Macro
+  macroString = `// Create & add element after
+
+let container = $("#parent");
+let child = $("<div>");
+
+// Creating & adding element after 2 seconds
+setTimeout(function(){
+  container.children().eq(1).after(child);
+}, 2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleParent1 = $("<div>");
+    exampleParent1.addClass("example-parent");
+    exampleParent1.addClass("parent-1");
+    exampleParent1.css("marginBottom", "calc(var(--margin)/2)");
+    exampleParent1.text("Element 1");
+
+    let exampleParent2 = $("<div>");
+    exampleParent2.addClass("example-parent");
+    exampleParent2.addClass("parent-2");
+    exampleParent2.css("marginBottom", "calc(var(--margin)/2)");
+    exampleParent2.text("Element 2");
+
+    let exampleParent3 = $("<div>");
+    exampleParent3.addClass("example-parent");
+    exampleParent3.addClass("parent-3");
+    exampleParent3.css("marginBottom", "calc(var(--margin)/2)");
+    exampleParent3.text("Element 3");
+
+    let exampleParent4 = $("<div>");
+    exampleParent4.addClass("example-parent");
+    exampleParent4.addClass("parent-4");
+    exampleParent4.text("Element 4");
+
+    setTimeout(function () {
+      $(".parent-3").css({
+        fontWeight: "var(--extraLight)",
+        outline: "1px solid var(--light-color)",
+      });
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleParent1);
+    outputJquery.append(exampleParent2);
+    outputJquery.append(exampleParent3);
+    outputJquery.append(exampleParent4);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1599,5 +1658,9 @@ export const jQueryExamples = [
   // 33
   function () {
     styleChildren();
+  },
+  // 34
+  function () {
+    styleClass();
   },
 ];

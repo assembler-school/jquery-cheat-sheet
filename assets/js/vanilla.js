@@ -1381,6 +1381,63 @@ setTimeout(function(){
   };
 }
 
+//34 ----------------------------------------------------------
+function styleClass() {
+  // Macro
+  macroTextVanilla.innerText = `// Change children's font-weight after 2 seconds
+
+setTimeout(function(){
+  let childs = element.childNodes;
+  for ( let c of childs ){
+    c.style.fontWeight = "light";
+    c.style.outline = "1px solid white";
+  }
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleParent1 = document.createElement("div");
+    exampleParent1.classList.add("example-parent");
+    exampleParent1.classList.add("parent-1");
+    exampleParent1.style.marginBottom = "calc(var(--margin)/2)";
+    exampleParent1.innerText = "Element 1";
+
+    let exampleParent2 = document.createElement("div");
+    exampleParent2.classList.add("example-parent");
+    exampleParent2.classList.add("parent-2");
+    exampleParent2.style.marginBottom = "calc(var(--margin)/2)";
+    exampleParent2.innerText = "Element 2";
+
+    let exampleParent3 = document.createElement("div");
+    exampleParent3.classList.add("example-parent");
+    exampleParent3.classList.add("parent-3");
+    exampleParent3.style.marginBottom = "calc(var(--margin)/2)";
+    exampleParent3.innerText = "Element 3";
+
+    let exampleParent4 = document.createElement("div");
+    exampleParent4.classList.add("example-parent");
+    exampleParent4.classList.add("parent-4");
+    exampleParent4.innerText = "Element 4";
+
+    setTimeout(function () {
+      let selectedElement = document.querySelector(".parent-3");
+      selectedElement.style.fontWeight = "var(--extraLight)";
+      selectedElement.style.outline = "1px solid var(--light-color)";
+      console.log("Changed style to ", selectedElement);
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleParent1);
+    outputVanilla.appendChild(exampleParent2);
+    outputVanilla.appendChild(exampleParent3);
+    outputVanilla.appendChild(exampleParent4);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1527,5 +1584,9 @@ export const vanillaExamples = [
   // 33
   function () {
     styleChildren();
+  },
+  // 34
+  function () {
+    styleClass();
   },
 ];
