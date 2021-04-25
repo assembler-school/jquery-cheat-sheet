@@ -1846,6 +1846,44 @@ $("li")..remove();`;
   });
 }
 
+//41 ----------------------------------------------------------
+function animateAfter() {
+  // Macro
+  macroString = `// Animate element after 2 seconds
+
+document.load(function(){
+  setTimeout(function(){
+    $(element).animate({marginTop: "260px"},2000);
+  }, 2000)
+});`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleParent = $("<div>");
+    exampleParent.addClass("example-parent");
+    exampleParent.text("Animated");
+
+    setTimeout(function () {
+      exampleParent.animate(
+        {
+          marginTop: "260px",
+        },
+        2000
+      );
+      console.log("Element animated");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleParent);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -2019,5 +2057,9 @@ export const jQueryExamples = [
   // 40
   function () {
     deleteSelectors();
+  },
+  // 41
+  function () {
+    animateAfter();
   },
 ];

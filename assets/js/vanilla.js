@@ -1759,6 +1759,40 @@ function deleteSelectors() {
   };
 }
 
+//41 ----------------------------------------------------------
+function animateAfter() {
+  // Macro
+  macroTextVanilla.innerText = `// Animate element after 2 seconds
+
+document.onload = function(){
+  setTimeout(function(){
+    element.style.animation = "animationAfter 2s forwards";
+  }, 2000)
+};
+
+/* CSS animation */
+@keyframes animationAfter {
+  100% {transform:translateY(600%); color: yellow};};`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleParent = document.createElement("div");
+    exampleParent.classList.add("example-parent");
+    exampleParent.innerText = "Animated";
+
+    setTimeout(function () {
+      exampleParent.style.animation = "animationAfter 2s forwards";
+      console.log("Element animated");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleParent);
+  };
+}
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1933,5 +1967,9 @@ export const vanillaExamples = [
   // 40
   function () {
     deleteSelectors();
+  },
+  // 41
+  function () {
+    animateAfter();
   },
 ];

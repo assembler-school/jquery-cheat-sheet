@@ -343,6 +343,14 @@ footer {
   }
 }
 
+@keyframes animationAfter {
+  100% {
+    transform: translateY(600%);
+    color: var(--accent-color);
+    outline-color: var(--accent-color);
+  }
+}
+
 /* -------------------------------------------------------------------------- */
 /*                              EXAMPLES ELEMENTS                             */
 /* -------------------------------------------------------------------------- */
