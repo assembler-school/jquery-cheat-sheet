@@ -957,7 +957,7 @@ function addedDisable() {
 
 setTimeout(function(){
   element.disabled = true;
-});`;
+}, 2000);`;
 
   // Output
   runButton.onclick = function () {
@@ -970,6 +970,40 @@ setTimeout(function(){
       exampleInput.disabled = true;
       exampleInput.style.opacity = "50%";
       exampleInput.setAttribute("placeholder", "Disabled");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+    outputVanilla.appendChild(exampleInput);
+  };
+}
+
+//24 ----------------------------------------------------------
+function removedDisable() {
+  // Macro
+  macroTextVanilla.innerText = `// Remove disable attribute
+
+element.disabled = true;
+
+setTimeout(function(){
+  element.disabled = false;
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleInput = document.createElement("input");
+    exampleInput.classList.add("example-input");
+    exampleInput.setAttribute("type", "text");
+    exampleInput.setAttribute("placeholder", "Disabled");
+    exampleInput.style.opacity = "50%";
+    exampleInput.disabled = true;
+
+    setTimeout(function () {
+      exampleInput.disabled = false;
+      exampleInput.setAttribute("placeholder", "Text goes here");
+      exampleInput.style.opacity = "100%";
     }, 2000);
 
     // Resetting output if it's filled
@@ -1084,5 +1118,9 @@ export const vanillaExamples = [
   // 23
   function () {
     addedDisable();
+  },
+  // 24
+  function () {
+    removedDisable();
   },
 ];

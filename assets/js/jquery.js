@@ -1023,8 +1023,8 @@ function addedDisable() {
   macroString = `// Add disable attribute
 
 setTimeout(function(){
-  element.attr("disabled", "true");
-});`;
+  element.prop("disabled", true);
+}, 2000);`;
 
   macroJquery.text(macroString);
 
@@ -1036,9 +1036,45 @@ setTimeout(function(){
     exampleInput.attr("placeholder", "Text goes here");
 
     setTimeout(function () {
-      exampleInput.attr("disabled", "true");
+      exampleInput.prop("disabled", true);
       exampleInput.css("opacity", "50%");
       exampleInput.attr("placeholder", "Disabled");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+    outputJquery.append(exampleInput);
+  });
+}
+
+//24 ----------------------------------------------------------
+function removedDisable() {
+  // Macro
+  macroString = `// Remove disable attribute
+
+element.prop("disabled", true);
+
+setTimeout(function(){
+  element.prop("disabled", false);
+}, 2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleInput = $("<input>");
+    exampleInput.addClass("example-input");
+    exampleInput.attr("type", "text");
+    exampleInput.prop("disabled", true);
+    exampleInput.css("opacity", "50%");
+    exampleInput.attr("placeholder", "Disabled");
+
+    setTimeout(function () {
+      exampleInput.prop("disabled", false);
+      exampleInput.css("opacity", "100%");
+      exampleInput.attr("placeholder", "Text goes here");
     }, 2000);
 
     // Resetting output if it's filled
@@ -1152,5 +1188,9 @@ export const jQueryExamples = [
   // 23
   function () {
     addedDisable();
+  },
+  // 24
+  function () {
+    removedDisable();
   },
 ];
