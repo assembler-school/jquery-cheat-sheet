@@ -1403,7 +1403,13 @@ function styleChildren() {
   macroString = `// Change children's font-weight after 2 seconds
 
 setTimeout(function(){
-  container.children().eq(1).after(child);
+  let childs = exampleParent.children();
+  childs.each(function(){
+    $(this).css({
+      fontWeight: "light",
+      outline: "1px solid white",
+    });
+  }
 }, 2000);`;
 
   macroJquery.text(macroString);
@@ -1457,14 +1463,13 @@ setTimeout(function(){
 //34 ----------------------------------------------------------
 function styleClass() {
   // Macro
-  macroString = `// Create & add element after
+  macroString = `// Style element by class
 
-let container = $("#parent");
-let child = $("<div>");
-
-// Creating & adding element after 2 seconds
 setTimeout(function(){
-  container.children().eq(1).after(child);
+  $(".element-3").css({
+    fontWeight: "light",
+    outline: "1px solid white",
+  };
 }, 2000);`;
 
   macroJquery.text(macroString);
@@ -1496,6 +1501,64 @@ setTimeout(function(){
 
     setTimeout(function () {
       $(".parent-3").css({
+        fontWeight: "var(--extraLight)",
+        outline: "1px solid var(--light-color)",
+      });
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleParent1);
+    outputJquery.append(exampleParent2);
+    outputJquery.append(exampleParent3);
+    outputJquery.append(exampleParent4);
+  });
+}
+
+//35 ----------------------------------------------------------
+function styleId() {
+  // Macro
+  macroString = `// Style element by id
+
+setTimeout(function(){
+  $("#element-2").css({
+    fontWeight: "light",
+    outline: "1px solid white",
+  };
+}, 2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleParent1 = $("<div>");
+    exampleParent1.addClass("example-parent");
+    exampleParent1.attr("id", "parent-1");
+    exampleParent1.css("marginBottom", "calc(var(--margin)/2)");
+    exampleParent1.text("Element 1");
+
+    let exampleParent2 = $("<div>");
+    exampleParent2.addClass("example-parent");
+    exampleParent2.attr("id", "parent-2");
+    exampleParent2.css("marginBottom", "calc(var(--margin)/2)");
+    exampleParent2.text("Element 2");
+
+    let exampleParent3 = $("<div>");
+    exampleParent3.addClass("example-parent");
+    exampleParent3.attr("id", "parent-3");
+    exampleParent3.css("marginBottom", "calc(var(--margin)/2)");
+    exampleParent3.text("Element 3");
+
+    let exampleParent4 = $("<div>");
+    exampleParent4.addClass("example-parent");
+    exampleParent4.attr("id", "parent-4");
+    exampleParent4.text("Element 4");
+
+    setTimeout(function () {
+      $("#parent-2").css({
         fontWeight: "var(--extraLight)",
         outline: "1px solid var(--light-color)",
       });
@@ -1662,5 +1725,9 @@ export const jQueryExamples = [
   // 34
   function () {
     styleClass();
+  },
+  // 35
+  function () {
+    styleId();
   },
 ];

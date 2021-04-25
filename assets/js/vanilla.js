@@ -1384,14 +1384,12 @@ setTimeout(function(){
 //34 ----------------------------------------------------------
 function styleClass() {
   // Macro
-  macroTextVanilla.innerText = `// Change children's font-weight after 2 seconds
+  macroTextVanilla.innerText = `// Style element by class
 
 setTimeout(function(){
-  let childs = element.childNodes;
-  for ( let c of childs ){
-    c.style.fontWeight = "light";
-    c.style.outline = "1px solid white";
-  }
+  let element = document.querySelector(".element-3");
+  element.style.fontWeight = "light";
+  element.style.outline = "1px solid white";
 }, 2000);`;
 
   // Output
@@ -1421,6 +1419,61 @@ setTimeout(function(){
 
     setTimeout(function () {
       let selectedElement = document.querySelector(".parent-3");
+      selectedElement.style.fontWeight = "var(--extraLight)";
+      selectedElement.style.outline = "1px solid var(--light-color)";
+      console.log("Changed style to ", selectedElement);
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleParent1);
+    outputVanilla.appendChild(exampleParent2);
+    outputVanilla.appendChild(exampleParent3);
+    outputVanilla.appendChild(exampleParent4);
+  };
+}
+
+//35 ----------------------------------------------------------
+function styleId() {
+  // Macro
+  macroTextVanilla.innerText = `// Style element by id
+
+setTimeout(function(){
+  let element = document.querySelector("#element-2");
+  element.style.fontWeight = "light";
+  element.style.outline = "1px solid white";
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleParent1 = document.createElement("div");
+    exampleParent1.classList.add("example-parent");
+    exampleParent1.setAttribute("id", "parent-1");
+    exampleParent1.style.marginBottom = "calc(var(--margin)/2)";
+    exampleParent1.innerText = "Element 1";
+
+    let exampleParent2 = document.createElement("div");
+    exampleParent2.classList.add("example-parent");
+    exampleParent2.setAttribute("id", "parent-2");
+    exampleParent2.style.marginBottom = "calc(var(--margin)/2)";
+    exampleParent2.innerText = "Element 2";
+
+    let exampleParent3 = document.createElement("div");
+    exampleParent3.classList.add("example-parent");
+    exampleParent3.setAttribute("id", "parent-3");
+    exampleParent3.style.marginBottom = "calc(var(--margin)/2)";
+    exampleParent3.innerText = "Element 3";
+
+    let exampleParent4 = document.createElement("div");
+    exampleParent4.classList.add("example-parent");
+    exampleParent4.setAttribute("id", "parent-4");
+    exampleParent4.innerText = "Element 4";
+
+    setTimeout(function () {
+      let selectedElement = document.querySelector("#parent-2");
       selectedElement.style.fontWeight = "var(--extraLight)";
       selectedElement.style.outline = "1px solid var(--light-color)";
       console.log("Changed style to ", selectedElement);
@@ -1588,5 +1641,9 @@ export const vanillaExamples = [
   // 34
   function () {
     styleClass();
+  },
+  // 35
+  function () {
+    styleId();
   },
 ];
