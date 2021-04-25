@@ -1,6 +1,10 @@
 import * as js from "./vanilla.js";
 import * as jq from "./jquery.js";
 
+// header click
+document.querySelector(" header > h1").addEventListener("click", function () {
+  loadFile("./assets/examples/mainPage.md");
+});
 /*
  * Here I get the files based on the
  * section wanted in HTML
