@@ -8,7 +8,9 @@
     <title>jQuery Cheat Sheet</title>
     <!-- Add CDN's here -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -21,82 +23,94 @@
     </header>
     <!-- First -->
     <div id="all-container" class="all-container-class">
-        <article id="article-1" class="article-class">
+        <article id="article-selectors" class="article-class">
             <!-- Section -->
-            <div id="container-1" class="container-class">
-
-                <h2>EVENTS</h2>
-                <section id="section-1" class="section-class">
-                    <h4>Browser Events</h4>
-                    <ul id="section-1-ul" class="section-1-ul-class">
-                        <li id="f-one">onLoad</li>
-                        <li id="f-two">click</li>
-                        <li id="f-three">doubleClick</li>
-                        <li id="f-four">onKeyPress</li>
-                        <li id="f-five">onMouseMove</li>
-                        <li id="f-six">input</li>
-                        <li id="f-seven">image</li>
-                        <li id="f-eight">Whe</li>
-                        <li id="f-nine">submitted</li>
-                        <li id="f-ten">changest</li>
-                        <li id="f-eleven">position</li>
-                        <li id="f-twelve">checked</li>
-                        <li id="f-thirteen">licked</li>
+            <div id="container-selectors" class="container-class">
+                <h2>SELECTORS</h2>
+                <section id="section-selectors" class="section-class">
+                    <ul id="ul-selectors" class="section-1-ul-class">
+                        <h4>GET</h4>
+                        <li class="get">parentElement</li>
+                        <li class="get">childrenCollection</li>
+                        <li class="get">collectionByClass</li>
+                        <li class="get">collectionByID</li>
+                        <li class="get">collectionByClassAndAttribute</li>
                     </ul>
                 </section>
             </div>
-            <!-- Section -->
-            <!-- Section -->
-            <!-- <div id="container-1" class="container-class">
+            <div id="container-2" class="container-class">
+                <h2>EVENTS</h2>
                 <section id="section-1" class="section-class">
-                    <h4>Document Loading</h4>
-                    <ul>
-                        <li>Function()</li>
-                        <li>Function()</li>
-                        <li>Function()</li>
+                    <ul id="section-1-ul" class="section-1-ul-class">
+                        <h4>HTML</h4>
+                        <li class="html">onLoad</li>
+                        <h4>CURSOR</h4>
+                        <li class="cursor">click</li>
+                        <li class="cursor">doubleClick</li>
+                        <li class="cursor">CursorMovement</li>
+                        <li class="cursor">onMouseOver</li>
+                        <h4>KEYBOARD</h4>
+                        <li class="keyboard">keypress</li>
+                        <h4>IMAGES</h4>
+                        <li class="images">loadedImage</li>
+                        <li class="images">loadedImageFail</li>
+                        <h4>DATA</h4>
+                        <li class="data">submittedForm</li>
+                        <li class="data">InputValueChange</li>
                     </ul>
                 </section>
-            </div> -->
-            <!-- Section -->
-            <!-- Section -->
-            <!-- <div id="container-1" class="container-class">
-                <section id="section-1" class="section-class">
-                    <h4>Event Handler Attachment</h4>
-                    <ul>
-                        <li>Function()</li>
-                        <li>Function()</li>
-                        <li>Function()</li>
-                    </ul>
-                </section>
-            </div> -->
-            <!-- Section -->
+            </div>
         </article>
     </div>
     <!-- Second -->
     <div id="all-container" class="all-container-class">
-        <article id="article-1" class="article-class">
+        <article id="article-2" class="article-class">
             <!-- Section -->
-            <div id="container-1" class="container-class">
+            <div id="container-3" class="container-class">
 
-                <h2>EVENTS</h2>
+
                 <section id="section-1" class="section-class">
-                    <h4>Browser Events</h4>
+                    <h2>Function</h2>
                     <ul>
-                        <li>Function()</li>
-                        <li>Function()</li>
-                        <li>Function()</li>
+                        <h4>HTML Elements</h4>
+                        <li class="htmlElements">createHtmlElement</li>
+                        <li class="htmlElements">removeHtmlElement</li>
+                        <li class="htmlElements">createHtmlElement</li>
+
+                        <h4>DOM Manipulation</h4>
+                        <li class="domManipulation">appendHtmlElement</li>
+                        <li class="domManipulation">prependHtmlElement</li>
+                        <li class="domManipulation">addAfterAnother</li>
+                        <li class="domManipulation">addBeforeAnother</li>
+
+                        <h4>Classes</h4>
+                        <li class="classes">addClassToHtmlElement</li>
+                        <li class="classes">removeClassToHtmlElement</li>
+                        <li class="classes">toggleClassToHtmlElement</li>
+
+                        <h4>Attributes</h4>
+                        <li class="Attributes">addDisabledAttr</li>
+                        <li class="Attributes">removeDisabledAttr</li>
+                        <li class="Attributes">setDataSrcAttr</li>
+                        <li class="Attributes">removeDataSrcAttr</li>
+                        <li class="Attributes">changeHrfAttr</li>
                     </ul>
                 </section>
             </div>
             <!-- Section -->
             <!-- Section -->
-            <div id="container-1" class="container-class">
+            <div id="container-4" class="container-class">
                 <section id="section-1" class="section-class">
-                    <h4>Document Loading</h4>
                     <ul>
-                        <li>Function()</li>
-                        <li>Function()</li>
-                        <li>Function()</li>
+                        <h4>Element Display</h4>
+                        <li class="elementDisplay">hideHtmlElementOnClick</li>
+                        <li class="elementDisplay">showHtmlElementOnClick</li>
+                        <li class="elementDisplay">fadeInHtmlElement</li>
+                        <li class="elementDisplay">fadeOutHtmlElement</li>
+                        <li class="elementDisplay">delayedAnimateAfterPageLoad</li>
+                        <h4>Functions</h4>
+                        <li class="functions">IterateCollectionElements</li>
+                        <li class="functions">getSelectedOptionsOfSelect</li>
                     </ul>
                 </section>
             </div>
@@ -128,10 +142,5 @@
 <script src="main.js" type="text/javascript"></script>
 <script src="vanilla.js" type="text/javascript"></script>
 <script src="jquery.js" type="text/javascript"></script>
-<script>
-    $("#jqueryImg").load(function() {
-        alert("Image is loaded JQ")
-    });
-</script>
 
 </html>
