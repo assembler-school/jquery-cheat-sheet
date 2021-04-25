@@ -59,8 +59,8 @@ label {
 }
 
 button {
-    font-weight: bold;
-    font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -127,8 +127,7 @@ button:active {
   margin-right: 20px;
 }
 
-
-#rightModalContent img{
+#rightModalContent img {
   max-width: 100%;
   max-height: 100%;
 }
@@ -155,7 +154,6 @@ button:active {
   width: 33%;
   padding: 2% 2% 0% 2%;
 }
-
 
 ul {
   padding: 0% 4% 4% 4%;
@@ -282,8 +280,8 @@ ul {
 
 .active,
 .collapsible:active {
-    color: white;
-    border-radius: 10px 10px 0px 0px;
+  color: white;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .content {
@@ -294,27 +292,27 @@ ul {
   word-wrap: break-word;
   font-family: "Montserrat", sans-serif;
   background-color: rgb(237, 237, 237);
-  color:  rgb(16, 16, 16);
-  
+  color: rgb(16, 16, 16);
+
   border-radius: 0px 0px 10px 10px;
 }
 
 #runID {
-    align-items: center;
-    display: flex;
-    font-weight: bold;
-    padding: 10%;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: "Montserrat", sans-serif;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  padding: 3%;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
 }
 
-#runID a{
+#runID a {
   list-style: none;
-  background-color:rgb(245, 245, 245);
+  background-color: rgb(245, 245, 245);
 }
 
-#runID input{
+#runID input {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
@@ -341,7 +339,7 @@ select {
   background-color: white;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.10);;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
 }
 
 .newClass {
@@ -361,8 +359,73 @@ select {
   color: white;
 }
 
+#rightModalContent addedParag {
+}
+
+.newParag {
+  color: #005eff;
+  margin-left: 150px;
+  margin-top: 20px;
+}
+
+.newParag1 {
+  color: #005eff;
+  margin-bottom: 10px;
+  text-decoration: underline black;
+}
+
+.newParag2 {
+  color: #005eff;
+  margin-bottom: 0px;
+  text-decoration: underline black;
+}
+
 .generated {
   list-style: circle;
   background-color: rgb(245, 245, 245);
   color: black;
+}
+
+#eventsForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputWrapper {
+
+}
+
+#eventsForm img {
+  max-width: 30%;
+  max-height: 10%;
+  align-self: flex-start;
+  border-radius: 5px;
+}
+
+#eventsForm label {
+  color: black;
+  align-self: flex-start;
+  margin: 5px 0px 0px 0px;
+}
+
+#eventsForm input {
+  height: 25px;
+  margin: 2px 0px 2px 0px;
+  border: 2px solid rgb(232, 232, 232);
+  border-radius: 3px;
+  width: 60%;
+}
+
+#eventsForm button {
+  padding: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 8px;
+  width: 30%;
+}
+
+#eventsForm select {
+  align-self: flex-start;
+  font-size: 11px;
+  margin-top: 8px;
 }

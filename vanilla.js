@@ -186,12 +186,14 @@ function jsRemoveData() {
 }
 
 //Start multiple function
-function hiddeElement() {
+function hideElement() {
     document.querySelector('#runID p').style.display = 'none';
 }
 
-function jsHiddeElement() {
-    document.querySelector('#runID p').setAttribute('onclick', 'hiddeElement()');
+function jsHideElement() {
+    addTextContent('Hide clicking on me');
+    document.getElementById('runID').appendChild(parag);
+    document.querySelector('#runID p').setAttribute('onclick', 'hideElement()');
 }
 //End multiple function
 
@@ -203,5 +205,71 @@ function jsIterateStyle() {
     var items = document.querySelectorAll('#runID li');
     items.forEach((value) => {
         value.style.color = '#005eff';
+    });
+}
+
+//__________Events Functions_________//
+//
+//---------- On Load HTML Document ---------//
+function jsLoadPage() {
+    $( document ).ready(function() {
+        console.log( "ready!" );
+    });
+};
+//---------- On Clicked HTML ---------------//
+function jsClickedElement() {
+    $( document ).ready(function() {
+        console.log( "ready!" );
+    });
+};
+//---------- On Double Clicked HTML --------//
+function jsDobleClicked() {
+    $('#eventsForm img').dblclick(function () {
+        $('#eventsForm img').css({'display':'none'});
+        $('#eventsForm').css({'width':'100%'});
+    })
+};
+//---------- On Press Keyboard Key ---------//
+function jsPressKey() {
+    $('#eventsForm img').keypress(function () {
+        $('#eventsForm img').css({'display':'none'});
+        $('#eventsForm').css({'width':'100%'});
+    })
+};
+//---------- On Mouse Move -----------------//
+function jsMouseMoved() {
+    $("#eventsForm").append('<p>');
+    $(document).mousemove(function(event){
+        $("#eventsForm p").html("Pos X: "+event.pageX + " | Pos Y: "+event.pageY+"");
+        $("#eventsForm p").css({'margin-top':'10px'})
+    });
+}
+//---------- On Input Change ---------------//
+function jsInputChange() {
+    $("#eventsForm input").change(function () {
+        $("#eventsForm #nameInput").css({'border':'2px solid rgb(0, 94, 255)'});
+    });
+}
+//---------- On Load Image -----------------//
+function jsLoadImage() {
+    $("#eventsForm img").load(function () {
+        $('#eventsForm img').css({ 'display': 'none' });
+        $('#eventsForm').css({ 'width': '100%' });
+    });
+}
+//---------- On Fail Load Image ---------//
+function jsFailLoadImage() {
+    $("#eventsForm img").attr('src','');
+    $("#eventsForm img").error(function () {
+        $('#eventsForm').css({ 'width': '100%' });
+    });
+}
+//---------- On Submit Form --------//
+function jsSubmitedForm() {
+    console.log("Sended!");
+    //$("#eventsForm").append('<p>');
+    $('#eventsForm').submit(function(event){
+        console.log("Sended!");
+        event.preventDefault();
     });
 }
