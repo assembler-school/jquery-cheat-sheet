@@ -1,6 +1,8 @@
-# Remove element
+## Remove css class
 
-## Javascript
+Remove a class to an HTML item
+
+### Javascript
 
 ```html
 <script>
@@ -12,13 +14,15 @@
 </script>
 ```
 
+#### Example
+
 remove class CSS
 
 <button id="f8Js">Try it</button>
 
 <p id="f8JsDemo" class="red-text">This is a paragraph</p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -27,6 +31,8 @@ remove class CSS
   });
 </script>
 ```
+
+#### Example
 
 add class CSS
 

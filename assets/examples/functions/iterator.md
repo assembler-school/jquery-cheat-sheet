@@ -1,6 +1,8 @@
-# Iteration
+## Iteration
 
-## Javascript
+Iterate a collection of elements and apply a change of style on them
+
+### Javascript
 
 ```html
 <script>
@@ -15,6 +17,8 @@
 </script>
 ```
 
+#### Example
+
 Click to change the color of the <code>ul<code> elements to red
 
 <button id="f17Js">Try it</button>
@@ -25,7 +29,7 @@ Click to change the color of the <code>ul<code> elements to red
   <li>Three</li>
 </ul>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -36,6 +40,8 @@ Click to change the color of the <code>ul<code> elements to red
   });
 </script>
 ```
+
+#### Example
 
 Click to change the color of the <code>ul<code> elements to red
 

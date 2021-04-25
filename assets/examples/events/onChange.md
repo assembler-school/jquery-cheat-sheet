@@ -1,5 +1,7 @@
 ## Change event
 
+When the user changes a value of an text input
+
 ### Javascript
 
 ```html
@@ -15,6 +17,7 @@
 #### Example:
 
 When you leave the input field, a function is triggered which transforms the input text to upper case.
+
 Enter your name: <input type="text" id="e5Js">
 
 ### jQuery
@@ -30,4 +33,5 @@ Enter your name: <input type="text" id="e5Js">
 #### Example:
 
 When you leave the input field, a function is triggered which transforms the input text to upper case.
-Enter your name: <input type="text" id="e5JQuery">
+
+Enter your name:<input type="text" id="e5JQuery">

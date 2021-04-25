@@ -1,6 +1,8 @@
-# Add data atrribute
+## Add data atrribute
 
-## Javascript
+Set a data-src attribute to a img element
+
+### Javascript
 
 ```html
 <script>
@@ -13,12 +15,14 @@
 </script>
 ```
 
+#### Example
+
 Add data atrribute
 
 <button id="f12Js">Try it</button>
 <img id="f12Js" src = "./assets/img/assembler.png"></img>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -27,6 +31,8 @@ Add data atrribute
   });
 </script>
 ```
+
+#### Example
 
 Add data atrribute
 

@@ -1,6 +1,8 @@
-# Animation
+## Animation
 
-## Javascript
+Animate an item after 2 seconds from the initial page load
+
+### Javascript
 
 ```html
 <style>
@@ -28,11 +30,13 @@
 </script>
 ```
 
+#### Example
+
 <button id="f27Js">Try it</button>
 
 <div id="f27JsDemo" class="default"></div>
 
-## jQuery
+### jQuery
 
 With <code>animate()</code> method Only numeric values can be animated (like "margin:30px"). String values cannot be animated (like "background-color:red"), except for the strings "show", "hide" and "toggle". These values allow hiding and showing the animated element.
 
@@ -60,6 +64,8 @@ Tip: Use "+=" or "-=" for relative animations.
   });
 </script>
 ```
+
+#### Example
 
 <button id="f27JQuery">Try it</button>
 

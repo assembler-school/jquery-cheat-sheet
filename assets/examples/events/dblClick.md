@@ -1,5 +1,7 @@
 ## Double click event
 
+When an HTML item has been double clicked
+
 ### Javascript
 
 ```html

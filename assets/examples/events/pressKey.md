@@ -1,5 +1,7 @@
 ## Key Press event
 
+When the user presses a key on the keyboard
+
 ### Javascript
 
 ```html

@@ -1,6 +1,8 @@
-# Hide
+## Hide element
 
-## Javascript
+Hide an HTML element on click (display: none)
+
+### Javascript
 
 ```html
 <script>
@@ -13,13 +15,15 @@
 </script>
 ```
 
+#### Example
+
 hide example
 
 <button id="f13Js">Try it</button>
 
 <p id="f13JsDemo">This is a paragraph</p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -28,6 +32,8 @@ hide example
   });
 </script>
 ```
+
+#### Example
 
 hide example
 

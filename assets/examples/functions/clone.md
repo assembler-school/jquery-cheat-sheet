@@ -1,6 +1,8 @@
-# Clone element
+## Clone element
 
-## Javascript
+Clone an HTML element within other element
+
+### Javascript
 
 ```html
 <script>
@@ -14,13 +16,15 @@
 </script>
 ```
 
+#### Example
+
 Clone element
 
 <button id="f6Js">Try it</button>
 
 <p id="f6JsDemo">This is a paragraph</p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -30,6 +34,8 @@ Clone element
   });
 </script>
 ```
+
+#### Example
 
 Clone element
 

@@ -1,6 +1,8 @@
-# Toggle class
+## Show element
 
-## Javascript
+Show an HTML element on click (display: block)
+
+### Javascript
 
 ```html
 <button id="f14Js">Try it</button>
@@ -16,6 +18,8 @@
 </script>
 ```
 
+#### Example
+
 show hidden element
 
 <button id="f14Js">Try it</button>
@@ -24,7 +28,7 @@ show hidden element
 
 <!-- ------------------- JQUERY ------------------- -->
 
-## jQuery
+### jQuery
 
 ```html
 <button id="f14Js">Try it</button>
@@ -36,6 +40,8 @@ show hidden element
   });
 </script>
 ```
+
+#### Example
 
 show hidden element
 

@@ -1,8 +1,8 @@
-# Get selected option
+## Get selected option
 
 Get the options of a select element that are selected (attribute selected)
 
-## Javascript
+### Javascript
 
 ```html
 <select id="f23JsDemo">
@@ -25,6 +25,8 @@ Get the options of a select element that are selected (attribute selected)
 </script>
 ```
 
+#### Example
+
 <button id="f23Js">Try it</button>
 
 <select id="f23JsDemo">
@@ -36,9 +38,7 @@ Get the options of a select element that are selected (attribute selected)
 
 <p id="f23JsP">Selected: </p>
 
-<hr>
-
-## jQuery
+### jQuery
 
 ```html
 <select id="f23JQueryDemo">
@@ -59,6 +59,8 @@ Get the options of a select element that are selected (attribute selected)
   });
 </script>
 ```
+
+#### Example
 
 <button id="f23JQuery">Try it</button>
 

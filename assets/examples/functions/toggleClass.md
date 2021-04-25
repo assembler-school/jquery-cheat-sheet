@@ -1,6 +1,8 @@
-# Toggle class
+## Toggle css class
 
-## Javascript
+Toggle a class of an HTML item
+
+### Javascript
 
 ```html
 <script>
@@ -12,13 +14,13 @@
 </script>
 ```
 
-toggle class CSS
+#### Example
 
 <button id="f9Js">Try it</button>
 
 <p id="f9JsDemo" class="red-text">This is a paragraph</p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -28,7 +30,7 @@ toggle class CSS
 </script>
 ```
 
-toggle class CSS
+#### Example
 
 <button id="f9JQuery">Try it</button>
 

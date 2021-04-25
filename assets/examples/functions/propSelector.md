@@ -1,6 +1,8 @@
-# Property selector
+## Property selector
 
-## Javascript
+Get all the elements that have a certain class and the display property of none and change their font color
+
+### Javascript
 
 ```html
 <script>
@@ -17,6 +19,8 @@
 </script>
 ```
 
+#### Example
+
 Get all the elements that have a certain class and the display property of none and change their font color
 
 <button id="f22Js">Try it</button>
@@ -25,7 +29,7 @@ Get all the elements that have a certain class and the display property of none 
 <p  class="textJs" style="display:none;">This is a paragraph 2</p>
 <p class="textJs" style="display:none;">This is a paragrap 3</p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -37,6 +41,8 @@ Get all the elements that have a certain class and the display property of none 
   });
 </script>
 ```
+
+#### Example
 
 Get all the elements that have a certain class and the display property of none and change their font color
 

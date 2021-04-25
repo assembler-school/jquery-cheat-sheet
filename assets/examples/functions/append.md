@@ -1,6 +1,8 @@
-# Append element
+## Append element
 
-## Javascript
+Append an HTML element with any text value to a parent element
+
+### Javascript
 
 ```html
 <script>
@@ -14,13 +16,15 @@
 </script>
 ```
 
+#### Example
+
 Click the button to append a button
 
 <button id="f2Js">Try it</button>
 
 <div id="f2JsDemo"></div>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -30,6 +34,8 @@ Click the button to append a button
   });
 </script>
 ```
+
+#### Example
 
 Click the button to append a button
 

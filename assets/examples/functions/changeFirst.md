@@ -1,8 +1,8 @@
-# Toggle class
+## Change the href attribute
 
 Change the href attribute of the first <code>a</code> element (You have to create several <code>a</code> elements)
 
-## Javascript
+### Javascript
 
 ```html
 <nav id="f24JsDemo">
@@ -23,6 +23,8 @@ Change the href attribute of the first <code>a</code> element (You have to creat
 </script>
 ```
 
+#### Example
+
 <button id="f24Js">Try it</button>
 
 <nav id="f24JsDemo">
@@ -31,7 +33,7 @@ Change the href attribute of the first <code>a</code> element (You have to creat
   <a href="#">Three</a>
 </nav>
 
-## jQuery
+### jQuery
 
 ```html
 <nav id="f24JQueryDemo">
@@ -50,6 +52,8 @@ Change the href attribute of the first <code>a</code> element (You have to creat
   });
 </script>
 ```
+
+#### Example
 
 <button id="f24JQuery">Try it</button>
 

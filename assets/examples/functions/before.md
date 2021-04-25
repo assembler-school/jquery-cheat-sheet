@@ -1,6 +1,8 @@
-# Click event
+## Insert element before
 
-## Javascript
+Create and add an HTML element with any text value before another element
+
+### Javascript
 
 ```html
 <script>
@@ -18,6 +20,8 @@
 </script>
 ```
 
+#### Example
+
 Insert span element before each p element
 
 <button id="f5Js">Try it</button>
@@ -25,7 +29,7 @@ Insert span element before each p element
 <p class="f5JsDemo">This is a paragraph 1</p>
 <p class="f5JsDemo">This is a paragraph 2</p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -35,6 +39,8 @@ Insert span element before each p element
   });
 </script>
 ```
+
+#### Example
 
 Insert span element before each p element
 

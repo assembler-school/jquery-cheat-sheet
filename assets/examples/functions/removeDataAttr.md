@@ -1,6 +1,8 @@
-# Add and remove data atrribute
+## Add and remove data atrribute
 
-## Javascript
+Remove the data-src attribute of the img element
+
+### Javascript
 
 ```html
 <script>
@@ -21,13 +23,15 @@
 </script>
 ```
 
+#### Example
+
 Remove data atrribute
 
 <img id="f12JsImg" src="./assets/img/assembler.png"></img>
 <button id="f12Jsb1">add data attr</button>
 <button id="f12Jsb2">remove data attr</button>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -42,6 +46,8 @@ Remove data atrribute
   });
 </script>
 ```
+
+#### Example
 
 Remove data attribute
 

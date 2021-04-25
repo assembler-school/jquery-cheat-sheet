@@ -1,5 +1,7 @@
 ## Change event on select element
 
+When the user changes the option of a select element
+
 ### Javascript
 
 ```html

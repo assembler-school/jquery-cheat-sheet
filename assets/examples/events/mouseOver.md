@@ -1,4 +1,6 @@
-## Click event
+## Mouseover event
+
+When you position the mouse over an element
 
 ### Javascript
 

@@ -1,6 +1,8 @@
-# Remove element
+## Add css class
 
-## Javascript
+Add a class to an HTML item
+
+### Javascript
 
 ```html
 <script>
@@ -13,13 +15,15 @@
 </script>
 ```
 
+#### Example
+
 add class CSS
 
 <button id="f7Js">Try it</button>
 
 <p id="f7JsDemo">This is a paragraph</p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -28,6 +32,8 @@ add class CSS
   });
 </script>
 ```
+
+#### Example
 
 add class CSS
 

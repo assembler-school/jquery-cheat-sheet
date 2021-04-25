@@ -1,6 +1,8 @@
-# Remove atrribute
+## Remove disabled atrribute
 
-## Javascript
+Remove the disabled attribute of an HTML button
+
+### Javascript
 
 ```html
 <script>
@@ -13,12 +15,14 @@
 </script>
 ```
 
+#### Example
+
 Remove attribute
 
 <button id="f11Js">Try it</button>
 <button id="f11JsDemo" disabled>Click</button>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -27,6 +31,8 @@ Remove attribute
   });
 </script>
 ```
+
+#### Example
 
 Remove attribute
 

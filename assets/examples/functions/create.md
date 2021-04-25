@@ -1,6 +1,8 @@
-# Create element
+## Create element
 
-## Javascript
+Create an HTML element with any text value
+
+### Javascript
 
 ```html
 <script>
@@ -14,13 +16,15 @@
 </script>
 ```
 
+#### Example
+
 Click the button to create a P element with some text.
 
 <button id="f0Js">Try it</button>
 
 <div id="f0JsDemo"></div>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -32,6 +36,8 @@ Click the button to create a P element with some text.
   });
 </script>
 ```
+
+#### Example
 
 Click the button to create a P element with some text.
 

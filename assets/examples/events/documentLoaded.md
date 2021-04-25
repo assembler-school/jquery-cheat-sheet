@@ -1,5 +1,7 @@
 ## Document Loaded event
 
+When the HTML document has been loaded and you can manipulate it with JavaScript
+
 ### Javascript
 
 ```html
@@ -12,6 +14,8 @@
 
 #### Example:
 
+go to browser console to show result
+
 ### jQuery
 
 ```html
@@ -23,3 +27,5 @@
 ```
 
 #### Example:
+
+go to browser console to show result

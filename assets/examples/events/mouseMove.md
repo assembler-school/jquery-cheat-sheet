@@ -1,5 +1,7 @@
 ## Mousemove event
 
+When the user moves the mouse cursor
+
 ### Javascript
 
 ```html

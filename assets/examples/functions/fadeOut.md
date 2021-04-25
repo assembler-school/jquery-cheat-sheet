@@ -1,6 +1,8 @@
-# FadeOut
+## FadeOut
 
-## Javascript
+Fade out an HTML element using jQuery
+
+### Javascript
 
 We have to add and remove CSS classes to achieve the same result
 
@@ -25,13 +27,13 @@ We have to add and remove CSS classes to achieve the same result
 </script>
 ```
 
-toggle class CSS
+#### Example
 
 <button id="f16Js">Try it</button>
 
 <p id="f16JsDemo">This is a paragraph</p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -41,7 +43,7 @@ toggle class CSS
 </script>
 ```
 
-toggle class CSS
+#### Example
 
 <button id="f16JQuery">Try it</button>
 

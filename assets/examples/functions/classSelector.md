@@ -1,6 +1,8 @@
-# Get element by class
+## Get element by class
 
-## Javascript
+Get all the elements that have a certain class and change their font weight
+
+### Javascript
 
 ```html
 <p class="f20JsDemo">This is a paragraph with class = "f20JsDemo"</p>
@@ -15,13 +17,15 @@
 </script>
 ```
 
+#### Example
+
 click to chande paragraph text
 
 <button id="f20Js">Try it</button>
 
 <p class="f20JsDemo" >This is a paragraph with class = "f20JsDemo"</p>
 
-## jQuery
+### jQuery
 
 ```html
 <p class="f20JQueryDemo">This is a paragraph with class = "f20JQueryDemo"</p>
@@ -32,6 +36,8 @@ click to chande paragraph text
   });
 </script>
 ```
+
+#### Example
 
 click to chande paragraph text
 

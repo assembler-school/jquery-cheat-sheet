@@ -1,5 +1,7 @@
 ## Submit event
 
+When a form is submitted
+
 ### Javascript
 
 ```html

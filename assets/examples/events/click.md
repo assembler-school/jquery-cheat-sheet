@@ -1,5 +1,7 @@
 ## Click event
 
+When an HTML item has been clicked
+
 ### Javascript
 
 ```html

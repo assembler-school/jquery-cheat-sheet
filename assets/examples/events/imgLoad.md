@@ -1,5 +1,7 @@
 ## Load event
 
+When an image is loaded
+
 ### Javascript
 
 ```html

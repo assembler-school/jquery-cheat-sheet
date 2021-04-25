@@ -1,6 +1,8 @@
-# Remove element
+## Remove element
 
-## Javascript
+Remove an HTML element with any text value
+
+### Javascript
 
 ```html
 <script>
@@ -12,13 +14,15 @@
 </script>
 ```
 
+#### Example
+
 Click the button to remove the paragraph
 
 <button id="f1Js">Try it</button>
 
 <p id="f1JsDemo">This is a paragraph.</p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -27,6 +31,8 @@ Click the button to remove the paragraph
   });
 </script>
 ```
+
+#### Example
 
 Click the button to remove the paragraph
 

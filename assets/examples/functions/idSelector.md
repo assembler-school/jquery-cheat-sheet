@@ -1,6 +1,8 @@
-# Get element by id
+## Get element by id
 
-## Javascript
+Get an item by id and change its font weight
+
+### Javascript
 
 ```html
 <p id="f21JsDemo">This is a paragraph with class = "f21JsDemo"</p>
@@ -15,13 +17,15 @@
 </script>
 ```
 
+#### Example
+
 click to chande paragraph text
 
 <button id="f21Js">Try it</button>
 
 <p id="f21JsDemo" >This is a paragraph with class = "f21JsDemo"</p>
 
-## jQuery
+### jQuery
 
 ```html
 <p id="f21JsDemo">This is a paragraph with class = "f21JsDemo"</p>
@@ -33,6 +37,8 @@ click to chande paragraph text
   });
 </script>
 ```
+
+#### Example
 
 click to chande paragraph text
 

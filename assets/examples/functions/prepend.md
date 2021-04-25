@@ -1,6 +1,8 @@
-# Prepend element
+## Prepend element
 
-## Javascript
+Prepend an HTML element with any text value to a parent element
+
+### Javascript
 
 ```html
 <script>
@@ -14,13 +16,15 @@
 </script>
 ```
 
+#### Example
+
 Insert span element after each p element
 
 <button id="f4Js">Try it</button>
 
 <div id="f4JsDemo">This is a div</div>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -30,6 +34,8 @@ Insert span element after each p element
   });
 </script>
 ```
+
+#### Example
 
 Click the button to prepend a button
 

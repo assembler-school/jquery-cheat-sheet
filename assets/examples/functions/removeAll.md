@@ -1,6 +1,8 @@
-# Toggle class
+## Remove all items
 
-## Javascript
+Remove all items from a specific selector
+
+### Javascript
 
 ```html
 <p class="text">This is a paragraph 1</p>
@@ -19,7 +21,7 @@
 </script>
 ```
 
-toggle class CSS
+#### Example
 
 <button id="f26Js">Try it</button>
 
@@ -27,7 +29,7 @@ toggle class CSS
 <p class="text">This is a paragraph 2</p>
 <p class="text">This is a paragraph 3</p>
 
-## jQuery
+### jQuery
 
 ```html
 <p class="textjq">This is a paragraph 1</p>
@@ -41,7 +43,7 @@ toggle class CSS
 </script>
 ```
 
-toggle class CSS
+#### Example
 
 <button id="f26JQuery">Try it</button>
 

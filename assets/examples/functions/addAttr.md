@@ -1,6 +1,8 @@
-# Add atrribute
+## Add disabled atrribute
 
-## Javascript
+Add a disabled attribute to an HTML button
+
+### Javascript
 
 ```html
 <script>
@@ -13,11 +15,13 @@
 </script>
 ```
 
+#### Example
+
 Add attribute
 
 <button id="f10Js">Try it</button>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -26,6 +30,8 @@ Add attribute
   });
 </script>
 ```
+
+#### Example
 
 Add attribute
 

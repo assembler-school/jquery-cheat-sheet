@@ -1,5 +1,7 @@
 ## event target event
 
+When a ul list item is clicked, show the item that was clicked
+
 ### Javascript
 
 ```html

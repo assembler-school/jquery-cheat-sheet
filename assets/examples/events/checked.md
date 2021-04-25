@@ -1,5 +1,7 @@
 ## Click event on checkbox
 
+When a checkbox is checked or unchecked
+
 ### Javascript
 
 ```html

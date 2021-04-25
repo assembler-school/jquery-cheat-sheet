@@ -1,6 +1,8 @@
-# Parent
+## Parent of element
 
-## Javascript
+Get the parent element of a certain element and change its font weight
+
+### Javascript
 
 ```html
 <script>
@@ -13,6 +15,8 @@
 </script>
 ```
 
+#### Example
+
 Click to change the color of the <code>ul<code> to red
 
 <button id="f19Js">Try it</button>
@@ -23,7 +27,7 @@ Click to change the color of the <code>ul<code> to red
   <li>Three</li>
 </ul>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -32,6 +36,8 @@ Click to change the color of the <code>ul<code> to red
   });
 </script>
 ```
+
+#### Example
 
 Click to change the color of the <code>ul<code> to red
 

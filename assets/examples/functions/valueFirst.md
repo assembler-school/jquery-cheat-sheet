@@ -1,8 +1,8 @@
-# Read first input value
+## Read first input value
 
 Show an alert with the value of the first <code>input</code> of the page (Create an <code>input</code> element to test this case)
 
-## Javascript
+### Javascript
 
 ```html
 <form id="f25JsDemo">
@@ -21,6 +21,8 @@ Show an alert with the value of the first <code>input</code> of the page (Create
 </script>
 ```
 
+#### Example
+
 <button id="f25Js">Try it</button>
 
 <form id="f25JsDemo">
@@ -30,7 +32,7 @@ Show an alert with the value of the first <code>input</code> of the page (Create
   <input type="text" name="address" id="address"></input>
 </form>
 
-## jQuery
+### jQuery
 
 ```html
 <form id="f25JQueryDemo">
@@ -47,6 +49,8 @@ Show an alert with the value of the first <code>input</code> of the page (Create
   });
 </script>
 ```
+
+#### Example
 
 <button id="f25JQuery">Try it</button>
 

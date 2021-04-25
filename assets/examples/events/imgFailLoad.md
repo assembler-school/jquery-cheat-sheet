@@ -1,5 +1,7 @@
 ## Onerror event
 
+When an image fails to load, (if you write an incorrect image url the loading of the image will fail)
+
 ### Javascript
 
 ```html

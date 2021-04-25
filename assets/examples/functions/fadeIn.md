@@ -1,6 +1,8 @@
-# Fadein
+## Fadein
 
-## Javascript
+Fade in an HTML element using jQuery
+
+### Javascript
 
 We have to add and remove CSS classes to achieve the same result
 
@@ -42,13 +44,13 @@ We have to add and remove CSS classes to achieve the same result
 </script>
 ```
 
-toggle class CSS
+#### Example
 
 <button id="f15Js">Try it</button>
 
 <p id="f15JsDemo" class="none">This is a paragraph</p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -58,7 +60,7 @@ toggle class CSS
 </script>
 ```
 
-toggle class CSS
+#### Example
 
 <button id="f15JQuery">Try it</button>
 

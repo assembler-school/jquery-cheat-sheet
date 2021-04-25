@@ -1,6 +1,8 @@
-# Children
+## Children
 
-## Javascript
+Get the collection of children of a certain element and change its font weight
+
+### Javascript
 
 ```html
 <script>
@@ -15,6 +17,8 @@
 </script>
 ```
 
+#### Example
+
 Click to change the color of the <code>ul<code> elements to red
 
 <button id="f18Js">Try it</button>
@@ -25,7 +29,7 @@ Click to change the color of the <code>ul<code> elements to red
   <li>Three</li>
 </ul>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -38,6 +42,8 @@ Click to change the color of the <code>ul<code> elements to red
   });
 </script>
 ```
+
+#### Example
 
 Click to change the color of the <code>ul<code> elements to red
 
