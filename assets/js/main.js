@@ -6,10 +6,47 @@ const exerciseFunctions = {
     onMouseMoving: {js: onMouseMovingJS, jquery: onMouseMovingJQuery},
     changeInput: {js: changeInputJS, jquery: changeInputJQuery},
     imageLoaded: {js: imageLoadedJS, jquery: imageLoadedJQuery},
-    imageFailLoading: {js: imageFailLoadingJS, jquery: imageFailLoadingJQuery}
+    imageFailLoading: {js: imageFailLoadingJS, jquery: imageFailLoadingJQuery},
+    formSubmitted: {js: formSubmittedJS, jquery: formSubmittedJQuery},
+    optionChanged: {js: optionChangedJS, jquery: optionChangedJQuery},
+    mouseoverElement: {js: mouseoverElementJS, jquery: mouseoverElementJQuery},
+    checkboxChanges: {js: checkboxChangesJS, jquery: checkboxChangesJQuery},
+    ulItemClicked: {js: ulItemClickedJS, jquery: ulItemClickedJQuery},
+    createHtmlElement: {js: createHtmlElementJS, jquery: createHtmlElementJQuery},
+    removeHtmlElement: {js: removeHtmlElementJS, jquery: removeHtmlElementJQuery},
+    fadeInHtmlElement: {js: fadeInHtmlElementJS, jquery: fadeInHtmlElementJQuery},
+    fadeOutHtmlElement: {js: fadeOutHtmlElementJS, jquery: fadeOutHtmlElementJQuery},
+    iterateCollectionExample: {js: iterateCollectionExampleJS, jquery: iterateCollectionExampleJQuery},
+    selectorPropertyNone: {js: selectorPropertyNoneJS, jquery: selectorPropertyNoneJQuery},
+    removeAllItems: {js: removeAllItemsJS, jquery: removeAllItemsJQuery},
+    animateHeader: {js: animateHeaderJS, jquery: animateHeaderJQuery}
+
 };
 
 (function initialize() {
+    document.addEventListener("DOMContentLoaded", _ => {
+        setTimeout(_ => {
+            document
+                .querySelector('.main-header')
+                .animate(
+                    [
+                        { transform: "translateX(0px)" },
+                        { transform: "translateX(50px)" },
+                        { transform: "translateX(0px)" },
+                    ],
+                    {
+                        duration: 1200,
+                        iterations: 1,
+                    }
+                );
+        }, 2000);
+    });
+    $(document).ready(function () {
+        $(".main-header").css("opacity", 0);
+        setTimeout(() => {
+            $(".main-header").animate({ opacity: 1}, 200);
+        }, 2000);
+    });
     $(".close").on('click', hideModal);
 
     window.onclick = (event) => {
@@ -17,6 +54,7 @@ const exerciseFunctions = {
             hideModal();
         }
     };
+
     document.onkeyup = e => {
         if ((e.key === "Escape") && $('.modal').is(":visible")) {
             hideModal();
