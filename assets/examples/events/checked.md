@@ -1,6 +1,6 @@
-# Click event on checkbox
+## Click event on checkbox
 
-## Javascript
+### Javascript
 
 ```html
 <script>
@@ -18,12 +18,14 @@
 </script>
 ```
 
+#### Example:
+
 <label for="e11Js">Checkbox:</label>
 <input type="checkbox" id="e11Js">
 
 <p id="e11JsDemo" style="display:none">Checkbox is CHECKED!</p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -39,6 +41,8 @@
   });
 </script>
 ```
+
+#### Example:
 
 <label for="e11JQuery">Checkbox:</label>
 <input type="checkbox" id="e11JQuery">

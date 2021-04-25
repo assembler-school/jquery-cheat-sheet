@@ -1,6 +1,6 @@
-# Load event
+## Load event
 
-## Javascript
+### Javascript
 
 ```html
 <script>
@@ -13,11 +13,13 @@
 </script>
 ```
 
+#### Example:
+
 <div id="e6Js"></div>
 
 <p id="e6JsDemo"></p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -27,6 +29,8 @@
   });
 </script>
 ```
+
+#### Example:
 
 <div id="e6JQuery"></div>
 

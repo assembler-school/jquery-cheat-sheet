@@ -1,6 +1,6 @@
-# Click event
+## Click event
 
-## Javascript
+### Javascript
 
 ```html
 <script>
@@ -10,9 +10,11 @@
 </script>
 ```
 
+#### Example:
+
 <button class="e1Js">Click Me!</button>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -21,5 +23,7 @@
   });
 </script>
 ```
+
+#### Example:
 
 <button class="e1JQuery">Click Me!</button>

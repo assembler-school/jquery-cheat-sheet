@@ -1,6 +1,6 @@
-# Double click event
+## Double click event
 
-## Javascript
+### Javascript
 
 ```html
 <script>
@@ -11,9 +11,11 @@
 </script>
 ```
 
+#### Example:
+
 <button class="e2Js">Click Me!</button>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -22,5 +24,7 @@
   });
 </script>
 ```
+
+#### Example:
 
 <button class="e2JQuery">Click Me!</button>

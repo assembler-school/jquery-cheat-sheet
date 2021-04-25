@@ -1,6 +1,6 @@
-# Click event
+## Click event
 
-## Javascript
+### Javascript
 
 ```html
 <script>
@@ -11,9 +11,11 @@
 </script>
 ```
 
+#### Example:
+
 <h2 id="e10Js">Mouse over me</h2>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -22,5 +24,7 @@
   });
 </script>
 ```
+
+#### Example:
 
 <h2 id="e10JQuery">Mouse over me</h2>

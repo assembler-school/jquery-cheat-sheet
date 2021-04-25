@@ -1,6 +1,6 @@
-# Document Loaded event
+## Document Loaded event
 
-## Javascript
+### Javascript
 
 ```html
 <script>
@@ -10,7 +10,9 @@
 </script>
 ```
 
-## jQuery
+#### Example:
+
+### jQuery
 
 ```html
 <script>
@@ -19,3 +21,5 @@
   });
 </script>
 ```
+
+#### Example:

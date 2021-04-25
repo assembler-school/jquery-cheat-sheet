@@ -1,9 +1,11 @@
 import * as js from "./vanilla.js";
 import * as jq from "./jquery.js";
+
 /*
  * Here I get the files based on the
  * section wanted in HTML
  */
+loadFile("./assets/examples/mainPage.md");
 
 const links = document.querySelectorAll("li > a");
 
@@ -15,23 +17,26 @@ links.forEach((element) => {
     } else {
       srcFile = "./assets/examples/functions/" + e.target.title;
     }
-
-    fetch(srcFile)
-      .then((res) => (res.ok ? res.text() : Promise.reject(res)))
-      .then((text) => {
-        // console.log(text);
-        document.querySelector(
-          ".markdown"
-        ).innerHTML = new showdown.Converter().makeHtml(text);
-        hljs.highlightAll();
-        addListeners(e);
-      })
-      .catch((err) => {
-        console.error(err);
-        // let message = err.statusText || "Error";
-      });
+    loadFile(srcFile, e);
   });
 });
+
+function loadFile(src, e) {
+  fetch(src)
+    .then((res) => (res.ok ? res.text() : Promise.reject(res)))
+    .then((text) => {
+      // console.log(text);
+      document.querySelector(
+        ".markdown"
+      ).innerHTML = new showdown.Converter().makeHtml(text);
+      hljs.highlightAll();
+      addListeners(e);
+    })
+    .catch((err) => {
+      console.error(err);
+      // let message = err.statusText || "Error";
+    });
+}
 
 /*
  * Here I declare global listeners

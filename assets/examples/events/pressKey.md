@@ -1,6 +1,6 @@
-# Key Press event
+## Key Press event
 
-## Javascript
+### Javascript
 
 ```html
 <script>
@@ -11,10 +11,12 @@
 </script>
 ```
 
+#### Example:
+
 Press a key inside the text field to set a red background color.
 <input type="text" id="e3Js">
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -23,6 +25,8 @@ Press a key inside the text field to set a red background color.
   });
 </script>
 ```
+
+#### Example:
 
 Press a key inside the text field to set a blue background color.
 <input type="text" id="e3JQuery">

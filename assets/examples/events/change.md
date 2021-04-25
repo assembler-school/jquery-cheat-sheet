@@ -1,6 +1,6 @@
-# Change event on select element
+## Change event on select element
 
-## Javascript
+### Javascript
 
 ```html
 <script>
@@ -11,6 +11,8 @@
   });
 </script>
 ```
+
+#### Example:
 
 Select an option and you will see the result
 
@@ -20,7 +22,7 @@ Select an option and you will see the result
     <option value="3">three</option>
 </select>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -31,6 +33,8 @@ Select an option and you will see the result
   });
 </script>
 ```
+
+#### Example:
 
 Select an option and you will see the result
 

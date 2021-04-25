@@ -1,6 +1,6 @@
-# Submit event
+## Submit event
 
-## Javascript
+### Javascript
 
 ```html
 <script>
@@ -10,12 +10,14 @@
 </script>
 ```
 
+#### Example:
+
 <form id="e8Js" action="/action_page.php">
   Enter name: <input type="text" name="fname">
   <input type="submit" value="Submit">
 </form>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -24,6 +26,8 @@
   });
 </script>
 ```
+
+#### Example:
 
 <form id="e8JQuery" action="/action_page.php">
   Enter name: <input type="text" name="fname">

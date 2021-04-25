@@ -1,6 +1,6 @@
-# event target event
+## event target event
 
-## Javascript
+### Javascript
 
 ```html
 <script>
@@ -14,6 +14,8 @@
 </script>
 ```
 
+#### Example:
+
 When a ul list item is clicked, show the item that was clicked
 
 <ul id="e12Js">
@@ -22,7 +24,7 @@ When a ul list item is clicked, show the item that was clicked
   <li>Three</li>
 </ul>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -33,6 +35,8 @@ When a ul list item is clicked, show the item that was clicked
     });
 </script>
 ```
+
+#### Example:
 
 When a ul list item is clicked, show the item that was clicked
 

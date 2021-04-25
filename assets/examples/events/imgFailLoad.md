@@ -1,6 +1,6 @@
-# Onerror event
+## Onerror event
 
-## Javascript
+### Javascript
 
 ```html
 <script>
@@ -14,11 +14,13 @@
 </script>
 ```
 
+#### Example:
+
 <div id="e7Js"></div>
 
 <p id="e7JsDemo"></p>
 
-## jQuery
+### jQuery
 
 ```html
 <script>
@@ -29,6 +31,8 @@
   });
 </script>
 ```
+
+#### Example:
 
 <div id="e7JQuery"></div>
 
