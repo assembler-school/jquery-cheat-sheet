@@ -1197,6 +1197,94 @@ element.style.animation = "fadeIn 2s";
   };
 }
 
+//30 ----------------------------------------------------------
+function fadedOut() {
+  // Macro
+  macroTextVanilla.innerText = `// Fade out element in 2 seconds
+
+element.style.animation = "fadeOut 2s forwards";
+
+/* CSS animation */
+@keyframes fadeOut {
+  0% {opacity:100%;}
+  100% {opacity:0%;}
+}`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleParent = document.createElement("div");
+    exampleParent.classList.add("example-parent");
+    exampleParent.innerText = "Fading out";
+    exampleParent.style.animation = "fadeOut 2s forwards";
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleParent);
+  };
+}
+
+//31 ----------------------------------------------------------
+function styleCollection() {
+  // Macro
+  macroTextVanilla.innerText = `// Style collection items
+
+let liElements = document.getElementsByTagName("li");
+
+for (let l of liElements){
+  l.innerText = l.innerText.toUpperCase();
+  console.log("Styled collection");
+};`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleUL = document.createElement("ul");
+    exampleUL.classList.add("example-ul");
+
+    let ulItem1 = document.createElement("li");
+    ulItem1.innerText = "Graham Chapman";
+    let ulItem2 = document.createElement("li");
+    ulItem2.innerText = "Terry Jones";
+    let ulItem3 = document.createElement("li");
+    ulItem3.innerText = "Terry Gilliam";
+    let ulItem4 = document.createElement("li");
+    ulItem4.innerText = "Eric Idle";
+    let ulItem5 = document.createElement("li");
+    ulItem5.innerText = "John Clesse";
+    let ulItem6 = document.createElement("li");
+    ulItem6.innerText = "Michael Pallin";
+
+    let exampleParagraph = document.createElement("p");
+
+    exampleUL.appendChild(ulItem1);
+    exampleUL.appendChild(ulItem2);
+    exampleUL.appendChild(ulItem3);
+    exampleUL.appendChild(ulItem4);
+    exampleUL.appendChild(ulItem5);
+    exampleUL.appendChild(ulItem6);
+
+    let liElements = document.getElementsByTagName("li");
+
+    setTimeout(function () {
+      for (let l of liElements) {
+        l.innerText = l.innerText.toUpperCase();
+      }
+      exampleParagraph.innerText = "\n> Styled collection";
+      console.log("Styled collection");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleUL);
+    outputVanilla.appendChild(exampleParagraph);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1325,5 +1413,13 @@ export const vanillaExamples = [
   // 29
   function () {
     fadedIn();
+  },
+  // 30
+  function () {
+    fadedOut();
+  },
+  // 31
+  function () {
+    styleCollection();
   },
 ];

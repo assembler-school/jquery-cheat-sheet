@@ -574,7 +574,7 @@ let container = $("<div>");
 $(element).click(function(){
   let newElement = $("<p>");
   newElement.text("Element created");
-  container.append(newElement);
+  newElement.appendTo(container);
 };`;
 
   macroJquery.text(macroString);
@@ -590,7 +590,7 @@ $(element).click(function(){
       let exampleParagraph = $("<p>");
       exampleParagraph.addClass("example-element");
       exampleParagraph.text("Element created");
-      outputJquery.append(exampleParagraph);
+      exampleParagraph.appendTo(outputJquery);
       console.log("Element created in jQuery!");
     }
 
@@ -665,7 +665,7 @@ let child = $("<div>");
 
 // Appending the child after 2 seconds
 setTimeout(function(){
-  container.append(child);
+  child.appendTo(container);
 }, 2000);`;
 
   macroJquery.text(macroString);
@@ -684,7 +684,7 @@ setTimeout(function(){
       let appendedChild = exampleChild.clone();
       appendedChild.addClass("example-appended-child");
       appendedChild.text("Appended child!");
-      exampleParent.append(appendedChild);
+      appendedChild.appendTo(exampleParent);
     }, 2000);
 
     // Resetting output if it's filled
@@ -707,7 +707,7 @@ let child = $("<div>");
 
 // Prepending the child after 2 seconds
 setTimeout(function(){
-  container.prepend(child);
+  child.prependTo(container);
 }, 2000);`;
 
   macroJquery.text(macroString);
@@ -1271,6 +1271,90 @@ element.fadeIn(2000);`;
   });
 }
 
+//30 ----------------------------------------------------------
+function fadedOut() {
+  // Macro
+  macroString = `// Fade out element in 2 seconds
+
+element.fadeOut(2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleParent = $("<div>");
+    exampleParent.addClass("example-parent");
+    exampleParent.text("Fading in");
+    exampleParent.fadeOut(2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleParent);
+  });
+}
+
+//31 ----------------------------------------------------------
+function styleCollection() {
+  // Macro
+  macroString = `// Style collection items
+
+let liElements = $("li");
+
+liElements.each(function(){
+  $(this).on("click", function{
+  console.log("Styled collection");
+});`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleUL = $("<ul>");
+    exampleUL.addClass("example-ul");
+
+    let ulItem1 = $("<li>");
+    ulItem1.text("Graham Chapman");
+    let ulItem2 = $("<li>");
+    ulItem2.text("Terry Jones");
+    let ulItem3 = $("<li>");
+    ulItem3.text("Terry Gilliam");
+    let ulItem4 = $("<li>");
+    ulItem4.text("Eric Idle");
+    let ulItem5 = $("<li>");
+    ulItem5.text("John Cleese");
+    let ulItem6 = $("<li>");
+    ulItem6.text("Michael Pallin");
+
+    let exampleParagraph = $("<p>");
+
+    exampleUL.append(ulItem1);
+    exampleUL.append(ulItem2);
+    exampleUL.append(ulItem3);
+    exampleUL.append(ulItem4);
+    exampleUL.append(ulItem5);
+    exampleUL.append(ulItem6);
+
+    setTimeout(function () {
+      $("li").each(function () {
+        $(this).css("text-transform", "uppercase");
+      });
+      exampleParagraph.text("\n> Styled collection");
+      console.log("Styled collection");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleUL);
+    outputJquery.append(exampleParagraph);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1398,5 +1482,13 @@ export const jQueryExamples = [
   // 29
   function () {
     fadedIn();
+  },
+  // 30
+  function () {
+    fadedOut();
+  },
+  // 31
+  function () {
+    styleCollection();
   },
 ];
