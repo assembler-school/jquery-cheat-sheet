@@ -86,64 +86,118 @@ function showHideSolutions(){
 
 // Injects the content to their corresponding divs
 function injectionSwitch(){
+    
+    // output container variable
     let codeContainer;
+
     //Events divs
     for(let e = 1; e < 14; e++){
         let id = "e" + e;
         switch(id){
 
             case "e1":
-
+                // OnLoad Event
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onLoadVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.onLoadJqueryCode();
+                vanilla.onLoadVanillaOutput(codeContainer);
                 break;
 
             case "e2":
+                // OnClick Event
                 codeContainer = document.getElementById(id);
                 codeContainer.children[0].children[1].innerHTML = vanilla.onClickVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = "";
+                codeContainer.children[1].children[1].innerHTML = jquery.onClickJqueryCode();
                 vanilla.onClickVanillaOutput(codeContainer);
                 break;
 
             case "e3":
+                // OnDblClick Event
                 codeContainer = document.getElementById(id);
                 codeContainer.children[0].children[1].innerHTML = vanilla.onDblClickVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = "";
+                codeContainer.children[1].children[1].innerHTML = jquery.onDblClickJqueryCode();
                 vanilla.onDblClickVanillaOutput(codeContainer);
                 break;
 
             case "e4":
+                // OnKeyDown Event
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onKeyDownVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.onKeyDownJqueryCode();
+                vanilla.onKeyDownVanillaOutput(codeContainer);
                 break;
 
             case "e5":
+                // OnMouseMove Event
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onMouseMoveVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.onMouseMoveJqueryCode();
+                // vanilla.onMouseMoveVanillaOutput(codeContainer);
                 break;
 
             case "e6":
+                // OnChange Event capture input text value
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onChangeInputTextVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.onChangeInputTextJqueryCode();
+                vanilla.onChangeInputTextVanillaOutput(codeContainer);
                 break;
 
             case "e7":
+                // OnLoad Event for image
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onLoadImageVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.onLoadImageJqueryCode();
+                vanilla.onLoadImageVanillaOutput(codeContainer);
                 break;
 
             case "e8":
+                // OnError Event to load image
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onLoadImageFailVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.onLoadImageFailJqueryCode();
+                vanilla.onLoadImageFailVanillaOutput(codeContainer);
                 break;
 
             case "e9":
+                // OnSubmit Event for form
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onClickVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.onClickJqueryCode();
+                vanilla.onClickVanillaOutput(codeContainer);
                 break;
 
             case "e10":
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onClickVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.onClickJqueryCode();
+                vanilla.onClickVanillaOutput(codeContainer);
                 break;
 
             case "e11":
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onClickVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.onClickJqueryCode();
+                vanilla.onClickVanillaOutput(codeContainer);
                 break;
 
             case "e12":
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onClickVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.onClickJqueryCode();
+                vanilla.onClickVanillaOutput(codeContainer);
                 break;
 
             case "e13":
+                codeContainer = document.getElementById(id);
+                codeContainer.children[0].children[1].innerHTML = vanilla.onClickVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.onClickJqueryCode();
+                vanilla.onClickVanillaOutput(codeContainer);
                 break;
         }
     }
-    // vanillaCodes.push(vanilla.onLoadVanillaCode());
-    // jqueryCodes.push(jquery.onLoadJqueryCode());
-    // outputSolutions.push(vanilla.onLoadVanillaOutput());
+
+    //Functions and Selectors
 }
 
 
