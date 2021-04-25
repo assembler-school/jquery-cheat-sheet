@@ -48,12 +48,15 @@ function selectDesiredFunction() {
     let selectedItemList = event.target;
     var textSelectedItemList = selectedItemList.innerHTML;
 
+
     let functionList = document.querySelector(".code-class");
+
     if (selectedItemList !== false) {
         functionList.insertAdjacentHTML('beforeend', '<li class=code-text id=vanillajs>' + `${textSelectedItemList}` + '</li>');
     } else {
         console.warning("Se ha encontrado un error al intentar guardar el item seleccionado")
     }
+
 }
 
 function clearDesiredFunction(event) {
@@ -68,6 +71,7 @@ function clearDesiredFunction(event) {
 function vanillaSelected(event) {
 
     console.log("INNN")
+
 }
 
 // function clearVanillaSelected() {
