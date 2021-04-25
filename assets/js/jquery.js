@@ -1202,6 +1202,48 @@ button.on("click", function(){
     outputJquery.append(exampleChild);
   });
 }
+
+//28 ----------------------------------------------------------
+function displayBlock() {
+  // Macro
+  macroString = `/// Show element on click (display: block)
+
+button.on("click", function(){
+  element.css("display", "block");
+});`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleButton = $("<div>");
+    exampleButton.addClass("example-button");
+    exampleButton.text("Click to show");
+
+    let exampleChild = $("<div>");
+    exampleChild.addClass("example-child");
+    exampleChild.addClass("example-appended-child");
+    exampleChild.css({ marginTop: "var(--margin)", width: "200px" });
+    exampleChild.text("Show me");
+    exampleChild.css("display", "none");
+
+    function displayBlockInside() {
+      exampleChild.css("display", "block");
+    }
+
+    exampleButton.on("click", displayBlockInside);
+    // Removing event listener if example is clicked
+    removeEventJQuery(exampleButton, "click", displayBlockInside, ".example");
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleButton);
+    outputJquery.append(exampleChild);
+  });
+}
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1321,5 +1363,9 @@ export const jQueryExamples = [
   // 27
   function () {
     displayNone();
+  },
+  // 28
+  function () {
+    displayBlock();
   },
 ];

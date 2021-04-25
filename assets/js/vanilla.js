@@ -1127,6 +1127,47 @@ button.onclick = function(){
   };
 }
 
+//28 ----------------------------------------------------------
+function displayBlock() {
+  // Macro
+  macroTextVanilla.innerText = `// Show element on click (display: block)
+
+button.onclick = function(){
+  element.style.display = "block";
+};`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleButton = document.createElement("div");
+    exampleButton.setAttribute("class", "example-button");
+    exampleButton.innerText = "Click to show";
+
+    let exampleChild = document.createElement("div");
+    exampleChild.classList.add("example-child");
+    exampleChild.classList.add("example-appended-child");
+    exampleChild.style.marginTop = "var(--margin)";
+    exampleChild.style.width = "200px";
+    exampleChild.innerText = "Show me";
+    exampleChild.style.display = "none";
+
+    function displayBlockInside() {
+      exampleChild.style.display = "block";
+    }
+
+    exampleButton.addEventListener("click", displayBlockInside);
+    // Removing event listener if example is clicked
+    removeEventVanilla(exampleButton, "click", displayBlockInside, examples);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleButton);
+    outputVanilla.appendChild(exampleChild);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1247,5 +1288,9 @@ export const vanillaExamples = [
   // 27
   function () {
     displayNone();
+  },
+  // 28
+  function () {
+    displayBlock();
   },
 ];
