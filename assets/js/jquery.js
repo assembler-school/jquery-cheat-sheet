@@ -296,3 +296,9 @@ export function fnRemoveAll() {
     $(".textjq").remove();
   });
 }
+
+export function fnAnimate() {
+  $("#f27JQuery").on("click", function (e) {
+    $("#f27JQueryDemo").animate({ width: "300px" });
+  });
+}

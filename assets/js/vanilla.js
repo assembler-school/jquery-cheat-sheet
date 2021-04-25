@@ -386,3 +386,12 @@ export function fnRemoveAll() {
     });
   });
 }
+
+export function fnAnimate() {
+  const selector = document.getElementById("f27Js");
+
+  selector.addEventListener("click", function (e) {
+    const para = document.getElementById("f27JsDemo");
+    para.classList.add("width-anim");
+  });
+}
