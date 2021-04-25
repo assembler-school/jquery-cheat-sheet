@@ -1141,7 +1141,7 @@ setTimeout(function(){
     exampleImage.css("width", "50%");
     exampleImage.attr("alt", "Monty Python");
     exampleImage.attr("src", "./assets/img/spamalot.jpg");
-    exampleImage.attr("data-src", "addedDataSrc");
+    exampleImage.attr("data-src", "removeDataSrc");
 
     let exampleParagraph = $("<div>");
     exampleParagraph.text("> " + exampleImage.prop("outerHTML"));
