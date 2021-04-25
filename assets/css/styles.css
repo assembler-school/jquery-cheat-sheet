@@ -440,3 +440,16 @@ footer {
   outline: var(--border-size) solid var(--accent-color);
   color: var(--accent-color);
 }
+
+.example-grid {
+  height: 100%;
+  gap: calc(var(--margin) / 2);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.example-hidden-cell {
+  display: none;
+  color: var(--accent-color);
+  outline-color: var(--accent-color);
+}

@@ -1491,6 +1491,75 @@ setTimeout(function(){
   };
 }
 
+//36 ----------------------------------------------------------
+function styleHiddenId() {
+  // Macro
+  macroTextVanilla.innerText = `// Style element by class and display none
+
+let elements = document.getElementsByTagName("targetClass");
+setTimeout(function(){
+  for (let e of elements){
+    if (e.style.display === "none"){
+      e.style.display = "block";
+    }
+  }
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleGrid = document.createElement("div");
+    exampleGrid.classList.add("example-grid");
+
+    let numCells = 25;
+
+    for (let i = 1; i <= numCells; i++) {
+      var cell = document.createElement("div");
+      exampleGrid.appendChild(cell);
+      cell.setAttribute("id", "cell" + i);
+      cell.classList.add("example-parent");
+      cell.classList.add("example-cell");
+      cell.style.textAlign = "center";
+      cell.innerHTML = i;
+    }
+
+    let allCells = document.getElementsByClassName("example-cell");
+
+    setTimeout(function () {
+      for (let c of allCells) {
+        if (c.style.display === "none") {
+          c.style.display = "block";
+          c.style.outlineColor = "var(--accent-color)";
+          c.color = "var(accent-color)";
+        }
+      }
+      console.log("Styled hidden elements with example-cell class");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    outputVanilla.appendChild(exampleGrid);
+
+    // Hiding elements
+    document.getElementById("cell4").style.display = "none";
+    document.getElementById("cell4").style.color = "var(--accent-color)";
+    document.getElementById("cell7").style.display = "none";
+    document.getElementById("cell7").style.color = "var(--accent-color)";
+    document.getElementById("cell10").style.display = "none";
+    document.getElementById("cell10").style.color = "var(--accent-color)";
+    document.getElementById("cell11").style.display = "none";
+    document.getElementById("cell11").style.color = "var(--accent-color)";
+    document.getElementById("cell15").style.display = "none";
+    document.getElementById("cell15").style.color = "var(--accent-color)";
+    document.getElementById("cell17").style.display = "none";
+    document.getElementById("cell17").style.color = "var(--accent-color)";
+    document.getElementById("cell19").style.display = "none";
+    document.getElementById("cell19").style.color = "var(--accent-color)";
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1645,5 +1714,9 @@ export const vanillaExamples = [
   // 35
   function () {
     styleId();
+  },
+  // 36
+  function () {
+    styleHiddenId();
   },
 ];
