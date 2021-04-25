@@ -1,0 +1,413 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* end of reset css  */
+
+:root {
+  --font-display: "Work Sans", sans-serif;
+  --light: 300;
+  --regular: 400;
+  --semi-bold: 600;
+  --bold: 700;
+  --bg: #009888;
+  --dark_color: #01201c;
+  --light_color: #b1e0dc;
+}
+
+* {
+  /* outline: 1px solid red; */
+  box-sizing: border-box;
+  /* transition: 0.2s; */
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  position: relative;
+}
+
+.up-down {
+  width: 100%;
+  min-height: 457px;
+  height: 50%;
+  display: flex;
+}
+
+.square {
+  background-color: white;
+  /* padding: 15px; */
+  min-width: 457px;
+  width: 30%;
+  height: 100%;
+  border: 5px solid var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.console-container {
+  border: 5px solid var(--bg);
+  min-width: 457px;
+  width: 30%;
+  height: 100%;
+  background-color: var(--dark_color);
+  display: flex;
+  flex-direction: column;
+}
+
+.side-console-container {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.side-console-container:first-child {
+  border-bottom: 2.5px solid var(--bg);
+}
+
+.side-console-container:last-child {
+  border-top: 2.5px solid var(--bg);
+}
+
+.rectangle {
+  background-color: white;
+  /* padding: 15px; */
+  border: 5px solid var(--bg);
+  min-width: 641px;
+  width: 70%;
+  height: 100%;
+  position: relative;
+}
+
+h1 {
+  color: var(--bg);
+  font-family: var(--font-display);
+  font-size: 100px;
+  font-weight: var(--regular);
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  padding: 15px;
+  color: var(--bg);
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: var(--semi-bold);
+}
+
+p {
+  color: var(--bg);
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: var(--regular);
+  padding: 15px;
+}
+
+.navigation-container {
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+}
+
+button {
+  padding: 5px 15px;
+  background-color: white;
+  border: 2px solid var(--bg);
+  color: var(--bg);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px 5px;
+}
+
+button:hover:enabled,
+.active:enabled {
+  background-color: var(--dark_color);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: grey;
+  color: darkgray;
+  border: 2px solid darkgray;
+  cursor: default;
+}
+
+.ex-container {
+  width: 100%;
+  height: 90%;
+  overflow: auto;
+  padding-bottom: 15px;
+}
+
+.exercise {
+  padding: 10px 15px;
+  border-bottom: 2px solid var(--bg);
+  cursor: pointer;
+}
+
+.exercise:hover {
+  background-color: var(--dark_color);
+}
+
+.demo-btn:hover {
+  background-color: var(--light_color);
+}
+
+.demo-console {
+  height: 78%;
+  overflow: auto;
+  padding: 15px;
+  position: relative;
+}
+
+.higher-line {
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+.btn-red {
+  background-color: red;
+  border: 2px solid white;
+  color: white;
+}
+
+.div-for-demo {
+  min-width: 40px;
+  min-height: 40px;
+  float: left;
+  padding: 5px;
+  background-color: white;
+  border: 2px solid var(--bg);
+  margin: 5px;
+  text-align: center;
+  line-height: 2.3;
+  color: var(--bg);
+}
+
+.select-styles {
+  width: 100px;
+  height: max-content;
+  display: block;
+  background-color: white;
+  border: 2px solid var(--bg);
+  color: var(--bg);
+  margin-bottom: 10px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.a-style {
+  color: var(--bg);
+  margin: 5px;
+}
+
+.input-style {
+  height: 30px;
+  margin: 5px;
+}
+
+.general-title {
+  order: 0;
+}
+
+@media (max-width: 1120px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  .rectangle {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 943px) {
+  main {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 40px;
+    padding-top: 0px;
+  }
+
+  h2 {
+    font-weight: var(--regular);
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .nav-btn:first-child {
+    margin-left: 0;
+  }
+
+  .up-down {
+    flex-direction: column;
+    min-height: max-content;
+    height: min-content;
+  }
+
+  .rectangle {
+    width: 100%;
+    min-height: 250px;
+    max-height: 450px;
+  }
+
+  .square {
+    width: 100%;
+    min-width: 0;
+    min-height: 450px;
+    height: 450px;
+  }
+
+  .console-container {
+    width: 100%;
+    min-height: 350px;
+    min-width: 0;
+  }
+
+  .general-title {
+    order: -1;
+  }
+}
