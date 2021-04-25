@@ -1324,6 +1324,63 @@ setTimeout(function(){
   };
 }
 
+//33 ----------------------------------------------------------
+function styleChildren() {
+  // Macro
+  macroTextVanilla.innerText = `// Change children's font-weight after 2 seconds
+
+setTimeout(function(){
+  let childs = element.childNodes;
+  for ( let c of childs ){
+    c.style.fontWeight = "light";
+    c.style.outline = "1px solid white";
+  }
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleParent = document.createElement("div");
+    exampleParent.setAttribute("class", "example-parent");
+    exampleParent.innerText = "Parent";
+
+    let exampleChild1 = document.createElement("div");
+    exampleChild1.classList.add("example-child");
+    exampleChild1.innerText = "Child 1";
+
+    let exampleChild2 = document.createElement("div");
+    exampleChild2.classList.add("example-child");
+    exampleChild2.innerText = "Child 2";
+
+    let exampleChild3 = document.createElement("div");
+    exampleChild3.classList.add("example-child");
+    exampleChild3.innerText = "Child 3";
+
+    let exampleChild4 = document.createElement("div");
+    exampleChild4.classList.add("example-child");
+    exampleChild4.innerText = "Child 4";
+
+    setTimeout(function () {
+      let childs = exampleParent.childNodes;
+      for (let c = 1; c < childs.length; c++) {
+        childs[c].style.fontWeight = "var(--extraLight)";
+        childs[c].style.outline = "1px solid var(--light-color)";
+      }
+      console.log("Styled children");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
+    exampleParent.appendChild(exampleChild1);
+    exampleParent.appendChild(exampleChild2);
+    exampleParent.appendChild(exampleChild3);
+    exampleParent.appendChild(exampleChild4);
+    outputVanilla.appendChild(exampleParent);
+  };
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1466,5 +1523,9 @@ export const vanillaExamples = [
   // 32
   function () {
     styleParent();
+  },
+  // 33
+  function () {
+    styleChildren();
   },
 ];

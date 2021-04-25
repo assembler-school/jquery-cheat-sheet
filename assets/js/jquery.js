@@ -1396,6 +1396,64 @@ setTimeout(function(){
     outputJquery.append(exampleParent);
   });
 }
+
+//33 ----------------------------------------------------------
+function styleChildren() {
+  // Macro
+  macroString = `// Change children's font-weight after 2 seconds
+
+setTimeout(function(){
+  container.children().eq(1).after(child);
+}, 2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleParent = $("<div>");
+    exampleParent.addClass("example-parent");
+    exampleParent.text("Parent");
+
+    let exampleChild1 = $("<div>");
+    exampleChild1.addClass("example-child");
+    exampleChild1.text("Child 1");
+
+    let exampleChild2 = $("<div>");
+    exampleChild2.addClass("example-child");
+    exampleChild2.text("Child 2");
+
+    let exampleChild3 = $("<div>");
+    exampleChild3.addClass("example-child");
+    exampleChild3.text("Child 3");
+
+    let exampleChild4 = $("<div>");
+    exampleChild4.addClass("example-child");
+    exampleChild4.text("Child 4");
+
+    setTimeout(function () {
+      let childs = exampleParent.children();
+      childs.each(function (index, element) {
+        $(this).css({
+          fontWeight: "var(--extraLight)",
+          outline: "1px solid var(--light-color)",
+        });
+      });
+      console.log("Styled children");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    exampleParent.append(exampleChild1);
+    exampleParent.append(exampleChild2);
+    exampleParent.append(exampleChild3);
+    exampleParent.append(exampleChild4);
+    outputJquery.append(exampleParent);
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             ARRAY OF FUNCTIONS                             */
 /* -------------------------------------------------------------------------- */
@@ -1537,5 +1595,9 @@ export const jQueryExamples = [
   // 32
   function () {
     styleParent();
+  },
+  // 33
+  function () {
+    styleChildren();
   },
 ];

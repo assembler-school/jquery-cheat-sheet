@@ -94,7 +94,7 @@ main {
   font-weight: var(--extraLight);
   font-size: 140px;
   height: 140px;
-  transform: translateY(-15px);
+  transform: translateY(9px);
   overflow: hidden;
 }
 
