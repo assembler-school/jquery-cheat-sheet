@@ -22,7 +22,7 @@ links.forEach((element) => {
     } else {
       srcFile = "./assets/examples/functions/" + e.target.title;
     }
-
+    setSelected(e);
     loadFile(srcFile, e);
   });
 });
