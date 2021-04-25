@@ -16,8 +16,8 @@
             /* border: 1px solid rgb(255, 255, 255); */
             /* //font-family: var(--font); */
             font-family: 'Open Sans Condensed', sans-serif;
-            color: rgb(253, 253, 253);
-            font-size: 8px;
+            color: rgb(43, 255, 0);
+            font-size: 9px;
             text-align: center;
             /* cursor: url("Assets/gun-target.png") 32 32, auto; */
         }
@@ -29,7 +29,7 @@
         }
         
         li {
-            text-align: left;
+            text-align: right;
         }
         
         li:hover {
@@ -47,26 +47,38 @@
             }
         }
         
+        p {
+            color: rgb(104, 255, 4);
+            text-align: center;
+            font-size: 1vw;
+        }
+        
         ul li::marker {
             content: "▶";
         }
         
         h1 {
-            font-size: 10vw;
-            text-shadow: 4px 4px 0px #000000;
+            font-size: 5vw;
+            text-shadow: 4px 4px 0px #ca0b0b;
             mix-blend-mode: screen;
             animation: fadeIn 2.5s linear forwards;
         }
         
-        h3 {
+        h2 {
+            color: rgba(0, 38, 255, 0.767);
+            text-align: center;
             font-size: 1vw;
+        }
+        
+        h3 {
             text-shadow: 4px 4px 0px #000000;
             mix-blend-mode: screen;
             animation: fadeIn 2.5s linear forwards;
         }
         
         h4 {
-            color: rgba(0, 0, 255, 0.521);
+            color: rgba(255, 255, 255, 0.705);
+            font-size: 1vw;
             text-align: left;
         }
         /* CSS - Body */
@@ -79,7 +91,7 @@
             margin: 0;
             height: 100vh;
             /* Background-gradient */
-            background: linear-gradient(134deg, #000000, #2b2a29, #0b3b0b, #0fa114, #54c421, #28b40c4f, #5bd4143d);
+            background: linear-gradient(134deg, #ffffff, #1a1a97, #1900ff, #0fa114, #54c421, #8d02ffd5, #7801ff79);
             background-size: 1400% 1400%;
             -webkit-animation: AnimationName 30s ease infinite;
             -moz-animation: AnimationName 30s ease infinite;
@@ -131,10 +143,10 @@
             align-items: center;
             background-size: cover;
             text-transform: uppercase;
-            width: 10%;
+            width: 8%;
             height: 70%;
-            margin-left: 4%;
-            margin-right: 2%;
+            margin-left: 1%;
+            margin-right: 1%;
             /* border: 2px solid var(--background-buttons);
     border-radius: 10px; */
         }
@@ -148,8 +160,8 @@
         .all-container-class {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: left;
+            align-items: left;
             background-color: var(--background-div);
             background-size: cover;
             width: 30%;
@@ -159,6 +171,9 @@
             border: 2px solid var(--background-buttons);
             border-radius: 10px;
             word-wrap: break-word;
+            float: left;
+            overflow-y: auto;
+            height: 100%;
         }
         /* CSS - Div - Right */
         
@@ -169,12 +184,15 @@
             justify-content: flex-start;
             background-color: rgb(0, 0, 0);
             width: 70%;
-            height: 70%;
+            height: 99%;
             margin-left: 2%;
             margin-right: 4%;
             border: 2px solid var(--background-buttons);
             border-radius: 10px;
             word-wrap: break-word;
+            float: left;
+            overflow-y: auto;
+            height: 100%;
         }
         
         .jquery-to-jsVanilla-class {
@@ -195,20 +213,22 @@
         /* CSS - Button */
         
         .button-class {
-            height: 2rem;
-            width: 2rem;
+            height: 4rem;
+            width: 8rem;
             text-decoration: none;
-            background: rgb(255, 255, 255);
-            border-radius: 200px;
+            background: rgba(255, 255, 255, 0.178);
+            color: rgb(251, 255, 0);
+            border-radius: 3px;
             font-weight: normal;
             text-transform: uppercase;
             transition: all 0.2s ease-in-out;
             margin-top: 5%;
+            font-size: small;
         }
         
         .glow-button:hover {
             color: rgba(255, 255, 255, 1);
-            box-shadow: 0 5px 15px rgba(34, 190, 41, 0.4);
+            box-shadow: 0 5px 5px rgba(0, 17, 255, 0.329);
         }
         /* CSS - Description */
         
@@ -216,7 +236,7 @@
             font-size: small;
             list-style-type: none;
             text-align: center;
-            color: rgb(46, 43, 190);
+            color: rgb(255, 255, 255);
         }
         
         .description-text:hover {
@@ -234,5 +254,5 @@
             font-size: small;
             list-style-type: none;
             text-align: center;
-            color: rgb(46, 43, 190);
+            color: rgb(255, 0, 0);
         }

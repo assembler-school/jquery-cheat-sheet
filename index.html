@@ -22,13 +22,13 @@
         <h1>jQuery Cheat Sheet</h1>
     </header>
     <!-- First -->
-    <div id="all-container" class="all-container-class">
-        <article id="article-selectors" class="article-class">
+    <div id="all-container-first" class="all-container-class">
+        <article class="article-class">
             <!-- Section -->
-            <div id="container-selectors" class="container-class">
+            <div class="container-class">
                 <h2>SELECTORS</h2>
-                <section id="section-selectors" class="section-class">
-                    <ul id="ul-selectors" class="section-1-ul-class">
+                <section class="section-selectors-class">
+                    <ul class="ul-selectors-class">
                         <h4>GET</h4>
                         <li class="get">parentElement</li>
                         <li class="get">childrenCollection</li>
@@ -40,8 +40,8 @@
             </div>
             <div id="container-2" class="container-class">
                 <h2>EVENTS</h2>
-                <section id="section-1" class="section-class">
-                    <ul id="section-1-ul" class="section-1-ul-class">
+                <section class="section-events-class">
+                    <ul class="ul-events-class">
                         <h4>HTML</h4>
                         <li class="html">onLoad</li>
                         <h4>CURSOR</h4>
@@ -63,15 +63,13 @@
         </article>
     </div>
     <!-- Second -->
-    <div id="all-container" class="all-container-class">
-        <article id="article-2" class="article-class">
+    <div id="all-container-second" class="all-container-class">
+        <article class="article-class">
             <!-- Section -->
-            <div id="container-3" class="container-class">
-
-
-                <section id="section-1" class="section-class">
-                    <h2>Function</h2>
-                    <ul>
+            <div class="container-class">
+                <h2>FUNCTIONS</h2>
+                <section class="section-functions-class">
+                    <ul class="ul-functions-class">
                         <h4>HTML Elements</h4>
                         <li class="htmlElements">createHtmlElement</li>
                         <li class="htmlElements">removeHtmlElement</li>
@@ -94,14 +92,6 @@
                         <li class="Attributes">setDataSrcAttr</li>
                         <li class="Attributes">removeDataSrcAttr</li>
                         <li class="Attributes">changeHrfAttr</li>
-                    </ul>
-                </section>
-            </div>
-            <!-- Section -->
-            <!-- Section -->
-            <div id="container-4" class="container-class">
-                <section id="section-1" class="section-class">
-                    <ul>
                         <h4>Element Display</h4>
                         <li class="elementDisplay">hideHtmlElementOnClick</li>
                         <li class="elementDisplay">showHtmlElementOnClick</li>
@@ -111,31 +101,30 @@
                         <h4>Functions</h4>
                         <li class="functions">IterateCollectionElements</li>
                         <li class="functions">getSelectedOptionsOfSelect</li>
+                        <li class="functions">getInputValue</li>
+
                     </ul>
                 </section>
             </div>
-            </section>
-    </div>
-    <!-- Section -->
-    </article>
+            <!-- Section -->
+        </article>
     </div>
     <div class="container-right-class" id="container-right">
         <div class="jquery-to-jsVanilla-class buttons-class">
-            <input type="button" name="jsVanilla" id="jsVanilla" class="button-class glow-button">JS
-            <input type="button" name="jQuery" id="jQuery" class="button-class glow-button">JQ
-            <input type="button" name="clear" id="clear" class="button-class glow-button">Clear
-            <input type="button" name="output" id="output" class="button-class glow-button">Output
-
-
+            <button type="button" name="jsVanilla" id="jsVanilla" class="button-class glow-button">JsVanilla</button>
+            <button type="button" name="output" id="output-js" class="button-class glow-button">Output JS</button>
+            <button type="button" name="jQuery" id="jQuery" class="button-class glow-button">JQuery</button>
+            <button type="button" name="output" id="output-jq" class="button-class glow-button">Output JQ</button>
+            <button type="button" name="clear" id="clear" class="button-class glow-button">Clear</button>
         </div>
         <div class="jquery-to-jsVanilla-class description-list-class">
-            <h2>Description</h2>
+            <h2>¿What do you want to use?</h2>
         </div>
         <div class="jquery-to-jsVanilla-class code-class">
-            <h2>Code</h2>
+            <h2>This is the function</h2>
         </div>
         <div class="jquery-to-jsVanilla-class output-class">
-            <h2>Output</h2>
+            <h2>Result</h2>
         </div>
     </div>
 </body>

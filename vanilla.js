@@ -1,13 +1,6 @@
 vanillaButton.addEventListener("click", vanillaFunctionCode);
-outputButton.addEventListener("click", vanillaFunctionOutput);
-//outputButton.addEventListener("click", getVanillaData);
+outputButtonJs.addEventListener("click", vanillaFunctionOutput);
 clearButton.addEventListener("click", clearDescriptionCodeOutput);
-
-// &lt; stands for the less-than sign: <
-// &gt; stands for the greater-than sign: >
-// &le; stands for the less-than or equals sign: ≤
-// &ge; stands for the greater-than or equals sign: ≥
-
 
 //Clear ALL
 function clearDescriptionCodeOutput() {
@@ -22,20 +15,17 @@ function vanillaFunctionCode() {
     //GET FUNCTION LOADED
     let fvanilla = document.getElementById("vanillajs");
     var fVanillaData = fvanilla.innerHTML;
-    //click
-    //doubleClick
-    //onKeyPress
-    //onMouseMove
+    var fVanillaAllData = fVanillaData + "jsvanilla"
 
     //Select the funtion
-    switch (fVanillaData) {
-        case 'xonLoad':
-            ////When the HTML document has been loaded and you can manipulate it with JavaScript
+    switch (fVanillaAllData) {
+        case 'loadedImagejsvanilla':
+            //When an image is loaded
             let codeListOnLoad = document.querySelector(".code-class");
             codeListOnLoad.insertAdjacentHTML('beforeend', '<p>&ltimg src="jsvanilla.png" onload="loadImage()" width="20" height="20"&gt</p>');
-            codeListOnLoad.insertAdjacentHTML('beforeend', '<p>&ltscript&gtfunction loadImage() {swal("Image is loaded");}&ltscript&gt;</p>');
+            codeListOnLoad.insertAdjacentHTML('beforeend', '<p>&ltscript&gtfunction loadImage() {swal("Image is loaded in vanilla js");} loadImage();&ltscript&gt;</p>');
             break;
-        case 'xclick':
+        case 'clickjsvanilla':
             //     When an HTML item has been clicked
             let codeListClick = document.querySelector(".code-class");
             codeListClick.insertAdjacentHTML('beforeend', '<p>&ltbutton onclick="myFunction()">Click me</button&gt</p>');
@@ -50,23 +40,27 @@ function vanillaFunctionCode() {
 //SECOND
 function vanillaFunctionOutput() {
     //GET FUNCTION LOADED
-    let outVanilla = document.getElementById("vanillajs");
-    var outVanillaData = outVanilla.innerHTML;
+    let fvanilla = document.getElementById("vanillajs");
+    var fVanillaData = fvanilla.innerHTML;
+    var fVanillaAllData = fVanillaData + "jsvanilla"
 
     //Select the funtion
-    switch (outVanillaData) {
-        case 'xonLoad':
+    switch (fVanillaAllData) {
+        case 'loadedImagejsvanilla':
+            //When an image is loaded
             let outputListOnLoad = document.querySelector(".output-class");
             //HTML
-            outputListOnLoad.insertAdjacentHTML('beforeend', '<p><img src="jsvanilla.png" onload="loadImage()" width="30" height="30"></p>');
+            outputListOnLoad.insertAdjacentHTML('beforeend', '<p><img src="jsvanilla.png" onload="loadImage()" width="20" height="20"></p>');
+
             //JS
             var myScript = document.createElement("script");
-            var scriptContent = document.createTextNode("function loadImage(){swal('Image is loaded JS')}; loadImage()");
+            var scriptContent = document.createTextNode("function loadImage() {swal('Image is loaded in vanilla js');} loadImage();");
             myScript.appendChild(scriptContent);
             document.body.appendChild(myScript);
 
             break;
-        case 'xclick':
+        case 'clickjsvanilla':
+            //     When an HTML item has been clicked
             let outputListClick = document.querySelector(".output-class");
             //     //HTML
             outputListClick.insertAdjacentHTML('beforeend', '<p><button onclick="myFunction()">Click me</button></p>');
@@ -80,7 +74,7 @@ function vanillaFunctionOutput() {
             //     break;
         default:
             //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
-            console.info('This is default info of the output');
+            console.info('JS vanilla is not working');
     }
 
 }

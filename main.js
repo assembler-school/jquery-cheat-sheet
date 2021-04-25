@@ -1,9 +1,10 @@
 //GLOBALS
 let itemList = document.querySelectorAll("li");
 let vanillaButton = document.getElementById("jsVanilla");
+let outputButtonJs = document.getElementById("output-js");
 let jqueryButton = document.getElementById("jQuery");
+let outputButtonJq = document.getElementById("output-jq");
 let clearButton = document.getElementById("clear");
-let outputButton = document.getElementById("output");
 
 
 
