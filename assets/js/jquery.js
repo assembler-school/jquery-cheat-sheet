@@ -1088,9 +1088,49 @@ setTimeout(function(){
 //25 ----------------------------------------------------------
 function setDataSrc() {
   // Macro
-  macroString = `// Set data-src to img
+  macroString = `// Set data-src to img after 2 seconds
 
-$("img").attr("data-src", "addedDataSrc");`;
+setTimeout(function(){
+  $("img").attr("data-src", "addedDataSrc");
+}, 2000);`;
+
+  macroJquery.text(macroString);
+
+  // Output
+  runButtonJquery.click(function () {
+    let exampleImage = $("<img>");
+    exampleImage.addClass("example-image");
+    exampleImage.css("width", "50%");
+    exampleImage.attr("alt", "Monty Python");
+    exampleImage.attr("src", "./assets/img/spamalot.jpg");
+
+    let exampleParagraph = $("<div>");
+    exampleParagraph.text("> " + exampleImage.prop("outerHTML"));
+
+    setTimeout(function () {
+      exampleImage.attr("data-src", "addedDataSrc");
+      exampleParagraph.text("> " + exampleImage.prop("outerHTML"));
+      console.log("Added data-src");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputJquery.children()) {
+      outputJquery.html(null);
+    }
+
+    outputJquery.append(exampleImage);
+    outputJquery.append(exampleParagraph);
+  });
+}
+
+//26 ----------------------------------------------------------
+function removeDataSrc() {
+  // Macro
+  macroString = `// Remove data-src to img after 2 seconds
+
+setTimeout(function(){
+  $("img").removeAttr("data-src");
+}, 2000);`;
 
   macroJquery.text(macroString);
 
@@ -1105,6 +1145,12 @@ $("img").attr("data-src", "addedDataSrc");`;
 
     let exampleParagraph = $("<div>");
     exampleParagraph.text("> " + exampleImage.prop("outerHTML"));
+
+    setTimeout(function () {
+      exampleImage.removeAttr("data-src");
+      exampleParagraph.text("> " + exampleImage.prop("outerHTML"));
+      console.log("Removed data-src");
+    }, 2000);
 
     // Resetting output if it's filled
     if (outputJquery.children()) {
@@ -1227,5 +1273,9 @@ export const jQueryExamples = [
   // 25
   function () {
     setDataSrc();
+  },
+  // 26
+  function () {
+    removeDataSrc();
   },
 ];

@@ -1017,9 +1017,11 @@ setTimeout(function(){
 //25 ----------------------------------------------------------
 function setDataSrc() {
   // Macro
-  macroTextVanilla.innerText = `// Set data-src to img
+  macroTextVanilla.innerText = `// Set data-src to img after 2 seconds
 
-image.setAttribute("data-src", "addedDataSrc");`;
+setTimeout(function(){
+  image.setAttribute("data-src", "addedDataSrc");
+}, 2000);`;
 
   // Output
   runButton.onclick = function () {
@@ -1028,15 +1030,58 @@ image.setAttribute("data-src", "addedDataSrc");`;
     exampleImage.style.width = "50%";
     exampleImage.setAttribute("alt", "Monty Python");
     exampleImage.setAttribute("src", "./assets/img/spamalot.jpg");
-    exampleImage.setAttribute("data-src", "addedDataSrc");
 
     let exampleParagraph = document.createElement("div");
     exampleParagraph.innerText = "> " + exampleImage.outerHTML;
+
+    setTimeout(function () {
+      exampleImage.setAttribute("data-src", "addedDataSrc");
+      exampleParagraph.innerText = "> " + exampleImage.outerHTML;
+      console.log("Added data-src");
+    }, 2000);
 
     // Resetting output if it's filled
     if (outputVanilla.hasChildNodes()) {
       outputVanilla.innerHTML = null;
     }
+
+    outputVanilla.appendChild(exampleImage);
+    outputVanilla.appendChild(exampleParagraph);
+  };
+}
+
+//26 ----------------------------------------------------------
+function removeDataSrc() {
+  // Macro
+  macroTextVanilla.innerText = `// Remove data-src to img after 2 seconds
+
+setTimeout(function(){
+  image.removeAttribute("data-src");
+}, 2000);`;
+
+  // Output
+  runButton.onclick = function () {
+    let exampleImage = document.createElement("img");
+    exampleImage.classList.add("example-image");
+    exampleImage.style.width = "50%";
+    exampleImage.setAttribute("alt", "Monty Python");
+    exampleImage.setAttribute("src", "./assets/img/spamalot.jpg");
+    exampleImage.setAttribute("data-src", "removeDataSrc");
+
+    let exampleParagraph = document.createElement("div");
+    exampleParagraph.innerText = "> " + exampleImage.outerHTML;
+
+    setTimeout(function () {
+      exampleImage.removeAttribute("data-src");
+      exampleParagraph.innerText = "> " + exampleImage.outerHTML;
+      console.log("Removed data-src");
+    }, 2000);
+
+    // Resetting output if it's filled
+    if (outputVanilla.hasChildNodes()) {
+      outputVanilla.innerHTML = null;
+    }
+
     outputVanilla.appendChild(exampleImage);
     outputVanilla.appendChild(exampleParagraph);
   };
@@ -1154,5 +1199,9 @@ export const vanillaExamples = [
   // 25
   function () {
     setDataSrc();
+  },
+  // 26
+  function () {
+    removeDataSrc();
   },
 ];
