@@ -114,7 +114,7 @@ $(".ex13jq_li").on("click", function () {
 
 // Create an HTML element with any text value
 $(".ex14jq_btn").on("click", function () {
-  $(".ex14jq").append($("p").text("Are you my mummy?"));
+  $(".ex14jq").append($("<p>").text("Are you my mummy?"));
 });
 
 // Remove an HTML element with any text value

@@ -6,6 +6,9 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-image: url("/assets/img/pattern_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
@@ -15,6 +18,13 @@ code {
 button {
   padding: 3%;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
 }
 
 input {
@@ -39,22 +49,23 @@ main {
 }
 
 .central {
-  background-color: white;
   width: 80%;
 }
 
 aside {
   background-color: black;
   color: white;
+  position: sticky;
+  top: 0;
   width: 13%;
-  height: 35vh;
+  height: 45vh;
   border-radius: 0 0 20px 0;
   padding: 30px 0 30px 15px;
   font-size: 2rem;
 }
 
 .aside__section {
-  margin-top: 10px;
+  margin-top: 30px;
   padding-left: 10px;
   border-radius: 15px 0 0 15px;
   font-family: "Abel", sans-serif;
@@ -85,6 +96,7 @@ section {
   margin-top: 15px;
   padding: 2%;
   border: 1px solid black;
+  background-color: white;
   cursor: pointer;
 }
 
@@ -138,7 +150,14 @@ section {
 }
 
 .ex3jq__dot,
-.ex3js__dot,
+.ex3js__dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: red;
+  cursor: pointer;
+}
+
 .ex21jq,
 .ex21js {
   width: 40px;
@@ -179,6 +198,7 @@ section {
 .ex11js_div {
   background-color: white;
   margin-top: 25px;
+  cursor: default;
 }
 
 .ex16jq p,
@@ -220,7 +240,7 @@ section {
 }
 
 .ex23jq--change {
-  border: 1px solid darkred;
+  border: 1px solid blueviolet;
   background-color: black;
 }
 
