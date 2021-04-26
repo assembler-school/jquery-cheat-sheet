@@ -1814,7 +1814,7 @@ function deleteSelectors() {
   // Macro
   macroString = `// Delete all given selectors
 
-$("li")..remove();`;
+$("li").remove();`;
 
   macroJquery.text(macroString);
 
