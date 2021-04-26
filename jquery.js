@@ -365,7 +365,7 @@ $('#eventFunctions li').each(function () {
                 dynamicCode('e6', codeJs, codeJq, jqLoadImage, jsLoadImage);
                 break;
             case 'event7':
-                $("#eventsForm img").attr('src', '/img/develop.jpg');
+                $("#eventsForm img").attr('src', './img/develop.jpg');
                 dynamicCode('e7', codeJs, codeJq, jqFailLoadImage, jsFailLoadImage);
                 break;
             case 'event8':
