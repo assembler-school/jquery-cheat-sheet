@@ -134,7 +134,8 @@ function jsF13() {
 
 //TODO: No funciona Jquery
 function jqueryF13() {
-  $("#t-f-13").data(("src", "image-url"));
+  $("#t-f-13").data("src");
+  $("#t-f-13").data("src", "image-url");
 }
 
 //F14
