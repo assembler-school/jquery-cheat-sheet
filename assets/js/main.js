@@ -20,7 +20,6 @@ const exerciseFunctions = {
     selectorPropertyNone: {js: selectorPropertyNoneJS, jquery: selectorPropertyNoneJQuery},
     removeAllItems: {js: removeAllItemsJS, jquery: removeAllItemsJQuery},
     animateHeader: {js: animateHeaderJS, jquery: animateHeaderJQuery}
-
 };
 
 (function initialize() {

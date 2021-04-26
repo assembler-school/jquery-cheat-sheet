@@ -3,13 +3,6 @@ function hasLoadedJS() {
     codeElement.textContent = "document.addEventListener('DOMContentLoaded', e => {"
             +"\n\tconsole.log('DOM fully loaded and parsed');\n});";
     document.getElementById('js-codebox').append(codeElement);
-    // let imgExample = $('<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Vaporwave-4K-Wallpapers.jpg" alt="example">',
-    //     {id: 'imgExample'}).css({height: '10vh', width: '10vw'});
-    // let clickMeBtn = $('<button>Click me!</button>').on('click', _ => {
-    //     $('#example-codebox').append(imgExample);
-    //     hasLoadedJSExample();
-    // });
-    // $('#example-codebox').append(clickMeBtn);
 }
 
 function hasElementClickedJS() {
