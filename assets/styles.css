@@ -15,9 +15,9 @@ h1.JikiQuery{
     justify-self: left;
     color: white;
     background-color: black;
-    font-family: 'Antonio', sans-serif;
-    font-size: 100px;
-    margin:3%;
+    font-family: 'Orelega One';
+    font-size: 120px;
+    margin:0%;
     width: 100%;
     padding: 2%;
     justify-content: center;
@@ -156,6 +156,7 @@ div.vanillaBox{
     grid-column: 1/2;
     padding: 10px;
     border: none;
+    
 }
 div.jQueryBox{
     grid-column: 3/4;
@@ -184,13 +185,14 @@ p.result{
     max-width: 50%;
     justify-self: center;
     align-self: center;
-    color: white;
+    color: black;
     border: white 1px solid;
     font-family: 'Roboto Mono', monospace;
     outline: none;
     background: none;
     padding: 10px;
     cursor: pointer;
+    background-color: white;
 
 }
 div.vanillacode{
