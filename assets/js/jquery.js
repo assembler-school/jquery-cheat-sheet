@@ -807,7 +807,7 @@ setTimeout(function(){
 //18 ----------------------------------------------------------
 function addBefore() {
   // Macro
-  macroString = `// Create & add element after
+  macroString = `// Create & add element before
 
 let container = $("#parent");
 let child = $("<div>");
