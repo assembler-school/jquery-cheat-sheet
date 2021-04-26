@@ -5,53 +5,53 @@ let timeHideShow = 500;
 let currentMenu = "none";
 
 const dataEvents = [
-    { text: "HTML document loaded", function: jquery.HTMLLoaded},
-    { text: "Element clicked", function: jquery.Click},
-    { text: "Element double clicked", function: jquery.DoubleClick},
-    { text: "Key pressed", function: jquery.KeyPressed},
-    { text: "Mouse cursor moved", function: jquery.MouseMoved},
-    { text: "Text input is changed", function: jquery.TextChanged},
-    { text: "Image is loaded", function: jquery.ImgLoaded},
-    { text: "Image load failed", function: jquery.ImgFailed},
-    { text: "Form is submitted", function: jquery.FormSubmitted},
-    { text: "Option in a select element is changed", function: jquery.OptionSelectChanged},
-    { text: "Mouse is over an element", function: jquery.MouseOver},
-    { text: "Checkbox is checked and unchecked", function: jquery.CheckboxChanged},
-    { text: "Ul list item is shown", function: jquery.UlListItemClicked}
+    { text: "HTML document loaded", functionJquery: jquery.HTMLLoaded, functionVanilla: vanilla.HTMLLoaded},
+    { text: "Element clicked", functionJquery: jquery.Click, functionVanilla: vanilla.Click},
+    { text: "Element double clicked", functionJquery: jquery.DoubleClick, functionVanilla: vanilla.DoubleClick},
+    { text: "Key pressed", functionJquery: jquery.KeyPressed, functionVanilla: vanilla.KeyPressed},
+    { text: "Mouse cursor moved", functionJquery: jquery.MouseMoved, functionVanilla: vanilla.MouseMoved},
+    { text: "Text input is changed", functionJquery: jquery.TextChanged, functionVanilla: vanilla.TextChanged},
+    { text: "Image is loaded", functionJquery: jquery.ImgLoaded, functionVanilla: vanilla.ImgLoaded},
+    { text: "Image load failed", functionJquery: jquery.ImgFailed, functionVanilla: vanilla.ImgFailed},
+    { text: "Form is submitted", functionJquery: jquery.FormSubmitted, functionVanilla: vanilla.FormSubmitted},
+    { text: "Option in a select element is changed", functionJquery: jquery.OptionSelectChanged, functionVanilla: vanilla.OptionSelectChanged},
+    { text: "Mouse is over an element", functionJquery: jquery.MouseOver, functionVanilla: vanilla.MouseOver},
+    { text: "Checkbox is checked and unchecked", functionJquery: jquery.CheckboxChanged, functionVanilla: vanilla.CheckboxChanged},
+    { text: "Ul list item is shown", functionJquery: jquery.UlListItemClicked, functionVanilla: vanilla.UlListItemClicked}
 ];
 
 const dataFunctions = [
-    { text: "Create an element", function: jquery.CreateElement},
-    { text: "Remove an element", function: jquery.RemoveElement},
-    { text: "Append an element", function: jquery.AppendElement},
-    { text: "Prepend an element", function: jquery.PrependElement},
-    { text: "Create an element after another one", function: jquery.CreateAfterElement},
-    { text: "Create an element before another one", function: jquery.CreateBeforeElement},
-    { text: "Clone an element within another one", function: jquery.CloneElement},
-    { text: "Add a class to an element", function: jquery.AddClass},
-    { text: "Remove a class of an element", function: jquery.RemoveClass},
-    { text: "Toggle a class of an element", function: jquery.ToggleClass},
-    { text: "Add a disabled attribute to a button", function: jquery.AddDisabled},
-    { text: "Remove the disabled attribute of a button", function: jquery.RemoveDisabled},
-    { text: "Set a data-src attribute to an image", function: jquery.SetDataSrc},
-    { text: "Remove the data-src attribute of an image", function: jquery.RemoveDataSrc},
-    { text: "Hide an element", function: jquery.HideElement},
-    { text: "Show an element", function: jquery.ShowElement},
-    { text: "Fade in a element", function: jquery.FadeInElement},
-    { text: "Fade out an element", function: jquery.FadeOutElement},
-    { text: "Iterate a collection of elements", function: jquery.IterateCollection},
-    { text: "Change the href attribute of the first element", function: jquery.ChangeHref},
-    { text: "Show an alert with the value of the first <input> of the page", function: jquery.AlertFirstInput},
-    { text: "Remove all items from a specific selector", function: jquery.RemoveAllItems},
-    { text: "Animate an item after 2 seconds", function: jquery.AnimateTwoSeconds}
+    { text: "Create an element", functionJquery: jquery.CreateElement, functionVanilla: vanilla.CreateElement},
+    { text: "Remove an element", functionJquery: jquery.RemoveElement, functionVanilla: vanilla.RemoveElement},
+    { text: "Append an element", functionJquery: jquery.AppendElement, functionVanilla: vanilla.AppendElement},
+    { text: "Prepend an element", functionJquery: jquery.PrependElement, functionVanilla: vanilla.PrependElement},
+    { text: "Create an element after another one", functionJquery: jquery.CreateAfterElement, functionVanilla: vanilla.CreateAfterElement},
+    { text: "Create an element before another one", functionJquery: jquery.CreateBeforeElement, functionVanilla: vanilla.CreateBeforeElement},
+    { text: "Clone an element within another one", functionJquery: jquery.CloneElement, functionVanilla: vanilla.CloneElement},
+    { text: "Add a class to an element", functionJquery: jquery.AddClass, functionVanilla: vanilla.AddClass},
+    { text: "Remove a class of an element", functionJquery: jquery.RemoveClass, functionVanilla: vanilla.RemoveClass},
+    { text: "Toggle a class of an element", functionJquery: jquery.ToggleClass, functionVanilla: vanilla.ToggleClass},
+    { text: "Add a disabled attribute to a button", functionJquery: jquery.AddDisabled, functionVanilla: vanilla.AddDisabled},
+    { text: "Remove the disabled attribute of a button", functionJquery: jquery.RemoveDisabled, functionVanilla: vanilla.RemoveDisabled},
+    { text: "Set a data-src attribute to an image", functionJquery: jquery.SetDataSrc, functionVanilla: vanilla.SetDataSrc},
+    { text: "Remove the data-src attribute of an image", functionJquery: jquery.RemoveDataSrc, functionVanilla: vanilla.RemoveDataSrc},
+    { text: "Hide an element", functionJquery: jquery.HideElement, functionVanilla: vanilla.HideElement},
+    { text: "Show an element", functionJquery: jquery.ShowElement, functionVanilla: vanilla.ShowElement},
+    { text: "Fade in a element", functionJquery: jquery.FadeInElement, functionVanilla: vanilla.FadeInElement},
+    { text: "Fade out an element", functionJquery: jquery.FadeOutElement, functionVanilla: vanilla.FadeOutElement},
+    { text: "Iterate a collection of elements", functionJquery: jquery.IterateCollection, functionVanilla: vanilla.IterateCollection},
+    { text: "Change the href attribute of the first element", functionJquery: jquery.ChangeHref, functionVanilla: vanilla.ChangeHref},
+    { text: "Show an alert with the value of the first <input> of the page", functionJquery: jquery.AlertFirstInput, functionVanilla: vanilla.AlertFirstInput},
+    { text: "Remove all items from a specific selector", functionJquery: jquery.RemoveAllItems, functionVanilla: vanilla.RemoveAllItems},
+    { text: "Animate an item after 2 seconds", functionJquery: jquery.AnimateTwoSeconds, functionVanilla: vanilla.AnimateTwoSeconds}
 ];
 
 const dataSelectors = [
-    { text: "Get the parent element of a certain element", function: jquery.GetParent},
-    { text: "Get the collection of children of a certain element", function: jquery.GetChildren},
-    { text: "Get all the elements that have a certain class", function: jquery.GetElementsByClass},
-    { text: "Get an item by id", function: jquery.GetElementById},
-    { text: "Get the options of a select element that are selected", function: jquery.GetOptionsOfElement}
+    { text: "Get the parent element of a certain element", functionJquery: jquery.GetParent, functionVanilla: vanilla.GetParent},
+    { text: "Get the collection of children of a certain element", functionJquery: jquery.GetChildren, functionVanilla: vanilla.GetChildren},
+    { text: "Get all the elements that have a certain class", functionJquery: jquery.GetElementsByClass, functionVanilla: vanilla.GetElementsByClass},
+    { text: "Get an item by id", functionJquery: jquery.GetElementById, functionVanilla: vanilla.GetElementById},
+    { text: "Get the options of a select element that are selected", functionJquery: jquery.GetOptionsOfElement, functionVanilla: vanilla.GetOptionsOfElement}
 ];
 
 $("#events-quick").on("click", function () {
@@ -185,8 +185,18 @@ function comparisonModalEvents(){
     let element = $("#template-comparison").contents().clone();
     $("#events-column").append(element);
 
+    $("#jquery-option").on("click", function () {
+        $("#code-modal, #html-modal").empty();
+        dataEvents[id].functionJquery();
+    });
+
+    $("#vanilla-option").on("click", function () {
+        $("#code-modal, #html-modal").empty();
+        dataEvents[id].functionVanilla();
+    });
+
     let id = $(this).attr("id");
-    dataEvents[id].function();
+    dataEvents[id].functionJquery();
 }
 
 function comparisonModalFunctions(){
@@ -194,8 +204,18 @@ function comparisonModalFunctions(){
     let element = $("#template-comparison").contents().clone();
     $("#functions-column").append(element);
 
+    $("#jquery-option").on("click", function () {
+        $("#code-modal, #html-modal").empty();
+        dataFunctions[id].functionJquery();
+    });
+
+    $("#vanilla-option").on("click", function () {
+        $("#code-modal, #html-modal").empty();
+        dataFunctions[id].functionVanilla();
+    });
+
     let id = $(this).attr("id");
-    dataFunctions[id].function();
+    dataFunctions[id].functionJquery();
 }
 
 function comparisonModalSelectors(){
@@ -203,6 +223,16 @@ function comparisonModalSelectors(){
     let element = $("#template-comparison").contents().clone();
     $("#selectors-column").append(element);
 
+    $("#jquery-option").on("click", function () {
+        $("#code-modal, #html-modal").empty();
+        dataSelectors[id].functionJquery();
+    });
+
+    $("#vanilla-option").on("click", function () {
+        $("#code-modal, #html-modal").empty();
+        dataSelectors[id].functionVanilla();
+    });
+
     let id = $(this).attr("id");
-    dataSelectors[id].function();
+    dataSelectors[id].functionJquery();
 }
