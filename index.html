@@ -17,7 +17,7 @@
 <body>
     <h1>JQuery | Cheat Sheet</h1>
     <div id="searchEngine">
-        <input id="searchInput" type="text" placeholder=" Search">
+        <input id="searchInput" type="text" placeholder="Search">
         <!--<button id="search"><img src="img/search.png" width="24px" height="24px"></button>-->
     </div>
     <main>
@@ -35,6 +35,7 @@
         </div>
     </main>
     <template class="templateModal">
+        <div id="backBlocked"></div>
         <div id="modal">
             <div id="modalTitle">
                 <div id="closeButton"><img src="img/close.png" width="24px" height="24px"></div>
@@ -74,7 +75,11 @@
                 <option>Online course</option>
                 <option>Classroom course</option>
             </select>
+            <ul>
+            </ul>
+            <label><input id="check" type="checkbox"/>I accept the privacy policy</label>
             <button type="submit">Send</button>
+            <p></p>
         </form>
     </template>
 </body>

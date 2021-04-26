@@ -212,64 +212,114 @@ function jsIterateStyle() {
 //
 //---------- On Load HTML Document ---------//
 function jsLoadPage() {
-    $( document ).ready(function() {
-        console.log( "ready!" );
-    });
+    document.addEventListener('DOMContentLoaded', loadedDOM);
+    function loadedDOM() {
+        console.log('hey');
+    }
 };
 //---------- On Clicked HTML ---------------//
 function jsClickedElement() {
-    $( document ).ready(function() {
-        console.log( "ready!" );
-    });
+    var img = document.querySelector('#eventsForm img');
+    img.onclick = function () {
+        img.style.display = 'none';
+    };
 };
 //---------- On Double Clicked HTML --------//
 function jsDobleClicked() {
-    $('#eventsForm img').dblclick(function () {
-        $('#eventsForm img').css({'display':'none'});
-        $('#eventsForm').css({'width':'100%'});
-    })
+    var img = document.querySelector('#eventsForm img');
+    img.ondblclick = function () {
+        img.style.display = 'none';
+    };
 };
 //---------- On Press Keyboard Key ---------//
 function jsPressKey() {
-    $('#eventsForm img').keypress(function () {
-        $('#eventsForm img').css({'display':'none'});
-        $('#eventsForm').css({'width':'100%'});
-    })
+    var img = document.querySelector('#eventsForm img');
+    document.addEventListener('keypress', logKey);
+    function logKey() {
+        img.style.display = 'none';
+    }
 };
 //---------- On Mouse Move -----------------//
 function jsMouseMoved() {
-    $("#eventsForm").append('<p>');
-    $(document).mousemove(function(event){
-        $("#eventsForm p").html("Pos X: "+event.pageX + " | Pos Y: "+event.pageY+"");
-        $("#eventsForm p").css({'margin-top':'10px'})
-    });
+    document.addEventListener('mousemove', mouseMove);
+    function mouseMove(event) {
+        document.querySelector('#eventsForm p').innerHTML = "Pos X: " + event.pageX + " | Pos Y: " + event.pageY + "";
+    }
 }
 //---------- On Input Change ---------------//
 function jsInputChange() {
-    $("#eventsForm input").change(function () {
-        $("#eventsForm #nameInput").css({'border':'2px solid rgb(0, 94, 255)'});
-    });
+    var input = document.querySelectorAll('#eventsForm input');
+    input.onchange =
+        function () {
+            input[0].style.border = '2px solid rgb(0, 94, 255)';
+            input[1].style.border = '2px solid rgb(0, 94, 255)';
+        }
 }
 //---------- On Load Image -----------------//
 function jsLoadImage() {
-    $("#eventsForm img").load(function () {
-        $('#eventsForm img').css({ 'display': 'none' });
-        $('#eventsForm').css({ 'width': '100%' });
-    });
+    var img = document.querySelector('#eventsForm img');
+    img.src = 'https://courseshunter.com/media/images/the-complete-web-developer-course.jpg';
+    img.onload =
+        function () {
+            document.querySelector('#eventsForm p').innerHTML = 'Image loaded';
+        };
 }
 //---------- On Fail Load Image ---------//
 function jsFailLoadImage() {
-    $("#eventsForm img").attr('src','');
-    $("#eventsForm img").error(function () {
-        $('#eventsForm').css({ 'width': '100%' });
-    });
+    var img = document.querySelector('#eventsForm img');
+    img.src = 'vanilla.js';
+    img.onerror =
+        function () {
+            document.querySelector('#eventsForm p').innerHTML = 'Image loaded error';
+        };
 }
 //---------- On Submit Form --------//
 function jsSubmitedForm() {
-    console.log("Sended!");
-    //$("#eventsForm").append('<p>');
-    $('#eventsForm').submit(function(event){
-        console.log("Sended!");
+    var form = document.querySelector('#eventsForm');
+    form.addEventListener('submit', function (event) {
         event.preventDefault();
+        document.querySelector('#eventsForm p').innerHTML = 'Sended!';
+    })
+}
+//---------- On Change Select Option ---------//
+function jsChangeOption() {
+    var select = document.querySelector('#eventsForm select');
+    select.onchange =
+        function () {
+            document.querySelector('#eventsForm p').innerHTML = select.value;
+        }
+}
+//---------- On Mouse Element Hover -----------------//
+function jsMouseHover() {
+    var input = document.querySelector('#eventsForm input');
+    input.onmouseover =
+        function () {
+            input.style.border = '2px solid rgb(0, 94, 255)';
+        }
+
+}
+//---------- On CheckBox Change ---------------//
+function jsCheckedBox() {
+    var checkbox = document.querySelector('#check');
+    checkbox.onchange =
+        function () {
+            if (checkbox.checked) {
+                document.querySelector('#eventsForm p').style.color = 'black';
+                document.querySelector('#eventsForm p').innerHTML = 'Policy accepted';
+            }
+            else {
+                document.querySelector('#eventsForm p').style.color = '#ff4d4d';
+                document.querySelector('#eventsForm p').innerHTML = 'Please accept the policy';
+            }
+        }
+}
+//---------- On li Element Clicked -----------------//
+function jsListClicked() {
+    var list = document.querySelectorAll('#eventsForm li');
+    list.forEach(function(element){
+        element.onclick = 
+        function() {
+            document.querySelector('#eventsForm p').innerHTML = element.innerText;
+        }
     });
 }

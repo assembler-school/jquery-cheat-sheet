@@ -42,6 +42,16 @@ h3 {
   font-size: 30px;
 }
 
+#backBlocked {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.171);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 #closeButton {
   margin-bottom: 20px;
   margin-left: 100%;
@@ -82,17 +92,17 @@ a {
   width: 29%;
 }
 
-/*flex grow*/
-
 #searchInput {
   background-color: #101010;
   height: 30px;
   width: 100%;
-  color: rgb(0, 94, 255);
+  color: black;
   font-size: 17px;
   margin-right: 10px;
-  font-family: "Montserrat Alternates", sans-serif;
-  border-bottom: 2px solid white;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  padding: 5px;
+  border-radius: 2px;
 }
 
 input:active,
@@ -209,11 +219,11 @@ ul {
 #modal {
   background-color: white;
   width: 70%;
-  position: absolute;
-  top: 12.5%;
+  position: fixed;
+  top: 20%;
   left: 15%;
   color: black;
-  z-index: 100;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.249);
@@ -228,14 +238,16 @@ ul {
 }
 
 #rightModalContent {
+  display: flex;
   width: 50%;
   background-color: rgb(245, 245, 245);
   margin: 10px;
+  height: 250px;
   word-wrap: break-word;
-  height: 300px;
   align-items: center;
   text-align: center;
   border-radius: 10px;
+  justify-content: center;
 }
 
 #buttonContainer button {
@@ -288,12 +300,12 @@ ul {
   padding: 18px;
   display: none;
   font-weight: bold;
-  overflow: hidden;
   word-wrap: break-word;
+  white-space: pre-wrap;
   font-family: "Montserrat", sans-serif;
+  font-size: 12px;
   background-color: rgb(237, 237, 237);
   color: rgb(16, 16, 16);
-
   border-radius: 0px 0px 10px 10px;
 }
 
@@ -326,7 +338,6 @@ code {
 select {
   font-size: 20px;
   padding: 1%;
-  width: 50%;
   font-weight: bold;
   border-radius: 5px;
   background-color: black;
@@ -359,9 +370,6 @@ select {
   color: white;
 }
 
-#rightModalContent addedParag {
-}
-
 .newParag {
   color: #005eff;
   margin-left: 150px;
@@ -388,11 +396,9 @@ select {
 
 #eventsForm {
   display: flex;
+  width: 100%;
   flex-direction: column;
-}
-
-.inputWrapper {
-
+  font-family: "Montserrat", sans-serif;
 }
 
 #eventsForm img {
@@ -408,7 +414,15 @@ select {
   margin: 5px 0px 0px 0px;
 }
 
-#eventsForm input {
+#nameInput {
+  height: 25px;
+  margin: 2px 0px 2px 0px;
+  border: 2px solid rgb(232, 232, 232);
+  border-radius: 3px;
+  width: 60%;
+}
+
+#lastInput {
   height: 25px;
   margin: 2px 0px 2px 0px;
   border: 2px solid rgb(232, 232, 232);
@@ -428,4 +442,25 @@ select {
   align-self: flex-start;
   font-size: 11px;
   margin-top: 8px;
+}
+
+#eventsForm p {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+#eventsForm label {
+  font-size: 13px;
+}
+
+#eventsForm ul {
+  margin-top: 20px;
+  width: 150px;
+  font-size: 13px;
+  padding: 0% 0% 0% 4%;
+}
+
+#check {
+  margin-right: 10px;
 }
