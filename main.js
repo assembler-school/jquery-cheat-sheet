@@ -81,7 +81,6 @@ functionData.forEach((dataItem, index) => {
   ).innerHTML = `<td id="function${index}">${dataItem}</td>`;
   document.getElementById("function" + index).onclick = function () {
     sheetModal.style.display = "block";
-    console.log(nameOfContent);
     nameOfContent.textContent = dataItem;
     document
       .querySelector(".screen")
@@ -91,7 +90,6 @@ functionData.forEach((dataItem, index) => {
       codeBoxes[0].setAttribute("id", `jsFunc${index}`);
       codeBoxes[1].setAttribute("id", `jQueryFunc${index}`);
     });
-    //console.log(document.getElementById(`"jsFunc${index}"`))
     jsDisplay(index);
     jQueryDisplay(index);
   };
@@ -104,7 +102,6 @@ effectTraversingData.forEach((dataItem, index) => {
   ).innerHTML = `<td id="effect${index}">${dataItem}</td>`;
   document.getElementById("effect" + index).onclick = function () {
     sheetModal.style.display = "block";
-    console.log(nameOfContent);
     nameOfContent.textContent = dataItem;
     document
       .querySelector(".screen")
@@ -114,7 +111,6 @@ effectTraversingData.forEach((dataItem, index) => {
       codeBoxes[0].setAttribute("id", `jsEffect${index}`);
       codeBoxes[1].setAttribute("id", `jQueryEffect${index}`);
     });
-    //console.log(document.getElementById(`"jsFunc${index}"`))
     jsDisplay(index);
     jQueryDisplay(index);
   };

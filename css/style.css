@@ -13,6 +13,7 @@ body {
 
 #imageContainer {
   margin-top: 7%;
+  opacity: 0.8;
 }
 
 img {
