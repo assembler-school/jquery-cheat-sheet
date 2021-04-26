@@ -423,7 +423,7 @@ function jQueryScript(id) {
       });
       break;
     case "jq28":
-      codeTextJq.text(`$(document).ready(function() {})`);
+      codeTextJq.text(`$(function () {});`);
       demoText.html("The document has been loaded");
       demoText.addClass("no-padding");
       demoConsoleContainerJq.append(demoText);

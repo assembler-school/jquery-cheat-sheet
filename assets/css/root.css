@@ -143,6 +143,10 @@ table {
   font-family: "Work Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: var(--bg);
   width: 100vw;
@@ -235,6 +239,7 @@ p {
   font-size: 18px;
   font-weight: var(--regular);
   padding: 15px;
+  word-wrap: break-word;
 }
 
 .navigation-container {
