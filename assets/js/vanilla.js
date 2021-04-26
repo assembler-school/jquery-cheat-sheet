@@ -13,6 +13,7 @@ let outputVanilla = document.getElementById("output-panel");
 
 let examples = document.getElementsByClassName("example");
 let runButton = document.getElementById("run-button");
+let clearButton = document.getElementById("clear-button");
 
 /* -------------------------------------------------------------------------- */
 /*                                  FUNCTIONS                                 */
@@ -107,18 +108,25 @@ element.onkeypress = function(){
 };`;
 
   // Output
+  let outputText = "> Key pressed! \n";
+
+  function keyPressedInside() {
+    outputVanilla.innerText = outputText;
+    outputText += "> Key pressed! \n";
+  }
+
   runButton.onclick = function () {
     outputVanilla.innerText = "";
-    let outputText = "> Key pressed! \n";
-
-    function keyPressedInside() {
-      outputVanilla.innerText = outputText;
-      outputText += "> Key pressed! \n";
-    }
 
     document.addEventListener("keypress", keyPressedInside);
     // Removing event listener if example is clicked
     removeEventVanilla(document, "keypress", keyPressedInside, examples);
+  };
+
+  clearButton.onclick = function () {
+    document.removeEventListener("keypress", keyPressedInside);
+    outputVanilla.innerText = "";
+    outputText = "";
   };
 }
 
@@ -487,7 +495,7 @@ for (let l of liElements{
     let ulItem5 = document.createElement("li");
     ulItem5.innerText = "John Clesse";
     let ulItem6 = document.createElement("li");
-    ulItem6.innerText = "Michael Pallin";
+    ulItem6.innerText = "Michael Palin";
 
     exampleUL.appendChild(ulItem1);
     exampleUL.appendChild(ulItem2);
@@ -1254,7 +1262,7 @@ for (let l of liElements){
     let ulItem5 = document.createElement("li");
     ulItem5.innerText = "John Clesse";
     let ulItem6 = document.createElement("li");
-    ulItem6.innerText = "Michael Pallin";
+    ulItem6.innerText = "Michael Palin";
 
     let exampleParagraph = document.createElement("p");
 
@@ -1330,7 +1338,7 @@ function styleChildren() {
   macroTextVanilla.innerText = `// Change children's font-weight after 2 seconds
 
 setTimeout(function(){
-  let childs = element.childNodes;
+  let childs = parent.childNodes;
   for ( let c of childs ){
     c.style.fontWeight = "light";
     c.style.outline = "1px solid white";
@@ -1640,7 +1648,7 @@ firstA.setAttribute("href", "newUrl");`;
     aItem5.innerText = "John Clesse";
     let aItem6 = document.createElement("a");
     aItem6.setAttribute("href", "https://ca.wikipedia.org/wiki/Michael_Palin");
-    aItem6.innerText = "Michael Pallin";
+    aItem6.innerText = "Michael Palin";
 
     ulItem1.appendChild(aItem1);
     ulItem2.appendChild(aItem2);
@@ -1734,7 +1742,7 @@ function deleteSelectors() {
     let ulItem5 = document.createElement("li");
     ulItem5.innerText = "John Clesse";
     let ulItem6 = document.createElement("li");
-    ulItem6.innerText = "Michael Pallin";
+    ulItem6.innerText = "Michael Palin";
 
     exampleUL.appendChild(ulItem1);
     exampleUL.appendChild(ulItem2);

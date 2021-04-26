@@ -14,6 +14,7 @@ let macroString;
 
 let examplesJquery = $(".example");
 let runButtonJquery = $("#run-button");
+let clearButtonJquery = $("#clear-button");
 
 /* -------------------------------------------------------------------------- */
 /*                                  FUNCTIONS                                 */
@@ -121,18 +122,24 @@ $(document).keypress(function(){
   macroJquery.text(macroString);
 
   // Output
+  outputJquery.text("");
+  let outputText = "> Key pressed!\n";
+
+  function keyPressedInside() {
+    outputJquery.text(outputText);
+    outputText += "> Key pressed!\n";
+  }
+
   runButtonJquery.click(function () {
-    outputJquery.text("");
-    let outputText = "> Key pressed!\n";
-
-    function keyPressedInside() {
-      outputJquery.text(outputText);
-      outputText += "> Key pressed!\n";
-    }
-
     $(document).on("keypress", keyPressedInside);
     // Removing event listener if example is clicked
     removeEventJQuery(document, "keypress", keyPressedInside, ".example");
+  });
+
+  clearButtonJquery.click(function () {
+    $(document).off("keypress", keyPressedInside);
+    outputJquery.text("");
+    outputText = "";
   });
 }
 
@@ -383,13 +390,13 @@ function mouseOver() {
   // Macro
   macroString = `// Mouse over element
 
-element.on("mouseover", function(){
+$(element).on("mouseover", function(){
   $(this).text("Mouse over");
 })
 
 // Mouse out element
 
-element.on("mouseout", function(){
+$(element).on("mouseout", function(){
   $(this).text("Mouse out");
 })`;
 
@@ -435,7 +442,7 @@ function checkBoxOnOff() {
   // Macro
   macroString = `// Checked unchecked checkbox
 
-element.on("click", function(){
+$(element).on("click", function(){
   if ($(this).prop("checked") == true){
     console.log("Welcome to the Ministry of Silly Walks!")
   else {
@@ -530,7 +537,7 @@ liElements.each(function(){
     let ulItem5 = $("<li>");
     ulItem5.text("John Cleese");
     let ulItem6 = $("<li>");
-    ulItem6.text("Michael Pallin");
+    ulItem6.text("Michael Palin");
 
     exampleUL.append(ulItem1);
     exampleUL.append(ulItem2);
@@ -615,7 +622,7 @@ function removeHTML() {
 let container = $("<div>");
 let child = $("#child");
 
-$(element).click(function(){
+container.click(function(){
   child.remove();
 };`;
 
@@ -898,8 +905,8 @@ function addedClass() {
   macroString = `// Add class to an html element
 
 setTimeout(function(){
-  element.addClass("newClass");
-  console.log(element.prop("outerHTML");
+  $(element).addClass("newClass");
+  console.log($(element).prop("outerHTML");
 }, 2000)`;
 
   macroJquery.text(macroString);
@@ -937,8 +944,8 @@ function removedClass() {
   macroString = `// Remove class to an html element
 
 setTimeout(function(){
-  element.removeClass("class2");
-  console.log(element.prop("outerHTML");
+  $(element).removeClass("class2");
+  console.log($(element).prop("outerHTML");
 }, 2000)`;
 
   macroJquery.text(macroString);
@@ -977,8 +984,8 @@ function toggledClass() {
   // Macro
   macroString = `// Toggle class to an html element
 
-element.on("click", function(){
-  this.toggleClass("toggledClass");
+$(element).on("click", function(){
+  $(this).toggleClass("toggledClass");
   console.log("Toggled class");
 });`;
 
@@ -1023,7 +1030,7 @@ function addedDisable() {
   macroString = `// Add disable attribute
 
 setTimeout(function(){
-  element.prop("disabled", true);
+  $(element).prop("disabled", true);
 }, 2000);`;
 
   macroJquery.text(macroString);
@@ -1054,10 +1061,10 @@ function removedDisable() {
   // Macro
   macroString = `// Remove disable attribute
 
-element.prop("disabled", true);
+$(element).prop("disabled", true);
 
 setTimeout(function(){
-  element.prop("disabled", false);
+  $(element).prop("disabled", false);
 }, 2000);`;
 
   macroJquery.text(macroString);
@@ -1167,8 +1174,8 @@ function displayNone() {
   // Macro
   macroString = `// Hide element on click (display: none)
 
-button.on("click", function(){
-  element.css("display", "none");
+$(button).on("click", function(){
+  $(element).css("display", "none");
 });`;
 
   macroJquery.text(macroString);
@@ -1208,8 +1215,8 @@ function displayBlock() {
   // Macro
   macroString = `// Show element on click (display: block)
 
-button.on("click", function(){
-  element.css("display", "block");
+$(button).on("click", function(){
+  $(element).css("display", "block");
 });`;
 
   macroJquery.text(macroString);
@@ -1250,7 +1257,7 @@ function fadedIn() {
   // Macro
   macroString = `// Fade in element in 2 seconds
 
-element.fadeIn(2000);`;
+$(element).fadeIn(2000);`;
 
   macroJquery.text(macroString);
 
@@ -1276,7 +1283,7 @@ function fadedOut() {
   // Macro
   macroString = `// Fade out element in 2 seconds
 
-element.fadeOut(2000);`;
+$(element).fadeOut(2000);`;
 
   macroJquery.text(macroString);
 
@@ -1324,7 +1331,7 @@ $("li").each(function(){
     let ulItem5 = $("<li>");
     ulItem5.text("John Cleese");
     let ulItem6 = $("<li>");
-    ulItem6.text("Michael Pallin");
+    ulItem6.text("Michael Palin");
 
     let exampleParagraph = $("<p>");
 
@@ -1360,7 +1367,7 @@ function styleParent() {
   macroString = `// Change parent's font-weight after 2 seconds
 
 setTimeout(function(){
-  let parent = element.parent();
+  let parent = $(element).parent();
   parent.css({
     fontWeight: "light",
     outline: ""1px solid white"})
@@ -1403,7 +1410,7 @@ function styleChildren() {
   macroString = `// Change children's font-weight after 2 seconds
 
 setTimeout(function(){
-  let childs = exampleParent.children();
+  let childs = $(parent).children();
   childs.each(function(){
     $(this).css({
       fontWeight: "light",
@@ -1724,7 +1731,7 @@ $("a").first().attr("href", "newUrl");
     aItem5.text("John Cleese");
     let aItem6 = $("<a>");
     aItem6.attr("href", "https://ca.wikipedia.org/wiki/Michael_Palin");
-    aItem6.text("Michael Pallin");
+    aItem6.text("Michael Palin");
 
     ulItem1.append(aItem1);
     ulItem2.append(aItem2);
@@ -1823,7 +1830,7 @@ $("li")..remove();`;
     let ulItem5 = $("<li>");
     ulItem5.text("John Cleese");
     let ulItem6 = $("<li>");
-    ulItem6.text("Michael Pallin");
+    ulItem6.text("Michael Palin");
 
     exampleUL.append(ulItem1);
     exampleUL.append(ulItem2);
@@ -1851,7 +1858,7 @@ function animateAfter() {
   // Macro
   macroString = `// Animate element after 2 seconds
 
-document.load(function(){
+$(document).load(function(){
   setTimeout(function(){
     $(element).animate({marginTop: "260px"},2000);
   }, 2000)
