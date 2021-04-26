@@ -284,7 +284,7 @@ main {
 }
 
 #clear-button {
-  display: none;
+  /* display: none; */
   background-color: var(--accent-color);
   color: var(--dark-color);
 }
@@ -467,7 +467,14 @@ footer {
   outline-color: var(--accent-color);
 }
 
-a {
+a,
+a:visited {
+  text-decoration: none;
   width: 100%;
   color: var(--accent-color);
+  transition: 0.4s;
+}
+
+a:hover {
+  color: var(--light-color);
 }
