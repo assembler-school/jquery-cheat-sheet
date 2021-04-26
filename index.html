@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js-vs-Jquery</title>
+
+    <!-- Jquery library ONLINE-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <!-- Jquery library LOCAL-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Awesome icons Library-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="body">
+    <header class="header" id="header">
+      <nav class="nav nav-grid">
+        <h3>By Erick Noiztbander</h3>
+        <h2>Js vs Jquery</h2>
+      </nav>
+    </header>
+    <main class="main" id="main">
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>HTML document loaded</h3>
+          <p>
+            Explanation: When the HTML document has been loaded and you can
+            manipulate it with JavaScript
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    document.addEventListener('DOMContentLoaded', function() {
+      alert("Ready!");
+    }, false);
+								</pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( document ).ready(function() {
+      console.log( "ready!" );
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Clicked</h3>
+          <p>Explanation: When an HTML item has been clicked</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    document.getElementById("prueba")
+    .addEventListener("click", function( event ) {
+      event.target.innerHTML = "Conteo de Clicks: " + event.detail;
+    }, false);
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( "p" ).click(function() {
+      $( this ).slideUp();
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Double Clicked</h3>
+          <p>Explanation: When an HTML item has been double clicked</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let btn = document.getElementById("mybtnjs3");
+
+    btn.ondblclick = () => {
+      btn.innerHTML = "I was double-clicked!";
+    };
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("p").dblclick(function(){
+      alert("The paragraph was double-clicked");
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Key pressed</h3>
+          <p>Explanation: When the user presses a key on the keyboard</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    function uniCharCode(event) {
+      var char = event.which || event.keyCode;
+      document.getElementById("demo").innerHTML =
+        "The Unicode CHARACTER code is: " + char;
+    }
+
+    function uniKeyCode(event) {
+      var key = event.keyCode;
+      document.getElementById("demo2").innerHTML =
+        "The Unicode KEY code is: " + key;
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    i = 0;
+    $(document).ready(function(){
+      $("#input-jquery-4").keypress(function(){
+        $("#span-jquery-4").text(i += 1);
+      });
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Moves the mouse</h3>
+          <p>Explanation: When the user moves the mouse cursor</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    On HTML script: onmousemove =
+    "this.value=event.clientX+':'+event.clientY"
+
+    document.getElementById("demo")
+    .addEventListener("mouseover", mouseOver);
+    document.getElementById("demo")
+    .addEventListener("mouseout", mouseOut);
+
+    function mouseOver() {
+      document.getElementById("demo")
+      .style.color = "red";
+    }
+
+    function mouseOut() {
+      document.getElementById("demo")
+      .style.color = "black";
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    var i = 0;
+    $("div.overout")
+      .mouseover(function () {
+        i += 1;
+        $(this)
+          .find("span")
+          .text("mouse over x " + i);
+      })
+      .mouseout(function () {
+        $(this).find("span").text("mouse out ");
+      });
+
+    var n = 0;
+    $("div.enterleave")
+      .mouseenter(function () {
+        n += 1;
+        $(this)
+          .find("span")
+          .text("mouse enter x " + n);
+      })
+      .mouseleave(function () {
+        $(this).find("span").text("mouse leave");
+      });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Changes a value</h3>
+          <p>Explanation: When the user changes a value of an text input</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    document.getElementById("myText").value = "Johnny Bravo";
+
+    let myInput = document.getElementById("input-js-6");
+    let myPwithInput = document.getElementById("p-js6");
+    myPwithInput.innerHTML = myInput.value;
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("myText").val("John Doe");
+
+    $("#p-jquery6").html($("#input-jquery-6").val());
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Image is loaded</h3>
+          <p>Explanation: When an image is loaded</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let img = document.getElementById("img-js-7");
+
+    img.addEventListener('load', (event) => {
+        let p_js_7 = document.getElementById("p-js-7");
+        p_js_7.innerHTML = "Image Loaded"
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("#img-jquery-7").one("load", function() {
+      $("#p-jquery-7").html("Image loaded");
+    })
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Image fails to load</h3>
+          <p>
+            Explanation: When an image fails to load, (if you write an incorrect
+            image url the loading of the image will fail)
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let myImage_js8 = document.getElementById("img-js-8");
+
+    myImage_js8.addEventListener('error', imageNotFound);
+
+    function imageNotFound() {
+      myImage_js8.setAttribute("src", "assets/images/giphy.gif");
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("#img-jquery-8").on("error", function () {
+      $(this).attr("src", "assets/images/giphy.gif");
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Form is submitted</h3>
+          <p>Explanation: When a form is submitted</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let myBtn = document.getElementById("mybtnjs9");
+    myBtn.addEventListener("click", mySubmitJs);
+
+    function mySubmitJs() {
+      alert("From submitted");
+      let myForm = document.getElementById("myForm-js9")
+      myForm.submit();
+      myForm.reset();
+    };
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( "#target" ).submit(function( event ) {
+    alert( "Handler for .submit() called." );
+    event.preventDefault();
+    });
+
+    let myBtn = $("#mybtnjquery9");
+    myBtn.attr("type", "submit");
+    myBtn.on("click",()=>{
+      $("#myForm-jquery9").submit()
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Changes the option of a select element</h3>
+          <p>
+            Explanation: When the user changes the option of a select element
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    function select(selectId, optionValToSelect){
+        var selectElement = document.getElementById(selectId);
+        var selectOptions = selectElement.options;
+        for (var opt, j = 0; opt = selectOptions[j]; j++) {
+            if (opt.value == optionValToSelect) {
+                selectElement.selectedIndex = j;
+                break;
+            }
+        }
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( ".target" ).change(function() {
+      alert( "Handler for .change() called." );
+    });
+
+    $( "#other" ).click(function() {
+      $( ".target" ).change();
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Position the mouse over an element</h3>
+          <p>Explanation: When you position the mouse over an element</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    On HTML:
+    &lt;img onmouseover="bigImg(this)" src="smiley.gif" alt="Smiley">
+
+    document.getElementById("demo")
+    .onmouseover = function() {mouseOver()};
+
+    function mouseOver() {
+      document.getElementById("demo").style.color = "red";
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    .on( "mouseover", handler )
+
+    $( "#outer" ).mouseover(function() {
+      $( "#log" ).append( "<div>Handler for .mouseover() called.</div>" );
+    });
+
+    $( "#other" ).click(function() {
+      $( "#outer" ).mouseover();
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Checked or unchecked</h3>
+          <p>Explanation: When a checkbox is checked or unchecked</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+      function check() {
+      document.getElementById("myCheck").checked = true;
+    }
+
+    function uncheck() {
+      document.getElementById("myCheck").checked = false;
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("#checkbox_activar").click(function() {
+      $("#checkbox").attr('checked', true);
+    });
+
+    $("#checkbox_desactivar").click(function() {
+      $("#checkbox").attr('checked', false);
+    });
+
+    $( "input" ).on( "click", function() {
+      $( "#log" ).html( $( "input:checked" ).val() + " is checked!" );
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Show a list when clicked</h3>
+          <p>
+            Explanation: When a ul list item is clicked, show the item that was
+            clicked
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    function fAbreGuias() {
+      var vGuias = document.getElementById('guias');
+      if (vGuias.style.display == "block") {
+        vGuias.style.display = "none";
+      } else {
+        vGuias.style.display = "block";
+      }
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( "button" ).click(function() {
+      $( "p" ).show( "slow" );
+    });
+
+    $( "#showr" ).click(function() {
+      $( "div" ).first().show( "fast", function showNext() {
+        $( this ).next( "div" ).show( "fast", showNext );
+      });
+    });
+
+    $( "#hidr" ).click(function() {
+      $( "div" ).hide( 1000 );
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Create</h3>
+          <p>Explanation: Create an HTML element with any text value</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    var tag = document.createElement("p");
+    tag.innerText("Tutorix is the best e-learning platform");
+    tag.appendChild(text);
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("p").append("Some appended text.");
+    $("p").prepend("Some prepended text.");
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Remove</h3>
+          <p>Explanation: Remove an HTML element with any text value</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    var el = document.getElementById('div-02');
+    el.nextElementSibling.remove(); // Elimina el div con el id 'div-03'
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( ".hello" ).remove();
+
+    $("p").filter(":contains('Hello')").remove()
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Append</h3>
+          <p>
+            Explanation: Append an HTML element with any text value to a parent
+            element
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let div = document.createElement("div")
+    div.append("Some text")
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("button").click(function(){
+      $("p").append("<b>Appended text</b>");
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Prepend</h3>
+          <p>
+            Explanation: Prepend an HTML element with any text value to a parent
+            element
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let div = document.createElement("div");
+    div.append("Some text");
+    div.prepend("Headline: ");
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("button").click(function(){
+      $("p").prepend("<b>Prepended text</b>");
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Create and add: After</h3>
+          <p>
+            Explanation: Create and add an HTML element with any text value
+            after another element
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    var parent = document.createElement("div");
+    var child = document.createElement("p");
+    parent.appendChild(child);
+    var span = document.createElement("span");
+    child.after(span);
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( "&lt;p>Test&lt;/p>" ).insertAfter( ".inner" );
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Create and add: Before</h3>
+          <p>
+            Explanation: Create and add an HTML element with any text value
+            before another element
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    var sp1 = document.createElement("span");
+    // Obtener una referencia al elemento, antes de donde queremos insertar el elemento
+    var sp2 = document.getElementById("childElement");
+    // Obtener una referencia al nodo padre
+    var parentDiv = sp2.parentNode;
+    // Inserta un nuevo elemento en el DOM antes de sp2
+    parentDiv.insertBefore(sp1, sp2);
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("button").click(function(){
+      $("&lt;span>Hello world!&lt;/span>").insertBefore("p");
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Clone</h3>
+          <p>Explanation: Clone an HTML element within other element</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    var p_prime = p.cloneNode(true);
+    var p = document.getElementById("para1");
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( ".hello" ).clone().appendTo( ".goodbye" );
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Add a class</h3>
+          <p>Explanation: Add a class to an HTML item</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    const div = document.createElement('div');
+
+    div.className = 'foo';
+    div.classList.add("anotherclass");
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( "p" ).addClass( "myClass yourClass" );
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Remove a class</h3>
+          <p>Explanation: Remove a class to an HTML item</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    function myFunction() {
+      var element = document.getElementById("myDIV");
+      element.classList.remove("mystyle");
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( "p" ).removeClass( "myClass noClass" ).addClass( "yourClass" );
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Toggle a class</h3>
+          <p>Explanation: Toggle a class of an HTML item</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    function myFunction() {
+      var element = document.getElementById("myDIV");
+      element.classList.toggle("mystyle");
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("button").click(function(){
+      $("p").toggleClass("main");
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Add a disabled attribute</h3>
+          <p>Explanation: Add a disabled attribute to an HTML button</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    document.getElementById("myBtn").disabled = true;
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre></pre>
+                $(selector).attr('disabled', true);
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Remove the disabled attribute</h3>
+          <p>Explanation: Remove the disabled attribute of an HTML button</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    document.getElementById("myBtn").disabled = false;
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $(selector).attr('disabled', false);
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Set a data-src attribute</h3>
+          <p>Explanation: Set a data-src attribute to a img element</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    &lt;div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>
+    John Doe
+    &lt;/div>
+
+    const el = document.querySelector('#user');
+
+    // el.id == 'user'
+    // el.dataset.id === '1234567890'
+    // el.dataset.user === 'johndoe'
+    // el.dataset.dateOfBirth === ''
+
+    // set the data attribute
+    el.dataset.dateOfBirth = '1960-10-03';
+    // Result: el.dataset.dateOfBirth === 1960-10-03
+
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    &lt;div data-role="page" data-last-value="43" data-hidden="true" data-options='{"name":"John"}'>&lt;/div>
+
+    $( "div" ).data( "role" ) === "page";
+    $( "div" ).data( "lastValue" ) === 43;
+    $( "div" ).data( "hidden" ) === true;
+    $( "div" ).data( "options" ).name === "John";
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Remove the data-src attribute</h3>
+          <p>Explanation: Remove the data-src attribute of the img element</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    &lt;div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>
+    John Doe
+    &lt;/div>
+
+    const el = document.querySelector('#user');
+
+    // el.id == 'user'
+    // el.dataset.id === '1234567890'
+    // el.dataset.user === 'johndoe'
+    // el.dataset.dateOfBirth === ''
+
+    delete el.dataset.dateOfBirth;
+    // Result: el.dataset.dateOfBirth === undefined
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( "div" ).removeData( "test1" );
+    // Result: el.test1 === undefined
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Hide</h3>
+          <p>Explanation: Hide an HTML element on click (display: none)</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    document.getElementById("myDIV").style.display = "none";
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("#elementId").hide();
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Show</h3>
+          <p>Explanation: Show an HTML element on click (display: block)</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    document.getElementById("myDIV").style.display = "inline";
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $("button").click(function(){
+      $("p").show();
+    });
+              </pre
+                >
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Fade in</h3>
+          <p>Explanation: Fade in an HTML element using jQuery</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    function unfade(element) {
+      var op = 0.1;  // initial opacity
+      element.style.display = 'block';
+      var timer = setInterval(function () {
+          if (op >= 1){
+              clearInterval(timer);
+          }
+          element.style.opacity = op;
+          element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+          op += op * 0.1;
+      }, 10);
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $(".btn2").click(function(){
+      $("p").fadeIn();
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Fade out</h3>
+          <p>Explanation: Fade out an HTML element using jQuery</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    function fade(element) {
+      var op = 1;  // initial opacity
+      var timer = setInterval(function () {
+          if (op <= 0.1){
+              clearInterval(timer);
+              element.style.display = 'none';
+          }
+          element.style.opacity = op;
+          element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+          op -= op * 0.1;
+      }, 50);
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $(".btn1").click(function(){
+      $("p").fadeOut();
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Iterate a collection of elements</h3>
+          <p>
+            Explanation: Iterate a collection of elements and apply a change of
+            style on them
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    const arr = [1,2,3];
+
+    for (const num of arr) {
+      console.log(num);
+    }
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $( "li" ).each(function() {
+      $( this ).toggleClass( "example" );
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Get the parent element</h3>
+          <p>
+            Explanation: Get the parent element of a certain element and change
+            its font weight
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    if (node.parentElement) {
+      node.parentElement.style.color = "red";
+    }
+
+    var x = document.getElementById("myLI").parentElement.nodeName;
+
+    document.body.parentNode;
+    // Returns the &lt;html> element
+    document.body.parentElement;
+    // Returns the &lt;html> element
+
+    document.documentElement.parentNode;
+    // Returns the Document node
+    document.documentElement.parentElement;
+    // Returns null (&lt;html> does not have a parent ELEMENT node)
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    &lt;div>&lt;p>Hello&lt;/p>&lt;/div>
+    &lt;div class="selected">&lt;p>Hello Again&lt;/p>&lt;/div>
+
+    $( "p" ).parent( ".selected" ).css( "background", "yellow" );
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Get the collection of children</h3>
+          <p>
+            Explanation: Get the collection of children of a certain element and
+            change its font weight
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    var highlightedItems = userList.querySelectorAll('.highlighted');
+
+    highlightedItems.forEach(function(userItem) {
+      deleteUser(userItem);
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let myCollection = $("div");
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Get all with classes</h3>
+          <p>
+            Explanation: Get all the elements that have a certain class and
+            change their font weight
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let myCollection = document.querySelectorAll(".s-container");
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let myCollection = $(".s-container");
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Get an item by id</h3>
+          <p>Explanation: Get an item by id and change its font weight</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let myItemId = document.getElementById("itemId");
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let myIdItem = $("#itemId");
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Get all the elements</h3>
+          <p>
+            Explanation: Get all the elements that have a certain class and the
+            display property of none and change their font color
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let myButtons = document.querySelectorAll(".btn[disabled]");
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    let myBtns = $(".btn[disabled]");
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Get the options of a selection</h3>
+          <p>
+            Explanation: Get the options of a select element that are selected
+            (attribute selected)
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre></pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre></pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Change the href attribute</h3>
+          <p>
+            Explanation: Change the href attribute of the first &lt;a> element
+            (You have to create several &lt;a> elements)
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    &lt;a href="#" id="abc">jhg&lt;/a>
+    &lt;a href="#" id="myLink">jhhghj&lt;/a>
+
+    document.getElementById("myLink").onclick = function() {
+      document.getElementById("abc").href="xyz.php";
+      return false;
+    };
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre>
+    $('a[href^="http://"]').each(function(){
+      var oldUrl = $(this).attr("href");
+      // Get current url
+      var newUrl = oldUrl.replace("http://", "https://");
+      // Create new url
+      $(this).attr("href", newUrl);
+    });
+                </pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Show an alert with values</h3>
+          <p>
+            Explanation: Show an alert with the value of the first &lt;input> of
+            the page (Create an &lt;input> element to test this case)
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre></pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre></pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Remove all items</h3>
+          <p>Explanation: Remove all items from a specific selector</p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre></pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre></pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section class="s-container">
+        <div class="div-article-grid">
+          <h3>Animate an item</h3>
+          <p>
+            Explanation: Animate an item after 2 seconds from the initial page
+            load
+          </p>
+          <div class="Js-ex">
+            <h4>Javascript Vanilla</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre></pre>
+              </code>
+            </fieldset>
+          </div>
+          <div class="Jquery-ex">
+            <h4>Jquery</h4>
+            <fieldset>
+              <legend>Code</legend>
+              <code>
+                <pre></pre>
+              </code>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+    </main>
+    <aside class="aside" id="aside">
+      <div class="asideArrow">
+        <i class="fas fa-arrow-circle-down"></i>
+      </div>
+      <nav class="nav">
+        <h3 class="h3-title-aside" id="h3-title-events">Events</h3>
+        <ul class="noStyleList displayNone" id="asideListEvents">
+          <li>HTML document loaded</li>
+          <li>Clicked</li>
+          <li>Double Clicked</li>
+          <li>Presses a key</li>
+          <li>Moves a the mouse</li>
+          <li>Changes a value</li>
+          <li>Image is loaded</li>
+          <li>Image fails to load</li>
+          <li>Form is submitted</li>
+          <li>Changes the option of a select element</li>
+          <li>Position the mouse over an element</li>
+          <li>Checked or unchecked</li>
+          <li>Show a list when clicked</li>
+        </ul>
+        <h3 class="h3-title-aside" id="h3-title-functions">
+          Functions and Selectors
+        </h3>
+        <ul class="noStyleList displayNone" id="asideListFunctions">
+          <li>Create</li>
+          <li>Remove</li>
+          <li>Append</li>
+          <li>Prepend</li>
+          <li>Create and add: After</li>
+          <li>Create and add: Before</li>
+          <li>Clone</li>
+          <li>Add a class</li>
+          <li>Remove a class</li>
+          <li>Toggle a class</li>
+          <li>Add a disabled attribute</li>
+          <li>Remove the disabled attribute</li>
+          <li>Set a data-src attribute</li>
+          <li>Remove a data-src attribute</li>
+          <li>Hide</li>
+          <li>Show</li>
+          <li>Fade in</li>
+          <li>Fade out</li>
+          <li>Iterate a collection of elements</li>
+          <li>Get the parent element</li>
+          <li>Get the collection of children</li>
+          <li>Get all with classes</li>
+          <li>Get an item by id</li>
+          <li>Get all the elements</li>
+          <li>Get the options of a selection</li>
+          <li>Change the href atribute</li>
+          <li>Show an alert with values</li>
+          <li>Remove all items</li>
+          <li>Animate an item</li>
+        </ul>
+      </nav>
+    </aside>
+    <footer class="footer">
+      <p class="assembler-title">Assembler School</p>
+      <!-- comentario ficticio -->
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/functions.js"></script>
+  </body>
+</html>
