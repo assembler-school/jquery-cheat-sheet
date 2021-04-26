@@ -1,0 +1,329 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i"
+      rel="stylesheet"
+    />
+    <title>My jQuery Cheatsheet</title>
+  </head>
+  <header>
+    <img src="./assets/img/headericon.png" style="height: 50px" alt="" />
+    <h1>My jQuery Cheatsheet</h1>
+  </header>
+  <body>
+    <section class="eventsSection">
+      <h2 class="sectionTitle">Events</h2>
+      <div class="sectionContent eventsContent">
+        <div class="functionalities eventsFunctionalities">
+          <ul>
+            <li class="functionTitle eventsTitle" id="e1">
+              HTML document has been loaded
+            </li>
+            <li class="functionTitle eventsTitle" id="e2">Click element</li>
+            <li class="functionTitle eventsTitle" id="e3">
+              Double click element
+            </li>
+            <li class="functionTitle eventsTitle" id="e4">
+              Press a key on the keyboard
+            </li>
+            <li class="functionTitle eventsTitle" id="e5">
+              Move the mouse cursor
+            </li>
+            <li class="functionTitle eventsTitle" id="e6">
+              Change value of text input
+            </li>
+            <li class="functionTitle eventsTitle" id="e7">
+              When an image is loaded
+            </li>
+            <li class="functionTitle eventsTitle" id="e8">
+              When an image fails to load
+            </li>
+            <li class="functionTitle eventsTitle" id="e9">Form submitted</li>
+            <li class="functionTitle eventsTitle" id="e10">
+              Change option of select element
+            </li>
+            <li class="functionTitle eventsTitle" id="e11">
+              Mouse over element
+            </li>
+            <li class="functionTitle eventsTitle" id="e12">
+              Change checkbox value
+            </li>
+            <li class="functionTitle eventsTitle" id="e13">
+              When ul item is clicked, shot that item
+            </li>
+          </ul>
+        </div>
+        <div class="demo eventsDemo">
+          <div class="demoHeader eventsDemoHeader">
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jsVanillaEventsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                  checked
+                />
+                <span class="checkboxControl jsVanillaEventsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">JS Vanilla</h2>
+            </label>
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jqueryEventsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                />
+                <span class="checkboxControl jqueryEventsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">jQuery</h2>
+            </label>
+          </div>
+          <div class="demoContainer eventsDemoContainer">
+            <div class="codeDiv eventsCodeDiv">
+              <code> </code>
+            </div>
+            <div class="outputDiv eventsOutputDiv">
+              <div class="outputContent" id="eventsOutputContent">
+                <p id="eventOutputP" class="outputP eventOutputP"></p>
+                <button
+                  type="button"
+                  class="outputButton eventOutputButton"
+                  id="eventOutputButton"
+                  style="display: none"
+                >
+                  Click here
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="functionsSection">
+      <h2 class="sectionTitle">Functions</h2>
+      <div class="sectionContent functionsContent">
+        <div class="functionalities functionsFunctionalities">
+          <ul>
+            <li class="functionTitle functionsTitle" id="f1">
+              Create a HTML element
+            </li>
+            <li class="functionTitle functionsTitle" id="f2">
+              Remove HTML element
+            </li>
+            <li class="functionTitle functionsTitle" id="f3">
+              Append an HTML element
+            </li>
+            <li class="functionTitle functionsTitle" id="f4">
+              Prepend an HTML element
+            </li>
+            <li class="functionTitle functionsTitle" id="f5">
+              Create an HTML element after other
+            </li>
+            <li class="functionTitle functionsTitle" id="f6">
+              Create a HTML element before other
+            </li>
+            <li class="functionTitle functionsTitle" id="f7">
+              Clone an HTML element
+            </li>
+            <li class="functionTitle functionsTitle" id="f8">
+              Add a class to an HTML element
+            </li>
+            <li class="functionTitle functionsTitle" id="f9">
+              Remove a class to an HTML element
+            </li>
+            <li class="functionTitle functionsTitle" id="f10">
+              Toggle a class of an HTML element
+            </li>
+            <li class="functionTitle functionsTitle" id="f11">
+              Add a disabled attribute to an HTML button
+            </li>
+            <li class="functionTitle functionsTitle" id="f12">
+              Remove a disabled attribute to an HTML button
+            </li>
+            <li class="functionTitle functionsTitle" id="f13">
+              Set data-src attribute
+            </li>
+            <li class="functionTitle functionsTitle" id="f14">
+              Remove data-src attribute
+            </li>
+            <li class="functionTitle functionsTitle" id="f15">
+              Hide an HTML element on click
+            </li>
+            <li class="functionTitle functionsTitle" id="f16">
+              Show an an HTML element on click
+            </li>
+            <li class="functionTitle functionsTitle" id="f17">
+              Fade in an HTML element (jQuery)
+            </li>
+            <li class="functionTitle functionsTitle" id="f18">
+              Fade out an HTML element (jQuery)
+            </li>
+            <li class="functionTitle functionsTitle" id="f19">
+              Iterate a collection of elements changing styles
+            </li>
+          </ul>
+        </div>
+        <div class="demo functionsDemo">
+          <div class="demoHeader functionsDemoHeader">
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jsVanillaFunctionsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                  checked
+                />
+                <span class="checkboxControl jsVanillaFunctionsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">JS Vanilla</h2>
+            </label>
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jqueryFunctionsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                />
+                <span class="checkboxControl jqueryFunctionsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">jQuery</h2>
+            </label>
+          </div>
+          <div class="demoContainer functionsDemoContainer">
+            <div class="codeDiv functionsCodeDiv">
+              <code></code>
+            </div>
+            <div class="outputDiv functionsOutputDiv">
+              <div class="outputContent" id="functionsOutputContent">
+                <p id="functionOutputP" class="outputP functionOutputP"></p>
+                <p
+                  id="functionThirdOutputP"
+                  class="outputP functionOutputP"
+                ></p>
+                <button
+                  type="button"
+                  class="outputButton functionOutputButton"
+                  id="functionOutputButton"
+                  style="display: none"
+                >
+                  Click here
+                </button>
+                <p
+                  id="functionSecondOutputP"
+                  class="outputP functionOutputP"
+                ></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="selectorsSection">
+      <h2 class="sectionTitle">Selectors</h2>
+      <div class="sectionContent selectorsContent">
+        <div class="functionalities selectorsFunctionalities">
+          <ul>
+            <li class="functionTitle selectorsTitle" id="s1">
+              Get the parent element and change its font weight
+            </li>
+            <li class="functionTitle selectorsTitle" id="s2">
+              Get children collection and change their font weight
+            </li>
+            <li class="functionTitle selectorsTitle" id="s3">
+              Get all the elements that have a certain class
+            </li>
+            <li class="functionTitle selectorsTitle" id="s4">
+              Get an item by id and cheir its font weight
+            </li>
+            <li class="functionTitle selectorsTitle" id="s5">
+              Get all the elements with certain class and change their color
+              font
+            </li>
+            <li class="functionTitle selectorsTitle" id="s6">
+              Get the options of a select element that are selected
+            </li>
+            <li class="functionTitle selectorsTitle" id="s7">
+              Change the href attribute
+            </li>
+            <li class="functionTitle selectorsTitle" id="s8">
+              Show an alert with the value of the first input of the page
+            </li>
+            <li class="functionTitle selectorsTitle" id="s9">
+              Remove all items of a specific selector
+            </li>
+            <li class="functionTitle selectorsTitle" id="s10">
+              Animate an item
+            </li>
+          </ul>
+        </div>
+        <div class="demo selectorsDemo">
+          <div class="demoHeader selectorsDemoHeader">
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jsVanillaSelectorsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                  checked
+                />
+                <span class="checkboxControl jsVanillaSelectorsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">JS Vanilla</h2>
+            </label>
+            <label class="checkbox checkboxLabel">
+              <span class="checkboxInput">
+                <input
+                  id="jquerySelectorsCheckbox"
+                  type="checkbox"
+                  name="checkbox"
+                />
+                <span class="checkboxControl jquerySelectorsCheckbox"></span>
+              </span>
+              <h2 class="eventLabel" id="descriptionLabel">jQuery</h2>
+            </label>
+          </div>
+          <div class="demoContainer selectorsDemoContainer">
+            <div class="codeDiv selectorsCodeDiv"></div>
+            <div class="outputDiv selectorsOutputDiv">
+              <div class="outputContent" id="SelectorsOutputContent">
+                <ul id="selectorUl">
+                  <li class="selectorLi">Children 1</li>
+                  <li class="selectorLi">Children 2</li>
+                  <li class="selectorLi">Children 3</li>
+                  <li class="selectorLi">Children 4</li>
+                </ul>
+                <p id="selectorOutputP" class="outputP selectorOutputP">
+                  <span id="selectorSpan"></span>
+                </p>
+                <button
+                  type="button"
+                  class="outputButton selectorOutputButton"
+                  id="selectorOutputButton"
+                  style="display: none"
+                >
+                  Click here
+                </button>
+                <p
+                  id="selectorSecondOutputP"
+                  class="outputP selectorOutputP"
+                ></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer></footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/vanilla.js"></script>
+</html>
