@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <title>JQuery Cheat Sheet</title>
+</head>
+<body>
+    <header class="main-header">
+        <h1><strong>
+            <a title="JQuery API Documentation" href="https://api.jquery.com/">jQuery</a>
+        </strong> Cheat Sheet</h1>
+    </header>
+    <div class="main-content">
+        <article class="events">
+            <h1>Events</h1>
+            <div>
+                <ul>
+                    <li><a data-functionName="hasLoaded">HTML Document has been loaded</a></li>
+                    <li><a data-functionName="hasElementClicked">HTML Element has been clicked</a></li>
+                    <li><a data-functionName="hasElementDoubleClicked">HTML Element has been double clicked</a></li>
+                    <li><a data-functionName="onKeyPress">On key press on the keyboard</a></li>
+                    <li><a data-functionName="onMouseMoving">Moves the mouse cursor</a></li>
+                    <li><a data-functionName="changeInput">Changes a value of an text input</a></li>
+                    <li><a data-functionName="imageLoaded">Image is loaded</a></li>
+                    <li><a data-functionName="imageFailLoading">Image fails to load</a></li>
+                    <li><a data-functionName="formSubmitted">Form is submitted</a></li>
+                    <li><a data-functionName="optionChanged">Option of a select element changes</a></li>
+                    <li><a data-functionName="mouseoverElement">Mouseover an element</a></li>
+                    <li><a data-functionName="checkboxChanges">Checkbox changes</a></li>
+                    <li><a data-functionName="ulItemClicked">Show ul list item that was clicked</a></li>
+                </ul>
+            </div>
+        </article>
+        <article class="functionSelectors">
+            <h1>Functions and Selectors</h1>
+            <div>
+                <ul>
+                    <li><a data-functionName="createHtmlElement">Create an HTML element with any text value</a></li>
+                    <li><a data-functionName="removeHtmlElement">Remove an HTML element with any text value</a></li>
+<!--                    <li><a>Append an HTML element with any text value to a parent element</a></li>-->
+<!--                    <li><a>Prepend an HTML element with any text value to a parent element</a></li>-->
+<!--                    <li><a>Create and add an HTML element with any text value after another element</a></li>-->
+<!--                    <li><a>Create and add an HTML element with any text value before another element</a></li>-->
+<!--                    <li><a>Clone an HTML element within other element</a></li>-->
+<!--                    <li><a>Add a class to an HTML item</a></li>-->
+<!--                    <li><a>Remove a class to an HTML item</a></li>-->
+<!--                    <li><a>Toggle a class of an HTML item</a></li>-->
+<!--                    <li><a>Add a disabled attribute to an HTML button</a></li>-->
+<!--                    <li><a>Remove the disabled attribute of an HTML button</a></li>-->
+<!--                    <li><a>Set a data-src attribute to a img element</a></li>-->
+<!--                    <li><a>Remove the data-src attribute of the img element</a></li>-->
+<!--                    <li><a>Hide an HTML element on click (display: none)</a></li>-->
+<!--                    <li><a>Show an HTML element on click (display: block)</a></li>-->
+                    <li><a data-functionName="fadeInHtmlElement">Fade in an HTML element using jQuery</a></li>
+                    <li><a data-functionName="fadeOutHtmlElement">Fade out an HTML element using jQuery</a></li>
+                    <li><a data-functionName="iterateCollectionExample">Iterate a collection of elements and apply a change of style on them</a></li>
+<!--                    <li><a>Get the parent element of a certain element and change its font weight</a></li>-->
+<!--                    <li><a>Get the collection of children of a certain element and change its font weight</a></li>-->
+<!--                    <li><a>Get all the elements that have a certain class and change their font weight</a></li>-->
+<!--                    <li><a>Get an item by id and change its font weight</a></li>-->
+                    <li><a data-functionName="selectorPropertyNone">Get all the elements that have a certain class and the display property of none and change their font color</a></li>
+<!--                    <li><a>Get the options of a select element that are selected (attribute selected)</a></li>-->
+<!--                    <li><a>Change the href attribute of the first &lt;a&gt; element (You have to create several &lt;a&gt; elements)</a></li>-->
+<!--                    <li><a>Show an alert with the value of the first &lt;input&gt; of the page (Create an &lt;input&gt; element to test this case)</a></li>-->
+                    <li><a data-functionName="removeAllItems">Remove all items from a specific selector</a></li>
+                    <li><a data-functionName="animateHeader">Animate an item after 2 seconds from the initial page load</a></li>
+                </ul>
+            </div>
+        </article>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="btn-group">
+                    <button class="btn" id="js-btn" disabled><img src="./assets/img/javascriptbtn.png" alt="JavaScript"></button>
+                    <button class="btn" id="jq-btn"><img src="./assets/img/jquerybtn.png" alt="JQuery"></button>
+                </div>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-codeheader js-header">JS Vanilla</div>
+                <div id="js-codebox" class="modal-codebox"></div>
+                <div class="modal-codeheader example-header">Example</div>
+                <div id="example-codebox" class="modal-codebox"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/javascript.js"></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
