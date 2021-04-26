@@ -103,9 +103,6 @@ main {
 }
 
 .arrow-wrapper {
-  font-family: "Work Sans", sans-serif;
-  font-weight: 300;
-  font-size: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -113,6 +110,10 @@ main {
 }
 
 .arrow {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 100;
+  font-size: 60px;
+
   cursor: pointer;
 }
 
