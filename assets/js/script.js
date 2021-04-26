@@ -51,7 +51,6 @@ const dataSelectors = [
     { text: "Get the collection of children of a certain element", function: jquery.GetChildren},
     { text: "Get all the elements that have a certain class", function: jquery.GetElementsByClass},
     { text: "Get an item by id", function: jquery.GetElementById},
-    { text: "Get all the elements that have a certain class and display property of none", function: jquery.GetElementsByClassAndNone},
     { text: "Get the options of a select element that are selected", function: jquery.GetOptionsOfElement}
 ];
 
