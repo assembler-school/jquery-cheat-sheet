@@ -177,9 +177,6 @@ $('#selectorList li').each(function () {
                 $('#runID').append(selectElement);
                 $('#runID').append(divElement);
 
-                var p = $('<p>');
-                $('#resultFunction').append(p);
-
                 dynamicCode('s37', codeJs, codeJq, jqGetFromSelect, jsGetFromSelect);
                 break;
             case 'select38':
@@ -310,11 +307,11 @@ $('#listFunctions li').each(function () {
             case 'data29':
                 $('#runID').css({ 'display': 'none' });
                 $('#jsButton').css({ 'display': 'none' });
-                dynamicCode('f29', codeJs, codeJq, jqFadeIn);
+                dynamicCode('f29', codeJs, codeJq, jqFadeIn, jsFadeIn);
                 break;
             case 'data30':
                 $('#jsButton').css({ 'display': 'none' });
-                dynamicCode('f30', codeJs, codeJq, jqFadeOut);
+                dynamicCode('f30', codeJs, codeJq, jqFadeOut, jsFadeOut);
                 break;
             case 'data31':
                 $('#runID').empty();
@@ -399,8 +396,8 @@ $('#eventFunctions li').each(function () {
 //Function constructor
 function dynamicCode(key, code1, code2, jqFunction, jsFunction) {
     $('#itemTitle').html(localStorage.getItem(key));
-    $('#jsCode').html(jsFunction.toString());
     $('#jqCode').html(jqFunction.toString());
+    $('#jsCode').html(jsFunction.toString());
 
     $('#jqButton').one('click', function () {
         $('#runCode').one('click', function () {
@@ -552,7 +549,7 @@ function jqGetFromSelect() {
     $("select").change(function () {
         $('#resultFunction').children().last().remove();
         var selected = $(this).children("option:selected").val();
-        p.html('Option: ' + selected);
+        $('#resultFunction').html('Option: ' + selected);
     });
 }
 //---------- Change Link ---------//

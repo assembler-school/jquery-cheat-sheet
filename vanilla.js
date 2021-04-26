@@ -323,3 +323,11 @@ function jsListClicked() {
         }
     });
 }
+
+function jsFadeIn() {
+
+}
+
+function jsFadeOut() {
+
+}
