@@ -142,15 +142,18 @@ document.onmousemove = function(e){
 };`;
 
   // Output
-  runButton.onclick = function () {
-    function mouseMovedInside(e) {
-      outputVanilla.innerText =
-        "> Mouse at: (" + e.pageX + ", " + e.pageY + ")";
-    }
+  function mouseMovedInside(e) {
+    outputVanilla.innerText = "> Mouse at: (" + e.pageX + ", " + e.pageY + ")";
+  }
 
+  runButton.onclick = function () {
     document.addEventListener("mousemove", mouseMovedInside);
     // Removing event listener if example is clicked
     removeEventVanilla(document, "mousemove", mouseMovedInside, examples);
+  };
+
+  clearButton.onclick = function () {
+    document.removeEventListener("mousemove", mouseMovedInside);
   };
 }
 

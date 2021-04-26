@@ -157,14 +157,18 @@ $(document).mousemove(function(e){
   macroJquery.text(macroString);
 
   // Output
-  runButtonJquery.click(function () {
-    function mouseMovedInside(e) {
-      outputJquery.text("> Mouse at: (" + e.pageX + ", " + e.pageY + ")");
-    }
+  function mouseMovedInside(e) {
+    outputJquery.text("> Mouse at: (" + e.pageX + ", " + e.pageY + ")");
+  }
 
+  runButtonJquery.click(function () {
     $(document).on("mousemove", mouseMovedInside);
     // Removing event listener if example is clicked
     removeEventJQuery(document, "mousemove", mouseMovedInside, ".example");
+  });
+
+  clearButtonJquery.click(function () {
+    $(document).off("mousemove", mouseMovedInside);
   });
 }
 
