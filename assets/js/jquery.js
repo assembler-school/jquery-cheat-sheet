@@ -1295,7 +1295,7 @@ $(element).fadeOut(2000);`;
   runButtonJquery.click(function () {
     let exampleParent = $("<div>");
     exampleParent.addClass("example-parent");
-    exampleParent.text("Fading in");
+    exampleParent.text("Fading out");
     exampleParent.fadeOut(2000);
 
     // Resetting output if it's filled
