@@ -27,6 +27,22 @@
     </main>
     <footer></footer>
 </body>
+
+<template id="template-comparison">
+    <div class="modal-comparison">
+        <div id="select-option">
+            <div id="jquery-option" class="option-modal">jQuery</div>
+            <div id="vanilla-option" class="option-modal">JS Vanilla</div>
+        </div>
+        <div id="text-boxes">
+            <pre id="code-modal" class="text-box-modal"></pre>
+            <div id="html-modal" class="text-box-modal"></div>
+        </div>
+    </div>
+</template>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+<script src="assets/js/script.js" type="module"></script>
+<script src="assets/js/modules/vanilla.js" type="module"></script>
+<script src="assets/js/modules/jquery.js" type="module"></script>
 </html>
