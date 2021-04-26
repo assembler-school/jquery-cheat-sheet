@@ -134,7 +134,8 @@ function showContentEvents(){
 
     $("#events-column").css({
         "align-items": "flex-start",
-        "justify-content": "flex-start"
+        "justify-content": "flex-start",
+        "cursor": "default"
     });
 
     $("#events-column").append($("<div>").attr("id", "information-column"));
@@ -151,7 +152,8 @@ function showContentFunctions(){
 
     $("#functions-column").css({
         "align-items": "flex-start",
-        "justify-content": "flex-start"
+        "justify-content": "flex-start",
+        "cursor": "default"
     });
 
     $("#functions-column").append($("<div>").attr("id", "information-column"));
@@ -168,7 +170,8 @@ function showContentSelectors(){
 
     $("#selectors-column").css({
         "align-items": "flex-start",
-        "justify-content": "flex-start"
+        "justify-content": "flex-start",
+        "cursor": "default"
     });
 
     $("#selectors-column").append($("<div>").attr("id", "information-column"));
@@ -183,7 +186,9 @@ function showContentSelectors(){
 function comparisonModalEvents(){
     $(".modal-comparison").remove();
     let element = $("#template-comparison").contents().clone();
+    element.hide();
     $("#events-column").append(element);
+    $("#events-column").contents().show(timeHideShow);
 
     $("#jquery-option").on("click", function () {
         $("#code-modal, #html-modal").empty();
@@ -202,7 +207,9 @@ function comparisonModalEvents(){
 function comparisonModalFunctions(){
     $(".modal-comparison").remove();
     let element = $("#template-comparison").contents().clone();
+    element.hide();
     $("#functions-column").append(element);
+    $("#functions-column").contents().show(timeHideShow);
 
     $("#jquery-option").on("click", function () {
         $("#code-modal, #html-modal").empty();
@@ -221,7 +228,9 @@ function comparisonModalFunctions(){
 function comparisonModalSelectors(){
     $(".modal-comparison").remove();
     let element = $("#template-comparison").contents().clone();
+    element.hide();
     $("#selectors-column").append(element);
+    $("#selectors-column").contents().show(timeHideShow);
 
     $("#jquery-option").on("click", function () {
         $("#code-modal, #html-modal").empty();
