@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="page-title" class="page-title-class">jQuery Cheat Sheet</div>
+        <div class="quick-access-class">
+            <div id="events-quick" class="direct-section-title bg-orange" style="display: none;">Events</div>
+            <div id="functions-quick" class="direct-section-title bg-green" style="display: none;">Functions</div>
+            <div id="selectors-quick" class="direct-section-title bg-blue" style="display: none;">Selectors</div>
+        </div>
+    </header>
+    <main class="main-init">
+        <div class="wrapper-column">
+            <div id="events-column" class="column-init bg-orange">Events</div>
+            <div id="functions-column" class="column-init bg-green">Functions</div>
+            <div id="selectors-column" class="column-init bg-blue">Selectors</div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+<template id="template-comparison">
+    <div class="modal-comparison">
+        <div id="select-option">
+            <div id="jquery-option" class="option-modal">jQuery</div>
+            <div id="vanilla-option" class="option-modal">JS Vanilla</div>
+        </div>
+        <div id="text-boxes">
+            <pre id="code-modal" class="text-box-modal"></pre>
+            <div id="html-modal" class="text-box-modal"></div>
+        </div>
+    </div>
+</template>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="assets/js/main.js" type="module"></script>
+<script src="assets/js/modules/vanilla.js" type="module"></script>
+<script src="assets/js/modules/jquery.js" type="module"></script>
+</html>
