@@ -36,6 +36,9 @@ function changeTec(tech) {
 $(".exercise").each(function () {
   $(this).on("click", function () {
     if (techName === undefined) {
+      $("#code-to-type").text(
+        "To see the code you must type, please navigate above this section and select a technology first"
+      );
       tecTitle.text("Please, select a technology");
       tecTitle.css("color", "red");
     } else if (techName === "van") {
