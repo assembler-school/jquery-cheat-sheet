@@ -85,24 +85,9 @@ section {
   min-width: 400px;
 }
 
-.functionSpan {
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-bottom: 2px;
-  margin-right: 10px;
-}
-.eventsSpan,
-.selectorsSpan {
-  background-color: var(--lightGreen);
-}
-.functionsSpan {
-  background-color: var(--darkGreen);
-}
-
 .functionTitle {
   cursor: pointer;
+  margin-left: 20px;
 }
 .eventsFunctionalities .functionTitle:hover,
 .selectorsFunctionalities .functionTitle:hover {
@@ -120,8 +105,10 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: var(--darkGreen) solid 10px; */
-  /* border-radius: 5px; */
+  height: 400px;
+}
+.selectorsDemo {
+  margin-left: 40px;
 }
 .demoHeader {
   display: flex;
@@ -160,6 +147,9 @@ section {
   overflow-y: auto;
   line-height: 30px;
   white-space: pre-wrap;
+}
+.redColorClass{
+  color: red;
 }
 .eventsCodeDiv,
 .selectorsCodeDiv {
@@ -200,13 +190,18 @@ code {
 .outputButton {
   font-family: "Futura LtCn BT";
   font-size: 22px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   height: 40px;
   width: 120px;
   border: none;
   border-radius: 5px;
+  transition: 0.3s;
 }
 .outputButton:hover {
   cursor: pointer;
+  background-color: var(--lightYellow);
+  color: var(--darkGreen);
 }
 .eventOutputButton,
 .selectorOutputButton {

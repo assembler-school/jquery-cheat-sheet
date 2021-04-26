@@ -4,430 +4,6 @@
 var idEventGlobal;
 var idFunctionGlobal;
 var idSelectorGlobal;
-var eventsContentjQuery = [
-  {
-    code: `$("#eventOutputButton").click(function () {
-        $("#eventOutputP").html("Button clicked");
-      });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-        if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                $("input#jqueryEventsCheckbox").prop("checked", false);
-        }else{
-                $("input#jqueryEventsCheckbox").prop("checked", true);
-        }
-    });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-];
-
-var functionsContentjQuery = [
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-                if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                        $("input#jqueryEventsCheckbox").prop("checked", false);
-                }else{
-                        $("input#jqueryEventsCheckbox").prop("checked", true);
-                }
-            });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-                if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                        $("input#jqueryEventsCheckbox").prop("checked", false);
-                }else{
-                        $("input#jqueryEventsCheckbox").prop("checked", true);
-                }
-            });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-                if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                        $("input#jqueryEventsCheckbox").prop("checked", false);
-                }else{
-                        $("input#jqueryEventsCheckbox").prop("checked", true);
-                }
-            });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-                if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                        $("input#jqueryEventsCheckbox").prop("checked", false);
-                }else{
-                        $("input#jqueryEventsCheckbox").prop("checked", true);
-                }
-            });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-                if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                        $("input#jqueryEventsCheckbox").prop("checked", false);
-                }else{
-                        $("input#jqueryEventsCheckbox").prop("checked", true);
-                }
-            });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-                if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                        $("input#jqueryEventsCheckbox").prop("checked", false);
-                }else{
-                        $("input#jqueryEventsCheckbox").prop("checked", true);
-                }
-            });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-];
-
-var selectorsContentjQuery = [
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-  {
-    code: `$("input#jQueryEventsCheckBox").change(function () {
-              if ($("input#jQueryEventsCheckBox").is(":checked")) {
-                      $("input#jqueryEventsCheckbox").prop("checked", false);
-              }else{
-                      $("input#jqueryEventsCheckbox").prop("checked", true);
-              }
-          });`,
-    output: "<h1>My jQuery Cheatsheet</h1>",
-  },
-];
 
 //------------------------------------------------------------------------
 // ADD EVENT LISTENERS
@@ -565,7 +141,96 @@ function displayEventsConsolejQuery() {
           });
         });
         break;
+      case 4:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(
+          `document.body.onkeyup = function (e) {
+        if (e.keyCode == 32) {
+            $("#eventOutputP").html("Space bar pressed");
+            $("#eventOutputP").show();
+        }
+};`
+        );
+        /*Coding applied*/
+        resetEventsConsole();
+        $("#eventOutputButton").html("Press space bar");
+        $("#eventOutputButton").show();
+        document.body.onkeyup = function (e) {
+          if (e.keyCode == 32) {
+            $("#eventOutputP").html("Space bar pressed");
+            $("#eventOutputP").show();
+          }
+        };
+        /*Disabling keyboard function*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            document.body.onkeyup = function (e) {
+              if (e.keyCode == 32) {
+                return false;
+              }
+            };
+          });
+        });
+        break;
+      case 5:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetEventsConsole();
+        break;
+      case 6:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetEventsConsole();
+        break;
+      case 7:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetEventsConsole();
+        break;
+      case 8:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetEventsConsole();
+        break;
+      case 9:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetEventsConsole();
+        break;
+      case 10:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetEventsConsole();
+        break;
+      case 11:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetEventsConsole();
+        break;
+      case 12:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetEventsConsole();
+        break;
+      case 13:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetEventsConsole();
+        break;
       default:
+        /*Coding for visualization*/
+        $(".eventsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetEventsConsole();
         break;
     }
   }
@@ -685,7 +350,200 @@ $("#functionOutputButton").on("click", prependElement);`
           });
         });
         break;
+      case 5:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(
+          `function insertAfterElement() {
+            let myNewP = $("p");
+            myNewP.html("Element inserted after");
+            myNewP.insertAfter($("#functionOutputButton"))
+}
+$("#functionOutputButton").on("click", insertAfterElement);`
+        );
+        /*Coding applied*/
+        resetFuntionsConsole();
+        function insertAfterElement() {
+          $("#functionSecondOutputP").html("Element inserted after");
+          $("#functionSecondOutputP").show();
+        }
+        $("#functionOutputButton").show();
+        $("#functionOutputButton").on("click", insertAfterElement);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#functionOutputButton").off("click", insertAfterElement);
+            //     $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 6:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(
+          `function insertBeforeElement() {
+              let myNewP = $("p");
+              myNewP.html("Element inserted before");
+              myNewP.insertBefore($("#functionOutputButton"))
+  }
+  $("#functionOutputButton").on("click", insertBeforeElement);`
+        );
+        /*Coding applied*/
+        resetFuntionsConsole();
+        function insertBeforeElement() {
+          $("#functionOutputP").html("Element inserted before");
+          $("#functionOutputP").show();
+        }
+        $("#functionOutputButton").show();
+        $("#functionOutputButton").on("click", insertBeforeElement);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#functionOutputButton").off("click", insertBeforeElement);
+            //     $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 7:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(
+          `function cloneElement() {
+          $("#functionsOutputP").clone().insertBefore($("#functionOutputButton"));
+}
+$("#functionOutputButton").on("click", cloneElement);`
+        );
+        /*Coding applied*/
+        resetFuntionsConsole();
+        function cloneElement() {
+          $("#functionThirdOutputP").html("Element cloned");
+          $("#functionThirdOutputP").show();
+        }
+        $("#functionOutputButton").show();
+        $("#functionOutputP").html("Element to be cloned");
+        $("#functionOutputP").show();
+        $("#functionOutputButton").on("click", cloneElement);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#functionOutputButton").off("click", cloneElement);
+            //     $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 8:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(
+          `function addClassToElement() {
+          $("#functionOutputP").addClass("redColorClass");
+}
+$("#selectorOutputButton").on("click", addClassToElement);`
+        );
+        /*Coding applied*/
+        resetFuntionsConsole();
+        function addClassToElement() {
+          $("#functionOutputP").addClass("redColorClass");
+        }
+        $("#functionOutputButton").show();
+        $("#functionOutputP").html("Element to add class");
+        $("#functionOutputP").show();
+        $("#functionOutputButton").on("click", addClassToElement);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#functionOutputButton").off("click", addClassToElement);
+            //     $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 9:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(
+          `function addClassToElement() {
+            $("#functionOutputP").removeClass("redColorClass");
+}
+$("#selectorOutputButton").on("click", removeClassToElement);`
+        );
+        /*Coding applied*/
+        resetFuntionsConsole();
+        function removeClassToElement() {
+          $("#functionOutputP").removeClass("redColorClass");
+        }
+        $("#functionOutputButton").show();
+        $("#functionOutputP").addClass("redColorClass");
+        $("#functionOutputP").html("Element to remove class");
+        $("#functionOutputP").show();
+        $("#functionOutputButton").on("click", removeClassToElement);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#functionOutputButton").off("click", removeClassToElement);
+            //     $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 10:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetFuntionsConsole();
+        break;
+      case 11:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetFuntionsConsole();
+        break;
+      case 12:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetFuntionsConsole();
+        break;
+      case 13:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetFuntionsConsole();
+        break;
+      case 14:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetFuntionsConsole();
+        break;
+      case 15:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetFuntionsConsole();
+        break;
+      case 16:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetFuntionsConsole();
+        break;
+      case 17:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetFuntionsConsole();
+        break;
+      case 18:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetFuntionsConsole();
+        break;
+      case 19:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetFuntionsConsole();
+        break;
       default:
+        /*Coding for visualization*/
+        $(".functionsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetFuntionsConsole();
         break;
     }
   }
@@ -701,20 +559,199 @@ function displaySelectorsConsolejQuery() {
   idSelector = idSelector.match(/\d/g);
   idSelector = parseInt(idSelector.join(""));
   if ($("input#jquerySelectorsCheckbox").is(":checked")) {
-    $(".selectorsCodeDiv").html(selectorsContentjQuery[idSelector - 1].code);
-    $(".selectorsOutputDiv").html(
-      selectorsContentjQuery[idSelector - 1].output
-    );
+    switch (idSelector) {
+      case 1:
+        /*Coding for visualization*/
+        $(".selectorsCodeDiv").html(
+          `function createHtmlElement() {
+        mySpan = $('#selectorSpan');
+        parentElemen = mySpan.parent();
+        parentElement.css("font-weight", "bold");
+}
+$("#selectorOutputButton").on("click", getParentElement);`
+        );
+        /*Coding applied*/
+        resetSelectorsConsole();
+        function getParentElement() {
+          $("#selectorOutputP").html("p is span element parent");
+          $("#selectorOutputP").css("font-weight", "bold");
+          $("#selectorOutputP").show();
+        }
+        $("#selectorOutputButton").show();
+        $("#selectorOutputButton").on("click", getParentElement);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#selectorOutputButton").off("click", getParentElement);
+            //     $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 2:
+        /*Coding for visualization*/
+        $(".selectorsCodeDiv").html(
+          `function getChildrenCollection() {
+        $("#selectorUl").children().css("font-weight", "bold");
+}
+$("#selectorOutputButton").on("click", getChildrenCollection);`
+        );
+        /*Coding applied*/
+        resetSelectorsConsole();
+        function getChildrenCollection() {
+          $("#selectorUl").children().css("font-weight", "bold");
+        }
+        $("#selectorOutputButton").show();
+        $("#selectorUl").show();
+        $("#selectorOutputButton").on("click", getChildrenCollection);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#selectorOutputButton").off("click", getChildrenCollection);
+            //     $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 3:
+        /*Coding for visualization*/
+        $(".selectorsCodeDiv").html(
+          `function getChildrenCollection() {
+        $(".selectorLi").css("font-weight", "bold");
+}
+$("#selectorOutputButton").on("click", getElementsByClass);`
+        );
+        /*Coding applied*/
+        resetSelectorsConsole();
+        function getElementsByClass() {
+          $(".selectorLi").css("font-weight", "bold");
+        }
+        $("#selectorOutputButton").show();
+        $("#selectorUl").show();
+        $("#selectorOutputButton").on("click", getElementsByClass);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#selectorOutputButton").off("click", getElementsByClass);
+            //     $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 4:
+        /*Coding for visualization*/
+        $(".selectorsCodeDiv").html(
+          `function getElementByIdjQuery() {
+          $(".selectorOutputP").css("font-weight", "bold");
+}
+$("#selectorOutputButton").on("click", getElementByIdjQuery);`
+        );
+        /*Coding applied*/
+        resetSelectorsConsole();
+        function getElementByIdjQuery() {
+          $(".selectorOutputP").css("font-weight", "bold");
+        }
+        $("#selectorOutputButton").show();
+        $("#selectorOutputP").html("Click to change font-weight");
+        $("#selectorOutputP").show();
+        $("#selectorOutputButton").on("click", getElementByIdjQuery);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#selectorOutputButton").off("click", getElementByIdjQuery);
+            //     $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 5:
+        /*Coding for visualization*/
+        $(".selectorsCodeDiv").html(
+          `function getElementsByClassColor() {
+            $(".selectorLi").css("color", "red");
+    }
+    $("#selectorOutputButton").on("click", getElementsByClassColor);`
+        );
+        /*Coding applied*/
+        resetSelectorsConsole();
+        function getElementsByClassColor() {
+          $(".selectorLi").css("color", "red");
+        }
+        $("#selectorOutputButton").show();
+        $("#selectorUl").show();
+        $("#selectorOutputButton").on("click", getElementsByClassColor);
+        /*Disabling all eventlistener*/
+        $(".functionTitle").each(function () {
+          $(this).click(function () {
+            $("#selectorOutputButton").off("click", getElementsByClassColor);
+            //     $("#functionOutputButton").off();
+          });
+        });
+        break;
+      case 6:
+        /*Coding for visualization*/
+        $(".selectorsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetSelectorsConsole();
+        break;
+      case 7:
+        /*Coding for visualization*/
+        $(".selectorsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetSelectorsConsole();
+        break;
+      case 8:
+        /*Coding for visualization*/
+        $(".selectorsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetSelectorsConsole();
+        break;
+      case 9:
+        /*Coding for visualization*/
+        $(".selectorsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetSelectorsConsole();
+        break;
+      case 10:
+        /*Coding for visualization*/
+        $(".selectorsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetSelectorsConsole();
+        break;
+      default:
+        /*Coding for visualization*/
+        $(".selectorsCodeDiv").html(`function not avaiable`);
+        /*Coding applied*/
+        resetSelectorsConsole();
+        break;
+    }
   }
 }
 
 function resetEventsConsole() {
   $("#eventOutputP").hide();
   $("#eventOutputButton").hide();
+  $("#eventOutputButton").html("Click here");
 }
 
 function resetFuntionsConsole() {
   $("#functionOutputP").hide();
   $("#functionOutputButton").hide();
   $("#functionSecondOutputP").hide();
+  $("#functionThirdOutputP").hide();
+  $("#functionOutputP").removeClass("redColorClass");
 }
+
+function resetSelectorsConsole() {
+  $("#selectorOutputP").hide();
+  $("#selectorSpan").hide();
+  $("#selectorOutputButton").hide();
+  $("#selectorSecondOutputP").hide();
+  $("#selectorUl").hide();
+  $(".selectorLi").css("font-weight", "normal");
+  $(".selectorOutputP").css("font-weight", "normal");
+  $(".selectorLi").css("color", "#358873");
+}
+
+//------------------------------------------------------------------------
+// CALLING FUNCTIONS
+//------------------------------------------------------------------------
+resetEventsConsole();
+resetFuntionsConsole();
+resetSelectorsConsole();
