@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+/* 
+=======================================
+*          General styles
+=======================================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: snow;
+  /* padding: 1.5rem 0; */
+  background-color: rgba(4, 170, 109, 0.2);
+}
+
+main {
+  padding-left: 3rem;
+  width: 70%;
+}
+
+aside {
+  background-color: rgba(231, 233, 235, 0.5);
+}
+
+aside ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 0 1rem;
+}
+
+aside h2 {
+  padding: 0 1rem;
+}
+
+aside ul li:hover {
+  background-color: rgba(4, 170, 109, 0.2);
+  cursor: pointer;
+}
+
+h1 {
+  padding: 1.5rem 0.5rem;
+  cursor: pointer;
+}
+
+h2 {
+  margin: 1rem 0;
+}
+
+h3 {
+  margin: 2rem 0 1rem 0;
+}
+
+h4 {
+  margin: 1rem 0 0.5rem 0;
+  padding: 0.3rem 0;
+  background-color: rgba(231, 233, 235, 1);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 0.1rem 0;
+}
+
+button {
+  padding: 0.2rem 0.5rem;
+  margin: 0.5rem 0;
+}
+
+/* 
+=======================================
+*           Main styles
+=======================================
+*/
+.wrapper {
+  display: flex;
+}
+
+#e4Js,
+#e4JQuery {
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.red-text {
+  color: red;
+}
+
+[data-redtext] {
+  color: red;
+}
+
+img {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+[alt="jQuery image"] {
+  max-width: 100%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.selected {
+  background-color: rgba(4, 170, 109, 0.2);
+}
+/* 
+=======================================
+*           Animations
+=======================================
+*/
+.fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.default {
+  background: #98bf21;
+  height: 100px;
+  width: 100px;
+  margin: 0.5rem;
+}
+
+.width-anim {
+  width: 300px;
+  transition: width 0.5s ease-out;
+}
