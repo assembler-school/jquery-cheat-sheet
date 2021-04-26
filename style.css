@@ -175,6 +175,8 @@ header{
 }
 
 .text-box-modal{
+    display: flex;
+    flex-direction: column;
     overflow: auto;
     width: 50%;
     font-size: 15px;
@@ -182,6 +184,15 @@ header{
     margin: 10px;
     padding: 10px;
     border: black 1px solid;
+}
+
+.text-box-modal * {
+    margin-bottom: 10px;
+}
+
+#wrapper-id{
+    display: flex;
+    flex-direction: column;
 }
 
 /* Footer Style */
