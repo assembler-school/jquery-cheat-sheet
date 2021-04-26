@@ -61,3 +61,19 @@ p {
   line-height: 1.5;
   font-family: "Courier New", Courier, monospace;
 }
+
+input {
+  background-color: var(--bg);
+  margin-bottom: 20px;
+  margin-left: 38px;
+  border: none;
+  border-bottom: 2px var(--green) solid;
+  width: 20%;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 3px var(--pink) solid;
+  transform: translateY(3px);
+  width: 40%;
+}
