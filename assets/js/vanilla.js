@@ -1,27 +1,3 @@
-/*============ Global variables ===========*/
-const testArea = document.querySelector("#testArea");
-/*========================================*/
-
-/*========== TestArea scenarios ==========*/
-function scenario01(){
-    //let testArea = document.getElementById("testArea");
-
-    testArea.appendChild(paragraph);
-    // console.log("scenario 01 loaded -->", testArea);
-    // console.log("paragraph scenario01 -->", testArea.firstChild);
-}
-/*========================================*/
-
-/*========== Other functions ==========*/
-// Removes all elements inside testArea and their events
-function cleanTestArea(){
-
-    while(testArea.firstChild){
-        testArea.removeChild(testArea.lastChild);
-    }
-
-}
-
 /*========= Excercise functions ==========*/
 
 // Events

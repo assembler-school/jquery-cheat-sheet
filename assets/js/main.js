@@ -9,10 +9,6 @@ const eventDivContainer = document.getElementById("eventDivContainer");
 const funSelDivContainer = document.getElementById("funSelDivContainer");
 const codeContainers = $(".codeContainer");
 const statements = $(".topicTitle");
-var vanillaCodes = [];
-var jqueryCodes = [];
-var outputSolutions = [];
-//var listItems = $(".listItem").children()[1];
 //========================================//
 
 //============= Functions ===============//
@@ -438,5 +434,4 @@ function injectionSwitch(){
 setTopicListItemListeners();
 showHideSolutions();
 injectionSwitch();
-// injectArraysContent();
 //========================================//

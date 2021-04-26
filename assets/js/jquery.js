@@ -1,13 +1,3 @@
-/*============ Global variables ===========*/
-const testArea = $("#testArea");
-/*========================================*/
-
-/*========== TestArea scenarios ==========*/
-function scenario1(){
-
-}
-/*========================================*/
-
 /*========= Excercise functions ==========*/
 // 01 OnLoad Event
 export function onReadyJqueryTest(){
