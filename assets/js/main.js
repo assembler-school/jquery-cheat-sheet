@@ -1,9 +1,6 @@
-// Variables
 const tecTitle = $("#tec-title");
-
 let techName;
 
-// Changes the title and modify the link's id.
 $(".nav-btn").each(function (i) {
   $(this).on("click", function () {
     if (i === 0) {
@@ -23,7 +20,7 @@ $(".nav-btn").each(function (i) {
       $(".nav-btn").first().removeClass("active");
       $(".nav-btn").last().toggleClass("active");
     }
-    changeTec(techName); // modify the links id.
+    changeTec(techName);
   });
 });
 

@@ -86,7 +86,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -123,8 +123,6 @@ table {
   border-spacing: 0;
 }
 
-/* end of reset css  */
-
 :root {
   --font-display: "Work Sans", sans-serif;
   --light: 300;
@@ -137,9 +135,7 @@ table {
 }
 
 * {
-  /* outline: 1px solid red; */
   box-sizing: border-box;
-  /* transition: 0.2s; */
   font-family: "Work Sans", sans-serif;
 }
 
@@ -173,7 +169,6 @@ main {
 
 .square {
   background-color: white;
-  /* padding: 15px; */
   min-width: 457px;
   width: 30%;
   height: 100%;
@@ -208,7 +203,6 @@ main {
 
 .rectangle {
   background-color: white;
-  /* padding: 15px; */
   border: 5px solid var(--bg);
   min-width: 641px;
   width: 70%;
@@ -396,7 +390,6 @@ button:disabled {
   .rectangle {
     width: 100%;
     min-height: 250px;
-    /* height: 450px; */
     height: 100%;
   }
 
