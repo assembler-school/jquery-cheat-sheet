@@ -18,7 +18,7 @@ function clicked(){
     });
 }function keyP(){
     $( ".run" ).text("press any key");
-    $(document).keypress(function() {
+    $( ".run" ).keypress(function() {
         $('.result').text('You press a key, good job!!');
     });
 }function mousMv(){
