@@ -156,7 +156,7 @@ function injectionSwitch(){
                 codeContainer = document.getElementById(id);
                 codeContainer.children[0].children[1].innerHTML = vanilla.onLoadImageFailVanillaCode();
                 codeContainer.children[1].children[1].innerHTML = jquery.onLoadImageFailJqueryCode();
-                // vanilla.onLoadImageFailVanillaOutput(codeContainer);
+                vanilla.onLoadImageFailVanillaOutput(codeContainer);
                 break;
 
             case "e9":
@@ -172,7 +172,7 @@ function injectionSwitch(){
                 codeContainer = document.getElementById(id);
                 codeContainer.children[0].children[1].innerHTML = vanilla.onChangeOptionSelectionVanillaCode();
                 codeContainer.children[1].children[1].innerHTML = jquery.onChangeOptionSelectionJqueryCode();
-                // vanilla.onChangeOptionSelectionVanillaOutput(codeContainer);
+                vanilla.onChangeOptionSelectionVanillaOutput(codeContainer);
                 break;
 
             case "e11":
@@ -207,148 +207,148 @@ function injectionSwitch(){
         switch(id){
 
             case "fs1":
-                // OnLoad Event
+                // Create an HTML element with any text value
                 codeContainer = document.getElementById(id);
                 codeContainer.children[0].children[1].innerHTML = vanilla.createHTMLElementVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onReadyJqueryCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.createHTMLElementJqueryCode();
                 vanilla.createHTMLElementVanillaOutput(codeContainer);
                 break;
 
             case "fs2":
-                // OnClick Event
+                // Remove an HTML element with any text value
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onClickVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onClickJqueryCode();
-                vanilla.onClickVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.removeHTMLElementVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.removeHTMLElementJqueryCode();
+                vanilla.removeHTMLElementVanillaOutput(codeContainer);
                 break;
 
             case "fs3":
-                // OnDblClick Event
+                // Append an HTML element to a parent element with any text value
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onDblClickVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onDblClickJqueryCode();
-                vanilla.onDblClickVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.appendHTMLElementToParentVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.appendHTMLElementToParentJqueryCode();
+                vanilla.appendHTMLElementToParentVanillaOutput(codeContainer);
                 break;
 
             case "fs4":
-                // OnKeyDown Event
+                // Prepend an HTML element with any text value to a parent element
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onKeyDownVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onKeyDownJqueryCode();
-                vanilla.onKeyDownVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.prependHTMLElementToParentVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.prependHTMLElementToParentJqueryCode();
+                vanilla.prependHTMLElementToParentVanillaOutput(codeContainer);
                 break;
 
             case "fs5":
-                // OnMouseMove Event
+                // Create and add an HTML element with any text value after another element
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onMouseMoveVanillaCode();
+                codeContainer.children[0].children[1].innerHTML = vanilla.createAndAddAfterHTMLElementVanillaCode();
                 codeContainer.children[1].children[1].innerHTML = jquery.onMouseMoveJqueryCode();
-                // vanilla.onMouseMoveVanillaOutput(codeContainer);
+                vanilla.createAndAddAfterHTMLElementVanillaOutput(codeContainer);
                 break;
 
             case "fs6":
-                // OnChange Event capture input text value
+                // Create and add an HTML element with any text value before another element
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onChangeInputTextVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onChangeInputTextJqueryCode();
-                vanilla.onChangeInputTextVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.createAndAddBeforeHTMLElementVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.createAndAddBeforeHTMLElementJqueryCode();
+                vanilla.createAndAddBeforeHTMLElementVanillaOutput(codeContainer);
                 break;
 
             case "fs7":
-                // OnLoad Event for image
+                // Clone an HTML element within other element
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onLoadImageVanillaCode();
+                codeContainer.children[0].children[1].innerHTML = vanilla.createAndAddHTMLElementAndCloneVanillaCode();
                 codeContainer.children[1].children[1].innerHTML = jquery.onLoadImageJqueryCode();
-                vanilla.onLoadImageVanillaOutput(codeContainer);
+                vanilla.createAndAddHTMLElementAndCloneVanillaOutput(codeContainer);
                 break;
 
             case "fs8":
-                // OnError Event to load image
+                // Add a class to an HTML item
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onLoadImageFailVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onLoadImageFailJqueryCode();
-                // vanilla.onLoadImageFailVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.addClassToElementVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.addClassToElementJqueryCode();
+                vanilla.addClassToElementVanillaOutput(codeContainer);
                 break;
 
             case "fs9":
-                // OnSubmit Event for form
+                // Remove a class to an HTML item
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onSubmitVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onSubmitJqueryCode();
-                vanilla.onSubmitVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.removeClassToElementVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.removeClassToElementJqueryCode();
+                vanilla.removeClassToElementVanillaOutput(codeContainer);
                 break;
 
             case "fs10":
-                // OnChange Event for an option selection element
+                // Toggle a class to an HTML item
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onChangeOptionSelectionVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onChangeOptionSelectionJqueryCode();
-                // vanilla.onChangeOptionSelectionVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.toggleClassToElementVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.toggleClassToElementJqueryCode();
+                vanilla.toggleClassToElementVanillaOutput(codeContainer);
                 break;
 
             case "fs11":
-                // OnMouseOver event
+                // Add a disabled attribute to an HTML button
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onMouseOverVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onMouseOverJqueryCode();
-                vanilla.onMouseOverVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.addDisabledAttrToBtnVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.addDisabledAttrToBtnJqueryCode();
+                vanilla.addDisabledAttrToBtnVanillaOutput(codeContainer);
                 break;
 
             case "fs12":
-                // OnChange Event for checkbox
+                // Remove the disabled attribute of an HTML button
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onChangeCheckboxVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onChangeCheckboxJqueryCode();
-                vanilla.onChangeCheckboxVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.removeDisabledAttrOfBtnVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.removeDisabledAttrOfBtnJqueryCode();
+                vanilla.removeDisabledAttrOfBtnVanillaOutput(codeContainer);
                 break;
 
             case "fs13":
-                // OnClick Event for ul list item (show clicked element)
+                // Set a data-src attribute to a img element
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onClickUlLiItemVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onClickUlLiItemJqueryCode();
-                vanilla.onClickUlLiItemVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.setDataSrcAttrToImgVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.setDataSrcAttrToImgJqueryCode();
+                vanilla.setDataSrcAttrToImgVanillaOutput(codeContainer);
                 break;
 
             case "fs14":
-                // OnLoad Event
+                // Remove the data-src attribute of the img element
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.domContentLoadedVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onReadyJqueryCode();
-                vanilla.domContentLoadedVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.removeDataSrcAttrToImgVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.removeDataSrcAttrToImgJqueryCode();
+                vanilla.removeDataSrcAttrToImgVanillaOutput(codeContainer);
                 break;
     
             case "fs15":
-                // OnClick Event
+                // Hide an HTML element on click (display: none)
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onClickVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onClickJqueryCode();
-                vanilla.onClickVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.hideElementOnClickVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.hideElementOnClickJqueryCode();
+                vanilla.hideElementOnClickVanillaOutput(codeContainer);
                 break;
 
                 
             case "fs16":
-                // OnDblClick Event
+                // Show an HTML element on click (display: block)
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onDblClickVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onDblClickJqueryCode();
-                vanilla.onDblClickVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.showElementOnClickBtnVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.showElementOnClickBtnJqueryCode();
+                vanilla.showElementOnClickBtnVanillaOutput(codeContainer);
                 break;
     
             case "fs17":
-                // OnKeyDown Event
+                // Fade in an HTML element using jQuery
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onKeyDownVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onKeyDownJqueryCode();
-                vanilla.onKeyDownVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.FadeInVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.FadeInJqueryCode();
+                vanilla.FadeInVanillaOutput(codeContainer);
                 break;
     
             case "fs18":
-                // OnMouseMove Event
+                // Fade out an HTML element using jQuery
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onMouseMoveVanillaCode();
+                codeContainer.children[0].children[1].innerHTML = vanilla.fadeOutVanillaCode();
                 codeContainer.children[1].children[1].innerHTML = jquery.onMouseMoveJqueryCode();
-                // vanilla.onMouseMoveVanillaOutput(codeContainer);
+                // vanilla.fadeOutVanillaOutput(codeContainer);
                 break;
     
             case "fs19":

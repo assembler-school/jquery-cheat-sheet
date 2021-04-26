@@ -372,8 +372,309 @@ export function createHTMLElementVanillaOutput(element){
     let newElement = document.createElement("div");
     newElement.textContent = "I am a new div";
     element.children[2].children[1].appendChild(newElement);
+    // element.children[2].children[1].removeChild(newElement);
 
 }
+
+// 02 Remove an HTML element with any text value
+export function removeHTMLElementVanillaCode(){
+    return `
+let newElement = document.createElement("div");
+newElement.textContent = "I am a new div";
+element.appendChild(newElement);
+newElement.remove();`
+}
+
+export function removeHTMLElementVanillaOutput(element){
+    
+    let newElement = document.createElement("div");
+    newElement.textContent = "I am a new div";
+    element.children[2].children[1].appendChild(newElement);
+    newElement.remove();
+
+}
+
+// 03 Append an HTML element to a parent element with any text value
+export function appendHTMLElementToParentVanillaCode(){
+    return `
+let newElement = document.createElement("div");
+newElement.textContent = "I am a new appended div";
+element.appendChild(newElement);
+`
+}
+
+export function appendHTMLElementToParentVanillaOutput(element){
+    
+    let newElement = document.createElement("div");
+    newElement.textContent = "I am a new appended div";
+    element.children[2].children[1].appendChild(newElement);
+    
+}
+
+//04 Prepend an HTML element with any text value to a parent element
+export function prependHTMLElementToParentVanillaCode(){
+    return `
+let span = document.createElement("span");
+span.textContent ="I am a new prepended span"
+element.prepend(span);
+`
+}
+
+export function prependHTMLElementToParentVanillaOutput(element){
+    
+    let span = document.createElement("span");
+    span.textContent ="I am a new prepended span"
+    element.children[2].children[1].prepend(span);
+    
+}
+
+// 05 Create and add an HTML element with any text value after another element
+export function createAndAddAfterHTMLElementVanillaCode(){
+    return `
+element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs5'> I am first div</div>");
+document.getElementById("divfs5").insertAdjacentHTML('beforeend', "<div>I am second div</div>");
+`
+}
+
+export function createAndAddAfterHTMLElementVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs5'> I am first div</div>");
+    document.getElementById("divfs5").insertAdjacentHTML('beforeend', "<div>I am second div</div>");
+    
+}
+
+// 06 Create and add an HTML element with any text value before another element
+export function createAndAddBeforeHTMLElementVanillaCode(){
+    return `
+element.children[2].children[1].insertAdjacentHTML('beforeend', "&ltdiv id='divfs6'> I am first div&lt/div>");
+document.getElementById("divfs6").insertAdjacentHTML('beforebegin', "&ltdiv>I am second div&lt/div>");
+`
+}
+
+export function createAndAddBeforeHTMLElementVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs6'> I am first div</div>");
+    document.getElementById("divfs6").insertAdjacentHTML('beforebegin', "<div>I am second div</div>");
+    
+}
+
+// 07 Clone an HTML element within other element
+export function createAndAddHTMLElementAndCloneVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltdiv id='divfs7'> I am first div&lt/div>");
+let clone = document.getElementById("divfs7").cloneNode(true);
+element.appendChild(clone);`
+}
+
+export function createAndAddHTMLElementAndCloneVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs7'> I am first div</div>");
+    let clone = document.getElementById("divfs7").cloneNode(true);
+    element.children[2].children[1].appendChild(clone);
+    
+}
+
+// 08 Add a class to an HTML item
+export function addClassToElementVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltdiv id='divfs8'> I am first div&lt/div>");
+document.getElementById("divfs8").classList.add("fsClass");`
+}
+
+export function addClassToElementVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs8'> I am first div</div>");
+    document.getElementById("divfs8").classList.add("fsClass");
+    
+}
+
+// 09 Remove a class of an HTML item
+export function removeClassToElementVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltdiv id='divfs9' style='color:red'> I am first div&lt/div>");
+document.getElementById("divfs9").classList.add("fsClass");
+document.getElementById("divfs9").classList.remove("fsClass");`
+}
+
+export function removeClassToElementVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs9' style='color:red'> I am first div</div>");
+    document.getElementById("divfs9").classList.add("fsClass");
+    document.getElementById("divfs9").classList.remove("fsClass");
+}
+
+// 10 Toggle a class to an HTML item
+export function toggleClassToElementVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltdiv id='divfs10' style='color:red'> I am first div&lt/div>");
+document.getElementById("divfs10").classList.add("fsClass");
+document.getElementById("divfs10").classList.toggle("fsClass");`
+}
+
+export function toggleClassToElementVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs10' style='color:red'> I am first div</div>");
+    document.getElementById("divfs10").classList.add("fsClass");
+    document.getElementById("divfs10").classList.toggle("fsClass");
+}
+
+// 11 Add a disabled attribute to an HTML button
+export function addDisabledAttrToBtnVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltbutton id='btnfs11'> I am disabled button&lt/div>");
+document.getElementById("btnfs11").setAttribute("disabled", true);
+    `
+}
+
+export function addDisabledAttrToBtnVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<button id='btnfs11'> I am disabled button</button>");
+    document.getElementById("btnfs11").setAttribute("disabled", true);
+}
+
+// 12 Remove the disabled attribute of an HTML button
+export function removeDisabledAttrOfBtnVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltbutton id='btnfs11'> I am disabled button&lt/button>");
+document.getElementById("btnfs11").setAttribute("disabled", true);
+document.getElementById("btnfs11").setAttribute("disabled", false);
+    `
+}
+
+export function removeDisabledAttrOfBtnVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<button id='btnfs12'> I am disabled button</button>");
+    document.getElementById("btnfs12").setAttribute("disabled", true);
+    document.getElementById("btnfs12").setAttribute("disabled", false);
+}
+
+// 13 Set a data-src attribute to a img element
+export function setDataSrcAttrToImgVanillaCode(){
+    return `
+element.children[2].children[1].insertAdjacentHTML('beforeend', "&ltimg id='imgfs13' src='/assets/katara.jpeg' width='50px' height='50px'>");
+document.getElementById("imgfs13").setAttribute("data-src", "ImData");
+    `
+}
+
+export function setDataSrcAttrToImgVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<img id='imgfs13' src='/assets/katara.jpeg' width='50px' height='50px'>");
+    document.getElementById("imgfs13").setAttribute("data-src", "ImData");
+    
+}
+
+// 14 Remove the data-src attribute of the img element
+export function removeDataSrcAttrToImgVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltimg id='imgfs13' src='/assets/katara.jpeg' width='50px' height='50px'>");
+document.getElementById("imgfs13").setAttribute("data-src", "ImData");
+document.getElementById("imgfs13").removeAttribute("data-src");
+    `
+}
+
+export function removeDataSrcAttrToImgVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<img id='imgfs14' src='/assets/katara.jpeg' width='50px' height='50px'>");
+    document.getElementById("imgfs14").setAttribute("data-src", "ImData");
+    document.getElementById("imgfs14").removeAttribute("data-src");
+    
+}
+
+// 15 Hide an HTML element on click (display: none)
+export function hideElementOnClickVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltdiv id='divfs15'>If you dont wanna see me, click me!&lt/div>");
+
+document.getElementById("divfs15").onclick = function(){
+    this.style.display="none";
+}
+    `
+}
+
+export function hideElementOnClickVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs15'>If you dont wanna see me, click me!</div>");
+    document.getElementById("divfs15").onclick = function(){
+        this.style.display="none";
+    }   
+}
+
+// 16 Show an HTML element on click (display: block)
+export function showElementOnClickBtnVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltp id='pfs16' style='display:none'>Suprise strike!&lt/p>");
+
+element.insertAdjacentHTML('beforeend', "&ltbutton id='btnfs16'>Click meto see what lurks in the shadows&lt/button>");
+
+document.getElementById("btnfs16").onclick = function(){
+    document.getElementById("pfs16").style.display="block";
+}   
+    `
+}
+
+export function showElementOnClickBtnVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<p id='pfs16' style='display:none'>Suprise strike!</p>");
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<button id='btnfs16'>Click me to see what lurks in the shadows</button>");
+    document.getElementById("btnfs16").onclick = function(){
+        document.getElementById("pfs16").style.display="block";
+    }   
+}
+
+// 17 Fade in an HTML element using jQuery
+export function FadeInVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltbutton id='btnfs17'> Click me to fade in the div&lt/button>");
+
+element.insertAdjacentHTML('beforeend', "&ltdiv id='divfs17' style='background-color:red; height:100px; width:100px; opacity:0'>&lt/div>");
+
+document.getElementById("btnfs17").addEventListener("click", function(){
+    document.getElementById("divfs17").style.opacity ="1"; 
+    document.getElementById("divfs17").style.transition ="2s";
+});  
+    `
+}
+
+export function FadeInVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<button id='btnfs17'> Click me to fade in the div</button>");
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs17' style='background-color:red; height:100px; width:100px; opacity:0'></div>");
+    
+    document.getElementById("btnfs17").addEventListener("click", function(){
+        document.getElementById("divfs17").style.opacity ="1"; 
+        document.getElementById("divfs17").style.transition ="2s";
+    });
+
+}
+
+// 18 Fade out an HTML element using jQuery
+export function fadeOutVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltbutton id='btnfs18'> Click me to fade in the div&lt/button>");
+
+element.insertAdjacentHTML('beforeend', "&ltdiv id='divfs18' style='background-color:red; height:100px; width:100px; opacity:1'>&lt/div>");
+
+document.getElementById("btnfs18").addEventListener("click", function(){
+    document.getElementById("divfs18").style.opacity ="0"; 
+    document.getElementById("divfs18").style.transition ="2s";
+});  
+    `
+}
+
+export function fadeOutVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<button id='btnfs18'> Click me to fade in the div</button>");
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs18' style='background-color:red; height:100px; width:100px; opacity:1'></div>");
+    
+    document.getElementById("btnfs18").addEventListener("click", function(){
+        document.getElementById("divfs18").style.opacity ="0"; 
+        document.getElementById("divfs18").style.transition ="2s";
+    });
+
+}
+
+// 19 Iterate a collection of elements and apply a change of style on them
+
 /*====================================*/
 
 /*=========== Call functions ===========*/

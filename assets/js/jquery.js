@@ -335,6 +335,301 @@ export function onClickUlLiItemJqueryTest(){
 
 // Functions and Selectors
 
+// 01 Create an HTML element with any text value
+export function createHTMLElementJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv>I am a new div&lt/div>");`
+}
+
+export function createHTMLElementJqueryTest(){
+    
+    $("#testArea").append("<div>I am a new div</div>");
+
+}
+
+// 02 Remove an HTML element with any text value
+export function removeHTMLElementJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='divfs2'>I am a new div&lt/div>");
+$("#divfs2").remove();`
+
+}
+
+export function removeHTMLElementJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs2'>I am a new div</div>");
+    $("#divfs2").remove();
+    
+}
+
+// 03 Append an HTML element to a parent element with any text value
+export function appendHTMLElementToParentJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv>I am a new appended div&lt/div>");`
+}
+
+export function appendHTMLElementToParentJqueryTest(){
+    
+    $("#testArea").append("<div>I am a new appended div</div>");
+
+}
+
+//04 Prepend an HTML element with any text value to a parent element
+export function prependHTMLElementToParentJqueryCode(){
+    return `
+$("#testArea").prepend("&ltspan>I am a new prepended span&lt/span>");
+`
+}
+
+export function prependHTMLElementToParentJqueryTest(){
+    
+    $("#testArea").prepend("<span>I am a new prepended span</span>");
+    
+}
+
+// 05 Create and add an HTML element with any text value after another element
+export function createAndAddAfterHTMLElementJqueryCode(){
+    return `
+$("#testArea").append("<div id='divfs5'> I am first div</div>");
+$("#divfs5").append("<div>I am second div</div>");
+`
+}
+
+export function createAndAddAfterHTMLElementJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs6'> I am first div</div>");
+    $("#divfs5").append("<div>I am second div</div>");
+    
+}
+
+// 06 Create and add an HTML element with any text value before another element
+export function createAndAddBeforeHTMLElementJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='divfs6'> I am first div&lt/div>");
+$("#divfs6").prepend("&ltdiv>I am second div&lt/div>");`
+}
+
+export function createAndAddBeforeHTMLElementJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs6'> I am first div</div>");
+    $("#divfs6").prepend("<div>I am second div</div>");
+    
+}
+
+// 07 Clone an HTML element within other element
+export function createAndAddHTMLElementAndCloneJqueryCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltdiv id='divfs7'> I am first div&lt/div>");
+let clone = document.getElementById("divfs7").cloneNode(true);
+element.appendChild(clone);`
+}
+
+export function createAndAddHTMLElementAndCloneJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs7'> I am first div</div>");
+    $("#testArea").append($("#divfs7").clone());
+    
+}
+
+// 08 Add a class to an HTML item
+export function addClassToElementJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='divfs8'> I am first div&lt/div>");
+$("#divfs8").addClass("fsClass");`
+}
+
+export function addClassToElementJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs8'> I am first div</div>");
+    $("#divfs8").addClass("fsClass");
+    
+}
+
+// 09 Remove a class to an HTML item
+export function removeClassToElementJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='divfs9' style='color:red'> I am first div&lt/div>");
+$("#divfs9").addClass("fsClass");
+$("#divfs9").removeClass("fsClass");`
+}
+
+export function removeClassToElementJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs9' style='color:red'> I am first div</div>");
+    $("#divfs9").addClass("fsClass");
+    $("#divfs9").removeClass("fsClass");
+}
+
+// 10 Toggle a class to an HTML item
+export function toggleClassToElementJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='divfs10' style='color:red'> I am first div&lt/div>");
+$("#divfs10").addClass("fsClass");
+$("#divfs10").toggleClass("fsClass");`
+}
+
+export function toggleClassToElementJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs10' style='color:red'> I am first div</div>");
+    $("#divfs10").addClass("fsClass");
+    $("#divfs10").toggleClass("fsClass");
+}
+
+// 11 Add a disabled attribute to an HTML button
+export function addDisabledAttrToBtnJqueryCode(){
+    return `
+$("#testArea").append(""&ltbutton id='btnfs11'> I am disabled button&lt/div>");
+$("#btnfs11").attr("disabled", true);
+    `
+}
+
+export function addDisabledAttrToBtnJqueryTest(){
+    
+    $("#testArea").append("<button id='btnfs11'> I am disabled button</button>");
+    $("#btnfs11").attr("disabled", true);
+}
+
+// 12 Remove the disabled attribute of an HTML button
+export function removeDisabledAttrOfBtnJqueryCode(){
+    return `
+$("#testArea").append(""&ltbutton id='btnfs12'> I am disabled button&lt/div>");
+$("#btnfs12").attr("disabled", true);
+$("#btnfs12").attr("disabled", false);
+    `
+}
+
+export function removeDisabledAttrOfBtnJqueryTest(){
+    
+    $("#testArea").append("<button id='btnfs12'> I am disabled button</button>");
+    $("#btnfs12").attr("disabled", true);
+    $("#btnfs12").attr("disabled", false);
+}
+
+// 13 Set a data-src attribute to a img element
+export function setDataSrcAttrToImgJqueryCode(){
+    return `
+$("#testArea").append("&ltimg id='imgfs13' src='/assets/katara.jpeg' width='50px' height='50px'>");
+$("#imgfs13").attr("data-src", "ImData");
+    `
+}
+
+export function setDataSrcAttrToImgJqueryTest(){
+    
+    $("#testArea").append("<img id='imgfs13' src='/assets/katara.jpeg' width='50px' height='50px'>");
+    $("#imgfs13").attr("data-src", "ImData");
+    
+}
+
+// 14 Remove the data-src attribute of the img element
+export function removeDataSrcAttrToImgJqueryCode(){
+    return `
+$("#testArea").append("&ltimg id='imgfs14' src='/assets/katara.jpeg' width='50px' height='50px'>");
+$("#imgfs14").attr("data-src", "ImData");
+$("#imgfs14").removeAttr("data-src");
+    `
+}
+
+export function removeDataSrcAttrToImgJqueryTest(){
+    
+    $("#testArea").append("<img id='imgfs14' src='/assets/katara.jpeg' width='50px' height='50px'>");
+    $("#imgfs14").attr("data-src", "ImData");
+    $("#imgfs14").removeAttr("data-src");
+    
+}
+
+// 15 Hide an HTML element on click (display: none)
+export function hideElementOnClickJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='divfs15'>If you dont wanna see me, click me!&lt/div>");
+
+$("#divfs15").on("click", function(){
+    $(this).css("display", "none");
+});
+    `
+}
+
+export function hideElementOnClickJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs15'>If you dont wanna see me, click me!</div>");
+    $("#divfs15").on("click", function(){
+        $(this).css("display", "none");
+    });
+}
+
+// 16 Show an HTML element on click (display: block)
+export function showElementOnClickBtnJqueryCode(){
+    return `
+$("#testArea").append("&ltp id='pfs16' style='display:none'>Suprise strike!&lt/p>");
+
+$("#testArea").append("&ltbutton id='btnfs16'>Click meto see what lurks in the shadows&lt/button>");
+
+$("#btnfs16").on("click",function(){
+    $("#pfs16").css("display","block");
+});  
+    `
+}
+
+export function showElementOnClickBtnJqueryTest(){
+    
+    $("#testArea").append("<p id='pfs16' style='display:none'>Suprise strike!</p>");
+    $("#testArea").append("<button id='btnfs16'>Click me to see what lurks in the shadows</button>");
+    $("#btnfs16").on("click",function(){
+        $("#pfs16").css("display","block");
+    });   
+}
+
+// 17 Fade in an HTML element using jQuery
+export function FadeInJqueryCode(){
+    return `
+$("#testArea").append("&ltbutton id='btnfs17'> Click me to fade in the div&lt/button>");
+
+$("#testArea").append("&ltdiv id='divfs17' style='background-color:red; height:100px; width:100px; '>&lt/div>");
+
+$("#divfs17").fadeOut();
+
+$("#btnfs17").on("click", function(){
+    $("#divfs17").fadeIn(); 
+}); 
+    `
+}
+
+export function FadeInJqueryTest(){
+    
+    $("#testArea").append("<button id='btnfs17'> Click me to fade in the div</button>");
+    $("#testArea").append("<div id='divfs17' style='background-color:red; height:100px; width:100px; '></div>");
+    
+    $("#divfs17").fadeOut();
+
+    $("#btnfs17").on("click", function(){
+        $("#divfs17").fadeIn(); 
+    });
+}
+
+// 18 Fade out an HTML element using jQuery
+export function fadeOutJqueryCode(){
+    return `
+$("#testArea").append("&ltbutton id='btnfs18'> Click me to fade in the div&lt/button>");
+
+$("#testArea").append("&ltdiv id='divfs18' style='background-color:red; height:100px; width:100px; opacity:1'>&lt/div>");
+
+
+$("#btnfs18").on("click", function(){
+    $("#divfs18").fadeOut(); 
+}); 
+    `
+}
+
+export function fadeOutJqueryTest(){
+    
+    $("#testArea").append("<button id='btnfs18'> Click me to fade in the div</button>");
+    
+    $("#testArea").append("<div id='divfs18' style='background-color:red; height:100px; width:100px; '></div>");
+    
+
+    $("#btnfs18").on("click", function(){
+        $("#divfs18").fadeOut(); 
+    });
+}
 /*======================================*/
 
 /*=============== Tests ================*/
@@ -355,5 +650,20 @@ export function onClickUlLiItemJqueryTest(){
 
 // Functions and Selectors
 
-
+// createHTMLElementJqueryTest()
+// removeHTMLElementJqueryTest();
+// appendHTMLElementToParentJqueryTest()
+// prependHTMLElementToParentJqueryTest()
+// createAndAddAfterHTMLElementJqueryTest()
+// createAndAddBeforeHTMLElementVanillaTest();
+// createAndAddHTMLElementAndCloneJqueryTest();
+// addClassToElementJqueryTest();
+// removeClassToElementJqueryTest();
+// addDisabledAttrToBtnJqueryTest();
+// removeDisabledAttrOfBtnJqueryTest();
+// setDataSrcAttrToImgJqueryTest();
+// hideElementOnClickJqueryTest();
+// showElementOnClickBtnJqueryTest();
+// FadeInJqueryTest();
+// fadeOutJqueryTest();
 /*======================================*/
