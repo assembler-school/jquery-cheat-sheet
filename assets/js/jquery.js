@@ -208,14 +208,15 @@ export function onSubmitJqueryTest(){
 // 10 OnChange Event for an option selection element
 export function onChangeOptionSelectionJqueryCode(){
     return `
-$("#testArea").append("&ltform id='forme9'>&ltinput type='submit' value='submit'>&lt/form>");
+$("#testArea").append("&ltselect id='selecte10'>&ltoption value='1'>Option1&lt/option>&ltoption value='2'>Option2&lt/option>&lt/select>");
 
-$("#forme9").on("submit", onFormSubmit);
+$("#testArea").append("&ltp id ='onChangeSelectionOutput'>Changed to option 1&lt/p>");
 
-function onFormSubmit(event){
-    event.preventDefault();
-    $("#testArea").append("&ltp id ='onSubmitOutput'>&lt/p>");
-    $("#onSubmitOutput").text("Form submited");
+$("#selecte10").on("change", onChangeOption);
+
+function onChangeOption(){
+
+    $("#onChangeSelectionOutput").text("Changed to option" + $("#selecte10").val());
 }`
 }
 
@@ -630,6 +631,154 @@ export function fadeOutJqueryTest(){
         $("#divfs18").fadeOut(); 
     });
 }
+
+// 19 Iterate a collection of elements and apply a change of style on them
+export function iterateAndStyleSetOfElementsJqueryCode(){
+    return `
+$("#testArea").append("&ltul id='ulfs19'>&ltli class='itemfs19'> Item1&lt/li>&ltli class='itemfs19'> Item2&lt/li>&lt/ul>");
+
+$(".itemfs19").each(function(){
+    $(this).css("color","red");
+});
+    `
+}
+
+export function iterateAndStyleSetOfElementsJqueryTest(){
+    
+    $("#testArea").append("<ul id='ulfs19'><li class='itemfs19'> Item1</li><li class='itemfs19'> Item2</li></ul>");
+    
+    $(".itemfs19").each(function(){
+        $(this).css("color","red");
+    });
+}
+
+// 20 Get the parent element of a certain element and change its font weight
+export function changeParentStyleJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='divfs20'> I am parent&ltspan class='childfs20'> Item1&lt/span>&ltspan class='childfs20'> Item2&lt/span>&lt/div>");
+
+$(".childfs20").parent($("#divfs20")).css("fontWeight", "bold");
+    `
+}
+
+export function changeParentStyleJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs20'> I am parent<span class='childfs20'> Item1</span><span class='childfs20'> Item2</span></div>");
+
+    $(".childfs20").parent($("#divfs20")).css("fontWeight", "bold");
+
+}
+
+// 21 Get the collection of children of a certain element and change its font weight
+export function changeChildrenStyleJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='divfs21'> I am parent&ltspan class='childfs21'> Item1&lt/span>&ltspan class='childfs21'> Item2&lt/span>&lt/div>");
+
+$("#divfs21").children().css("fontWeight", "bold");
+    `
+}
+
+export function changeChildrenStyleJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs21'> I am parent<span class='childfs21'> Item1</span><span class='childfs21'> Item2</span></div>");
+
+    $("#divfs21").children().css("fontWeight", "bold");
+
+}
+
+// 22 Get all the elements that have a certain class and change their font weight
+export function changeSameclassElementsStyleJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='divfs22'> I am parent&ltspan class='childfs22'> Item1&lt/span>&ltspan class='childfs22'> Item2&lt/span>&lt/div>");
+
+$(".childfs22").css("fontWeight", "bold");
+    `
+}
+
+export function changeSameclassElementsStyleJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs22'> I am parent<span class='childfs22'> Item1</span><span class='childfs22'> Item2</span></div>");
+
+    $(".childfs22").css("fontWeight", "bold");
+
+}
+
+// 23 Get an item by id and change its font weight
+export function changeIdElemntStyleJqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='divfs22'> I am parent&ltspan class='childfs22'> Item1&lt/span>&ltspan class='childfs22'> Item2&lt/span>&lt/div>");
+
+$(".childfs22").css("fontWeight", "bold");
+    `
+}
+
+export function changeIdElemntStyleJqueryTest(){
+    
+    $("#testArea").append("<div id='divfs23'> I am div</div>");
+
+    $("#divfs23").css("fontWeight", "bold");
+
+}
+
+// 24 Get all the elements that have a certain class and the display property of none and change their font color
+export function changeSameclassElementsStyle2JqueryCode(){
+    return `
+$("#testArea").append("&ltdiv id='divfs24'> I am parent&ltspan class='childfs24'> Item1&lt/span>&ltspan class='childfs24'> Item2&lt/span>&lt/div>");
+
+$(".childfs24").css({"color": "red", "display": "block"});
+    `
+}
+
+export function changeSameclassElementsStyle2JqueryTest(){
+    
+    $("#testArea").append("<div id='divfs24'> I am parent<span class='childfs24'> Item1</span><span class='childfs24'> Item2</span></div>");
+
+    $(".childfs24").css({"color": "red", "display": "block"});
+
+}
+
+// 25 Get the options of a select element that are selected (attribute selected)
+export function checkSelectedAttributeJqueryCode(){
+    return `
+$("#testArea").append("&ltselect id='selectfs25'>&ltoption class='optionfs25' value='1'>Option1&lt/option> &ltoption class='optionfs25' value='2'>Option2&lt/option> &lt/select>");
+
+$("#testArea").append("&ltp id='outputfs25'> &lt/p>")
+
+$("#selectfs25").on("change",checkSelect);
+
+function checkSelect(){
+
+    let selectedOption = $("#selectfs25").children("option:selected").text();
+
+    $("#outputfs25").html(selectedOption);
+}
+    `
+}
+
+export function checkSelectedAttributeJqueryTest(){
+    
+    $("#testArea").append("<select id='selectfs25'><option class='optionfs25' value='1'>Option1</option> <option class='optionfs25' value='2'>Option2</option> </select>");
+
+    $("#testArea").append("<p id='outputfs25'> </p>")
+    
+    $("#selectfs25").on("change",checkSelect);
+    
+    function checkSelect(){
+
+        let selectedOption = $("#selectfs25").children("option:selected").text();
+
+        $("#outputfs25").html(selectedOption);
+    }
+
+}
+
+// 26 Change the href attribute of the first &lta> element (You have to create several &lta> elements)
+
+// 27 Show an alert with the value of the first &ltinput> of the page (Create an &ltinput> element to test this case)
+   
+// 28 Remove all items from a specific selector
+
+// 29 Animate an item after 2 seconds from the initial page load
 /*======================================*/
 
 /*=============== Tests ================*/
@@ -666,4 +815,11 @@ export function fadeOutJqueryTest(){
 // showElementOnClickBtnJqueryTest();
 // FadeInJqueryTest();
 // fadeOutJqueryTest();
+// iterateAndStyleSetOfElementsJqueryTest();
+// changeParentStyleJqueryTest();
+// changeChildrenStyleJqueryTest();
+// changeSameclassElementsStyleJqueryTest();
+// changeIdElemntStyleJqueryTest();
+// changeSameclassElementsStyle2JqueryTest();
+// checkSelectedAttributeJqueryTest();
 /*======================================*/

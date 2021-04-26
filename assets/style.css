@@ -26,6 +26,7 @@
 
 .topicListItem{
   display: flex;
+  cursor: pointer;
 }
 
 /* Event container*/
@@ -51,6 +52,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  cursor: pointer;
 }
 .codeContainer{
   display: flex;
@@ -92,7 +94,6 @@
 
 #testArea{
   display:flex;
-  height: 100px;
 }
 
 #footer{

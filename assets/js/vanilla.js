@@ -246,7 +246,7 @@ function onChangeOption(){
 export function onChangeOptionSelectionVanillaOutput(element){
     
     element.children[2].children[1].insertAdjacentHTML('beforeend', "<select id='selecte10'><option value='1'>Option1</option> <option value='2'>Option2</option> </select>");
-    element.children[2].children[1].insertAdjacentHTML('beforeend', "<p id='onChangeSelectionOutput'> Changed to option 1</p>")
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<p id='onChangeSelectionOutput'> Changed to option 1</p>");
 
     document.getElementById("selecte10").addEventListener("change", onChangeOption);
 
@@ -674,9 +674,178 @@ export function fadeOutVanillaOutput(element){
 }
 
 // 19 Iterate a collection of elements and apply a change of style on them
+export function iterateAndStyleSetOfElementsVanillaCode(){
+    return `
+element..insertAdjacentHTML('beforeend', "&ltul id='ulfs19'>&ltli class='itemfs19'> Item1&lt/li>&ltli class='itemfs19'> Item2&lt/li>&lt/ul>");
 
+document.querySelectorAll(".itemfs19").forEach(function(element){
+    element.style.color ="red";
+}); 
+    `
+}
+
+export function iterateAndStyleSetOfElementsVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<ul id='ulfs19'><li class='itemfs19'> Item1</li><li class='itemfs19'> Item2</li></ul>");
+    
+    document.querySelectorAll(".itemfs19").forEach(function(element){
+        element.style.color ="red";
+    });
+}
+
+// 20 Get the parent element of a certain element and change its font weight
+export function changeParentStyleVanillaCode(){
+    return `
+element.children[2].children[1].insertAdjacentHTML('beforeend', "&ltdiv id='divfs20'> I am parent&ltspan class='childfs20'> Item1&lt/span>&ltspan class='childfs20'> Item2&lt/span>&lt/div>");
+
+document.querySelectorAll(".childfs20")[0].parentNode.style.fontWeight = "bold";
+    `
+}
+
+export function changeParentStyleVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs20'> I am parent<span class='childfs20'> Item1</span><span class='childfs20'> Item2</span></div>");
+
+    document.querySelectorAll(".childfs20")[0].parentNode.style.fontWeight = "bold";
+}
+
+// 21 Get the collection of children of a certain element and change its font weight
+export function changeChildrenStyleVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltdiv id='divfs21'> I am parent&ltspan class='childfs21'> Item1&lt/span>&ltspan class='childfs21'> Item2&lt/span>&lt/div>");
+
+let children = document.getElementById("divfs21").children;
+
+for(let i=0; i &lt children.length; i++){
+    children[i].style.fontWeight ="bold";
+}`
+}
+
+export function changeChildrenStyleVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs21'> I am parent<span class='childfs21'> Item1</span><span class='childfs21'> Item2</span></div>");
+
+    let children = document.getElementById("divfs21").children;
+
+    for(let i=0; i<children.length; i++){
+        children[i].style.fontWeight ="bold";
+    }
+}
+
+// 22 Get all the elements that have a certain class and change their font weight
+export function changeSameclassElementsStyleVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltdiv id='divfs22'> I am parent&ltspan class='childfs22'> Item1&lt/span>&ltspan class='childfs22'> Item2&lt/span>&lt/div>");
+
+let sameClassElements = document.querySelectorAll(".childfs22")
+
+for(let i=0; i &lt sameClassElements.length; i++){
+    sameClassElements[i].style.fontWeight = "bold";
+}
+    `
+}
+
+export function changeSameclassElementsStyleVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs22'> I am parent<span class='childfs22'> Item1</span><span class='childfs22'> Item2</span></div>");
+
+    let sameClassElements = document.querySelectorAll(".childfs22")
+
+    for(let i=0; i<sameClassElements.length; i++){
+        sameClassElements[i].style.fontWeight = "bold";
+    }
+}
+
+// 23 Get an item by id and change its font weight
+export function changeIdElemntStyleStyleVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "<div id='divfs23'> I am div</div>");
+
+document.getElementById("divfs23").style.fontWeight ="bold";
+    `
+}
+
+export function changeIdElemntStyleVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs23'> I am div</div>");
+
+    document.getElementById("divfs23").style.fontWeight ="bold";
+
+}
+
+// 24 Get all the elements that have a certain class and the display property of none and change their font color
+export function changeSameclassElementsStyle2VanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltdiv id='divfs24'> I am parent&ltspan style='display:none' class='childfs24'> Item1&lt/span>&ltspan style='display:none' class='childfs24'> Item2&lt/span>&lt/div>");
+
+let sameClassElements = document.querySelectorAll(".childfs22")
+
+for(let i=0; i &lt sameClassElements.length; i++){
+    sameClassElements[i].style.fontWeight = "bold";
+}
+    `
+}
+
+export function changeSameclassElementsStyle2VanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<div id='divfs24'> I am parent<span style='display:none' class='childfs24'> Item1</span><span style='display:none' class='childfs24'> Item2</span></div>");
+
+    let sameClassElements = document.querySelectorAll(".childfs24")
+
+    for(let i=0; i<sameClassElements.length; i++){
+        sameClassElements[i].style.color = "red";
+        sameClassElements[i].style.display = "block";
+    }
+}
+
+// 25 Get the options of a select element that are selected (attribute selected)
+export function checkSelectedAttributeVanillaCode(){
+    return `
+element.insertAdjacentHTML('beforeend', "&ltselect id='selectfs25'>&ltoption class='optionfs25' value='1'>Option1&lt/option> &ltoption class='optionfs25' value='2'>Option2&lt/option> &lt/select>");
+element.insertAdjacentHTML('beforeend', "&ltp id='outputfs25'> &lt/p>")
+element.insertAdjacentHTML('beforeend', "&ltbutton id='btnfs25'>Check selected option &lt/button>")
+
+document.getElementById("btnfs25").addEventListener("click",checkSelect);
+
+function checkSelect(){
+    
+    let options = document.querySelectorAll(".optionfs25");
+
+    for(let i=0; i &lt options.length; i++){
+        if(options[i].selected === true){
+            document.getElementById("outputfs25").textContent = options[i].textContent;
+        }
+    }
+}
+    `
+}
+
+export function checkSelectedAttributeVanillaOutput(element){
+    
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<select id='selectfs25'><option class='optionfs25' value='1'>Option1</option> <option class='optionfs25' value='2'>Option2</option> </select>");
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<p id='outputfs25'> </p>")
+    element.children[2].children[1].insertAdjacentHTML('beforeend', "<button id='btnfs25'>Check selected option </button>")
+    
+    document.getElementById("btnfs25").addEventListener("click",checkSelect);
+    
+    function checkSelect(){
+
+        let options = document.querySelectorAll(".optionfs25");
+    
+        for(let i=0; i < options.length; i++){
+            if(options[i].selected === true){
+                document.getElementById("outputfs25").textContent = options[i].textContent;
+            }
+        }
+    }
+}
+
+// 26 Change the href attribute of the first &lta> element (You have to create several &lta> elements)
+
+// 27 Show an alert with the value of the first &ltinput> of the page (Create an &ltinput> element to test this case)
+   
+// 28 Remove all items from a specific selector
+
+// 29 Animate an item after 2 seconds from the initial page load
 /*====================================*/
 
-/*=========== Call functions ===========*/
-
-/*======================================*/

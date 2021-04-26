@@ -22,7 +22,7 @@ function setTopicListItemListeners(){
     
     // Correcting empty display property bug;
     eventDivContainer.style.display = "none";
-    funSelDivContainer.style.display = "block";
+    funSelDivContainer.style.display = "none";
 
     // Adding eventListeners
     topicListItems[0].addEventListener("click", function(event){
@@ -352,91 +352,79 @@ function injectionSwitch(){
                 break;
     
             case "fs19":
-                // OnChange Event capture input text value
+                // Iterate a collection of elements and apply a change of style on them
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onChangeInputTextVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onChangeInputTextJqueryCode();
-                vanilla.onChangeInputTextVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.iterateAndStyleSetOfElementsVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.iterateAndStyleSetOfElementsJqueryCode();
+                vanilla.iterateAndStyleSetOfElementsVanillaOutput(codeContainer);
                 break;
     
             case "fs20":
-                // OnLoad Event for image
+                // Get the parent element of a certain element and change its font weight
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onLoadImageVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onLoadImageJqueryCode();
-                vanilla.onLoadImageVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.changeParentStyleVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.changeParentStyleJqueryCode();
+                vanilla.changeParentStyleVanillaOutput(codeContainer);
                 break;
     
             case "fs21":
-                // OnError Event to load image
+                // Get the children element of a certain element and change its font weight
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onLoadImageFailVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onLoadImageFailJqueryCode();
-                // vanilla.onLoadImageFailVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.changeChildrenStyleVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.changeChildrenStyleJqueryCode();
+                vanilla.changeChildrenStyleVanillaOutput(codeContainer);
                 break;
     
             case "fs22":
-                // OnSubmit Event for form
+                // Get all the elements that have a certain class and change their font weight
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onSubmitVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onSubmitJqueryCode();
-                vanilla.onSubmitVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.changeSameclassElementsStyleVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.changeSameclassElementsStyleJqueryCode();
+                vanilla.changeSameclassElementsStyleVanillaOutput(codeContainer);
                 break;
     
             case "fs23":
-                // OnChange Event for an option selection element
+                // Get an item by id and change its font weight
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onChangeOptionSelectionVanillaCode();
+                codeContainer.children[0].children[1].innerHTML = vanilla.changeIdElemntStyleStyleVanillaCode();
                 codeContainer.children[1].children[1].innerHTML = jquery.onChangeOptionSelectionJqueryCode();
-                // vanilla.onChangeOptionSelectionVanillaOutput(codeContainer);
+                vanilla.changeIdElemntStyleVanillaOutput(codeContainer);
                 break;
     
             case "fs24":
-                // OnMouseOver event
+                // Get all the elements that have a certain class and the display property of none and change their font color
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onMouseOverVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onMouseOverJqueryCode();
-                vanilla.onMouseOverVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.changeSameclassElementsStyle2VanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.changeSameclassElementsStyle2JqueryCode();
+                vanilla.changeSameclassElementsStyle2VanillaOutput(codeContainer);
                 break;
     
             case "fs25":
-                // OnChange Event for checkbox
+                // Get the options of a select element that are selected (attribute selected)
                 codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onChangeCheckboxVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onChangeCheckboxJqueryCode();
-                vanilla.onChangeCheckboxVanillaOutput(codeContainer);
+                codeContainer.children[0].children[1].innerHTML = vanilla.checkSelectedAttributeVanillaCode();
+                codeContainer.children[1].children[1].innerHTML = jquery.checkSelectedAttributeJqueryCode();
+                vanilla.checkSelectedAttributeVanillaOutput(codeContainer);
                 break;
     
             case "fs26":
-                // OnClick Event for ul list item (show clicked element)
-                codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onClickUlLiItemVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onClickUlLiItemJqueryCode();
-                vanilla.onClickUlLiItemVanillaOutput(codeContainer);
+                // Change the href attribute of the first &lta> element (You have to create several &lta> elements)
+
                 break;
 
             case "fs27":
-                // OnMouseOver event
-                codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onMouseOverVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onMouseOverJqueryCode();
-                vanilla.onMouseOverVanillaOutput(codeContainer);
+                // Show an alert with the value of the first &ltinput> of the page (Create an &ltinput> element to test this case)
+
                 break;
     
             case "fs28":
-                // OnChange Event for checkbox
-                codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onChangeCheckboxVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onChangeCheckboxJqueryCode();
-                vanilla.onChangeCheckboxVanillaOutput(codeContainer);
+                // Remove all items from a specific selector
+
                 break;
     
             case "fs29":
-                // OnClick Event for ul list item (show clicked element)
-                codeContainer = document.getElementById(id);
-                codeContainer.children[0].children[1].innerHTML = vanilla.onClickUlLiItemVanillaCode();
-                codeContainer.children[1].children[1].innerHTML = jquery.onClickUlLiItemJqueryCode();
-                vanilla.onClickUlLiItemVanillaOutput(codeContainer);
+                // Animate an item after 2 seconds from the initial page load
+
                 break;
         }
     }
