@@ -23,7 +23,7 @@ function clicked(){
     });
 }function mousMv(){
     $( ".run" ).text("mouve cursos below");
-    $( ".result" ).mousemove(function(event) {
+    $( ".showComandContent" ).mousemove(function(event) {
         $('.result').text('x: '+event.pageX+' , '+'y: '+event.pageY);
     });
 }function textVal(){
@@ -117,16 +117,17 @@ function selectOpt(){
 }
 function inElement(){
     
-    $('p.result').add("div");
-    //$('.result span').text('you added this text, congratulations');
+    $('p.result').append("<div>hi I,m a div</div>");
+    
    
 }
 function killElement(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    $( ".run" ).text("delete him");
+    $('.result').text("please, delete me");
+    $( ".run" ).on('click', function(){
+        $('.result').remove()
+    })
+    
 }
 function newLastCh(){
     $( ".run" ).text("apend in this box");
@@ -333,8 +334,7 @@ function aHref(){
 
 }
 function frst(){
-    $(".run").text("Get me and my brothers");
-    $('.result').text("Its also mine");
+  console.log($('body input'))  
   
 }
 function killThemAll(){
@@ -342,7 +342,12 @@ function killThemAll(){
     
 }
 function move(){
-    $(".run").text("Get me and my brothers");
-    $('.result').text("Its also mine");
+    $('.run').ready(function () {
+        setTimeout(function () {
+        $(".result").animate({
+        "width": "50%"
+        }, 2000);
+        }, 2000);
+        })
    
 }

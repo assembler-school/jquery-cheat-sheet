@@ -180,9 +180,8 @@ p.result{
  font-weight: 100;
 
 }
-button.ejempleButJq{
-    width: 50%;
-    height: 50px;
+.ejempleButJq{
+    max-width: 50%;
     justify-self: center;
     align-self: center;
     color: white;
@@ -194,9 +193,32 @@ button.ejempleButJq{
     cursor: pointer;
 
 }
-button.ejempleButVani{
+div.vanillacode{
+   position: fixed;
+   padding-left: 20%;
+   left:0%;
+   top:7%;
+   z-index:2;
+   color: white;
+   font-family: 'Roboto Mono', monospace;
+   font-size: 16px;
+   background-color: rgba(0, 0, 0,0.8);
+   width: 100%;
+}
+div.jquerycode{
+    position: fixed;
+    padding-left: 20%;
+    left:0%;
+    top:90%;
+    z-index:2;
+    font-size: 16px;
+    color: white;
+   font-family: 'Roboto Mono', monospace;
+   background-color:  rgba(0, 0, 0,0.8);
+   width: 100%;
+ }
+.ejempleButVani{
     width: 50%;
-    height: 50px;
     justify-self: center;
     align-self: center;
     color: white;
@@ -225,7 +247,8 @@ button.run{
 
 code.vanillaText{
     grid-column: 1/3;
-    font-size: 16px;
+    font-size: 12px;
+    
 }
 .inpText{
     color:white;
@@ -259,8 +282,6 @@ code.vanillaText{
 }
 p.text{
 position: fixed;
-
-
 font-size: 20px;
 color: blue;
 margin: 0px;
@@ -272,7 +293,7 @@ font-weight: 100;
 pointer-events: none;
 }
 .result.newClass{
-    font-size: 10px;
+    font-size: 15px;
 }
 /*__________________*/
 

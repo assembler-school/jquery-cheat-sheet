@@ -2,82 +2,84 @@
 
 function ready(){
     
-    document.addEventListener("DOMContentLoaded",function(){
+    document.addEventListener("DOMContentLoaded",read())
+    function read() {
         document.querySelector('p.result').innerHTML='The DOM is Ready!';
-    });
-    
-   
+    }
 }
 function clicked(){
-    
-    if($( ".run" ).data('clicked',true)){
-        $('.result').text('The button had been cliked');
-     }
+        document.querySelector('.result').innerHTML='The button had been cliked';
+     
 }function dubl(){
    
-    $( ".run" ).dblclick(function() {
-        $('.result').text('You make the doble click!!');
+    document.querySelector( ".run" ).addEventListener('dblclick',function() {
+        document.querySelector('.result').innerHTML='You make the doble click!!';
     });
 }function keyP(){
     $( ".run" ).text("press any key");
-    $(document).keypress(function() {
-        $('.result').text('You press a key, good job!!');
-    });
+    document.onkeypress=function() {
+        document.querySelector('.result').innerHTML='You press a key, good job!!';
+    };
 }function mousMv(){
-    $( ".run" ).text("mouve cursos below");
-    $( ".result" ).mousemove(function(event) {
-        $('.result').text('x: '+event.pageX+' , '+'y: '+event.pageY);
-    });
+    document.querySelector( ".run" ).innerHTML="mouve cursor";
+    document.querySelector( ".showComandContent" ).onmousemove=function(event) {
+        document.querySelector('.result').innerHTML='x: '+event.pageX+' , '+'y: '+event.pageY;
+    };
 }function textVal(){
-    $( ".run" ).text("Write below & click here");
-    $( ".run" ).ready(function() {
-        $('.result').append('<input type="text" class="inpText">');
+    document.querySelector( ".run" ).innerHTML="Write below & click here";
+    
+    document.querySelector('.result').insertAdjacentHTML("beforeend",'<input type="text" class="inpText">');
         $('.run').off('click',textVal);
         $('.run').on('click',grapTx);
         function grapTx(){
-            let texVal=$( ".inpText" ).val();
-            $('.result').text(`You write: ${texVal}`);
+            let texVal=document.querySelector( ".inpText" ).value;
+            document.querySelector('.result').innerHTML=`You write: ${texVal}`;
         }
-    });
+    
 }function loadAction(){
-    $( ".run" ).text("Wait to image");
-    $('.result').append('<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">');
-    $('.result').load('.imag',function() {
-        $('.run').text('Enjoy this image!');
-    });
+    document.querySelector( ".run" ).innerHTML="Wait to image";
+    document.querySelector('.result').insertAdjacentHTML("beforeend",'<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">');
+    document.querySelector('.imag').onload=function() {
+        document.querySelector('.run').innerHTML='Enjoy this image!';
+    };
 }function errAction(){
-    $('.result').append('<img src="assets/scriptsNative.js" class="imatg">');
-    $( '.imatg').on('error',function() {
+    document.querySelector('.result').insertAdjacentHTML("beforeend",'<img src="assets/scriptsNative.js" class="imatg">');
+    document.querySelector( '.imatg').addEventListener('error',function() {
         $('.result').text('there is an error charging the image!');
     });
 }
 function iSubm(){
-    $( ".run" ).text("Click submit input below");
-    $('.result').append('<form action="" class="frm">');
-    $('.frm').append('<input type="text" class="inpText">');
-    $('.frm').append('<input type="submit" class="submitInput">');
+    document.querySelector( ".run" ).innerHTML="Click submit input below";
+    document.querySelector('.result').insertAdjacentHTML("beforeend",'<form id="sub" action="" class="frm">');
+    document.querySelector('.frm').insertAdjacentHTML("beforeend",'<input type="text" class="inpText">');
+    document.querySelector('.frm').insertAdjacentHTML("beforeend",'<input type="submit" class="submitInput">');
     
-    $('.frm').submit(function(event) {
+    document.querySelector('.submitInput').addEventListener('submit',summm)
+    
+    function summm(event) {
         event.preventDefault();
-        let texVal=$( ".inpText" ).val();
-        $('.result').text(` ${texVal}`);
-        $( ".run" ).text("You already submit this text:");
-    });
+        
+       // let texVal=querySelector(".inpText").value;
+       // document.querySelector('.result').innerHTML=` ${texVal}`;
+        document.querySelector( ".run" ).innerHTML="You already submit this text:";
+        
+    };
 }
 function isChange(){
-    $( ".result" ).text("");
-    $('.result').append("<select class='sOptions'><option class='Options'> option 1</option><option class='Options'> option 2</option></select>");
     
-    $('.sOptions').change(function() {
-        $('.run').text('option changed');
-    });
+    document.querySelector('.result').insertAdjacentHTML("beforeend","<select class='sOptions'><option class='Options'> option 1</option><option class='Options'> option 2</option></select>");
+    
+    document.querySelector('.sOptions').onchange=function() {
+        
+        document.querySelector('.result').innerHTML='option changed';
+    };
 }
 function isOver(){
-    $( ".run" ).text("put the cursor over the sphere");
-    $('.result').append("<div class='circle'></div>");
+    document.querySelector( ".run" ).innerHTML="put the cursor over the sphere";
+    document.querySelector('.result').insertAdjacentHTML("beforeend","<div class='circle'></div>");
     let x=2;
     let y=2;
-    $('.circle').mouseover(function() {
+    document.querySelector('.circle').onmouseover=function() {
         
        
         $('.showComandContent').prepend('<p class="text">you are on</p>');
@@ -87,31 +89,33 @@ function isOver(){
         console.log('akitmb')
         x+=Math.random()*(-10);
         y+=Math.random()*10;
-    });
+    };
 }
 function isCliked(){
-    $( ".run" ).text("click checkbox below");
-    $('.result').append("<input id='but' type='checkbox'>Check that");
-    $('.result').css('fontSize','40px');
-    $('#but').css('width','40px');
-    $('#but').css('height','40px');
-    $('#but').on('click',chk);
+    document.querySelector( ".run" ).innerHTML="click checkbox below";
+    document.querySelector('.result').insertAdjacentHTML("beforeend","<input id='but' type='checkbox'>Check that");
+    document.querySelector('.result').style.fontSize='40px';
+    document.querySelector('#but').style.width='40px';
+    document.querySelector('#but').style.height='40px';
+    document.querySelector('#but').addEventListener('click',chk);
     function chk(){
-        if($('#but').is(':checked')){
+        if(document.querySelector('#but').checked=true){
         
-        $('.result').text('God job you checked!!');
+            document.querySelector('.result').innerHTML='God job you checked!!';
         } 
     }
 }
 function selectOpt(){
-    $(".run" ).text("click an element of the list");
-    $('.result').append("<ul class=list><li>hello</li><li>bye bye</li></ul>");
-    $('ul').css('font-size','25px')
-    $('ul.list li').each(function() {
-        $(this).on('click',function(){
-           $('.result').append(this) ;
-           $('ul.list').remove();
-           $('.run').off('click');
+    document.querySelector(".run" ).innerHTML="click an element of the list";
+    document.querySelector('.result').insertAdjacentHTML("beforeend","<ul class=list><li>hello</li><li>bye bye</li></ul>");
+    document.querySelector('ul').style.fontSize='25px';
+    document.querySelectorAll('ul.list li').forEach(function(elem) {
+        elem.addEventListener('click',function(event){
+            let sele=event.target;
+            
+            document.querySelector('.result').innerHTML= sele.textContent;
+            
+            //document.querySelector('.run').removeEventListener('click',selectOpt);
            
         });
         
@@ -119,218 +123,238 @@ function selectOpt(){
 }
 function inElement(){
     
-    $('p.result').add("div");
-    //$('.result span').text('you added this text, congratulations');
+    let myDiv=document.createElement("div");
+    myDiv.textContent='soy un div';
+    myDiv.style.backgroundColor='yellow';
+    myDiv.style.color='black'
+    $('.result').append(myDiv)
+
+    
    
 }
 function killElement(){
-    $( ".run" ).text("");
-    $('.result').text("");
-   /* $( ''). (function() {
-        $('.result').text('');
-    });*/
+    document.querySelector( ".run" ).textContent="remove the text below ";
+    document.querySelector('.result').textContent="hi I,m a text";
+    document.querySelector(".run").addEventListener('click',function() {
+        document.querySelector('.result').remove();
+    });
 }
 function newLastCh(){
-    $( ".run" ).text("apend in this box");
-    $('.showComandContent').append("<p>Congratulations you added a text</p>");
+    document.querySelector( ".run" ).textContent="apend in this box";
+    document.querySelector(".run").insertAdjacentHTML("beforeend","<p>Congratulations you added a text</p>");
    
 }
 function newFirstCh(){
-    $( ".run" ).text("prepend in this box");
-    $('.showComandContent').prepend("<p>Congratulations you preadded a text</p>");
+    document.querySelector( ".run" ).textContent="prepend in this box";
+    document.querySelector(".run").insertAdjacentHTML("afterbegin",'<p>Congratulations you preadded a text</p>');
 }
 function elementAfter(){
-    $( ".run" ).text("create after this button");
-    $('.run').after("<p>Congratulations crate this</p>");
+    document.querySelector( ".run" ).textContent="create after this button";
+    document.querySelector(".run").insertAdjacentHTML("afterend","<p>Congratulations crate this</p>");
 }
 function elementBefore(){
-    $( ".run" ).text("create before this button");
-    $('.run').before("<p>Congratulations crate this</p>");
+    document.querySelector( ".run" ).textContent="create before this button";
+    document.querySelector(".run").insertAdjacentHTML("beforebegin","<p>Congratulations crate this</p>");
 }
 function colantion(){
-    $( ".run" ).text("clone me please!!");
-    $('.run').clone().appendTo(".result");
+    document.querySelector( ".run" ).textContent="clone me please!!";
+    
+    document.querySelector('.result').appendChild(document.querySelector('.run').cloneNode(true));
 }
 function addingClass(){
-    $( ".run" ).text("add a class to the p element below");
-    $('.result').text("<p class='result'>I need a new class</p>");
+    document.querySelector( ".run" ).textContent="add a class to the p element below";
+    document.querySelector('.result').textContent="<p class='result'>I need a new class</p>";
     
-    $('.run').on('click', function(){
-        $('.result').addClass('newClass');
-        $('.newClass').text("<p class='result newClass'>thanks</p>");
+    document.querySelector('.run').addEventListener('click', function(){
+        document.querySelector('.result').classList.add('newClass');
+        document.querySelector('.newClass').textContent="<p class='result newClass'>thanks</p>";
     })
 }
 function removingClass(){
-    $('.result').addClass('newClass');
-    $( ".run" ).text("remove the newClass");
-    $('.result').text("<p class='result newClass'>to many classse ,plese remove one</p>");
+    document.querySelector('.result').classList.add('newClass');
+    document.querySelector( ".run" ).textContent="remove the newClass";
+    document.querySelector('.result').textContent="<p class='result newClass'>to many classse ,plese remove one</p>";
     
-    $('.run').on('click', function(){
-        $('.result').removeClass('newClass')
-        $('.result').text("<p class='result'>thanks</p>");
+    document.querySelector('.run').addEventListener('click', function(){
+        document.querySelector('.result').classList.remove('newClass')
+        document.querySelector('.result').textContent="<p class='result'>thanks</p>";
     })
 }
 function toggClass(){
     $('.result').attr('id','newId');
-    $( ".run" ).text("active and deactive the result class");
-    $('.result').text("The class is activate");
+    document.querySelector( ".run" ).textContent="active and deactive the result class";
+    document.querySelector('.result').textContent="The class is activate";
     
-    $('.run').on('click', function(){
+    document.querySelector('.run').addEventListener('click', function(){
         
-        $('#newId').toggleClass('result');
-       $('#newId').text("deactivate");
+        document.querySelector('#newId').classList.toggle('result');
+        document.querySelector('#newId').textContent="deactivate";
     })
 }
 function newAtribute(){
-    $( ".run" ).text("Disable me!!");
-    $('.result').text("Disable him");
-   $('.run').prop('disabled',true)
+    document.querySelector( ".run" ).textContent="Disable me!!";
+    document.querySelector('.result').textContent="Disable him";
+    document.querySelector('.run').setAttribute("disabled",true)
    if($('.run:disabled')){
-        $( ".run" ).text("¡¡¡oh,no you disabled me!!!!");
-        $('.result').text("The input is disabled");
-        $('.run').css('background-color','grey')
-        $('.result').append("<button class='run' id='newbut'>Make the button able here!!!,come on!!</button>");
-        $( "#newbut" ).css('background-color','red');
-        $( "#newbut" ).on('click',function(){
-            $('.run').css('background-color','black');
-            $('.run').prop('disabled',false);
-            $( ".run" ).text("Disable me!!");
-            $('.result').text("Disable him");
+    document.querySelector( ".run" ).textContent="¡¡¡oh,no you disabled me!!!!";
+    document.querySelector('.result').textContent="The input is disabled";
+    document.querySelector('.run').style.backgroundColor='grey';
+    document.querySelector('.result').insertAdjacentHTML("beforeend","<button class='run' id='newbut'>Make the button able here!!!,come on!!</button>");
+    document.querySelector( "#newbut" ).style.backgroundColor='red';
+    document.querySelector( "#newbut" ).addEventListener('click',function(){
+        document.querySelector('.run').style.backgroundColor='black';
+        document.querySelector('.run').setAttribute("disabled",false);
+        document.querySelector( ".run" ).textContent="Disable me!!";
+        document.querySelector('.result').textContent="Disable him";
         })
     }
 }
 function dataSrc(){
-    $('.result').addClass('newClass');
-    $( ".run" ).text("add an image with data-src");
-    $('.result').append('<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">');
-    $('.imag').attr('data-src',"I'm data");
-    $('.result').append('<p>');
-    $('.result p').text('<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag" data-src="I,m data">');
-    $( ".run" ).text("remove data-src");
-    $( ".run" ).on("click",function(){
+    document.querySelector('.result').classList.add('newClass');
+    document.querySelector( ".run" ).textContent="add an image with data-src";
+    document.querySelector('.result').insertAdjacentHTML("beforeend",'<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">');
+    document.querySelector('.imag').setAttribute("data-src","I'm data");
+    document.querySelector('.result').insertAdjacentHTML("beforeend",'<p></p>');
+    document.querySelector('.result p').textContent='<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag" data-src="I,m data">';
+    document.querySelector( ".run" ).textContent="remove data-src";
+    document.querySelector( ".run" ).addEventListener("click",function(){
         $('.result').empty();
-        $('.result').append('<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">');
-        $('.result').append('<p>');     
-        $('.result p').text('<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">');
-        $('.imag').removeAttr('data-src');
-        $( ".run" ).text("data-src have been removed");
+        document.querySelector('.result').insertAdjacentHTML("beforeend",'<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">');
+        document.querySelector('.result').insertAdjacentHTML("beforeend",'<p></p>');    
+        document.querySelector('.result p').textContent='<img src="assets/ShinChan1.jpg" alt="chin chan" class="imag">';
+        document.querySelector('.imag').removeAttribute('data-src');
+        document.querySelector( ".run" ).textContent="data-src have been removed";
     });
    
 }
 
 function noShow(){
-    $( ".run" ).text("hide the text");
-    $('.result').text("Come on hide me!!!");
-    $( '.run').on('click',function() {
-        $('.result').hide();
-        $( ".run" ).text("The text have been hidden,show it!!");
-        $( '.run').on('click',function(){
-            $( ".run" ).text("Here we have again");
-            $('.result').show();
+    document.querySelector( ".run" ).textContent="hide the text";
+    document.querySelector('.result').textContent="Come on hide me!!!";
+    document.querySelector( '.run').addEventListener('click',function() {
+        document.querySelector('.result').style.display='none';
+        document.querySelector( ".run" ).textContent="The text have been hidden,show it!!";
+        document.querySelector( '.run').addEventListener('click',function(){
+            
+            document.querySelector( ".run" ).textContent="Here we have again";
+            document.querySelector('.result').style.display='block';
         })
     });
 }
 
 function opacityUp(){
-    $( ".run" ).text("Say no Hello!!!");
-    $('.result').text("HOLA");
-    $( ".run" ).on("click",function(){
-        $( ".run" ).text(" naw Say HeLLooo !!!");
-        $('.result').fadeOut('slow');
-        $( ".run" ).on("click",function(){
-            $( ".run" ).text("Say HeLLooo!!!");
-            $('.result').fadeIn('slow');
+    document.querySelector( ".run" ).textContent="Say no Hello!!!";
+    document.querySelector('.result').textContent="HOLA";
+    document.querySelector( ".run" ).addEventListener("click",function(){
+        document.querySelector( ".run" ).textContent=" naw Say HeLLooo !!!";
+        document.querySelector('.result').style.opacity='0';
+        document.querySelector('.result').style.transition='0.5s';
+        document.querySelector( ".run" ).addEventListener("click",function(){
+            document.querySelector( ".run" ).textContent="Say HeLLooo!!!";
+            document.querySelector('.result').style.opacity='1';
+            document.querySelector('.result').style.transition='0.5s';
         })
     });
 }
 
 function runArray(){
-    $( ".run" ).text("Send the items in the list");
-    $('.result').append("<ul><li>hola</li> <li>ketal?</li> <li>estaís?</li> </ul><button id='lis' class='run'>styles</button>");
-    $( "#lis" ).on("click",function(){
-        $('.result li').each(function(){
-            $(this).css('font-weight','400');
-            $(this).css('color','red');
+    document.querySelector( ".run" ).textContent="Send the items in the list";
+    document.querySelector('.result').insertAdjacentHTML("beforeend","<ul><li>hola</li> <li>ketal?</li> <li>estaís?</li> </ul><button id='lis' class='run'>change tyles</button>");
+    document.querySelector( "#lis" ).addEventListener("click",function(){
+        document.querySelectorAll('.result li').forEach(function(elem){
+            elem.style.fontWeight='400';
+            elem.style.color='red';
         })
     });
    
 }
 function papaNode(){
-    $(".run").text("Get the my parent");
-    $('.result').text("Its also mine");
-    $('.run').on('click',function() {
-        console.log($('.run').parent())
-        $('.run').text('The console.log show: ');
-        $('.result').text('div.showComandContent');
-        $('.result').css('color', 'violet')
+    document.querySelector(".run").textContent="Get the my parent";
+    document.querySelector('.result').textContent="Its also mine";
+    document.querySelector('.run').addEventListener('click',function() {
+        console.log(document.querySelector('.run').parentNode)
+        document.querySelector('.run').textContent='The console.log show: ';
+        document.querySelector('.result').textContent='div.showComandContent';
+        document.querySelector('.result').style.color='violet';
     });        
 }
 function sonNode(){
-    $(".run").text("Get me and my brothers");
-    $('.result').text("Its also mine");
-    $('.run').on('click',function() {
-        console.log($('.showComandContent').children())
-        $('.run').text('The console.log show: ');
-        $('.result').text('div.t1, div.vanillaBox, div.jQueryBox, button.ejempleButJq, button.run, button.ejempleButVani, p.result');
-        $('.result').css('color', 'violet')
-        $('.result').css('font-size', '15px')
+    document.querySelector(".run").textContent="Get me and my brothers";
+    document.querySelector('.result').textContent="Its also mine";
+    document.querySelector('.run').addEventListener('click',function() {
+        console.log(document.querySelector('.showComandContent').childNodes)
+        document.querySelector('.run').textContent='The console.log show: ';
+        document.querySelector('.result').textContent='div.t1, div.vanillaBox, div.jQueryBox, button.ejempleButJq, button.run, button.ejempleButVani, p.result';
+        document.querySelector('.result').style.color='violet';
+        document.querySelector('.result').style.fontSize='15px';
     });
 }
 function clssN(){
-    $(".run").text("Get al the elements with the class: specificEvent");
-    $('.run').on('click',function() {
-        $('.specificEvent').css('color', 'yellow');
+    document.querySelector(".run").textContent="Get al the elements with the class: specificEvent";
+    document.querySelector('.run').addEventListener('click',function() {
+        document.querySelector('.specificEvent').style.color='yellow';
        
-        $('.run').text('Good job!!');
-        $('.result').text('Now check the Events descriptions');
+        document.querySelector('.run').textContent='Good job!!';
+        document.querySelector('.result').textContent='Now check the Events descriptions';
         
     });
     
 }
 function idN(){
-    $(".run").text("Get al the element with the iD: tiitle");
-    $('.run').on('click',function() {
-        $('#tiitle').css('font-weight', '100');
-        $('#tiitle').css('color', 'yellow');
-        $('.run').text('Good job!!');
-        $('.result').text('Now check the Title of the web');
+    document.querySelector(".run").textContent="Get al the element with the iD: tiitle";
+    document.querySelector('.run').addEventListener('click',function() {
+        document.querySelector('#tiitle').style.fontWeight='100';
+        document.querySelector('#tiitle').style.color='yellow';
+        document.querySelector('.run').textContent='Good job!!';
+        document.querySelector('.result').textContent='Now check the Title of the web';
         
     });
 
 }
 function classNone(){
-    $('.jsclas').hide();
-    $(".run").text("change display none elements");
+    document.querySelector('.jsclas').style.display='none'
+    document.querySelector(".run").textContent="change display none elements";
     
-    $('.result').append('<button class="run" id="but">show the title and change styles</button>')
-    $('h2:hidden').css('color','yellow')
-    $('#but').on('click',function(){
-        $('.jsclas').show();
+    document.querySelector('.result').insertAdjacentHTML("beforeend",'<button class="run" id="but">show the title and change styles</button>');
+    document.querySelector('#but').addEventListener('click',function(){
+    if(document.querySelector('.jsclas').style.display='none'){
+
+        document.querySelector('.jsclas').style.display='block';
+        document.querySelector('.jsclas').style.color='yellow';
+        document.querySelector('.jsclas').style.fontWeight='700';
+
+            }
     });
     
    
 }
 function selecD(){
-    $(".run").text("Get me and my brothers");
+    document.querySelector(".run").textContent="Get me and my brothers";
     
-    $('.result').append(" <select class='sOptions'><option class='Options'>goode morning</option><option class='Options'>good night</option><option class='Options'>I,m finally crazy?</option><option class='Options'> How long?</option></select>");
-    $('.result').prepend('<button class="run" id="but">Witch I selected ? </button>')
-    $("#but").on('click',function(){
-        $('.result').text($('.Options:selected').text())
+    document.querySelector('.result').insertAdjacentHTML("beforeend","<select class='sOptions'><option class='Options'>goode morning</option><option class='Options'>good night</option><option class='Options'>I,m finally crazy?</option><option class='Options'> How long?</option></select>");
+    document.querySelector('.result').insertAdjacentHTML("beforeend",'<button class="run" id="but">Witch I selected ? </button>')
+    document.querySelector("#but").addEventListener('click',function(){
+       let optins= document.querySelectorAll('.Options')
+       optins.forEach(function(elem){
+           if(elem.selected == true){
+            document.querySelector('.result').textContent=elem.textContent;
+           }
+       })
+        
         $(".run").off('click');
     });
 }
 function aHref(){
-    $(".run").text("Get me and my brothers");
-    $('.result').append("<a>hola</a>");
-    $('.result').append("<a>ketal?</a>");
-    $('.result').append("<a>estaís?</a>");
-    $('.result').append("<button id='lis' class='run'>change the color and url of the first</button>");
-    $('.result a').attr('href','https://images-na.ssl-images-amazon.com/images/I/81EOy3o-eJL.jpg')
-    $('#lis').on('click',function(){
-        $('.result a:first-child').attr('href','https://www.google.com/imgres?imgurl=https%3A%2F%2Fthehighdefinitionwallpapers.com%2Fwp-content%2Fuploads%2F2020%2F02%2FNaturalFlowerNatural-Orange-butterfly-on-yellow-flowers-nice-background.jpg&imgrefurl=https%3A%2F%2Fthehighdefinitionwallpapers.com%2Fnatural-orange-butterfly-on-yellow-flowers-nice-background%2F&tbnid=U1D1C3OEPpzqQM&vet=12ahUKEwjt3ZaV_JnwAhUS04UKHYjtCQoQMygdegUIARDNAg..i&docid=qUF1M32c321_gM&w=1920&h=1200&q=flowers%20nice&ved=2ahUKEwjt3ZaV_JnwAhUS04UKHYjtCQoQMygdegUIARDNAg')
-        $('.result a:first-child').css('color','yellow')
-        $(".run").off('click')
+    document.querySelector(".run").textContent="Get me and my brothers";
+    document.querySelector('.result').append("<a>hola</a>");
+    document.querySelector('.result').append("<a>ketal?</a>");
+    document.querySelector('.result').append("<a>estaís?</a>");
+    document.querySelector('.result').append("<button id='lis' class='run'>change the color and url of the first</button>");
+    document.querySelector('.result a').attr('href','https://images-na.ssl-images-amazon.com/images/I/81EOy3o-eJL.jpg')
+    document.querySelector('#lis').on('click',function(){
+        document.querySelector('.result a:first-child').attr('href','https://www.google.com/imgres?imgurl=https%3A%2F%2Fthehighdefinitionwallpapers.com%2Fwp-content%2Fuploads%2F2020%2F02%2FNaturalFlowerNatural-Orange-butterfly-on-yellow-flowers-nice-background.jpg&imgrefurl=https%3A%2F%2Fthehighdefinitionwallpapers.com%2Fnatural-orange-butterfly-on-yellow-flowers-nice-background%2F&tbnid=U1D1C3OEPpzqQM&vet=12ahUKEwjt3ZaV_JnwAhUS04UKHYjtCQoQMygdegUIARDNAg..i&docid=qUF1M32c321_gM&w=1920&h=1200&q=flowers%20nice&ved=2ahUKEwjt3ZaV_JnwAhUS04UKHYjtCQoQMygdegUIARDNAg')
+        document.querySelector('.result a:first-child').css('color','yellow')
+        document.querySelector(".run").off('click')
     })
 
 }
@@ -340,8 +364,12 @@ function frst(){
   
 }
 function killThemAll(){
-     $('div.showComandContent').empty()
-    
+    let nodelis=document.querySelector('div.showComandContent').childNodes;
+    console.log(nodelis)
+    nodelis.forEach(function(elem){
+        elem.remove();
+    })
+    console.log(nodelis)
 }
 function move(){
     $(".run").text("Get me and my brothers");
