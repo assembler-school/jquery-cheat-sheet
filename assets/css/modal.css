@@ -1,0 +1,148 @@
+#modal-section {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: -80px;
+  height: 200vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.4s, background-color 0.4s 0.2s,
+    backdrop-filter 0.8s 0.2s;
+  opacity: 1;
+  backdrop-filter: blur(3px);
+}
+#modal-section.hidden {
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  transition: opacity 0.2s, backdrop-filter 0.2s, background-color 0.2s,
+    opacity 0.2s, height 0s 0.4s;
+  background-color: rgba(255, 255, 255, 0);
+}
+#modal-content {
+  position: relative;
+  margin: 20vh auto 0 auto;
+  width: 60vw;
+  min-width: 320px;
+  background-color: whitesmoke;
+  border-radius: 6px;
+  overflow: auto;
+  box-shadow: rgba(15, 15, 15, 0.75) 5px 5px 5px 5px;
+}
+.modal-header h3 {
+  padding: 10px;
+  color: var(--darkest-grey);
+  font-size: xx-large;
+  user-select: none;
+}
+.modal-button.fa-window-close {
+  cursor: pointer;
+  margin: 10px 10px 0 0;
+  float: right;
+  font-size: xx-large;
+  color: var(--darkest-grey);
+  background-color: transparent;
+}
+.modal-button.fa-window-close:hover {
+  transform: scale(1.05);
+}
+.modal-body {
+  width: 100%;
+  height: 93%;
+  display: flex;
+  flex-flow: column;
+}
+.demo{
+  padding: 22px 20px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.demo.hidden {
+  display: none;
+}
+.demo-try {
+  background-color:whitesmoke;
+  text-align: center;
+  width: 40%;
+  height: 240px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1.5px solid rgb(199, 199, 199);
+  overflow: auto;
+  word-break: keep-all;
+  flex-grow: 1;
+}
+#vanilla-switch {
+  background-color: var(--vanilla-header);
+  color: var(--darkest-grey);
+  padding: 10px 15px;
+  cursor: pointer;
+}
+#vanilla-switch:hover {
+  background-color: #b9ab4f;
+  transition: 300ms ease-in;
+}
+#vanilla-sheet {
+  background-color: var(--vanilla-body);
+  color: var(--darkest-grey);
+}
+#jquery-switch {
+  background-color: var(--jQuery-header);
+  color: whitesmoke;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+#jquery-switch:hover {
+  background-color: #1e5175;
+  transition: 200ms ease-in;
+}
+#jquery-demo {
+  background-color: var(--jQuery-body);
+}
+#jquery-demo p {
+  color: whitesmoke;
+}
+#jquery-demo .demo-try p {
+  color: black;
+}
+
+code {
+  display: block;
+  margin: 10px 0;
+  background-color: var(--code-bg);
+  padding: 5px 10px;
+  border-radius: 6px;
+  line-height: 22px;
+  font-size: 17px;
+  font-family: 'Courier New', monospace;
+  flex-grow: 1;
+  white-space: pre-wrap;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+@media (pointer: coarse) and (orientation: portrait) {
+  #modal-content {
+      margin: 12vh auto 0 auto;
+      zoom: 1.5;
+  }
+  #vanilla-sheet, #jquery-demo {
+    zoom: 1.5;
+  }
+}

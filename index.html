@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon32.ico">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>JQuery Cheat Sheet</title>
+</head>
+<body>
+    <header class="header">
+        <a href="https://api.jquery.com/" target="_blank"><img src="assets/img/jqueryLogo.png" /></a>
+        <h1>Cheat Sheet</h1>
+    </header>
+    <main>
+        <article class="events">
+            <h1>Events</h1>
+            <ul>
+                <li data-function="events01">HTML Document loaded</li>
+                <li data-function="events02">HTML item clicked</li>
+                <li data-function="events03">HTML item double clicked</li>
+                <li data-function="events04">Keyboard key pressed</li>
+                <li data-function="events05">Mouse cursor moved</li>
+                <li data-function="events06">Text input value changed</li>
+                <li data-function="events07">Loaded image</li>
+                <li data-function="events08">Loading image failed</li>
+                <li data-function="events09">Submitted form</li>
+                <li data-function="events10">Select element option changed</li>
+                <li data-function="events11">Moved mouse over element</li>
+                <li data-function="events12">Checkbox state changed</li>
+                <li data-function="events13">UL list item clicked</li>
+            </ul>
+        </article>
+        <article class="functionSelectors">
+            <h1>Functions and Selectors</h1>
+            <ul>
+                <li data-function="functionsSelectors01">Create an HTML element</li>
+                <li data-function="functionsSelectors02">Remove an HTML element</li>
+                <li data-function="functionsSelectors03">Append an HTML element(to a parent element)</li>
+                <li data-function="functionsSelectors04">Prepend an HTML element(to a parent element)</li>
+                <li data-function="functionsSelectors05">Create and add an HTML element after another element</li>
+                <li data-function="functionsSelectors06">Create and add an HTML element before another element</li>
+                <li data-function="functionsSelectors07">Clone an HTML element (within other element)</li>
+                <li data-function="functionsSelectors08">Add a class to an HTML item</li>
+                <li data-function="functionsSelectors09">Remove a class to an HTML item</li>
+                <li data-function="functionsSelectors10">Toggle a class of an HTML item</li>
+                <li data-function="functionsSelectors11">Add a disabled attribute to an HTML button</li>
+                <li data-function="functionsSelectors12">Remove the disabled attribute of an HTML button</li>
+                <li data-function="functionsSelectors13">Set a data-src attribute to a img element</li>
+                <li data-function="functionsSelectors14">Remove the data-src attribute of the img element</li>
+                <li data-function="functionsSelectors15">Hide an HTML element on click (display: none)</li>
+                <li data-function="functionsSelectors16">Show an HTML element on click (display: block)</li>
+                <li data-function="functionsSelectors17">Fade in an HTML element using jQuery</li>
+                <li data-function="functionsSelectors18">Fade out an HTML element using jQuery</li>
+                <li data-function="functionsSelectors19">Iterate a collection of elements and apply a change of style on them</li>
+                <li data-function="functionsSelectors20">Get the parent element of a certain element and change its font weight</li>
+                <li data-function="functionsSelectors21">Get the collection of children of a certain element and change its font weight</li>
+                <li data-function="functionsSelectors22">Get all the elements that have a certain class and change their font weight</li>
+                <li data-function="functionsSelectors23">Get an item by id and change its font weight</li>
+                <li data-function="functionsSelectors24">Get all the elements that have a certain class and a certain property</li>
+                <li data-function="functionsSelectors25">Get select element selected option(attribute selected)</li>
+                <li data-function="functionsSelectors26">Change the href attribute of the first &lt;a&gt; element</li>
+                <li data-function="functionsSelectors27">Show an alert with the value of the first &lt;input&gt; of the page</li>
+                <li data-function="functionsSelectors28">Remove all items from a specific selector</li>
+                <li data-function="functionsSelectors29">Animate an item after 2 seconds from the initial page load</li>
+            </ul>
+        </article>
+    </main>
+    <section id="modal-section" class="hidden">
+        <div id="modal-content">
+            <div class="modal-header">
+                <i class="modal-button fas fa-window-close"></i>
+                <h3 id="modal-title">HTML Document Loaded</h3>
+            </div>
+            <div class="modal-body">
+                <h4 id="vanilla-switch">Vanilla JS</h4>
+                <div id="vanilla-sheet">
+                    <div class="demo vanilla">
+                        <div class="flex">
+                            <div>
+                                <p>Example:</p>
+                                <code id="vanillaCode"></code>
+                            </div>
+                            <div id="vanillaTry" class="demo-try"></div>
+                        </div>
+                    </div>
+                </div>
+                <h4 id="jquery-switch">jQuery</h4>
+                <div id="jquery-demo">
+                    <div class="demo jquery">
+                        <div class="flex">
+                            <div>
+                                <p>Example:</p>
+                                <code id="jqueryCode"></code>
+                            </div>
+                            <div id="jqueryTry" class="demo-try"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/js/vanilla.js"></script>
+    <script src="./assets/js/jQuery.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
