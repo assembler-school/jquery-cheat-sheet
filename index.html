@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Cheat Sheet</title>
+    <!-- Add CDN's here -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="myBody">
+    <header id="main-header" class="main-header-class">
+        <h1>jQuery Cheat Sheet</h1>
+    </header>
+    <!-- First -->
+    <div id="all-container-first" class="all-container-class">
+        <article class="article-class">
+            <!-- Section -->
+            <div class="container-class">
+                <h2>SELECTORS</h2>
+                <section class="section-selectors-class">
+                    <ul class="ul-selectors-class">
+                        <h4>GET</h4>
+                        <li class="get">parentElement</li>
+                        <li class="get">childrenCollection</li>
+                        <li class="get">collectionByClass</li>
+                        <li class="get">collectionByID</li>
+                        <li class="get">collectionByClassAndAttribute</li>
+                    </ul>
+                </section>
+            </div>
+            <div id="container-2" class="container-class">
+                <h2>EVENTS</h2>
+                <section class="section-events-class">
+                    <ul class="ul-events-class">
+                        <h4>HTML</h4>
+                        <li class="html">onLoad</li>
+                        <h4>CURSOR</h4>
+                        <li class="cursor">click</li>
+                        <li class="cursor">doubleClick</li>
+                        <li class="cursor">CursorMovement</li>
+                        <li class="cursor">onMouseOver</li>
+                        <h4>KEYBOARD</h4>
+                        <li class="keyboard">keypress</li>
+                        <h4>IMAGES</h4>
+                        <li class="images">loadedImage</li>
+                        <li class="images">loadedImageFail</li>
+                        <h4>DATA</h4>
+                        <li class="data">submittedForm</li>
+                        <li class="data">InputValueChange</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </div>
+    <!-- Second -->
+    <div id="all-container-second" class="all-container-class">
+        <article class="article-class">
+            <!-- Section -->
+            <div class="container-class">
+                <h2>FUNCTIONS</h2>
+                <section class="section-functions-class">
+                    <ul class="ul-functions-class">
+                        <h4>HTML Elements</h4>
+                        <li class="htmlElements">createHtmlElement</li>
+                        <li class="htmlElements">removeHtmlElement</li>
+                        <li class="htmlElements">createHtmlElement</li>
+
+                        <h4>DOM Manipulation</h4>
+                        <li class="domManipulation">appendHtmlElement</li>
+                        <li class="domManipulation">prependHtmlElement</li>
+                        <li class="domManipulation">addAfterAnother</li>
+                        <li class="domManipulation">addBeforeAnother</li>
+
+                        <h4>Classes</h4>
+                        <li class="classes">addClassToHtmlElement</li>
+                        <li class="classes">removeClassToHtmlElement</li>
+                        <li class="classes">toggleClassToHtmlElement</li>
+
+                        <h4>Attributes</h4>
+                        <li class="Attributes">addDisabledAttr</li>
+                        <li class="Attributes">removeDisabledAttr</li>
+                        <li class="Attributes">setDataSrcAttr</li>
+                        <li class="Attributes">removeDataSrcAttr</li>
+                        <li class="Attributes">changeHrfAttr</li>
+                        <h4>Element Display</h4>
+                        <li class="elementDisplay">hideHtmlElementOnClick</li>
+                        <li class="elementDisplay">showHtmlElementOnClick</li>
+                        <li class="elementDisplay">fadeInHtmlElement</li>
+                        <li class="elementDisplay">fadeOutHtmlElement</li>
+                        <li class="elementDisplay">delayedAnimateAfterPageLoad</li>
+                        <h4>Functions</h4>
+                        <li class="functions">IterateCollectionElements</li>
+                        <li class="functions">getSelectedOptionsOfSelect</li>
+                        <li class="functions">getInputValue</li>
+
+                    </ul>
+                </section>
+            </div>
+            <!-- Section -->
+        </article>
+    </div>
+    <div class="container-right-class" id="container-right">
+        <div class="jquery-to-jsVanilla-class buttons-class">
+            <button type="button" name="jsVanilla" id="jsVanilla" class="button-class glow-button">JsVanilla</button>
+            <button type="button" name="output" id="output-js" class="button-class glow-button">Output JS</button>
+            <button type="button" name="jQuery" id="jQuery" class="button-class glow-button">JQuery</button>
+            <button type="button" name="output" id="output-jq" class="button-class glow-button">Output JQ</button>
+            <button type="button" name="clear" id="clear" class="button-class glow-button">Clear</button>
+        </div>
+        <div class="jquery-to-jsVanilla-class description-list-class">
+            <h2>¿What do you want to use?</h2>
+        </div>
+        <div class="jquery-to-jsVanilla-class code-class">
+            <h2>This is the function</h2>
+        </div>
+        <div class="jquery-to-jsVanilla-class output-class">
+            <h2>Result</h2>
+        </div>
+    </div>
+</body>
+<script src="main.js" type="text/javascript"></script>
+<script src="vanilla.js" type="text/javascript"></script>
+<script src="jquery.js" type="text/javascript"></script>
+
+</html>

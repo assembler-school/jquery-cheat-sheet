@@ -1,0 +1,258 @@
+        /* CSS - Vars */
+        
+         :root {
+            --background-div: rgb(0, 0, 0);
+            --background-text: rgb(28, 160, 41);
+            --background-buttons: rgb(255, 255, 255);
+            /* --font: 'Zen Dots'; */
+            --font: 'Zen Dots';
+            --spotOne: #26115a;
+            --spotTwo: #ec008c;
+            --spotThree: #ff0000;
+        }
+        /* CSS - Root */
+        
+        * {
+            /* border: 1px solid rgb(255, 255, 255); */
+            /* //font-family: var(--font); */
+            font-family: 'Open Sans Condensed', sans-serif;
+            color: rgb(43, 255, 0);
+            font-size: 9px;
+            text-align: center;
+            /* cursor: url("Assets/gun-target.png") 32 32, auto; */
+        }
+        /* CSS - Generals */
+        
+        ul {
+            list-style-type: none;
+            max-width: 70%;
+        }
+        
+        li {
+            text-align: right;
+        }
+        
+        li:hover {
+            font-size: 10px;
+            color: #fff;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3013d6, 0 0 40px #3013d6, 0 0 50px #3013d6, 0 0 60px #3013d6, 0 0 70px #3013d6;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #4dff5cb2, 0 0 40px #4dff5cb2, 0 0 50px #4dff5cb2, 0 0 60px #4dff5cb2, 0 0 70px #4dff5cb2, 0 0 80px #4dff5cb2;
+            }
+        }
+        
+        p {
+            color: rgb(104, 255, 4);
+            text-align: center;
+            font-size: 1vw;
+        }
+        
+        ul li::marker {
+            content: "▶";
+        }
+        
+        h1 {
+            font-size: 5vw;
+            text-shadow: 4px 4px 0px #ca0b0b;
+            mix-blend-mode: screen;
+            animation: fadeIn 2.5s linear forwards;
+        }
+        
+        h2 {
+            color: rgba(0, 38, 255, 0.767);
+            text-align: center;
+            font-size: 1vw;
+        }
+        
+        h3 {
+            text-shadow: 4px 4px 0px #000000;
+            mix-blend-mode: screen;
+            animation: fadeIn 2.5s linear forwards;
+        }
+        
+        h4 {
+            color: rgba(255, 255, 255, 0.705);
+            font-size: 1vw;
+            text-align: left;
+        }
+        /* CSS - Body */
+        
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            /* Background-gradient */
+            background: linear-gradient(134deg, #ffffff, #1a1a97, #1900ff, #0fa114, #54c421, #8d02ffd5, #7801ff79);
+            background-size: 1400% 1400%;
+            -webkit-animation: AnimationName 30s ease infinite;
+            -moz-animation: AnimationName 30s ease infinite;
+            animation: AnimationName 30s ease infinite;
+        }
+        
+        @-webkit-keyframes AnimationName {
+            0% {
+                background-position: 0% 20%
+            }
+            50% {
+                background-position: 100% 81%
+            }
+            100% {
+                background-position: 0% 20%
+            }
+        }
+        
+        @-moz-keyframes AnimationName {
+            0% {
+                background-position: 0% 20%
+            }
+            50% {
+                background-position: 100% 81%
+            }
+            100% {
+                background-position: 0% 20%
+            }
+        }
+        
+        @keyframes AnimationName {
+            0% {
+                background-position: 0% 20%
+            }
+            50% {
+                background-position: 100% 81%
+            }
+            100% {
+                background-position: 0% 20%
+            }
+            /* Background-gradient */
+        }
+        /* CSS - Div - Header */
+        
+        .main-header-class {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            text-transform: uppercase;
+            width: 8%;
+            height: 70%;
+            margin-left: 1%;
+            margin-right: 1%;
+            /* border: 2px solid var(--background-buttons);
+    border-radius: 10px; */
+        }
+        
+        .main-header-class h1 {
+            display: flex;
+            font-size: xx-large;
+        }
+        /* CSS - Div - Left */
+        
+        .all-container-class {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: left;
+            background-color: var(--background-div);
+            background-size: cover;
+            width: 30%;
+            height: 99%;
+            margin-left: 4%;
+            margin-right: 2%;
+            border: 2px solid var(--background-buttons);
+            border-radius: 10px;
+            word-wrap: break-word;
+            float: left;
+            overflow-y: auto;
+            height: 100%;
+        }
+        /* CSS - Div - Right */
+        
+        .container-right-class {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: rgb(0, 0, 0);
+            width: 70%;
+            height: 99%;
+            margin-left: 2%;
+            margin-right: 4%;
+            border: 2px solid var(--background-buttons);
+            border-radius: 10px;
+            word-wrap: break-word;
+            float: left;
+            overflow-y: auto;
+            height: 100%;
+        }
+        
+        .jquery-to-jsVanilla-class {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            color: rgb(29, 179, 79);
+            width: 90%;
+            height: 21%;
+            border: 2px solid var(--background-buttons);
+            border-radius: 10px;
+            margin-top: 5%;
+            word-wrap: break-word;
+            display: block;
+            text-align: center;
+        }
+        /* CSS - Button */
+        
+        .button-class {
+            height: 4rem;
+            width: 8rem;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.178);
+            color: rgb(251, 255, 0);
+            border-radius: 3px;
+            font-weight: normal;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            margin-top: 5%;
+            font-size: small;
+        }
+        
+        .glow-button:hover {
+            color: rgba(255, 255, 255, 1);
+            box-shadow: 0 5px 5px rgba(0, 17, 255, 0.329);
+        }
+        /* CSS - Description */
+        
+        .description-text {
+            font-size: small;
+            list-style-type: none;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        
+        .description-text:hover {
+            color: black;
+        }
+        
+        .output-text {
+            font-size: small;
+            list-style-type: none;
+            text-align: center;
+            color: rgb(46, 43, 190);
+        }
+        
+        .code-text {
+            font-size: small;
+            list-style-type: none;
+            text-align: center;
+            color: rgb(255, 0, 0);
+        }
