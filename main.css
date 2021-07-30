@@ -1,3 +1,8 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 .h1_page {
   text-align: center;
 }
@@ -8,12 +13,19 @@
   justify-content: center;
   align-content: start;
   justify-items: center;
+  align-items: center;
   border: 1px black solid;
+  background-color: rgb(243, 240, 235);
 }
 
 .p_ul {
   list-style: none;
   text-align: center;
+}
+
+.pointer:hover {
+  font-weight: bold;
+  transform: scale(1.1);
 }
 
 .pointer {
@@ -25,4 +37,27 @@
 .page_button {
   cursor: pointer;
   text-align: center;
+  cursor: pointer;
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+.page_button:hover {
+  cursor: pointer;
+  text-align: center;
+  transform: scale(1.1);
+  background-color: rgb(248, 194, 123);
+  font-weight: bold;
+}
+
+.result {
+  font-weight: bold;
+}
+
+.h2_page {
+  font-size: 2.4rem;
+}
+
+.h1_page {
+  font-size: 3rem;
 }
