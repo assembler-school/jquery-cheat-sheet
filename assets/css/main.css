@@ -1,3 +1,7 @@
-@import 'base.css';
-@import 'typography.css';
-@import 'layout.css';
+@import 'base/variables.css';
+@import 'base/base.css';
+@import 'base/typography.css';
+@import 'layout/layout.css';
+@import 'utils/flexbox.css';
+@import 'components/logo.css';
+@import 'components/accordion.css';
