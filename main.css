@@ -1,0 +1,28 @@
+.h1_page {
+  text-align: center;
+}
+.grid__2x3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  justify-content: center;
+  align-content: start;
+  justify-items: center;
+  border: 1px black solid;
+}
+
+.p_ul {
+  list-style: none;
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: none;
+}
+
+.page_button {
+  cursor: pointer;
+  text-align: center;
+}
