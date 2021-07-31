@@ -1,0 +1,42 @@
+EVENTS
+
+
+    //1 - Create an event when the HTML document has been loaded and you can manipulate it with JavaScript
+
+        //! jQuery
+            $(document).ready(() => {});
+
+        //? VanillaJS
+            document.addEventListener("DOMContentLoaded", () => {});
+
+
+        //*Source: 
+            https://www.techiediaries.com/javascript/document-ready-vs-window-onload-vs-window-load/
+            https://www.youtube.com/watch?v=OFKDCJIgxUk
+
+
+    //2 - create an event when an HTML item has been clicked
+
+        //! jQuery
+            $("html-item-selector").on("click", (event) => {});
+
+        //? VanillaJS
+            document.querySelector("html-item-selector").addEventListener("click", (event) => {});
+
+
+    //3 - create an event when an HTML item has been double-clicked
+
+        //! jQuery
+            $("html-item-selector").on("dblclick", (event) => {});
+
+        //? VanillaJS
+            document.querySelector("html-item-selector").addEventListener("dblclick", (event) => {});
+
+
+    //4 - create an event when the user presses a key on the keyboard
+
+        //! jQuery
+            $("html-item-selector").on("click", (event) => {});
+
+        //? VanillaJS
+            document.querySelector("html-item-selector").addEventListener("click", (event) => {});
