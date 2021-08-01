@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link rel="icon" type="image/icon" href="favicon.ico">
-  <script src="assets/js/vanilla.js" defer></script>
+  <script type="module" src="assets/js/vanilla.js" defer></script>
   <script src="assets/js/jquery.js" defer></script>
   <title>JQuery CheatSheet</title>
 </head>
@@ -19,22 +19,116 @@
     <img src="assets/images/logo.svg" alt="Logo" class="logo" />
     <h1>CheatSheet</h1>
   </header>
-  <main class="grid">
-    <section id="events" class="cell-primary flex-center">
-      <a href="#events">
-        <h2>Events</h2>
-      </a>
+  <main class="grid grid-3-to-1 padding-1">
+    <section class="cell cell-primary">
+      <h2 class="text-center">Events</h2>
+      <ul>
+        <li data-open="eventLoad">HTML document loaded (DOMContentLoaded)</li>
+        <li data-open="eventClick">HTML item clicked</li>
+        <li>HTML item double clicked .dblclick()</li>
+        <li>Mouse cursor moved .mousemove()</li>
+        <li>Mouse over an element .mouseover()</li>
+        <li>Keyboard press a key .keypress()</li>
+        <li>Form is submitted .submit()</li>
+        <li>Change a value .change()</li>
+        <li>Form is submitted .select()</li>
+        <li>Image is loaded .load()</li>
+        <li>Image fails to load (if you write an incorrect image url the loading of the image will fail)</li>
+        <li>User changes option select</li>
+        <li>Checkbox checked/unchecked</li>
+        <li>Show item clicked (When a ul list item is clicked)</li>
+      </ul>
     </section>
-    <section id="functions" class="cell-secondary flex-center">
-      <a href="#functions">
-        <h2>Functions</h2>
-      </a>
+    <section class="cell cell-secondary">
+      <h2 class="text-center">Functions</h2>
+      <ul>
+        <li>Create an HTML element with any text value</li>
+        <li>Remove an HTML element with any text value</li>
+        <li>Append an HTML element with any text value to a parent element</li>
+        <li>Prepend an HTML element with any text value to a parent element</li>
+        <li>Create and add an HTML element with any text value after another element</li>
+        <li>Create and add an HTML element with any text value before another element</li>
+        <li>Clone an HTML element within other element</li>
+        <li>Add a class to an HTML item</li>
+        <li>Remove a class to an HTML item</li>
+        <li>Toggle a class of an HTML item</li>
+        <li>Add a disabled attribute to an HTML button</li>
+        <li>Remove the disabled attribute of an HTML button</li>
+        <li>Set a data-src attribute to a img element</li>
+        <li>Remove the data-src attribute of the img element</li>
+        <li>Hide an HTML element on click (display: none)</li>
+        <li>Show an HTML element on click (display: block)</li>
+        <li>Fade in an HTML element using jQuery</li>
+        <li>Fade out an HTML element using jQuery</li>
+        <li>Iterate a collection of elements and apply a change of style on them</li>
+        <li>Get the parent element of a certain element and change its font weight</li>
+        <li>Get the collection of children of a certain element and change its font weight</li>
+      </ul>
     </section>
-    <section id="selectors" class="cell-tertiary flex-center">
-      <a href="#selectors">
-        <h2>Selectors</h2>
-      </a>
+    <section class="cell cell-tertiary">
+      <h2 class="text-center">Selectors</h2>
+      <ul>
+        <li>Get all the elements that have a certain class and change their font weight</li>
+        <li>Get an item by id and change its font weight</li>
+        <li>Get all the elements that have a certain class and the display property of none and change their font color</li>
+        <li>Get the options of a select element that are selected (attribute selected)</li>
+        <li>Change the href attribute of the first <a> element (You have to create several <a> elements)</li>
+        <li>Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)</li>
+        <li>Remove all items from a specific selector</li>
+        <li>Animate an item after 2 seconds from the initial page load</li>
+      </ul>
     </section>
   </main>
+  <!-- Event load modal -->
+  <article class="modal flex-center" id="eventLoad" data-animation="zoomInOut">
+    <div class="modal__content">
+      <button class="button--close" data-close>X</button>
+      <h1>Event load</h1>
+      <section class="grid grid-2 tab">
+        <input name="tab-nav-el" type="radio" id="jquery-el" class="tab__radiobutton" checked="checked" />
+        <div class="tab__content">
+          <div class="tab__inner">
+            <h2>JQuery</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas voluptates dolore id aspernatur odit minus quidem deleniti ab rerum exercitationem dolores neque officiis explicabo possimus blanditiis sed, voluptatem ut. Ab?</p>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="jquery-el">JQuery</label>
+        <input name="tab-nav-el" type="radio" id="Vanillajs-el" class="tab__radiobutton" />
+        <div class="tab__content">
+          <div class="tab__inner">
+            <h2>Vanilla JS</h2>
+            <p>Amet consectetur adipisicing elit. Sed ipsam ad exercitationem, quo quae ullam, quidem laudantium corporis quis minima debitis nesciunt repellat. Quos dolore ex quis voluptas, minus ut?</p>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="Vanillajs-el">Vanilla JS</label>
+      </section>
+    </div>
+  </article>
+
+  <!-- Event click modal -->
+  <article class="modal flex-center" id="eventClick" data-animation="zoomInOut">
+    <div class="modal__content">
+      <button class="button--close" data-close>X</button>
+      <h1>Event click</h1>
+      <section class="grid grid-2 tab">
+        <input name="tab-nav" type="radio" id="jquery" class="tab__radiobutton" checked="checked" />
+        <div class="tab__content">
+          <div class="tab__inner">
+            <h2>JQuery</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas voluptates dolore id aspernatur odit minus quidem deleniti ab rerum exercitationem dolores neque officiis explicabo possimus blanditiis sed, voluptatem ut. Ab?</p>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="jquery">JQuery</label>
+        <input name="tab-nav" type="radio" id="Vanillajs" class="tab__radiobutton" />
+        <div class="tab__content">
+          <div class="tab__inner">
+            <h2>Vanilla JS</h2>
+            <p>Amet consectetur adipisicing elit. Sed ipsam ad exercitationem, quo quae ullam, quidem laudantium corporis quis minima debitis nesciunt repellat. Quos dolore ex quis voluptas, minus ut?</p>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="Vanillajs">Vanilla JS</label>
+      </section>
+    </div>
+  </article>
 </body>
 </html>
