@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-content: center;
+}
+
+.specific {
+  display: flex;
+  flex-direction: row;
+}
+
+.common {
+  text-align: center;
+}
+
+.vanilla {
+  width: 50%;
+  text-align: center;
+}
+.jquery {
+  width: 50%;
+  text-align: center;
+}
