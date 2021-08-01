@@ -38,6 +38,7 @@ $("#button_selectors").on("click", function () {
 //   });
 // }
 
+//EVENTS
 $("#e1").on("click", function () {
   vanillaResult(vanillae1);
   jqueryResult(jquerye1);
@@ -101,4 +102,151 @@ $("#e12").on("click", function () {
 $("#e13").on("click", function () {
   vanillaResult(vanillae13);
   jqueryResult(jquerye13);
+});
+
+//FUNCTIONS
+$("#f1").on("click", function () {
+  vanillaResult(vanillaf1);
+  jqueryResult(jqueryf1);
+});
+
+$("#f2").on("click", function () {
+  vanillaResult(vanillaf2);
+  jqueryResult(jqueryf2);
+});
+
+$("#f3").on("click", function () {
+  vanillaResult(vanillaf3);
+  jqueryResult(jqueryf3);
+});
+
+$("#f4").on("click", function () {
+  vanillaResult(vanillaf4);
+  jqueryResult(jqueryf4);
+});
+
+$("#f5").on("click", function () {
+  vanillaResult(vanillaf5);
+  jqueryResult(jqueryf5);
+});
+
+$("#f6").on("click", function () {
+  vanillaResult(vanillaf6);
+  jqueryResult(jqueryf6);
+});
+
+$("#f7").on("click", function () {
+  vanillaResult(vanillaf7);
+  jqueryResult(jqueryf7);
+});
+
+$("#f8").on("click", function () {
+  vanillaResult(vanillaf8);
+  jqueryResult(jqueryf8);
+});
+
+$("#f9").on("click", function () {
+  vanillaResult(vanillaf9);
+  jqueryResult(jqueryf9);
+});
+
+$("#f10").on("click", function () {
+  vanillaResult(vanillaf10);
+  jqueryResult(jqueryf10);
+});
+
+$("#f11").on("click", function () {
+  vanillaResult(vanillaf11);
+  jqueryResult(jqueryf11);
+});
+
+$("#f12").on("click", function () {
+  vanillaResult(vanillaf12);
+  jqueryResult(jqueryf12);
+});
+
+$("#f13").on("click", function () {
+  vanillaResult(vanillaf13);
+  jqueryResult(jqueryf13);
+});
+
+$("#f14").on("click", function () {
+  vanillaResult(vanillaf14);
+  jqueryResult(jqueryf14);
+});
+
+//FUNCTIONS
+$("#s1").on("click", function () {
+  vanillaResult(vanillas1);
+  jqueryResult(jquerys1);
+});
+
+$("#s2").on("click", function () {
+  vanillaResult(vanillas2);
+  jqueryResult(jquerys2);
+});
+
+$("#s3").on("click", function () {
+  vanillaResult(vanillas3);
+  jqueryResult(jquerys3);
+});
+
+$("#s4").on("click", function () {
+  vanillaResult(vanillas4);
+  jqueryResult(jquerys4);
+});
+
+$("#s5").on("click", function () {
+  vanillaResult(vanillas5);
+  jqueryResult(jquerys5);
+});
+
+$("#s6").on("click", function () {
+  vanillaResult(vanillas6);
+  jqueryResult(jquerys6);
+});
+
+$("#s7").on("click", function () {
+  vanillaResult(vanillas7);
+  jqueryResult(jquerys7);
+});
+
+$("#s8").on("click", function () {
+  vanillaResult(vanillas8);
+  jqueryResult(jquerys8);
+});
+
+$("#s9").on("click", function () {
+  vanillaResult(vanillas9);
+  jqueryResult(jquerys9);
+});
+
+$("#s10").on("click", function () {
+  vanillaResult(vanillas10);
+  jqueryResult(jquerys10);
+});
+
+$("#s11").on("click", function () {
+  vanillaResult(vanillas11);
+  jqueryResult(jquerys11);
+});
+
+$("#s12").on("click", function () {
+  vanillaResult(vanillas12);
+  jqueryResult(jquerys12);
+});
+
+$("#s13").on("click", function () {
+  vanillaResult(vanillas13);
+  jqueryResult(jquerys13);
+});
+
+$("#s14").on("click", function () {
+  vanillaResult(vanillas14);
+  jqueryResult(jquerys14);
+});
+
+$("#s15").on("click", function () {
+  vanillaResult(vanillas15);
+  jqueryResult(jquerys15);
 });
