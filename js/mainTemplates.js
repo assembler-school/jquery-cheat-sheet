@@ -23,10 +23,10 @@ const mainTemplate = `<template id ="main-template">
 </div>
 </template>`;
 
-const specificTemplate = `<template id ="specific" data-page="1">
+const specificTemplate = `<template id ="specific">
     <div id="specific" class="specific">
-      <div id="vanilla" class="vanilla">VANILLA</div>
-      <div id="jquery" class="jquery">JQUERY</div>
+      <div id="vanilla" class="vanilla">VAN</div>
+      <div id="jquery" class="jquery">JQU</div>
     </div>
 </template>
     `;
