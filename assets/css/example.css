@@ -1,0 +1,97 @@
+/* Component variables follow the formula:
+ `--block__element--modifier--state--PropertyCamelCase` */
+
+.button {
+  --button--PaddingTop: var(--global--spacer--xs);
+  --button--PaddingRight: var(--global--spacer--xxl);
+  --button--PaddingBottom: var(--global--spacer--xs);
+  --button--PaddingLeft: var(--global--spacer--xxl);
+  --button--LineHeight: var(--global--sm--LineHeight);
+  --button--FontWeight: var(--global--normal--FontWeight);
+
+  /* Primary btn */
+  --button--primary--BackgroundColor: var(--global--primary--Color);
+  --button--primary--hover--BackgroundColor: var(--global--primary-dark--Color);
+
+ /* Warning btn */
+  --button--warning--BackgroundColor: var(--global--warning--Color);
+  --button--warning--hover--BackgroundColor: var(--global--warning--dark--Color);
+
+ /* Danger btn */
+  --button--danger--BackgroundColor: var(--global--danger--Color);
+  --button--danger--hover--BorderColor: var(--global--danger-dark--Color);
+
+ /*Sizes */
+  --button--small--FontSize: var(--global--caption--FontSize);
+  --button--large--FontSize: var(--global--sub-title--FontSize);
+
+  display: inline-block;
+  padding: var(--button--PaddingTop, 0.5rem) var(--button--PaddingRight, 2rem)
+    var(--button--PaddingBottom, 0.5rem) var(--button--PaddingLeft, 2rem);
+  font-size: var(--button--FontSize, 1rem);
+  font-weight: var(--button--FontWeight, 400);
+  line-height: var(--button--LineHeight, 1.2);
+  color: var(--button--Color, #fff);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--button--BackgroundColor, #ccc);
+  border: none;
+  border-radius: 30rem;
+  cursor: pointer;
+}
+  button:hover,
+  button:focus,
+ button.has-focus {
+    color: var(--button--hover--Color, #fff);
+    background-color: var(--button--hover--BackgroundColor, #555);
+  }
+
+  button:disabled,
+  button.is-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  button.is-small {
+    font-size: var(--button--small--FontSize, 0.9rem);
+  }
+
+  button.is-large {
+    font-size: var(--button--large--FontSize, 1.2rem);
+  }
+
+  button.is-block {
+    display: block;
+    width: 100%;
+  }
+
+  button.is-primary {
+    background-color: var(--button--primary--BackgroundColor, #39a5dc);
+  }
+  button.is-primary:hover,
+  button.is-primary:focus,
+  button.is-primary.has-focus {
+      background-color: var(--button--primary--hover--BackgroundColor, #0088ce);
+    }
+  
+
+  button.is-warning {
+    background-color: var(--button--warning--BackgroundColor, #ec7a08);
+  }
+  button.is-warning:hover,
+  button.is-warning:focus,
+  button.is-warning.has-focus {
+      background-color: var(--button--warning--hover--BackgroundColor, #b35c00);
+    }
+  
+
+  button.is-danger {
+    background-color: var(--button--danger--BackgroundColor, #c00);
+  }
+  button.is-danger:hover,
+  button.is-danger:focus,
+  button.is-danger.has-focus {
+      background-color: var(--button--danger--hover--BackgroundColor, #a30000);
+    }
+  
+
