@@ -24,7 +24,7 @@ const mainTemplate = `<template id ="main-template">
 </template>`;
 
 const specificTemplate = `<template id ="specific">
-    <div id="specific" class="specific">
+    <div class="specific">
       <div id="vanilla" class="vanilla">VAN</div>
       <div id="jquery" class="jquery">JQU</div>
     </div>

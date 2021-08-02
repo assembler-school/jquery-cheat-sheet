@@ -1,6 +1,4 @@
 import { mainTemplate, specificTemplate } from "./mainTemplates.js";
-import { htmlVanilla, vanillaObject } from "./vanillaCode.js";
-import { jqueryTemplates } from "./jqueryCode.js";
 import { commonTemplates } from "./commonCode.js";
 
 loadMainPageTemplate();
@@ -26,7 +24,7 @@ function loadMainPageTemplate() {
 
 // Create the web Layout
 function loadLayout() {
-  if (!document.getElementById("specific")) {
+  if (!document.querySelector(".specific")) {
     let mainWrapper = document.getElementById("main-wrapper");
 
     let newSpecificTemplate = specificTemplate;
@@ -35,6 +33,7 @@ function loadLayout() {
     let mainNode = document.querySelector("#specific").content;
     let copyNode = document.importNode(mainNode, true);
 
+    document.querySelector("template").remove();
     mainWrapper.appendChild(copyNode);
   }
 }
@@ -42,55 +41,27 @@ function loadLayout() {
 // Choose the template to load from the chosen nav button
 function selectPage(e) {
   let dataPage = e.target.dataset.page;
+  let title = e.target.textContent;
   if (dataPage == 0) {
     loadMainPageTemplate();
   }
   if (dataPage != 0) {
     loadContent(dataPage);
+    printTitle(title);
   }
-}
-
-function loadVanillaContent(page) {
-  let vanilla = document.getElementById("vanilla");
-  vanilla.innerHTML = "";
-
-  let newTemplate = vanillaObject[page];
-  vanilla.insertAdjacentHTML("beforeend", newTemplate);
-
-  let mainNode = document.querySelector(
-    `.vanillaCode[data-page="${page}"]`
-  ).content;
-  let copyNode = document.importNode(mainNode, true);
-
-  vanilla.appendChild(copyNode);
-}
-
-function loadJqueryContent(page) {
-  let jquery = document.getElementById("jquery");
-  jquery.innerHTML = "";
-
-  let newTemplate = jqueryTemplates[page];
-  jquery.insertAdjacentHTML("beforeend", newTemplate);
-
-  let mainNode = document.querySelector(
-    `.jqueryCode[data-page="${page}"]`
-  ).content;
-  let copyNode = document.importNode(mainNode, true);
-
-  jquery.appendChild(copyNode);
 }
 
 function loadCommonContent(page) {
   let common = document.getElementById("common");
   common.innerHTML = "";
 
-  let newTemplate = commonTemplates[page];
+  let newTemplate = commonTemplates;
   common.insertAdjacentHTML("beforeend", newTemplate);
 
-  let mainNode = document.querySelector(
-    `.commonCode[data-page="${page}"]`
-  ).content;
+  let mainNode = document.querySelector(".commonCode").content;
   let copyNode = document.importNode(mainNode, true);
+
+  common.lastChild.remove();
 
   common.appendChild(copyNode);
 }
@@ -98,7 +69,6 @@ function loadCommonContent(page) {
 function selectFunction(page) {
   switch (page) {
     case "1":
-      htmlVanilla();
       break;
 
     default:
@@ -107,10 +77,12 @@ function selectFunction(page) {
   }
 }
 
+function printTitle(title) {
+  document.querySelector(".content p").textContent = title;
+}
+
 function loadContent(dataPage) {
   loadLayout();
-  loadVanillaContent(dataPage);
-  loadJqueryContent(dataPage);
   loadCommonContent(dataPage);
   selectFunction(dataPage);
 }
