@@ -8,8 +8,22 @@ const mainTemplate = `<template id ="main-template">
   <nav class="navigation">
   <ul>
   <div class="nav-btn" data-page="0">Home</div>
-  <div class="nav-btn" data-page="1">HTML Manipulate</div>
-  <div class="nav-btn" data-page="2">Click event</div>
+  <div class="nav-btn" data-page="1">Click event</div>
+  <div class="nav-btn" data-page="2">Double click event</div>
+  <div class="nav-btn" data-page="3">Key press event</div>
+  <div class="nav-btn" data-page="4">Mouse cursor move event</div>
+  <div class="nav-btn" data-page="5">Change value event</div>
+  <div class="nav-btn" data-page="6">Event when image is loaded</div>
+  <div class="nav-btn" data-page="7">Event when image fails to load</div>
+  <div class="nav-btn" data-page="8">Form submit event</div>
+  <div class="nav-btn" data-page="9">Changes the option of a select element</div>
+  <div class="nav-btn" data-page="10">Position the mouse over an element  </div>
+  <div class="nav-btn" data-page="11">Checked or unchecked</div>
+  <div class="nav-btn" data-page="12">When a ul list item is clicked, show the item that was clicked</div>
+  <div class="nav-btn" data-page="13"></div>
+  <div class="nav-btn" data-page="14"></div>
+  <div class="nav-btn" data-page="15"></div>
+  <div class="nav-btn" data-page="16"></div>
 
   </ul>
   </nav>
@@ -25,10 +39,13 @@ const mainTemplate = `<template id ="main-template">
 
 const specificTemplate = `<template id ="specific">
     <div class="specific">
-      <div id="vanilla" class="vanilla">VAN</div>
-      <div id="jquery" class="jquery">JQU</div>
+      <div id="vanilla" class="vanilla">VANILLA</div>
+      <div id="jquery" class="jquery">JQUERY</div>
     </div>
 </template>
     `;
+const commonTemplate = `<template class="commonCode" data-page="1">
+    <div id="title"><p></p></div>
+    </template>`;
 
-export { mainTemplate, specificTemplate };
+export { mainTemplate, specificTemplate, commonTemplate };

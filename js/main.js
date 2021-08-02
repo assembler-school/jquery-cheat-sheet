@@ -1,5 +1,10 @@
-import { mainTemplate, specificTemplate } from "./mainTemplates.js";
-import { commonTemplates } from "./commonCode.js";
+import {
+  mainTemplate,
+  specificTemplate,
+  commonTemplate,
+} from "./mainTemplates.js";
+
+import { htmlLoad } from "./vanilla.js";
 
 loadMainPageTemplate();
 
@@ -51,11 +56,11 @@ function selectPage(e) {
   }
 }
 
-function loadCommonContent(page) {
+function loadCommonContent() {
   let common = document.getElementById("common");
   common.innerHTML = "";
 
-  let newTemplate = commonTemplates;
+  let newTemplate = commonTemplate;
   common.insertAdjacentHTML("beforeend", newTemplate);
 
   let mainNode = document.querySelector(".commonCode").content;
@@ -69,6 +74,7 @@ function loadCommonContent(page) {
 function selectFunction(page) {
   switch (page) {
     case "1":
+      htmlLoad();
       break;
 
     default:
@@ -78,7 +84,7 @@ function selectFunction(page) {
 }
 
 function printTitle(title) {
-  document.querySelector(".content p").textContent = title;
+  document.querySelector("#title p").textContent = title;
 }
 
 function loadContent(dataPage) {
@@ -86,3 +92,12 @@ function loadContent(dataPage) {
   loadCommonContent(dataPage);
   selectFunction(dataPage);
 }
+
+// Events on webpage load
+document.addEventListener("DOMContentLoaded", () => {
+  alert("VANILLA LOADED");
+});
+
+$(window).on("load", () => {
+  alert("JQUERY LOADED");
+});
