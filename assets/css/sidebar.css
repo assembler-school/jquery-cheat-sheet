@@ -1,5 +1,4 @@
-.sidebar{
-  background:url(https://raw.github.com/mmoustafa/Chalkboard/master/img/bg.png);
+.sidebar{  
   width: calc((var(--global--width--viewport) - var(--global--width--from--viewport))/1.618);
   height: inherit;
   color: whitesmoke;
@@ -7,15 +6,20 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  background-image: url(/assets/img/chalkboard.jpg);
+  background-size: cover;
+  background-position-x: center;
 }
-
-
+  /*background-image: url(/assets/img/chalkboard-black.jpg);*/
+  
 .sidebar__drop-on{
   height: inherit;
-  background: inherit;
+  background: none;
   width: 100%;
   color: whitesmoke;
   resize:none;
+  border: none;
+  
 }
 
 .sidebar__copy-btn{

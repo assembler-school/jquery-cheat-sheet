@@ -119,3 +119,12 @@ let footerTemplate = `<footer id="footer" class="content__footer"><nav id="foote
   <li>Selectors</li>
 </ul>
 </nav></footer>`;
+
+export {
+	headerHomeTemplate,
+	headerPageTemplate,
+	mainTemplate,
+	pageMainTemplate,
+	pageIndexTemplate,
+	footerTemplate,
+};

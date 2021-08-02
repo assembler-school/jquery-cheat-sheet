@@ -29,6 +29,10 @@
   /*  Color */
 
   /* Theme colors */
+ 
+  --global--primary--yellowChalk:  #f5f9ad;
+  --global--primary--blueChalk: #94c0cc;
+  --global--primary--whiteChalk: #f6f4f1;
   --global--primary--js--Color:       #dab71f;
   --global--primary--jquery--Color:   #1f51da;
 
@@ -45,11 +49,6 @@
   --global--dark--BackgroundColor:      #292e34;
   --global--dark--off--BackgroundColor: #393f44;
 
-  --global--tryout--color--A:blue;
-
-  --global--tryout--color--B: red;
-
-  --global--tryout--color--C: yellow;
 
 
   /*  Breakpoint 
