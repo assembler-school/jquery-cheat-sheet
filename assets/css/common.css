@@ -94,7 +94,6 @@ body {
   font-size: var(--global--body--FontSize);
   font-weight: var(--global--normal--FontWeight);
   line-height: var(--global--md--LineHeight);
-  background-color: var(--global--light--BackgroundColor);
   display: flex;
     flex-direction: row;
     justify-content: center;
@@ -105,17 +104,14 @@ body {
 
 /* width occupies the rest of the fgolden ratio from sidebar*/
 .content{
-  background-color: var(--global--dark--BackgroundColor);
-  color: white;
+  background-color: var(--global--light--BackgroundColor);
+  color: black;
+  
   width: 100%;
   height: inherit;
 }
 
-.sidebar{
-  background-color: var(--global--tryout--color--A);
-  width: calc((var(--global--width--viewport) - var(--global--width--from--viewport))/1.618);
-  height: inherit;
-}
+
 /* Links styles*/
 
 a {
