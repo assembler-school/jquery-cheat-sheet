@@ -1,8 +1,12 @@
 import { getHeader } from "./header.js";
+import { insertTemplate } from "../functions.js";
+import { mainHomeTemplate } from "../templates.js";
+import { getFooter } from "./footer.js";
 
 function homepageDisplay() {
-	console.log("estoy en la home");
 	getHeader();
+	insertTemplate(mainHomeTemplate, "main-home-temp");
+	getFooter();
 }
 
 export { homepageDisplay };
