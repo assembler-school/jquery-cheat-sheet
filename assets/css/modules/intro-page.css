@@ -1,0 +1,12 @@
+.main__title {
+  font-family: "Creepster", cursive;
+  font-size: 7rem;
+  margin: 6rem 15rem 2rem;
+  color: rgb(2, 255, 2);
+}
+
+.main__subtitle {
+  font-size: 2rem;
+  margin: 2rem 15rem 1rem;
+  color: red;
+}

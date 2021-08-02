@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Horror Cheat Sheet</title>
+    <link rel="icon" href="favicon-skull.svg" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="cheat-content">
+        <header id="header">
+          <input
+            type="button"
+            id="previous"
+            value="PREVIOUS"
+            class="button button--guide"
+          />
+          <nav class="header__nav">
+            <a href="#main" class="header__link">Home</a>
+            <a href="#cheatList" class="header__link">Cheat List</a>
+          </nav>
+          <input
+            type="button"
+            id="next"
+            value="NEXT"
+            class="button button--guide"
+          />
+        </header>
+        <main class="main">
+          <section class="main__cheat">
+            <article class="cheat" id="JS-method">
+              <p class="info"></p>
+              <input
+                type="button"
+                id="show-code"
+                value="&lt;/&gt;"
+                class="button button--code"
+              />
+            </article>
+            <input
+              type="button"
+              id="change-code"
+              value="Jquery"
+              class="button button--change"
+            />
+            <article class="cheat" id="JQ-method">
+              <p class="info"></p>
+              <input
+                type="button"
+                id="show-code"
+                value="&lt;/&gt;"
+                class="button button--code"
+              />
+            </article>
+          </section>
+          <section class="main__view" id="view"></section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

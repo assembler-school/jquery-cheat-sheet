@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  margin: 2rem;
+}
+
+.button--guide {
+  background-color: darkgoldenrod;
+  color: brown;
+}

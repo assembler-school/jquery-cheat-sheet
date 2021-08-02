@@ -1,0 +1,31 @@
+* {
+  font-family: "Oswald", sans-serif;
+}
+
+.header__nav {
+  flex-basis: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*-----------------------------BUTTONS--------------------------------*/
+
+.button {
+  cursor: pointer;
+}
+
+.button--scary {
+  font-family: "Creepster", cursive;
+  margin: 2rem 1rem 1rem;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  box-shadow: 2px 2px 2px 1px rgb(2, 255, 2);
+}
