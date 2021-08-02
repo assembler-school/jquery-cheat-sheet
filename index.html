@@ -13,14 +13,19 @@
     <scrip></scrip>
   </head>
   <body>
-    <main class="grid__2x3">
-      <h2 class="h2_page">VANILLA JS</h2>
-      <h1 class="h1_page">JQUERY CHEAT SHEET</h1>
-      <h2 class="h2_page">JQUERY</h2>
-      <div class="result" id="vanilla_result"></div>
+    <main class="grid__2x3 background-image border-container">
+      <h1 class="h1_page">CHEAT SHEET</h1>
+      <h2 class="h2_page h2vanilla" id="vanilla_title">VANILLA JS</h2>
+      <h2 class="h2_page h2jquery"  id="jquery_title">JQUERY</h2>
       <div class="mid_page">
+        <div class="buttons_container"><button class="page_button" id="button_events">Events</button>
+        <button class="page_button" id="button_functions">
+          Functions & Selectors 1
+        </button>
+        <button class="page_button" id="button_selectors">
+          Functions & Selectors 2
+        </button></div>
         <ul class="p_ul">
-          <button class="page_button" id="button_events">Events</button>
           <li class="p_events pointer" id="e1">When the HTML document has been loaded and you can manipulate it</li>
           <li class="p_events pointer" id="e2">When an HTML item has been clicked</li>
           <li class="p_events pointer" id="e3">When an HTML item has been double clicked</li>
@@ -48,9 +53,6 @@
           </li>
         </ul>
         <ul class="p_ul">
-          <button class="page_button" id="button_functions">
-            Functions & Selectors 1
-          </button>
           <li class="p_functions pointer" id="f1">
             Create an HTML element with any text value
           </li>
@@ -95,9 +97,6 @@
           </li>
         </ul>
         <ul class="p_ul">
-          <button class="page_button" id="button_selectors">
-            Functions & Selectors 2
-          </button>
           <li class="p_selectors pointer" id="s1">Hide an HTML element on click (display: none)</li>
           <li class="p_selectors pointer" id="s2">Show an HTML element on click (display: block)</li>
           <li class="p_selectors pointer" id="s3">Fade in an HTML element using jQuery</li>
@@ -107,14 +106,16 @@
           <li class="p_selectors pointer" id="s7">Get the collection of children of a certain element and change its font weight</li>
           <li class="p_selectors pointer" id="s8">Get all the elements that have a certain class and change their font weight</li>
           <li class="p_selectors pointer" id="s9">Get an item by id and change its font weight</li>
-          <li class="p_selectors pointer" id="s10">Get all the elements that have a certain class and the display property of none and change their font color</li>
+          <li class="p_selectors pointer" id="s10">Get the elements that have a class & display property of none and change their font color</li>
           <li class="p_selectors pointer" id="s11">Get the options of a select element that are selected (attribute selected)</li>
           <li class="p_selectors pointer" id="s12">Change the href attribute of the first &lt;a&gt; element
           <li class="p_selectors pointer" id="s13">Show an alert with the value of the first &lt;input&gt; of the page</li>
           <li class="p_selectors pointer" id="s14">Remove all items from a specific selector</li>
           <li class="p_selectors pointer" id="s15">Animate an item after 2 seconds from the initial page load</li>
       </div>
-      <div class="result" id="jquery_result"></div>
+      <div class="result resultv" id="vanilla_result"></div>
+      <div class="result resultj" id="jquery_result"></div>
     </main>
   </body>
-</html>
+  </html>
+  

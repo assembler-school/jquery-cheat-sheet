@@ -1,9 +1,9 @@
-function vanillaResult(id) {
-  $("#vanilla_result").html(id);
+function vanillaResult(x) {
+  $("#vanilla_result").html(x);
 }
 
-function jqueryResult(id) {
-  $("#jquery_result").html(id);
+function jqueryResult(y) {
+  $("#jquery_result").html(y);
 }
 
 $("#button_events").on("click", function () {
@@ -31,12 +31,18 @@ $("#button_selectors").on("click", function () {
 });
 
 //!Prueba para hacer una función que añada
-// function addResult(param) {
-//   document.querySelector(`"#${param}"`).addEventListener("click", function () {
+// function addResult(id, param) {
+  
+//   document.getElementById(`"#${id}"`).addEventListener("click", function () {
 //     vanillaResult("vanilla" + param);
 //     jqueryResult("jquery" + param);
 //   });
 // }
+//!PENDIENTE INTEGRAR
+function listClickedColor(){
+  $(".pointer").removeClass("blue");
+  $(this).addClass("blue");
+}
 
 //EVENTS
 $("#e1").on("click", function () {
