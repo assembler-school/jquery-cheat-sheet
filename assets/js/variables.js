@@ -3,12 +3,16 @@
  */
 var objectsJS = {
   id: "",
+  title: "",
+  type: "",
   code: "",
   infoLink: "",
 };
 
 var objectsJQ = {
   id: "",
+  title: "",
+  type: "",
   code: "",
   infoLink: "",
 };
@@ -18,3 +22,5 @@ var examples = {
   code: "",
   popUpText: "",
 };
+
+var dragged;

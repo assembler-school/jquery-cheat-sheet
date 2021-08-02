@@ -1,17 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 /* Generics */
-#main {
-  padding: 2.5%;
+body,
+html {
+  font-family: "Press Start 2P", sans-serif;
+  background-image: url(/assets/img/background.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-.col-container {
-  position: relative;
-  max-width: calc(50% - 5%);
-  padding: 2.5%;
-}
+
 .cursor {
   cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  transition: all 0.7s;
+}
+.col {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: -webkit-fill-available;
+  justify-content: space-around;
+  border-radius: 3%;
+  border: solid white 2px;
+  text-align: center;
+  margin: 2% 1%;
+  padding: 2%;
+  min-height: 40vh;
+  overflow-y: auto;
+}
+.col .title {
+  color: darkblue;
+
+  text-shadow: 1px 3px fuchsia;
+  min-width: 100%;
+  max-height: 10vh;
+}
+.item {
+  margin: 1%;
+  padding: 1%;
+  border: solid white 4px;
+  color: white;
+  text-shadow: 1px 2px grey;
+  border-radius: 3%;
+  max-height: 5vh;
+  cursor: pointer;
+  font-size: 1vw;
+}
+.top {
+}
+
+.middle {
+  justify-content: center;
+}
+.bottom {
+  display: none;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.events {
+  background-color: #f0da4f86;
+}
+.functions {
+  background-color: rgba(21, 151, 21, 0.623);
+}
+.selectors {
+  background-color: #0768ada6;
+}
+.drop-area {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.74);
+}
+.button {
+  position: absolute;
+  outline: fuchsia solid 1px;
+  font-family: "Press Start 2P", sans-serif;
+  color: darkblue;
+  text-shadow: 1px 2px fuchsia;
+  background-color: rgba(255, 255, 255, 0.486);
+  padding: 1% 2%;
+  font-size: 1.5vw;
+  cursor: pointer;
+  text-align: center;
+  align-self: flex-end;
+  height: min-content;
+}
+
+.examples {
+  background-color: rgba(255, 255, 255, 0.74);
+}
+.javaScript {
+  background-color: rgba(255, 255, 255, 0.74);
+}
+.jQuery {
+  background-color: rgba(255, 255, 255, 0.74);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.322);
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.021);
+  background: rgba(255, 255, 255, 0.493);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 780px) {
+  .events,
+  .functions,
+  .selectors,
+  .drop-area,
+  .examples,
+  .javaScript,
+  .jQuery {
+    min-width: calc(100% - 10vw);
+    max-width: 100vw;
+  }
+  .flex {
+    justify-content: space-between;
+  }
+  .drop-area {
+    width: 93%;
+  }
+  .col {
+  }
+  .item {
+    font-size: 3vw;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
 }
