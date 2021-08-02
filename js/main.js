@@ -1,7 +1,9 @@
 import { mainTemplate, specificTemplate } from "./mainTemplates.js";
 import { vanillaObject } from "./vanillaCode.js";
-import { jqueryObject } from "./jqueryCode.js";
-import { commonObject } from "./commonCode.js";
+import { jqueryTemplates } from "./jqueryCode.js";
+import { commonTemplates } from "./commonCode.js";
+
+loadMainPageTemplate();
 
 function loadMainPageTemplate() {
   let body = document.querySelector("body");
@@ -21,7 +23,6 @@ function loadMainPageTemplate() {
     navButton.addEventListener("click", selectPage);
   });
 }
-loadMainPageTemplate();
 
 // Create the web Layout
 function loadLayout() {
@@ -49,6 +50,7 @@ function selectPage(e) {
     loadVanillaContent(dataPage);
     loadJqueryContent(dataPage);
     loadCommonContent(dataPage);
+    jqueryFunctions[1];
   }
 }
 
@@ -71,7 +73,7 @@ function loadJqueryContent(page) {
   let jquery = document.getElementById("jquery");
   jquery.innerHTML = "";
 
-  let newTemplate = jqueryObject[page];
+  let newTemplate = jqueryTemplates[page];
   jquery.insertAdjacentHTML("beforeend", newTemplate);
 
   let mainNode = document.querySelector(
@@ -86,7 +88,7 @@ function loadCommonContent(page) {
   let common = document.getElementById("common");
   common.innerHTML = "";
 
-  let newTemplate = commonObject[page];
+  let newTemplate = commonTemplates[page];
   common.insertAdjacentHTML("beforeend", newTemplate);
 
   let mainNode = document.querySelector(

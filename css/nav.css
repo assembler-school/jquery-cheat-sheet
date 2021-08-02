@@ -3,3 +3,6 @@ nav {
   flex-direction: column;
   width: 20%;
 }
+.nav-btn {
+  cursor: pointer;
+}
