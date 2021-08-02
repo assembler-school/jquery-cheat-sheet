@@ -47,10 +47,7 @@ function selectPage(e) {
   }
   if (dataPage != 0) {
     loadLayout();
-    loadVanillaContent(dataPage);
-    loadJqueryContent(dataPage);
-    loadCommonContent(dataPage);
-    jqueryFunctions[1];
+    loadContent(dataPage);
   }
 }
 
@@ -97,4 +94,10 @@ function loadCommonContent(page) {
   let copyNode = document.importNode(mainNode, true);
 
   common.appendChild(copyNode);
+}
+
+function loadContent(dataPage) {
+  loadVanillaContent(dataPage);
+  loadJqueryContent(dataPage);
+  loadCommonContent(dataPage);
 }
