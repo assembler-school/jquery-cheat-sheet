@@ -7,4 +7,8 @@ const vanillaObject = {
 </template>`,
 };
 
-export { vanillaObject };
+function htmlVanilla() {
+  console.log("VANILLA");
+}
+
+export { vanillaObject, htmlVanilla };

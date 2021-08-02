@@ -1,5 +1,5 @@
 import { mainTemplate, specificTemplate } from "./mainTemplates.js";
-import { vanillaObject } from "./vanillaCode.js";
+import { htmlVanilla, vanillaObject } from "./vanillaCode.js";
 import { jqueryTemplates } from "./jqueryCode.js";
 import { commonTemplates } from "./commonCode.js";
 
@@ -46,7 +46,6 @@ function selectPage(e) {
     loadMainPageTemplate();
   }
   if (dataPage != 0) {
-    loadLayout();
     loadContent(dataPage);
   }
 }
@@ -96,8 +95,22 @@ function loadCommonContent(page) {
   common.appendChild(copyNode);
 }
 
+function selectFunction(page) {
+  switch (page) {
+    case "1":
+      htmlVanilla();
+      break;
+
+    default:
+      console.log("NOO");
+      break;
+  }
+}
+
 function loadContent(dataPage) {
+  loadLayout();
   loadVanillaContent(dataPage);
   loadJqueryContent(dataPage);
   loadCommonContent(dataPage);
+  selectFunction(dataPage);
 }
