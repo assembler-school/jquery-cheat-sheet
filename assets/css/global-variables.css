@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Overpass:300,400,700");
 
 :root {
+
+  /* width for golden ratio */
+  --global--width--viewport: 100vw; 
+  --global--width--from--viewport: calc(100vw/1.618);
   /* Links */
   --global--link--Color: var(--global--primary--Color);
   --global--link--TextDecoration: none;
@@ -25,14 +29,8 @@
   /*  Color */
 
   /* Theme colors */
-  --global--primary--Color:       #39a5dc;
-  --global--primary--dark--Color: #0088ce;
-  
-  --global--danger--Color:       #c00;
-  --global--danger--dark--Color: #a30000;
-  
-  --global--warning--Color:       #ec7a08;
-  --global--warning--dark--Color: #b35c00;
+  --global--primary--js--Color:       #dab71f;
+  --global--primary--jquery--Color:   #1f51da;
 
   /* Text color */
   --global--dark--Color:      #292e34;
@@ -46,6 +44,13 @@
 
   --global--dark--BackgroundColor:      #292e34;
   --global--dark--off--BackgroundColor: #393f44;
+
+  --global--tryout--color--A:blue;
+
+  --global--tryout--color--B: red;
+
+  --global--tryout--color--C: yellow;
+
 
   /*  Breakpoint 
  http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/ */

@@ -76,7 +76,7 @@ th {
   text-align: left;
 }
 
-/* Patternfly base styles*/
+/* Base styles*/
 
 *,
 *::before,
@@ -94,11 +94,28 @@ body {
   font-size: var(--global--body--FontSize);
   font-weight: var(--global--normal--FontWeight);
   line-height: var(--global--md--LineHeight);
-  color: var(--global--dark--Color);
-  text-align: left;
   background-color: var(--global--light--BackgroundColor);
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
+/* width occupies the rest of the fgolden ratio from sidebar*/
+.content{
+  background-color: var(--global--dark--BackgroundColor);
+  color: white;
+  width: 100%;
+  height: inherit;
+}
+
+.sidebar{
+  background-color: var(--global--tryout--color--A);
+  width: calc((var(--global--width--viewport) - var(--global--width--from--viewport))/1.618);
+  height: inherit;
+}
 /* Links styles*/
 
 a {

@@ -1,0 +1,10 @@
+.sidebar{
+  background-color: var(--global--tryout--color--A);
+  width: calc((var(--global--width--viewport) - var(--global--width--from--viewport))/1.618);
+  height: inherit;
+}
+
+.sidebar__drop-on{
+  height: inherit;
+  background-color: khaki;
+}
