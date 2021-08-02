@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "Windows Command Prompt";
+    src: url("Windows-Command-Prompt.woff2") format("woff2"), url("Windows-Command-Prompt.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    height: 100vh;
+    width: auto;
+    background-color: rgb(0, 0, 0);
+    max-width: 100vw;
+    font-family: "Changa", sans-serif;
+    color: grey;
+    padding: 2rem;
+}
+
+header {
+    width: 95%;
+    text-align: center;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #13cffe, 0 0 0.8rem #00ccff;
+}
+
+main {
+    width: 95%;
+    margin-top: 3rem;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #13cffe, 0 0 0.8rem #00ccff;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+}
+
+code {
+    color: red;
+    font-family: "Windows Command Prompt";
+}
+
+code:hover {
+    color: blue;
+}
+
+canvas {
+    border: 1px solid black;
+}
+
+li {
+    cursor: pointer;
+}
+
+li:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+select {
+    font-family: "Changa", sans-serif;
+    background-color: black;
+    color: gray;
+}
+
+img {
+    border-radius: 30px;
+}
+
+
+/*------- Events Section -----------*/
+
+.events-style {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.heading-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    text-align: center;
+}
+
+.events-style * {
+    font-size: 20px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.function-selector-style {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    font-size: 20px;
+}
+
+.input-check {
+    color: red;
+}
