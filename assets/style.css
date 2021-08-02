@@ -1,0 +1,17 @@
+/* Generics */
+#main {
+  padding: 2.5%;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.col-container {
+  position: relative;
+  max-width: calc(50% - 5%);
+  padding: 2.5%;
+}
+.cursor {
+  cursor: pointer;
+}
