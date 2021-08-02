@@ -1,11 +1,14 @@
+import { data } from "./data.js";
+
 export function updateModal(example) {
 	const modal = document.querySelector("#modal");
+	const srcPath = `${data.path}/example-${example.id.toString().padStart(2, "0")}.html`;
 
 	modal.querySelector("#example-title").textContent = example.title;
 	modal.querySelector("#example-description").textContent = example.description;
 	modal.querySelector("#example-code-vanilla").innerHTML = example.vanillaCode;
 	modal.querySelector("#example-code-jquery").innerHTML = example.jQueryCode;
-	modal.querySelector("#example-sandbox").setAttribute("src", example.src);
+	modal.querySelector("#example-sandbox").setAttribute("src", srcPath);
 }
 
 export function displayModal() {

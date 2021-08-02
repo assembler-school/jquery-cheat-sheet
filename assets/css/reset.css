@@ -9,3 +9,17 @@ h6,
 p {
 	margin: 0;
 }
+
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+button:active {
+	outline-style: groove;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}

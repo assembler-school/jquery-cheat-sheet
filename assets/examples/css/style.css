@@ -6,3 +6,10 @@
 @import url(../../css/variables.css);
 @import url(../../css/reset.css);
 @import url(../../css/utils.css);
+
+.example-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 100vh;
+	padding: 1rem;
+}

@@ -10,24 +10,24 @@ export function insertExampleCards(exampleList) {
 
 	exampleList.forEach((example) => {
 		const target = example.type === "event" ? exampleGridEvents : example.type === "manipulation" ? exampleGridManipulations : null;
-		const fragment = createExampleCard(example, target);
+		const exampleCardFragment = createExampleCard(example, target);
 
-		target.appendChild(fragment);
+		target.appendChild(exampleCardFragment);
 	});
 }
 
 function createExampleCard(example) {
 	if (example === undefined || example === null) return console.warn("Example data object is undefined or null.");
 
-	const fragment = createFragmentFromTemplate("#template-example-card");
-	const exampleCard = fragment.querySelector(".example-card");
+	const exampleCardFragment = createFragmentFromTemplate("#template-example-card");
+	const exampleCard = exampleCardFragment.querySelector(".example-card");
 
 	exampleCard.dataset.id = example.id;
 	exampleCard.querySelector(".example-card__title").textContent = example.title;
 
 	exampleCardEventListener(exampleCard);
 
-	return fragment;
+	return exampleCardFragment;
 }
 
 function exampleCardEventListener(target) {

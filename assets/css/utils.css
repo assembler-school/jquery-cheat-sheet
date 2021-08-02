@@ -26,6 +26,10 @@
 	font-size: 2rem;
 }
 
+.font-size-xxxl {
+	font-size: 3rem;
+}
+
 /* --- Font Weight ---- */
 
 .font-weight-extra-light {
@@ -103,6 +107,46 @@
 }
 
 /* --- Background Color --- */
+
+.bg-blue {
+	background-color: #0d6efd;
+}
+
+.bg-indigo {
+	background-color: #6610f2;
+}
+
+.bg.purple {
+	background-color: #6f42c1;
+}
+
+.bg-pink {
+	background-color: #d63384;
+}
+
+.bg-red {
+	background-color: #dc3545;
+}
+
+.bg-orange {
+	background-color: #fd7e14;
+}
+
+.bg-yellow {
+	background-color: #ffc107;
+}
+
+.bg-green {
+	background-color: #20c997;
+}
+
+.bg-teal {
+	background-color: #20c997;
+}
+
+.bg-cyan {
+	background-color: #0dcaf0;
+}
 
 .bg-black {
 	background-color: black;
@@ -590,46 +634,72 @@
 
 /* ~~~ Flex Main Axis Alignment ~~~ */
 
-.flex-main-align-start {
+.justify-content-start {
 	justify-content: flex-start;
 }
 
-.flex-main-align-end {
+.justify-content-end {
 	justify-content: flex-end;
 }
 
-.flex-main-align-center {
+.justify-content-center {
 	justify-content: center;
 }
 
-.flex-main-align-between {
+.justify-content-between {
 	justify-content: space-between;
 }
 
-.flex-main-align-evenly {
+.justify-content-evenly {
 	justify-content: space-evenly;
 }
 
-.flex-main-align-around {
+.justify-content-around {
 	justify-content: space-around;
 }
 
 /* ~~~ Flex Cross Axis Alignment ~~~ */
 
-.flex-cross-align-start {
+.align-items-start {
 	align-items: flex-start;
 }
 
-.flex-cross-align-end {
+.align-items-end {
 	align-items: flex-end;
 }
 
-.flex-cross-align-center {
+.align-items-center {
 	align-items: center;
 }
 
-.flex-cross-align-strech {
+.align-items-strech {
 	align-items: stretch;
+}
+
+/* ~~~~ Flex Content Alignment ~~~ */
+
+.align-content-start {
+	align-content: flex-start;
+}
+
+.align-content-end {
+	align-content: flex-end;
+}
+
+.align-content-center {
+	align-content: center;
+}
+
+.align-content-strech {
+	align-content: stretch;
+}
+
+.align-content-evenly {
+	align-content: space-evenly;
+}
+
+.align-content-around {
+	align-content: space-around;
 }
 
 /* ~~~ Gap ~~~ */
@@ -684,8 +754,54 @@
 	border-radius: 50%;
 }
 
+.bs-black-01 {
+	box-shadow: 0 0 8px rgba(0, 0, 0, 25%);
+}
+
+.bs-black-02 {
+	box-shadow: 0 0 8px rgba(0, 0, 0, 50%);
+}
+
+.bs-black-03 {
+	box-shadow: 0 0 8px rgba(0, 0, 0, 75%);
+}
+
 /* --- Display --- */
 
 .no-display {
 	display: none !important;
+}
+
+/* --- Width --- */
+
+.width-100 {
+	width: 100%;
+}
+
+.width-80 {
+	width: 80%;
+}
+
+.width-75 {
+	width: 75%;
+}
+
+.width-60 {
+	width: 60%;
+}
+
+.width-50 {
+	width: 50%;
+}
+
+.width-40 {
+	width: 40%;
+}
+
+.width-25 {
+	width: 25%;
+}
+
+.width-20 {
+	width: 20%;
 }
