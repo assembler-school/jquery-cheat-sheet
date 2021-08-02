@@ -2,10 +2,22 @@
   background:url(https://raw.github.com/mmoustafa/Chalkboard/master/img/bg.png);
   width: calc((var(--global--width--viewport) - var(--global--width--from--viewport))/1.618);
   height: inherit;
-  color: whitesmoke
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
+
 
 .sidebar__drop-on{
   height: inherit;
+  background: inherit;
+  width: 100%;
+  color: whitesmoke;
+  resize:none;
+}
 
+.sidebar__copy-btn{
+  width: inherit;
 }
