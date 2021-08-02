@@ -1,0 +1,3 @@
+function pageDisplay() {}
+
+export { pageDisplay };

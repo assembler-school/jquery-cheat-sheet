@@ -2,35 +2,32 @@ import { headerHomeTemplate, headerPageTemplate } from "../templates.js";
 import { wrapper } from "../main.js";
 
 function getHeader() {
-	if (location.hash === "" || location.hash === "#") {
-		headerHome();
-	} else {
-		headerPage();
-	}
-}
-
-function headerHome() {
 	if (wrapper.innerHTML !== "") {
 		//borrar eventos
 	}
-
-	//clone template
-	wrapper.insertAdjacentElement("afterbegin", headerHomeTemplate);
-	let template = document.getElementById("home-header");
-
-	let clone = template.cloneNode(true);
-
 	wrapper.innerHTML = "";
-	wrapper.append(clone);
+	switch (location.hash) {
+		case "":
+			headerSwitch(headerHomeTemplate);
+			break;
+		case "#":
+			headerSwitch(headerHomeTemplate);
+			break;
+		default:
+			headerSwitch(headerPageTemplate);
+			break;
+	}
 }
 
-function headerPage() {
-	if (wrapper.innerHTML !== "") {
-		//borrar eventos
-	}
-
+function headerSwitch(template) {
+	let header = template;
 	//clone template
-	wrapper.insertAdjacentElement("afterbegin", headerPageTemplate);
+	wrapper.insertAdjacentHTML("afterbegin", header);
+	let templateNode = document.getElementById("header-home-temp").content;
+	let cloneNode = document.importNode(templateNode, true);
+
+	wrapper.lastChild.remove();
+	wrapper.appendChild(cloneNode);
 }
 
 export { getHeader };

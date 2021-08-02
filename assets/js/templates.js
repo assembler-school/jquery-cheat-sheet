@@ -1,4 +1,4 @@
-let pageIndexTemplate = `<main id="index-main" class="content__index-main">
+let pageIndexTemplate = `<template id="page-index-temp"><main id="index-main" class="content__index-main">
 <section class="index-main__2-col-left">
   <h1 class="2-col-left__title"></h1>
   <video class="2-col-left__video" src="" autoplay loop>
@@ -11,9 +11,9 @@ let pageIndexTemplate = `<main id="index-main" class="content__index-main">
   </video>
   <h1 class="2-col-right__title"></h1>
 </section>
-</main>`;
+</main></template>`;
 
-let pageMainTemplate = `<main id="page-main" class="content__page-main">
+let pageMainTemplate = `<template id="page-main-temp"><main id="page-main" class="content__page-main">
 <video id="page-video" class="page-main__video" src="" autoplay loop>
   Sorry, your browser doesn't support embedded videos.
 </video>
@@ -51,9 +51,9 @@ let pageMainTemplate = `<main id="page-main" class="content__page-main">
     <div id="jquery-text-col-right" class="text-content__col"></div>
   </div>
 </section>
-</main>`;
+</main></template>`;
 
-let headerPageTemplate = `<header id="page-header" class="content__page-header">
+let headerPageTemplate = `<template id="header-page-temp"><header id="page-header" class="content__page-header">
 <div class="page-header__autocomplete">
   <img
     class="page-header__autocomplete__side-logo"
@@ -83,17 +83,21 @@ let headerPageTemplate = `<header id="page-header" class="content__page-header">
 <h1 class="page-header__title">
   <img class="page-header__logo" src="" alt="website-logo" />CheatSheet
 </h1>
-</header>`;
+</header></template>`;
 
-let headerHomeTemplate = `<header id="home-header" class="content__home-header"><nav id="header-nav" class="home-header__nav">
-<ul>
-  <li>Events</li>
-  <li>Functions</li>
-  <li>Selectors</li>
-</ul>
-</nav></header>`;
+let headerHomeTemplate = `<template id="header-home-temp">
+<header id="home-header" class="content__home-header">
+  <nav id="header-nav" class="home-header__nav">
+    <ul>
+      <li>Events</li>
+      <li>Functions</li>
+      <li>Selectors</li>
+    </ul>
+  </nav>
+</header>
+</template>`;
 
-let mainTemplate = `<main id="home-main" class="content__home-main"><h1 class="home-main__title">
+let mainHomeTemplate = `<template id="main-home-temp"><main id="home-main" class="content__home-main"><h1 class="home-main__title">
 <img class="home-main__logo" src="" alt="website-logo" />CheatSheet
 </h1>
 <div class="home-main__autocomplete">
@@ -110,20 +114,20 @@ let mainTemplate = `<main id="home-main" class="content__home-main"><h1 class="h
 </button>
 <!--go or submit btn-->
 <img class="autocomplete__side-logo" src="" alt="jquery-logo" />
-</div></main>`;
+</div></main></template>`;
 
-let footerTemplate = `<footer id="footer" class="content__footer"><nav id="footer-nav" class=footer__nav>
+let footerTemplate = `<template id="footer-temp"><footer id="footer" class="content__footer"><nav id="footer-nav" class=footer__nav>
 <ul>
   <li>Events</li>
   <li>Functions</li>
   <li>Selectors</li>
 </ul>
-</nav></footer>`;
+</nav></footer></template>`;
 
 export {
 	headerHomeTemplate,
 	headerPageTemplate,
-	mainTemplate,
+	mainHomeTemplate,
 	pageMainTemplate,
 	pageIndexTemplate,
 	footerTemplate,

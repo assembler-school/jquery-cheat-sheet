@@ -3,8 +3,12 @@ import { pageDisplay } from "./views/page.js";
 import { indexDisplay } from "./views/index.js";
 
 function navigate() {
+	console.log("entre en router", location.hash);
 	switch (location.hash) {
-		case "" || "#":
+		case "":
+			homepageDisplay();
+			break;
+		case "#":
 			homepageDisplay();
 			break;
 		case "#page":
@@ -14,6 +18,7 @@ function navigate() {
 			indexDisplay();
 			break;
 		default:
+			homepageDisplay();
 			break;
 	}
 }
