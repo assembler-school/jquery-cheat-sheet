@@ -1,6 +1,59 @@
-let indexTemplate = "";
+let pageIndexTemplate = `<main id="index-main" class="content__index-main">
+<section class="index-main__2-col-left">
+  <h1 class="2-col-left__title"></h1>
+  <video class="2-col-left__video" src="" autoplay loop>
+    Sorry, your browser doesn't support embedded videos.
+  </video>
+</section>
+<section class="index-main__2-col-right">
+  <video class="2-col-right__video" src="" autoplay loop>
+    Sorry, your browser doesn't support embedded videos.
+  </video>
+  <h1 class="2-col-right__title"></h1>
+</section>
+</main>`;
 
-let headerPageTemplate = `<header id="page-header">
+let pageMainTemplate = `<main id="page-main" class="content__page-main">
+<video id="page-video" class="page-main__video" src="" autoplay loop>
+  Sorry, your browser doesn't support embedded videos.
+</video>
+<div class="separator-hr"></div>
+<section id="text-content" class="page-main__text-content">
+  <!--2 column design. Left fot js, right for jquery-->
+  <div class="text-content__col text-content__left">
+    <div class="col__head-section">
+      <img
+        class="head-section__js-logo"
+        src=""
+        alt="js-logo"
+        draggable="true"
+      />
+      <span class="head-section__js-code" id="js-col-code"></span>
+    </div>
+    <div class="separator-hr"></div>
+    <div id="js-code-col-left" class="text-content__col"></div>
+  </div>
+
+  <div class="text-content__col text-content__right">
+    <div class="col__head-section">
+      <img
+        class="head-section__jquery-logo"
+        src=""
+        alt="jquery-logo"
+        draggable="true"
+      />
+      <span
+        class="head-section__jquery-code"
+        id="js-query-col-code"
+      ></span>
+    </div>
+    <div class="separator-hr"></div>
+    <div id="jquery-text-col-right" class="text-content__col"></div>
+  </div>
+</section>
+</main>`;
+
+let headerPageTemplate = `<header id="page-header" class="content__page-header">
 <div class="page-header__autocomplete">
   <img
     class="page-header__autocomplete__side-logo"
@@ -32,7 +85,7 @@ let headerPageTemplate = `<header id="page-header">
 </h1>
 </header>`;
 
-let headerHomeTemplate = `<header id="home-header"><nav id="header-nav" class="home-header__nav">
+let headerHomeTemplate = `<header id="home-header" class="content__home-header"><nav id="header-nav" class="home-header__nav">
 <ul>
   <li>Events</li>
   <li>Functions</li>
@@ -40,7 +93,7 @@ let headerHomeTemplate = `<header id="home-header"><nav id="header-nav" class="h
 </ul>
 </nav></header>`;
 
-let mainTemplate = `<main id="home-main"><h1 class="home-main__title">
+let mainTemplate = `<main id="home-main" class="content__home-main"><h1 class="home-main__title">
 <img class="home-main__logo" src="" alt="website-logo" />CheatSheet
 </h1>
 <div class="home-main__autocomplete">
@@ -59,7 +112,7 @@ let mainTemplate = `<main id="home-main"><h1 class="home-main__title">
 <img class="autocomplete__side-logo" src="" alt="jquery-logo" />
 </div></main>`;
 
-let footerTemplate = `<footer id="footer" class="footer"><nav id="footer-nav" class=footer__nav>
+let footerTemplate = `<footer id="footer" class="content__footer"><nav id="footer-nav" class=footer__nav>
 <ul>
   <li>Events</li>
   <li>Functions</li>
