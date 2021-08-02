@@ -1,17 +1,19 @@
-let pageIndexTemplate = `<template id="page-index-temp"><main id="index-main" class="content__index-main">
-<section class="index-main__2-col-left">
-  <h1 class="2-col-left__title"></h1>
-  <video class="2-col-left__video" src="" autoplay loop>
-    Sorry, your browser doesn't support embedded videos.
-  </video>
-</section>
-<section class="index-main__2-col-right">
-  <video class="2-col-right__video" src="" autoplay loop>
-    Sorry, your browser doesn't support embedded videos.
-  </video>
-  <h1 class="2-col-right__title"></h1>
-</section>
-</main></template>`;
+let pageIndexTemplate = `<template id="page-index-temp"
+><main id="index-main" class="content__index-main">
+  <section class="index-main__2-col-left">
+    <h1 class="2-col-left__title"></h1>
+    <video class="2-col-left__video" src="" autoplay loop>
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </section>
+  <section class="index-main__2-col-right">
+    <video class="2-col-right__video" src="" autoplay loop>
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+    <h1 class="2-col-right__title"></h1>
+  </section>
+</main>
+</template>`;
 
 let pageMainTemplate = `<template id="page-main-temp"><main id="page-main" class="content__page-main">
 <video id="page-video" class="page-main__video" src="" autoplay loop>

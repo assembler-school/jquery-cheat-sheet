@@ -5,7 +5,7 @@ import { getFooter } from "./footer.js";
 
 function indexDisplay() {
 	getHeader();
-	insertTemplate(pageIndexTemplate, "page-index-tem");
+	insertTemplate(pageIndexTemplate, "page-index-temp");
 	getFooter();
 }
 
