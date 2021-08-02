@@ -1,14 +1,16 @@
 import { wrapper } from "../main.js";
 import { templateContent } from "../templates.js";
 import { goToMain, goToCheatList, goToContent } from "../router.js";
+import { cases } from "../cases.js";
 
-function contentPage() {
+function contentPage(dni) {
   //TODO Delete all the previous event listeners
-  document.getElementById("go-home").removeEventListener("click", goToMain);
-  document
-    .getElementById("go-list")
-    .removeEventListener("click", goToCheatList);
-  document.getElementById("start").removeEventListener("click", goToContent);
+  //   document.getElementById("go-home").removeEventListener("click", goToMain);
+  //   document
+  //     .getElementById("go-list")
+  //     .removeEventListener("click", goToCheatList);
+  //   document.getElementById("start").removeEventListener("click", goToContent);
+
   //Template injection
 
   wrapper.innerHTML = "";
@@ -25,6 +27,12 @@ function contentPage() {
   document.getElementById("go-home").addEventListener("click", goToMain);
   document.getElementById("go-list").addEventListener("click", goToCheatList);
   document.getElementById("change-code").addEventListener("click", changeCode);
+
+  //   cases.forEach((c) => {
+  //       if(c.id === dni) {
+
+  //       }
+  //   })
 }
 
 function changeCode() {
