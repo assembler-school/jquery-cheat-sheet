@@ -234,11 +234,11 @@ EVENTS
     Vanilla
         var elementReference = document.querySelector(“.elementReference”);
         var elementToBeAppended = document.querySelector(“.elementToBeAppended”).innerHTML = “Any text value”
-        https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend
         elementReference.prepend(elementToBeAppended);
 
     Source
         https://api.jquery.com/prepend
+        https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend
 
 
 5-Create and add an HTML element with any text value after another element
