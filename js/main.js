@@ -4,7 +4,31 @@ import {
   commonTemplate,
 } from "./mainTemplates.js";
 
-import { htmlLoad } from "./vanilla.js";
+import {
+  vanillaChangeOption,
+  vanillaChangeValue,
+  vanillaChecked,
+  vanillaClickEvent,
+  vanillaCursorOverEvent,
+  vanillaDoubleClick,
+  vanillaImageFails,
+  vanillaImageLoad,
+  vanillaKeyPressEvent,
+  vanillaMousePosition,
+  vanillaSubmitEvent,
+} from "./vanilla.js";
+import {
+  jqueryChangeOption,
+  jqueryChangeValue,
+  jqueryClickEvent,
+  jqueryCursorOverEvent,
+  jqueryDoubleClick,
+  jqueryImageFails,
+  jqueryImageLoad,
+  jqueryKeyPressEvent,
+  jqueryMousePosition,
+  jquerySubmitEvent,
+} from "./jquery.js";
 
 loadMainPageTemplate();
 
@@ -46,6 +70,7 @@ function loadLayout() {
 // Choose the template to load from the chosen nav button
 function selectPage(e) {
   let dataPage = e.target.dataset.page;
+
   let title = e.target.textContent;
   if (dataPage == 0) {
     loadMainPageTemplate();
@@ -74,7 +99,72 @@ function loadCommonContent() {
 function selectFunction(page) {
   switch (page) {
     case "1":
-      htmlLoad();
+      vanillaClickEvent();
+      jqueryClickEvent();
+      break;
+
+    case "2":
+      vanillaDoubleClick();
+      jqueryDoubleClick();
+      break;
+
+    case "3":
+      function addEvent() {
+        let v = false;
+        let j = false;
+        document.addEventListener("keydown", function test(e) {
+          if (e.key == "v") {
+            vanillaKeyPressEvent();
+            v = true;
+          } else if (e.key == "j") {
+            jqueryKeyPressEvent();
+            j = true;
+          }
+          if (j && v) {
+            document.removeEventListener("keydown", test);
+            console.log("DELETE KEY EVENT");
+          }
+        });
+      }
+      addEvent();
+      break;
+    case "4":
+      vanillaCursorOverEvent();
+      jqueryCursorOverEvent();
+      break;
+    case "5":
+      vanillaChangeValue();
+      jqueryChangeValue();
+      break;
+
+    case "6":
+      vanillaImageLoad();
+      jqueryImageLoad();
+      break;
+
+    case "7":
+      vanillaImageFails();
+      jqueryImageFails();
+      break;
+
+    case "8":
+      vanillaSubmitEvent();
+      jquerySubmitEvent();
+      break;
+
+    case "9":
+      vanillaChangeOption();
+      jqueryChangeOption();
+      break;
+
+    case "10":
+      vanillaMousePosition();
+      jqueryMousePosition();
+      break;
+
+    case "11":
+      vanillaChecked();
+      vanillaChecked();
       break;
 
     default:
@@ -86,14 +176,21 @@ function selectFunction(page) {
 function printTitle(title) {
   document.querySelector("#title p").textContent = title;
 }
-
+/*
+function clearEventListeners () {
+  document
+}
+*/
 function loadContent(dataPage) {
+  loadMainPageTemplate();
   loadLayout();
-  loadCommonContent(dataPage);
+  loadCommonContent();
   selectFunction(dataPage);
 }
 
 // Events on webpage load
+
+/*
 document.addEventListener("DOMContentLoaded", () => {
   alert("VANILLA LOADED");
 });
@@ -101,3 +198,4 @@ document.addEventListener("DOMContentLoaded", () => {
 $(window).on("load", () => {
   alert("JQUERY LOADED");
 });
+*/
