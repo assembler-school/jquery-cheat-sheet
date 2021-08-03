@@ -1,0 +1,22 @@
+
+.nav__list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  font-family: secondChanceS;
+  letter-spacing: var( --global--letter-spacing--l);
+}
+
+.content__home-header, .content__footer{
+  width: 100%;
+}
+
+.content__page-header{
+display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}

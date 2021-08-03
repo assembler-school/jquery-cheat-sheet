@@ -3,23 +3,12 @@ import { pageDisplay } from "./views/page.js";
 import { indexDisplay } from "./views/index.js";
 
 function navigate() {
-	console.log("entre en router", location.hash);
-	switch (location.hash) {
-		case "":
-			homepageDisplay();
-			break;
-		case "#":
-			homepageDisplay();
-			break;
-		case "#page":
-			pageDisplay();
-			break;
-		case "#index":
-			indexDisplay();
-			break;
-		default:
-			homepageDisplay();
-			break;
+	if (location.hash === "" || location.hash === "#") {
+		homepageDisplay();
+	} else if (location.hash.includes("page")) {
+		pageDisplay();
+	} else if (location.hash.includes("index")) {
+		indexDisplay();
 	}
 }
 

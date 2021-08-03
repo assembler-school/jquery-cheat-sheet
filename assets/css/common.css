@@ -84,11 +84,6 @@ th {
   box-sizing: border-box;
 }
 
-html {
-  font-family: sans-serif;
-  line-height: 1.15;
-}
-
 body {
   font-family: var(--global--sans-serif--FontFamily);
   font-size: var(--global--body--FontSize);
@@ -104,11 +99,17 @@ body {
 
 /* width occupies the rest of the fgolden ratio from sidebar*/
 .content{
-  background-color: var(--global--light--BackgroundColor);  
+  --content--PaddingTop: var(--global--spacer--lg);
+  background-color: var(--global--light--BackgroundColor);
   width: 100%;
   height: inherit;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--content--PaddingTop) 0;
 
+}
 
 /* Links styles*/
 
@@ -122,7 +123,24 @@ a:hover {
   }
 
 
-button,
+
 a {
   cursor: pointer;
+}
+
+button{
+    letter-spacing: var(--global--letter-spacing--xs);
+    word-spacing: var(--global--letter-spacing--s);
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    background: none;
+    font-family: secondChanceSk;
+    font-size:var(--global--h6--title--FontSize);
+    padding: 0;
+    border: none;
 }

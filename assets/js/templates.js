@@ -73,7 +73,7 @@ let headerPageTemplate = `<template id="header-page-temp"><header id="page-heade
     id="autocomplete-go-btn"
     class="page-header__autocomplete__button"
   >
-    Go
+  let´s go!
   </button>
   <!--go or submit btn-->
   <img
@@ -90,20 +90,22 @@ let headerPageTemplate = `<template id="header-page-temp"><header id="page-heade
 let headerHomeTemplate = `<template id="header-home-temp">
 <header id="home-header" class="content__home-header">
   <nav id="header-nav" class="home-header__nav">
-    <ul>
-      <li>Events</li>
-      <li>Functions</li>
-      <li>Selectors</li>
+    <ul class="nav__list">
+      <li>events</li>
+      <li>functions</li>
+      <li>selectors</li>
     </ul>
   </nav>
 </header>
 </template>`;
 
 let mainHomeTemplate = `<template id="main-home-temp"><main id="home-main" class="content__home-main"><h1 class="home-main__title">
-<img class="home-main__logo" src="" alt="website-logo" />CheatSheet
+<img class="home-main__logo" src="" alt="
+" />cheatSheet
 </h1>
 <div class="home-main__autocomplete">
 <img class="autocomplete__side-logo" src="" alt="js-vanilla-logo" />
+<img class="autocomplete__side-logo" src="" alt="jquery-logo" />
 <input
   id="autocomplete-field"
   class="autocomplete__input"
@@ -112,19 +114,20 @@ let mainHomeTemplate = `<template id="main-home-temp"><main id="home-main" class
 />
 <!--autocomplete-->
 <button id="autocomplete-go-btn" class="autocomplete__button">
-  Go
+  let´s go!
 </button>
 <!--go or submit btn-->
-<img class="autocomplete__side-logo" src="" alt="jquery-logo" />
 </div></main></template>`;
 
-let footerTemplate = `<template id="footer-temp"><footer id="footer" class="content__footer"><nav id="footer-nav" class=footer__nav>
-<ul>
-  <li>Events</li>
-  <li>Functions</li>
-  <li>Selectors</li>
+let footerTemplate = `<template id="footer-temp"><footer id="footer" class="content__footer"></template>`;
+
+let navTemplate = `<template id="nav-temp"><nav id="footer-nav" class=footer__nav>
+<ul class="nav__list">
+  <li>events</li>
+  <li>functions</li>
+  <li>selectors</li>
 </ul>
-</nav></footer></template>`;
+</nav></template>`;
 
 export {
 	headerHomeTemplate,
@@ -133,4 +136,5 @@ export {
 	pageMainTemplate,
 	pageIndexTemplate,
 	footerTemplate,
+	navTemplate,
 };

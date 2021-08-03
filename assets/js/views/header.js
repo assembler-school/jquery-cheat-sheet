@@ -9,13 +9,13 @@ function getHeader() {
 	wrapper.innerHTML = "";
 	switch (location.hash) {
 		case "":
-			insertTemplate(headerHomeTemplate, "header-home-temp");
+			insertTemplate(wrapper, headerHomeTemplate, "header-home-temp");
 			break;
 		case "#":
-			insertTemplate(headerHomeTemplate, "header-home-temp");
+			insertTemplate(wrapper, headerHomeTemplate, "header-home-temp");
 			break;
 		default:
-			insertTemplate(headerPageTemplate, "header-page-temp");
+			insertTemplate(wrapper, headerPageTemplate, "header-page-temp");
 			break;
 	}
 }

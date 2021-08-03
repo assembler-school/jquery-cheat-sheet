@@ -1,12 +1,11 @@
 import { getHeader } from "./header.js";
+import { wrapper } from "../main.js";
 import { insertTemplate } from "../functions.js";
 import { mainHomeTemplate } from "../templates.js";
-import { getFooter } from "./footer.js";
 
 function homepageDisplay() {
 	getHeader();
-	insertTemplate(mainHomeTemplate, "main-home-temp");
-	getFooter();
+	insertTemplate(wrapper, mainHomeTemplate, "main-home-temp");
 }
 
 export { homepageDisplay };

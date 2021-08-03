@@ -1,7 +1,15 @@
 @import url(./common.css);
 @import url(./sidebar.css);
 @import url(./main.css);
-@import url(./header.css);
+@import url(./header-footer.css);
 @import url(./global-variables.css);
-@import url(./footer.css);
 
+
+
+
+@media screen and (max-width:768px) {
+  .sidebar{
+    display: none;
+  }
+  
+}

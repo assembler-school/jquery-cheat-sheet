@@ -1,11 +1,12 @@
 import { pageIndexTemplate } from "../templates.js";
 import { getHeader } from "./header.js";
+import { wrapper } from "../main.js";
 import { insertTemplate } from "../functions.js";
 import { getFooter } from "./footer.js";
 
 function indexDisplay() {
 	getHeader();
-	insertTemplate(pageIndexTemplate, "page-index-temp");
+	insertTemplate(wrapper, pageIndexTemplate, "page-index-temp");
 	getFooter();
 }
 

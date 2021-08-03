@@ -1,29 +1,60 @@
-.sidebar{  
+.sidebar {
+  --sidebar--PaddingTop: var(--global--spacer--lg);
+
   width: calc((var(--global--width--viewport) - var(--global--width--from--viewport))/1.618);
   height: inherit;
   color: whitesmoke;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   background-image: url(/assets/img/chalkboard.jpg);
   background-size: cover;
   background-position-x: center;
+  padding: var(--sidebar--PaddingTop, 2rem) 0;
 }
-  /*background-image: url(/assets/img/chalkboard-black.jpg);*/
-  
-.sidebar__drop-on{
+
+
+.sidebar__drop-on {
+  --dropon--PaddingTopBottom: var(--global--spacer--sm);
+  --dropon--PaddingRightLeft: var(--global--spacer--md);
+  --dropon--LineHeight: var(--global--md--LineHeight);
+
   height: inherit;
   background: none;
   width: 100%;
-  color: whitesmoke;
-  resize:none;
+  color: var(--global--primary--blueChalk);
+  font-size: var(--global--code--FontSize);
+  resize: none;
   border: none;
-  
+  padding: var(--dropon--PaddingTopBottom) var(--dropon--PaddingRightLeft);
+  font-family: var(--global--code--FontFamily);
 }
 
-.sidebar__copy-btn{
+.sidebar__drop-on:focus-visible{
+  outline: none;
+}
+
+.sidebar__copy-btn {
   width: inherit;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/chalkMarkButton.png);
+  line-height: var(--global--xl--LineHeight);
+  /*color: var(--global--primary--whiteChalk);*/
+}
+
+.sidebar__title {
+  --title--PaddingTopBottom: var(--global--spacer--sm);
+  --title--PaddingRightLeft: var(--global--spacer--md);
+  --title--LineHeight: var(--global--md--LineHeight);
+
+  font-family: secondChanceSk;
+  font-size: var(--global--h2--title--FontSize);
+  padding: var(--title--PaddingTopBottom) var(--title--PaddingRightLeft);
+  line-height: var(--title--LineHeight);
+  color: var(--global--primary--yellowChalk);
 }
 
 /*TODO: pointer draggable, button clipboard, title , color of chalkboard
