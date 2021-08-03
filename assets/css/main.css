@@ -1,4 +1,4 @@
-.content__home-main{
+.content__home-main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,30 +8,30 @@
   flex-wrap: nowrap;
 }
 
-.home-main__title{
+.home-main__title {
   --global--main-title--height: var(--global--lg--LineHeight);
 
   line-height: var(--global--main-title--height);
   font-family: 'secondChanceS';
-    font-size: var(--global--main--title--FontSize);
-    color: var(--global--primary--jquery--Color);
-    letter-spacing: var(--global--letter-spacing--s);
+  font-size: var(--global--main--title--FontSize);
+  color: var(--global--primary--jquery--Color);
+  letter-spacing: var(--global--letter-spacing--s);
 }
 
-.home-main__autocomplete{
+.home-main__autocomplete {
   --autocomplete--PaddingTopBottom: var(--global--spacer--sm);
   --autocomplete--PaddingRightLeft: var(--global--spacer--md);
 
-    padding: var(--autocomplete--PaddingTopBottom) var(--autocomplete--PaddingRightLeft);
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    width: 80%;
-    align-items: center;
-    flex-wrap: nowrap;
+  padding: var(--autocomplete--PaddingTopBottom) var(--autocomplete--PaddingRightLeft);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 80%;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
-.autocomplete__button{
+.autocomplete__button {
   font-family: secondChanceS;
   line-height: var(--global--lg--LineHeight);
   background-position: center;
@@ -40,7 +40,42 @@
   background-image: url(/assets/img/chalkMarkButton.png);
 }
 
-.autocomplete__input{
+.autocomplete__input {
   line-height: var(--global--lg--LineHeight);
+  border-radius: var(--global--border-radius--1);
   width: 40%;
+}
+
+.autocomplete__input:focus-visible {
+  outline-color: var(--global--primary--jquery--Color);
+  outline-offset: 0.2rem;
+
+}
+
+.home-main__js-logo {
+  background-color: var(--global--primary--js--Color);
+  width: 8.2%;
+  border-radius: var(--global--border-radius--1);
+
+
+}
+
+.home-main__js-title {
+  font-family: "Neutraface Text Bold";
+  font-size: var(--global--h4--title--FontSize);
+  line-height: var(--global--sm--LineHeight);
+  text-align: right;
+  padding-top: var(--global--spacer--md);
+  padding-right: var(--global--spacer--xs);
+
+}
+
+.home-main__js-chalk {
+
+  background-image: url(/assets/img/chalkMarkButton.png);
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position-x: center;
+ 
+
 }

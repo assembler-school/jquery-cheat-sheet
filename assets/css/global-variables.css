@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Overpass:300,400,700");
+@import url("//db.onlinewebfonts.com/c/33c69019b1d9231e1004f52ae937b0da?family=Neutraface+Text+Bold");
 
 @font-face {
   font-family: chalkBoy;
@@ -9,14 +10,17 @@
   font-family: blankSpaceSk;
   src: url(/assets/fonts/KgBlankSpaceSketch.ttf);
 }
+
 @font-face {
   font-family: blankSpaceS;
   src: url(/assets/fonts/KgBlankSpaceSolid.ttf);
 }
+
 @font-face {
   font-family: secondChanceSk;
   src: url(/assets/fonts/KgSecondChancesSketch.ttf);
 }
+
 @font-face {
   font-family: secondChanceS;
   src: url(/assets/fonts/KgSecondChancesSolid.ttf);
@@ -25,12 +29,12 @@
 :root {
 
   /* width for golden ratio */
-  --global--width--viewport: 100vw; 
+  --global--width--viewport: 100vw;
   --global--width--from--viewport: calc(100vw/1.618);
   /* Links */
-  --global--link--Color: var(--global--primary--Color);
+  --global--link--Color: var(--global--primary--js--Color);
   --global--link--TextDecoration: none;
-  --global--link--hover-Color: #0088ce;
+  --global--link--hover-Color:var(--global--primary--jquery--Color);
   --global--link--hover--TextDecoration: underline;
 
   /*  Borders */
@@ -52,27 +56,29 @@
   /*  Color */
 
   /* Theme colors */
- 
-  --global--primary--yellowChalk:  #f5f9ad;
+
+  --global--primary--yellowChalk: #f5f9ad;
   --global--primary--blueChalk: #94c0cc;
   --global--primary--whiteChalk: #f6f4f1;
-  --global--primary--js--Color:       #ebb93e;
-  --global--primary--jquery--Color:   #80b8e9;
+  --global--primary--js--Color: #ebb93e;
+  --global--primary--jquery--Color: #80b8e9;
 
   /* Text color */
-  --global--dark--Color:      #292e34;
+  --global--dark--Color: #292e34;
   --global--dark--off--Color: #8b8d8f;
-  --global--light--Color:     #fafafa;
+  --global--light--Color: #fafafa;
   --global--light--off-Color: #d1d1d1;
 
   /* Background color */
-  --global--light--BackgroundColor:      #fafafa;
+  --global--light--BackgroundColor: #fafafa;
   --global--light--off--BackgroundColor: #ededed;
 
-  --global--dark--BackgroundColor:      #292e34;
+  --global--dark--BackgroundColor: #292e34;
   --global--dark--off--BackgroundColor: #393f44;
 
+/*Border */
 
+--global--border-radius--1:0.5rem;
 
   /*  Breakpoint 
  http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/ */
@@ -91,31 +97,32 @@
   --global--code--FontFamily: monospace;
 
   /*  Font size */
-  --global--main--title--FontSize:      5vw;
-  --global--h2--title--FontSize:        3.7vw;
-  --global--h3--title--FontSize:        3vw;
-  --global--h4--title-FontSize:         2.5vw;
-  --global--h5--title--FontSize:        2vw;
-  --global--h6--title--FontSize:        1.7vw;
-  --global--body--FontSize:             1.5vw;
-  --global--code--FontSize:             1.3vw;
-  --global--caption--FontSize:          1vw;
+  --global--main--title--FontSize: 5vw;
+  --global--h2--title--FontSize: 3.7vw;
+  --global--h3--title--FontSize: 3vw;
+  --global--h4--title--FontSize: 2.5vw;
+  --global--h5--title--FontSize: 2vw;
+  --global--h6--title--FontSize: 1.7vw;
+  --global--body--FontSize: 1.5vw;
+  --global--code--FontSize: 1.3vw;
+  --global--caption--FontSize: 1vw;
 
   /*letter spacing*/
 
   --global--letter-spacing--l: 1.5vw;
   --global--letter-spacing--m: 0.75vw;
-  --global--letter-spacing--s:0.375vw;
+  --global--letter-spacing--s: 0.375vw;
   --global--letter-spacing--xs: 0.15vw;
 
   /*  line height */
   --global--sm--LineHeight: 1.1;
   --global--md--LineHeight: 1.8;
   --global--lg--LineHeight: 2.9;
+  --global--xlg--LineHeight:4.1;
   --global--xl--LineHeight: 6.5;
 
   /*  Font weight */
-  --global--light--FomntWeight:   300;
-  --global--normal--FomntWeight:  400;
-  --global--bold--FomntWeight:    700;
+  --global--light--FomntWeight: 300;
+  --global--normal--FomntWeight: 400;
+  --global--bold--FomntWeight: 700;
 }

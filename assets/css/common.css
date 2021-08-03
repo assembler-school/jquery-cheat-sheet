@@ -1,4 +1,3 @@
-
 /* Reset
 Based on minireset.css v0.0.3 
 https://github.com/jgthms/minireset.css */
@@ -88,17 +87,17 @@ body {
   font-family: var(--global--sans-serif--FontFamily);
   font-size: var(--global--body--FontSize);
   font-weight: var(--global--normal--FontWeight);
-  line-height: var(--global--md--LineHeight);
+  /*line-height: var(--global--md--LineHeight);*/
   display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* width occupies the rest of the fgolden ratio from sidebar*/
-.content{
+.content {
   --content--PaddingTop: var(--global--spacer--lg);
   background-color: var(--global--light--BackgroundColor);
   width: 100%;
@@ -115,12 +114,13 @@ body {
 
 a {
   color: var(--global--link--Color);
-  text-decoration: var(--global--link--TextDecoration);}
+  text-decoration: var(--global--link--TextDecoration);
+}
 
 a:hover {
-    color: var(--global--link--hover--Color);
-    text-decoration: var(--global--link--hover--TextDecoration);
-  }
+  color: var(--global--link--hover--Color);
+  text-decoration: var(--global--link--hover--TextDecoration);
+}
 
 
 
@@ -128,19 +128,19 @@ a {
   cursor: pointer;
 }
 
-button{
-    letter-spacing: var(--global--letter-spacing--xs);
-    word-spacing: var(--global--letter-spacing--s);
-    text-transform: none;
-    text-indent: 0;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: pointer;
-    background: none;
-    font-family: secondChanceSk;
-    font-size:var(--global--h6--title--FontSize);
-    padding: 0;
-    border: none;
+button {
+  letter-spacing: var(--global--letter-spacing--xs);
+  word-spacing: var(--global--letter-spacing--s);
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: pointer;
+  background: none;
+  font-family: secondChanceSk;
+  font-size: var(--global--h6--title--FontSize);
+  padding: 0;
+  border: none;
 }

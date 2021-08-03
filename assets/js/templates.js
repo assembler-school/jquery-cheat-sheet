@@ -104,7 +104,7 @@ let mainHomeTemplate = `<template id="main-home-temp"><main id="home-main" class
 " />cheatSheet
 </h1>
 <div class="home-main__autocomplete">
-<img class="autocomplete__side-logo" src="" alt="js-vanilla-logo" />
+<div class="home-main__js-logo"><div class="home-main__js-chalk"><h4 class="home-main__js-title">JS</h4></div></div>
 <img class="autocomplete__side-logo" src="" alt="jquery-logo" />
 <input
   id="autocomplete-field"

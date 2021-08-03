@@ -12,4 +12,7 @@
     display: none;
   }
   
+  .autocomplete__inpu{
+  line-height: var(--global--md--LineHeight);
+  }
 }
