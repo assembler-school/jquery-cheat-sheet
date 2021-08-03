@@ -6,13 +6,14 @@ main {
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 60%;
 }
 
 .specific {
   display: flex;
   flex-direction: row;
   column-gap: 2rem;
+  height: 10rem;
 }
 
 .common {
@@ -20,16 +21,14 @@ main {
 }
 
 .vanilla {
-  width: 50%;
+  width: 25%;
   text-align: center;
   background-color: grey;
-  height: 7rem;
 }
 .jquery {
-  width: 50%;
+  width: 25%;
   text-align: center;
   background-color: grey;
-  height: 7rem;
 }
 
 img {

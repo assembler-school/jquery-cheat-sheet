@@ -17,7 +17,7 @@ function vanillaKeyPressEvent() {
 }
 
 function vanillaCursorOverEvent() {
-  document.querySelector("#vanilla").addEventListener("mouseover", () => {
+  document.querySelector("#vanilla").addEventListener("mousemove", () => {
     document.querySelector("#vanilla").style.border = "2px solid red";
   });
 }
@@ -56,13 +56,129 @@ function vanillaImageFails() {
   });
 }
 
-function vanillaSubmitEvent() {}
+function vanillaSubmitEvent() {
+  document.querySelector("#vanilla").insertAdjacentHTML(
+    "beforeend",
+    `<form>
+    <input type="text">
+    <input type="submit">
+    </form>`
+  );
+  document.querySelector("#vanilla form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    document.querySelector("#vanilla input[type='text']").value =
+      "SUBMITTED FORM VANILLA";
+  });
+}
 
-function vanillaChangeOption() {}
+function vanillaChangeOption() {
+  document.querySelector("#vanilla").insertAdjacentHTML(
+    "beforeend",
+    `<select>
+    <option>JQUERY</option>
+    <option>VANILLA</option>
+    </select>`
+  );
+  document.querySelector("#vanilla select").addEventListener("change", () => {
+    document.querySelector("#vanilla > p").textContent =
+      "VANILLA SELECTOR HAS CHANGED";
+  });
+}
 
-function vanillaMousePosition() {}
+function vanillaMousePosition() {
+  document.querySelector("#vanilla").addEventListener("mouseover", () => {
+    document.querySelector("#vanilla").style.border = "2px solid red";
+  });
+}
 
-function vanillaChecked() {}
+function vanillaChecked() {
+  document
+    .querySelector("#vanilla")
+    .insertAdjacentHTML("beforeend", `<input type= "checkbox">`);
+  document
+    .querySelector("#vanilla [type='checkbox']")
+    .addEventListener("change", () => {
+      if (document.querySelector("#vanilla [type='checkbox']").checked) {
+        document.querySelector("#vanilla > p").textContent = "CHECKED";
+      } else {
+        document.querySelector("#vanilla > p").textContent = "UNCHECKED";
+      }
+    });
+}
+
+function vanillaLiClicked() {
+  document.querySelector("#vanilla").insertAdjacentHTML(
+    "beforeend",
+    `<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    </ul>`
+  );
+  document.querySelectorAll("#vanilla ul li").forEach((li) => {
+    li.addEventListener("click", (e) => {
+      document.querySelector("#vanilla p").textContent = e.target.textContent;
+    });
+  });
+}
+
+function vanillaCreateHTML() {}
+
+function vanillaRemove() {}
+
+function vanillaAppend() {}
+
+function vanillaPrepend() {}
+
+function vanillaCreateAfter() {}
+
+function vanillaCreateBefore() {}
+
+function vanillaClone() {}
+
+function vanillaAddClass() {}
+
+function vanillaRemoveClass() {}
+
+function vanillaToggle() {}
+
+function vanillaAddDisabled() {}
+
+function vanillaRemoveDisabled() {}
+
+function vanillaDataSrc() {}
+
+function vanillaRemoveSrc() {}
+
+function vanillaHide() {}
+
+function vanillaShow() {}
+
+function vanillaFadeIn() {}
+
+function vanillaFadeOut() {}
+
+function vanillaIterateElements() {}
+
+function vanillaGetParent() {}
+
+function vanillaGetChildren() {}
+
+function vanillaClassElements() {}
+
+function vanillaItemId() {}
+
+function vanillaDisplayElements() {}
+
+function vanillaGetOptions() {}
+
+function vanillaChangeHref() {}
+
+function vanillaInputAlert() {}
+
+function vanillaRemoveItems() {}
+
+function vanillaAnimate() {}
 
 export {
   vanillaClickEvent,
@@ -76,4 +192,34 @@ export {
   vanillaChangeOption,
   vanillaMousePosition,
   vanillaChecked,
+  vanillaLiClicked,
+  vanillaCreateHTML,
+  vanillaRemove,
+  vanillaAppend,
+  vanillaPrepend,
+  vanillaCreateAfter,
+  vanillaCreateBefore,
+  vanillaClone,
+  vanillaAddClass,
+  vanillaRemoveClass,
+  vanillaToggle,
+  vanillaAddDisabled,
+  vanillaRemoveDisabled,
+  vanillaDataSrc,
+  vanillaRemoveSrc,
+  vanillaHide,
+  vanillaShow,
+  vanillaFadeIn,
+  vanillaFadeOut,
+  vanillaIterateElements,
+  vanillaGetParent,
+  vanillaGetChildren,
+  vanillaClassElements,
+  vanillaItemId,
+  vanillaDisplayElements,
+  vanillaGetOptions,
+  vanillaChangeHref,
+  vanillaInputAlert,
+  vanillaRemoveItems,
+  vanillaAnimate,
 };
