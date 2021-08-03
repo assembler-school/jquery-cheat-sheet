@@ -4,6 +4,10 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+body{
+  background-color: #0865a6;
+}
+
 .h1_page {
   text-align: center;
 }
@@ -99,12 +103,23 @@
 }
 
 .h2vanilla{
-  color: #f7e018;
+  color: black;
+  background-color: #f7e018;
 }
 
 .h1_page {
   font-size: 3rem;
   color: #0865a6;
+}
+
+.logo {
+  width: 30px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
