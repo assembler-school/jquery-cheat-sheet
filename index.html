@@ -59,22 +59,22 @@
         <li data-open="functionShow">Show an HTML element on click</li>
         <li data-open="functionFadein">Fade in an HTML element using jQuery</li>
         <li data-open="functionFadeout">Fade out an HTML element using jQuery</li>
-        <li>Iterate a collection of elements and apply a change of style on them</li>
-        <li>Get the parent element of a certain element and change its font weight</li>
-        <li>Get the collection of children of a certain element and change its font weight</li>
+        <li data-open="functionAnimate">Animate an item after 2 seconds</li>
       </ul>
     </section>
     <section class="cell cell-tertiary">
       <h2 class="text-center">Selectors</h2>
       <ul>
-        <li>Get all the elements that have a certain class and change their font weight</li>
-        <li>Get an item by id and change its font weight</li>
+        <li data-open="selectorIterateChange">Apply change of style on a collection</li>
+        <li data-open="selectorParentFont">Get parent element and change font weight</li>
+        <li data-open="selectorChildrenFont">Get children and change its font weight</li>
+        <li data-open="selectorCertainFont">Get all the elements that have a certain class and change their font weight</li>
+        <li data-open="selectorGetIdFont">Get an item by id and change its font weight</li>
         <li>Get all the elements that have a certain class and the display property of none and change their font color</li>
         <li>Get the options of a select element that are selected (attribute selected)</li>
         <li>Change the href attribute of the first <a> element (You have to create several <a> elements)</li>
         <li>Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)</li>
         <li>Remove all items from a specific selector</li>
-        <li>Animate an item after 2 seconds from the initial page load</li>
       </ul>
     </section>
   </main>
@@ -83,7 +83,7 @@
   <article class="modal flex-center" id="eventDomLoad" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event DOM Content loaded</h1>
+      <h1>DOM Content loaded</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-el" type="radio" id="jqueryEl" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -107,7 +107,7 @@
   <article class="modal flex-center" id="eventClick" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event click</h1>
+      <h1>Click</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav" type="radio" id="jquery" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -131,7 +131,7 @@
   <article class="modal flex-center" id="eventDblClick" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event double click</h1>
+      <h1>Double click</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-dbl" type="radio" id="jqueryDbl" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -155,13 +155,13 @@
   <article class="modal flex-center" id="eventMouseMove" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event mouse move</h1>
+      <h1>Mouse move</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-mm" type="radio" id="jqueryMm" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
           <div class="tab__inner">
             <p>Move the mouse inside the box</p>
-            <div id="eventMouseMoveJc" class="canvan-box flex-center"></div>
+            <div id="eventMouseMoveJc" class="canvas-box flex-center"></div>
           </div>
         </div>
         <label class="tab__nav flex-center" for="jqueryMm">JQuery</label>
@@ -169,7 +169,7 @@
         <div class="tab__content">
           <div class="tab__inner">
             <p>Move the mouse inside the box</p>
-            <div id="eventMouseMoveV" class="canvan-box flex-center"></div>
+            <div id="eventMouseMoveV" class="canvas-box flex-center"></div>
           </div>
         </div>
         <label class="tab__nav flex-center" for="VanillajsMm">Vanilla JS</label>
@@ -181,13 +181,13 @@
   <article class="modal flex-center" id="eventMouseOver" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event mouse over</h1>
+      <h1>Mouse over</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-mo" type="radio" id="jqueryMo" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
           <div class="tab__inner">
             <p>Move the mouse inside the box</p>
-            <div id="eventMouseOverJc" class="canvan-box flex-center"></div>
+            <div id="eventMouseOverJc" class="canvas-box flex-center"></div>
           </div>
         </div>
         <label class="tab__nav flex-center" for="jqueryMo">JQuery</label>
@@ -195,7 +195,7 @@
         <div class="tab__content">
           <div class="tab__inner">
             <p>Move the mouse inside the box</p>
-            <div id="eventMouseOverV" class="canvan-box flex-center"></div>
+            <div id="eventMouseOverV" class="canvas-box flex-center"></div>
           </div>
         </div>
         <label class="tab__nav flex-center" for="VanillajsMo">Vanilla JS</label>
@@ -207,7 +207,7 @@
   <article class="modal flex-center" id="eventKeyboard" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event keyboard</h1>
+      <h1>Keyboard</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-key" type="radio" id="jqueryKey" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -232,14 +232,16 @@
   <article class="modal flex-center" id="eventSubmit" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event submit</h1>
+      <h1>Submit</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-submit" type="radio" id="jquerySubmit" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
           <div class="tab__inner">
-            <form action="" id="eventSubmitJq" class="flex-start-center">
-              <label for="yourNameJq">Your name:</label>
-              <input type="text" id="yourNameJq" class="input" required >
+            <form action="" id="eventSubmitJq">
+              <div class="form-group">
+                <label for="yourNameJq">Your name:</label>
+                <input type="text" id="yourNameJq" class="input" required >
+              </div>
               <button type="submit" class="button">Send</button>
             </form>
           </div>
@@ -248,9 +250,11 @@
         <input name="tab-nav-submit" type="radio" id="VanillajsSubmit" class="tab__radiobutton" />
         <div class="tab__content">
           <div class="tab__inner">
-            <form action="" id="eventSubmitV" class="flex-start-center">
-              <label for="yourName">Your name:</label>
-              <input type="text" id="yourName" class="input" required >
+            <form action="" id="eventSubmitV">
+              <div class="form-group">
+                <label for="yourName">Your name:</label>
+                <input type="text" id="yourName" class="input" required >
+              </div>
               <button type="submit" class="button">Send</button>
             </form>
           </div>
@@ -264,7 +268,7 @@
   <article class="modal flex-center" id="eventChange" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event change</h1>
+      <h1>Change</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-change" type="radio" id="jqueryChange" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -294,7 +298,7 @@
   <article class="modal flex-center" id="eventOptionSelect" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event option select</h1>
+      <h1>Option select</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-opSelect" type="radio" id="jqueryOpSelect" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -336,7 +340,7 @@
   <article class="modal flex-center" id="eventChecked" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event checked / unchecked</h1>
+      <h1>Checked / unchecked</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-check" type="radio" id="jqueryCheck" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -366,9 +370,9 @@
   <article class="modal flex-center" id="eventShow" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event show</h1>
+      <h1>Show</h1>
       <section class="grid grid-2 tab">
-        <input name="tab-nav-show" type="radio" id="jqueryShow" class="tab__radiobutton" checked="checked" />
+        <input name="tab-nav-eShow" type="radio" id="jqueryeShow" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
           <div class="tab__inner">
             <p>Click on one of the items:</p>
@@ -379,8 +383,8 @@
             </ul>
           </div>
         </div>
-        <label class="tab__nav flex-center" for="jqueryShow">JQuery</label>
-        <input name="tab-nav-show" type="radio" id="VanillajsShow" class="tab__radiobutton" />
+        <label class="tab__nav flex-center" for="jqueryeShow">JQuery</label>
+        <input name="tab-nav-eShow" type="radio" id="VanillajseShow" class="tab__radiobutton" />
         <div class="tab__content">
           <div class="tab__inner">
             <p>Click on one of the items:</p>
@@ -391,7 +395,7 @@
             </ul>
           </div>
         </div>
-        <label class="tab__nav flex-center" for="VanillajsShow">Vanilla JS</label>
+        <label class="tab__nav flex-center" for="VanillajseShow">Vanilla JS</label>
       </section>
     </div>
   </article>
@@ -400,7 +404,7 @@
   <article class="modal flex-center" id="eventLoad" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event load image</h1>
+      <h1>Load image</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-load" type="radio" id="jqueryLoad" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -424,7 +428,7 @@
   <article class="modal flex-center" id="eventLoadFail" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Event load image failed</h1>
+      <h1>Load image failed</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-loadf" type="radio" id="jqueryLoadf" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -448,7 +452,7 @@
   <article class="modal flex-center" id="functionCreateValue" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function create element</h1>
+      <h1>Create element</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-createV" type="radio" id="jqueryCreateV" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -472,7 +476,7 @@
   <article class="modal flex-center" id="functionRemoveValue" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function remove element</h1>
+      <h1>Remove element</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-removeV" type="radio" id="jqueryRemoveV" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -498,7 +502,7 @@
   <article class="modal flex-center" id="functionAppendElement" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function append element to a parent element</h1>
+      <h1>Append element to a parent element</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-appendV" type="radio" id="jqueryAppendV" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -524,7 +528,7 @@
   <article class="modal flex-center" id="functionPrependElement" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function prepend element to a parent element</h1>
+      <h1>Prepend element to a parent element</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-prependV" type="radio" id="jqueryPrependV" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -550,7 +554,7 @@
   <article class="modal flex-center" id="functionAfterElement" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function create and add after element</h1>
+      <h1>Create and add after element</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-afterV" type="radio" id="jqueryAfterV" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -574,7 +578,7 @@
   <article class="modal flex-center" id="functionBeforeElement" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function create and add before element</h1>
+      <h1>Create and add before element</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-beforeV" type="radio" id="jqueryBeforeV" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -598,7 +602,7 @@
   <article class="modal flex-center" id="functionClone" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function clone an element</h1>
+      <h1>Clone an element</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-cloneV" type="radio" id="jqueryCloneV" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -624,7 +628,7 @@
   <article class="modal flex-center" id="functionAddClass" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function add a class</h1>
+      <h1>Add a class</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-addClass" type="radio" id="jqueryAddClass" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -650,7 +654,7 @@
   <article class="modal flex-center" id="functionRemoveClass" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function remove a class</h1>
+      <h1>Remove a class</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-removeClass" type="radio" id="jqueryRemoveClass" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -676,7 +680,7 @@
   <article class="modal flex-center" id="functionToggleClass" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function toggle a class</h1>
+      <h1>Toggle a class</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-toggleClass" type="radio" id="jqueryToggleClass" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -702,7 +706,7 @@
   <article class="modal flex-center" id="functionAddDisabled" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function add disabled attribute</h1>
+      <h1>Add disabled attribute</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-addDisabled" type="radio" id="jqueryAddDisabled" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -726,7 +730,7 @@
   <article class="modal flex-center" id="functionRemoveDisabled" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function remove disabled attribute</h1>
+      <h1>Remove disabled attribute</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-removeDisabled" type="radio" id="jqueryRemoveDisabled" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -754,7 +758,7 @@
   <article class="modal flex-center" id="functionSetData" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function set a dataset attribute</h1>
+      <h1>Set a dataset attribute</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-dataset" type="radio" id="jqueryDataset" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -779,7 +783,7 @@
   <article class="modal flex-center" id="functionRemoveData" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function remove a dataset attribute</h1>
+      <h1>Remove a dataset attribute</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-datasetR" type="radio" id="jqueryDatasetR" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -805,7 +809,7 @@
   <article class="modal flex-center" id="functionHide" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function hide an element</h1>
+      <h1>Hide an element</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-hide" type="radio" id="jqueryHide" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
@@ -831,24 +835,24 @@
   <article class="modal flex-center" id="functionShow" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function show an element</h1>
+      <h1>Show an element</h1>
       <section class="grid grid-2 tab">
-        <input name="tab-nav-show" type="radio" id="jqueryShowBlock" class="tab__radiobutton" checked="checked" />
+        <input name="tab-nav-fShow" type="radio" id="jqueryfShowBlock" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
           <div class="tab__inner">
             <button id="showButtonJq" class="button">Show</button>
             <img id="imgShowJq" src="assets/images/hello-kitty-dface.jpg" alt="Hello kitty d-face in Tokyo" class="--is-hidden">
           </div>
         </div>
-        <label class="tab__nav flex-center" for="jqueryShowBlock">JQuery</label>
-        <input name="tab-nav-show" type="radio" id="VanillajsShowBlock" class="tab__radiobutton" />
+        <label class="tab__nav flex-center" for="jqueryfShowBlock">JQuery</label>
+        <input name="tab-nav-fShow" type="radio" id="VanillajsfShowBlock" class="tab__radiobutton" />
         <div class="tab__content">
           <div class="tab__inner">
             <button id="showButtonV" class="button">Show</button>
             <img id="imgShowV" src="assets/images/hello-kitty-dface.jpg" alt="Hello kitty d-face in Tokyo" class="--is-hidden">
           </div>
         </div>
-        <label class="tab__nav flex-center" for="VanillajsShowBlock">Vanilla JS</label>
+        <label class="tab__nav flex-center" for="VanillajsfShowBlock">Vanilla JS</label>
       </section>
     </div>
   </article>
@@ -857,24 +861,244 @@
   <article class="modal flex-center" id="functionFadein" data-animation="zoomInOut">
     <div class="modal__content">
       <button class="button--close" data-close>X</button>
-      <h1>Function fadein an element</h1>
+      <h1>Fadein an element in JQuery</h1>
       <section class="grid grid-2 tab">
         <input name="tab-nav-fadein" type="radio" id="jqueryFadein" class="tab__radiobutton" checked="checked" />
         <div class="tab__content">
-          <div class="tab__inner">
-            <button id="showButtonJq" class="button">Show</button>
-            <img id="imgShowJq" src="assets/images/hello-kitty-dface.jpg" alt="Hello kitty d-face in Tokyo" class="--is-hidden">
-          </div>
+          <button id="fadeinButtonJq" class="button margin-x1">Fade in</button>
+          <img id="imgFadeinJq" src="assets/images/hello-kitty-dface.jpg" alt="Hello kitty d-face in Tokyo" class="--is-hidden">
         </div>
         <label class="tab__nav flex-center" for="jqueryFadein">JQuery</label>
-        <input name="tab-nav-fadein" type="radio" id="VanillajsFadein" class="tab__radiobutton" />
+        <input name="tab-nav-fadein" type="radio" id="VanillajsFadein" class="tab__radiobutton"/>
         <div class="tab__content">
           <div class="tab__inner">
-            <button id="showButtonV" class="button">Show</button>
-            <img id="imgShowV" src="assets/images/hello-kitty-dface.jpg" alt="Hello kitty d-face in Tokyo" class="--is-hidden">
           </div>
         </div>
         <label class="tab__nav flex-center" for="VanillajsFadein">Vanilla JS</label>
+      </section>
+    </div>
+  </article>
+
+  <!-- Function fadeout HTML element modal -->
+  <article class="modal flex-center" id="functionFadeout" data-animation="zoomInOut">
+    <div class="modal__content">
+      <button class="button--close" data-close>X</button>
+      <h1>Fadeout an element in JQuery</h1>
+      <section class="grid grid-2 tab">
+        <input name="tab-nav-fadeout" type="radio" id="jqueryFadeout" class="tab__radiobutton" checked="checked" />
+        <div class="tab__content">
+          <button id="fadeoutButtonJq" class="button margin-x1">Fade out</button>
+          <img id="imgFadeoutJq" src="assets/images/hello-kitty-dface.jpg" alt="Hello kitty d-face in Tokyo">
+        </div>
+        <label class="tab__nav flex-center" for="jqueryFadeout">JQuery</label>
+        <input name="tab-nav-fadeout" type="radio" id="VanillajsFadeout" class="tab__radiobutton"/>
+        <div class="tab__content">
+          <div class="tab__inner">
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="VanillajsFadeout">Vanilla JS</label>
+      </section>
+    </div>
+  </article>
+
+  <!-- Function animate after 2 seconds HTML element modal -->
+  <article class="modal flex-center" id="functionAnimate" data-animation="zoomInOut">
+    <div class="modal__content">
+      <button class="button--close" data-close>X</button>
+      <h1>Animate item after 2 seconds</h1>
+      <section class="grid grid-2 tab">
+        <input name="tab-nav-animate" type="radio" id="jqueryAnimate" class="tab__radiobutton" checked="checked" />
+        <div class="tab__content">
+          <div class="tab__inner">
+          <button id="btnAnimateJq" class="button">Animate</button>
+          <div id="boxAnimateJq" class="[ canvas-box canvas-box--filled ] flex-center"></div>
+        </div>
+        </div>
+        <label class="tab__nav flex-center" for="jqueryAnimate">JQuery</label>
+        <input name="tab-nav-animate" type="radio" id="VanillajsAnimate" class="tab__radiobutton"/>
+        <div class="tab__content">
+          <div class="tab__inner">
+            <button id="btnAnimateV" class="button">Animate</button>
+            <div id="boxAnimateV" class="[ canvas-box canvas-box--filled ] flex-center"></div>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="VanillajsAnimate">Vanilla JS</label>
+      </section>
+    </div>
+  </article>
+
+  <!-- Selector change style in a collection modal -->
+  <article class="modal flex-center" id="selectorIterateChange" data-animation="zoomInOut">
+    <div class="modal__content">
+      <button class="button--close" data-close>X</button>
+      <h1>Change style in a collection</h1>
+      <section class="grid grid-2 tab">
+        <input name="tab-nav-iterateStyle" type="radio" id="jqueryIterateStyle" class="tab__radiobutton" checked="checked" />
+        <div class="tab__content">
+          <div class="tab__inner">
+            <button id="btnChangeStyleJq" class="button">Change style</button>
+            <ul id="listChangeStyleJq" class="list">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="jqueryIterateStyle">JQuery</label>
+        <input name="tab-nav-iterateStyle" type="radio" id="VanillajsIterateStyle" class="tab__radiobutton"/>
+        <div class="tab__content">
+          <div class="tab__inner">
+            <button id="btnChangeStyleV" class="button">Change style</button>
+            <ul id="listChangeStyleV" class="list">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="VanillajsIterateStyle">Vanilla JS</label>
+      </section>
+    </div>
+  </article>
+
+  <!-- Selector get parent and change font weight modal -->
+  <article class="modal flex-center" id="selectorParentFont" data-animation="zoomInOut">
+    <div class="modal__content">
+      <button class="button--close" data-close>X</button>
+      <h1>Get parent and change font weight</h1>
+      <section class="grid grid-2 tab">
+        <input name="tab-nav-parentFont" type="radio" id="jqueryParentFont" class="tab__radiobutton" checked="checked" />
+        <div class="tab__content">
+          <div class="tab__inner">
+            <button id="btnParentFontJq" class="button">Change title</button>
+            <h2>Parent title</h2>
+            <ul class="list">
+              <li>Item 1</li>
+              <li id="itemParentFontJq">Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="jqueryParentFont">JQuery</label>
+        <input name="tab-nav-parentFont" type="radio" id="VanillajsParentFont" class="tab__radiobutton"/>
+        <div class="tab__content">
+          <div class="tab__inner">
+            <button id="btnParentFontV" class="button">Change text</button>
+            <p>Parent text</p>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="VanillajsParentFont">Vanilla JS</label>
+      </section>
+    </div>
+  </article>
+
+  <!-- Selector get children and change font weight modal -->
+  <article class="modal flex-center" id="selectorChildrenFont" data-animation="zoomInOut">
+    <div class="modal__content">
+      <button class="button--close" data-close>X</button>
+      <h1>Get children and change font weight</h1>
+      <section class="grid grid-2 tab">
+        <input name="tab-nav-childrenFont" type="radio" id="jqueryChildrenFont" class="tab__radiobutton" checked="checked" />
+        <div class="tab__content">
+          <div class="tab__inner">
+            <button id="btnChildrenFontJq" class="button">Change children</button>
+            <ul id="itemChildrenFontJq" class="list">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="jqueryChildrenFont">JQuery</label>
+        <input name="tab-nav-childrenFont" type="radio" id="VanillajsChildrenFont" class="tab__radiobutton"/>
+        <div class="tab__content">
+          <div class="tab__inner">
+            <button id="btnChildrenFontV" class="button">Change children</button>
+            <ul id="itemChildrenFontV" class="list">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="VanillajsChildrenFont">Vanilla JS</label>
+      </section>
+    </div>
+  </article>
+
+  <!-- Selector get all the elements with certain class and change font weight modal -->
+  <article class="modal flex-center" id="selectorCertainFont" data-animation="zoomInOut">
+    <div class="modal__content">
+      <button class="button--close" data-close>X</button>
+      <h1>Get elements with a class and change font weight</h1>
+      <section class="grid grid-2 tab">
+        <input name="tab-nav-certainFont" type="radio" id="jqueryCertainFont" class="tab__radiobutton" checked="checked" />
+        <div class="tab__content">
+          <div class="tab__inner">
+            <button id="btnChildrenFontJq" class="button">Change children</button>
+            <ul id="itemChildrenFontJq" class="list">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="jqueryCertainFont">JQuery</label>
+        <input name="tab-nav-certainFont" type="radio" id="VanillajsCertainFont" class="tab__radiobutton"/>
+        <div class="tab__content">
+          <div class="tab__inner">
+            <button id="btnChildrenFontV" class="button">Change children</button>
+            <ul id="itemChildrenFontV" class="list">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="VanillajsCertainFont">Vanilla JS</label>
+      </section>
+    </div>
+  </article>
+
+  <!-- Selector get an item by id and change its font weight modal -->
+  <article class="modal flex-center" id="selectorGetIdFont" data-animation="zoomInOut">
+    <div class="modal__content">
+      <button class="button--close" data-close>X</button>
+      <h1>Get item by id and change font weight</h1>
+      <section class="grid grid-2 tab">
+        <input name="tab-nav-getIdFont" type="radio" id="jqueryGetIdFont" class="tab__radiobutton" checked="checked" />
+        <div class="tab__content">
+          <div class="tab__inner">
+            <button id="btnChildrenFontJq" class="button">Change children</button>
+            <ul id="itemChildrenFontJq" class="list">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="jqueryGetIdFont">JQuery</label>
+        <input name="tab-nav-getIdFont" type="radio" id="VanillajsGetIdFont" class="tab__radiobutton"/>
+        <div class="tab__content">
+          <div class="tab__inner">
+            <button id="btnChildrenFontV" class="button">Change children</button>
+            <ul id="itemChildrenFontV" class="list">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        </div>
+        <label class="tab__nav flex-center" for="VanillajsGetIdFont">Vanilla JS</label>
       </section>
     </div>
   </article>
