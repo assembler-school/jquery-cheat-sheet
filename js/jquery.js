@@ -99,37 +99,139 @@ function jqueryLiClicked() {
   });
 }
 
-function jqueryCreateHTML() {}
+function jqueryCreateHTML() {
+  $("#jquery p").text("JQUERY CLICK ME");
+  $("#jquery").on("click", () => {
+    $("#jquery").append("<p>CREATED ELEMENT</p>");
+    $("#jquery p").first().remove();
+  });
+}
 
-function jqueryRemove() {}
+function jqueryRemove() {
+  $("#jquery > p").text("JQUERY CLICK ME");
+  $("#jquery > p").on("click", () => {
+    $("#jquery > p").remove();
+  });
+}
 
-function jqueryAppend() {}
+function jqueryAppend() {
+  $("#jquery > p").text("JQUERY CLICK ME");
+  $("#jquery p").on("click", () => {
+    if ($("#jquery p").length == 1) {
+      $("#jquery").append("<p>APPENDED ELEMENT TO DIV</p>");
+    }
+  });
+}
 
-function jqueryPrepend() {}
+function jqueryPrepend() {
+  $("#jquery > p").text("JQUERY CLICK ME");
+  $("#jquery p").on("click", () => {
+    if ($("#jquery p").length == 1) {
+      $("#jquery").prepend("<p>PREPENDED ELEMENT TO DIV</p>");
+    }
+  });
+}
 
-function jqueryCreateAfter() {}
+function jqueryCreateAfter() {
+  $("#jquery > p").text("JQUERY CLICK ME");
+  $("#jquery p").on("click", () => {
+    if ($("#jquery p").length == 1) {
+      $("#jquery p").after("<p>ADDED ELEMENT AFTER P</p>");
+    }
+  });
+}
 
-function jqueryCreateBefore() {}
+function jqueryCreateBefore() {
+  $("#jquery > p").text("JQUERY CLICK ME");
+  $("#jquery p").on("click", () => {
+    if ($("#jquery p").length == 1) {
+      $("#jquery p").before("<p>ADDED ELEMENT BEFORE P</p>");
+    }
+  });
+}
 
-function jqueryClone() {}
+function jqueryClone() {
+  $("#jquery > p").text("JQUERY CLICK ME");
+  $("#jquery p").on("click", () => {
+    if ($("#jquery p").length == 1) {
+      $("#jquery > p").clone().appendTo("#jquery");
+    }
+  });
+}
 
-function jqueryAddClass() {}
+function jqueryAddClass() {
+  $("#jquery > p").text("JQUERY CLICK ME");
+  $("#jquery p").on("click", () => {
+    $("#jquery p").addClass("new-class");
+  });
+}
 
-function jqueryRemoveClass() {}
+function jqueryRemoveClass() {
+  $("#jquery > p").text("JQUERY CLICK ME");
+  $("#jquery p").addClass("new-class");
+  $("#jquery p").on("click", () => {
+    $("#jquery p").removeClass("new-class");
+  });
+}
 
-function jqueryToggle() {}
+function jqueryToggle() {
+  $("#jquery > p").text("JQUERY CLICK ME");
+  $("#jquery p").on("click", () => {
+    $("#jquery p").toggleClass("new-class");
+  });
+}
 
-function jqueryAddDisabled() {}
+function jqueryAddDisabled() {
+  $("#jquery").append("<button>CLICK TO DISABLE</button>");
+  $("#jquery button").on("click", () => {
+    $("#jquery button").prop("disabled", true);
+  });
+}
 
-function jqueryRemoveDisabled() {}
+function jqueryRemoveDisabled() {
+  $("#jquery p").text("CLICK TO ENABLE");
+  $("#jquery").append("<button disabled>BUTTON</button>");
+  $("#jquery p").on("click", () => {
+    $("#jquery button").prop("disabled", false);
+  });
+}
 
-function jqueryDataSrc() {}
+function jqueryDataSrc() {
+  $("#jquery").append("<img>");
 
-function jqueryRemoveSrc() {}
+  $("#jquery p").text("CLICK TO SET DATA-SRC");
 
-function jqueryHide() {}
+  $("#jquery p").on("click", () => {
+    $("#jquery img").attr("data-src", "new-data");
+  });
+}
 
-function jqueryShow() {}
+function jqueryRemoveSrc() {
+  $("#jquery").append("<img>");
+  $("#jquery img").attr("data-src", "new-data");
+
+  $("#jquery p").text("CLICK TO SET DATA-SRC");
+
+  $("#jquery p").on("click", () => {
+    $("#jquery img").removeAttr("data-src");
+  });
+}
+
+function jqueryHide() {
+  $("#jquery p").on("click", () => {
+    $("#jquery p").hide();
+  });
+}
+
+function jqueryShow() {
+  $("#jquery p").text("CLICK TO SHOW");
+  $("#jquery").append("<p id='visible'>VISIBLE</p>");
+  $("#visible").hide();
+
+  document.querySelector("#jquery > p").addEventListener("click", () => {
+    $("#visible").show();
+  });
+}
 
 function jqueryFadeIn() {}
 

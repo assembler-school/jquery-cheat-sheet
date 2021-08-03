@@ -122,37 +122,158 @@ function vanillaLiClicked() {
   });
 }
 
-function vanillaCreateHTML() {}
+function vanillaCreateHTML() {
+  document.querySelector("#vanilla > p").textContent = "VANILLA CLICK ME";
+  document.querySelector("#vanilla").addEventListener("click", () => {
+    let p = document.createElement("p");
+    p.textContent = "CREATED ELEMENT";
+    document.querySelector("#vanilla").appendChild(p);
+    document.querySelector("#vanilla").firstChild.remove();
+  });
+}
 
-function vanillaRemove() {}
+function vanillaRemove() {
+  document.querySelector("#vanilla > p").textContent = "VANILLA CLICK ME";
+  document.querySelector("#vanilla > p").addEventListener("click", () => {
+    document.querySelector("#vanilla > p").remove();
+  });
+}
 
-function vanillaAppend() {}
+function vanillaAppend() {
+  document.querySelector("#vanilla > p").textContent = "VANILLA CLICK ME";
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    if (document.querySelectorAll("#vanilla p").length == 1) {
+      let newElement = document.createElement("p");
+      newElement.textContent = "APPENDED ELEMENT TO DIV";
+      document.querySelector("#vanilla").appendChild(newElement);
+    }
+  });
+}
 
-function vanillaPrepend() {}
+function vanillaPrepend() {
+  document.querySelector("#vanilla > p").textContent = "VANILLA CLICK ME";
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    if (document.querySelectorAll("#vanilla p").length == 1) {
+      document
+        .querySelector("#vanilla")
+        .insertAdjacentHTML("afterbegin", "<p>PREPENDED ELEMENT TO DIV</p>");
+    }
+  });
+}
 
-function vanillaCreateAfter() {}
+function vanillaCreateAfter() {
+  document.querySelector("#vanilla > p").textContent = "VANILLA CLICK ME";
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    if (document.querySelectorAll("#vanilla p").length == 1) {
+      document
+        .querySelector("#vanilla p")
+        .insertAdjacentHTML("afterend", "<p>ADDED ELEMENT AFTER P</p>");
+    }
+  });
+}
 
-function vanillaCreateBefore() {}
+function vanillaCreateBefore() {
+  document.querySelector("#vanilla > p").textContent = "VANILLA CLICK ME";
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    if (document.querySelectorAll("#vanilla p").length == 1) {
+      document
+        .querySelector("#vanilla p")
+        .insertAdjacentHTML("beforebegin", "<p>ADDED ELEMENT BEFORE P</p>");
+    }
+  });
+}
 
-function vanillaClone() {}
+function vanillaClone() {
+  document.querySelector("#vanilla > p").textContent = "VANILLA CLICK ME";
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    if (document.querySelectorAll("#vanilla p").length == 1) {
+      let newElement = document.querySelector("#vanilla > p").cloneNode(true);
+      document.querySelector("#vanilla").appendChild(newElement);
+    }
+  });
+}
 
-function vanillaAddClass() {}
+function vanillaAddClass() {
+  document.querySelector("#vanilla > p").textContent = "VANILLA CLICK ME";
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    document.querySelector("#vanilla p").classList.add("new-class");
+  });
+}
 
-function vanillaRemoveClass() {}
+function vanillaRemoveClass() {
+  document.querySelector("#vanilla > p").textContent = "VANILLA CLICK ME";
+  document.querySelector("#vanilla p").classList.add("new-class");
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    document.querySelector("#vanilla p").classList.remove("new-class");
+  });
+}
 
-function vanillaToggle() {}
+function vanillaToggle() {
+  document.querySelector("#vanilla > p").textContent = "VANILLA CLICK ME";
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    document.querySelector("#vanilla p").classList.toggle("new-class");
+  });
+}
 
-function vanillaAddDisabled() {}
+function vanillaAddDisabled() {
+  document
+    .querySelector("#vanilla")
+    .insertAdjacentHTML("beforeend", "<button>CLICK TO DISABLE</button>");
 
-function vanillaRemoveDisabled() {}
+  document.querySelector("#vanilla button").addEventListener("click", () => {
+    document.querySelector("#vanilla button").setAttribute("disabled", true);
+  });
+}
 
-function vanillaDataSrc() {}
+function vanillaRemoveDisabled() {
+  document.querySelector("#vanilla p").textContent = "CLICK TO ENABLE";
+  document
+    .querySelector("#vanilla")
+    .insertAdjacentHTML("beforeend", "<button disabled>BUTTON</button>");
 
-function vanillaRemoveSrc() {}
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    document.querySelector("#vanilla button").removeAttribute("disabled");
+  });
+}
 
-function vanillaHide() {}
+function vanillaDataSrc() {
+  document.querySelector("#vanilla p").textContent = "CLICK TO SET DATA-SRC";
+  let newElement = document.createElement("img");
+  document.querySelector("#vanilla").appendChild(newElement);
 
-function vanillaShow() {}
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    newElement.setAttribute("data-src", "new-data");
+  });
+}
+
+function vanillaRemoveSrc() {
+  document.querySelector("#vanilla p").textContent = "CLICK TO SET DATA-SRC";
+  let newElement = document.createElement("img");
+  newElement.setAttribute("data-src", "new-data");
+
+  document.querySelector("#vanilla").appendChild(newElement);
+
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    newElement.removeAttribute("data-src");
+  });
+}
+
+function vanillaHide() {
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    document.querySelector("#vanilla p").style.display = "none";
+  });
+}
+
+function vanillaShow() {
+  document.querySelector("#vanilla p").textContent = "CLICK TO SHOW";
+  let newElement = document.createElement("p");
+  document.querySelector("#vanilla").appendChild(newElement);
+  newElement.textContent = "VISIBLE";
+  newElement.style.display = "none";
+  document.querySelector("#vanilla > p").addEventListener("click", () => {
+    newElement.style.display = "block";
+  });
+}
 
 function vanillaFadeIn() {}
 
