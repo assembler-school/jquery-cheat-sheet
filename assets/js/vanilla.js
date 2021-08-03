@@ -40,7 +40,7 @@ document.getElementById('eventMouseOverV').addEventListener('mouseover', (e) => 
 const key = document.createElement('p')
 document.addEventListener('DOMContentLoaded', () => key )
 document.addEventListener('keypress', (e) => {
-  key.textContent = `You have pressed the key ${e.key}`
+  key.innerHTML = `You have pressed the key <span class="text-highlight">${e.key}</span>`
   document.getElementById('eventKeyboardV').appendChild(key)
 })
 
@@ -48,20 +48,20 @@ const submitMessage = document.createElement('p')
 document.getElementById('eventSubmitV').addEventListener('submit', (e) => {
   e.preventDefault()
   let name = document.getElementById('yourName').value
-  submitMessage.textContent = `Hi ${name}, your form is sent correctly`
+  submitMessage.innerHTML = `Hi <span class="text-highlight">${name}</span>, your form is sent correctly`
   e.target.parentNode.append(submitMessage)
 })
 
 const result = document.createElement('p')
 document.getElementById('eventChangeV').addEventListener('change', (e) => {
   e.preventDefault()
-  result.textContent = `Your animal is: ${e.target.value}`
+  result.innerHTML = `You have written <span class="text-highlight">${e.target.value}</span>`
   document.getElementById('eventChangeV').parentNode.appendChild(result)
 })
 
 const selectionMessage = document.createElement('p')
 document.querySelector('#eventOpSelectV select').addEventListener('change', (e) => {
-  selectionMessage.textContent = `Your selection is ${e.target.value}`
+  selectionMessage.innerHTML = `Your selection is <span class="text-highlight">${e.target.value}</span>`
   document.getElementById('eventOpSelectV').parentNode.appendChild(selectionMessage)
 })
 
@@ -72,4 +72,113 @@ document.getElementById('checkV').addEventListener('click', (e) => {
   document.getElementById('eventCheckV').parentNode.appendChild(checkMessage)
 })
 
+const listMessage = document.createElement('p')
+let itemsList = document.querySelectorAll('#showListV li')
+itemsList.forEach(item => item.addEventListener('click', (e) => {
+  listMessage.innerHTML= `You clicked <span class="text-highlight">${e.target.innerText}</span>`
+  document.getElementById('showListV').parentNode.appendChild(listMessage)
+}))
+
+
+/* TODO: revision */
+// let img = document.createElement('img')
+// img.setAttribute('id', 'loadImgV')
+// let loadImg = false
+// document.getElementById('loadImgV').addEventListener('load', () => loadImg)
+
+// img.setAttribute('src', 'assets/images/hello-kitty-dface.jpg')
+// document.getElementById('loadImgV').parentNode.appendChild(img)
+// console.log(img);
+// const message = document.createElement('p')
+// document.getElementById('loadImgV').addEventListener('click', () => {
+//   message.innerHTML = `Is the image loaded? <span class="text-highlight">${loadImg}</span>`
+//   document.getElementById('loadImgV').parentNode.appendChild(message)
+
+// })
+
+// Functions
+const createMessage = document.createElement('p')
+document.getElementById('createValueV').addEventListener('click', () => {
+  createMessage.textContent = 'The new HTML value created is a <p> tag'
+  document.getElementById('createValueV').parentNode.appendChild(createMessage)
+})
+
+document.getElementById('removeBtnV').addEventListener('click', () => {
+  document.getElementById('removeTextV').remove()
+})
+
+const appendMessage = document.createElement('p')
+document.getElementById('appendBtnV').addEventListener('click', () => {
+  appendMessage.textContent = 'This message is sibiling of paragraph above, and child of <div class="tab__inner">'
+  document.getElementById('appendBtnV').parentNode.appendChild(appendMessage)
+})
+
+const prependMessage = document.createElement('p')
+document.getElementById('prependBtnV').addEventListener('click', () => {
+  prependMessage.textContent = 'This message is sibiling of paragraph below, and first child of <div class="tab__inner">'
+  document.getElementById('prependBtnV').parentNode.prepend(prependMessage)
+})
+
+const afterMessage = document.createElement('p')
+document.getElementById('afterBtnV').addEventListener('click', () => {
+  afterMessage.textContent = 'This message is sibiling of the button'
+  document.getElementById('afterBtnV').after(afterMessage)
+})
+
+const beforeMessage = document.createElement('p')
+document.getElementById('beforeBtnV').addEventListener('click', () => {
+  beforeMessage.textContent = 'This message is sibiling of the button'
+  document.getElementById('beforeBtnV').before(beforeMessage)
+})
+
+document.getElementById('cloneBtnV').addEventListener('click', () => {
+  const text = document.getElementById('textElementV')
+  const clone = text.cloneNode(true)
+  text.after(clone)
+})
+
+document.getElementById('addBtnV').addEventListener('click', () => {
+  const text = document.getElementById('textAddV')
+  text.classList.add('text-highlight')
+})
+
+document.getElementById('removeClassBtnV').addEventListener('click', () => {
+  const text = document.getElementById('textRemoveV')
+  text.classList.remove('text-highlight')
+})
+
+document.getElementById('toggleClassBtnV').addEventListener('click', () => {
+document.getElementById('textToggleV').classList.toggle('text-highlight')
+})
+
+document.getElementById('disableBtnV').addEventListener('click', () => {
+  const button = document.getElementById('disableBtnV')
+  button.disabled = true
+  button.textContent = 'DISABLED'
+})
+
+document.getElementById('enableCheckV').addEventListener('change', () => {
+  const button = document.getElementById('enableBtnV')
+  button.disabled = false
+  button.textContent = 'ENABLED'
+})
+
+const datasetImgV = document.createElement('img')
+document.getElementById('datasetButtonV').addEventListener('click', () => {
+  datasetImgV.setAttribute('src', 'assets/images/hello-kitty-dface.jpg')
+  datasetImgV.setAttribute('alt', 'Hello kitty d-face in Tokyo')
+  document.getElementById('datasetButtonV').parentNode.appendChild(datasetImgV)
+})
+
+document.getElementById('datasetRButtonV').addEventListener('click', () => {
+  document.getElementById('imgRemoveV').removeAttribute('src')
+})
+
+document.getElementById('hideButtonV').addEventListener('click', () => {
+  document.getElementById('imgHideV').style.display = 'none'
+})
+
+document.getElementById('showButtonV').addEventListener('click', () => {
+  document.getElementById('imgShowV').style.display = 'block'
+})
 
