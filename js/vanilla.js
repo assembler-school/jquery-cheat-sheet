@@ -13,6 +13,7 @@ function vanillaDoubleClick() {
 
 function vanillaKeyPressEvent() {
   document.querySelector("#vanilla >p").textContent = "VANILLA KEY PRESSED";
+  console.log("TECLA PULSADA");
 }
 
 function vanillaCursorOverEvent() {

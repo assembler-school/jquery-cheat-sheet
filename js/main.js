@@ -76,6 +76,8 @@ function selectPage(e) {
     loadMainPageTemplate();
   }
   if (dataPage != 0) {
+    $("document").off("keydown");
+
     loadContent(dataPage);
     printTitle(title);
   }
@@ -112,7 +114,8 @@ function selectFunction(page) {
       function addEvent() {
         let v = false;
         let j = false;
-        document.addEventListener("keydown", function test(e) {
+
+        document.addEventListener("keydown", function listener(e) {
           if (e.key == "v") {
             vanillaKeyPressEvent();
             v = true;
@@ -121,7 +124,7 @@ function selectFunction(page) {
             j = true;
           }
           if (j && v) {
-            document.removeEventListener("keydown", test);
+            document.removeEventListener("keydown", listener);
             console.log("DELETE KEY EVENT");
           }
         });
