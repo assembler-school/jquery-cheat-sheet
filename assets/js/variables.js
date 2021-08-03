@@ -1,26 +1,56 @@
 /**
  * Global Variables
  */
-var objectsJS = {
-  id: "",
-  title: "",
-  type: "",
-  code: "",
-  infoLink: "",
-};
+let objectsJS = [
+  {
+    id: "",
+    title: "",
+    type: "",
+    code: "",
+    infoLink: "",
+  },
+  {
+    id: "1",
+    title: "Prueba 1",
+    type: "events",
+    code: "Esto es una prueba de la seccion JS",
+    infoLink: "https://github.com/ParisArcos",
+  },
+  {
+    id: "2",
+    title: "Prueba 2",
+    type: "events",
+    code: "Esto es una prueba de la seccion JS",
+    infoLink: "https://github.com/ParisArcos",
+  },
+];
+localStorage.setItem("objectsJS", JSON.stringify(objectsJS));
 
-var objectsJQ = {
-  id: "",
-  title: "",
-  type: "",
-  code: "",
-  infoLink: "",
-};
+let objectsJQ = [
+  {
+    id: "",
+    title: "",
+    type: "",
+    code: "",
+    infoLink: "",
+  },
+  {
+    id: "1",
+    title: "Prueba 1",
+    type: "events",
+    code: "Esto es una prueba de la seccion <br> JQ",
+    infoLink: "https://github.com/ParisArcos",
+  },
+];
+localStorage.setItem("objectsJQ", JSON.stringify(objectsJQ));
 
-var examples = {
-  id: "",
-  code: "",
-  popUpText: "",
-};
+let examples = [
+  {
+    id: "1",
+    code: "example prueba cosas",
+    popUpText: "se ha efectuado example 1 con exito",
+  },
+];
+localStorage.setItem("examples", JSON.stringify(examples));
 
-var dragged;
+let dragged;

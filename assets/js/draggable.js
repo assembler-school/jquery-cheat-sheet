@@ -1,20 +1,20 @@
-document.addEventListener("drag", function (event) {}, false);
+document.addEventListener(
+  "drag",
+  function () {
+    let dropzone = document.getElementById("dropzone");
+    dropzone.style.transform = "scale(1.1)";
+    dropzone.style.borderColor = "fuchsia";
+    dropzone.style.boxShadow = "0 0 2rem fuchsia";
+  },
+  false
+);
 
 document.addEventListener(
   "dragstart",
   function (event) {
+    dragged = event.target;
     event.target.style.opacity = 0.5;
-
-    document.getElementById("bottom").style.transform = "translateX(100px)";
-    document.getElementById("bottom").style.opacity = 0;
-    setTimeout(() => {
-      document.getElementById("bottom").style.display = "none";
-      document.getElementById("middle").style.display = "flex";
-      setTimeout(() => {
-        document.getElementById("middle").style.transform = "translateX(0px)";
-        document.getElementById("middle").style.opacity = 1;
-      }, 1000);
-    }, 1000);
+    dropzoneOut();
   },
   false
 );
@@ -22,17 +22,18 @@ document.addEventListener(
 document.addEventListener(
   "dragend",
   function (event) {
-    // reset the transparency
+    let dropzone = document.getElementById("dropzone");
+    dropzone.style.transform = "scale(1.0)";
+    dropzone.style.borderColor = "";
+    dropzone.style.boxShadow = "";
     event.target.style.opacity = "";
   },
   false
 );
 
-/* events fired on the drop targets */
 document.addEventListener(
   "dragover",
   function (event) {
-    // prevent default to allow drop
     event.preventDefault();
   },
   false
@@ -41,9 +42,8 @@ document.addEventListener(
 document.addEventListener(
   "dragenter",
   function (event) {
-    // highlight potential drop target when the draggable element enters it
     if (event.target.className === "col drop-area") {
-      event.target.style.opacity = "0.4"; //!añadir efecto (parpadeo/)
+      event.target.style.opacity = "0.4";
     }
   },
   false
@@ -52,7 +52,6 @@ document.addEventListener(
 document.addEventListener(
   "dragleave",
   function (event) {
-    // reset background of potential drop target when the draggable element leaves it
     if (event.target.className === "col drop-area") {
       event.target.style.opacity = "1";
     }
@@ -63,14 +62,15 @@ document.addEventListener(
 document.addEventListener(
   "drop",
   function (event) {
-    // prevent default action (open as link for some elements)
     event.preventDefault();
-    // move dragged elem to the selected drop target
     if (event.target.className === "col drop-area") {
       event.target.style.opacity = "1";
       dragged.parentNode.removeChild(dragged);
       event.target.appendChild(dragged);
-    } //!añadir boton de borrar para que vuelva a su columna
+    } else {
+      dragged.parentNode.removeChild(dragged);
+      document.getElementById(dragged.dataset.type).appendChild(dragged);
+    }
   },
   false
 );
