@@ -2,7 +2,7 @@ document.querySelector("#ex-16-vanilla-btn").addEventListener("click", function 
 	const parentElement = document.querySelector("#ex-16-vanilla-parent");
 	const childElement = document.querySelector("#ex-16-vanilla-child");
 
-	childElement.textContent = "This HTML Element has been created with Vanilla JS.";
+	childElement.textContent = "This HTML Element has been appended with Vanilla JS.";
 
-	parentElement.appendChild(childElement);
+	parentElement.insertAdjacentElement("beforeend", childElement);
 });

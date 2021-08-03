@@ -128,7 +128,7 @@ export const data = {
 			document.querySelector("#ex-09-vanilla-form").addEventListener("submit", function (ev) {
 			<div class="code-indentation">
 				ev.preventDefault();<br />
-				document.querySelector("#ex-09-vanilla-msg").textContent = \`Submitted value: \${this.something.value}\`;
+				document.querySelector("#ex-09-vanilla-msg").textContent = \`Submitted value: \${this.input.value}\`;
 			</div>
 			});
 		`,
@@ -238,7 +238,7 @@ export const data = {
 					element.textContent = "This block has been created with Vanilla JS.";<br />
 					element.id = "ex-14-vanilla-msg";<br />
 					<br />
-					this.insertAdjacentElement("afterend", element);<br />
+					this.insertAdjacentElement("afterend", element);
 				</div>
 				});
 			`,
@@ -253,7 +253,7 @@ export const data = {
 				element.text("This block has been created with jQuery.");<br />
 				element.prop("id", "ex-14-jquery-msg");<br />
 				<br />
-				element.insertAfter($(this));<br />
+				element.insertAfter($(this));
 			</div>
 			});			
 			`,
@@ -262,22 +262,82 @@ export const data = {
 			id: 15,
 			type: "manipulation",
 			title: "Remove an HTML element with any text value",
-			vanillaCode: ``,
-			jQueryCode: ``,
+			vanillaCode: `
+				document.querySelector("#ex-15-vanilla-btn").addEventListener("click", function (ev) {
+				<div class="code-indentation">
+					const element = document.querySelector("#ex-15-vanilla-msg");
+				
+					if (element) element.remove();
+				</div>
+				});			
+			`,
+			jQueryCode: `
+				$("#ex-15-jquery-btn").on("click", function (ev) {
+				<div class="code-indentation">
+					const element = $("#ex-15-jquery-msg");<br />
+					<br />
+					if (element.length) element.remove();
+				</div>
+				});
+			`,
 		},
 		{
 			id: 16,
 			type: "manipulation",
 			title: "Append an HTML element with any text value to a parent element",
-			vanillaCode: ``,
-			jQueryCode: ``,
+			vanillaCode: `
+				document.querySelector("#ex-16-vanilla-btn").addEventListener("click", function (ev) {
+				<div class="code-indentation">
+					const parentElement = document.querySelector("#ex-16-vanilla-parent");<br />
+					const childElement = document.querySelector("#ex-16-vanilla-child");<br />
+					<br />
+					childElement.textContent = "This HTML Element has been appended with Vanilla JS.";<br />
+					<br />
+					parentElement.appendChild(childElement);<br />
+				</div>
+				});			
+			`,
+			jQueryCode: `
+				$("#ex-16-jquery-btn").on("click", function (ev) {
+				<div class="code-indentation">
+					const parentElement = $("#ex-16-jquery-parent");<br />
+					const childElement = $("#ex-16-jquery-child");<br />
+					<br />
+					childElement.text("This HTML Element has been appended with jQuery JS.");<br />
+					<br />
+					parentElement.append(childElement);
+				</div>
+				});			
+			`,
 		},
 		{
 			id: 17,
 			type: "manipulation",
 			title: "Prepend an HTML element with any text value to a parent element",
-			vanillaCode: ``,
-			jQueryCode: ``,
+			vanillaCode: `
+				document.querySelector("#ex-17-vanilla-btn").addEventListener("click", function (ev) {
+				<div class="code-indentation">
+					const parentElement = document.querySelector("#ex-17-vanilla-parent");<br />
+					const childElement = document.querySelector("#ex-17-vanilla-child");<br />
+					<br />
+					childElement.textContent = "This HTML Element has been prepended with Vanilla JS.";<br />
+					<br />
+					parentElement.insertAdjacentElement("afterbegin", childElement);
+				</div>
+				});
+			`,
+			jQueryCode: `
+				$("#ex-17-jquery-btn").on("click", function (ev) {
+				<div class="code-indentation">
+					const parentElement = $("#ex-17-jquery-parent");<br />
+					const childElement = $("#ex-17-jquery-child");<br />
+					<br />
+					childElement.text("This HTML Element has been prepended with jQuery JS.");<br />
+					<br />
+					parentElement.prepend(childElement);
+				</div>
+				});
+			`,
 		},
 		{
 			id: 18,
