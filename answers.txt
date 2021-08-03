@@ -1,42 +1,646 @@
 EVENTS
 
-
-    //1 - Create an event when the HTML document has been loaded and you can manipulate it with JavaScript
-
-        //! jQuery
-            $(document).ready(() => {});
-
-        //? VanillaJS
-            document.addEventListener("DOMContentLoaded", () => {});
-
-
-        //*Source: 
-            https://www.techiediaries.com/javascript/document-ready-vs-window-onload-vs-window-load/
-            https://www.youtube.com/watch?v=OFKDCJIgxUk
+1-When the HTML document has been loaded and you can manipulate it with JavaScript
+    jQuery
+        $(document).ready(() => {});
+    Vanilla
+        document.addEventListener(“load”, () => {});
+    Source:
+        https://www.techiediaries.com/javascript/document-ready-vs-window-onload-vs-window-load/
+        https://www.youtube.com/watch?v=OFKDCJIgxUk
 
 
-    //2 - create an event when an HTML item has been clicked
 
-        //! jQuery
-            $("html-item-selector").on("click", (event) => {});
-
-        //? VanillaJS
-            document.querySelector("html-item-selector").addEventListener("click", (event) => {});
-
-
-    //3 - create an event when an HTML item has been double-clicked
-
-        //! jQuery
-            $("html-item-selector").on("dblclick", (event) => {});
-
-        //? VanillaJS
-            document.querySelector("html-item-selector").addEventListener("dblclick", (event) => {});
+2-When an HTML item has been clicked
+    jQuery
+        $("html-item-selector").on("click", (event) => {});
+    
+    Vanilla
+        document.querySelector("html-item-selector").addEventListener("click", (event) => {});
+    
+    Source:
+        https://www.w3schools.com/jsref/event_onclick.asp
+        https://learn.jquery.com/events/event-basics/
 
 
-    //4 - create an event when the user presses a key on the keyboard
 
-        //! jQuery
-            $("html-item-selector").on("click", (event) => {});
+3-When an HTML item has been double clicked
+    jQuery
+        $("html-item-selector").on("click", (event) => {});
 
-        //? VanillaJS
-            document.querySelector("html-item-selector").addEventListener("click", (event) => {});
+    Vanilla
+        document.querySelector("html-item-selector").addEventListener("click", (event) => {});
+
+    Source:
+        https://www.w3schools.com/jsref/event_ondblclick.asp
+
+
+
+4-When the user presses a key on the keyboard
+    Types
+        keyup
+        keydown
+        keypress
+
+    jQuery
+        $(document). keydown((event) => {})
+    
+    Vanilla
+        document.addEventListener(“keydown”, (event) => {})
+
+    Source
+        https://api.jquery.com/keydown/
+        https://www.youtube.com/watch?v=vSKJGDcDUww
+
+
+
+5-When the user moves the mouse cursor
+    Types:
+        mousemove
+        mouseenter
+        muoseleave
+    jQuery
+        $(document). mousemove((event) => {})
+    
+    Vanilla
+        document.addEventListener(“mousemove”, (event) => {})
+
+    Source
+        https://www.educba.com/javascript-mousemove/
+        https://www.bitdegree.org/learn/jquery-mousemove
+
+
+
+6-When the user changes a value of an text input
+    jQuery
+        $(“input”).change((event) => {})
+    
+    Vanilla
+        document.getElementByTagName(“input”).addEventListener(“change”, () => {});
+
+    Source
+        https://www.educba.com/jquery-change/
+        https://www.javatpoint.com/javascript-change-event
+
+
+
+7-When an image is loaded
+    jQuery
+        $(“img”).on(“load”, () =>{});
+
+    Vanilla
+        document.getElementByTagName(“img”).onload = () => {});
+
+    Source
+        https://idiallo.com/javascript/img-detect-loaded
+        https://api.jquery.com/load-event/
+
+
+
+8-When an image fails to load, (if you write an incorrect image url the loading of the image will fail)
+    jQuery
+        $(“img”).on(“error”, () =>{
+                console.log(“Image failed to load”);
+            });
+
+    Vanilla
+        document.getElementByTagName(“img”).onerror = () => {
+            console.log("Image failed to load")
+        });
+
+    Source
+        https://idiallo.com/javascript/img-detect-loaded
+        https://api.jquery.com/error/
+
+
+
+9-When a form is submitted
+    jQuery
+        $(“form”).submit(() => {});
+
+    Vanilla
+        document.querySelector(“form”).addEventListener(“submit”, () => {});
+
+    Source
+        https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
+        https://api.jquery.com/submit/
+
+
+
+10-When the user changes the option of a select element
+    jQuery
+        $(“select”).change((event) => {})
+
+    Vanilla
+        document.getElementByTagName(“select”).addEventListener(“change”, () => {});
+
+    Source
+        https://www.educba.com/jquery-change/
+        https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+
+
+11-When you position the mouse over an element
+    jQuery
+        $(“element”). mouseover(() => {})
+    Vanilla
+        document.querySelector(“#element”).addEventListener(“mouseover”, () => {})
+
+    Source
+        https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave
+        https://api.jquery.com/mouseover/
+
+
+12-When a checkbox is checked or unchecked
+    jQuery
+        $(“.checkbox”).change((event) => {})
+
+    Vanilla
+        document.querySelector (“.checkbox”).addEventListener(“change”, () => {});
+
+    Source
+        https://stackoverflow.com/questions/9180087/how-to-handle-change-of-checkbox-using-jquery
+        https://dirask.com/posts/JavaScript-onchange-event-for-input-checkbox-element-example-Z1Axqj
+
+
+
+13-When a ul list item is clicked, show the item that was clicked
+    jQuery
+        let lis = $(“li”)
+        lis.each( (index, li) => {
+            $(this).on(“click”,() => {
+                console.log( “I am” +  $(this).html() “the clicked element” )
+                })
+            });
+
+    Vanilla
+        var lis = document.querySelectorAll(“li”)
+        lis.forEach(li =>{
+            li.addEventListener(“click”, (event) => {
+                console.log( “I am” +  this.textContent + “the clicked element” )
+                })
+            });
+
+    Source
+        https://reactgo.com/add-event-listener-multiple-elements-javascript/#:~:text=Adding%20event%20listener%20to%20multiple%20elements%20To%20add,method%20and%20add%20an%20event%20listener%20to%20it.
+        https://api.jquery.com/each/#each-function
+
+
+
+//*!FUNCTIONS AND SELECTORS*//
+
+
+1-Create an HTML element with any text value
+    jQuery
+        a-$(“<elementTag>Any text value</element>”)
+        b-$(“<elementTag></elementTag>”).html(“Any text value”)
+
+    Vanilla
+        document.createElement(“elementTag”).innerHTML = “Any text value”
+
+
+2-Remove an HTML element with any text value
+    jQuery
+        $(“element”).remove()
+
+    Vanilla
+        1-var parent = document.querySelector(“.parent”);
+        var child = document.querySelector(“.child”);
+        child.parent.removeChild(child);
+        2-child.remove();
+
+    Source
+        https://attacomsian.com/blog/javascript-remove-dom-element#:~:text=There%20are%20two%20ways%20to%20erase%20an%20element,elem%20%3D%20document.querySelector%28%27%23hint%27%29%3B%20elem.%20style.%20display%20%3D%20%27none%27%3B
+        https://api.jquery.com/remove/#remove-selector
+
+
+3-Append an HTML element with any text value to a parent element (last child)
+    jQuery
+        $(“elementReference”).append(“<elementToBeAppended>Any text value</elementToBeAppended>”)
+
+    Vanilla
+        var elementReference = document.querySelector(“.elementReference”);
+        var elementToBeAppended = document.querySelector(“.elementToBeAppended”).innerHTML = “Any text value”
+        elementReference.appendChild(elementToBeAppended);
+
+    Source
+        https://api.jquery.com/append/#append-content-content
+        https://www.javascripttutorial.net/javascript-dom/javascript-append/
+
+
+4-Prepend an HTML element with any text value to a parent element (first child)
+    jQuery
+        $(“elementReference”).prepend(“<elementToBeAppended>Any text value</elementToBeAppended>”)
+
+    Vanilla
+        var elementReference = document.querySelector(“.elementReference”);
+        var elementToBeAppended = document.querySelector(“.elementToBeAppended”).innerHTML = “Any text value”
+        https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend
+        elementReference.prepend(elementToBeAppended);
+
+    Source
+        https://api.jquery.com/prepend
+
+
+5-Create and add an HTML element with any text value after another element
+    jQuery
+        $(“elementReference”).after(“<elementToInsert>Any text value</elementToInsert >”)
+
+    Vanilla
+        var elementReference = document.querySelector(“.elementReference”);
+        var elementToInsert = document.querySelector(“.elementToInsert”).innerHTML = “Any text value”
+        elementReference.after(elementToInsert);
+
+    Source
+        https://api.jquery.com/after
+        https://tutorialcodeplay.com/javascript/after-in-html.html#:~:text=after%20%28%29%20method%20in%20javascript.%20after%20%28%29%20method,element%20or%20text%20next%20to%20the%20given%20element.
+
+
+6-Create and add an HTML element with any text value before another element
+    jQuery
+        $(“elementReference”).before(“<elementToInsert>Any text value</elementToInsert >”)
+
+    Vanilla
+        var elementToInsert = document.querySelector(“.elementToInsert”).innerHTML = “Any text value”
+        var elementReference = document.querySelector(“.elementReference”);
+        elementReference.before(elementToInsert);
+
+    Source
+        https://api.jquery.com/after
+        https://tutorialcodeplay.com/javascript/after-in-html.html#:~:text=after%20%28%29%20method%20in%20javascript.%20after%20%28%29%20method,element%20or%20text%20next%20to%20the%20given%20element.
+
+7-Clone an HTML element within other element
+    jQuery
+        $(“elementToClone”).clone().appendTo(“referenceElement”)
+
+    Vanilla
+        let elementToClone = document.querySelector(“.elementToClone”).cloneNode(true);
+        document.querySelector(“p”).appendChild(elementToClone)
+
+    Source
+        https://api.jquery.com/clone/#clone-withDataAndEvents
+        https://stackoverflow.com/questions/921290/is-it-possible-to-clone-html-element-objects-in-javascript
+
+8-Add a class to an HTML item
+    jQuery
+        $(“element”).addClass(“newClass”);
+
+    Vanilla
+        document.querySelector(“p”).classList.add(“newClass”);
+
+    Source
+        https://api.jquery.com/addClass/
+        https://www.javatpoint.com/how-to-add-a-class-to-an-element-using-javascript
+
+9-Remove a class to an HTML item
+    jQuery
+        $(“element”).removeClass(“oldClass”);
+
+    Vanilla
+        document.querySelector(“p”).classList.remove(“oldClass”);
+    
+    Source
+        https://api.jquery.com/addClass/
+        https://www.javatpoint.com/how-to-add-a-class-to-an-element-using-javascript
+
+
+
+10-Toggle a class of an HTML item
+    jQuery
+        $(“p”).on(“click”, () =>{
+        $(this).toogleClass(“newClass”)
+        });
+
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            document.querySelector(“div”).classList.toggle(“darkmode”)
+        });
+
+    Source
+        https://api.jquery.com/toggleClass/#toggleClass-className
+        https://www.w3schools.com/howto/howto_js_toggle_class.asp
+
+11-Add a disabled attribute to an HTML button
+    jQuery
+        $(“btn”).on(“click”, () =>{
+        $(input).attr(“disabled”, true)
+        });
+    
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            document.querySelector(“input”).disabled = true;
+        });
+
+    Source
+        https://www.studentstutorial.com/jquery/jquery-disable-required-attribute.php
+        https://tutorial.eyehunts.com/js/add-disabled-attribute-javascript-disable-html-elements-example/
+
+12-Remove the disabled attribute of an HTML button
+    jQuery
+        $(“btn”).on(“click”, () =>{
+        $(input).removeAttr(“disabled”)
+        });
+
+    Vanilla
+        document.querySelector(“input”).removeAttribute(“disabled”);
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+        });
+
+    Source
+        https://api.jquery.com/removeAttr/#:~:text=An%20attribute%20to%20remove%3B%20as%20of%20version%201.7%2C,it%20accounts%20for%20different%20attribute%20naming%20across%20browsers.
+        https://www.w3schools.com/jsref/met_element_removeattribute.asp
+
+
+13-Set a data-src attribute to a img element
+    jQuery
+        $(“btn”).on(“click”, () =>{
+        $(“img”). attr (“data-src”, “url”)
+        });
+
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            document.querySelector (“img”). setAttribute (“data-src”);
+        });
+
+    Source
+        https://www.skillsugar.com/how-to-use-jquery-attr-to-get-set-data-attribute-values
+        https://www.tutsmake.com/how-to-get-set-data-attribute-value-from-elements-jquery/
+
+
+14-Remove the data-src attribute of the img element
+    jQuery
+        $(“btn”).on(“click”, () =>{
+        $(“img”).removeAttr(“data-src”)
+        });
+
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            document.querySelector (“img”).removeAttribute(“disabled”);
+        });
+
+    Source
+        https://api.jquery.com/removeAttr/#:~:text=An%20attribute%20to%20remove%3B%20as%20of%20version%201.7%2C,it%20accounts%20for%20different%20attribute%20naming%20across%20browsers.
+        https://www.w3schools.com/jsref/met_element_removeattribute.asp
+
+
+15-Hide an HTML element on click (display: none)
+    jQuery
+        $(“btn”).on(“click”, () =>{
+        $(“div”).hide()
+        });
+
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            document.querySelector (“div”).style.display = “none”;
+        });
+
+    Source
+        https://api.jquery.com/hide/#hide
+        https://www.developerhelps.com/javascript-display-none/#:~:text=JavaScript%20display%20none%20Style%20display%20property%20is%20used,the%20style%20display%20property%20to%20%E2%80%9C%20block%20%E2%80%9D.
+
+
+16-Show an HTML element on click (display: block)
+    jQuery
+        $(“btn”).on(“click”, () =>{
+        $(“div”).show()
+        });
+
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            document.querySelector (“div”).style.display = “block”;
+        });
+
+    Source
+        https://api.jquery.com/show/#show
+        https://www.developerhelps.com/javascript-display-none/#:~:text=JavaScript%20display%20none%20Style%20display%20property%20is%20used,the%20style%20display%20property%20to%20%E2%80%9C%20block%20%E2%80%9D.
+
+
+17-Fade in and Fade out an HTML element using jQuery
+    Fade in
+        $(“btn”).on(“click”, () =>{
+        $(“div”).fadeIn(“slow”)
+        });
+    Fade out
+        $(“btn”).on(“click”, () =>{
+        $(“div”).fadeOut(“slow”)
+        });
+    Source
+        https://api.jquery.com/fadeIn/#fadeIn-duration-complete
+        https://api.jquery.com/fadeOut/#fadeOut-duration-complete
+
+
+18-Iterate a collection of elements and apply a change of style on them
+    jQuery
+        $(“li”).each( (i, item) =>{
+        $(this).css(“color”, “red”);
+        })
+
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            let arr = document.querySelectorAll (“li”)
+            arr.forEach(item =>{
+            arr[item].style.color = “red”
+                })
+        });
+ 
+    Source
+        https://api.jquery.com/each/#each-function
+        https://careerkarma.com/blog/javascript-foreach-loop/#:~:text=%20JavaScript%20forEach%20Loops%20Made%20Easy%20%201,callback%20function.%20This%20is%20a%20function...%20More%20
+
+
+19-Get the parent element of a certain element and change its font weight
+    jQuery
+        $(“btn”).on(“click”, () =>{
+        $(“li”).parent().css({font-weight:”bold”})
+        });
+
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            let children = document.querySelector (“li”)
+        });
+        let parent = children.parentNode
+        parent.style. fontWeight = “bold”;
+
+    Source
+        https://api.jquery.com/parent/
+        https://www.javascripttutorial.net/dom/traversing/get-the-parent-of-an-element/#:~:text=To%20get%20the%20parent%20of%20an%20element%2C%20you,const%20parent%20%3D%20current.parentNode%3B%20Code%20language%3A%20JavaScript%20%28javascript%29
+
+
+20-Get the collection of children of a certain element and change its font weight
+    jQuery
+        $(“btn”).on(“click”, () =>{
+        $(“ul”).children().css({font-weight:”light”})
+        });
+
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            let parent = document.querySelector (“ul”)
+        let offspring = parent.childNodes
+        offspring.forEach( (i =>{
+                offspring[i].style.fontWeight = “light”;
+            })
+        });
+
+    Source
+        https://api.jquery.com/children/#children-selector
+        https://www.c-sharpcorner.com/UploadFile/54472d/how-to-retrieve-child-elements-using-javascript/
+
+
+21-Get all the elements that have a certain class and change their font weight
+    jQuery
+        $(“btn”).on(“click”, () =>{
+        $(“outer”).css({font-weight:”bolder”})
+        });
+
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            let allDivs = document.querySelectorAll (“div”)
+        allDivs.forEach( i =>{
+            allDivs[i].style.fontWeight =”bolder”;
+            })
+        });
+    
+    Source
+        https://api.jquery.com/prepend/#prepend-function-function
+        https://stackoverflow.com/questions/9427311/how-to-get-all-elements-by-class-name
+
+
+22-Get an item by id and change its font weight
+    jQuery
+        $(“btn”).on(“click”, () =>{
+        $(“#id1”).css({font-weight:”bolder”})
+        });
+
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            document.querySelector (“#id1”).style.fontWeight =”bolder”
+        });
+
+
+23-Get all the elements that have a certain class and the display property of none and change their font color
+    jQuery
+        $(“btn”).on(“click”, () =>{
+        $(“div”).css({display:”none”, “font-color”:”red”})
+        });
+
+    Vanilla
+        document.querySelector(“.btn”).addEventListener(“click”, () =>{
+            let divArr = document.querySelectorAll (“div”)
+            divArr.forEach(i => {
+        divArr[i].style.display = “none”;
+        divArr[i].style.fontColor = ”red”
+            });
+        });
+
+
+24-Get the options of a select element that are selected (attribute selected)
+    jQuery
+        $(“select”).on(“change”, () =>{
+            let options = “”
+        $(“select option:selected”).each((index)=>{
+        options += $(this).text() + “ “;
+        })
+        $(“div”).html() = `This are your selected ${options}`
+        });
+
+    Vanilla
+        document.querySelector(“select”).addEventListener(“change”, () =>{
+            let arrSelected = document.querySelector (“select”).selectedOptions;
+            let options = “”
+            arrSelected.forEach(i => {
+        options += arrSelected[i].textContent + “ ”;
+        })
+            document.querySelector(“div”).textContent = `This are your selected ${options}`
+        });
+
+    Source
+        https://api.jquery.com/selected-selector/#selected1
+        https://usefulangle.com/post/83/html-select-common-operations-with-javascript
+
+
+25-Change the href attribute of the first <a> element (You have to create several <a> elements)
+    jQuery
+        let div = $(“div”)
+        $(“.btn-create”).on(“click”, () =>{
+        $(“<a href = “/default”></a>”).appendTo(div)
+        });
+        $(“.btn-modify”) .on(“click”, () =>{
+            div.chidren().first().attr(“href”, “/other”)	
+        }
+
+    Vanilla
+        let div = document.querySelector (“div”);
+        document.querySelector(“.btn-create”).addEventListener(“click”, () =>{
+            var links = document.createElement(“a”);
+            links.setAttribute(“href”, “/default”);
+            div.appendChild(links)
+        });
+        $(“.btn-modify”) .addEventListener(“click”, () =>{
+            let links = document.querySelectorAll(“a”);
+            links[0]. setAttribute(“href”, “/other”);
+        }
+
+    Source
+        https://api.jquery.com/first/#first
+        https://www.javatpoint.com/javascript-setattribute#:~:text=JavaScript%20setAttribute%20%28%29%20The%20setAttribute%20%28%29%20method%20is,%28%29%20method%20to%20update%20the%20existing%20attribute%27s%20value.
+
+26-Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)
+    jQuery
+        let div = $(“div”)
+        $(“.btn-create”).on(“click”, () =>{
+            If(div.length <= 1){
+        $(“<input type = ‘button’ value = ‘alert’></a>”).appendTo(div)
+        }
+        });
+        $(“input”) .on(“click”, () =>{
+            alert(“Thunder!”);	
+        }
+
+    Vanilla
+        let div = document.querySelector (“div”);
+        document.querySelector(“.btn-create”).addEventListener(“click”, () =>{
+            var input = document.createElement(“input”);
+            if(div.length <= 1){
+        input.setAttribute(“type”, “button”);
+                input.setAttribute(“type”, “button”);
+                input.setAttribute(“value”, “alert”);
+                div.appendChild(input)
+                {
+        });
+        $(“input”).addEventListener(“click”, () =>{
+            alert(“Thunder!”);
+        }
+
+
+27-Remove all items from a specific selector
+    jQuery
+        $(“.selectors”).remove();
+    
+    Vanilla
+        document.querySelectorAll(“selectors”).forEach( i => {i.remove()});
+    
+    Source
+        https://stackoverflow.com/questions/10842471/how-to-remove-all-elements-of-a-certain-class-from-the-dom
+
+28-Animate an item after 2 seconds from the initial page load
+    jQuery
+        $(window).ready( () => {
+        $(“.item”).delay(2000).animate({right: “10px”},5000)
+        }
+
+    Vanilla
+        let item = document.querySelector(“.item”)
+        window.addEventListener(“load”, {
+            setTimeOut(()=>{
+            item.style.right = “10px”
+            item.style.transition = “5s”
+        }, 2000)
+        })
+
+    Source
+        https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
+        https://css-tricks.com/transitions-only-after-page-load/
+        https://developer.mozilla.org/es/docs/Web/API/Element/animate
+        https://stackoverflow.com/questions/1836105/how-to-wait-5-seconds-with-jquery
+        https://www.w3schools.com/jsref/met_win_settimeout.asp
+        https://www.w3schools.com/js/js_htmldom_animate.asp
+
