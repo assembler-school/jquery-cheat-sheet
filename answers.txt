@@ -26,7 +26,7 @@ EVENTS
 
 3-When an HTML item has been double clicked
     jQuery
-        $("html-item-selector").on("click", (event) => {});
+        $("html-item-selector").on("dbclick", (event) => {});
 
     Vanilla
         document.querySelector("html-item-selector").addEventListener("click", (event) => {});
@@ -43,7 +43,7 @@ EVENTS
         keypress
 
     jQuery
-        $(document). keydown((event) => {})
+        $(document).keydown((event) => {})
     
     Vanilla
         document.addEventListener(“keydown”, (event) => {})
@@ -168,7 +168,7 @@ EVENTS
         let lis = $(“li”)
         lis.each( (index, li) => {
             $(this).on(“click”,() => {
-                console.log( “I am” +  $(this).html() “the clicked element” )
+                console.log( “I am” +  $(this).html() + “the clicked element” )
                 })
             });
 
@@ -186,7 +186,7 @@ EVENTS
 
 
 
-//*!FUNCTIONS AND SELECTORS*//
+//*!FUNCTIONS*//
 
 
 1-Create an HTML element with any text value
@@ -428,7 +428,32 @@ EVENTS
         https://api.jquery.com/fadeOut/#fadeOut-duration-complete
 
 
-18-Iterate a collection of elements and apply a change of style on them
+18-Animate an item after 2 seconds from the initial page load
+    jQuery
+        $(window).ready( () => {
+        $(“.item”).delay(2000).animate({right: “10px”},5000)
+        }
+
+    Vanilla
+        let item = document.querySelector(“.item”)
+        window.addEventListener(“load”, {
+            setTimeOut(()=>{
+            item.style.right = “10px”
+            item.style.transition = “5s”
+        }, 2000)
+        })
+
+    Source
+        https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
+        https://css-tricks.com/transitions-only-after-page-load/
+        https://developer.mozilla.org/es/docs/Web/API/Element/animate
+        https://stackoverflow.com/questions/1836105/how-to-wait-5-seconds-with-jquery
+        https://www.w3schools.com/jsref/met_win_settimeout.asp
+        https://www.w3schools.com/js/js_htmldom_animate.asp
+
+
+//*SELECTORS*//
+1-Iterate a collection of elements and apply a change of style on them
     jQuery
         $(“li”).each( (i, item) =>{
         $(this).css(“color”, “red”);
@@ -447,7 +472,7 @@ EVENTS
         https://careerkarma.com/blog/javascript-foreach-loop/#:~:text=%20JavaScript%20forEach%20Loops%20Made%20Easy%20%201,callback%20function.%20This%20is%20a%20function...%20More%20
 
 
-19-Get the parent element of a certain element and change its font weight
+2-Get the parent element of a certain element and change its font weight
     jQuery
         $(“btn”).on(“click”, () =>{
         $(“li”).parent().css({font-weight:”bold”})
@@ -465,7 +490,7 @@ EVENTS
         https://www.javascripttutorial.net/dom/traversing/get-the-parent-of-an-element/#:~:text=To%20get%20the%20parent%20of%20an%20element%2C%20you,const%20parent%20%3D%20current.parentNode%3B%20Code%20language%3A%20JavaScript%20%28javascript%29
 
 
-20-Get the collection of children of a certain element and change its font weight
+3-Get the collection of children of a certain element and change its font weight
     jQuery
         $(“btn”).on(“click”, () =>{
         $(“ul”).children().css({font-weight:”light”})
@@ -485,7 +510,7 @@ EVENTS
         https://www.c-sharpcorner.com/UploadFile/54472d/how-to-retrieve-child-elements-using-javascript/
 
 
-21-Get all the elements that have a certain class and change their font weight
+4-Get all the elements that have a certain class and change their font weight
     jQuery
         $(“btn”).on(“click”, () =>{
         $(“outer”).css({font-weight:”bolder”})
@@ -504,7 +529,7 @@ EVENTS
         https://stackoverflow.com/questions/9427311/how-to-get-all-elements-by-class-name
 
 
-22-Get an item by id and change its font weight
+5-Get an item by id and change its font weight
     jQuery
         $(“btn”).on(“click”, () =>{
         $(“#id1”).css({font-weight:”bolder”})
@@ -516,7 +541,7 @@ EVENTS
         });
 
 
-23-Get all the elements that have a certain class and the display property of none and change their font color
+6-Get all the elements that have a certain class and the display property of none and change their font color
     jQuery
         $(“btn”).on(“click”, () =>{
         $(“div”).css({display:”none”, “font-color”:”red”})
@@ -532,7 +557,7 @@ EVENTS
         });
 
 
-24-Get the options of a select element that are selected (attribute selected)
+7-Get the options of a select element that are selected (attribute selected)
     jQuery
         $(“select”).on(“change”, () =>{
             let options = “”
@@ -557,7 +582,7 @@ EVENTS
         https://usefulangle.com/post/83/html-select-common-operations-with-javascript
 
 
-25-Change the href attribute of the first <a> element (You have to create several <a> elements)
+8-Change the href attribute of the first <a> element (You have to create several <a> elements)
     jQuery
         let div = $(“div”)
         $(“.btn-create”).on(“click”, () =>{
@@ -583,7 +608,7 @@ EVENTS
         https://api.jquery.com/first/#first
         https://www.javatpoint.com/javascript-setattribute#:~:text=JavaScript%20setAttribute%20%28%29%20The%20setAttribute%20%28%29%20method%20is,%28%29%20method%20to%20update%20the%20existing%20attribute%27s%20value.
 
-26-Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)
+9-Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)
     jQuery
         let div = $(“div”)
         $(“.btn-create”).on(“click”, () =>{
@@ -611,7 +636,7 @@ EVENTS
         }
 
 
-27-Remove all items from a specific selector
+10-Remove all items from a specific selector
     jQuery
         $(“.selectors”).remove();
     
@@ -620,27 +645,4 @@ EVENTS
     
     Source
         https://stackoverflow.com/questions/10842471/how-to-remove-all-elements-of-a-certain-class-from-the-dom
-
-28-Animate an item after 2 seconds from the initial page load
-    jQuery
-        $(window).ready( () => {
-        $(“.item”).delay(2000).animate({right: “10px”},5000)
-        }
-
-    Vanilla
-        let item = document.querySelector(“.item”)
-        window.addEventListener(“load”, {
-            setTimeOut(()=>{
-            item.style.right = “10px”
-            item.style.transition = “5s”
-        }, 2000)
-        })
-
-    Source
-        https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
-        https://css-tricks.com/transitions-only-after-page-load/
-        https://developer.mozilla.org/es/docs/Web/API/Element/animate
-        https://stackoverflow.com/questions/1836105/how-to-wait-5-seconds-with-jquery
-        https://www.w3schools.com/jsref/met_win_settimeout.asp
-        https://www.w3schools.com/js/js_htmldom_animate.asp
 
