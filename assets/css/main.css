@@ -24,11 +24,10 @@
 
   padding: var(--autocomplete--PaddingTopBottom) var(--autocomplete--PaddingRightLeft);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: row;
   width: 80%;
-  align-items: center;
-  flex-wrap: nowrap;
+  align-items: stretch;
 }
 
 .autocomplete__button {
@@ -44,6 +43,8 @@
   line-height: var(--global--lg--LineHeight);
   border-radius: var(--global--border-radius--1);
   width: 40%;
+  padding: 0 var(--global--spacer--md);
+  font-size: var(--global--h6--title--FontSize);
 }
 
 .autocomplete__input:focus-visible {
@@ -52,30 +53,46 @@
 
 }
 
+.autocomplete__side-logo {
+  width: 100%;
+}
+
 .home-main__js-logo {
   background-color: var(--global--primary--js--Color);
   width: 8.2%;
   border-radius: var(--global--border-radius--1);
+  height: 100%;
+}
 
-
+.home-main__jquery-logo {
+  background-color: var(--global--primary--jquery--Color);
+  width: 8.2%;
+  border-radius: var(--global--border-radius--1);
+  height: 100%;
 }
 
 .home-main__js-title {
   font-family: "Neutraface Text Bold";
   font-size: var(--global--h4--title--FontSize);
-  line-height: var(--global--sm--LineHeight);
   text-align: right;
   padding-top: var(--global--spacer--md);
   padding-right: var(--global--spacer--xs);
-
 }
 
-.home-main__js-chalk {
-
+.home-main__logo-chalk {
   background-image: url(/assets/img/chalkMarkButton.png);
   background-repeat: no-repeat;
   background-size: 300%;
   background-position-x: center;
- 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
 
+}
+
+.home-margin--margin-right{
+  margin-right: var(--global--spacer--sm);
 }

@@ -99,16 +99,13 @@ let headerHomeTemplate = `<template id="header-home-temp">
 </header>
 </template>`;
 
-let mainHomeTemplate = `<template id="main-home-temp"><main id="home-main" class="content__home-main"><h1 class="home-main__title">
-<img class="home-main__logo" src="" alt="
-" />cheatSheet
-</h1>
+let mainHomeTemplate = `<template id="main-home-temp"><main id="home-main" class="content__home-main"><h1 class="home-main__title">cheatSheet</h1>
 <div class="home-main__autocomplete">
-<div class="home-main__js-logo"><div class="home-main__js-chalk"><h4 class="home-main__js-title">JS</h4></div></div>
-<img class="autocomplete__side-logo" src="" alt="jquery-logo" />
+<div class="home-main__js-logo home-margin--margin-right"><div class="home-main__logo-chalk"><h4 class="home-main__js-title">JS</h4></div></div>
+<div class="home-main__jquery-logo home-margin--margin-right"><div class="home-main__logo-chalk"><img class="autocomplete__side-logo" src="assets/img/jquery-logo.png" alt="jquery-logo" /></div></div>
 <input
   id="autocomplete-field"
-  class="autocomplete__input"
+  class="autocomplete__input home-margin--margin-right"
   type="text"
   name="autocomplete-field"
 />
