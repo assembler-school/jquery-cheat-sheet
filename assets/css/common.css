@@ -87,7 +87,6 @@ body {
   font-family: var(--global--sans-serif--FontFamily);
   font-size: var(--global--body--FontSize);
   font-weight: var(--global--normal--FontWeight);
-  /*line-height: var(--global--md--LineHeight);*/
   display: flex;
   flex-direction: row;
   justify-content: center;
