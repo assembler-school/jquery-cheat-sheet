@@ -17,8 +17,10 @@ body {
 }
 
 header {
+    font-family: "Changa", sans-serif;
     width: 95%;
     text-align: center;
+    font-size: 30px;
     border: 0.2rem solid #fff;
     border-radius: 2rem;
     padding: 0.4em;
@@ -31,7 +33,7 @@ main {
     box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #13cffe, 0 0 0.8rem #00ccff;
     border: 0.2rem solid #fff;
     border-radius: 2rem;
-    padding: 0.4em;
+    padding: 1rem;
 }
 
 code {
@@ -44,26 +46,65 @@ code:hover {
 }
 
 canvas {
-    border: 1px solid black;
-}
-
-li {
-    cursor: pointer;
-}
-
-li:hover {
-    color: blue;
-    text-decoration: underline;
+    background-color: grey;
+    border-radius: 10px;
 }
 
 select {
     font-family: "Changa", sans-serif;
     background-color: black;
     color: gray;
+    max-width: 21rem;
+    border-radius: 10px;
 }
 
 img {
+    border: none;
     border-radius: 30px;
+}
+
+button {
+    background-color: rgb(49, 48, 48);
+    color: gray;
+    border-radius: 10px;
+    border: 0.5px solid rgb(97, 96, 96);
+    padding: 5px;
+}
+
+button:hover {
+    background-color: gray;
+    color: rgb(49, 48, 48);
+}
+
+
+/*------------CUSTOM SCROLL BAR--------------*/
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: rgb(199, 193, 193);
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(46, 44, 44);
 }
 
 
@@ -85,7 +126,6 @@ img {
 .events-style * {
     font-size: 20px;
     margin: 5px;
-    padding: 5px;
 }
 
 .function-selector-style {
@@ -97,4 +137,34 @@ img {
 
 .input-check {
     color: red;
+}
+
+.remove-item {
+    border: 1px solid white;
+    color: Red;
+    cursor: pointer;
+    text-align: center;
+}
+
+.animals * {
+    cursor: pointer;
+}
+
+.animals *:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.sub {
+    font-size: 18px;
+    color: rgb(83, 83, 83);
+}
+
+.sub * {
+    font-size: 15px;
+}
+
+.newClass {
+    color: white;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }

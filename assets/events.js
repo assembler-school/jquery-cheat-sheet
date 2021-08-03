@@ -2,20 +2,18 @@ let jsScreen = $("#jsCodeShow");
 let jqScreen = $("#jqueryCodeShow");
 let eventScreen = $(".name-of-event");
 
-let jsFunctionsScreen = $("#jsFunction");
-let jqFunctionsScreen = $("#jqFunction");
-
 jsScreen.text("Vanilla JS Code and Examples will be showed here");
 jqScreen.text("jQuery Code and Examples will be showed here ");
 
-$("select").on("change", () => {
+$("#whichOption").on("change", () => {
     jsScreen.text("");
     jqScreen.text("");
+
     if ($("#list-div") !== null) {
         $("#list-div").remove();
     }
 
-    switch ($("select").val()) {
+    switch ($("#whichOption").val()) {
         case "When HTML Document Loaded":
             //For JS Screen
             let p = $(
@@ -250,7 +248,7 @@ $("select").on("change", () => {
 
         case "Mouse Over":
             let mouseHoveredevent = $(
-                '<div><p>Place the mouse over the code lines to see the "hover" event take place</p><code>element.addEventListener("mouseover", function(){Function goes here})</code></div>'
+                '<div><p>Place the mouse over this paragraph to see the "Mouse Over" event take place</p><code>element.addEventListener("mouseover", function(){Function goes here})</code></div>'
             );
 
             jsScreen.append(mouseHoveredevent);
@@ -269,6 +267,7 @@ $("select").on("change", () => {
                     mouseHoveredevent.css("opacity", "100");
                 }
             );
+            break;
 
         case "Checked or Unchecked Checkbox":
             let JSchecked = $(
@@ -294,7 +293,7 @@ $("select").on("change", () => {
 
         case "When a list item is clicked":
             let listOfItems = $(
-                "<div id='list-div'><ul><li>Doggo</li><li>Catto</li><li>Smoll Doggo</li><li>Chunky Doggo</li></ul></div>"
+                "<div id='list-div'><ul class='animals'><li>Doggo</li><li>Catto</li><li>Smoll Doggo</li><li>Chunky Doggo</li></ul></div>"
             );
             eventScreen.append(listOfItems);
             let listMsg = $(
