@@ -1,4 +1,14 @@
-// From this array I need to extract all the information that is used both in the cheat-list and in the content templates
+import { js0 } from "./js-cases/data-cheat-0.js";
+import { jq0 } from "./jq-cases/data-cheat-0.js";
+import { js1 } from "./js-cases/data-cheat-1.js";
+import { jq1 } from "./jq-cases/data-cheat-1.js";
+import { js2 } from "./js-cases/data-cheat-2.js";
+import { jq2 } from "./jq-cases/data-cheat-2.js";
+import { js3 } from "./js-cases/data-cheat-3.js";
+import { jq3 } from "./jq-cases/data-cheat-3.js";
+import { js4 } from "./js-cases/data-cheat-4.js";
+import { jq4 } from "./jq-cases/data-cheat-4.js";
+import { js5 } from "./js-cases/data-cheat-5.js";
 
 const cases = [
   {
@@ -9,8 +19,8 @@ const cases = [
     js: "The <b>onload</b> event occurs when an object has been loaded. <b>onload</b> is most often used within the body element to execute a script once a web page has completely loaded all content (including images, script files, CSS files, etc.).",
     jq: "The <b>load</b> event is sent to an element when it and all sub-elements have been completely loaded. This event can be sent to any element associated with a URL: images, scripts, frames, iframes, and the window object.",
     hint: "Five seconds since the page loades and these citizens will become terrible zombies",
-    jsFunction: "",
-    jqFunction: "",
+    jsFunction: js0,
+    jqFunction: jq0,
   },
   {
     dataCheat: 1,
@@ -18,6 +28,9 @@ const cases = [
     saga: "forces-of-good",
     js: "The <b>addEventListener()<b> method attaches an event handler to the specified element. The first parameter is the type of the event. The second parameter is the function we want to call when the event occurs.",
     jq: "The <b>.on()</b> method attaches event handlers to the currently selected set of elements in the jQuery object. Any event names can be used for the events argument. jQuery will pass through the browser's standard JavaScript event types, calling the handler function when the browser generates events due to user actions such as <b>click</b>.",
+    hint: "Click all the ghosts to make them fade away!",
+    jsFunction: js1,
+    jqFunction: jq1,
   },
   {
     dataCheat: 2,
@@ -25,6 +38,9 @@ const cases = [
     saga: "forces-of-good",
     js: "The <b>ondblclick</b> attribute fires on a mouse double-click on the element.",
     jq: "The <b>dblclick</b> event is sent to an element when the element is double-clicked. Any HTML element can receive this event.",
+    hint: "Double-click all the ghosts to make them fade away!",
+    jsFunction: js2,
+    jqFunction: jq2,
   },
   {
     dataCheat: 3,
@@ -32,6 +48,9 @@ const cases = [
     saga: "forces-of-good",
     js: "The <b>keydown</b> event is fired when a key is pressed. Unlike the keypress event, the keydown event is fired for all keys, regardless of whether they produce a character value.",
     jq: "The <b>keydown</b> event is sent to an element when the user presses a key on the keyboard. If the key is kept pressed, the event is sent every time the operating system repeats the key. It can be attached to any element, but the event is only sent to the element that has the focus.",
+    hint: "Press any key and all the monsters will vanish!",
+    jsFunction: js3,
+    jqFunction: jq3,
   },
   {
     dataCheat: 4,
@@ -39,6 +58,9 @@ const cases = [
     saga: "forces-of-good",
     js: "The <b>mousemove</b> event is fired at an element when a pointing device (usually a mouse) is moved while the cursor's hotspot is inside it.",
     jq: "The <b><mousemove</b> event is sent to an element when the mouse pointer moves inside the element. Any HTML element can receive this event.",
+    hint: "Move the mouse over the monsters to get rid of them!",
+    jsFunction: js4,
+    jqFunction: jq4,
   },
   {
     dataCheat: 5,
@@ -46,6 +68,8 @@ const cases = [
     saga: "forces-of-good",
     js: "The <b>oninput</b> event occurs when an element gets user input. This event occurs when the value of an input or textarea element is changed.",
     jq: "The <b>change</b> event is sent to an element when its value changes. This event is limited to input elements, textarea boxes and select elements. For select boxes, checkboxes, and radio buttons, the event is fired immediately when the user makes a selection with the mouse, but for the other element types the event is deferred until the element loses focus.",
+    hint: "Change the diabolic spell and send those monsters back to hell!",
+    jsFunction: js5,
   },
   {
     dataCheat: 6,

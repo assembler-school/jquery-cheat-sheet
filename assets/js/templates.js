@@ -58,7 +58,7 @@ let templateContent = `
               </button>
             </article>
           </section>
-          <section class="main__view" id="view"></section>
+          <div class="main__view" id="view"></div>
         </main>
       </div>
 </template>

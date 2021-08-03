@@ -1,6 +1,6 @@
-import { wrapper, view } from "../main.js";
+import { wrapper } from "../main.js";
 import { templateContent } from "../templates.js";
-import { goToMain, goToCheatList, goToContent } from "../router.js";
+import { goToMain, goToCheatList } from "../router.js";
 import { cases } from "../cases.js";
 
 function contentPage(e) {
@@ -26,35 +26,35 @@ function contentPage(e) {
 
   wrapper.appendChild(copyNode);
 
-  //--------------------------------------EVENT LISTENERS
-
-  document.getElementById("go-home").addEventListener("click", goToMain);
-  document.getElementById("go-list").addEventListener("click", goToCheatList);
-  document.getElementById("change-code").addEventListener("click", jsOrJq);
-
   //--------------------------------------PAGE FILLED WITH CASE'S TRAITS
-  //TODO
 
   // We need to clean the view section before injecting new elements
-
+  let view = document.getElementById("view");
   view.innerHTML = "";
   while (view.firstChild) {
     view.removeChild(view.firstChild);
   }
 
-  let jsDiv = document.getElementById("JS-method");
-  let jqDiv = document.getElementById("JQ-method");
   cases.forEach((c) => {
     if (c.dataCheat == e.target.dataset.id) {
       document.getElementById("js-info").innerHTML = c.js;
       document.getElementById("jq-info").innerHTML = c.jq;
+      c.jsFunction();
+      document
+        .getElementById("change-code")
+        .addEventListener("click", jsOrJq(c.jsFunction, c.jqFunction));
     }
   });
+
+  //--------------------------------------EVENT LISTENERS
+
+  document.getElementById("go-home").addEventListener("click", goToMain);
+  document.getElementById("go-list").addEventListener("click", goToCheatList);
 }
 
 //----------------------------------------------BUTTON JS/JQ
 
-function jsOrJq() {
+function jsOrJq(a, b) {
   let divs = document.querySelectorAll(".cheat");
   let btn = document.getElementById("change-code");
 
@@ -71,9 +71,11 @@ function jsOrJq() {
   if (btn.value === "JQuery") {
     btn.textContent = "JavaScript";
     btn.value = "JavaScript";
+    //a();
   } else if (btn.value === "JavaScript") {
     btn.textContent = "JQuery";
     btn.value = "JQuery";
+    b();
   }
 }
 

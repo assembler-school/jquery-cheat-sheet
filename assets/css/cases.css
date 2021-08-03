@@ -1,0 +1,35 @@
+.hint {
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 1px var(--freak);
+  font-size: 1.2rem;
+  width: 80%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  background-color: white;
+}
+
+.div--icons {
+  font-size: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.input {
+  font-size: 2rem;
+  color: red;
+  background-color: black;
+  border: 2px solid red;
+  padding: 1rem;
+}
+
+/*--------------------------------VIEW CLASSES-----------------------------*/
+
+.view--0 {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
