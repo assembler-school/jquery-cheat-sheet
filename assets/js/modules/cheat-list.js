@@ -27,19 +27,25 @@ function cheatList() {
   //List of Cases
   //TODO arrange icons and classes to create different thematics
 
-  let list = document.getElementById("list1");
+  let goodList = document.getElementById("list-good");
+  let evilList = document.getElementById("list-evil");
   cases.forEach((e) => {
     let li = document.createElement("li");
     li.className = "case";
-    li.id = e.dataCheat;
+    li.dataset.id = e.dataCheat;
     li.innerHTML = e.content;
-    list.appendChild(li);
+    if (e.saga === "forces-of-good") {
+      goodList.appendChild(li);
+    } else if (e.saga === "forces-of-evil") {
+      evilList.appendChild(li);
+    }
   });
 
   //Event Listener of Cases
-  //   for (let c of list.children) {
-  //     c.addEventListener("click", contentPage(c.id));
-  //   }
+
+  document
+    .getElementById("section-lists")
+    .addEventListener("click", contentPage);
 }
 
 export { cheatList };

@@ -1,5 +1,10 @@
-.list li {
+.list li,
+.list h2 {
   margin: 1rem 2rem;
+}
+
+.section--flex {
+  display: flex;
 }
 
 .case {
@@ -10,4 +15,10 @@
 .case:hover {
   font-size: 1.4rem;
   color: var(--freak);
+}
+
+.cheat--selected {
+  background-color: black;
+  color: white;
+  box-shadow: 2px 2px 2px 1px var(--freak);
 }

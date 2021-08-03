@@ -38,21 +38,21 @@ let templateContent = `
         </header>
         <main class="main">
           <section class="main__cheat">
-            <article class="cheat cheat--js" id="JS-method">
-              <p class="info"></p>
+            <article class="cheat cheat--js cheat--selected" id="JS-method">
+              <p class="info" id="js-info"></p>
               <button id="show-code" class="button button--code">
                 &lt;/&gt;
               </button>
             </article>
             <button
               id="change-code"
-              value="Jquery"
+              value="JQuery"
               class="button button--change"
             >
               JQuery
             </button>
             <article class="cheat cheat--jq" id="JQ-method">
-              <p class="info"></p>
+              <p class="info" id="jq-info"></p>
               <button id="show-code" class="button button--code">
                 &lt;/&gt;
               </button>
@@ -78,8 +78,14 @@ let templateList = `
   </nav>
 </header>
 <main>
-  <ul class="list list--events" id="list1"></ul>
-  <ul class="list list--functions" id="list2"></ul>
+  <section class="section--flex" id="section-lists">
+  <ul class="list list--good" id="list-good">
+  <h2>👼🏻✨Join the forces of good✨🦄</h2>
+  </ul>
+  <ul class="list list--evil" id="list-evil">
+  <h2>👹🔥Join the forces of evil🔥🦇</h2>
+  </ul>
+  </section>
 </main>
 </div>
 </template>`;

@@ -1,9 +1,12 @@
-import { wrapper } from "../main.js";
+import { wrapper, view } from "../main.js";
 import { templateContent } from "../templates.js";
 import { goToMain, goToCheatList, goToContent } from "../router.js";
 import { cases } from "../cases.js";
 
-function contentPage(dni) {
+function contentPage(e) {
+  //If the clicked element has not got the .case class, don't do anything
+  if (!e.target.matches(".case")) return;
+
   //TODO Delete all the previous event listeners
   //   document.getElementById("go-home").removeEventListener("click", goToMain);
   //   document
@@ -11,7 +14,7 @@ function contentPage(dni) {
   //     .removeEventListener("click", goToCheatList);
   //   document.getElementById("start").removeEventListener("click", goToContent);
 
-  //Template injection
+  //--------------------------------------TEMPLATE INJECTION
 
   wrapper.innerHTML = "";
   wrapper.insertAdjacentHTML("beforeend", templateContent);
@@ -23,21 +26,55 @@ function contentPage(dni) {
 
   wrapper.appendChild(copyNode);
 
-  //Event Listeners
+  //--------------------------------------EVENT LISTENERS
+
   document.getElementById("go-home").addEventListener("click", goToMain);
   document.getElementById("go-list").addEventListener("click", goToCheatList);
-  document.getElementById("change-code").addEventListener("click", changeCode);
+  document.getElementById("change-code").addEventListener("click", jsOrJq);
 
-  //   cases.forEach((c) => {
-  //       if(c.id === dni) {
+  //--------------------------------------PAGE FILLED WITH CASE'S TRAITS
+  //TODO
 
-  //       }
-  //   })
+  // We need to clean the view section before injecting new elements
+
+  view.innerHTML = "";
+  while (view.firstChild) {
+    view.removeChild(view.firstChild);
+  }
+
+  let jsDiv = document.getElementById("JS-method");
+  let jqDiv = document.getElementById("JQ-method");
+  cases.forEach((c) => {
+    if (c.dataCheat == e.target.dataset.id) {
+      document.getElementById("js-info").innerHTML = c.js;
+      document.getElementById("jq-info").innerHTML = c.jq;
+    }
+  });
 }
 
-function changeCode() {
-  //TODO Mark the div from which you are using the code
-  //TODO Toggle the button content (JQ/JS)
+//----------------------------------------------BUTTON JS/JQ
+
+function jsOrJq() {
+  let divs = document.querySelectorAll(".cheat");
+  let btn = document.getElementById("change-code");
+
+  //Change the class of the div selected
+  for (let div of divs) {
+    if (div.classList.contains("cheat--selected")) {
+      div.classList.remove("cheat--selected");
+    } else if (div.className !== "cheat--selected") {
+      div.classList.add("cheat--selected");
+    }
+  }
+
+  //Change the content of the button
+  if (btn.value === "JQuery") {
+    btn.textContent = "JavaScript";
+    btn.value = "JavaScript";
+  } else if (btn.value === "JavaScript") {
+    btn.textContent = "JQuery";
+    btn.value = "JQuery";
+  }
 }
 
 export { contentPage };

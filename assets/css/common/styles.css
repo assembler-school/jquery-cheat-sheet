@@ -36,6 +36,11 @@ a {
   color: var(--freak);
 }
 
+.header__nav a:hover {
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
 /*-------------------------------BUTTONS--------------------------------*/
 
 .button {

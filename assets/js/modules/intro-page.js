@@ -19,7 +19,7 @@ function introPage() {
 
   document.getElementById("go-home").addEventListener("click", goToMain);
   document.getElementById("go-list").addEventListener("click", goToCheatList);
-  document.getElementById("start").addEventListener("click", goToContent);
+  document.getElementById("start").addEventListener("click", goToCheatList);
 }
 
 export { introPage };
