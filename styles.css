@@ -1,59 +1,155 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-html {
-    font-size: 62.5%;
+:root {
+  --black: black;
+  --white: white;
+  --color1: rgb(120, 212, 212);
+  --color2: rgb(233, 124, 233);
+  --color3: rgb(109, 192, 127);
 }
 
 body {
-    min-height: 100vh;
-    max-width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  background-color: var(--black);
 }
 
-header {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 80% 20%;
-    background-color: rgb(114, 131, 146);
-    font-size: 1.5rem;
-    color: white;
-    padding: 1rem;
-    justify-self: center;
-    align-items: center;
+main {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
 
-.logo {
-    margin-left: 1.5rem;
-    font-size: 3rem;
-    padding: none;
+@media (min-width: 900px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+ul {
+  margin-bottom: 3rem;
+  width: fit-content;
+}
+
+li {
+  font-size: 1.2rem;
+  list-style: none;
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 h1 {
-    margin-left: 9rem;
+  font-size: 3rem;
+  margin-left: 5rem;
 }
 
-.logo__info {
-    font-size: 1.3rem;
-    padding: none;
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
+h2 {
+  text-align: center;
+  margin: 3rem 3rem;
 }
 
-.nav__list {
-    display: inline-block;
-    list-style: none;
-    text-decoration: none;
+footer {
+  grid-area: 3 / 1 / span 1 / span 3;
+  color: var(--white);
+  font-size: 1rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  align-self: center;
+  padding: 1rem;
 }
 
-.nav__list li {
-    display: inline-block;
-    padding: 1.8rem;
-    margin-right: 2rem;
+.header-container {
+  grid-area: 1 / 1 / span 1 / span 3;
+  background-color: var(--black);
+}
 
+.header-container--inner {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 30% 70%;
+  color: var(--white);
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 3rem;
+  margin-left: 1.3rem;
+}
+
+.logo-info {
+  font-size: 1rem;
+  margin-left: 1.3rem;
+}
+
+.functions-container {
+  background-color: var(--color1);
+}
+
+.selectors-container {
+  background-color: var(--color2);
+}
+
+.events-container {
+  background-color: var(--color3);
+}
+
+/* MODAL */
+
+/* The Modal (background) */
+.modal-main--container {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: auto; /* Sit on top */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70rem; /* Could be more or less, depending on screen size */
+  height: 40rem;
+}
+
+/* The Close Button */
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
