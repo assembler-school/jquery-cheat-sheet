@@ -3,6 +3,6 @@ $("#ex-16-jquery-btn").on("click", function (ev) {
 	const childElement = $("#ex-16-jquery-child");
 
 	childElement.text("This HTML Element has been appended with jQuery JS.");
-
-	parentElement.append(childElement);
+	childElement.appendTo(parentElement);
+	//parentElement.append(childElement);
 });

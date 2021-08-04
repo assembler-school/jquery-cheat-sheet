@@ -7,5 +7,5 @@ $("#ex-14-jquery-btn").on("click", function (ev) {
 	element.text("This HTML Element has been created with jQuery.");
 	element.prop("id", "ex-14-jquery-msg");
 
-	element.insertAfter($(this));
+	element.insertAfter($(ev.target));
 });

@@ -1,3 +1,3 @@
 $(document).on("keydown", function (ev) {
-	if (ev.key === "f") $("#ex-04-jquery-msg").toggleClass("no-display");
+	$("#ex-04-jquery-msg").text(`Key pressed: ${ev.key.toUpperCase()}`);
 });

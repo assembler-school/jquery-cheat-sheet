@@ -3,6 +3,6 @@ $("#ex-17-jquery-btn").on("click", function (ev) {
 	const childElement = $("#ex-17-jquery-child");
 
 	childElement.text("This HTML Element has been prepended with jQuery JS.");
-
-	parentElement.prepend(childElement);
+	childElement.prependTo(parentElement);
+	//parentElement.prepend(childElement);
 });

@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", function (ev) {
-	document.querySelector("#ex-01-vanilla").classList.remove("no-display");
+	setTimeout(() => document.querySelector("#ex-01-vanilla-msg").classList.remove("hidden"), 1000);
 });

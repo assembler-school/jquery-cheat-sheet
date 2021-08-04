@@ -1,11 +1,11 @@
 $("#ex-24-jquery-btn").on("click", function (ev) {
-	$(this).prop("disabled", true);
-	$(this).addClass("bg-02");
-	$("#ex-24-jquery-msg").removeClass("no-display");
+	const button = $(ev.target);
+
+	button.prop("disabled", true).addClass("bg-02");
+	$("#ex-24-jquery-msg").removeClass("hidden");
 
 	setTimeout(() => {
-		$(this).prop("disabled", false);
-		$(this).removeClass("bg-02");
-		$("#ex-24-jquery-msg").addClass("no-display");
+		button.prop("disabled", false).removeClass("bg-02");
+		$("#ex-24-jquery-msg").addClass("hidden");
 	}, 3000);
 });

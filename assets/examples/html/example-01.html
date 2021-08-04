@@ -9,8 +9,16 @@
 	</head>
 	<body>
 		<main class="font-family-01">
-			<p id="ex-01-vanilla" class="bg-01 text-white p-3 mb-3 br-3 no-display">The DOM content loaded event has been detected with Vanilla JS</p>
-			<p id="ex-01-jquery" class="bg-01 text-white p-3 mb-3 br-3 no-display">The DOM content loaded event has been detected with jQuery JS</p>
+			<div class="example-grid">
+				<div class="flex flex-column align-items-center p-3 gap-3 example">
+					<h2 class="text-align-center">Vanilla JS</h2>
+					<p id="ex-01-vanilla-msg" class="bg-02 text-align-center text-white p-3 br-2 bs-black-03 hidden">This content has been displayed with Vanilla JS by listening the 'load' event, after 1 second</p>
+				</div>
+				<div class="flex flex-column align-items-center p-3 gap-3 example">
+					<h2 class="text-align-center">jQuery</h2>
+					<p id="ex-01-jquery-msg" class="bg-02 text-align-center text-white p-3 br-2 bs-black-03 hidden">This content has been displayed with jQuery by listening the 'load' event, after 1 second</p>
+				</div>
+			</div>
 		</main>
 	</body>
 </html>

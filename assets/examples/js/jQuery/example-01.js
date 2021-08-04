@@ -1,3 +1,3 @@
 $(function (ev) {
-	$("#ex-01-jquery").removeClass("no-display");
+	setTimeout(() => $("#ex-01-jquery-msg").removeClass("hidden"), 1000);
 });

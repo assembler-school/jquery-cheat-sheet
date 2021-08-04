@@ -1,8 +1,4 @@
 $("#ex-25-jquery-btn").on("click", function (ev) {
-	const targetBtn = $("#ex-25-vanilla-btn");
-	targetBtn.prop("disabled", false);
-	targetBtn.removeClass("bg-02");
-
-	$(this).prop("disabled", true);
-	$(this).addClass("bg-02");
+	$("#ex-25-vanilla-btn").prop("disabled", false).removeClass("bg-02");
+	$(ev.target).prop("disabled", true).addClass("bg-02");
 });

@@ -19,31 +19,36 @@
 				<div id="grid-event-examples" class="example-grid"></div>
 			</section>
 			<section>
-				<h2 class="m-0">Manipulation functions</h2>
+				<h2 class="m-0">Manipulation</h2>
 				<hr />
 				<div id="grid-manipulation-examples" class="example-grid"></div>
 			</section>
-			<section id="modal" class="modal no-display">
+			<section>
+				<h2 class="m-0">Selection</h2>
+				<hr />
+				<div id="grid-selection-examples" class="example-grid"></div>
+			</section>
+			<section id="modal" class="modal hidden">
 				<div class="modal-example">
 					<span data-action="close-modal" class="modal__icon modal__icon--close material-icons">close</span>
 					<h1 id="example-title" class="modal-example__title mb-3"></h1>
-					<p id="example-description" class="modal-example__description mb-3"></p>
 					<h2 class="modal-example__subtitle">Vanilla JS</h2>
 					<hr class="modal-example__hr" />
-					<code id="example-code-vanilla" class="modal-example__code mb-3"></code>
+					<pre id="example-code-vanilla" class="modal-example__code mb-3"></pre>
 					<h2 class="modal-example__subtitle">jQuery</h2>
 					<hr class="modal-example__hr" />
-					<code id="example-code-jquery" class="modal-example__code mb-3"></code>
-					<iframe id="example-sandbox" class="modal-example__sandbox" src="" frameborder="0" sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
+					<pre id="example-code-jquery" class="modal-example__code mb-3"></pre>
+					<iframe id="example-sandbox" class="modal-example__sandbox" src="" frameborder="0" sandbox="allow-modals allow-scripts allow-forms allow-same-origin"></iframe>
 				</div>
 			</section>
 		</main>
 
 		<template id="template-example-card">
-			<article data-id class="example-card">
-				<h3 class="example-card__title"></h3>
+			<section data-id class="example-card">
+				<p class="example-card__number"></p>
+				<p class="example-card__title"></p>
 				<span class="example-card__icon material-icons">arrow_drop_up</span>
-			</article>
+			</section>
 		</template>
 	</body>
 </html>
