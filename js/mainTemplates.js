@@ -63,8 +63,14 @@ const mainTemplate = `<template id ="main-template">
 
 const specificTemplate = `<template id ="specific">
     <div class="specific">
-      <div id="vanilla" class="vanilla"><p>VANILLA</p></div>
-      <div id="jquery" class="jquery"><p>JQUERY</p></div>
+      <div class ="vanilla-wrapper">
+        <div id="vanilla" class="vanilla"><p>VANILLA</p></div>
+        <div class="vanilla-code"><p></p></div>
+      </div>
+      <div class ="vanilla-wrapper">
+        <div id="jquery" class="jquery"><p>JQUERY</p></div>
+        <div class="jquery-code"><p></p></div>
+      </div>
     </div>
 </template>
     `;

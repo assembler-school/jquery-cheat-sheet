@@ -164,12 +164,16 @@ function selectFunction(page) {
   switch (page) {
     case "1":
       vanillaClickEvent();
+      vanillaFunctionString(vanillaClickEvent);
       jqueryClickEvent();
+      jqueryFunctionString(jqueryClickEvent);
       break;
 
     case "2":
       vanillaDoubleClick();
+      vanillaFunctionString(vanillaDoubleClick);
       jqueryDoubleClick();
+      jqueryFunctionString(jqueryDoubleClick);
       break;
 
     case "3":
@@ -195,191 +199,267 @@ function selectFunction(page) {
       break;
     case "4":
       vanillaCursorOverEvent();
+      vanillaFunctionString(vanillaCursorOverEvent);
       jqueryCursorOverEvent();
+      jqueryFunctionString(jqueryCursorOverEvent);
       break;
     case "5":
       vanillaChangeValue();
+      vanillaFunctionString(vanillaChangeValue);
       jqueryChangeValue();
+      jqueryFunctionString(jqueryChangeValue);
       break;
 
     case "6":
       vanillaImageLoad();
+      vanillaFunctionString(vanillaImageLoad);
       jqueryImageLoad();
+      jqueryFunctionString(jqueryImageLoad);
       break;
 
     case "7":
       vanillaImageFails();
+      vanillaFunctionString(vanillaImageFails);
       jqueryImageFails();
+      jqueryFunctionString(jqueryImageFails);
       break;
 
     case "8":
       vanillaSubmitEvent();
+      vanillaFunctionString(vanillaSubmitEvent);
       jquerySubmitEvent();
+      jqueryFunctionString(jquerySubmitEvent);
       break;
 
     case "9":
       vanillaChangeOption();
+      vanillaFunctionString(vanillaChangeOption);
       jqueryChangeOption();
+      jqueryFunctionString(jqueryChangeOption);
       break;
 
     case "10":
       vanillaMousePosition();
+      vanillaFunctionString(vanillaMousePosition);
       jqueryMousePosition();
+      jqueryFunctionString(jqueryMousePosition);
       break;
 
     case "11":
       vanillaChecked();
+      vanillaFunctionString(vanillaChecked);
       jqueryChecked();
+      jqueryFunctionString(jqueryChecked);
       break;
 
     case "12":
       vanillaLiClicked();
+      vanillaFunctionString(vanillaLiClicked);
       jqueryLiClicked();
+      jqueryFunctionString(jqueryLiClicked);
       break;
 
     case "13":
       vanillaCreateHTML();
+      vanillaFunctionString(vanillaCreateHTML);
       jqueryCreateHTML();
+      jqueryFunctionString(jqueryCreateHTML);
       break;
 
     case "14":
       vanillaRemove();
+      vanillaFunctionString(vanillaRemove);
       jqueryRemove();
+      jqueryFunctionString(jqueryRemove);
       break;
 
     case "15":
       vanillaAppend();
+      vanillaFunctionString(vanillaAppend);
       jqueryAppend();
+      jqueryFunctionString(jqueryAppend);
       break;
 
     case "16":
       vanillaPrepend();
+      vanillaFunctionString(vanillaPrepend);
       jqueryPrepend();
+      jqueryFunctionString(jqueryPrepend);
       break;
 
     case "17":
       vanillaCreateAfter();
+      vanillaFunctionString(vanillaCreateAfter);
       jqueryCreateAfter();
+      jqueryFunctionString(jqueryCreateAfter);
       break;
 
     case "18":
       vanillaCreateBefore();
+      vanillaFunctionString(vanillaCreateBefore);
       jqueryCreateBefore();
+      jqueryFunctionString(jqueryCreateBefore);
       break;
 
     case "19":
       vanillaClone();
+      vanillaFunctionString(vanillaClone);
       jqueryClone();
+      jqueryFunctionString(jqueryClone);
       break;
 
     case "20":
       vanillaAddClass();
+      vanillaFunctionString(vanillaAddClass);
       jqueryAddClass();
+      jqueryFunctionString(jqueryAddClass);
       break;
 
     case "21":
       vanillaRemoveClass();
+      vanillaFunctionString(vanillaRemoveClass);
       jqueryRemoveClass();
+      jqueryFunctionString(jqueryRemoveClass);
       break;
 
     case "22":
       vanillaToggle();
+      vanillaFunctionString(vanillaToggle);
       jqueryToggle();
+      jqueryFunctionString(jqueryToggle);
       break;
 
     case "23":
       vanillaAddDisabled();
+      vanillaFunctionString(vanillaAddDisabled);
       jqueryAddDisabled();
+      jqueryFunctionString(jqueryAddDisabled);
       break;
 
     case "24":
       vanillaRemoveDisabled();
+      vanillaFunctionString(vanillaRemoveDisabled);
       jqueryRemoveDisabled();
+      jqueryFunctionString(jqueryRemoveDisabled);
       break;
 
     case "25":
       vanillaDataSrc();
+      vanillaFunctionString(vanillaDataSrc);
       jqueryDataSrc();
+      jqueryFunctionString(jqueryDataSrc);
       break;
 
     case "26":
       vanillaRemoveSrc();
+      vanillaFunctionString(vanillaRemoveSrc);
       jqueryRemoveSrc();
+      jqueryFunctionString(jqueryRemoveSrc);
       break;
 
     case "27":
       vanillaHide();
+      vanillaFunctionString(vanillaHide);
       jqueryHide();
+      jqueryFunctionString(jqueryHide);
       break;
 
     case "28":
       vanillaShow();
+      vanillaFunctionString(vanillaShow);
       jqueryShow();
+      jqueryFunctionString(jqueryShow);
       break;
 
     case "29":
       vanillaFadeIn();
+      vanillaFunctionString(vanillaFadeIn);
       jqueryFadeIn();
+      jqueryFunctionString(jqueryFadeIn);
       break;
 
     case "30":
       vanillaFadeOut();
+      vanillaFunctionString(vanillaFadeOut);
       jqueryFadeOut();
+      jqueryFunctionString(jqueryFadeOut);
       break;
 
     case "31":
       vanillaIterateElements();
+      vanillaFunctionString(vanillaIterateElements);
       jqueryIterateElements();
+      jqueryFunctionString(jqueryIterateElements);
       break;
 
     case "32":
       vanillaGetParent();
+      vanillaFunctionString(vanillaGetParent);
       jqueryGetParent();
+      jqueryFunctionString(jqueryGetParent);
       break;
 
     case "33":
       vanillaGetChildren();
+      vanillaFunctionString(vanillaGetChildren);
       jqueryGetChildren();
+      jqueryFunctionString(jqueryGetChildren);
       break;
 
     case "34":
       vanillaClassElements();
+      vanillaFunctionString(vanillaClassElements);
       jqueryClassElements();
+      jqueryFunctionString(jqueryClassElements);
       break;
 
     case "35":
       vanillaItemId();
+      vanillaFunctionString(vanillaItemId);
       jqueryItemId();
+      jqueryFunctionString(jqueryItemId);
       break;
 
     case "36":
       vanillaDisplayElements();
+      vanillaFunctionString(vanillaDisplayElements);
       jqueryDisplayElements();
+      jqueryFunctionString(jqueryDisplayElements);
       break;
 
     case "37":
       vanillaGetOptions();
+      vanillaFunctionString(vanillaGetOptions);
       jqueryGetOptions();
+      jqueryFunctionString(jqueryGetOptions);
       break;
 
     case "38":
       vanillaChangeHref();
+      vanillaFunctionString(vanillaChangeHref);
       jqueryChangeHref();
+      jqueryFunctionString(jqueryChangeHref);
       break;
 
     case "39":
       vanillaInputAlert();
+      vanillaFunctionString(vanillaInputAlert);
       jqueryInputAlert();
+      jqueryFunctionString(jqueryInputAlert);
       break;
 
     case "40":
       vanillaRemoveItems();
+      vanillaFunctionString(vanillaRemoveItems);
       jqueryRemoveItems();
+      jqueryFunctionString(jqueryRemoveItems);
       break;
 
     case "41":
       vanillaAnimate();
       jqueryAnimate();
+      jqueryFunctionString(jqueryAnimate);
+      vanillaFunctionString(vanillaAnimate);
       break;
 
     default:
@@ -399,6 +479,18 @@ function loadContent(dataPage) {
   loadLayout();
   loadCommonContent();
   selectFunction(dataPage);
+}
+
+function vanillaFunctionString(func) {
+  let funcString = func.toString();
+  console.log(funcString);
+  $(".vanilla-code p").text(funcString);
+}
+
+function jqueryFunctionString(func) {
+  let funcString = func.toString();
+  console.log(funcString);
+  $(".jquery-code p").text(funcString);
 }
 
 // Events on webpage load
