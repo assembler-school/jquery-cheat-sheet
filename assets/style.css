@@ -191,3 +191,9 @@ button:hover {
 .new-div {
     color: yellow;
 }
+
+.square {
+    height: 50px;
+    width: 50px;
+    background-color: antiquewhite;
+}

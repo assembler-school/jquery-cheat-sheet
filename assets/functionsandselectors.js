@@ -610,6 +610,62 @@ $("#whichFunction").on("change", () => {
             break;
 
         case "Animate All Items":
+            let animationJS = $(`<div>
+         <p>We can use the <code>.animate()</code> function to animate the selected element.</p>
+         <p><code>element.animate(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">keyframes</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate#:~:text=Either%20an%20integer%20representing%20the%20animation%27s%20duration%20(in%20milliseconds)%2C%20or%C2%A0an%20Object%20containing%20one%20or%20more%20timing%20properties%3A%C2%A0">options</a>);</code></p>
+         
+         <p>The Code that Animates the clicks is following</p>
+         <p><pre><code>$(document).on("click", (event) => {
+            event.target.animate(
+                [
+                    { transform: "translateY(0px)" },
+                    { transform: "translateY(300px)" },
+                    { transform: "translateX(200px)" },
+                    { transform: "translateX(0px)" },
+                    { transform: "translateX(-200px)" },
+                    { transform: "translateY(300px)" },
+                    { transform: "translateY(00px)" },
+                ], { duration: 5000, iterations: 1 }
+            );
+        });</code></pre></p>
+         </div>`);
+
+            let animationJQ =
+                $(`<div><p>jQuery also uses the <code>.animate()</code> method to perform animations. </p>
+         <p>Lets animate a square with jQuery</p>
+         <p>Here is the code:</p><p><code>$(".square").on("click", () => {
+            $(".square").animate({ width: "250px" }).animate({ height: "250px" });
+        });</code></p>
+         <div class="square"></div>
+         
+         </div>`);
+
+            jsFunctionsScreen.append(animationJS);
+            jqFunctionsScreen.append(animationJQ);
+
+            $(".square").on("click", () => {
+                if ($(".square").css("width") === "50px") {
+                    $(".square").animate({ width: "250px" }).animate({ height: "250px" });
+                } else {
+                    $(".square").animate({ width: "50px" }).animate({ height: "50px" });
+                }
+            });
+
+            $(jsFunctionsScreen).on("click", (event) => {
+                event.target.animate(
+                    [
+                        { transform: "translateY(0px)" },
+                        { transform: "translateY(300px)" },
+                        { transform: "translateX(200px)" },
+                        { transform: "translateX(0px)" },
+                        { transform: "translateX(-200px)" },
+                        { transform: "translateY(300px)" },
+                        { transform: "translateY(00px)" },
+                    ], { duration: 5000, iterations: 1 }
+                );
+            });
+
+            break;
 
         default:
             break;
