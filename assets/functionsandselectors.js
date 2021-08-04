@@ -276,6 +276,85 @@ $("#whichFunction").on("change", () => {
             );
             jqFunctionsScreen.append(jqHandS);
             break;
+
+        case "Fade In and Fade Out":
+            let fade = $(
+                "<div><p>In order to do these functions, we use jQuery. The Code would be following</p> <p><code>$(element).fadeIn(speed, callback)</code></p><p><code>$(element).fadeOut(time, callback)</code></p> </div>"
+            );
+
+            jqFunctionsScreen.append(fade);
+
+            let text = $("<p>Welcome To The Moon</p>");
+            let fadeIn = $('<button id="fade-in">Fade In</button>');
+            let fadeOut = $('<button id="fade-out">Fade Out</button>');
+
+            jsFunctionsScreen.append(text, fadeIn, fadeOut);
+            $(fadeIn).on("click", () => {
+                $(text).fadeIn();
+            });
+
+            $(fadeOut).on("click", () => {
+                $(text).fadeOut();
+            });
+            break;
+
+        case "Change Style of Collection of Elements":
+            let paragraphs = $(
+                '<p>In order to change the properties of all these elements, we`ll need to iterate through and apply the effects that we want.</p><p>In JS, We could use different loops <code>for, for In, for off, for each</code></p><p>the code for this example is following:</p><p><code>for (let i = 0; i < 4; i++){ paragraphs[i].style.font = "30px italic small-caps"   }</code></p>'
+            );
+            let colorBtn = $('<button id="color">Change style</button>');
+
+            jsFunctionsScreen.append(paragraphs, colorBtn);
+
+            $(colorBtn).on("click", () => {
+                $(paragraphs).each(function(index, element) {
+                    $(element).css({ font: "30px italic small-caps" });
+                });
+            });
+
+            let paraJq = $(
+                "<div><p>In jQuery we can use the iteration of <code>.each()</code> method.</p> <p>Here is the code</p></div>"
+            );
+            let code = $(`<code>$(colorBtn).on("click", () => {
+             $(paragraphs).each(function(index, element) {
+             $(element).css({ font: "30px italic small-caps" });
+              });
+                });</code>`);
+            jqFunctionsScreen.append(paraJq);
+            jqFunctionsScreen.append(code);
+            break;
+
+        case "Change font-weight of Parent Element":
+            let parentNode = $(
+                `<div class = "parent-div">This is the Parent Div  <p id = "child">This is the Child Div</p> <p>In order to change the Font Weight of Parent Element, We'll use the following code:</p> <p><code> element.parentNode.style.fontWeight = "bold"</code></p></div>`
+            );
+            let parentButton = $(
+                '<button id="parent-button">Click to Change</button>'
+            );
+            jsFunctionsScreen.append(parentNode, parentButton);
+
+            $(parentButton).on("click", () => {
+                $("#child").parent().css("font-weight", "bolder");
+            });
+
+            let parentNodeJq = $(
+                `<div><p>To change the style of the Parent Element, the jQuery code would be following:</p> <p><code>$("#child").parent().css("font-weight", "bolder")</code></p></div>`
+            );
+            jqFunctionsScreen.append(parentNodeJq);
+            break;
+
+        case "Change font-weight of Collection of Children":
+            let parentList = $(
+                "<div id='parent-list'>This is Parent of List Items <p>Para 1</p> <p>para 2</p> <p>para 3</p></div>"
+            );
+
+            let changeButton = $(
+                '<button id="change-weight">Click to Change</button>'
+            );
+            jsFunctionsScreen.append(parentList, changeButton);
+
+            console.log($("#parent-list"));
+
         default:
             break;
     }

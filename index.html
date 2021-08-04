@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jQuery CheatSheet</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Chathura:wght@700&family=Cousine:wght@700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap");
+    </style>
     <script src="assets/javascript.js" defer></script>
     <script src="assets/jQuery.js" defer></script>
     <script src="assets/events.js" defer></script>
     <script src="assets/functionsandselectors.js" defer></script>
     <link rel="stylesheet" href="./assets/style.css" />
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap");
-    </style>
 </head>
 
 <body>
@@ -31,12 +32,12 @@
         <section class="events-style" id="events">
             <div class="name-of-event">
                 <select id="whichOption">
-            <option value="" disabled selected>Please Select an Event</option>
+            <option disabled selected>Please Select an Event</option>
             <option>When HTML Document Loaded</option>
             <option>HTML Item Clicked</option>
             <option>HTML Item Double Clicked</option>
             <option>When cursor is moved</option>
-            <option>When User Changes Value of an Input</option>
+            <option>When User Changes an Input</option>
             <option>When an Image is loaded</option>
             <option>When an Image fails to Load</option>
             <option>When a form is Submitted</option>
@@ -59,7 +60,7 @@
         <section class="events-style" id="fucntion_selector">
             <div class="name-of-func">
                 <select id="whichFunction">
-            <option value="" disabled selected>Please Select a Function</option>
+            <option disabled selected>Please Select a Function</option>
             <option>Create an HTML Element</option>
             <option>Remove an HTML Element</option>
             <option>Append an HTML Element</option>
@@ -77,10 +78,20 @@
             <option>Change Style of Collection of Elements</option>
             <option>Change font-weight of Parent Element</option>
             <option>Change font-weight of Collection of Children</option>
+            <option>Change font-weight of all Elements with Same Class</option>
+            <option>Get an item by id and Change font-weight</option>
+            <option>Show all Hidden Elements with Same Class</option>
+            <option>
+              Get Options of a Select Element (Attribute Selected)
+            </option>
+            <option>Change href Attribute of first "a" Element</option>
+            <option>Show an alert with Value of First input</option>
+            <option>Remove All Items</option>
+            <option>Animate All Items</option>
           </select>
             </div>
-            <div class="javascript-type" id="jsFunction">2</div>
-            <div class="jquery-type" id="jqFunction">3</div>
+            <div class="javascript-type" id="jsFunction"></div>
+            <div class="jquery-type" id="jqFunction"></div>
         </section>
     </main>
 </body>
