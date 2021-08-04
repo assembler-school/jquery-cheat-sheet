@@ -39,7 +39,7 @@ function contentPage(e) {
     if (c.dataCheat == e.target.dataset.id) {
       document.getElementById("js-info").innerHTML = c.js;
       document.getElementById("jq-info").innerHTML = c.jq;
-      c.jsFunction();
+      c.jqFunction();
       document
         .getElementById("change-code")
         .addEventListener("click", jsOrJq(c.jsFunction, c.jqFunction));
