@@ -94,7 +94,7 @@ function jqueryLiClicked() {
     <li>3</li>
     </ul>`
   );
-  $("li").on("click", (e) => {
+  $("#jquery li").on("click", (e) => {
     $("#jquery p").text(e.target.textContent);
   });
 }

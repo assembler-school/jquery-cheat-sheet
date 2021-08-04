@@ -488,22 +488,26 @@ function loadContent(dataPage) {
 // Change vanilla function to string to print it
 function vanillaFunctionString(func) {
   let funcString = func.toString();
-  console.log(funcString);
   $(".vanilla-code p").text(funcString);
 }
 
 // Change jQuery function to string to print it
 function jqueryFunctionString(func) {
   let funcString = func.toString();
-  console.log(funcString);
   $(".jquery-code p").text(funcString);
 }
 
 // Events on webpage load
 document.addEventListener("DOMContentLoaded", () => {
   console.log("VANILLA LOADED");
+  console.log(`document.addEventListener("DOMContentLoaded", () => {
+    console.log("VANILLA LOADED");
+  });`);
 });
 
 $(window).on("load", () => {
   console.log("JQUERY LOADED");
+  console.log(`$(window).on("load", () => {
+    console.log("JQUERY LOADED");
+  });`);
 });
