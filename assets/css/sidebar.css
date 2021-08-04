@@ -31,6 +31,10 @@
   font-family: var(--global--code--FontFamily);
 }
 
+.about-to-drop{
+  background: #f6f4f13d;
+}
+
 .sidebar__drop-on:focus-visible{
   outline: none;
 }

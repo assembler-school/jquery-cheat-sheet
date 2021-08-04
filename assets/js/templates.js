@@ -23,7 +23,7 @@ let pageMainTemplate = `<template id="page-main-temp"><main id="page-main" class
 <section id="text-content" class="page-main__text-content">
   <!--2 column design. Left fot js, right for jquery-->
   <div class="text-content__col text-content__left home-margin--margin-right">
-    <div class="col__head-section" draggable="true">
+    <div id="js-code" class="col__head-section" draggable="true">
     <h5 class="page-main__js-title">JS</h5>
     <h3 class="col__title">javaScript code</h3>
       <span class="head-section__js-code" id="js-col-code"></span>
@@ -33,7 +33,7 @@ let pageMainTemplate = `<template id="page-main-temp"><main id="page-main" class
   </div>
 
   <div class="text-content__col text-content__right">
-    <div class="col__head-section" draggable="true">
+    <div id="jquery-code" class="col__head-section" draggable="true">
     <img
     class="head-section__jquery-logo"
     src="assets/img/jquery-logo.png"

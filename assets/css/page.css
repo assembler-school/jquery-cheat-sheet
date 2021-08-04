@@ -66,3 +66,8 @@
 .head-section__jquery-logo {
   width: 10%;
 }
+
+.is-dragging{
+  cursor: grabbing;
+}
+

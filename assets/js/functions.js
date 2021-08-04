@@ -17,14 +17,26 @@ function initialSetLocalStorage(key, arrayObject) {
 }
 
 function updateLocalStorage(key, object) {
-	let array = JSON.parse(localStorage.getItem(key));
-	for (const element of array) {
-		if (element.title === object.title) {
-			return;
+	if (key === "code") {
+		if (localStorage.getItem(key) == "") {
+			localStorage.setItem(key, JSON.stringify(object));
+		} else {
+			let string = localStorage.getItem(key);
+			string += " " + object;
+			localStorage.setItem(key, string);
 		}
+	} else if (key === "codeOption") {
+		localStorage.setItem(key, object);
+	} else {
+		let array = JSON.parse(localStorage.getItem(key));
+		for (const element of array) {
+			if (element.title === object.title) {
+				return;
+			}
+		}
+		array.push(object);
+		localStorage.setItem(key, JSON.stringify(array));
 	}
-	array.push(object);
-	localStorage.setItem(key, JSON.stringify(array));
 }
 
 let id = 0;
@@ -51,12 +63,33 @@ function createExample(
 	};
 	id++;
 
-	if (type === "event") {
+	if (type === "events") {
 		updateLocalStorage("events", example);
-	} else if (type === "function") {
+	} else if (type === "functions") {
 		updateLocalStorage("functions", example);
-	} else if (type === "selector") {
+	} else if (type === "selectors") {
 		updateLocalStorage("selectors", example);
+	}
+}
+
+// location.hash=#page/(example.type)/(example.id)
+function getExampleIdKey() {
+	let arrayUrl = location.hash.split("/");
+
+	let key = arrayUrl[1];
+	let id = parseInt(arrayUrl[2]);
+
+	return [key, id];
+}
+
+function getExample() {
+	let examples = localStorage.getItem(getExampleIdKey()[0]);
+	let examplesObjects = JSON.parse(examples);
+
+	for (const iterator of examplesObjects) {
+		if (iterator.id === getExampleIdKey()[1]) {
+			return iterator;
+		}
 	}
 }
 
@@ -65,4 +98,6 @@ export {
 	initialSetLocalStorage,
 	updateLocalStorage,
 	createExample,
+	getExampleIdKey,
+	getExample,
 };
