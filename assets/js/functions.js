@@ -1,7 +1,7 @@
 function insertTemplate(div, template, id) {
 	let htmlNode = template;
 	let wrapper = div;
-	//clone template
+
 	wrapper.insertAdjacentHTML("beforeend", htmlNode);
 	let templateNode = document.getElementById(id).content;
 	let cloneNode = document.importNode(templateNode, true);
@@ -20,7 +20,7 @@ function updateLocalStorage(key, object) {
 	let array = JSON.parse(localStorage.getItem(key));
 	for (const element of array) {
 		if (element.title === object.title) {
-			return console.log(object.title, " example its already loaded");
+			return;
 		}
 	}
 	array.push(object);
