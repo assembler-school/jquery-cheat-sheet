@@ -6,7 +6,10 @@ main {
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
+  background-color: rgb(92, 92, 92);
+  color: white;
+  border-radius: 25px;
 }
 
 .specific {
@@ -14,23 +17,28 @@ main {
   flex-direction: row;
   column-gap: 2rem;
   height: 10rem;
+  padding: 1.5rem 5rem;
 }
 
 .common {
   text-align: center;
+  font-size: 2rem;
+  padding: 0 5rem;
 }
 
 .vanilla {
   width: 100%;
   text-align: center;
-  background-color: grey;
 }
 .jquery {
   width: 100%;
   text-align: center;
-  background-color: grey;
 }
 
 img {
   width: 100%;
+}
+
+input[type="text"] {
+  width: 50%;
 }

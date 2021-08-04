@@ -1,17 +1,17 @@
 function jqueryClickEvent() {
   $("#jquery").on("click", () => {
-    $("#jquery").text("CLICKED JQUERY");
+    $("#jquery p").text("CLICKED JQUERY");
   });
 }
 
 function jqueryDoubleClick() {
   $("#jquery").on("dblclick", () => {
-    $("#jquery").text("DOUBLE CLICKED JQUERY");
+    $("#jquery p").text("DOUBLE CLICKED JQUERY");
   });
 }
 
 function jqueryKeyPressEvent() {
-  $("#jquery").text("JQUERY KEY PRESSED");
+  $("#jquery p").text("JQUERY KEY PRESSED");
 }
 
 function jqueryCursorOverEvent() {

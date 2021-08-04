@@ -93,6 +93,7 @@ import {
 
 loadMainPageTemplate();
 
+// Create the web Layout
 function loadMainPageTemplate() {
   let body = document.querySelector("body");
   body.innerHTML = "";
@@ -112,7 +113,7 @@ function loadMainPageTemplate() {
   });
 }
 
-// Create the web Layout
+// Create the layout for exercise title
 function loadLayout() {
   if (!document.querySelector(".specific")) {
     let mainWrapper = document.getElementById("main-wrapper");
@@ -128,7 +129,7 @@ function loadLayout() {
   }
 }
 
-// Choose the template to load from the chosen nav button
+// Choose the exercises to load from the chosen nav button
 function selectPage(e) {
   let dataPage = e.target.dataset.page;
 
@@ -142,6 +143,7 @@ function selectPage(e) {
   }
 }
 
+// Create the layout for jQuery and vanilla exercises
 function loadCommonContent() {
   let common = document.getElementById("common");
   common.innerHTML = "";
@@ -400,7 +402,6 @@ function loadContent(dataPage) {
 }
 
 // Events on webpage load
-
 document.addEventListener("DOMContentLoaded", () => {
   console.log("VANILLA LOADED");
 });
