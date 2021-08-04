@@ -177,3 +177,17 @@ button:hover {
 .parent-div * {
     font-weight: lighter;
 }
+
+.is-hidden {
+    display: none;
+}
+
+.list-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.new-div {
+    color: yellow;
+}

@@ -367,6 +367,122 @@ $("#whichFunction").on("change", () => {
             );
 
             jqFunctionsScreen.append(parentListJQ);
+
+            break;
+
+        case "Change font-weight of all Elements with Same Class":
+            let sameClassJS = $(
+                '<div><p>In order to perform this task, We`ll be using <code>.getElementsByClassName</code> or <code>.querySelectorAll</code> to recieve an array of all elements with same class.</p><p> <li class="object">Object 1</li><li class="object">Object 2</li><li class="object">Object 3</li></p><code><p>let objects = document.querySelectorAll(".object");</p> <p> for (let i = 0; i < objects.length; i++) { objects[i].style.fontWeight = "bolder"; } });</p></div> '
+            );
+            let sameClassJQ = $(
+                `<div><p>In order to do this, we'd need to iterate using the <code>.each()</code> method. </p> <p>The code would be following:</p> <p><code>$(".object").each(function(i, element) { $(element).css("font-weight", "bolder"); });</code></p></div>`
+            );
+
+            let classButton = $("<button id='class-button'>Click to Change</button>");
+
+            jqFunctionsScreen.append(sameClassJQ, classButton);
+            jsFunctionsScreen.append(sameClassJS);
+
+            $("#class-button").on("click", () => {
+                $(".object").each(function(i, element) {
+                    $(element).css("font-weight", "bolder");
+                });
+            });
+
+            break;
+
+        case "Get an item by id and Change font-weight":
+            let elementByID = $(
+                `<div><p>In JavaScript, we can use either <code>document.getElementById("element-id")</code> or we can also use <code>document.querySelector("#element-id")</code></p> <p id="change-font-para">We will be changing the font-weight of this element.</p> <p>The code will be: <code>document.getElementById("element-id").style.fontWeight = "bold";</code></p> </div>`
+            );
+            let jqElement = $(
+                `<div><p>In jQuery we simply put the ID in the selector and use the <code>.css()</code> to modify style</p> <p>Code will be: <code>$("#element-id").css("font-weight", "bold")</code></p> <button id="change-font">Click to Change</button></div>`
+            );
+            jsFunctionsScreen.append(elementByID);
+            jqFunctionsScreen.append(jqElement);
+
+            $("#change-font").on("click", () => {
+                $("#change-font-para").css({ "font-weight": "bolder", color: "white" });
+            });
+            break;
+
+        case "Show all Hidden Elements with Same Class":
+            let hiddenElements = $(`<div>
+            <p>In order to do this with JavaScript, we will use <code>document.getElementsByTagName("li")</code> to get all items. Then we filter the hidden ones by using an iterator.</p>
+            <p>Once we have the hidden elements, we can either set their display to block or toggle their class to change other properties as well. Observe the code below</p><p><code> <p>let allLi = document.getElementsByTagName("li");</p>
+            <p>for (let i = 0; i < allLi.length; i++) </p> <p>{
+                if (allLi[i].className === "is-hidden") {
+                    allLi[i].classList.toggle("is-hidden");
+                }</code></p>
+            <ul class ="list-items">
+             <li class= "is-hidden">Number 1 is Hidden</li>
+             <li>Number 2 is Visible</li>
+             <li class= "is-hidden">Number 3 is Hidden</li>
+             <li>Number 4 is Visible</li>
+             <li class= "is-hidden">Number 5 is Hidden</li>
+             <li>Number 6 is Visible</li>
+             
+             </ul></div>`);
+
+            let hiddenElementsJq = $(
+                `<div><p>In order to find hidden items on an element collection, we can use <code>$("tag:hidden")</code>.
+                 Once we have the hidden elements, we can change their properties. The code would be following</p><p><code>$("li:hidden").css({ "font-weight": "bolder", color: "yellow" }).show();</code></p></div>`
+            );
+
+            let showButton = $(
+                `<button id="showButton">Show Hidden Elements</button>`
+            );
+
+            jsFunctionsScreen.append(hiddenElements);
+            jqFunctionsScreen.append(hiddenElementsJq);
+            jqFunctionsScreen.append(showButton);
+
+            $(showButton).on("click", () => {
+                $("li:hidden").css({ "font-weight": "bolder", color: "yellow" }).show();
+            });
+
+            // document.getElementById("showButton").addEventListener("click", () => {
+            //     let allLi = document.getElementsByTagName("li");
+            //     for (let i = 0; i < allLi.length; i++) {
+            //         if (allLi[i].className === "is-hidden") {
+            //             allLi[i].style.display = "block";
+            //         }
+            //     }
+            // });
+
+            break;
+
+        case "Get Options of a Select Element (Attribute Selected)":
+            let areaJS = $(
+                `<div><p>In order to read the value of the Selected option, we can get the Select item with and read its value which will automatically give us the value of selected Option</p>
+                <p><code>let selectedOption = document.getElementById("selectElement").value</code></p>
+                <p>The button will change the text of the Paragraph with text of the selected option in EVENTS.</p>
+                 <button id="add-para">Click to Add</button></div>`
+            );
+            let areaJQ =
+                $(`<div>Reading the value of the Selected option in a select element with jQuery would be like this: <p>
+            <code>$("#whichOption").val()</code>
+            </p>
+            <p>Or you could get the list of options which are Selected by using the following code: <code>$("option:selected").val()</code></p>
+            
+            </div>`);
+
+            jsFunctionsScreen.append(areaJS);
+            jqFunctionsScreen.append(areaJQ);
+
+            $("#add-para").on("click", () => {
+                let selectedOption = $("#whichOption").val();
+                let newDiv = $(`<p class="new-div">${selectedOption}</p>;`);
+                if ($(".new-div") === null) {
+                    areaJS.append(newDiv);
+                } else {
+                    $(".new-div").remove();
+
+                    areaJS.append(newDiv);
+                }
+            });
+            break;
+
         default:
             break;
     }
