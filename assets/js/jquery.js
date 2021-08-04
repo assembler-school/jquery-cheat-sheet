@@ -179,13 +179,64 @@ $('#btnAnimateJq').on('click', () => {
 $('#btnChangeStyleJq').on('click', () => {
   $('#listChangeStyleJq li').each(function(){
     $(this).toggleClass('text-highlight')
+    $(this).text($(this).text() + ' iterated')
   })
 })
 
 $('#btnParentFontJq').on('click', () => {
-  $('#itemParentFontJq').parent().prev().css('font-weight', '100')
+  let item = $('#itemParentFontJq').parent().prev()
+  item.css('font-weight', '100')
+  item.css('color', '#d83f87')
 })
 
 $('#btnChildrenFontJq').on('click', () => {
-  let items = $('#itemChildrenFontJq').children().css('font-weight', '700')
+  let items = $('#itemChildrenFontJq').children()
+  items.css('font-weight', '700')
+  items.css('color', '#d83f87')
+})
+
+$('#btnCertainFontJq').on('click', () => {
+  $('.certain-class').each(function() {
+    $(this).css('font-weight', '100')
+    $(this).css('color', '#d83f87')
+  })
+})
+
+$('#btnItemIdJq').on('click', () => {
+  $('#itemIdJq').css('font-weight', '100')
+  $('#itemIdJq').css('color', '#d83f87')
+})
+
+const itemClass = $('.get-class-jq').hide()
+$('#btnGetClassJq').on('click', () => {
+  itemClass.show()
+  itemClass.css('color', '#d83f87')
+})
+
+const messageAttr = $('<p></p>')
+$('#formAttrJq select').on('change', () => {
+  let selected = $(event.target).val()
+  messageAttr.html(`Your selection is <span class="text-highlight">${selected}</span>`)
+  $('#formAttrJq').after(messageAttr)
+})
+
+const message = $('<p>Click on the first item</p>')
+$('#btnAttrLinkJq').on('click', () => {
+  let firstLink = $('#listAttrLinkJq').find('a').first()
+  firstLink.attr('href', 'https://www.google.com/')
+  firstLink.attr('target', '_blank')
+  $('#listAttrLinkJq').after(message)
+})
+
+$('#formShowAlertJq').on('submit', (e) => {
+  e.preventDefault()
+  let firstInput = $('#formShowAlertJq').find('input').first().val()
+  if(firstInput) alert('The value of first input is: ' + firstInput)
+})
+
+$('#btnRemoveJq').on('click', () => {
+  let items = $('#listJq li')
+  items.each(function () {
+    $(this).remove()
+  })
 })

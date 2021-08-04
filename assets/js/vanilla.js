@@ -214,17 +214,70 @@ document.getElementById('btnAnimateV').addEventListener('click', () => {
 document.getElementById('btnChangeStyleV').addEventListener('click', () => {
   const list = document.querySelectorAll('#listChangeStyleV li')
   list.forEach(item => {
+    item.textContent += ' iterated'
     item.classList.toggle('text-highlight')
   })
 })
 
 document.getElementById('btnParentFontV').addEventListener('click', () => {
-  document.getElementById('btnParentFontV').parentNode.style.fontWeight = '700'
+  const item = document.getElementById('btnParentFontV').parentNode
+  item.style.fontWeight = '700'
+  item.style.color = '#d83f87'
 })
 
 document.getElementById('btnChildrenFontV').addEventListener('click', () => {
   const items = document.getElementById('itemChildrenFontV').children
   for (let i = 0; i < items.length; i++) {
     items[i].style.fontWeight = '700'
+    items[i].style.color = '#d83f87'
   }
+})
+
+document.getElementById('btnCertainFontV').addEventListener('click', () => {
+  const items = document.querySelectorAll('.certain-classv')
+  items.forEach (item => {
+    item.style.fontWeight = '100'
+    item.style.color = '#d83f87'
+  })
+})
+
+document.getElementById('btnIdFontV').addEventListener('click', () => {
+  const item = document.getElementById('itemIdV')
+  item.style.fontWeight = '100'
+  item.style.color = '#d83f87'
+})
+
+document.getElementById('btnGetClassV').addEventListener('click', () => {
+  const items = document.getElementsByClassName('get-class-v')
+  for (let item of items) {
+    item.style.display = 'block'
+    item.style.color = '#d83f87'
+  }
+})
+
+const attrMessage = document.createElement('p')
+document.querySelector('#formAttrV select').addEventListener('change', () => {
+  let result = document.querySelector('#formAttrV select').value
+  attrMessage.innerHTML = `Your selection is <span class="text-highlight">${result}</span>`
+  document.querySelector('#formAttrV').appendChild(attrMessage)
+})
+
+const attrLinkMessage = document.createElement('p')
+document.querySelector('#btnAttrLinkV').addEventListener('click', () => {
+  let firstItem = document.querySelector('#listAttrLinkV > li').firstChild
+  firstItem.setAttribute('href', 'https://www.google.com/')
+  firstItem.setAttribute('target', '_blank')
+  attrLinkMessage.textContent = 'Click on the first item'
+  document.querySelector('#listAttrLinkV').appendChild(attrLinkMessage)
+})
+
+document.getElementById('formShowAlertV').addEventListener('submit', (e) => {
+  e.preventDefault()
+  let firstInput = document.querySelectorAll('#formShowAlertV input')[0].value
+  if(firstInput) alert('The value of the first input is: ' + firstInput)
+})
+
+document.getElementById('btnRemoveV').addEventListener('click', (e) => {
+  let items = document.querySelectorAll('#listV li')
+  for (let item of items) item.remove()
 })
