@@ -14,9 +14,10 @@ function pageDisplay() {
 	getHeader();
 	insertTemplate(wrapper, pageMainTemplate, "page-main-temp");
 	getFooter();
-
-	eventsGrabbing();
-	dropOnArea();
+	if (document.querySelectorAll("div[draggable=true]")) {
+		eventsGrabbing();
+		dropOnArea();
+	}
 }
 
 function eventsGrabbing() {

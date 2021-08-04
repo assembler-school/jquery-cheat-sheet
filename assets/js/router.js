@@ -30,4 +30,13 @@ function goToIndex() {
 	location.hash = "index";
 }
 
-export { navigate, goToHome, goToPage, goToIndex };
+function goToExample() {
+	// Type - Title
+	let goToString = document.getElementById("autocomplete-field").value;
+	let goToArray = goToString.split("-");
+	let type = goToArray[0];
+	let title = goToArray[1];
+	location.hash = "page/" + type + "/" + title;
+}
+
+export { navigate, goToHome, goToPage, goToIndex, goToExample };

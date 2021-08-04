@@ -93,6 +93,16 @@ function getExample() {
 	}
 }
 
+function stopDragg() {
+	let wid = window.innerWidth;
+	if (wid < 768) {
+		let areDraggables = document.querySelectorAll("div[draggable=true]");
+		areDraggables.forEach((element) => {
+			element.setAttribute("draggable", false);
+		});
+	}
+}
+
 export {
 	insertTemplate,
 	initialSetLocalStorage,
@@ -100,4 +110,5 @@ export {
 	createExample,
 	getExampleIdKey,
 	getExample,
+	stopDragg,
 };
