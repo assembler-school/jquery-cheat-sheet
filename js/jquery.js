@@ -233,23 +233,75 @@ function jqueryShow() {
   });
 }
 
-function jqueryFadeIn() {}
+function jqueryFadeIn() {
+  $("#jquery p").text("CLICK TO FADE IN");
+  $("#jquery").append("<p id='fade'>FADED</p>");
+  $("#fade").hide();
 
-function jqueryFadeOut() {}
+  document.querySelector("#jquery > p").addEventListener("click", () => {
+    $("#fade").fadeIn();
+  });
+}
 
-function jqueryIterateElements() {}
+function jqueryFadeOut() {
+  $("#jquery p").text("CLICK TO FADE OUT");
+  $("#jquery").append("<p id='fade'>FADED</p>");
 
-function jqueryGetParent() {}
+  document.querySelector("#jquery > p").addEventListener("click", () => {
+    $("#fade").fadeOut();
+  });
+}
 
-function jqueryGetChildren() {}
+function jqueryIterateElements() {
+  $("#jquery").append("<h3>NEW</h3><h3>NEW</h3>");
+  $("#jquery h3").text("ITERATED").css("color", "teal");
+}
 
-function jqueryClassElements() {}
+function jqueryGetParent() {
+  console.log($("#jquery p").parent());
+}
 
-function jqueryItemId() {}
+function jqueryGetChildren() {
+  console.log($("#jquery").children());
+}
 
-function jqueryDisplayElements() {}
+function jqueryClassElements() {
+  document;
+  $("#jquery").append(
+    "<p class='jquery-class'>NEW</p><p class='jquery-class'>NEW</p>"
+  );
 
-function jqueryGetOptions() {}
+  $("#jquery .jquery-class").css("font-weight", "700");
+}
+
+function jqueryItemId() {
+  $("#jquery").append("<p id='jquery-p'>NEW</p>");
+  $("#jquery-p").css("font-weight", "700");
+}
+
+function jqueryDisplayElements() {
+  $("#jquery p").text("CLICK TO SHOW");
+  $("#jquery").append(
+    "<p class='jquery-class'>VISIBLE</p><p class='jquery-class'>VISIBLE</p>"
+  );
+  $(".jquery-class").hide();
+
+  $("#jquery > p").on("click", () => {
+    $(".jquery-class").show().css("color", "teal");
+  });
+}
+
+function jqueryGetOptions() {
+  $("#jquery").append(
+    `<select>
+    <option>JQUERY</option>
+    <option>jquery</option>
+    </select>`
+  );
+  $("#jquery select").on("change", () => {
+    $("#jquery > p").text("JQUERY SELECTOR HAS CHANGED");
+  });
+}
 
 function jqueryChangeHref() {}
 

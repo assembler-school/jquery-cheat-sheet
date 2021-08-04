@@ -275,21 +275,69 @@ function vanillaShow() {
   });
 }
 
-function vanillaFadeIn() {}
+function vanillaFadeIn() {
+  document.querySelector("#vanilla > p").textContent = "Not working on Vanilla";
+}
 
-function vanillaFadeOut() {}
+function vanillaFadeOut() {
+  document.querySelector("#vanilla > p").textContent = "Not working on Vanilla";
+}
 
-function vanillaIterateElements() {}
+function vanillaIterateElements() {
+  document.querySelector("#vanilla").appendChild(document.createElement("h3"));
+  document.querySelector("#vanilla").appendChild(document.createElement("h3"));
+  document.querySelectorAll("#vanilla h3").forEach((h3) => {
+    h3.textContent = "ITERATED";
+    h3.style.color = "teal";
+  });
+}
 
-function vanillaGetParent() {}
+function vanillaGetParent() {
+  console.log(document.querySelector("#vanilla p").parentNode);
+}
 
-function vanillaGetChildren() {}
+function vanillaGetChildren() {
+  console.log(document.querySelector("#vanilla").childNodes);
+}
 
-function vanillaClassElements() {}
+function vanillaClassElements() {
+  document
+    .querySelector("#vanilla")
+    .insertAdjacentHTML(
+      "beforeend",
+      "<p class='vanilla-class'>NEW</p><p class='vanilla-class'>NEW</p>"
+    );
+  document.querySelectorAll("#vanilla .vanilla-class").forEach((newClass) => {
+    newClass.style.fontWeight = "700";
+  });
+}
 
-function vanillaItemId() {}
+function vanillaItemId() {
+  document
+    .querySelector("#vanilla")
+    .insertAdjacentHTML("beforeend", "<p id='vanilla-p'>NEW</p>");
+  document.querySelector("#vanilla-p").style.fontWeight = "700";
+}
 
-function vanillaDisplayElements() {}
+function vanillaDisplayElements() {
+  document.querySelector("#vanilla p").textContent = "CLICK TO SHOW";
+  document
+    .querySelector("#vanilla")
+    .insertAdjacentHTML(
+      "beforeend",
+      "<p class='vanilla-class'>VISIBLE</p><p class='vanilla-class'>VISIBLE</p>"
+    );
+  document.querySelectorAll(".vanilla-class").forEach((p) => {
+    p.style.display = "none";
+  });
+
+  document.querySelector("#vanilla > p").addEventListener("click", () => {
+    document.querySelectorAll(".vanilla-class").forEach((p) => {
+      p.style.display = "block";
+      p.style.color = "teal";
+    });
+  });
+}
 
 function vanillaGetOptions() {}
 
