@@ -22,7 +22,7 @@ let listObjectsJS = [
   },
   {
     id: "2",
-    title: "Click",
+    title: "Click2",
     type: "events",
     code: `let eventSubject=document.getElementById("demo"); <br>
     eventSubject.addEventListener("click",function(){ <br>
@@ -44,16 +44,18 @@ let listObjectsJQ = [
   },
   {
     id: "1",
-    title: "The onclick Event",
+    title: "Click",
     type: "events",
-    code: `function myFunction() {
-      document.getElementById("demo").innerHTML = "Hello World";
-    }`,
+    code: `let eventSubject=document.getElementById("demo"); <br>
+    eventSubject.addEventListener("click",function(){ <br>
+      alert("YOU CLICKED ME!")
+    });
+      `,
     link: "https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onclick",
   },
   {
     id: "2",
-    title: "Click",
+    title: "Click2",
     type: "events",
     code: `let eventSubject=document.getElementById("demo"); <br>
     eventSubject.addEventListener("click",function(){ <br>
