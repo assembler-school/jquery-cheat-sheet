@@ -474,7 +474,7 @@ function selectFunction(page) {
 
 // Print the title of the selected page
 function printTitle(title) {
-  document.querySelector("#title p").textContent = title;
+  document.querySelector("#title h2").textContent = title;
 }
 
 // Join several loading layout functions in 1

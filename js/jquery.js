@@ -258,11 +258,11 @@ function jqueryIterateElements() {
 }
 
 function jqueryGetParent() {
-  console.log($("#jquery p").parent());
+  $("#jquery p").parent().css("font-weight", "bold");
 }
 
 function jqueryGetChildren() {
-  console.log($("#jquery").children());
+  $("#jquery").children("p").css("font-weight", "bold");
 }
 
 function jqueryClassElements() {
@@ -271,12 +271,12 @@ function jqueryClassElements() {
     "<p class='jquery-class'>NEW</p><p class='jquery-class'>NEW</p>"
   );
 
-  $("#jquery .jquery-class").css("font-weight", "700");
+  $("#jquery .jquery-class").css("font-weight", "bold");
 }
 
 function jqueryItemId() {
   $("#jquery").append("<p id='jquery-p'>NEW</p>");
-  $("#jquery-p").css("font-weight", "700");
+  $("#jquery-p").css("font-weight", "bold");
 }
 
 function jqueryDisplayElements() {

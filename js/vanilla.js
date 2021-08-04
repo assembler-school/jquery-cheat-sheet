@@ -293,11 +293,11 @@ function vanillaIterateElements() {
 }
 
 function vanillaGetParent() {
-  console.log(document.querySelector("#vanilla p").parentNode);
+  document.querySelector("#vanilla p").parentNode.style.fontWeight = "bold";
 }
 
 function vanillaGetChildren() {
-  console.log(document.querySelector("#vanilla").childNodes);
+  document.querySelector("#vanilla").childNodes[0].style.fontWeight = "bold";
 }
 
 function vanillaClassElements() {
@@ -308,7 +308,7 @@ function vanillaClassElements() {
       "<p class='vanilla-class'>NEW</p><p class='vanilla-class'>NEW</p>"
     );
   document.querySelectorAll("#vanilla .vanilla-class").forEach((newClass) => {
-    newClass.style.fontWeight = "700";
+    newClass.style.fontWeight = "bold";
   });
 }
 
@@ -316,7 +316,7 @@ function vanillaItemId() {
   document
     .querySelector("#vanilla")
     .insertAdjacentHTML("beforeend", "<p id='vanilla-p'>NEW</p>");
-  document.querySelector("#vanilla-p").style.fontWeight = "700";
+  document.querySelector("#vanilla-p").style.fontWeight = "bold";
 }
 
 function vanillaDisplayElements() {

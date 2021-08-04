@@ -29,6 +29,10 @@ h1 {
   border-radius: 25px;
 }
 
+h2 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
 h3 {
   font-size: 3rem;
 }

@@ -46,8 +46,9 @@ main {
   height: 50%;
 }
 
-.vanilla-code,
-.jquery-code {
+.vanilla > p,
+.jquery > p {
+  cursor: pointer;
 }
 .vanilla-code p {
   padding-left: 2rem;

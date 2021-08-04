@@ -74,8 +74,8 @@ const specificTemplate = `<template id ="specific">
     </div>
 </template>
     `;
-const commonTemplate = `<template class="commonCode" data-page="1">
-    <div id="title"><p></p></div>
+const commonTemplate = `<template class="commonCode">
+    <div id="title"><h2></h2></div>
     </template>`;
 
 export { mainTemplate, specificTemplate, commonTemplate };
