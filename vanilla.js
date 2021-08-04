@@ -2,6 +2,7 @@
 
 //When the HTML document has been loaded and you can manipulate it
 let vanillae1 = `<pre>document.addEventListener("DOMContentLoaded", function() {})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
+//function vanillae1e() {document.addEventListener("DOMContentLoaded", function (){example.appendChild(imageJS)})};
 
 //When an HTML item has been clicked
 let vanillae2 = `<pre>let vanilla = document.getElementById('vanilla')
@@ -30,27 +31,35 @@ function vanillae6e() {let vanilla = document.getElementById('vanilla'); vanilla
 //An image is loaded
 let vanillae7 = `<pre>let vanilla = document.getElementById('example'); 
 vanilla.addEventListener("load", alert("Hi by Vanilla"))</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
-function vanillae7e() {let vanilla = document.getElementById('example'); vanilla.addEventListener("load", alert("Hi by Vanilla"))};
+function vanillae7e() {let vanilla = document.getElementById('example7'); vanilla.addEventListener("load", function (){example.appendChild(imageJS)})};
 
 //let vanilla = document.getElementById('example'); vanilla.addEventListener("error", alert("Img error by Vanilla"))
 let vanillae8 = `<pre>let vanilla = document.getElementById('example'); 
 vanilla.addEventListener("error", alert("Img error by Vanilla"))</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
-function vanillae8e() {let vanilla = document.getElementById('example'); vanilla.addEventListener("error", alert("Img error by Vanilla"))};
+function vanillae8e() {let vanilla = document.getElementById('example8'); vanilla.addEventListener("error", function (){example.appendChild(imageJS)})};
 
 //Form is submitted
 let vanillae9 = `<pre>Element.addEventListener("submit", function() {})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
+function vanillae9e() {let vanilla = document.getElementById('example9'); vanilla.addEventListener("submit", function (e){e.preventDefault(); example.appendChild(imageJS)})};
+
 
 //User changes the option of a select
 let vanillae10 = `<pre>element.addEventListener("change", function() {})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
+function vanillae10e() {let vanilla = document.getElementById('example10'); vanilla.addEventListener("change", function (e){example.appendChild(imageJS)}   )};
+
 
 //Position the mouse over an element
 let vanillae11 = `<pre>element.addEventListener("mouseover", function() {})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
+function vanillae11e() {let vanilla = document.getElementById('vanilla'); vanilla.addEventListener("mouseover", ()=>{vanilla.style.backgroundColor = '#f7e018'})};
 
 //A checkbox is checked or unchecked
 let vanillae12 = `<pre>function(){if(input[type="checkbox"]:checked){alert("check")}else{alert("uncheck")}}</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/CSS/:checked"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 
+
 //A ul list item is clicked, show the item that was clicked
 let vanillae13 = `<pre>document.querySelector("ul li").addEventListener( "click", function(){$(this).show()})</pre><a class="link" target="_blank" href="https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener"><br><img class="logo" src="/assets/logoJs.png" alt="logo-JS"></a>`;
+function vanillae13e() {let vanilla = document.querySelectorAll('#ulEx li'); vanilla.forEach(lis => lis.addEventListener("click", (e)=> {e.preventDefault, alert(lis.textContent + " by Vanilla")}))};
+
 
 
 //VANILLA FUNCTIONS

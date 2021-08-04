@@ -1,3 +1,11 @@
+let imageJS = document.createElement("img");
+imageJS.src = "/assets/tickYellow.png";
+imageJS.className = "sticker";
+
+let imageJquery = document.createElement("img");
+imageJquery.src = "/assets/tickBlue.png";
+imageJquery.className = "sticker";
+
 function vanillaResult(x) {
   $("#vanilla_result").html(x);
 }
@@ -64,6 +72,8 @@ $("#e1").on("click", function () {
   $(".pointer").removeClass("blue");
   $(this).addClass("blue");
   addExample(example1);
+  vanillae1e();
+  jquerye1e();
   vanillaResult(vanillae1);
   jqueryResult(jquerye1);
 });
@@ -151,6 +161,9 @@ $("#e9").on("click", function () {
 $("#e10").on("click", function () {
   $(".pointer").removeClass("blue");
   $(this).addClass("blue");
+  addExample(example10);
+  vanillae10e();
+  jquerye10e();
   vanillaResult(vanillae10);
   jqueryResult(jquerye10);
 });
@@ -158,6 +171,9 @@ $("#e10").on("click", function () {
 $("#e11").on("click", function () {
   $(".pointer").removeClass("blue");
   $(this).addClass("blue");
+  addExample(example11);
+  vanillae11e();
+  jquerye11e();
   vanillaResult(vanillae11);
   jqueryResult(jquerye11);
 });
@@ -165,6 +181,9 @@ $("#e11").on("click", function () {
 $("#e12").on("click", function () {
   $(".pointer").removeClass("blue");
   $(this).addClass("blue");
+  addExample(example12);
+  vanillae12e();
+  jquerye12e();
   vanillaResult(vanillae12);
   jqueryResult(jquerye12);
 });
@@ -172,6 +191,9 @@ $("#e12").on("click", function () {
 $("#e13").on("click", function () {
   $(".pointer").removeClass("blue");
   $(this).addClass("blue");
+  addExample(example13);
+  vanillae13e();
+  jquerye13e();
   vanillaResult(vanillae13);
   jqueryResult(jquerye13);
 });

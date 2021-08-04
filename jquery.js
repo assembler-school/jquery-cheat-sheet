@@ -1,6 +1,7 @@
 //!---------------------------------JQUERY EVENTS----------------------------------------
 //When the HTML document has been loaded and you can manipulate it
 let jquerye1 = `<pre>$(document).ready(function(){})</pre><a class="link" target="_blank" href="https://api.jquery.com/ready/"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
+//function jquerye1e() {$(document).ready(function(){$('#jquery').add(`<p>Hi, by Jquery</p>`)})}
 
 //When an HTML item has been clicked
 let jquerye2 = `<pre>$('#jquery').on("click", function(){$('#jquery').css("background-color", "#0865a6")})</pre><a class="link" target="_blank" href="https://api.jquery.com/on/"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
@@ -24,26 +25,35 @@ function jquerye6e() {$('#jquery').on("change", function(){$('#jquery').css("bac
 
 //An image is loaded
 let jquerye7 = `<pre>$('#example').on("load", alert("Hello by Jquery"))</pre><a class="link" target="_blank" href="https://api.jquery.com/on/"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
-function jquerye7e() {$('#example').on("load", alert("Hello by Jquery"))}
+function jquerye7e() {$('#example7').on("load", function (){example.prepend(imageJquery)})}
 
 //let vanilla = document.getElementById('example'); vanilla.addEventListener("error", alert("Img error by Vanilla"))
 let jquerye8 = `<pre>$('#example').on("error", alert("Img error by Jquery")))</pre><a class="link" target="_blank" href="https://api.jquery.com/on/"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
-function jquerye8e() {$('#example').on("error", alert("Img error by Jquery"))}
+function jquerye8e() {$('#example8').on("error", function (){example.prepend(imageJquery)})}
 
 //Form is submitted
 let jquerye9 = `<pre>$(element).on( "submit", function(){})</pre><a class="link" target="_blank" href="https://api.jquery.com/on/"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
+function jquerye9e() {$('#example9').on("submit", function (){example.prepend(imageJquery)})}
+
 
 //User changes the option of a select
 let jquerye10 = `<pre>$(element).on( "change", function(){})</pre><a class="link" target="_blank" href="https://api.jquery.com/on/"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
+function jquerye10e() {$('#example10').on("change", function (){example.prepend(imageJquery)})}
+
 
 //Position the mouse over an element
 let jquerye11 = `<pre>$(element).on( "mouseover", function(){} )</pre><a class="link" target="_blank" href="https://api.jquery.com/on/"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
+function jquerye11e() {$('#jquery').on("mouseover", function(){$('#jquery').css("background-color", "#0865a6")})}
+
 
 //A checkbox is checked or unchecked
 let jquerye12 = `<pre>$("input[type=checkbox]").prop(":checked"))</pre><a class="link" target="_blank" href="https://api.jquery.com/val/#val"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
 
+
 //A ul list item is clicked, show the item that was clicked
 let jquerye13 = `<pre>$("ul li").on( "click", function(){$(this).show()})</pre><a class="link" target="_blank" href="https://api.jquery.com/ready/"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
+function jquerye13e() {$("#ulEx2 li").each(function() { $(this).on("click", ()=> {alert($(this).text()+ " by Jquery")})})}
+
 
 
 //JQUERY FUNCTIONS

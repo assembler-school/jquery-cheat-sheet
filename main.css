@@ -142,5 +142,21 @@ body{
 }
 
 .imgEx {
-  width: 20rem
+  width: 20rem;
+}
+
+.sticker {
+  width: 3.125rem;
+}
+
+.ulEx {
+  list-style-type: none;
+}
+
+.ulEx li {
+  cursor: pointer;
+}
+
+.ulEx li:hover {
+  font-weight: bold;
 }
