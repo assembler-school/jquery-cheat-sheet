@@ -26,22 +26,24 @@ html {
   transition: all 0.7s;
 }
 .col {
+  flex-direction: column;
+}
+.box {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: -webkit-fill-available;
   justify-content: space-around;
   border-radius: 3%;
-  border: solid white 2px;
+  border: solid fuchsia 2px;
   text-align: center;
   margin: 2% 1%;
   padding: 2%;
   min-height: 35vh;
   overflow-y: auto;
 }
-.col .title {
+.box .title {
   color: darkblue;
-
   text-shadow: 1px 3px fuchsia;
   min-width: 100%;
   max-height: 10vh;
@@ -54,9 +56,9 @@ html {
   justify-content: center;
 }
 .bottom {
-  display: none;
+  /*  display: none;
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateX(-100px); */
 }
 
 .events {
@@ -92,6 +94,12 @@ html {
 }
 .javaScript {
   background-color: rgba(255, 255, 255, 0.74);
+}
+.boxText {
+  height: -webkit-fill-available;
+}
+.info-JSt {
+  font-size: 1.5vw;
 }
 .jQuery {
   background-color: rgba(255, 255, 255, 0.74);
@@ -152,7 +160,7 @@ html {
   .drop-area {
     width: 93%;
   }
-  .col {
+  .box {
   }
   .item {
     font-size: 4vw;

@@ -39,16 +39,23 @@ function storageSelection(selectedIds) {
 }
 
 function findObjects(ids) {
-  let examples = [];
-  let objectsJS = [];
-  let objectsJQ = [];
+  let selectedExamples = [];
+  let selectedoOjectsJS = [];
+  let selectedObjectsJQ = [];
+  let objects = [
+    {
+      examples: selectedExamples,
+      objectsJS: selectedoOjectsJS,
+      objectsJQ: selectedObjectsJQ,
+    },
+  ];
 
   for (const id of ids) {
-    examples.push(findExamples(id));
-    objectsJS.push(findObjectsJS(id));
-    objectsJQ.push(findObjectsJQ(id));
+    selectedExamples.push(findExamples(id));
+    selectedoOjectsJS.push(findObjectsJS(id));
+    selectedObjectsJQ.push(findObjectsJQ(id));
   }
-  return examples, objectsJS, objectsJQ;
+  return objects;
 }
 
 function fillExamples(examples) {
@@ -61,11 +68,24 @@ function fillExamples(examples) {
 }
 
 function fillObjectsJS(objectsJS) {
-  let objectJSBox = document.getElementById("javaScript");
   for (const objectJS of objectsJS) {
-    let objectJSContent = document.createElement("p");
-    objectJSContent.innerHTML = objectJS.code;
-    objectJSBox.appendChild(objectJSContent);
+    let infoJS =
+      //*Template of the slide
+      `<template id=infoJS><div class=" info-JS" id="infoDiv"> 
+        <h4 id="infoTitle">${objectJS.title}</h4>
+        <code> ${objectJS.code}</code> 
+    </div></template>`;
+    let toInsertInfo = document.getElementById("textJS"); //*Select were insert template, in html
+    toInsertInfo.insertAdjacentHTML("beforeend", infoJS); //*insert only read teamplate (aka Ghost Template)
+    let contentTemplate = document.getElementById("infoJS").content; //*select the ghost template
+    let copyContent = document.importNode(contentTemplate, true); //*import ghost template as html (as html)
+    toInsertInfo.innerHTML = ""; //* delete ghost Template
+    toInsertInfo.appendChild(copyContent); ////*insert  ghost template (now in the living world!!)
+    document
+      .getElementById("infoJsButton")
+      .addEventListener("click", function () {
+        location.assign(objectJS.link);
+      });
   }
 }
 
@@ -81,13 +101,12 @@ function fillObjectsJQ(objectsJQ) {
 
 function fillInfoCamps(ids) {
   findObjects(ids);
-  fillExamples(examples);
-  fillObjectsJS(objectsJS);
-  fillObjectsJQ(objectsJQ);
+  fillObjectsJS(findObjects(ids)[findObjects(ids).length - 1].objectsJS);
+  fillObjectsJQ(findObjects(ids)[findObjects(ids).length - 1].objectsJQ);
 }
 function findExamples(id) {
-  let examples = JSON.parse(localStorage.getItem("examples"));
-  for (const example of examples) {
+  let examplesBox = JSON.parse(localStorage.getItem("examples"));
+  for (const example of examplesBox) {
     if (example.id === id) {
       return example;
     }
@@ -145,7 +164,7 @@ function dropzoneOut() {
   bottom.style.transform = "translateX(-100px)";
   bottom.style.opacity = 0;
   setTimeout(() => {
-    bottom.style.display = "none";
+    bottom.style.display = "";
     let middle = document.getElementById("middle");
     middle.style.display = "flex";
     setTimeout(() => {
