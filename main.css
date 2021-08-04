@@ -26,7 +26,7 @@ body{
 .grid__2x3  {
     display: grid; 
     grid-template-columns: 1.1fr 1.1fr; 
-    grid-template-rows: 0.2fr 1fr 0.2fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.5fr 0.2fr 1fr;
     gap: 1px 1px;
     justify-content: center;
     align-content: start;
@@ -35,13 +35,14 @@ body{
     grid-template-areas: 
       "h1_page h2vanilla"
       "mid_page resultv"
+      "mid_page example"
       "mid_page h2jquery"
       "mid_page resultj"; 
-    height: 95vh;
   }
   .resultv { grid-area: resultv; }
   .resultj { grid-area: resultj; }
   .mid_page { grid-area: mid_page; }
+  .example { grid-area: example; }
   .h1_page { grid-area: h1_page; }
   .h2vanilla { grid-area: h2vanilla; }
   .h2jquery { grid-area: h2jquery; }
@@ -122,4 +123,24 @@ body{
   align-items: center;
 }
 
+.example{
+  width: 80vh;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
 
+.buttonEx{
+  cursor: pointer;
+  text-align: center;
+}
+
+.buttonEx:hover{
+  font-weight: bold;
+}
+
+.imgEx {
+  width: 20rem
+}
