@@ -35,14 +35,12 @@ function startDragging(e) {
 
 	//Actualizar con el texto que trae el objeto con el id de la card
 	let id = getExampleIdKey()[1];
-	console.log(id);
 	let key = getExampleIdKey()[0];
-	console.log(key);
-	console.log(getExample());
+
 	if (localStorage.getItem("codeOption") === "jquery-code") {
-		updateLocalStorage("code", getExample().jquery_code);
+		updateLocalStorage("code", getExample(key, id).jquery_code);
 	} else if (localStorage.getItem("codeOption") === "js-code") {
-		updateLocalStorage("code", getExample().js_code);
+		updateLocalStorage("code", getExample(key, id).js_code);
 	}
 }
 

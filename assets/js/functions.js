@@ -82,12 +82,23 @@ function getExampleIdKey() {
 	return [key, id];
 }
 
-function getExample() {
-	let examples = localStorage.getItem(getExampleIdKey()[0]);
+function getExample(key, id) {
+	let examples = localStorage.getItem(key);
 	let examplesObjects = JSON.parse(examples);
 
 	for (const iterator of examplesObjects) {
-		if (iterator.id === getExampleIdKey()[1]) {
+		if (iterator.id === id) {
+			return iterator;
+		}
+	}
+}
+
+function getExampleTitle(key, title) {
+	let examples = localStorage.getItem(key);
+	let examplesObjects = JSON.parse(examples);
+
+	for (const iterator of examplesObjects) {
+		if (iterator.title == title) {
 			return iterator;
 		}
 	}
@@ -111,4 +122,5 @@ export {
 	getExampleIdKey,
 	getExample,
 	stopDragg,
+	getExampleTitle,
 };

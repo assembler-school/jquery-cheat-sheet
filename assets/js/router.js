@@ -1,6 +1,7 @@
 import { homepageDisplay } from "./views/homepage.js";
 import { pageDisplay } from "./views/page.js";
 import { indexDisplay } from "./views/index.js";
+import { getExample, getExampleTitle } from "./functions.js";
 
 function navigate() {
 	if (location.hash === "" || location.hash === "#") {
@@ -35,8 +36,13 @@ function goToExample() {
 	let goToString = document.getElementById("autocomplete-field").value;
 	let goToArray = goToString.split("-");
 	let type = goToArray[0];
+
 	let title = goToArray[1];
-	location.hash = "page/" + type + "/" + title;
+	let key = type + "s";
+
+	let example = getExampleTitle(key, title);
+
+	location.hash = "page/" + key + "/" + example.id;
 }
 
 export { navigate, goToHome, goToPage, goToIndex, goToExample };
