@@ -2,8 +2,8 @@ for (const item of document.getElementsByClassName("item")) {
   item.addEventListener("click", moveItem);
 }
 
-document.getElementById("beginButton").addEventListener("click", function (e) {
-  if (e.target.parentNode.lastChild.className === "item") {
+document.getElementById("beginButton").addEventListener("click", function () {
+  if (document.getElementById("dropzone").lastChild.className === "item") {
     saveSelection();
     dropzoneIn();
   }
@@ -151,20 +151,20 @@ function dropzoneIn() {
   setTimeout(() => {
     middle.style.display = "none";
   }, 1000);
-  let bottom = document.getElementById("bottom");
+  /*  let bottom = document.getElementById("bottom");
   bottom.style.display = "flex";
   setTimeout(() => {
     bottom.style.transform = "translateX(0px)";
     bottom.style.opacity = 1;
-  }, 2000);
+  }, 2000); */
 }
 
 function dropzoneOut() {
-  let bottom = document.getElementById("bottom");
+  /* let bottom = document.getElementById("bottom");
   bottom.style.transform = "translateX(-100px)";
-  bottom.style.opacity = 0;
+  bottom.style.opacity = 0; */
   setTimeout(() => {
-    bottom.style.display = "";
+    /*  bottom.style.display = ""; */
     let middle = document.getElementById("middle");
     middle.style.display = "flex";
     setTimeout(() => {

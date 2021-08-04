@@ -3,7 +3,7 @@ document.addEventListener(
   function () {
     let dropzone = document.getElementById("dropzone");
     dropzone.style.transform = "scale(1.1)";
-    dropzone.style.borderColor = "fuchsia";
+    dropzone.style.borderboxor = "fuchsia";
     dropzone.style.boxShadow = "0 0 2rem fuchsia";
   },
   false
@@ -24,7 +24,7 @@ document.addEventListener(
   function (event) {
     let dropzone = document.getElementById("dropzone");
     dropzone.style.transform = "scale(1.0)";
-    dropzone.style.borderColor = "";
+    dropzone.style.borderboxor = "";
     dropzone.style.boxShadow = "";
     event.target.style.opacity = "";
   },
@@ -42,7 +42,7 @@ document.addEventListener(
 document.addEventListener(
   "dragenter",
   function (event) {
-    if (event.target.className === "col drop-area") {
+    if (event.target.className === "box drop-area") {
       event.target.style.opacity = "0.4";
     }
   },
@@ -52,7 +52,7 @@ document.addEventListener(
 document.addEventListener(
   "dragleave",
   function (event) {
-    if (event.target.className === "col drop-area") {
+    if (event.target.className === "box drop-area") {
       event.target.style.opacity = "1";
     }
   },
@@ -63,7 +63,7 @@ document.addEventListener(
   "drop",
   function (event) {
     event.preventDefault();
-    if (event.target.className === "col drop-area") {
+    if (event.target.className === "box drop-area") {
       event.target.style.opacity = "1";
       dragged.parentNode.removeChild(dragged);
       event.target.appendChild(dragged);
