@@ -87,11 +87,56 @@ let mainHomeTemplate = `<template id="main-home-temp"><main id="home-main" class
 <div class="home-main__js-logo home-margin--margin-right"><div class="home-main__logo-chalk"><h4 class="home-main__js-title">JS</h4></div></div>
 <div class="home-main__jquery-logo home-margin--margin-right"><div class="home-main__logo-chalk"><img class="autocomplete__side-logo" src="assets/img/jquery-logo.png" alt="jquery-logo" /></div></div>
 <input
+  list="examples"
   id="autocomplete-field"
   class="autocomplete__input home-margin--margin-right"
   type="text"
   name="autocomplete-field"
 />
+<datalist id="examples">
+  <option value="Event - HTML document loaded">
+  <option value="Event - HTML item has been clicked">
+  <option value="Event - HTML item has been double clicked">
+  <option value="Event - user presses a key on the keyboard">
+  <option value="Event - user moves the mouse cursor">
+  <option value="Event - user changes a value of an text input">
+  <option value="Event - image is loaded">
+  <option value="Event - image fails to load">
+  <option value="Event - form is submitted">
+  <option value="Event - user changes the option of a select element">
+  <option value="Event - position the mouse over an element">
+  <option value="Event - checkbox is checked or unchecked">
+  <option value="Event - ul list item is clicked, show the item that was clicked">
+  <option value="Function - Animate an item after 2 seconds from the initial page load">
+  <option value="Function - Add a class to an HTML item">
+  <option value="Function - Remove a class to an HTML item">
+  <option value="Function - Toggle a class of an HTML item">
+  <option value="Function - Add a disabled attribute to an HTML button">
+  <option value="Function - Remove the disabled attribute of an HTML button">
+  <option value="Function - Set a data-src attribute to a img element">
+  <option value="Function - Remove the data-src attribute of the img element">
+  <option value="Function - Hide an HTML element on click (display: none)">
+  <option value="Function - Show an HTML element on click (display: block)">
+  <option value="Function - Fade in an HTML element using jQuery">
+  <option value="Function - Fade out an HTML element using jQuery">
+  <option value="Function - Create an HTML element with any text value">
+  <option value="Selector - Remove an HTML element with any text value">
+  <option value="Selector - Append an HTML element with any text value to a parent element">
+  <option value="Selector - Prepend an HTML element with any text value to a parent element">
+  <option value="Selector - Create and add an HTML element with any text value after another element">
+  <option value="Selector - Create and add an HTML element with any text value before another element">
+  <option value="Selector - Clone an HTML element within other element">
+  <option value="Selector - Iterate a collection of elements and apply a change of style on them">
+  <option value="Selector - Get the parent element of a certain element and change its font weight">
+  <option value="Selector - Get the collection of children of a certain element and change its font weight">
+  <option value="Selector - Get all the elements that have a certain class and change their font weight">
+  <option value="Selector - Get an item by id and change its font weight">
+  <option value="Selector - Get all the elements that have a certain class and the display property of none and change their font color and the display itself so it’s visible.">
+  <option value="Selector - Get the options of a select element that are selected (attribute selected)">
+  <option value="Selector - Change the href attribute of the first <a> element">
+  <option value="Selector - Show an alert with the value of the first <input> of the page">
+  <option value="Selector - Remove all items from a specific selector">
+</datalist>
 <!--autocomplete-->
 <button id="autocomplete-go-btn" class="autocomplete__button">
   let´s go!
