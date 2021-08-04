@@ -137,7 +137,7 @@ $("#whichOption").on("change", () => {
 
             break;
 
-        case "When User Changes Value of an Input":
+        case "When User Changes an Input":
             let inputChangedJS = $(
                 "<div><p>The Change Event also applies to the Inputs. The code would be following:</p> <p><code>element.addEventListener('change', event =>{function goes here})</code></p> <input class='input-check'/> <p>Everytime you put an input, and then Change it, the text color with change.</p></div>"
             );
@@ -271,7 +271,7 @@ $("#whichOption").on("change", () => {
 
         case "Checked or Unchecked Checkbox":
             let JSchecked = $(
-                '<div><p>To Check If a box is checked or not you can use</p><p><code>document.getElementById("checkbox").checked = true</code> (True if Checked)</p> <p><code>document.getElementById("checkbox").checked = false</code> (False if unchecked)</p><p>In order to Trigger a Click event on checkbox, we Would have to use <code>checkbox.addEventListener("click", () =>{Function goes here})</code></p></div>'
+                '<div><p>To Check If a box is checked or not you can use</p><p><code>document.getElementById("checkbox").checked = true</code> (True if Checked)</p> <p><code>document.getElementById("checkbox").checked = false</code> (False if unchecked)</p><p>In order to Trigger a Click event on checkbox, we Would have to use <code>checkbox.addEventListener("change", () =>{Function goes here})</code></p></div>'
             );
 
             jsScreen.append(JSchecked);

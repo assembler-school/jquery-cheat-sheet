@@ -345,7 +345,12 @@ $("#whichFunction").on("change", () => {
 
         case "Change font-weight of Collection of Children":
             let parentList = $(
-                "<div id='parent-list'>This is Parent of List Items <p>Para 1</p> <p>para 2</p> <p>para 3</p></div>"
+                `<div id='parent-list'>This is Parent of List Items <p> To Change the properties of Children, we'd have to iterate through them. </p> <p>Different kind of loops can be used to execute the function.</p> <p>The Collection of children is returned as an Array so the code would be </p> <p><code>let Array = document.getElementById("parent-list").children;</p>
+<p>
+                for (let i = 0; i < Array.length; i++) {
+                    Array[i].style.fontWeight = "bolder";
+                }</code></p></div>
+            `
             );
 
             let changeButton = $(
@@ -353,8 +358,15 @@ $("#whichFunction").on("change", () => {
             );
             jsFunctionsScreen.append(parentList, changeButton);
 
-            console.log($("#parent-list"));
+            $(changeButton).on("click", () => {
+                $("#parent-list").children().css("font-weight", "bolder");
+            });
 
+            let parentListJQ = $(
+                `<div><p>Jquery simplifies the whole process by skipping the iteration step and directly applying the desired properties to the children elements using <code>.children()</code> property. We can also filter the Children with this property. The code would be following:</p><p><code>$("#parent-list").children().css("font-weight", "bolder")</code></p></div>`
+            );
+
+            jqFunctionsScreen.append(parentListJQ);
         default:
             break;
     }

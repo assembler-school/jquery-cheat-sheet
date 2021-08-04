@@ -6,6 +6,11 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Cascadia";
+    src: url("CascadiaMono.woff2");
+}
+
 body {
     height: 100vh;
     width: auto;
@@ -38,7 +43,7 @@ main {
 
 code {
     color: red;
-    font-family: "Windows Command Prompt";
+    font-family: "Cascadia";
 }
 
 code:hover {
