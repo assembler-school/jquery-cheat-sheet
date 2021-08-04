@@ -55,38 +55,6 @@ let pageMainTemplate = `<template id="page-main-temp"><main id="page-main" class
 </section>
 </main></template>`;
 
-let headerPageTemplateOld = `<template id="header-page-temp"><header id="page-header" class="content__page-header">
-<div class="page-header__autocomplete">
-  <img
-    class="page-header__autocomplete__side-logo"
-    src=""
-    alt="js-vanilla-logo"
-  />
-  <input
-    id="autocomplete-field"
-    class="page-header__autocomplete__input"
-    type="text"
-    name="autocomplete-field"
-  />
-  <!--autocomplete-->
-  <button
-    id="autocomplete-go-btn"
-    class="page-header__autocomplete__button"
-  >
-  let´s go!
-  </button>
-  <!--go or submit btn-->
-  <img
-    class="page-header__autocomplete__side-logo"
-    src=""
-    alt="jquery-logo"
-  />
-</div>
-<h1 class="page-header__title">
-  <img class="page-header__logo" src="" alt="website-logo" />CheatSheet
-</h1>
-</header></template>`;
-
 let headerPageTemplate = `<template id="header-page-temp"><header id="page-header" class="content__page-header">
 <div class="page-header__autocomplete">
 <div class="home-main__js-logo home-margin--margin-right"><div class="home-main__logo-chalk"><h4 class="home-main__js-title">JS</h4></div></div>

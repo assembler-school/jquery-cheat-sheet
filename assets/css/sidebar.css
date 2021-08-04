@@ -46,13 +46,13 @@
 }
 
 .sidebar__title {
+  --title--LineHeight: var(--global--md--LineHeight);
   --title--PaddingTopBottom: var(--global--spacer--sm);
   --title--PaddingRightLeft: var(--global--spacer--md);
-  --title--LineHeight: var(--global--md--LineHeight);
-
+  
+  padding: var(--title--PaddingTopBottom) var(--title--PaddingRightLeft);
   font-family: secondChanceSk;
   font-size: var(--global--h2--title--FontSize);
-  padding: var(--title--PaddingTopBottom) var(--title--PaddingRightLeft);
   line-height: var(--title--LineHeight);
   color: var(--global--primary--yellowChalk);
 }

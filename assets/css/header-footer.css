@@ -9,7 +9,8 @@
 
 .content__home-header,
 .content__footer {
-  width: 100%;
+  width: 90%;
+  padding: var(--global--spacer--sm) var(--global--spacer--md);
 }
 
 .content__page-header {
@@ -18,35 +19,36 @@
   flex-direction: row;
   align-content: center;
   align-items: stretch;
+  padding: var(--global--spacer--sm) var(--global--spacer--md);
 }
-.page-header__title{
- 
+
+.page-header__title {
+
   font-family: 'secondChanceS';
   font-size: var(--global--h4--title--FontSize);
   color: var(--global--primary--jquery--Color);
   letter-spacing: var(--global--letter-spacing--s);
- 
+
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 
-.page-header__autocomplete{
+.page-header__autocomplete {
   width: 100%;
-    --autocomplete--PaddingTopBottom: var(--global--spacer--sm);
-    --autocomplete--PaddingRightLeft: var(--global--spacer--md);
-    padding: var(--autocomplete--PaddingTopBottom) var(--autocomplete--PaddingRightLeft);
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-
-    align-items: stretch;
+  --autocomplete--PaddingTopBottom: var(--global--spacer--sm);
+  --autocomplete--PaddingRightLeft: var(--global--spacer--md);
+  padding: var(--autocomplete--PaddingTopBottom) var(--autocomplete--PaddingRightLeft);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: stretch;
 }
 
-.page-header--noHeight{
+.page-header--noHeight {
   line-height: 0%;
 }
 
-.page-header__autocomplete__button{
+.page-header__autocomplete__button {
   line-height: inherit;
-    font-size: var(--global--h5--title--FontSize);
+  font-size: var(--global--h5--title--FontSize);
 }

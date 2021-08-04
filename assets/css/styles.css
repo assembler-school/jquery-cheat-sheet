@@ -1,8 +1,9 @@
 @import url(./common.css);
 @import url(./sidebar.css);
-@import url(./main.css);
+@import url(./homeMain.css);
 @import url(./header-footer.css);
 @import url(./global-variables.css);
+@import url(./page.css);
 
 
 @media screen and (max-width:768px) {
