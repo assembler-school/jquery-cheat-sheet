@@ -339,15 +339,61 @@ function vanillaDisplayElements() {
   });
 }
 
-function vanillaGetOptions() {}
+function vanillaGetOptions() {
+  document.querySelector("#vanilla").insertAdjacentHTML(
+    "beforeend",
+    `<select>
+    <option>VANILLA</option>
+    <option>JQUERY</option>
+    </select>`
+  );
+  document.querySelector("#vanilla select").addEventListener("change", () => {
+    document.querySelector("#vanilla > p").textContent =
+      document.querySelector("#vanilla select").value;
+  });
+}
 
-function vanillaChangeHref() {}
+function vanillaChangeHref() {
+  document.querySelector("#vanilla").insertAdjacentHTML(
+    "beforeend",
+    `<a href="before-change">VANILLA</a>
+    <a href="before-change">JQUERY</a>`
+  );
+  document
+    .querySelectorAll("#vanilla a")[0]
+    .setAttribute("href", "after-change");
+}
 
-function vanillaInputAlert() {}
+function vanillaInputAlert() {
+  document.querySelector("#vanilla p").textContent = "CLICK TO SHOW";
 
-function vanillaRemoveItems() {}
+  document
+    .querySelector("#vanilla")
+    .insertAdjacentHTML("beforeend", `<input type="text">`);
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    alert(document.querySelector("#vanilla input").value);
+  });
+}
 
-function vanillaAnimate() {}
+function vanillaRemoveItems() {
+  document.querySelector("#vanilla p").textContent = "CLICK TO SHOW";
+  document.querySelector("#vanilla").insertAdjacentHTML(
+    "beforeend",
+    `<a href="before-change">VANILLA</a>
+    <a href="before-change">JQUERY</a>`
+  );
+  document.querySelector("#vanilla p").addEventListener("click", () => {
+    document.querySelectorAll("#vanilla a").forEach((a) => {
+      a.remove();
+    });
+  });
+}
+
+function vanillaAnimate() {
+  setTimeout(() => {
+    document.querySelector("#vanilla p").style.fontSize = "2rem";
+  }, 2000);
+}
 
 export {
   vanillaClickEvent,

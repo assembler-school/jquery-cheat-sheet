@@ -45,7 +45,7 @@ const mainTemplate = `<template id ="main-template">
   <div class="nav-btn" data-page="35">Get an item by id and change its font weight</div>
   <div class="nav-btn" data-page="36">Get all the elements that have a certain class and the display property of none and change their font color and the display itself so it’s visible.</div>
   <div class="nav-btn" data-page="37">Get the options of a select element that are selected (attribute selected)</div>
-  <div class="nav-btn" data-page="38">Change the href attribute of the first a element (You have to create several a> elements)</div>
+  <div class="nav-btn" data-page="38">Change the href attribute of the first a element (You have to create several a elements)</div>
   <div class="nav-btn" data-page="39">Show an alert with the value of the first input of the page (Create an input element to test this case)</div>
   <div class="nav-btn" data-page="40">Remove all items from a specific selector</div>
   <div class="nav-btn" data-page="41">Animate an item after 2 seconds from the initial page load</div>

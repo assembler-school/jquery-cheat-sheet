@@ -157,6 +157,7 @@ function loadCommonContent() {
   common.appendChild(copyNode);
 }
 
+// Depending on the clicked element of the navigation bar, we call a different function for vanilla and jQuery
 function selectFunction(page) {
   switch (page) {
     case "1":
@@ -385,10 +386,12 @@ function selectFunction(page) {
   }
 }
 
+// Print the title of the selected page
 function printTitle(title) {
   document.querySelector("#title p").textContent = title;
 }
 
+// Loaded content
 function loadContent(dataPage) {
   loadMainPageTemplate();
   loadLayout();
@@ -398,12 +401,10 @@ function loadContent(dataPage) {
 
 // Events on webpage load
 
-/*
 document.addEventListener("DOMContentLoaded", () => {
-  alert("VANILLA LOADED");
+  console.log("VANILLA LOADED");
 });
 
 $(window).on("load", () => {
-  alert("JQUERY LOADED");
+  console.log("JQUERY LOADED");
 });
-*/

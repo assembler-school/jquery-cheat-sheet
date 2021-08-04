@@ -294,22 +294,47 @@ function jqueryDisplayElements() {
 function jqueryGetOptions() {
   $("#jquery").append(
     `<select>
+    <option>VANILLA</option>
     <option>JQUERY</option>
-    <option>jquery</option>
     </select>`
   );
   $("#jquery select").on("change", () => {
-    $("#jquery > p").text("JQUERY SELECTOR HAS CHANGED");
+    $("#jquery > p").text($("#jquery select").val());
   });
 }
 
-function jqueryChangeHref() {}
+function jqueryChangeHref() {
+  $("#jquery").append(
+    `<a href="before-change">VANILLA</a>
+    <a href="before-change">JQUERY</a>`
+  );
+  $("#jquery a").first().attr("href", "after-change");
+}
 
-function jqueryInputAlert() {}
+function jqueryInputAlert() {
+  $("#jquery p").text("CLICK TO SHOW");
 
-function jqueryRemoveItems() {}
+  $("#jquery").append(`<input type="text">`);
+  $("#jquery p").on("click", () => {
+    alert($("#jquery input").val());
+  });
+}
 
-function jqueryAnimate() {}
+function jqueryRemoveItems() {
+  $("#jquery p").text("CLICK TO SHOW");
+
+  $("#jquery").append(
+    `<a href="before-change">VANILLA</a>
+    <a href="before-change">JQUERY</a>`
+  );
+  $("#jquery p").on("click", () => {
+    $("#jquery a").remove();
+  });
+}
+
+function jqueryAnimate() {
+  $("#jquery p").animate({ "font-size": "2rem" }, 2000, "linear");
+}
 
 export {
   jqueryClickEvent,
