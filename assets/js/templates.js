@@ -55,7 +55,7 @@ let pageMainTemplate = `<template id="page-main-temp"><main id="page-main" class
 </section>
 </main></template>`;
 
-let headerPageTemplate = `<template id="header-page-temp"><header id="page-header" class="content__page-header">
+let headerPageTemplateOld = `<template id="header-page-temp"><header id="page-header" class="content__page-header">
 <div class="page-header__autocomplete">
   <img
     class="page-header__autocomplete__side-logo"
@@ -85,6 +85,25 @@ let headerPageTemplate = `<template id="header-page-temp"><header id="page-heade
 <h1 class="page-header__title">
   <img class="page-header__logo" src="" alt="website-logo" />CheatSheet
 </h1>
+</header></template>`;
+
+let headerPageTemplate = `<template id="header-page-temp"><header id="page-header" class="content__page-header">
+<div class="page-header__autocomplete">
+<div class="home-main__js-logo home-margin--margin-right"><div class="home-main__logo-chalk"><h4 class="home-main__js-title">JS</h4></div></div>
+<div class="home-main__jquery-logo home-margin--margin-right"><div class="home-main__logo-chalk"><img class="autocomplete__side-logo" src="assets/img/jquery-logo.png" alt="jquery-logo" /></div></div>
+<input
+  id="autocomplete-field"
+  class="autocomplete__input home-margin--margin-right page-header--noHeight"
+  type="text"
+  name="autocomplete-field"
+/>
+<!--autocomplete-->
+<button id="autocomplete-go-btn" class="autocomplete__button page-header--noHeight home-margin--margin-right page-header__autocomplete__button">
+  let´s go!
+</button>
+<!--go or submit btn-->
+<h4 class="page-header__title">cheatSheet</h4>
+</div>
 </header></template>`;
 
 let headerHomeTemplate = `<template id="header-home-temp">
