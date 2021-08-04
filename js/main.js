@@ -178,6 +178,10 @@ function selectFunction(page) {
 
     case "3":
       function addEvent() {
+        $(".vanilla-code p").text(
+          `document.addEventListener("keypress", function(e) {});`
+        );
+        $(".jquery-code p").text(`$(window).on("keypress", function(e) {});`);
         let v = false;
         let j = false;
 
@@ -473,7 +477,7 @@ function printTitle(title) {
   document.querySelector("#title p").textContent = title;
 }
 
-// Loaded content
+// Join several loading layout functions in 1
 function loadContent(dataPage) {
   loadMainPageTemplate();
   loadLayout();
@@ -481,12 +485,14 @@ function loadContent(dataPage) {
   selectFunction(dataPage);
 }
 
+// Change vanilla function to string to print it
 function vanillaFunctionString(func) {
   let funcString = func.toString();
   console.log(funcString);
   $(".vanilla-code p").text(funcString);
 }
 
+// Change jQuery function to string to print it
 function jqueryFunctionString(func) {
   let funcString = func.toString();
   console.log(funcString);
