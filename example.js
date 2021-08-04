@@ -1,4 +1,4 @@
-let example1 = `<div class="divEx" id="vanilla">Vanilla</div><div class="divEx" id="jquery">Jquery</div>`
+let example1 = `<div class="divEx" id="vanilla"></div><div class="divEx" id="jquery"></div>`
 
 let example2 = `<button class="buttonEx" id="vanilla">Vanilla</button><button class="buttonEx" id="jquery">Jquery</button>`
 
@@ -6,7 +6,7 @@ let example3 = `<button class="buttonEx" id="vanilla">Vanilla</button><button cl
 
 let example4 = `<textarea class="textareaEx" id="vanilla">Vanilla</textarea><textarea class="textareaEx" id="jquery">Jquery</textarea>`
 
-let example5 = `<textarea class="textareaEx" id="vanilla">Vanilla</textarea><textarea class="textareaEx" id="jquery">Jquery</textarea>`
+let example5 = `<button class="buttonEx" id="vanilla">Vanilla</button><button class="buttonEx" id="jquery">Jquery</button>`
 
 let example6 = `<input type="text" id="vanilla" name="vanilla" placeholder="Vanilla input">
 <input type="text" id="jquery" name="jquery" placeholder="Jquery input">`
@@ -23,8 +23,10 @@ let example10 = `<select name="example10" id="example10">
 <option value="Jquery">Jquery</option>
 </select>`
 
-let example11 = `<textarea class="textareaEx" id="vanilla">Vanilla</textarea><textarea class="textareaEx" id="jquery">Jquery</textarea>`
+let example11 = `<button class="buttonEx" id="vanilla">Vanilla</button><button class="buttonEx" id="jquery">Jquery</button>`
 
+let example12 = `<label for="vanilla"><input type="checkbox" id="vanilla" name="vanilla">vanilla</label>
+<label for="jquery"><input type="checkbox" id="jquery" name="jquery">jquery</label>`
 
 let example13 = `<ul class="ulEx" id="ulEx" ><li>Coffee</li><li>Tea</li><li>Milk</li></ul><ul class="ulEx" id="ulEx2" ><li>Coffee</li><li>Tea</li><li>Milk</li></ul>`
 

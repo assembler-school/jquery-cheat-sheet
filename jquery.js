@@ -1,7 +1,7 @@
 //!---------------------------------JQUERY EVENTS----------------------------------------
 //When the HTML document has been loaded and you can manipulate it
 let jquerye1 = `<pre>$(document).ready(function(){})</pre><a class="link" target="_blank" href="https://api.jquery.com/ready/"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
-//function jquerye1e() {$(document).ready(function(){$('#jquery').add(`<p>Hi, by Jquery</p>`)})}
+function jquerye1e() {$(document).ready(function(){$('#jquery').add(`<p>Hi, by Jquery</p>`)})}
 
 //When an HTML item has been clicked
 let jquerye2 = `<pre>$('#jquery').on("click", function(){$('#jquery').css("background-color", "#0865a6")})</pre><a class="link" target="_blank" href="https://api.jquery.com/on/"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
@@ -48,6 +48,8 @@ function jquerye11e() {$('#jquery').on("mouseover", function(){$('#jquery').css(
 
 //A checkbox is checked or unchecked
 let jquerye12 = `<pre>$("input[type=checkbox]").prop(":checked"))</pre><a class="link" target="_blank" href="https://api.jquery.com/val/#val"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
+function jquerye12e() {let jquery = $('#jquery'); jquery.on("click", function(){if(jquery.is(":checked")){xRed.remove(); example.append(imageJS)}else{imageJS.remove(); example.append(xRed)}})};
+
 
 
 //A ul list item is clicked, show the item that was clicked
@@ -56,7 +58,7 @@ function jquerye13e() {$("#ulEx2 li").each(function() { $(this).on("click", ()=>
 
 
 
-//JQUERY FUNCTIONS
+//!---------------------------------JQUERY FUNCTIONS----------------------------------------
 
 let jqueryf1 = `<pre>$("&lt;tag&gt;&lt;/tag&gt;").text(textContent)</pre><a class="link" target="_blank" href="https://api.jquery.com/text/#text"><br><img class="logo" src="/assets/jQuery-logo.png" alt="logo-JS"></a>`;
 

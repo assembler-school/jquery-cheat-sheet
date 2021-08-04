@@ -2,7 +2,7 @@
 
 //When the HTML document has been loaded and you can manipulate it
 let vanillae1 = `<pre>document.addEventListener("DOMContentLoaded", function() {})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
-//function vanillae1e() {document.addEventListener("DOMContentLoaded", function (){example.appendChild(imageJS)})};
+function vanillae1e() {document.addEventListener("DOMContentLoaded", function (){example.appendChild(imageJS)})};
 
 //When an HTML item has been clicked
 let vanillae2 = `<pre>let vanilla = document.getElementById('vanilla')
@@ -54,6 +54,7 @@ function vanillae11e() {let vanilla = document.getElementById('vanilla'); vanill
 
 //A checkbox is checked or unchecked
 let vanillae12 = `<pre>function(){if(input[type="checkbox"]:checked){alert("check")}else{alert("uncheck")}}</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/CSS/:checked"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
+function vanillae12e() {let vanilla = document.getElementById('vanilla'); vanilla.addEventListener("click", function(){if(vanilla.checked==true){xRed.remove(); example.insertAdjacentElement("afterbegin", imageJS)}else{imageJS.remove(); example.insertAdjacentElement("afterbegin", xRed)}})};
 
 
 //A ul list item is clicked, show the item that was clicked

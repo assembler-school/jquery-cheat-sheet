@@ -6,6 +6,10 @@ let imageJquery = document.createElement("img");
 imageJquery.src = "/assets/tickBlue.png";
 imageJquery.className = "sticker";
 
+let xRed = document.createElement("img");
+xRed.src = "/assets/xRed.png";
+xRed.className = "sticker";
+
 function vanillaResult(x) {
   $("#vanilla_result").html(x);
 }
