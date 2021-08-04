@@ -111,7 +111,7 @@ let headerPageTemplate = `<template id="header-page-temp"><header id="page-heade
   let´s go!
 </button>
 <!--go or submit btn-->
-<h4 class="page-header__title">cheatSheet</h4>
+<h4 id="page-header-logo" class="page-header__title">cheatSheet</h4>
 </div>
 </header></template>`;
 

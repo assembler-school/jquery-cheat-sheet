@@ -9,9 +9,15 @@ import {
 } from "../functions.js";
 import { wrapper } from "../main.js";
 import { dropOnArea } from "./sidebar.js";
+import { goToHome } from "../router.js";
 
 function pageDisplay() {
 	getHeader();
+
+	document
+		.getElementById("page-header-logo")
+		.addEventListener("click", goToHome);
+
 	insertTemplate(wrapper, pageMainTemplate, "page-main-temp");
 	getFooter();
 	if (document.querySelectorAll("div[draggable=true]")) {

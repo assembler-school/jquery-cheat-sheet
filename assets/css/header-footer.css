@@ -28,7 +28,7 @@
   font-size: var(--global--h4--title--FontSize);
   color: var(--global--primary--jquery--Color);
   letter-spacing: var(--global--letter-spacing--s);
-
+  cursor: pointer;
   display: flex;
   align-items: center;
 }
