@@ -107,3 +107,44 @@ let clonejQ = function jQueryCreate() {
         });
     });
 };
+
+let addClassjQ = function jQueryCreate() {
+    $(".jquery-button").on("click", () => {
+        $(".jquery-button").addClass("red-class");
+    });
+};
+
+let removeClassjQ = function jQueryCreate() {
+    $(".jquery-button").on("click", () => {
+        $(".jquery-button").addClass("red-class");
+    });
+    $(".jquery-button").on("mouseover", () => {
+        $(".jquery-button").removeClass("red-class");
+    });
+};
+
+let toggleClassjQ = function jQueryCreate() {
+    $(".jquery-button").on("click", () => {
+        $(".jquery-button").toggleClass("yellow-class");
+    });
+};
+
+let attrDisabledjQ = function jQueryCreate() {
+    $(".jquery-button").on("click", () => {
+        $(".jquery-button").attr("disabled", true);
+    });
+};
+
+let removeAttrDisabledjQ = function jQueryCreate() {
+    let containerjQ = $(
+        '<button class="remove-disabled">Click here to remove disabled</button>'
+    );
+    $(".jquery-button").on("click", () => {
+        $(".jquery-button").attr("disabled", true);
+
+        $(".jquery").append(containerjQ);
+    });
+    containerjQ.on("click", () => {
+        $(".jquery-button").attr("disabled", false);
+    });
+};

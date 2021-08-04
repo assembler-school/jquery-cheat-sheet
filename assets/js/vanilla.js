@@ -133,3 +133,45 @@ let cloneVan = function createVanilla() {
         demo.appendChild(cloneDiv);
     });
 };
+
+let addClassVan = function createVanilla() {
+    document.querySelector(".vanilla-button").addEventListener("click", () => {
+        document.querySelector(".vanilla-button").classList.add("red-class");
+    });
+};
+
+let removeClassVan = function createVanilla() {
+    document.querySelector(".vanilla-button").addEventListener("click", () => {
+        document.querySelector(".vanilla-button").classList.add("red-class");
+    });
+    document
+        .querySelector(".vanilla-button")
+        .addEventListener("mouseover", () => {
+            document.querySelector(".vanilla-button").classList.remove("red-class");
+        });
+};
+
+let toggleClassVan = function createVanilla() {
+    document.querySelector(".vanilla-button").addEventListener("click", () => {
+        document.querySelector(".vanilla-button").classList.toggle("yellow-class");
+    });
+};
+
+let attrDisabledVan = function createVanilla() {
+    document.querySelector(".vanilla-button").addEventListener("click", () => {
+        document.querySelector(".vanilla-button").setAttribute("disabled", true);
+    });
+};
+
+let removeAttrDisabledVan = function createVanilla() {
+    let containerBtns = document.createElement("button");
+    containerBtns.innerHTML = "Click me to remove disabled";
+    let cont = document.querySelector(".vanilla");
+    document.querySelector(".vanilla-button").addEventListener("click", () => {
+        document.querySelector(".vanilla-button").setAttribute("disabled", true);
+        cont.appendChild(containerBtns);
+    });
+    containerBtns.addEventListener("click", () => {
+        document.querySelector(".vanilla-button").removeAttribute("disabled");
+    });
+};

@@ -723,10 +723,10 @@ let removeClass = `<template id="ready">
       >https://www.javatpoint.com/how-to-add-a-class-to-an-element-using-javascript</a></li>
       <div class="demo">
               <div class= "vanilla">
-          <button class="vanilla-button">Vanilla!</button>
+          <button class="vanilla-button red-class">Vanilla!</button>
         </div>
         <div class="jquery">
-          <button class="jquery-button">jQuery!</button>
+          <button class="jquery-button red-class">jQuery!</button>
         </div>
                 
       </div>

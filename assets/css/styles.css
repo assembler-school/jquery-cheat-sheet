@@ -66,3 +66,17 @@ code {
     overflow: scroll;
     height: 30vh;
 }
+
+.red-class {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 0.8rem;
+}
+
+.yellow-class {
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 0.8rem;
+}

@@ -97,11 +97,16 @@ functionBtn.on("click", () => {
     eventConstructors(insertAfter, "fc-4", afterVan, afterjQ);
     eventConstructors(insertBefore, "fc-5", beforeVan, beforejQ);
     eventConstructors(cloning, "fc-6", cloneVan, clonejQ);
-    eventConstructors(addClass, "fc-7");
-    eventConstructors(removeClass, "fc-8");
-    eventConstructors(toggleClass, "fc-9");
-    eventConstructors(addDisabled, "fc-10");
-    eventConstructors(removeDisabled, "fc-11");
+    eventConstructors(addClass, "fc-7", addClassVan, addClassjQ);
+    eventConstructors(removeClass, "fc-8", removeClassVan, removeClassjQ);
+    eventConstructors(toggleClass, "fc-9", toggleClassVan, toggleClassjQ);
+    eventConstructors(addDisabled, "fc-10", attrDisabledVan, attrDisabledjQ);
+    eventConstructors(
+        removeDisabled,
+        "fc-11",
+        removeAttrDisabledVan,
+        removeAttrDisabledjQ
+    );
     eventConstructors(setDataAttr, "fc-12");
     eventConstructors(removeDataAttr, "fc-13");
     eventConstructors(hideEle, "fc-14");
