@@ -23,7 +23,7 @@
   height: inherit;
   background: none;
   width: 100%;
-  color: var(--global--primary--blueChalk);
+  color: var(--global--primary--whiteChalk);
   font-size: var(--global--code--FontSize);
   resize: none;
   border: none;
