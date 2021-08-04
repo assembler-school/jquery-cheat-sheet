@@ -57,7 +57,7 @@ function getPathForVanillaJSFile(example) {
 }
 
 function updateSandboxHeight() {
-	const sandbox = modal.querySelector("#example-sandbox");
+	const sandbox = document.querySelector("#example-sandbox").document;
 
-	sandbox;
+	sandbox.c;
 }
