@@ -22,35 +22,31 @@ let pageMainTemplate = `<template id="page-main-temp"><main id="page-main" class
 <div class="separator-hr"></div>
 <section id="text-content" class="page-main__text-content">
   <!--2 column design. Left fot js, right for jquery-->
-  <div class="text-content__col text-content__left">
-    <div class="col__head-section">
-      <img
-        class="head-section__js-logo"
-        src=""
-        alt="js-logo"
-        draggable="true"
-      />
+  <div class="text-content__col text-content__left home-margin--margin-right">
+    <div class="col__head-section" draggable="true">
+    <h5 class="page-main__js-title">JS</h5>
+    <h3 class="col__title">javaScript code</h3>
       <span class="head-section__js-code" id="js-col-code"></span>
     </div>
     <div class="separator-hr"></div>
-    <div id="js-code-col-left" class="text-content__col"></div>
+    <div id="js-code-col-left" class="text-content__col-left"></div>
   </div>
 
   <div class="text-content__col text-content__right">
-    <div class="col__head-section">
-      <img
-        class="head-section__jquery-logo"
-        src=""
-        alt="jquery-logo"
-        draggable="true"
-      />
+    <div class="col__head-section" draggable="true">
+    <img
+    class="head-section__jquery-logo"
+    src="assets/img/jquery-logo.png"
+    alt="jquery-logo"
+  />
+    <h3 class="col__title">jQuery code</h3>
       <span
         class="head-section__jquery-code"
         id="js-query-col-code"
       ></span>
     </div>
     <div class="separator-hr"></div>
-    <div id="jquery-text-col-right" class="text-content__col"></div>
+    <div id="jquery-text-col-right" class="text-content__col-right"></div>
   </div>
 </section>
 </main></template>`;

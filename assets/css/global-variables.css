@@ -61,7 +61,11 @@
   --global--primary--blueChalk: #94c0cc;
   --global--primary--whiteChalk: #f6f4f1;
   --global--primary--js--Color: #ebb93e;
+  --global--primary--js--Color--tr: #ebb93e80;
   --global--primary--jquery--Color: #80b8e9;
+  --global--primary--jquery--Color--tr:#80b8e980;
+
+  
 
   /* Text color */
   --global--dark--Color: #292e34;
