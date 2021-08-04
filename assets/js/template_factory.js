@@ -107,12 +107,17 @@ functionBtn.on("click", () => {
         removeAttrDisabledVan,
         removeAttrDisabledjQ
     );
-    eventConstructors(setDataAttr, "fc-12");
-    eventConstructors(removeDataAttr, "fc-13");
-    eventConstructors(hideEle, "fc-14");
-    eventConstructors(showEle, "fc-15");
-    eventConstructors(fadeInOut, "fc-16");
-    eventConstructors(animaTe, "fc-17");
+    eventConstructors(setDataAttr, "fc-12", attrDataVan, attrDatajQ);
+    eventConstructors(
+        removeDataAttr,
+        "fc-13",
+        removeAttrDataVan,
+        removeAttrDatajQ
+    );
+    eventConstructors(hideEle, "fc-14", hideVan, hidejQ);
+    eventConstructors(showEle, "fc-15", showVan, showjQ);
+    eventConstructors(fadeInOut, "fc-16", fadeInjQ, fadeOutjQ);
+    eventConstructors(animaTe, "fc-17", animatejQ, animateVan);
     if (destroyEventNavBar && destroySelectorNavBar) {
         destroyEventNavBar();
         destroySelectorNavBar();

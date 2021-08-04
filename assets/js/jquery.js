@@ -148,3 +148,91 @@ let removeAttrDisabledjQ = function jQueryCreate() {
         $(".jquery-button").attr("disabled", false);
     });
 };
+
+let attrDatajQ = function jQueryCreate() {
+    let containerjQ = $(".jquery");
+    let imgDat = $(
+        "<img src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='Google'/>"
+    );
+    containerjQ.append(imgDat);
+    $(".jquery-button").on("click", () => {
+        imgDat.attr(
+            "data-src",
+            "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        );
+    });
+};
+
+let removeAttrDatajQ = function jQueryCreate() {
+    let containerjQ = $(".jquery");
+    let imgDat = $(
+        "<img src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='Google'/>"
+    );
+    imgDat.attr(
+        "data-src",
+        "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    );
+    containerjQ.append(imgDat);
+    $(".jquery-button").on("click", () => {
+        imgDat.removeAttr("data-src");
+    });
+};
+
+let hidejQ = function jQueryCreate() {
+    let containerjQ = $(".jquery");
+    let imgDat = $(
+        "<img src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='Google'/>"
+    );
+    containerjQ.append(imgDat);
+    $(".jquery-button").on("click", () => {
+        imgDat.hide();
+    });
+};
+
+let showjQ = function jQueryCreate() {
+    let containerjQ = $(".jquery");
+    let imgDat = $(
+        "<img src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='Google'/>"
+    );
+    imgDat.hide();
+    containerjQ.append(imgDat);
+    $(".jquery-button").on("click", () => {
+        imgDat.show();
+    });
+};
+
+let fadeInjQ = function jQueryCreate() {
+    $(".vanilla-button").html("Click to fade in");
+    let containerjQ = $(".jquery");
+    let imgDat = $(
+        "<img src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='Google'/>"
+    );
+    imgDat.fadeOut("fast");
+    containerjQ.append(imgDat);
+    $(".vanilla-button").on("click", () => {
+        imgDat.fadeIn("slow");
+    });
+};
+
+let fadeOutjQ = function jQueryCreate() {
+    $(".jquery-button").html("Click to fade out");
+    let containerjQ = $(".jquery");
+    let imgDat = $(
+        "<img src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='Google'/>"
+    );
+    containerjQ.append(imgDat);
+    $(".jquery-button").on("click", () => {
+        imgDat.fadeOut("slow");
+    });
+};
+
+let animatejQ = function jQueryCreate() {
+    let containerjQ = $(".jquery");
+    let imgDat = $(
+        "<img src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='Google'/>"
+    );
+    containerjQ.append(imgDat);
+    $(".jquery-button").on("click", () => {
+        imgDat.delay(2000).animate({ right: "10vw" }, 5000);
+    });
+};

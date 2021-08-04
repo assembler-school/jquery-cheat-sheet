@@ -20,7 +20,6 @@ let removeVan = function createVanilla() {
         remover.setAttribute("class", "the-remover");
         document.querySelector(".vanilla").appendChild(remover);
     });
-    console.log(newDiv);
     remover.addEventListener("click", () => {
         newDiv.remove();
     });
@@ -87,7 +86,6 @@ let afterVan = function createVanilla() {
         let verysonDiv = document.createElement("div");
         verysonDiv.innerHTML = "Chuwaka, or him, so crazy these Telenovelas";
         let papa = document.querySelector(".the-father");
-        console.log(papa);
         papa.after(verysonDiv);
     });
 };
@@ -173,5 +171,88 @@ let removeAttrDisabledVan = function createVanilla() {
     });
     containerBtns.addEventListener("click", () => {
         document.querySelector(".vanilla-button").removeAttribute("disabled");
+    });
+};
+
+let attrDataVan = function createVanilla() {
+    let imgContainer = document.querySelector(".vanilla");
+    let imgData = document.createElement("img");
+    imgData.setAttribute("class", "imgDat");
+    imgContainer.appendChild(imgData);
+    imgData.setAttribute(
+        "src",
+        "https://yosoy.dev/wp-content/uploads/2012/08/hqdefault.jpg"
+    );
+    document.querySelector(".vanilla-button").addEventListener("click", () => {
+        imgData.setAttribute(
+            "data-src",
+            "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        );
+    });
+};
+
+let removeAttrDataVan = function createVanilla() {
+    let imgContainer = document.querySelector(".vanilla");
+    let imgData = document.createElement("img");
+    imgData.setAttribute("class", "imgDat");
+    imgContainer.appendChild(imgData);
+    imgData.setAttribute(
+        "src",
+        "https://yosoy.dev/wp-content/uploads/2012/08/hqdefault.jpg"
+    );
+    imgData.setAttribute(
+        "data-src",
+        "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    );
+    document.querySelector(".vanilla-button").addEventListener("click", () => {
+        imgData.removeAttribute("data-src");
+    });
+};
+
+let hideVan = function createVanilla() {
+    let imgContainer = document.querySelector(".vanilla");
+    let imgData = document.createElement("img");
+    imgData.setAttribute("class", "imgDat");
+    imgContainer.appendChild(imgData);
+    imgData.setAttribute(
+        "src",
+        "https://yosoy.dev/wp-content/uploads/2012/08/hqdefault.jpg"
+    );
+    document.querySelector(".vanilla-button").addEventListener("click", () => {
+        imgData.style.display = "none";
+    });
+};
+
+let showVan = function createVanilla() {
+    let imgContainer = document.querySelector(".vanilla");
+    let imgData = document.createElement("img");
+    imgData.setAttribute("class", "imgDat");
+    imgContainer.appendChild(imgData);
+    imgData.setAttribute(
+        "src",
+        "https://yosoy.dev/wp-content/uploads/2012/08/hqdefault.jpg"
+    );
+    imgData.style.display = "none";
+    document.querySelector(".vanilla-button").addEventListener("click", () => {
+        imgData.style.display = "block";
+    });
+};
+
+let animateVan = function createVanilla() {
+    let imgContainer = document.querySelector(".vanilla");
+    let imgData = document.createElement("img");
+    imgData.setAttribute("class", "imgDat");
+    imgContainer.appendChild(imgData);
+    imgData.setAttribute(
+        "src",
+        "https://yosoy.dev/wp-content/uploads/2012/08/hqdefault.jpg"
+    );
+    document.querySelector(".vanilla-button").addEventListener("click", () => {
+        setTimeOut(function() {
+            imgData.style.right = "20vw";
+            imgData.style.transition = "5s";
+            alert("Animation complete");
+        }, 2000);
+        timer();
     });
 };
