@@ -8,8 +8,6 @@ main {
   display: flex;
   flex-direction: column;
   width: 80%;
-  background-color: rgb(116, 116, 116);
-  color: white;
   border-radius: 25px;
 }
 
