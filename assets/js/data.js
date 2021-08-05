@@ -1,7 +1,4 @@
 export const data = {
-	pathHTML: "./assets/examples/html",
-	pathVanillaJS: "./assets/examples/js/vanilla",
-	pathJQuery: "./assets/examples/js/jquery",
 	examples: [
 		{
 			id: 1,
@@ -215,5 +212,3 @@ export const data = {
 		},
 	],
 };
-
-document.query;

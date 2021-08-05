@@ -1,4 +1,3 @@
-import { data } from "./data.js";
 import { updateModal, displayModal } from "./componentModal.js";
 import createFragmentFromTemplate from "./template.js";
 
@@ -17,6 +16,19 @@ export function insertExampleCards(exampleList) {
 	});
 }
 
+export function exampleCardEventListener(exampleList) {
+	document.addEventListener("click", function (ev) {
+		const target = elementBubbleSearch(ev.target, (element) => element.matches("[data-action~='display-modal']"));
+
+		if (target) {
+			const id = parseInt(target.dataset.id);
+			const example = exampleList.find((example) => example.id === id);
+			updateModal(example);
+			displayModal();
+		}
+	});
+}
+
 function createExampleCard(example) {
 	if (example === undefined || example === null) return console.warn("Example data object is undefined or null.");
 
@@ -27,17 +39,12 @@ function createExampleCard(example) {
 	exampleCard.querySelector(".example-card__number").textContent = example.id.toString().padStart(2, "0");
 	exampleCard.querySelector(".example-card__title").textContent = example.title;
 
-	exampleCardEventListener(exampleCard);
-
 	return exampleCardFragment;
 }
 
-function exampleCardEventListener(target) {
-	target.addEventListener("click", function (ev) {
-		const id = parseInt(this.dataset.id);
-		const example = data.examples.find((example) => example.id === id);
+function elementBubbleSearch(element, conditionCb) {
+	if (!element) return null;
+	if (conditionCb(element)) return element;
 
-		updateModal(example);
-		displayModal();
-	});
+	return elementBubbleSearch(element.parentElement, conditionCb);
 }

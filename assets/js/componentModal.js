@@ -1,5 +1,3 @@
-import { data } from "./data.js";
-
 export function updateModal(example) {
 	const modal = document.querySelector("#modal");
 
@@ -45,19 +43,19 @@ function displayCode(path, element) {
 }
 
 function getPathForHTMLFile(example) {
-	return `${data.pathHTML}/example-${example.id.toString().padStart(2, "0")}.html`;
-}
+	const pathHTML = "./assets/examples/html";
 
-function getPathForJQueryFile(example) {
-	return `${data.pathJQuery}/example-${example.id.toString().padStart(2, "0")}.js`;
+	return `${pathHTML}/example-${example.id.toString().padStart(2, "0")}.html`;
 }
 
 function getPathForVanillaJSFile(example) {
-	return `${data.pathVanillaJS}/example-${example.id.toString().padStart(2, "0")}.js`;
+	const pathVanillaJS = "./assets/examples/js/vanilla";
+
+	return `${pathVanillaJS}/example-${example.id.toString().padStart(2, "0")}.js`;
 }
 
-function updateSandboxHeight() {
-	const sandbox = document.querySelector("#example-sandbox").document;
+function getPathForJQueryFile(example) {
+	const pathJQuery = "./assets/examples/js/jquery";
 
-	sandbox.c;
+	return `${pathJQuery}/example-${example.id.toString().padStart(2, "0")}.js`;
 }
