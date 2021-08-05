@@ -24,12 +24,12 @@
     --tw-border-opacity: 1;
     padding: 0.5rem;
     cursor: pointer;
+    background-color: rgb(100, 201, 207);
 }
 
 .section__functions-list li:hover {
-    background-color: rgb(100, 201, 207);
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.5;
     transition: 0.4s ease-in-out;
 }
 

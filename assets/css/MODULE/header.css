@@ -10,4 +10,14 @@
 
 .header__title {
     text-align: center;
+    font-size: 1.5rem;
+}
+
+.header__title span {
+    --tw-text-opacity: 1;
+    color: rgba(156,163,175,var(--tw-text-opacity))
+}
+
+.header__info-logo span {
+    color: rgb(4, 0, 154);
 }

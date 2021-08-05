@@ -5,6 +5,14 @@ let liItems = document.querySelectorAll('.list__item');
 let modals = document.querySelectorAll('.modal__parent');
 let modalParent = document.querySelectorAll('.modal__parent');
 
+// Compare data-modal with id of every modal to get the right one
+liItems.forEach(item => {
+    item.addEventListener('click', event => {
+        hideModals();
+        displayModal(item.dataset.modal)
+    })
+})
+
 // Display modal
 function displayModal(id) {
     let m = document.getElementById(id);
@@ -17,14 +25,6 @@ function hideModals() {
         modal.classList.remove('visible')
     })
 }
-
-// Compare data-modal with id of every modal to get the right one
-liItems.forEach(item => {
-    item.addEventListener('click', event => {
-        hideModals();
-        displayModal(item.dataset.modal)
-    })
-})
 
 // Close modal with "x" element
 modals.forEach(item => {
