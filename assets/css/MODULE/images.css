@@ -1,0 +1,15 @@
+/**
+ * MODULE IMAGES
+ */
+
+.section__events-img,
+.section__functions-img,
+.section__selectors-img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.header__title-img {
+    width: 4rem;
+    height: 4rem;
+}
