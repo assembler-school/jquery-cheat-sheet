@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cheat Sheet</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/images/descarga.png"/>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="./assets/js/general.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header__title">
+      <h1>Cheat Sheet</h1>
+    </header>
+    <main>
+      <div class="buttons__collapse__expand">
+        <button id="expand">Expand all</button>
+        <button id="collapse">Collapse all</button>
+      </div>
+      <section class="container">
+        <article>
+          <h3 class="container__title" data-action="title-events"><img class="title__icon" src="assets/images/event.svg" alt="image-events" /><span class="title__text">Events</span></h3>
+          <ul id="list__events" class="list__events">
+            <li data-action="element" data-ex="1"><span class="numbers">1</span>HTML document has been loaded</li>
+            <li data-action="element" data-ex="2"><span class="numbers">2</span>Clicked</li>
+            <li data-action="element" data-ex="3"><span class="numbers">3</span>Double clicked</li>
+            <li data-action="element" data-ex="4"><span class="numbers">4</span>Presses a key</li>
+            <li data-action="element" data-ex="5"><span class="numbers">5</span>Moves the mouse cursor</li>
+            <li data-action="element" data-ex="6"><span class="numbers">6</span>Changes a value</li>
+            <li data-action="element" data-ex="7"><span class="numbers">7</span>Image is loaded</li>
+            <li data-action="element" data-ex="8"><span class="numbers">8</span>Image fails to load</li>
+            <li data-action="element" data-ex="9"><span class="numbers">9</span>Form is submitted</li>
+            <li data-action="element" data-ex="10"><span class="numbers">10</span>Changes the option of a select element</li>
+            <li data-action="element" data-ex="11"><span class="numbers">11</span>Position the mouse over an element</li>
+            <li data-action="element" data-ex="12"><span class="numbers">12</span>Checked or unchecked</li>
+            <li data-action="element" data-ex="13"><span class="numbers">13</span>Show the item that was clicked</li>
+          </ul>
+        </article>
+        <article>
+          <h3 class="container__title" data-action="title-functions">
+            <img class="title__icon" src="assets/images/functions.svg" alt="image-functions" /><span class="title__text">Functions and Selectors</span>
+          </h3>
+          <ul id="list__functions" class="list__functions">
+            <li data-action="element" data-ex="14"><span class="numbers">1</span>Create</li>
+            <li data-action="element" data-ex="15"><span class="numbers">2</span>Remove</li>
+            <li data-action="element" data-ex="16"><span class="numbers">3</span>Append</li>
+            <li data-action="element" data-ex="17"><span class="numbers">4</span>Prepend</li>
+            <li data-action="element" data-ex="18"><span class="numbers">5</span>Create and add (after)</li>
+            <li data-action="element" data-ex="19"><span class="numbers">6</span>Create and add (before)</li>
+            <li data-action="element" data-ex="20"><span class="numbers">7</span>Clone</li>
+            <li data-action="element" data-ex="21"><span class="numbers">8</span>Add class</li>
+            <li data-action="element" data-ex="22"><span class="numbers">9</span>Remove a class</li>
+            <li data-action="element" data-ex="23"><span class="numbers">10</span>Toggle a class</li>
+            <li data-action="element" data-ex="24"><span class="numbers">11</span>Add a disable attribute</li>
+            <li data-action="element" data-ex="25"><span class="numbers">12</span>Remove the disable attribute</li>
+            <li data-action="element" data-ex="26"><span class="numbers">13</span>Set a data-src attribute</li>
+            <li data-action="element" data-ex="27"><span class="numbers">14</span>Remove the data-src attribute</li>
+            <li data-action="element" data-ex="28"><span class="numbers">15</span>Hide</li>
+            <li data-action="element" data-ex="29"><span class="numbers">16</span>Show</li>
+            <li data-action="element" data-ex="30"><span class="numbers">17</span>Fade in</li>
+            <li data-action="element" data-ex="31"><span class="numbers">18</span>Fade out</li>
+            <li data-action="element" data-ex="32"><span class="numbers">19</span>Iterate a collection of elements</li>
+            <li data-action="element" data-ex="33"><span class="numbers">20</span>Get the parent element</li>
+            <li data-action="element" data-ex="34"><span class="numbers">21</span>Get the collection of children</li>
+            <li data-action="element" data-ex="35"><span class="numbers">22</span>Get all the elements that have a certain class</li>
+            <li data-action="element" data-ex="36"><span class="numbers">23</span>Get an item by id</li>
+            <li data-action="element" data-ex="37"><span class="numbers">24</span>Get all the elements</li>
+            <li data-action="element" data-ex="38"><span class="numbers">25</span>Get the options of a select element that are selected</li>
+            <li data-action="element" data-ex="39"><span class="numbers">26</span>Change the href attribute</li>
+            <li data-action="element" data-ex="40"><span class="numbers">27</span>Show an alert with the value of the first &lt;input&gt; of the page</li>
+            <li data-action="element" data-ex="41"><span class="numbers">28</span>Remove all items</li>
+            <li data-action="element" data-ex="42"><span class="numbers">29</span>Animate an item</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer>&copy; Copyright 2021</footer>
+
+    <div id="modal" class="modal">
+      <div class="modal__close">
+        <img class="title__icon" data-action="close" src="assets/images/close.svg" alt="image-close" />
+      </div>
+      <h3 id="title__modal" class="title__modal"></h3>
+      <div class="modal__preview">
+        <h3 class="title__preview">Preview</h3>
+        <iframe id="preview" class="iframe__preview"></iframe>
+      </div>
+      <div class="codes__javascript">
+        <div class="modal__snippet__vanilla">
+          <h3 class="title__vanilla">Snippet JS Vanilla</h3>
+          <iframe id="code__vanilla" class="code__vanilla"></iframe>
+        </div>
+        <div class="modal__snippet__jquery">
+          <h3 class="title__jquery">Snippet JQuery</h3>
+          <iframe id="code__jquery" class="code__jquery"></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

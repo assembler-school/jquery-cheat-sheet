@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("./modal.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lobster", cursive;
+}
+
+main {
+  min-height: 24rem;
+}
+
+h1 {
+  animation: lights 1s infinite;
+}
+
+button {
+  cursor: pointer;
+}
+
+#collapse:hover {
+  background-color: #2d69ee;
+}
+#expand:hover {
+  background-color: #2d69ee;
+}
+
+.display--none {
+  display: none;
+}
+
+.header__title {
+  text-align: center;
+  padding: 4rem;
+  background: #2d69ee;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 2rem;
+}
+
+.buttons__collapse__expand {
+  padding: 1rem;
+}
+
+.buttons__collapse__expand button {
+  background: blue;
+  color: white;
+  border-radius: 1%;
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  flex-grow: 1;
+  padding: 1rem;
+  min-width: 50%;
+}
+
+.container__title {
+  padding: 1rem;
+  background-color: #2d69ee;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.title__icon {
+  vertical-align: middle;
+}
+
+.title__text {
+  vertical-align: middle;
+  padding-left: 0.5rem;
+}
+
+.title__text:hover {
+  text-shadow: 0 0 3px #5900ff, 0 0 5px #0000ff;
+}
+
+ul {
+  list-style: none;
+  padding: 0.5rem;
+  /*  margin-bottom: 8rem; */
+}
+.numbers {
+  color: #2d69ee;
+  font-size: 1rem;
+  padding: 0.1rem 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.numbers > span {
+  vertical-align: middle;
+}
+
+ul li {
+  padding: 0.5rem;
+  margin: 0.3rem 0;
+  cursor: pointer;
+}
+
+ul > li:hover {
+  font-weight: bold;
+}
+
+ul li:nth-child(odd) {
+  background: #c9e6e6;
+  border-radius: 0.5rem;
+}
+
+footer {
+  /*   position: fixed; */
+  text-align: center;
+  padding: 4rem;
+  background: #2d69ee;
+  color: white;
+  /*   bottom: 0; */
+  width: 100%;
+}
+
+@keyframes lights {
+  0% {
+    text-shadow: 0 0 0;
+  }
+  100% {
+    text-shadow: 0 0 10px #5900ff, 0 0 15px #0000ff;
+  }
+}
