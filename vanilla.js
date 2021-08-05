@@ -25,7 +25,8 @@ vanilla.addEventListener("mousemove", ()=>{vanilla.style.backgroundColor = '#f7e
 function vanillae5e() {let vanilla = document.getElementById('vanilla'); vanilla.addEventListener("mousemove", ()=>{vanilla.style.backgroundColor = '#f7e018'})};
 
 //User changes a value of an text input
-let vanillae6 = `<pre>element.addEventListener("change", function() {})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
+let vanillae6 = `<pre>let vanilla = document.getElementById('vanilla'); 
+vanilla.addEventListener("change", ()=>{vanilla.style.backgroundColor = '#f7e018'})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 function vanillae6e() {let vanilla = document.getElementById('vanilla'); vanilla.addEventListener("change", ()=>{vanilla.style.backgroundColor = '#f7e018'})};
 
 //An image is loaded
@@ -39,32 +40,40 @@ vanilla.addEventListener("error", alert("Img error by Vanilla"))</pre><a class="
 function vanillae8e() {let vanilla = document.getElementById('example8'); vanilla.addEventListener("error", function (){example.appendChild(imageJS)})};
 
 //Form is submitted
-let vanillae9 = `<pre>Element.addEventListener("submit", function() {})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
+let vanillae9 = `<pre>let vanilla = document.getElementById('example9'); 
+vanilla.addEventListener("submit", function (e){e.preventDefault(); example.appendChild(imageJS)})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 function vanillae9e() {let vanilla = document.getElementById('example9'); vanilla.addEventListener("submit", function (e){e.preventDefault(); example.appendChild(imageJS)})};
 
 
 //User changes the option of a select
-let vanillae10 = `<pre>element.addEventListener("change", function() {})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
-function vanillae10e() {let vanilla = document.getElementById('example10'); vanilla.addEventListener("change", function (e){example.appendChild(imageJS)}   )};
+let vanillae10 = `<pre>let vanilla = document.getElementById('example10'); 
+vanilla.addEventListener("change", function (e){example.appendChild(imageJS)})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
+function vanillae10e() {let vanilla = document.getElementById('example10'); vanilla.addEventListener("change", function (e){example.appendChild(imageJS)})};
 
 
 //Position the mouse over an element
-let vanillae11 = `<pre>element.addEventListener("mouseover", function() {})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
+let vanillae11 = `<pre>let vanilla = document.getElementById('vanilla'); 
+vanilla.addEventListener("mouseover", ()=>{vanilla.style.backgroundColor = '#f7e018'})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 function vanillae11e() {let vanilla = document.getElementById('vanilla'); vanilla.addEventListener("mouseover", ()=>{vanilla.style.backgroundColor = '#f7e018'})};
 
 //A checkbox is checked or unchecked
-let vanillae12 = `<pre>function(){if(input[type="checkbox"]:checked){alert("check")}else{alert("uncheck")}}</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/CSS/:checked"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
+let vanillae12 = `<pre>let vanilla = document.getElementById('vanilla'); 
+    vanilla.addEventListener("click", function(){if(vanilla.checked==true){
+    xRed.remove(); example.insertAdjacentElement("afterbegin", imageJS)}else{imageJS.remove();
+        example.insertAdjacentElement("afterbegin", xRed)}})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/CSS/:checked"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 function vanillae12e() {let vanilla = document.getElementById('vanilla'); vanilla.addEventListener("click", function(){if(vanilla.checked==true){xRed.remove(); example.insertAdjacentElement("afterbegin", imageJS)}else{imageJS.remove(); example.insertAdjacentElement("afterbegin", xRed)}})};
 
 
 //A ul list item is clicked, show the item that was clicked
-let vanillae13 = `<pre>document.querySelector("ul li").addEventListener( "click", function(){$(this).show()})</pre><a class="link" target="_blank" href="https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener"><br><img class="logo" src="/assets/logoJs.png" alt="logo-JS"></a>`;
+let vanillae13 = `<pre>let vanilla = document.querySelectorAll('#ulEx li'); 
+vanilla.forEach(lis => lis.addEventListener("click", (e)=>{
+    e.preventDefault, alert(lis.textContent + " by Vanilla")}))</pre><a class="link" target="_blank" href="https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener"><br><img class="logo" src="/assets/logoJs.png" alt="logo-JS"></a>`;
 function vanillae13e() {let vanilla = document.querySelectorAll('#ulEx li'); vanilla.forEach(lis => lis.addEventListener("click", (e)=> {e.preventDefault, alert(lis.textContent + " by Vanilla")}))};
 
 
 
 //VANILLA FUNCTIONS
-
+//Create an HTML element with any text value
 let vanillaf1 = `<pre>document.createElement(tagElement).textContent(content)</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/es/docs/Web/API/Document/createElement"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 
 let vanillaf2 = `<pre>element.remove()</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/Element/remove"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
@@ -100,15 +109,16 @@ let vanillas1 = `<pre>element.style.display = "none"</pre><a class="link" target
 
 let vanillas2 = `<pre>element.style.display = "block"</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 
-let vanillas3 = `;`;
+let vanillas3 = `<pre>Click Logo</pre><a class="link" target="_blank" href="https://codepen.io/gabrieleromanato/pen/frIwl"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 
-let vanillas4 = `;`;
+let vanillas4 = `<pre>Click Logo</pre><a class="link" target="_blank" href="https://codepen.io/gabrieleromanato/pen/frIwl"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 
 let vanillas5 = `<pre>array.forEach(function(){element.style.property = "value"}</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 
 let vanillas6 = `<pre>element.parentElement.style.fontWeight = "bold"</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 
-let vanillas7 = `;`;
+let vanillas7 = `<pre>let parent = document.querySelector (“ul”); let offspring = parent.childNodes;
+offspring.forEach( (i =>{offspring[i].style.fontWeight})); = “light”;</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 
 let vanillas8 = `<pre>document.querySelectorAll(className).forEach(i =&gt; {i.style.fontWeight = "bold"})</pre><a class="link" target="_blank"  href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors"><br><img class="logo" src="/assets/logoJS.png" alt="logo-JS"></a>`;
 

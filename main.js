@@ -1,3 +1,4 @@
+//?-----------------------------IMAGES------------------------------
 let imageJS = document.createElement("img");
 imageJS.src = "/assets/tickYellow.png";
 imageJS.className = "sticker";
@@ -10,6 +11,60 @@ let xRed = document.createElement("img");
 xRed.src = "/assets/xRed.png";
 xRed.className = "sticker";
 
+
+
+//?---------------------------------BUTTONS LIST LISTENERS-----------------------
+$("#button_events").on("click", function () {
+  $(".p_events").toggle();
+  $(".p_functions").hide();
+  $(".p_selectors").hide();
+  addExample("")
+});
+
+$("#button_functions").on("click", function () {
+  $(".p_functions").toggle();
+  $(".p_events").hide();
+  $(".p_selectors").hide();
+  addExample("")
+});
+
+$("#button_selectors").on("click", function () {
+  $(".p_selectors").toggle();
+  $(".p_events").hide();
+  $(".p_functions").hide();
+  addExample("")
+});
+
+//!Prueba para hacer una función que añada
+// function addResult(id, param) {
+  
+  //   document.getElementById(`"#${id}"`).addEventListener("click", function () {
+    //     vanillaResult("vanilla" + param);
+    //     jqueryResult("jquery" + param);
+    //   });
+    // }
+    // function listClickedColor(){
+      //   $(".pointer").removeClass("blue");
+      //   $(this).addClass("blue");
+      // }
+
+      
+      //  function addResult(id, param1, param2){
+        //    $(id).on("click", function () {
+          //     $(".pointer").removeClass("blue");
+          //     $(this).addClass("blue");
+          //     console.log($(id));
+          //     $("#vanilla_result").html(param1);
+          //     $("#jquery_result").html(param2);
+          //    });
+          //   }
+          
+          // for (let index = 0; index < 43; index++) {
+            //   let indextring = 2.toString();
+            //   addResult("#e" + 2 ,vanillae + 2, jquerye + 2)
+            // }
+            
+//?--------------------------------FUNTIONS------------------------------
 function vanillaResult(x) {
   $("#vanilla_result").html(x);
 }
@@ -21,60 +76,12 @@ function jqueryResult(y) {
 function addExample(z) {
   $("#example").html(z);
 }
-
-$("#button_events").on("click", function () {
-  $(".p_events").toggle();
-  $(".p_functions").hide();
-  $(".p_selectors").hide();
-});
-
-$("#button_functions").on("click", function () {
-  $(".p_functions").toggle();
-  $(".p_events").hide();
-  $(".p_selectors").hide();
-});
-
-$("#button_selectors").on("click", function () {
-  $(".p_selectors").toggle();
-  $(".p_events").hide();
-  $(".p_functions").hide();
-});
-
-//!Prueba para hacer una función que añada
-// function addResult(id, param) {
+            
   
-//   document.getElementById(`"#${id}"`).addEventListener("click", function () {
-//     vanillaResult("vanilla" + param);
-//     jqueryResult("jquery" + param);
-//   });
-// }
-// function listClickedColor(){
-//   $(".pointer").removeClass("blue");
-//   $(this).addClass("blue");
-// }
-
-
-//  function addResult(id, param1, param2){
-//    $(id).on("click", function () {
-//     $(".pointer").removeClass("blue");
-//     $(this).addClass("blue");
-//     console.log($(id));
-//     $("#vanilla_result").html(param1);
-//     $("#jquery_result").html(param2);
-//    });
-//   }
-
-// for (let index = 0; index < 43; index++) {
-//   let indextring = 2.toString();
-//   addResult("#e" + 2 ,vanillae + 2, jquerye + 2)
-// }
-
-
-
-//EVENTS
+//!----------------------------!EVENTS--------------------------------------
 $("#e1").on("click", function () {
-  $(".pointer").removeClass("blue");
-  $(this).addClass("blue");
+    $(".pointer").removeClass("blue");
+    $(this).addClass("blue");
   addExample(example1);
   vanillae1e();
   jquerye1e();
@@ -202,7 +209,7 @@ $("#e13").on("click", function () {
   jqueryResult(jquerye13);
 });
 
-//FUNCTIONS
+//!----------------------------!FUNCTIONS--------------------------------------
 $("#f1").on("click", function () {
   $(".pointer").removeClass("blue");
   $(this).addClass("blue");
@@ -301,7 +308,7 @@ $("#f14").on("click", function () {
   jqueryResult(jqueryf14);
 });
 
-//FUNCTIONS
+//!----------------------------!SELECTORS--------------------------------------
 $("#s1").on("click", function () {
   $(".pointer").removeClass("blue");
   $(this).addClass("blue");

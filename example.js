@@ -1,3 +1,5 @@
+//!----------------------------!HTML EXAMPLES--------------------------------------
+
 let example1 = `<div class="divEx" id="vanilla"></div><div class="divEx" id="jquery"></div>`
 
 let example2 = `<button class="buttonEx" id="vanilla">Vanilla</button><button class="buttonEx" id="jquery">Jquery</button>`
@@ -30,3 +32,5 @@ let example12 = `<label for="vanilla"><input type="checkbox" id="vanilla" name="
 
 let example13 = `<ul class="ulEx" id="ulEx" ><li>Coffee</li><li>Tea</li><li>Milk</li></ul><ul class="ulEx" id="ulEx2" ><li>Coffee</li><li>Tea</li><li>Milk</li></ul>`
 
+
+//let example1f = `<div class="divEx" id="vanilla"></div><div class="divEx" id="jquery"></div>`
