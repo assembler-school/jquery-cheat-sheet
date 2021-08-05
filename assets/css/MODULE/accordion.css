@@ -1,0 +1,79 @@
+/**
+ * LAYOUT - ACCORDION
+ */
+
+/* Accordion styles */
+.accordion {
+  padding: 3rem 1rem 3rem 2.5rem;
+  overflow: hidden;
+}
+
+.accordion__tab {
+  width: 100%;
+  overflow: hidden;
+}
+
+.accordion__input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.accordion__label {
+  display: flex;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0;
+  margin-bottom: 1.6rem;
+  text-transform: capitalize;
+}
+
+/* Icon */
+.accordion__label:hover {
+  background: darken(#2c3e50, 10%);
+}
+
+.accordion__label::before {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all .2s;
+  margin-right: 0.5rem;
+}
+
+.accordion__content {
+  height: 0;
+  max-height: 0;
+  padding: 0 1.2rem;
+  color: #2c3e50;
+  transition: all .2s;
+}
+
+.accordion__close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  font-size: 0.75rem;
+  background: #2c3e50;
+  cursor: pointer;
+}
+
+/* // :checked */
+input:checked + .accordion__label {
+  background: darken(#2c3e50, 10%);
+}
+
+input:checked + .accordion__label:before {
+  transform: rotate(90deg);
+}
+
+input:checked ~ .accordion__content {
+  height: 100%;
+  max-height: 100vh;
+  /* padding: 0 0 1.6rem; */
+  margin-bottom: 0.6rem;
+}
+
