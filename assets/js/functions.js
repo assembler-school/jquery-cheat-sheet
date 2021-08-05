@@ -118,7 +118,7 @@ function stopDragg() {
 
 function enterGoTo(e) {
 	if (e.key === "Enter") {
-		e.preventDefault();
+		//e.preventDefault();
 		e.stopPropagation();
 		goToExample(e);
 	}
