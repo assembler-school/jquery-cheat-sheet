@@ -1,0 +1,40 @@
+.button {
+  display: block;
+  max-width: 10rem;
+  width: 100%;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: transparent;
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+}
+
+.button:disabled {
+  background-color: var(--color-grey);
+  border: 2px solid var(--color-grey);
+  color: var(--color-secondary);
+}
+
+.button--close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button--close:hover {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
