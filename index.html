@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jquery Cheat Sheet</title>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+  <script defer src="assets/js/index.js"></script>
+
+  <script defer src="assets/js/jquery/events.js"></script>
+  <script defer src="assets/js/vanilla/events.js"></script>
+
+  <script defer src="assets/js/jquery/functions.js"></script>
+  <script defer src="assets/js/vanilla/functions.js"></script>
+
+  <script defer src="assets/js/jquery/selectors.js"></script>
+  <script defer src="assets/js/vanilla/selectors.js"></script>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+</head>
+<body>
+    <main>
+      <h1 id="title-page" class="text-center" hidden>Jquery Cheat Sheet</h1>
+      <section id="content" class="content">
+
+        <div id="events">
+          <h2>Handler Events</h2>
+
+          <button class="accordion">HTML document loaded</button>
+          <div class="panel">
+            <div class="jquery-div">
+                <p>jQuery</p>
+                <code>
+                  $( document ).ready(function() {
+                      alert( "ready!" );
+                  });
+                </code>
+                <div class="example">
+                  <button id="example-jq-0">Try me!</button>
+                </div>
+              </div>
+              <div class="vanilla-div">
+                <p>Vanilla JS</p>
+                <code>
+                  document.addEventListener("DOMContentLoaded", function() {
+                    alert( "ready!" );
+                  })
+                </code>
+                <div class="example">
+                  <button id="example-va-0">Try me!</button>
+                </div>
+              </div>
+          </div>
+
+          <button class="accordion">Element on click</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-1').on('click', function(event) {
+                  alert('Hello from jQuery')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-1">Try me!</button>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-1').addEventListener('click', function(event) {
+                  alert('Hello from vanilla!')
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-1">Try me!</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Element on double click</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-1').on('click', function(event) {
+                  alert('Hello from jQuery')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-2">Try me!</button>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-1').addEventListener('click', function(event) {
+                  alert('Hello from vanilla!')
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-2">Try me!</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Keyboard on key down</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $(document).on('keydown', event => {
+                  keyName = event.key
+                })
+              </code>
+
+              <div class="example">
+                  <p id="example-jq-3">Press any keyboard key</p>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.addEventListener('keydown', event => {
+                  keyName = event.key
+                })
+              </code>
+
+              <div class="example">
+                <p id="example-va-3">Press any keyboard key</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Mouse cursor moving</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-4').on('mousemove', function(event) {
+                  $('#result-jq-4').text(`event.pageX: ${event.pageX}, event.pageY: ${event.pageY}`)
+                })
+              </code>
+
+              <div class="example">
+                  Move the mouse inside the box
+                  <div id="example-jq-4" class="box"></div>
+                  <div id="result-jq-4"></div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-jq-4').addEventListener('mousemove', function(event) {
+                  document.getElementById('result-jq-4').innerHTML = `event.pageX: ${event.pageX}, event.pageY: ${event.pageY}`
+                })
+              </code>
+
+              <div class="example">
+                Move the mouse inside the box
+                <div id="example-va-4"></div>
+                <div id="result-va-4"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Input on change</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-5').on('change', function(event) {
+                  $('#result-jq-5').text($(this).val())
+                })
+              </code>
+
+              <div class="example">
+                  Write anything:
+                  <input type="text" id="example-jq-5">
+                  <div id="result-jq-5"></div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-5').addEventListener('change', function(event) {
+                  document.getElementById('result-va-5').innerHTML = `${event.target.value}`
+                })
+              </code>
+
+              <div class="example">
+                Write anything:
+                <input type="text" id="example-va-5">
+                <div id="result-va-5"></div>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Image on load</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-6').on('load', function(event) {
+                  $('#result-jq-6').text('Image loaded!')
+                })
+              </code>
+
+              <div class="example">
+                  <img alt="just a test image" src="https://via.placeholder.com/150" id="example-jq-6">
+                  <span id="result-jq-6"></span>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-6').addEventListener('load', function(event) {
+                  document.getElementById('result-va-6').innerHTML = 'Image loaded!';
+                })
+              </code>
+
+              <div class="example">
+                <img alt="just a test image" src="https://via.placeholder.com/150" id="example-va-6">
+                <span id="result-va-6"></span>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Image on load fail</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-7').on('error', function(response, status) {
+                  $('#result-jq-7').text('Image not found!')
+                })
+              </code>
+
+              <div class="example">
+                  <img alt="just a test image" src="empty" id="example-jq-7">
+                  <span id="result-jq-7"></span>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-7').addEventListener('error', function(event) {
+                  document.getElementById('result-va-7').innerHTML = 'Image not found!';
+                })
+              </code>
+
+              <div class="example">
+                <img alt="just a test image" src="empty" id="example-va-7">
+                <span id="result-va-7"></span>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Form on submit</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-8').on('submit', function(event){
+                  event.preventDefault()
+                  alert('Form submitted!')
+                })
+              </code>
+
+              <div class="example">
+                  <form id="example-jq-8">
+                    <input type="submit">
+                  </form>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-7').addEventListener('submit', function(event) {
+                  event.preventDefault()
+                  alert('Form submitted!')
+                });
+              </code>
+
+              <div class="example">
+                <form id="example-va-8">
+                  <input type="submit">
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Select option on change</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-9').on('change', function(event){
+                  $('#result-jq-9').text($(this).val())
+                })
+              </code>
+
+              <div class="example">
+                  <select id="example-jq-9" name="select">
+                    <option value="value1" selected>Value 1</option>
+                    <option value="value2">Value 2</option>
+                    <option value="value3">Value 3</option>
+                  </select>
+                  <span id="result-jq-9"></span>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-9').addEventListener('change', function(event) {
+                  document.getElementById('result-va-9').innerHTML = `${event.target.value}`
+                })
+              </code>
+
+              <div class="example">
+                <select id="example-va-9" name="select">
+                  <option value="value1" selected>Value 1</option>
+                  <option value="value2">Value 2</option>
+                  <option value="value3">Value 3</option>
+                </select>
+                <span id="result-va-9"></span>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Mouse over an element</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-10').on('mouseenter', function(event){
+                  $(this).css({"cursor": "grabbing"})
+                })
+              </code>
+
+              <div class="example">
+                  <p>Move the mouse inside the box</p>
+                  <div id="example-jq-10" class="box"></div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-10').addEventListener('mouseenter', function(event) {
+                  this.style.cursor = 'grabbing'
+                })
+              </code>
+
+              <div class="example">
+                <p>Move the mouse inside the box</p>
+                <div id="example-va-10" class="box"></div>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Input checked = true/false</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-11').on('change', function(event){
+                  let checked = $(this).prop('checked')
+                  $('#result-jq-11').text(checked)
+                })
+              </code>
+
+              <div class="example">
+                  <input type="checkbox" id="example-jq-11">
+                  <span id="result-jq-11"></span>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-11').addEventListener('change', function(event) {
+                  document.getElementById('result-va-11').innerHTML = this.checked
+                })
+              </code>
+
+              <div class="example">
+                <input type="checkbox" id="example-va-11">
+                <span id="result-va-11"></span>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Get child element on parent click</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-12').on('click', function(event) {
+                  let child = event.target
+                  $('#result-jq-12').text(child.textContent)
+                })
+              </code>
+
+              <div class="example">
+                  <ul id="example-jq-12">
+                    <li>First li</li>
+                    <li>Second li</li>
+                    <li>Third li</li>  
+                  </ul>
+                  <span id="result-jq-12"></span>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-11').addEventListener('change', function(event) {
+                  document.getElementById('result-va-11').innerHTML = this.checked
+                })
+              </code>
+
+              <div class="example">
+                <ul id="example-va-12">
+                  <li>First li</li>
+                  <li>Second li</li>
+                  <li>Third li</li>  
+                </ul>
+                <span id="result-va-12"></span>
+              </div>
+            </div>
+          </div>
+
+    
+        </div>
+
+        <div id="functions">
+          <h2>Functions</h2>
+          
+
+          <button class="accordion">Create HTML element</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-13').on('click', function() {
+                  let newElm = $('&lt;p&gt;&lt;/p&gt;')
+                  newElm.text('P tag created')
+                  $('#result-jq-13').append(newElm)
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-13">Create</button>
+                  <span id="result-jq-13"></span>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-13').addEventListener('click', function(){
+                  let newElm = document.createElement('p')
+                  newElm.textContent = 'P tag created'
+                  document.getElementById('result-va-13').insertAdjacentElement('afterend', newElm)
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-13">Create</button>
+                <span id="result-va-13"></span>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Remove HTML element</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-14').on('click', function() {
+                  $(this).remove()
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-14">Remove me!</button>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-14').addEventListener('click', function(){
+                  this.remove()
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-14">Remove me!</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Append HTML element</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-15').on('click', function() {
+                  $('#example-jq-15').append('&lt;p&gt;P tag created&lt;/p&gt;')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-15">Append</button>
+                  <div id="result-jq-15">div</div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-15').addEventListener('click', function(){
+                  document.getElementById('result-va-15').insertAdjacentHTML( "beforeend", '&lt;p&gt;P tag created&lt;/p&gt;')
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-15">Append</button>
+                <div id="result-va-15">div</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Prepend HTML element</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-15').on('click', function() {
+                  $('#example-jq-15').append('&lt;p&gt;P tag created&lt;/p&gt;')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-16">Prepend</button>
+                  <div id="result-jq-16">div</div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-15').addEventListener('click', function(){
+                  document.getElementById('result-va-15').insertAdjacentHTML( "beforeend", '&lt;p&gt;P tag created&lt;/p&gt;')
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-16">Prepend</button>
+                <div id="result-va-16">div</div>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Create and add after</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-17').on('click', function() {
+                  $('#example-jq-17').after('&lt;p&gt;P tag created&lt;/p&gt;')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-17">Add after</button>
+                  <div id="result-jq-17">div</div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-17').addEventListener('click', function(){
+                  document.getElementById('result-va-17').insertAdjacentHTML( "afterend", '&lt;p&gt;P tag created&lt;/p&gt;')
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-17">Add after</button>
+                <div id="result-va-17">div</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Create and add before</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-18').on('click', function() {
+                  $('#example-jq-18').before('&lt;p&gt;P tag created&lt;/p&gt;')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-18">Add before</button>
+                  <div id="result-jq-18">div</div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-18').addEventListener('click', function(){
+                  document.getElementById('result-va-18').insertAdjacentHTML( "beforebegin", '&lt;p&gt;P tag created&lt;/p&gt;')
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-18">Add before</button>
+                <div id="result-va-18">div</div>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Clone element</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-19').on('click', function() {
+                  let clone = $('#result-jq-19').clone()
+                  $('#result-jq-19').after(clone)
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-19">clone</button>
+                  <div id="result-jq-19">div</div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-19').addEventListener('click', function(){
+                  let clone = document.getElementById('result-va-19').cloneNode(true) 
+                  document.getElementById('result-va-19').insertAdjacentElement( "afterend", clone)
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-19">clone</button>
+                <div id="result-va-19">div</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Add class</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-20').on('click', function() {
+                  $('#result-jq-20').addClass('red')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-20">add class</button>
+                  <div id="result-jq-20" class="box"></div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-20').addEventListener('click', function(){ 
+                  document.getElementById('result-va-20').classList.add('red')
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-20">add class</button>
+                <div id="result-va-20" class="box"></div>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Remove class</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-21').on('click', function() {
+                  $('#result-jq-21').removeClass('red')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-21">remove class</button>
+                  <div id="result-jq-21" class="box red"></div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-21').addEventListener('click', function(){ 
+                  document.getElementById('result-va-21').classList.remove('red')
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-21">remove class</button>
+                <div id="result-va-21" class="box red"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Toggle class</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-21').on('click', function() {
+                  $('#result-jq-21').removeClass('red')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-22">Toggle class</button>
+                  <div id="result-jq-22" class="box"></div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-21').addEventListener('click', function(){ 
+                  document.getElementById('result-va-21').classList.remove('red')
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-22">Toggle class</button>
+                <div id="result-va-22" class="box"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Add disabled attribute</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-23').on('click', function() {
+                  $(this).attr('disabled', true)
+                  $(this).text('😥')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-23">Make me disable</button>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-23').addEventListener('click', function(){ 
+                  this.setAttribute('disabled', true)
+                  this.textContent = '😥'
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-23">Make me disable</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Remove disabled attribute</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-24').on('click', function() {
+                  $('#result-jq-24').attr('disabled', false)
+                  $('#result-jq-24').text('😀')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-24">Make him able</button>
+                  <button id="result-jq-24" disabled="true">😥</button>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-24').addEventListener('click', function(){ 
+                  document.getElementById('result-va-24').removeAttribute('disabled')
+                  document.getElementById('result-va-24').textContent = '😀'
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-24">Make him able</button>
+                <button id="result-va-24" disabled="true">😥</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Set a data-src attribute</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-25').on('click', function() {
+                  $('#result-jq-25').data('src', 'This is the value of data src')
+                  $('#result-jq-25').after($('#result-jq-25').data('src'))
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-25">Set data-src</button>
+                  <img alt="just a test image" id="result-jq-25" src="https://via.placeholder.com/150">
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-24').addEventListener('click', function(){ 
+                  document.getElementById('result-va-24').removeAttribute('disabled')
+                  document.getElementById('result-va-24').textContent = '😀'
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-25">Set data-src</button>
+                <img alt="just a test image" id="result-va-25" src="https://via.placeholder.com/150">
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Remove data-src attribute</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-26').on('click', function() {
+                  $('#result-jq-26').removeAttr('data-src')
+                  $('#result-jq-26').after('Data removed')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-26">Remove data-src</button>
+                  <img alt="just a test image" id="result-jq-26" src="https://via.placeholder.com/150" data-src="This is the data-src of the img">
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-24').addEventListener('click', function(){ 
+                  document.getElementById('result-va-24').removeAttribute('disabled')
+                  document.getElementById('result-va-24').textContent = '😀'
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-26">Remove data-src</button>
+                <img alt="just a test image" id="result-va-26" src="https://via.placeholder.com/150" data-src="This is the data-src of the img">
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Fade in an element</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-27').on('click', function() {
+                  $('#result-jq-27').fadeIn()
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-27">Fade in</button>
+                  <div class="box" id="result-jq-27" style="display: none;"></div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-27').addEventListener('click', function(){ 
+                  let elm = document.getElementById('result-va-27')
+                  elm.style.display = 'block'
+                  elm.style.transition = 'opacity 0.5s'
+                  elm.style.opacity = '0'
+                  setTimeout(() => {
+                    elm.style.opacity = '1'
+                  }, 250)
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-27">Fade in</button>
+                <div class="box" id="result-va-27" style="display: none;"></div>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Fade out an element</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-28').on('click', function() {
+                  $('#result-jq-28').fadeOut()
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-28">Fade out</button>
+                  <div class="box" id="result-jq-28"></div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-28').addEventListener('click', function(){ 
+                  let elm = document.getElementById('result-va-28')
+                  elm.style.transition = 'opacity 0.25s'
+                  elm.style.opacity = '1'
+                  elm.style.opacity = '0'
+                  setTimeout(() => {
+                    elm.style.display = 'none'
+                  }, 250)
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-28">Fade out</button>
+                <div class="box" id="result-va-28"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="selectors">
+          <h2>Selectors</h2>
+          <button class="accordion">Iterate a collection of elements</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-29').on('click', function(){
+                  $('#result-jq-29 > p').each(function() {
+                    $(this).css({"color": "red"})
+                  })
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-29">Change styles</button>
+                  <div id="result-jq-29">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-29').addEventListener('click', function(){
+                  document.querySelectorAll('#result-va-29 > p').forEach(elm => {
+                    elm.style.color = 'red'
+                  })
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-29">Fade out</button>
+                <div id="result-va-29">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Get parent element</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-30').on('click', function(){
+                  $('#result-jq-30').parent().css({"font-weight": "bold"})
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-30">Change parent style</button>
+                  <span> This is the parent element
+                    <p id="result-jq-30">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </span>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-30').addEventListener('click', function(){
+                  document.getElementById('result-va-30').parentElement.style.fontWeight = 'bold'
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-30">Change parent style</button>
+                <span> This is the parent element
+                  <p id="result-va-30">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Get the collection of children</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-31').on('click', function(){
+                  $('#result-jq-31 .children *').each(function() {
+                    $(this).css({"font-weight": "bold"})
+                  })
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-31">Change children styles</button>
+                  <ul id="result-jq-31">
+                    <li>
+                      <ul class="children">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      </ul>
+                    </li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  </ul>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-31').addEventListener('click', function(){
+                  document.querySelectorAll('#result-va-31 .children *').forEach(elm => {
+                    elm.style.fontWeight = 'bold'
+                  })
+                })
+              </code>
+
+              <div class="example">
+                
+                <button id="example-va-31">Change children styles</button>
+                <ul id="result-va-31">
+                  <li>
+                    <ul class="children">
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                  </li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Get all the elements that have a certain class</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-32').on('click', function(){
+                  $('#result-jq-32 .list').each(function() {
+                    $(this).css({"font-weight": "bold"})
+                  })
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-32">Apply styles</button>
+                  <ul id="result-jq-32">
+                    <li>
+                      <ul>
+                        <li class="list">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li class="list">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      </ul>
+                    </li>
+                    <li class="list">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  </ul>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-32').addEventListener('click', function(){
+                  document.querySelectorAll('#result-va-32 .list').forEach(elm => {
+                    elm.style.fontWeight = 'bold'
+                  })
+                })
+              </code>
+
+              <div class="example">
+                
+                <button id="example-va-32">Apply styles</button>
+                <ul id="result-va-32">
+                  <li>
+                    <ul>
+                      <li class="list">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li class="list">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                  </li>
+                  <li class="list">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Get element by id</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-33').on('click', function(){
+                  $(this).css({"font-weight": "bold"})
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-jq-33">Apply styles</button>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-33').addEventListener('click', function(){
+                  this.style.fontWeight = 'bold'
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-33">Apply styles</button>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Get all the elements that have a certain class and display none</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-34').on('click', function(){
+                  $('#result-jq-34 .list[style="display: none;"]').css({"color": "red", "display": "block"})
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-34">Apply styles</button>
+                  <ul id="result-jq-34">
+                    <li>
+                      <ul>
+                        <li class="list" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li class="list" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      </ul>
+                    </li>
+                    <li class="list" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  </ul>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-34').addEventListener('click', function(){
+                  document.querySelectorAll('#result-va-34 .list[style="display: none;"]').forEach(elm => {
+                    elm.style.color = 'red'
+                    elm.style.display = 'block'
+                  })
+                })
+              </code>
+
+              <div class="example">
+                
+                <button id="example-va-34">Apply styles</button>
+                <ul id="result-va-34">
+                  <li>
+                    <ul>
+                      <li class="list" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li class="list" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                  </li>
+                  <li class="list" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Get the options of a select element that are selected</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-35').on('click', function(){
+                  let value = $('#result-jq-35').val()
+                  $('#result-jq-35').after(value)
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-35">Get option</button>
+                  <select id="result-jq-35">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>  
+                    <option value="4">4</option>
+                  </select>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-35').addEventListener('click', function(){
+                  let select = document.getElementById('result-va-35')
+                  let value = select.options[select.selectedIndex].value;
+                  select.insertAdjacentText('afterend', value)
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-35">Get option</button>
+                <select id="result-va-35">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>  
+                  <option value="4">4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Change href attribute</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-36').on('click', function(){
+                  $('#result-jq-36').attr('href', 'https://youtube.com')
+                })
+              </code>
+
+              <div class="example">
+                  <button id="example-jq-36">Change href</button>
+                  <a target="_blank" href="https://google.com"  id="result-jq-36" rel="noreferrer">Click to win 100$</a>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-36').addEventListener('click', function(){
+                  document.getElementById('result-va-36').setAttribute('href', 'https://youtube.com')
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-36">Change href</button>
+                <a target="_blank" href="https://google.com" id="result-va-36" rel="noreferrer">Click to win 100$</a>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Show an alert with the value of the first input of the page</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-37').on('click', function(){
+                  alert($(this).val())
+                })
+                
+              </code>
+
+              <div class="example">
+                <input type="submit" id="example-jq-37" value="Click me!">
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-37').addEventListener('click', function(){
+                  alert(this.value)
+                })
+              </code>
+
+              <div class="example">
+                <input type="submit" id="example-va-37" value="Click me!">
+              </div>
+            </div>
+          </div>
+
+
+          <button class="accordion">Remove all items</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-38').on('click', function(){
+                  $('#result-jq-38 *').remove()
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-jq-38">Remove all of them!</button>
+                <div id="result-jq-38">
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-35').addEventListener('click', function(){
+                  let select = document.getElementById('result-va-35')
+                  let value = select.options[select.selectedIndex].value;
+                  select.insertAdjacentText('afterend', value)
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-38">Remove all of them!</button>
+                <div id="result-va-38">
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="accordion">Animate an element</button>
+          <div class="panel">
+            <div class="jquery-div">
+              <p>jQuery</p>
+              <code>
+                $('#example-jq-39').on('click', function(){
+                  $('#result-jq-39').animate({
+                    "width": "100%"
+                  }, 500)
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-jq-39">Animate it!</button>
+                <div class="box" id="result-jq-39"></div>
+              </div>
+              
+            </div>
+            <div class="vanilla-div">
+              <p>Vanilla JS</p>
+              <code>
+                document.getElementById('example-va-39').addEventListener('click', function(){
+                  let elm = document.getElementById('result-va-39')
+                  elm.style.transition = '0.5s'
+                  elm.style.width = '100%'
+                })
+              </code>
+
+              <div class="example">
+                <button id="example-va-39">Animate it!</button>
+                <div class="box" id="result-va-39"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+      </section>
+    </main>
+</body>
+</html>
