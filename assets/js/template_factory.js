@@ -24,11 +24,11 @@ eventBtn.on("click", () => {
     createEventNavBar();
     // readyEventjQuery();
     eventConstructors(ready, "ev-0");
-    eventConstructors(click, "ev-1");
-    eventConstructors(dbClick, "ev-2");
-    eventConstructors(keyPress, "ev-3");
-    eventConstructors(mouseEvent, "ev-4");
-    eventConstructors(changeInput, "ev-5");
+    eventConstructors(click, "ev-1", clickVan, clickJQuery);
+    eventConstructors(dbClick, "ev-2", dblClickVan, dblClickJQuery);
+    eventConstructors(keyPress, "ev-3", keyVan, keyJQuery);
+    eventConstructors(mouseEvent, "ev-4", mouseVan, mouseJQuery);
+    eventConstructors(changeInput, "ev-5", changeVan, changejQuery);
     eventConstructors(loadImg, "ev-6");
     eventConstructors(errorImg, "ev-7");
     eventConstructors(submitted, "ev-8");
