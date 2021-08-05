@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "Windows Command Prompt";
+    src: url("Windows-Command-Prompt.woff2") format("woff2"), url("Windows-Command-Prompt.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cascadia";
+    src: url("CascadiaMono.woff2");
+}
+
+body {
+    height: 100vh;
+    width: auto;
+    background-color: rgb(0, 0, 0);
+    max-width: 100vw;
+    font-family: "Changa", sans-serif;
+    color: grey;
+    padding: 2rem;
+}
+
+header {
+    font-family: "Changa", sans-serif;
+    width: 95%;
+    text-align: center;
+    font-size: 30px;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #13cffe, 0 0 0.8rem #00ccff;
+}
+
+main {
+    width: 95%;
+    margin-top: 3rem;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #13cffe, 0 0 0.8rem #00ccff;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+code {
+    color: red;
+    font-family: "Cascadia";
+}
+
+code:hover {
+    color: blue;
+}
+
+canvas {
+    background-color: grey;
+    border-radius: 10px;
+}
+
+select {
+    font-family: "Changa", sans-serif;
+    background-color: black;
+    color: gray;
+    max-width: 21rem;
+    border-radius: 10px;
+}
+
+img {
+    border: none;
+    border-radius: 30px;
+}
+
+button {
+    background-color: rgb(49, 48, 48);
+    color: gray;
+    border-radius: 10px;
+    border: 0.5px solid rgb(97, 96, 96);
+    padding: 5px;
+}
+
+button:hover {
+    background-color: gray;
+    color: rgb(49, 48, 48);
+}
+
+
+/*------------CUSTOM SCROLL BAR--------------*/
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: rgb(199, 193, 193);
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(46, 44, 44);
+}
+
+
+/*------- Events Section -----------*/
+
+.events-style {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.heading-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    text-align: center;
+}
+
+.events-style * {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.function-selector-style {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    font-size: 20px;
+}
+
+.input-check {
+    color: red;
+}
+
+.remove-item {
+    border: 1px solid white;
+    color: Red;
+    cursor: pointer;
+    text-align: center;
+}
+
+.animals * {
+    cursor: pointer;
+}
+
+.animals *:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.sub {
+    font-size: 18px;
+    color: rgb(83, 83, 83);
+}
+
+.sub * {
+    font-size: 15px;
+}
+
+.newClass {
+    color: white;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.parent-div * {
+    font-weight: lighter;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.list-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.new-div {
+    color: yellow;
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+    background-color: antiquewhite;
+}
