@@ -10,6 +10,9 @@ function getHeader() {
 			document
 				.getElementById("page-header-logo")
 				.removeEventListener("click", goToHome);
+			document
+				.getElementById("autocomplete-go-btn")
+				.removeEventListener("click", goToExample);
 			if (document.querySelectorAll("div[draggable=true]")) {
 				let areDraggables = document.querySelectorAll("div[draggable=true]");
 				areDraggables.forEach((element) => {
@@ -34,6 +37,9 @@ function getHeader() {
 			break;
 		default:
 			insertTemplate(wrapper, headerPageTemplate, "header-page-temp");
+			document
+				.getElementById("autocomplete-go-btn")
+				.addEventListener("click", goToExample);
 			break;
 	}
 }
