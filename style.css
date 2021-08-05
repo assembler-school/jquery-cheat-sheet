@@ -1,0 +1,126 @@
+        * {
+            font-family: "Open Sans", sans-serif;
+        }
+        
+        *::-webkit-scrollbar {
+            display: none;
+        }
+        
+        main {
+            margin: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        body {
+            background-color: lightslategray;
+        }
+        /* header*/
+        
+        .body__head-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            margin: 0.5rem;
+        }
+        
+        .head__title {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: "helvetica";
+            text-align: center;
+            white-space: nowrap;
+            background-color: black;
+            color: white;
+        }
+        
+        .main__container-grid {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.5rem 0.5rem;
+            grid-auto-rows: max-content;
+        }
+        
+        .titles {
+            background-color: black;
+            border: 2px solid white;
+            font-size: 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .questions {
+            grid-column: 1;
+        }
+        
+        .javaScript {
+            grid-column: 2;
+            ;
+        }
+        
+        .jQuery {
+            grid-column: 3;
+        }
+        
+        .items {
+            grid-column: 1;
+            background-color: black;
+            border: 2px solid white;
+            font-size: 1rem;
+            text-align: center;
+            padding: 5px;
+            color: white;
+            border-radius: 0.5rem;
+            max-height: 60px;
+        }
+        
+        .solution__js {
+            grid-column: 2;
+        }
+        
+        .solution__jq {
+            grid-column: 3;
+        }
+        
+        .img {
+            max-width: 300px;
+            max-height: 300px;
+        }
+        
+        .centre_intem {
+            align-self: center;
+        }
+        
+        .photo_jq {
+            grid-column: 3;
+            max-width: 300px;
+            max-height: 300px;
+        }
+        
+        .imgJq {
+            grid-column: 3;
+            background-color: white;
+            width: 300px;
+            border: 2px solid black;
+            padding: 10;
+            margin: 5px;
+            text-align: center;
+        }
+        
+        .background__item {
+            background-color: black;
+            font-size: large;
+            color: chartreuse;
+        }
+        
+        .none {
+            display: none;
+        }
+        
+        .block {
+            display: block;
+        }
