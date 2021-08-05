@@ -1,0 +1,100 @@
+li {
+  list-style-type: none;
+  padding: 1rem;
+  height: fit-content;
+  cursor: pointer;
+}
+li:hover {
+  background-color: #213f5d;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.5s;
+  transform: scale(1.01);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+section.scrollable {
+  background-color: #92bbe4; /* opacity */
+  width: 37.5rem;
+  height: 42.75rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.example-btn {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #226073;
+  cursor: pointer;
+}
+
+.btn-clicked {
+  background-color: #2b3742;
+  color: seashell;
+}
+
+.example-input {
+  width: 100px;
+  margin: auto;
+}
+
+.input-changed {
+  background-color: #2b3742;
+  color: seashell;
+}
+
+.example-img {
+  margin: auto;
+  transition: all 8s ease-in;
+}
+
+.submitted {
+  src: url("https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png");
+}
+
+form,
+.column-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/** COLORS */
+
+.color-middle-blue {
+  color: #226073;
+}
+
+.color-dark-blue {
+  color: #213f5d;
+}
+
+.color-light-blue {
+  color: #92bbe4;
+}
+
+.color-for-changes1 {
+  color: #2b3742;
+}
+
+/** ------ POSITIONING -------- */
+
+.positioning-js-logo {
+  position: absolute;
+  top: 25%;
+  left: 22%;
+  z-index: 1;
+}
+.positioning-jQ-logo {
+  position: absolute;
+  top: 25%;
+  left: 71%;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js" defer></script>
+    <script src="jQuery.js" defer></script>
+    <script src="Vanilla.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+    />
+    <title>jQuery CheatSheet</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="assets/Assembler_School_of_Software_Engineering_logo-2-removebg-preview.png"
+        alt="logo_Assembler_School"
+        class="logo"
+        width="100"
+      />
+      <h1 class="title">jQuery CheatSheet</h1>
+      <a href="https://jquery.com/"
+        ><img src="assets/pngegg.png" alt="logo_jQuery" width="100"
+      /></a>
+    </header>
+    <main>
+      <!-- ---- MODAL FOR SOLUTIONS ------- -->
+
+      <div id="modal" class="modal flex">
+        <div class="positioning-js-logo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png"
+            alt="Vanilla_logo"
+            width="80"
+            style="border-radius: 5px"
+          />
+        </div>
+        <section id="modalVanilla" class="modal__content">Vanila</section>
+        <div class="positioning-jQ-logo">
+          <img
+            src="https://www.kindpng.com/picc/m/787-7876133_jquery-hd-png-download.png"
+            alt="jQ_logo"
+            width="95"
+            style="border-radius: 5px"
+          />
+        </div>
+        <section id="modaljQuery" class="modal__content">jQuery</section>
+      </div>
+
+      <!-- ----------- SECTIONS FOR EVENTS & FUNCTIONS,SELECTORS --------- -->
+      <ul class="flex">
+        <section class="scrollable">
+          <h1 class="subtitle">Events</h1>
+
+          <li id="event1" class="event">
+            When the HTML document has been loaded and you can manipulate it
+            with JavaScript
+          </li>
+          <li id="event2" class="event">When an HTML item has been clicked</li>
+          <li id="event3" class="event">
+            When an HTML item has been double clicked
+          </li>
+          <li id="event4" class="event">
+            When the user presses a key on the keyboard
+          </li>
+          <li id="event5" class="event">
+            When the user moves the mouse cursor
+          </li>
+          <li id="event6" class="event">
+            When the user changes a value of an text input
+          </li>
+          <li id="event7" class="event">When an image is loaded</li>
+          <li id="event8" class="event">
+            When an image fails to load, (if you write an incorrect image url
+            the loading of the image will fail)
+          </li>
+          <li id="event9" class="event">When a form is submitted</li>
+          <li id="event10" class="event">
+            When the user changes the option of a select element
+          </li>
+          <li id="event11" class="event">
+            When you position the mouse over an element
+          </li>
+          <li id="event12" class="event">
+            When a checkbox is checked or unchecked
+          </li>
+          <li id="event13" class="event">
+            When a ul list item is clicked, show the item that was clicked
+          </li>
+        </section>
+
+        <section class="scrollable">
+          <h1 class="subtitle">Functions</h1>
+
+          <li id="function1" class="function">
+            Create an HTML element with any text value
+          </li>
+          <li id="function2" class="function">
+            Remove an HTML element with any text value
+          </li>
+          <li id="function3" class="function">
+            Append an HTML element with any text value to a parent element
+          </li>
+          <li id="function4" class="function">
+            Prepend an HTML element with any text value to a parent element
+          </li>
+          <li id="function5" class="function">
+            Create and add an HTML element with any text value after another
+            element
+          </li>
+          <li id="function6" class="function">
+            Create and add an HTML element with any text value before another
+            element
+          </li>
+          <li id="function7" class="function">
+            Clone an HTML element within other element
+          </li>
+          <li id="function8" class="function">Add a class to an HTML item</li>
+          <li id="function9" class="function">
+            Remove a class to an HTML item
+          </li>
+          <li id="function10" class="function">
+            Toggle a class of an HTML item
+          </li>
+          <li id="function11" class="function">
+            Add a disabled attribute to an HTML button
+          </li>
+          <li id="function12" class="function">
+            Remove the disabled attribute of an HTML button
+          </li>
+          <li id="function13" class="function">
+            Set a data-src attribute to a img element
+          </li>
+          <li id="function14" class="function">
+            Remove the data-src attribute of the img element
+          </li>
+          <li id="function15" class="function">
+            Hide an HTML element on click (display: none)
+          </li>
+          <li id="function16" class="function">
+            Show an HTML element on click (display: block)
+          </li>
+          <li id="function17" class="function">
+            Fade in an HTML element using jQuery
+          </li>
+          <li id="function18" class="function">
+            Fade out an HTML element using jQuery
+          </li>
+        </section>
+
+        <section class="scrollable">
+          <h1 class="subtitle">Selectors</h1>
+
+          <li id="function19" class="function">
+            Iterate a collection of elements and apply a change of style on them
+          </li>
+          <li id="function20" class="function">
+            Get the parent element of a certain element and change its font
+            weight
+          </li>
+          <li id="function21" class="function">
+            Get the collection of children of a certain element and change its
+            font weight
+          </li>
+          <li id="function22" class="function">
+            Get all the elements that have a certain class and change their font
+            weight
+          </li>
+          <li id="function23" class="function">
+            Get an item by id and change its font weight
+          </li>
+          <li id="function24" class="function">
+            Get all the elements that have a certain class and the display
+            property of none and change their font color
+          </li>
+          <li id="function25" class="function">
+            Get the options of a select element that are selected (attribute
+            selected)
+          </li>
+          <li id="function26" class="function">
+            Change the href attribute of the first <code>a</code> element (You
+            have to create several <code>a</code> elements)
+          </li>
+          <li id="function27" class="function">
+            Show an alert with the value of the first <code>input</code> of the
+            page (Create an <code>input</code> element to test this case)
+          </li>
+          <li id="function28" class="function">
+            Remove all items from a specific selector
+          </li>
+          <li id="function29" class="function">
+            Animate an item after 2 seconds from the initial page load
+          </li>
+        </section>
+      </ul>
+    </main>
+    <footer>This is the footer © Copyright 2021</footer>
+  </body>
+</html>

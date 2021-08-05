@@ -1,56 +1,28 @@
-`#html` `#css` `#js` `#dom` `#jQuery` `#master-in-software-engineering`
 
-# JQuery Cheat Sheet <!-- omit in toc -->
+# jQuery Cheat Sheet
 
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
-</p>
+Basically a place where you can look for everything related to jQuery, but also seeing it's equivalent in Vanila.
 
-> In this pill you will have to create your own jQuery cheat sheet, in it you will review many of the actions you have already done previously with Vanilla JS to later apply them with jQuery. 
->
-> In this way this project will serve as a reference to have an example of each concept.
+## Authors
 
-## Index <!-- omit in toc -->
+- [@EnriqueHidalgo](https://github.com/E-Hidalgo)
 
-- [Requirements](#requirements)
-- [Repository](#repository)
-- [Technologies used](#technologies-used)
-- [Project delivery](#project-delivery)
-- [Resources](#resources)
+  ## Color Reference
 
-## Requirements
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Assembler Red Color | ![#c40e19](https://via.placeholder.com/10/c40e19?text=+) #c40e19 |
+| White Modal Color | ![#FFF5EE](https://via.placeholder.com/10/FFF5EE?text=+) #FFF5EE |
+| Example Color | ![#d13c04](https://via.placeholder.com/10/d13c04?text=+) #d13c04 |
 
-- You must use semantic HTML5 elements for all the contents of the application
-- You must use two JS files separately, one for the JQuery implementation and one for the native implementation
-- Both the code and the comments must be written in English
-- Use the camelCase code style to define variables and functions
 
-## Repository
+## Documentation
 
-First of all you must fork this project into your GitHub account.
+[jQuery](https://jquery.com/)
+[w3schools](https://jquery.com/)
+  
+## Demo
 
-To create a fork on GitHub is as easy as clicking the “fork” button on the repository page.
+Insert gif or link to demo
 
-<img src="https://docs.github.com/assets/images/help/repository/fork_button.jpg" alt="Fork on GitHub" width='450'>
-
-## Technologies used
-
-\* HTML
-
-\* CSS
-
-\* JS
-
-\* jQuery
-
-## Project delivery
-
-To deliver this project you must follow the steps indicated in the document:
-
-- [Submitting a solution](https://www.notion.so/Submitting-a-solution-524dab1a71dd4b96903f26385e24cdb6)
-
-## Resources
-
-- [jQuery library (CDN)](https://code.jquery.com/jquery-3.5.1.js)
-- [jQuery on W3C](https://www.w3schools.com/jquery/)
-- [jQuery (Official) events](https://api.jquery.com/category/events/)
+  
