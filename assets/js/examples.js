@@ -32,15 +32,27 @@ function setWebSiteContent() {
 	createExample(
 		"HTML item has been clicked",
 		"events",
-		``,
-		``,
-		"",
-		"",
-		`<code></code>`,
-		`<code></code>`
+		`document.querySelector('button').addEventListener('click', function(){});`,
+		`$("#dataTable tbody tr" ).on( "click", function() {onsole.log( $( this ).text());});`,
+		"An element receives a click event when a pointing device button (such as a mouse's primary mouse button) is both pressed and released while the pointer is located inside the element. If the button is pressed on one element and the pointer is moved outside the element before the button is released, the event is fired on the most specific ancestor element that contained both elements. Click fires after both the mousedown and mouseup events have fired, in that order.",
+		"Any event names can be used for the events argument. jQuery will pass through the browser's standard JavaScript event types, calling the handler function when the browser generates events due to user actions such as click. In addition, the .trigger() method can trigger both standard browser event names and custom event names to call attached handlers. Event names should only contain alphanumerics, underscore, and colon characters.",
+		`<code>const button = document.querySelector('button'); button.addEventListener('click', function(){});</code>`,
+		`<code>$( "p" ).on( "click", function() {alert( $( this ).text() );});</code>`
 	);
 
 	//3
+	createExample(
+		"HTML item has been double clicked",
+		"events",
+		`document.querySelector('aside');.addEventListener('dblclick', function (e) {});`,
+		`$( "#target" ).dblclick(function() {});`,
+		"The dblclick event fires when a pointing device button (such as a mouse's primary button) is double-clicked; that is, when it's rapidly clicked twice on a single element within a very short span of time. Dblclick fires after two click events (and by extension, after two pairs of mousedown and mouseup events).",
+		`This method is a shortcut for .on( "dblclick", handler ) in the first two variations, and .trigger( "dblclick" ) in the third. The dblclick event is sent to an element when the element is double-clicked. Any HTML element can receive this event.`,
+		`<code>const card = document.querySelector('aside'); card.addEventListener('dblclick', function (e) { card.classList.toggle('large');});</code>`,
+		`<code>$("#target").dblclick(function() {alert( "Handler for .dblclick() called." );});</code>`
+	);
+
+	//4
 	createExample(
 		"user presses a key on the keyboard",
 		"events",
@@ -52,21 +64,9 @@ function setWebSiteContent() {
 		`<code></code>`
 	);
 
-	//4
-	createExample(
-		"user moves the mouse cursor",
-		"events",
-		``,
-		``,
-		"",
-		"",
-		`<code></code>`,
-		`<code></code>`
-	);
-
 	//5
 	createExample(
-		"user changes a value of an text input",
+		"user moves the mouse cursor",
 		"events",
 		``,
 		``,
@@ -176,36 +176,36 @@ function setWebSiteContent() {
 	createExample(
 		"Animate an item after 2 seconds from the initial page load",
 		"functions",
-		``,
-		``,
-		"",
-		"",
-		`<code></code>`,
-		`<code></code>`
+		`var timeoutID = setTimeout(code[, 2000]);`,
+		`$("p").animate({left: 50,opacity: 1}, 2000 );`,
+		"The setTimeout() method of the WindowOrWorkerGlobalScope mixin sets a timer which executes a function or specified piece of code once the timer expires.",
+		"Perform a custom animation of a set of CSS properties. The .animate() method allows us to create animation effects on any numeric CSS property. The only required parameter is a plain object of CSS properties. This object is similar to the one that can be sent to the .css() method, except that the range of properties is more restrictive.",
+		`<code>var cntSt = 0, cntSi = 0; function doStuffwTimeout(){ ​setTimeout(function(){if(cntSt<300){ntSt++$('#box').css('left', cntSt); doStuffwTimeout();}},2000);</code>`,
+		`<code>$( "#clickme" ).click(function() { $( "#book" ).animate({ width: [ "toggle", "swing" ], height: [ "toggle", "swing" ], opacity: "toggle"}, 2000, "linear", function() {$( this ).after( "<div>Animation complete.</div>" );});});</code>`
 	);
 
 	//15
 	createExample(
 		"Add a class to an HTML item",
 		"functions",
-		``,
-		``,
-		"",
-		"",
-		`<code></code>`,
-		`<code></code>`
+		`span.classList.add("d", "e", "f");`,
+		`$("p").addClass( "myClass yourClass");`,
+		"The Element.classList is a read-only property that returns a live DOMTokenList collection of the class attributes of the element. This can then be used to manipulate the class list. Using classList is a convenient alternative to accessing an element's list of classes as a space-delimited string via element.className. The add() method of the DOMTokenList interface adds the given token to the list.",
+		"Adds the specified class(es) to each element in the set of matched elements. It's important to note that this method does not replace a class. It simply adds the class, appending it to any which may already be assigned to the elements.",
+		`<code>let span = document.querySelector("span");let classes = span.classList;classes.add("d");span.textContent = classes;</code>`,
+		`<code>$( "div" ).addClass(function( index, currentClass ) {var addedClass; if ( currentClass === "red" ) { ​addedClass = "green"; $( "p" ).text( "There is one green div" );}return addedClass;})</code>`
 	);
 
 	//16
 	createExample(
 		"Remove a class to an HTML item",
 		"functions",
-		``,
-		``,
-		"",
-		"",
-		`<code></code>`,
-		`<code></code>`
+		`span.classList.remove("d", "e", "f")`,
+		`$("p").removeClass( "myClass");`,
+		"The remove() method of the DOMTokenList interface removes the specified tokens from the list.",
+		"Remove a single class, multiple classes, or all classes from each element in the set of matched elements.",
+		`<code>let span2 = document.getElementById("a") let classes2 = span2.classList;classes2.remove("c", "b");</code>`,
+		`<code> $( "li" ).last().removeClass(function() {return $( this ).prev().attr( "class" );});</code>`
 	);
 
 	//17
@@ -332,12 +332,12 @@ function setWebSiteContent() {
 	createExample(
 		"Remove an HTML element with any text value",
 		"selectors",
-		``,
-		``,
-		"",
-		"",
-		`<code></code>`,
-		`<code></code>`
+		`document.getElementById("my-div").remove();`,
+		`$( ".hello" ).remove();`,
+		"The Element.remove() method removes the element from the tree it belongs to. The remove() method is not scoped into the with statement.",
+		"Remove the set of matched elements from the DOM. Use .remove() when you want to remove the element itself, as well as everything inside it. In addition to the elements themselves, all bound events and jQuery data associated with the elements are removed",
+		`<code>var el = document.getElementById('div-02'); el.remove(); // Removes the div with the 'div-02' id</code>`,
+		`<code>$( "button" ).click(function() {$( "p" ).remove();});</code>`
 	);
 
 	//28
