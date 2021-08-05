@@ -1,0 +1,11 @@
+.title {
+  font-size: 2rem;
+}
+.subtitle {
+  font-size: 1.5rem;
+  background-color: #213f5d;
+  color: seashell;
+  border-radius: 5px;
+  /* text-align: center;
+  position: fixed; */
+}
