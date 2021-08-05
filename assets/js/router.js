@@ -19,21 +19,17 @@ function goToHome(e) {
 	location.hash = "";
 }
 
-function goToPage() {
-	e.preventDefault();
-	e.stopPropagation();
-	location.hash = "page";
-}
-
-function goToIndex() {
+function goToIndex(e) {
 	e.preventDefault();
 	e.stopPropagation();
 	location.hash = "index";
 }
 
 function goToExample(e) {
-	e.preventDefault();
-	e.stopPropagation();
+	if (e.key != "Enter") {
+		e.preventDefault();
+		e.stopPropagation();
+	}
 	// Type - Title
 	let goToString = document.getElementById("autocomplete-field").value;
 	let goToArray = goToString.split("-");
@@ -44,4 +40,4 @@ function goToExample(e) {
 	location.hash = "page/" + key + "/" + example.id;
 }
 
-export { navigate, goToHome, goToPage, goToIndex, goToExample };
+export { navigate, goToHome, goToIndex, goToExample };

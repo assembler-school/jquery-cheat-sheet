@@ -1,3 +1,5 @@
+import { goToExample } from "./router.js";
+
 function insertTemplate(div, template, id) {
 	let htmlNode = template;
 	let wrapper = div;
@@ -114,6 +116,14 @@ function stopDragg() {
 	}
 }
 
+function enterGoTo(e) {
+	if (e.key === "Enter") {
+		e.preventDefault();
+		e.stopPropagation();
+		goToExample(e);
+	}
+}
+
 export {
 	insertTemplate,
 	initialSetLocalStorage,
@@ -123,4 +133,5 @@ export {
 	getExample,
 	stopDragg,
 	getExampleTitle,
+	enterGoTo,
 };

@@ -11,6 +11,7 @@ function copyToClipboard(event) {
 		let successful = document.execCommand("copy");
 		let msg = successful ? "Success!" : "Error";
 		console.log("Copying your code: " + msg);
+		document.getElementById("copy-audio").play();
 	} catch (err) {
 		console.log("Oops, unable to copy");
 	}
@@ -56,12 +57,13 @@ function insertCode(e) {
 	e.stopPropagation();
 
 	//imprimir todo el contenido en la barra
-
+	document.getElementById("drop-audio").play();
 	copyTextarea.classList.remove("about-to-drop");
 	let texto = localStorage.getItem("code");
 	let actualTextArea = document.getElementById("drop-on-section").value;
 
 	document.getElementById("drop-on-section").value = actualTextArea + texto;
+	//play audio
 
 	//append al ultimo nodo
 	//la box tiene el id del objeto a pegar

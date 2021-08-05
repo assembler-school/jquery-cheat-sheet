@@ -1,6 +1,6 @@
 import { headerHomeTemplate, headerPageTemplate } from "../templates.js";
 import { wrapper } from "../main.js";
-import { insertTemplate } from "../functions.js";
+import { insertTemplate, enterGoTo } from "../functions.js";
 import { goToExample, goToHome } from "../router.js";
 import { startDragging, stopDragging } from "./page.js";
 
@@ -13,6 +13,7 @@ function getHeader() {
 			document
 				.getElementById("autocomplete-go-btn")
 				.removeEventListener("click", goToExample);
+			window.addEventListener("keydown", enterGoTo);
 			if (document.querySelectorAll("div[draggable=true]")) {
 				let areDraggables = document.querySelectorAll("div[draggable=true]");
 				areDraggables.forEach((element) => {
@@ -25,6 +26,7 @@ function getHeader() {
 			document
 				.getElementById("autocomplete-go-btn")
 				.removeEventListener("click", goToExample);
+			window.removeEventListener("keydown", enterGoTo);
 		}
 	}
 	wrapper.innerHTML = "";
@@ -40,6 +42,7 @@ function getHeader() {
 			document
 				.getElementById("autocomplete-go-btn")
 				.addEventListener("click", goToExample);
+			window.addEventListener("keydown", enterGoTo);
 			break;
 	}
 }
