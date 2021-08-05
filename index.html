@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script> src="https://code.jquery.com/jquery-3.6.0.min.js"</script>
+    <title>Cheat Sheet JS-Vanilla & jQuery </title>
+
+</head>
+<body>
+    <header>
+        <h1 class="h1 center" id="header">Cheat Sheet JS Vanilla & jQuery  </h1>
+    </header>
+    <div class="grid-container">
+        <div class="grid-item-1 item-functions">
+            <h2 class="grid-items center">Functions</h2>
+                <div class="select-div">Create an HTML element</div>
+                <div class="select-div">Remove an HTML element</div>
+                <div class="select-div">Append an HTML element</div>
+                <div class="select-div">Prepend an HTML element</div>
+                <div class="select-div">Create + add an HTML element after another element</div>
+                <div class="select-div">Create + add an HTML element before another element</div>
+                <div class="select-div">Clone an HTML element</div>
+                <div class="select-div">Add a class to an HTML item</div>
+                <div class="select-div">Remove a class to an HTML item</div>
+                <div class="select-div">Toggle the class of an HTML item</div>
+                <div class="select-div">Add a disabled attribute to an HTML button</div>
+                <div class="select-div">Remove the disabled attribute of an HTML button</div>
+                <div class="select-div">Set a data-src attribute to a img element</div>
+                <div class="select-div">Remove the data-src attribute of the img element</div>
+                <div class="select-div">Hide an HTML element on click (display: none)</div>
+                <div class="select-div">Show an HTML element on click (display: block)</div>
+                <div class="select-div">Fade in an HTML element using jQuery</div>
+                <div class="select-div">Fade out an HTML element using jQuery</div>
+                <div class="select-div">Animate an item after 2s from the initial page load</div>
+        </div>
+        <div class="grid-item-2 item-selectors">
+            <h2 class="grid-items center">Selectors</h2>
+                <div class="select-div">Iterate a collection of elements</div>
+                <div class="select-div">Get the parent element of a certain element</div>
+                <div class="select-div">Get the collection of children of a certain element</div>
+                <div class="select-div">Get all the elements that have a certain class</div>
+                <div class="select-div">Get an item by id</div>
+                <div class="select-div">Get all the elements that have a certain class and a certain property</div>
+                <div class="select-div">Get the selected option of a select element</div>
+                <div class="select-div">Change an attribute of a first element</div>
+                <div class="select-div">Show the value of a first input on the page</div>
+                <div class="select-div">Remove all items from a specific selector</div>
+        </div>
+        <div class="grid-item-3 item-events">
+            <h2 class="grid-items center">Events</h2>
+                <div class="select-div">HTML document loaded</div>
+                <div class="select-div">HTML item clicked</div>
+                <div class="select-div">HTML item double clicked</div>
+                <div class="select-div">Key pressed on keyboard </div>
+                <div class="select-div">Mouse cursor moves</div>
+                <div class="select-div">Value changed on text input</div>
+                <div class="select-div">Image loaded</div>
+                <div class="select-div">Image load fail</div>
+                <div class="select-div">Form submitted</div>
+                <div class="select-div">Option selected on select element</div>
+                <div class="select-div">When you position the mouse over an element</div>
+                <div class="select-div">Checkbox checked or unchecked</div>
+                <div class="select-div">Show the clicked item of an UL list</div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal__container">
+            <h3 id="modal__title"></h3>
+            <span id="modal__x">&times;</span>
+            <div class="modal__example">
+
+                <h4 id="change-vanilla">JS Vanilla</h4>
+                <div id="vanilla">
+
+                    <div class="modal__example__code" id="function-1V">
+                        <div class="flex">
+                            <div>
+                                <p>Example:</p>
+                                <code>var btn = document.createElement("BUTTON");</code>
+                            </div>
+                            <div class="modal__example__try">
+                                <button>Try it</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div>
+                    <h4 id="change-jquery">jQuery</h4>
+                    <div id="jquery">
+
+                        <div class="modal__example__code" id="function-1Q">
+                            <div class="flex">
+                                <div>
+                                    <p>Example:</p>
+                                    <code>var btn = $("&#60;button&#62; BUTTON &#60;/button&#62;");</code>
+                                </div>
+                                <div class="modal__example__try">
+                                    <button>Try it</button>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+ 
+    <script> src="assets/vanilla.js"</script>
+    <script> src="assets/jquery.js"</script>
+
+</body>
+</html>
