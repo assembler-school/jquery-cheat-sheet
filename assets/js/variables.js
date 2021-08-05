@@ -20,7 +20,7 @@ let ready = `<template id="ready">
       <li><a
         href="https://www.techiediaries.com/javascript/document-ready-vs-window-onload-vs-window-load/"
       >https://www.techiediaries.com/javascript/document-ready-vs-window-onload-vs-window-load/</a></li>
-      <li><a href="https://www.youtube.com/watch?v=OFKDCJIgxUk">https://www.youtube.com/watch?v=OFKDCJIgxUk</a></li>
+      <li><a href="https://www.youtube.com/watch?v=OFKDCJIgxUk">https://www.youtube.com/watch?v=OFKDCJIgxUk</a></li></ul>
       <div class="demo">
         <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -49,7 +49,7 @@ let click = `<template id="ready">
       <li><a
         href="https://www.w3schools.com/jsref/event_onclick.asp"
       >https://www.w3schools.com/jsref/event_onclick.asp</a></li>
-      <li><a href="https://learn.jquery.com/events/event-basics/">https://learn.jquery.com/events/event-basics/</a></li>
+      <li><a href="https://learn.jquery.com/events/event-basics/">https://learn.jquery.com/events/event-basics/</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -78,7 +78,7 @@ let dbClick = `<template id="ready">
       <ul>
       <li><a
         href="https://www.w3schools.com/jsref/event_ondblclick.asp"
-      >https://www.w3schools.com/jsref/event_ondblclick.asp</a></li>
+      >https://www.w3schools.com/jsref/event_ondblclick.asp</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -110,7 +110,7 @@ let keyPress = `<template id="ready">
       >https://api.jquery.com/keydown/</a></li>
       <li><a
         href="https://www.youtube.com/watch?v=vSKJGDcDUww"
-      >https://www.youtube.com/watch?v=vSKJGDcDUww</a></li>
+      >https://www.youtube.com/watch?v=vSKJGDcDUww</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -142,7 +142,7 @@ let mouseEvent = `<template id="ready">
       >https://www.educba.com/javascript-mousemove/</a></li>
       <li><a
         href="https://www.bitdegree.org/learn/jquery-mousemove"
-      >https://www.bitdegree.org/learn/jquery-mousemove</a></li>
+      >https://www.bitdegree.org/learn/jquery-mousemove</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -174,7 +174,7 @@ let changeInput = `<template id="ready">
       >https://www.educba.com/jquery-change/</a></li>
       <li><a
         href="https://www.javatpoint.com/javascript-change-event"
-      >https://www.javatpoint.com/javascript-change-event</a></li>
+      >https://www.javatpoint.com/javascript-change-event</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -206,7 +206,7 @@ let loadImg = `<template id="ready">
       >https://idiallo.com/javascript/img-detect-loaded</a></li>
       <li><a
         href="https://api.jquery.com/load-event/"
-      >https://api.jquery.com/load-event/</a></li>
+      >https://api.jquery.com/load-event/</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -242,7 +242,7 @@ let errorImg = `<template id="ready">
       >https://idiallo.com/javascript/img-detect-loaded</a></li>
       <li><a
         href="https://api.jquery.com/error/"
-      >https://api.jquery.com/error/</a></li>
+      >https://api.jquery.com/error/</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -275,7 +275,7 @@ let submitted = `<template id="ready">
       >https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event</a></li>
       <li><a
         href="https://api.jquery.com/submit/"
-      >https://api.jquery.com/submit/</a></li>
+      >https://api.jquery.com/submit/</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -308,7 +308,7 @@ let optionChange = `<template id="ready">
       >https://www.educba.com/jquery-change/</a></li>
       <li><a
         href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event"
-      >https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event</a></li>
+      >https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -341,7 +341,7 @@ let mouseOver = `<template id="ready">
       >https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave</a></li>
       <li><a
         href="https://api.jquery.com/mouseover/"
-      >https://api.jquery.com/mouseover/</a></li>
+      >https://api.jquery.com/mouseover/</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -374,7 +374,7 @@ let changeCheck = `<template id="ready">
       >https://stackoverflow.com/questions/9180087/how-to-handle-change-of-checkbox-using-jquery</a></li>
       <li><a
         href="https://dirask.com/posts/JavaScript-onchange-event-for-input-checkbox-element-example-Z1Axqj"
-      >https://dirask.com/posts/JavaScript-onchange-event-for-input-checkbox-element-example-Z1Axqj</a></li>
+      >https://dirask.com/posts/JavaScript-onchange-event-for-input-checkbox-element-example-Z1Axqj</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -416,7 +416,7 @@ let clickedElement = `<template id="ready">
         href="https://api.jquery.com/parent/20listener%20to%20it.">https://api.jquery.com/parent/20listener%20to%20it</a></li>
       <li><a
         href="https://api.jquery.com/each/#each-function"
-      >https://api.jquery.com/each/#each-function</a></li>
+      >https://api.jquery.com/each/#each-function</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -449,7 +449,7 @@ let createHtml = `<template id="ready">
       >https://api.jquery.com/each/#each-function</a></li>
       <li><a
         href="https://careerkarma.com/blog/javascript-foreach-loop/#:~:text=%20JavaScript%20forEach%20Loops%20Made%20Easy%20%201,callback%20function.%20This%20is%20a%20function...%20More%20"
-      >https://careerkarma.com/blog/javascript-foreach-loop/#:~:text=%20JavaScript%20forEach%20Loops%20Made%20Easy%20%201,callback%20function.%20This%20is%20a%20function...%20More%20</a></li>
+      >https://careerkarma.com/blog/javascript-foreach-loop/#:~:text=%20JavaScript%20forEach%20Loops%20Made%20Easy%20%201,callback%20function.%20This%20is%20a%20function...%20More%20</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -486,7 +486,7 @@ let removeHtml = `<template id="ready">
 </a></li>
       <li><a
         href="https://api.jquery.com/remove/#remove-selector"
-      >https://api.jquery.com/remove/#remove-selector</a></li>
+      >https://api.jquery.com/remove/#remove-selector</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -522,7 +522,7 @@ let appendC = `<template id="ready">
         href="https://www.javascripttutorial.net/javascript-dom/javascript-append/
 "
       >https://www.javascripttutorial.net/javascript-dom/javascript-append/
-</a></li>
+</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -556,7 +556,7 @@ let prepend = `<template id="ready">
       >https://api.jquery.com/prepend</a></li>
       <li><a
         href="https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend"
-      >https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend</a></li>
+      >https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -590,6 +590,7 @@ let insertAfter = `<template id="ready">
       <li><a
         href="https://tutorialcodeplay.com/javascript/after-in-html.html#:~:text=after%20%28%29%20method%20in%20javascript.%20after%20%28%29%20method,element%20or%20text%20next%20to%20the%20given%20element."
       >https://tutorialcodeplay.com/javascript/after-in-html.html#:~:text=after%20%28%29%20method%20in%20javascript.%20after%20%28%29%20method,element%20or%20text%20next%20to%20the%20given%20element.</a></li>
+      </ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -624,7 +625,7 @@ let insertBefore = `<template id="ready">
       >https://api.jquery.com/after</a></li>
       <li><a
         href="https://www.w3schools.com/jsref/met_node_insertbefore.asp"
-      >https://www.w3schools.com/jsref/met_node_insertbefore.asp</a></li>
+      >https://www.w3schools.com/jsref/met_node_insertbefore.asp</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -657,7 +658,7 @@ let cloning = `<template id="ready">
       >https://api.jquery.com/clone/#clone-withDataAndEvents/a></li>
       <li><a
         href="https://stackoverflow.com/questions/921290/is-it-possible-to-clone-html-element-objects-in-javascript"
-      >https://stackoverflow.com/questions/921290/is-it-possible-to-clone-html-element-objects-in-javascript</a></li>
+      >https://stackoverflow.com/questions/921290/is-it-possible-to-clone-html-element-objects-in-javascript</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -688,7 +689,7 @@ let addClass = `<template id="ready">
       >https://api.jquery.com/addClass/</a></li>
       <li><a
         href="https://www.javatpoint.com/how-to-add-a-class-to-an-element-using-javascript"
-      >https://www.javatpoint.com/how-to-add-a-class-to-an-element-using-javascript</a></li>
+      >https://www.javatpoint.com/how-to-add-a-class-to-an-element-using-javascript</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -720,7 +721,7 @@ let removeClass = `<template id="ready">
       > https://api.jquery.com/addClass/</a></li>
       <li><a
         href="https://www.javatpoint.com/how-to-add-a-class-to-an-element-using-javascript"
-      >https://www.javatpoint.com/how-to-add-a-class-to-an-element-using-javascript</a></li>
+      >https://www.javatpoint.com/how-to-add-a-class-to-an-element-using-javascript</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button red-class">Vanilla!</button>
@@ -756,7 +757,7 @@ let toggleClass = `<template id="ready">
       > https://api.jquery.com/toggleClass/#toggleClass-className</a></li>
       <li><a
         href="https://www.w3schools.com/howto/howto_js_toggle_class.asp"
-      >https://www.w3schools.com/howto/howto_js_toggle_class.asp</a></li>
+      >https://www.w3schools.com/howto/howto_js_toggle_class.asp</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -791,7 +792,7 @@ let addDisabled = `<template id="ready">
       > https://www.studentstutorial.com/jquery/jquery-disable-required-attribute.php</a></li>
       <li><a
         href="https://tutorial.eyehunts.com/js/add-disabled-attribute-javascript-disable-html-elements-example/"
-      >https://tutorial.eyehunts.com/js/add-disabled-attribute-javascript-disable-html-elements-example/</a></li>
+      >https://tutorial.eyehunts.com/js/add-disabled-attribute-javascript-disable-html-elements-example/</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -826,7 +827,7 @@ let removeDisabled = `<template id="ready">
       >https://api.jquery.com/removeAttr/#:~:text=An%20attribute%20to%20remove%3B%20as%20of%20version%201.7%2C,it%20accounts%20for%20different%20attribute%20naming%20across%20browsers.</a></li>
       <li><a
         href="https://www.w3schools.com/jsref/met_element_removeattribute.asp"
-      >https://www.w3schools.com/jsref/met_element_removeattribute.asp</a></li>
+      >https://www.w3schools.com/jsref/met_element_removeattribute.asp</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -861,7 +862,7 @@ let setDataAttr = `<template id="ready">
       >https://www.tutsmake.com/how-to-get-set-data-attribute-value-from-elements-jquery/</a></li>
       <li><a
         href="https://www.skillsugar.com/how-to-use-jquery-attr-to-get-set-data-attribute-values"
-      >https://www.skillsugar.com/how-to-use-jquery-attr-to-get-set-data-attribute-values</a></li>
+      >https://www.skillsugar.com/how-to-use-jquery-attr-to-get-set-data-attribute-values</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -896,7 +897,7 @@ let removeDataAttr = `<template id="ready">
       >  https://api.jquery.com/removeAttr/#:~:text=An%20attribute%20to%20remove%3B%20as%20of%20version%201.7%2C,it%20accounts%20for%20different%20attribute%20naming%20across%20browsers.</a></li>
       <li><a
         href="https://www.w3schools.com/jsref/met_element_removeattribute.asp"
-      >https://www.w3schools.com/jsref/met_element_removeattribute.asp</a></li>
+      >https://www.w3schools.com/jsref/met_element_removeattribute.asp</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -932,6 +933,7 @@ let hideEle = `<template id="ready">
       <li><a
         href="https://www.developerhelps.com/javascript-display-none/#:~:text=JavaScript%20display%20none%20Style%20display%20property%20is%20used,the%20style%20display%20property%20to%20%E2%80%9C%20block%20%E2%80%9D."
       >https://www.developerhelps.com/javascript-display-none/#:~:text=JavaScript%20display%20none%20Style%20display%20property%20is%20used,the%20style%20display%20property%20to%20%E2%80%9C%20block%20%E2%80%9D.</a></li>
+      </ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -967,6 +969,7 @@ let showEle = `<template id="ready">
       <li><a
         href="https://www.developerhelps.com/javascript-display-none/#:~:text=JavaScript%20display%20none%20Style%20display%20property%20is%20used,the%20style%20display%20property%20to%20%E2%80%9C%20block%20%E2%80%9D."
       >https://www.developerhelps.com/javascript-display-none/#:~:text=JavaScript%20display%20none%20Style%20display%20property%20is%20used,the%20style%20display%20property%20to%20%E2%80%9C%20block%20%E2%80%9D.</a></li>
+      </ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -1001,7 +1004,7 @@ let fadeInOut = `<template id="ready">
       >https://api.jquery.com/fadeIn/#fadeIn-duration-complete</a></li>
       <li><a
         href="https://api.jquery.com/fadeOut/#fadeOut-duration-complete"
-      >https://api.jquery.com/fadeOut/#fadeOut-duration-complete</a></li>
+      >https://api.jquery.com/fadeOut/#fadeOut-duration-complete</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -1052,7 +1055,7 @@ let animaTe = `<template id="ready">
       >https://www.w3schools.com/jsref/met_win_settimeout.asp</a></li>
       <li><a
         href="https://www.w3schools.com/js/js_htmldom_animate.asp"
-      >https://www.w3schools.com/js/js_htmldom_animate.asp</a></li>
+      >https://www.w3schools.com/js/js_htmldom_animate.asp</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -1094,6 +1097,7 @@ let eachCss = `<template id="ready">
       <li><a
         href="https://careerkarma.com/blog/javascript-foreach-loop/#:~:text=%20JavaScript%20forEach%20Loops%20Made%20Easy%20%201,callback%20function.%20This%20is%20a%20function...%20More%20"
       >https://careerkarma.com/blog/javascript-foreach-loop/#:~:text=%20JavaScript%20forEach%20Loops%20Made%20Easy%20%201,callback%20function.%20This%20is%20a%20function...%20More%20</a></li>
+      </ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -1132,6 +1136,7 @@ let PaRent = `<template id="ready">
       <li><a
         href="https://www.javascripttutorial.net/dom/traversing/get-the-parent-of-an-element/#:~:text=To%20get%20the%20parent%20of%20an%20element%2C%20you,const%20parent%20%3D%20current.parentNode%3B%20Code%20language%3A%20JavaScript%20%28javascript%29"
       >https://www.javascripttutorial.net/dom/traversing/get-the-parent-of-an-element/#:~:text=To%20get%20the%20parent%20of%20an%20element%2C%20you,const%20parent%20%3D%20current.parentNode%3B%20Code%20language%3A%20JavaScript%20%28javascript%29</a></li>
+      </ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -1172,7 +1177,7 @@ let chiLd = `<template id="ready">
       >https://api.jquery.com/children/#children-selector</a></li>
       <li><a
         href="https://www.c-sharpcorner.com/UploadFile/54472d/how-to-retrieve-child-elements-using-javascript/"
-      >https://www.c-sharpcorner.com/UploadFile/54472d/how-to-retrieve-child-elements-using-javascript/</a></li>
+      >https://www.c-sharpcorner.com/UploadFile/54472d/how-to-retrieve-child-elements-using-javascript/</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -1212,7 +1217,7 @@ let getByKlass = `<template id="ready">
       >https://api.jquery.com/prepend/#prepend-function-function</a></li>
       <li><a
         href="https://stackoverflow.com/questions/9427311/how-to-get-all-elements-by-class-name"
-      >https://stackoverflow.com/questions/9427311/how-to-get-all-elements-by-class-name</a></li>
+      >https://stackoverflow.com/questions/9427311/how-to-get-all-elements-by-class-name</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -1249,7 +1254,7 @@ let getByYd = `<template id="ready">
       >https://api.jquery.com/prepend/#prepend-function-function</a></li>
       <li><a
         href="https://stackoverflow.com/questions/9427311/how-to-get-all-elements-by-class-name"
-      >https://stackoverflow.com/questions/9427311/how-to-get-all-elements-by-class-name</a></li>
+      >https://stackoverflow.com/questions/9427311/how-to-get-all-elements-by-class-name</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -1290,7 +1295,7 @@ let allKlass = `<template id="ready">
       >https://api.jquery.com/prepend/#prepend-function-function</a></li>
       <li><a
         href="https://stackoverflow.com/questions/9427311/how-to-get-all-elements-by-class-name"
-      >https://stackoverflow.com/questions/9427311/how-to-get-all-elements-by-class-name</a></li>
+      >https://stackoverflow.com/questions/9427311/how-to-get-all-elements-by-class-name</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -1335,7 +1340,7 @@ let attrSelect = `<template id="ready">
       >https://api.jquery.com/selected-selector/#selected1</a></li>
       <li><a
         href="https://usefulangle.com/post/83/html-select-common-operations-with-javascript"
-      >https://usefulangle.com/post/83/html-select-common-operations-with-javascript</a></li>
+      >https://usefulangle.com/post/83/html-select-common-operations-with-javascript</a></li></ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
@@ -1382,7 +1387,8 @@ let primaSelect = `<template id="ready">
       <li><a
         href="https://www.javatpoint.com/javascript-setattribute#:~:text=JavaScript%20setAttribute%20%28%29%20The%20setAttribute%20%28%29%20method%20is,%28%29%20method%20to%20update%20the%20existing%20attribute%27s%20value.
 ">https://www.javatpoint.com/javascript-setattribute#:~:text=JavaScript%20setAttribute%20%28%29%20The%20setAttribute%20%28%29%20method%20is,%28%29%20method%20to%20update%20the%20existing%20attribute%27s%20value</a></li>
-      <div class="demo">
+</ul>      
+<div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
         </div>
@@ -1433,7 +1439,8 @@ let inputValue = `<template id="ready">
       <li><a
         href="https://www.javatpoint.com/javascript-setattribute#:~:text=JavaScript%20setAttribute%20%28%29%20The%20setAttribute%20%28%29%20method%20is,%28%29%20method%20to%20update%20the%20existing%20attribute%27s%20value.
 ">https://www.javatpoint.com/javascript-setattribute#:~:text=JavaScript%20setAttribute%20%28%29%20The%20setAttribute%20%28%29%20method%20is,%28%29%20method%20to%20update%20the%20existing%20attribute%27s%20value</a></li>
-      <div class="demo">
+</ul>      
+<div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
         </div>
@@ -1461,7 +1468,7 @@ let removeAllSe = `<template id="ready">
       <li><a
         href="https://stackoverflow.com/questions/10842471/how-to-remove-all-elements-of-a-certain-class-from-the-dom"
       >https://stackoverflow.com/questions/10842471/how-to-remove-all-elements-of-a-certain-class-from-the-dom</a></li>
-      
+      </ul>
       <div class="demo">
               <div class= "vanilla">
           <button class="vanilla-button">Vanilla!</button>
