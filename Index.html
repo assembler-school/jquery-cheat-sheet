@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/javascript.js" defer></script>
+    <script src="./js/jQuery.js" defer></script>
+    <title> jQuery Cheat Sheet</title>
+</head>
+
+<body>
+
+    <head class="body__head-container">
+        <h1 class="head__title">jQuery Cheat Sheet</h1>
+    </head>
+    <main>
+        <div id="container" class="main__container-grid">
+            <div class="questions titles">Events</div>
+            <div class="javaScript titles">javascript</div>
+            <div class="jQuery titles">jQuery</div>
+            <div id="question1" class="items"> HTML item has been clicked</div>
+            <button id="solutionjs1" class="solution__js items">click me</button>
+            <button id="solutionjq1" class="solution__jq items">click me</button>
+            <div id="question2" class="items"> HTML item has been double clicked</div>
+            <button id="solutionjs2" class="solution__js items">double click me</button>
+            <button id="solutionjq2" class="solution__jq items">double click me</button>
+            <div id="question3" class="items">presses a key on the keyboard</div>
+            <div id="solutionjs3" class="solution__js items">press key</div>
+            <div id="solutionjq3" class="solution__jq items">press key</div>
+            <div id="question4" class="items">mouse over</div>
+            <div id="solutionjs4" class="solution__js items">hover here</div>
+            <div id="solutionjq4" class="solution__jq items">hover here</div>
+            <div id="question5" class="items"> changes a value
+                <input id="inputText" class="question5"></input>
+            </div>
+            <div id="solutionjs5" class="solution__js items"></div>
+            <div id="solutionjq5" class="solution__jq items"></div>
+            <div class="items centre_intem">When an image is loaded</div>
+            <div id="solutionjs6" class="solution__js">
+                <button class="items centre_intem" id="question6">Create img</button>
+            </div>
+            <div id="solutionjq6" class="solution__jq"></div>
+            <div id="question7" class="items centre_intem">When an image fails to load</div>
+            <div id="solutionjs7" class="solution__js"></div>
+            <div id="solutionjq7" class="solution__jq"></div>
+            <div id="question8" class="items">When a form is submitted</div>
+            <div id="solutionjs8" class="solution__js">
+                <div id="formJs" class="solution__js">
+                    <form id="formContainerJs">
+                        <fieldset>
+                            <legend>gender</legend>
+                            <input checked="checked" name="sex" type="radio" value="male" /> Male <br />
+                            <input name="sex" type="radio" value="female" /> Female <br />
+                            <button type="submit" value="Submit">Submit</button>
+                        </fieldset>
+                    </form>
+                    <div id="formJsText"></div>
+                </div>
+            </div>
+            <div id="solutionjq8" class="solution__jq">
+                <div id="formJq" class="solution__jq">
+                    <form id="formContainerJq">
+                        <fieldset>
+                            <legend>gender</legend>
+                            <input checked="checked" name="sex" type="radio" value="male" /> Male <br />
+                            <input name="sex" type="radio" value="female" /> Female <br />
+                            <button id="submitFormJq" type="submit" value="Submit">Submit</button>
+                        </fieldset>
+                    </form>
+                    <div id="formJqText"></div>
+                </div>
+            </div>
+            <div id="question9" class="items">When a checkbox is checked or unchecked</div>
+            <div class="solution__js items"><input id="soluctionjs9" type="checkbox"></input>
+                <span id="checkboxjs9">checkbox</span>
+            </div>
+            <div class="solution__jq items"><input id="soluctionjq9" type="checkbox"></input>
+                <span id="checkboxjq9">checkbox</span>
+            </div>
+            <div id="question10" class="items centre_intem">item is clicked, show the item clicked</div>
+            <div id="solutionjs10" class="solution__js">
+                <ul id="listItemsJs">
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                    <li>Go </li>
+                </ul>
+
+            </div>
+            <div id="solutionjq10" class="solution__jq">
+                <ul id="listItemsJq">
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                    <li>Go </li>
+                </ul>
+            </div>
+            <!--functions-->
+            <div class="questions titles">function</div>
+            <div class="javaScript titles">javascript</div>
+            <div class="jQuery titles">jQuery</div>
+            <div class="items centre_intem">Create an HTML element with any text value</div>
+            <div id="soluctionFunctionJS1" class="solution__js"><button class="items centre_intem" id="createElement">create element</button></div>
+            <div id="solutionFunctionJq1" class="solution__jq"><button class="items centre_intem" id="createElementjq">create element</button></div>
+            <div class="items centre_intem">Remove an HTML element with any text value</div>
+            <div id="soluctionFunctionJS" class="solution__js"><button class="items centre_intem" id="removeElement">remove element</button></div>
+            <div class="solution__jq"><button class="items centre_intem" id="removeElementJq">remove element</button></div>
+            <div class="items centre_intem">Append an HTML element</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="appendElement">Append element</button>
+                <ul id="listItemsJsfunction">
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li i>C++</li>
+                </ul>
+            </div>
+            <div class="solution__jq"> <button class="items centre_intem" id="appendElementJq">Append element</button>
+                <ul id="listItemsJqfunction">
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li i>C++</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Prepend an HTML element </div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="prependElement">Prepend element</button>
+                <ul id="listItemsJsfunctionPrepend">
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li i>C++</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="prependElementJq">Prepend element</button>
+                <ul id="listItemsJqfunctionPrepend">
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li i>C++</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Create and add an HTML element with any text value after another element</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="prependCreateElement">Create and append after element</button>
+                <ul id="createApppendJsFun">
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="prependCreateElementJq">Create and append after element</button>
+                <ul id="createApppendJqFun">
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Create and add an HTML element with any text value before another element</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="beforeElement">Create and append before  element</button>
+                <ul id="createApppend">
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="beforeElementJq">Create and append before  element</button>
+                <ul>
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                    <div id="createApppendJqBe"></div>
+                </ul>
+            </div>
+            <div class="items centre_intem">Clone an HTML element within other element</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="CloneElementButton">Clone an HTML element </button>
+                <ul id="intemlistClon">
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                    <li id="elementClon">GO</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="CloneElementButtonJq">Clone an HTML element </button>
+                <ul id="intemlistClonJq">
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                    <li id="elementClonJq">GO</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Add a class to an HTML item</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="classButton">Add Class </button>
+                <ul>
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                    <li id="addClass">Go</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="classButtonJq">Add Class </button>
+                <ul>
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                    <li id="addClassJq">Go</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Remove a class to an HTML item</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="classButtonR">Remove Class </button>
+                <ul>
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                    <li id="removeClass" class="background__item">Go</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="classButtonRJq">Remove Class </button>
+                <ul>
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                    <li id="removeClassJq" class="background__item">Go</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Toggle a class of an HTML item</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="classButtonToggle">Toggle Class </button>
+                <ul>
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                    <li id="toggleClass" class="background__item">Go</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="classButtonToggleJq">Toggle Class </button>
+                <ul>
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                    <li id="toggleClassJq" class="background__item">Go</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Add a disabled attribute to an HTML button</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="disabledButton">disabled button</button>
+                <input class="centre_intem" type="text" id="clickMeButton"></input>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="disabledButtonJq">disabled button</button>
+                <input class="centre_intem" type="text" id="clickMeButtonJq"></input>
+            </div>
+            <div class="items centre_intem">Remove the disabled attribute of an HTML button</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="enableButton"> remove disabled</button>
+                <input class="centre_intem" type="text" id="clickMeButtonEnable" disabled="disabled"></input>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="enableButtonJq"> remove disabled</button>
+                <input class="centre_intem" type="text" id="clickMeButtonEnableJq" disabled="disabled"></input>
+            </div>
+            <div class="items centre_intem">Set a data-src attribute to a img eleme</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="createSrcButton">change src Img</button>
+                <img class="img solution__js" src="./img/jq.jpg" id="imgCreateSrc">
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="createSrcButtonJq">change src Img</button>
+                <img class="img solution__jq" src="./img/jq.jpg" id="imgCreateSrcJq">
+            </div>
+            <div class="items centre_intem">Remove the data-src attribute of the img element</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="removeSrcButton">Remove src Img</button>
+                <img class="img solution__js" src="./img/jq.jpg" id="imgRemoveSrc">
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="removeSrcButtonJq">Remove src Img</button>
+                <img class="img solution__jq" src="./img/jq.jpg" id="imgRemoveSrcJq">
+            </div>
+            <div class="items centre_intem">Hide an HTML element on click (display: none)</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="buttonHideElement">click hide element</button>
+                <div id="Hideme"> Hide me</div>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="buttonHideElementJq">click hide element</button>
+                <div id="HidemeJq"> Hide me</div>
+            </div>
+            <div class="items centre_intem">Show an HTML element on click (display: block)</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="buttonShowElement">click show element</button>
+                <div id="showMe" class="none"> Show me</div>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="buttonShowElementJq">click show element</button>
+                <div id="showMeJq" class="none"> Show me</div>
+            </div>
+            <div class="items centre_intem">Fade in an HTML element using jQuery</div>
+            <div id="soluctionFunctionJS" class="solution__js"></div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="fadeInButton">FadeIn</button>
+                <img class="img solution__jq none" src="./img/jq.jpg" id="imgFadeIn">
+            </div>
+            <div class="items centre_intem">Fade out an HTML element using jQuery</div>
+            <div id="soluctionFunctionJS" class="solution__js"></div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="fadeOutButton">FadeIn</button>
+                <img class="img solution__jq none" src="./img/js.jpg" id="imgFadeOut">
+            </div>
+            <div class="questions titles">Selector</div>
+            <div class="javaScript titles">javascript</div>
+            <div class="jQuery titles">jQuery</div>
+            <div class="items centre_intem">Iterate a collection of elements and apply a change of style on them</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="changeStyleButton">Change Style</button>
+                <ul>
+                    <li id="itemIterable">javascript</li>
+                    <li id="itemIterable">python</li>
+                    <li id="itemIterable">C++</li>
+                    <li id="itemIterable">Go</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="changeStyleButtonJq">Change Style</button>
+                <ul>
+                    <li id="itemIterableJq">javascript</li>
+                    <li id="itemIterableJq">python</li>
+                    <li id="itemIterableJq">C++</li>
+                    <li id="itemIterableJq">Go</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Get the parent element of a certain element and change its font weight</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="">change font weight</button>
+                <ul>language
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="">change font weight</button>
+                <ul>language
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Get the collection of children of a certain element and change its font weight</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="">change children font</button>
+                <ul>language
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="">change children font</button>
+                <ul>language
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Get all the elements that have a certain class and change their font weight</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="">Add class and change font</button>
+                <ul>language
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <div id="soluctionFunctionJS" class="solution__js">
+                    <button class="items centre_intem" id="">Add class and change font</button>
+                    <ul>language
+                        <li>javascript</li>
+                        <li>python</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="items centre_intem">Get an item by id and change its font weight</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="">change font item</button>
+                <ul>language
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="">change font item</button>
+                <ul>language
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Get all the elements that have a certain class and the display property of none</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="">change class and display</button>
+                <ul>language
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="">change class and display</button>
+                <ul>language
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="items centre_intem">Get the options of a select element that are selected (attribute selected)</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="">select elements</button>
+                <select>language
+                    <option>javascript</option>
+                    <option>python</option>
+                    <option>C++</option>
+                </select>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="">select elements</button>
+                <select>language
+                    <option>javascript</option>
+                    <option>python</option>
+                    <option>C++</option>
+                    </select>
+            </div>
+            <div class="items centre_intem">Change the href attribute of the first a element</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="">change href</button>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="">change href</button>
+
+            </div>
+            <div class="items centre_intem">Show an alert with the value of the first input of the page</div>
+            <div id="soluctionFunctionJS" class="solution__js">
+                <button class="items centre_intem" id="">Alert</button>
+            </div>
+            <div class="solution__jq">
+                <button class="items centre_intem" id="">Alert</button>
+            </div>
+            <div class="items centre_intem">Remove all items from a specific selector</div>
+            <div id="soluctionFunctionJS" class="solution__js"></div>
+            <div class="solution__jq"></div>
+            <div class="items centre_intem">Animate an item after 2 seconds from the initial page load</div>
+            <div id="soluctionFunctionJS" class="solution__js"></div>
+            <div class="solution__jq"></div>
+        </div>
+    </main>
+</body>
+
+</html>
