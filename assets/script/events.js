@@ -170,8 +170,8 @@ $("#whichOption").on("change", () => {
             break;
 
         case "When an Image is loaded":
-            let imgJS = $('<img src="./assets/cat.jpeg"></img>');
-            let imgJQ = $('<img src="./assets/cat.jpeg"></img>');
+            let imgJS = $('<img src="./assets/images/cat.jpeg"></img>');
+            let imgJQ = $('<img src="./assets/images/cat.jpeg"></img>');
             let imgDiv = $(
                 "<div><p>You can perform a certain task as soon as the image finishes loading:</p> <p><code>image.addEventListener('load', ()=>{function goes here})</code></p></div>"
             );
@@ -311,22 +311,22 @@ $("#whichOption").on("change", () => {
                 jsScreen.text("");
 
                 if (e.target.innerHTML === "Doggo") {
-                    let img = $("<img src='./assets/doggo.jfif'>");
+                    let img = $("<img src='./assets/images/doggo.jfif'>");
 
                     jsScreen.append(img);
                 }
                 if (e.target.innerHTML === "Catto") {
-                    let img = $("<img src='./assets/catto.jpg'>");
+                    let img = $("<img src='./assets/images/catto.jpg'>");
                     jsScreen.append(img);
                 }
                 if (e.target.innerHTML === "Smoll Doggo") {
-                    let img = $("<img src='./assets/smoll.jpg'>");
+                    let img = $("<img src='./assets/images/smoll.jpg'>");
 
                     jsScreen.append(img);
                 }
 
                 if (e.target.innerHTML === "Chunky Doggo") {
-                    let img = $("<img src='./assets/thiccboi.jpg'>");
+                    let img = $("<img src='./assets/images/thiccboi.jpg'>");
 
                     jsScreen.append(img);
                 }
