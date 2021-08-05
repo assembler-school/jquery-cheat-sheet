@@ -1,0 +1,15 @@
+/**
+ * MODULE - BRAND
+ */
+
+.brand{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.brand__title{
+  font-size: 2rem;
+  margin-bottom: 0;
+}

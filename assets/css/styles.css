@@ -1,0 +1,24 @@
+/**
+ * STYLES
+ */
+
+/* BASE FOLDER */
+@import "BASE/reset.css";
+
+ /* LAYOUT FOLDER */
+@import "LAYOUT/common.css";
+
+ /* MODULE FOLDER */
+@import "MODULE/nav.css";
+@import "MODULE/header.css";
+@import "MODULE/toggle.css";
+@import "MODULE/exercise.css";
+@import "MODULE/accordion.css";
+@import "MODULE/example.css";
+@import "MODULE/brand.css";
+
+ /* STATUS FOLDER */
+@import "STATUS/dark-mode.css";
+
+ /* THEME FOLDER */
+@import "THEME/vars.css";

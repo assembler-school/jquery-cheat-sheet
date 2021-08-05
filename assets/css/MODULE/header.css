@@ -1,0 +1,18 @@
+/**
+ * MODULE - BURGER
+ */
+
+.header {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1da1f2;
+}
+
+.header__title{
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0;
+}

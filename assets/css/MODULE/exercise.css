@@ -1,0 +1,110 @@
+/**
+ * MODULE - CODE EXAMPLE
+ */
+
+.exercise{
+  margin-bottom: 3rem;
+}
+
+.exercise__title{
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.exercise__try {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.exercise__try button {
+  border: 1px solid grey;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 20rem;
+}
+
+.exercise__try button:last-child {
+  margin-bottom: 0;
+}
+
+.exercise__try img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 0;
+  margin: 0 auto;
+}
+
+.exercise__try p,
+.exercise__try a{
+  text-align: center;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+}
+
+.exercise__try a {
+  color: #1da1f2;
+}
+
+.exercise__try form {
+  text-align: center;
+}
+
+.exercise__try input:not(input[type='checkbox']) {
+  border: 1px solid grey;
+  width: 20rem;
+  padding: 0.6rem 1.2rem;
+  margin: 0 auto 1rem;
+}
+
+.exercise__try input:last-child {
+  margin: 0 auto;
+}
+
+.exercise__try input[type='checkbox'] {
+  margin: 0 1rem 0 0;
+}
+
+.exercise__try label {
+  min-width: 10rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.exercise__try select {
+  border: 1px solid grey;
+  width: 20rem;
+  padding: 0.6rem 1.8rem 0.6rem 0.6rem;
+  margin: 0 auto 1rem;
+}
+
+.exercise__try ol {
+  padding-left: 1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.exercise__try ol li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.exercise__code{
+  line-height: 1.25;
+  padding: 3rem;
+  margin-bottom: 1rem;
+  background-color: #f8f9fa;
+  position: relative;
+  font-size: 1.4rem;
+  color: var(--black);
+}
+
+.exercise__code p:not(:last-child) {
+  padding-bottom: 6px;
+}
+
+.exercise__code *:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

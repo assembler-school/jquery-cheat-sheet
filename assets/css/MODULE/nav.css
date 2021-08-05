@@ -1,0 +1,44 @@
+/**
+ * MODULE - NAV
+ */
+
+.nav {
+  /* padding: 3rem 1rem 3rem 2.5rem;
+  height: 100%; */
+}
+
+.nav__title{
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0 1.2rem;
+}
+
+.nav__list{
+  /* padding-left: 1.2rem; */
+  padding-bottom: 2rem;
+}
+
+.nav__item{
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 0.6rem 1rem 0.6rem;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.25;
+}
+
+.nav__item.current{
+  background-color: #F8F9FA;
+}
+
+.nav__anchor{
+  text-decoration: none;
+  color: #848484;
+}
+
+.nav__item:hover .nav__anchor,
+.nav__item.active .nav__anchor{
+  color: #333;
+}
