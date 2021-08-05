@@ -8,8 +8,11 @@
 }
 
 :root {
-  --black: black;
-  --white: white;
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --red: rgb(218, 49, 49);
+  --grey: rgb(150, 150, 150);
+  --light-black: rgb(27, 27, 27);
   --color1: rgb(120, 212, 212);
   --color2: rgb(233, 124, 233);
   --color3: rgb(109, 192, 127);
@@ -58,7 +61,17 @@ li {
   cursor: pointer;
 }
 
+li:hover {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--light-black);
+}
+
 h1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
   font-size: 3rem;
   margin-left: 5rem;
 }
@@ -70,12 +83,16 @@ h2 {
 
 footer {
   grid-area: 3 / 1 / span 1 / span 3;
-  color: var(--white);
+  color: var(--grey);
   font-size: 1rem;
   letter-spacing: 0.5rem;
   text-align: center;
   align-self: center;
   padding: 1rem;
+}
+
+i {
+    color: var(--black);
 }
 
 .header-container {
@@ -87,7 +104,7 @@ footer {
   display: grid;
   align-items: center;
   grid-template-columns: 30% 70%;
-  color: var(--white);
+  color: var(--grey);
   padding: 1rem;
 }
 
@@ -115,7 +132,7 @@ footer {
 
 /* MODAL */
 
-/* The Modal (background) */
+/* MODAL (BACKGROUND */
 .modal-main--container {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -125,23 +142,23 @@ footer {
   transform: translate(-50%, -50%);
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Modal Content/Box */
+/* MODAL CONTENT/BOX */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
+  background-color: var(--white);
+  margin: 12% auto; /* 15% from the top and centered */
+  padding: 1rem;
+  border: 1px solid var(--black);
   width: 70rem; /* Could be more or less, depending on screen size */
   height: 40rem;
 }
 
-/* The Close Button */
+/* CLOSE BUTTON */
 .modal-close {
-  color: #aaa;
+  color: var(--grey);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -149,7 +166,7 @@ footer {
 
 .modal-close:hover,
 .modal-close:focus {
-  color: black;
-  text-decoration: none;
   cursor: pointer;
+  color: var(--red);
+
 }
