@@ -11,19 +11,60 @@ import { wrapper } from "../main.js";
 import { dropOnArea } from "./sidebar.js";
 import { goToHome } from "../router.js";
 
+let id;
+let key;
+let example;
+
 function pageDisplay() {
-	getHeader();
+	if (location.hash.includes("page")) {
+		id = getExampleIdKey()[1];
+		key = getExampleIdKey()[0];
+		example = getExample(key, id);
 
-	document
-		.getElementById("page-header-logo")
-		.addEventListener("click", goToHome);
+		//header
+		getHeader();
+		document
+			.getElementById("page-header-logo")
+			.addEventListener("click", goToHome);
 
-	insertTemplate(wrapper, pageMainTemplate, "page-main-temp");
-	getFooter();
-	if (document.querySelectorAll("div[draggable=true]")) {
-		eventsGrabbing();
-		dropOnArea();
+		//main
+		insertTemplate(wrapper, pageMainTemplate, "page-main-temp");
+		//drag only on desktop
+		if (document.querySelectorAll("div[draggable=true]")) {
+			eventsGrabbing();
+			dropOnArea();
+		}
+		insertTitles();
+		insertText();
+		insertExamples();
+
+		//footer
+		getFooter();
 	}
+}
+
+function insertTitles() {
+	document.getElementById("page-main-type-title").innerHTML = example.type;
+	document.getElementById("page-main-example-title").innerHTML = example.title;
+}
+
+function insertText() {
+	let jsText = document.createElement("p");
+	jsText.classList.add("text-content__js-text");
+	jsText.textContent = example.js_text;
+	document.getElementById("js-col").insertAdjacentElement("beforeend", jsText);
+
+	let jqueryText = document.createElement("p");
+	jqueryText.textContent = example.jquery_text;
+	jqueryText.classList.add("text-content__jquery-text");
+	document
+		.getElementById("jquery-col")
+		.insertAdjacentElement("beforeend", jqueryText);
+}
+
+function insertExamples() {
+	document.getElementById("js-example").innerHTML = example.js_example;
+	document.getElementById("jquery-example").innerHTML = example.jquery_example;
 }
 
 function eventsGrabbing() {
@@ -39,21 +80,15 @@ function startDragging(e) {
 	updateLocalStorage("codeOption", e.target.id);
 	e.target.classList.add("is-dragging");
 
-	//Actualizar con el texto que trae el objeto con el id de la card
-	let id = getExampleIdKey()[1];
-	let key = getExampleIdKey()[0];
-
 	if (localStorage.getItem("codeOption") === "jquery-code") {
-		updateLocalStorage("code", getExample(key, id).jquery_code);
+		updateLocalStorage("code", example.jquery_code);
 	} else if (localStorage.getItem("codeOption") === "js-code") {
-		updateLocalStorage("code", getExample(key, id).js_code);
+		updateLocalStorage("code", example.js_code);
 	}
 }
 
 function stopDragging(e) {
 	e.target.classList.remove("is-dragging");
 }
-
-//*TODO audio when dragged on drop on
 
 export { pageDisplay };
