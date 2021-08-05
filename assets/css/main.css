@@ -1,0 +1,19 @@
+/*--------------------FONT FAMILIES-------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap"); /*font-family: 'Creepster', cursive;*/
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap"); /*font-family: 'Oswald', sans-serif;*/
+
+/*----------------------COMMON CSS---------------------*/
+
+@import "./common/styles.css";
+@import "./common/reset.css";
+
+/*-----------------------MODULES----------------------*/
+
+@import "./modules/intro-page.css";
+@import "./modules/content-page.css";
+@import "./modules/cheat-list.css";
+
+/*-----------------------CASES------------------------*/
+
+@import "./cases.css";

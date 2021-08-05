@@ -1,0 +1,79 @@
+.hint {
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 1px var(--freak);
+  font-size: 1.2rem;
+  width: 80%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  background-color: white;
+}
+
+.div--icons {
+  font-size: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.input {
+  font-size: 2rem;
+  color: red;
+  background-color: black;
+  border: 2px solid red;
+  padding: 1rem;
+}
+
+.input--good {
+  font-size: 2rem;
+  color: black;
+  background-color: white;
+  border: 2px solid lightblue;
+  padding: 1rem;
+}
+
+.button--good {
+  box-shadow: 2px 2px 2px 1px lightskyblue;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.button--good:hover,
+.button--evil:hover {
+  padding: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.button--evil {
+  box-shadow: 2px 2px 2px 1px red;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
+}
+
+.img--spell {
+  width: 4rem;
+}
+
+.warning {
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 1px var(--freak);
+  font-size: 1.2rem;
+  width: 60%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  background-color: white;
+}
+
+/*--------------------------------VIEW CLASSES-----------------------------*/
+
+.view--0 {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}

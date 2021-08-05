@@ -1,0 +1,55 @@
+/*-----------------------------GENERAL STUFF--------------------------------*/
+
+* {
+  font-family: "Oswald", sans-serif;
+}
+
+html {
+  background-color: black;
+}
+
+/*-----------------------------VARIABLES--------------------------------*/
+
+:root {
+  --freak: rgb(2, 255, 2);
+}
+
+/*-----------------------------MAIN STYLES--------------------------------*/
+
+.header__nav {
+  margin: 1rem auto;
+  height: 3rem;
+  width: 50%;
+  background-color: var(--freak);
+  display: flex;
+  padding: 0.7rem;
+  justify-content: center;
+  gap: 10rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header__nav a:hover {
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
+/*-------------------------------BUTTONS--------------------------------*/
+
+.button {
+  cursor: pointer;
+}
+
+.button--scary {
+  font-family: "Creepster", cursive;
+  margin: 2rem 43rem;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  box-shadow: 2px 2px 2px 1px var(--freak);
+}

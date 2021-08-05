@@ -1,0 +1,50 @@
+.main__cheat {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.cheat {
+  border: 2px solid red;
+  padding: 1rem;
+  background-color: white;
+}
+
+.cheat--js {
+  grid-column: 1 / 4;
+  grid-row: 1 / 7;
+}
+
+.cheat--jq {
+  grid-column: 5 / 8;
+  grid-row: 1 / 7;
+}
+
+.main__view {
+  height: 30rem;
+  background-image: url("../../img/night-cemetery.jpg");
+}
+
+/*-------------------------------------------BUTTONS-----------------------------------*/
+
+.button--guide {
+  flex-basis: 5%;
+  background-color: darkgoldenrod;
+  color: brown;
+}
+
+.button--code {
+  margin: 2rem 45%;
+}
+
+#show-jq {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+
+#show-js {
+  grid-column: 4 / 5;
+  grid-row: 5 / 7;
+}
