@@ -85,7 +85,7 @@ function createInfoBox(ids) {
 
 function fillObjectsJS(objectsJS) {
   for (const objectJS of objectsJS) {
-    let infoJQ =
+    let infoJS =
       //*Template of the slide
       `<template id="infoJS-${objectJS.id}">
       <div id="javaScript-${objectJS.id}" class="box javaScript">
@@ -112,7 +112,7 @@ function fillObjectsJS(objectsJS) {
       </template>`;
     console.log(`${objectJS.id}`);
     let toInsertInfo = document.getElementById(`info-${objectJS.id}`); //*Select were insert template, in html
-    toInsertInfo.insertAdjacentHTML("beforeend", infoJQ); //*insert only read teamplate (aka Ghost Template)
+    toInsertInfo.insertAdjacentHTML("beforeend", infoJS); //*insert only read teamplate (aka Ghost Template)
     let contentTemplate = document.getElementById(
       `infoJS-${objectJS.id}`
     ).content; //*select the ghost template
@@ -182,6 +182,7 @@ function fillObjectsJQ(objectsJQ) {
 
 function fillInfoCamps(ids) {
   findObjects(ids);
+  document.getElementById("bottom").innerHTML = "";
   createInfoBox(ids);
   fillObjectsJS(findObjects(ids)[findObjects(ids).length - 1].objectsJS);
   fillObjectsJQ(findObjects(ids)[findObjects(ids).length - 1].objectsJQ);
