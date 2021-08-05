@@ -27,35 +27,32 @@ let templateContent = `
 <template id="content">
 <div id="content">
         <header id="header">
-          <button id="previous" class="button button--guide">PREVIOUS</button>
           <nav class="header__nav">
             <a href="#main" id="go-home" class="header__link">Home</a>
             <a href="#cheatList" id="go-list" class="header__link">Cheat List</a>
           </nav>
-          <button type="button" id="next" class="button button--guide">
-            NEXT
-          </button>
         </header>
         <main class="main">
           <section class="main__cheat">
-            <article class="cheat cheat--js cheat--selected" id="JS-method">
+            <article class="cheat cheat--js" id="JS-method">
               <p class="info" id="js-info"></p>
-              <button id="show-code" class="button button--code">
-                &lt;/&gt;
-              </button>
             </article>
             <button
-              id="change-code"
+              id="show-jq"
               value="JQuery"
               class="button button--change"
             >
-              JQuery
+            JQuery
+            </button>
+            <button
+              id="show-js"
+              value="JavaScript"
+              class="button button--change"
+            >
+              JavaScript
             </button>
             <article class="cheat cheat--jq" id="JQ-method">
               <p class="info" id="jq-info"></p>
-              <button id="show-code" class="button button--code">
-                &lt;/&gt;
-              </button>
             </article>
           </section>
           <div class="main__view" id="view"></div>

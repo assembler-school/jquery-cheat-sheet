@@ -4,6 +4,10 @@
   font-family: "Oswald", sans-serif;
 }
 
+html {
+  background-color: black;
+}
+
 /*-----------------------------VARIABLES--------------------------------*/
 
 :root {
@@ -12,19 +16,11 @@
 
 /*-----------------------------MAIN STYLES--------------------------------*/
 
-header {
-  display: flex;
-  margin: 2rem;
-  gap: 2rem;
-  justify-content: space-between;
-}
-
 .header__nav {
-  flex-basis: 40%;
+  margin: 2rem auto;
   height: 3rem;
-  width: 2rem;
-  background-color: black;
-  color: var(--freak);
+  width: 50%;
+  background-color: var(--freak);
   display: flex;
   padding: 0.7rem;
   justify-content: center;
@@ -33,7 +29,7 @@ header {
 
 a {
   text-decoration: none;
-  color: var(--freak);
+  color: black;
 }
 
 .header__nav a:hover {
@@ -49,7 +45,7 @@ a {
 
 .button--scary {
   font-family: "Creepster", cursive;
-  margin: 2rem 1rem 1rem;
+  margin: 2rem 43rem;
   font-size: 2rem;
   padding: 1rem;
   border-radius: 50%;

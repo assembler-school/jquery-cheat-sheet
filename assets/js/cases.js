@@ -59,6 +59,18 @@ import { js30 } from "./js-cases/data-cheat-30.js";
 import { jq30 } from "./jq-cases/data-cheat-30.js";
 import { js31 } from "./js-cases/data-cheat-31.js";
 import { jq31 } from "./jq-cases/data-cheat-31.js";
+import { js32 } from "./js-cases/data-cheat-32.js";
+import { jq32 } from "./jq-cases/data-cheat-32.js";
+import { js33 } from "./js-cases/data-cheat-33.js";
+import { jq33 } from "./jq-cases/data-cheat-33.js";
+import { js34 } from "./js-cases/data-cheat-34.js";
+import { jq34 } from "./jq-cases/data-cheat-34.js";
+import { js35 } from "./js-cases/data-cheat-35.js";
+import { jq35 } from "./jq-cases/data-cheat-35.js";
+import { js36 } from "./js-cases/data-cheat-36.js";
+import { jq36 } from "./jq-cases/data-cheat-36.js";
+import { js37 } from "./js-cases/data-cheat-37.js";
+import { jq37 } from "./jq-cases/data-cheat-37.js";
 
 const cases = [
   {
@@ -389,36 +401,66 @@ const cases = [
     dataCheat: 32,
     content:
       "Get the collection of children of a certain element and change its font weight",
-    saga: "forces-of-good", //!Determinate
+    saga: "forces-of-evil",
+    js: "The read-only <b>children property</b> returns a live HTMLCollection which contains all of the child elements of the element upon which it was called.",
+    jq: "Given a jQuery object that represents a set of DOM elements, the <b>.children()</b> method allows us to search through the children of these elements in the DOM tree and construct a new jQuery object from the matching elements.",
+    hint: "When the cursed words are spoken out loud, black magic takes place",
+    jsFunction: js32,
+    jqFunction: jq32,
   },
   {
     dataCheat: 33,
     content:
       "Get all the elements that have a certain class and change their font weight",
-    saga: "forces-of-good",
+    saga: "forces-of-evil",
+    js: "The <b>getElementsByClassName</b> method of Document interface returns an array-like object of all child elements which have all of the given class name(s).",
+    jq: "The selector <b>('.class')</b> selects all elements with the given class.",
+    hint: "When the cursed words are spoken out loud, black magic takes place",
+    jsFunction: js33,
+    jqFunction: jq33,
   },
   {
     dataCheat: 34,
     content: "Get an item by id and change its font weight",
     saga: "forces-of-good",
+    js: "The document method <b>getElementById()</b> returns an Element object representing the element whose id property matches the specified string.",
+    jq: "The selector <b>('#id')</b> selects the element with the given id.",
+    hint: "Our prayers will be heard all around the word",
+    jsFunction: js34,
+    jqFunction: jq34,
   },
   {
     dataCheat: 35,
     content:
       "Get all the elements that have a certain class and the display property of none and change their font color",
     saga: "forces-of-good",
+    js: "We need to mix here the previously seen methods of <b>getElementsByClass()</b> and the <b>element.style.display</b>",
+    jq: "We need to mix here the class selector <b>('.class')</b> and the <b>.attr()</b> method",
+    hint: "Open the Scriptures and let the prayers calm your soul",
+    jsFunction: js35,
+    jqFunction: jq35,
   },
   {
     dataCheat: 36,
     content:
       "Get the options of a select element that are selected (attribute selected)",
     saga: "forces-of-evil",
+    js: "A select element can accept more than one option with the <b>multiple</b> attribute.",
+    jq: "The property <b>selected</b> allows us to identify the elements which have been chosen by the user",
+    hint: "Select all the options you want and create your own legion of monsters!",
+    jsFunction: js36,
+    jqFunction: jq36,
   },
   {
     dataCheat: 37,
     content:
       "Change the href attribute of the first &lt;a&gt; element (You have to create several &lt;a&gt; elements)",
     saga: "forces-of-evil",
+    js: "The <b>.href</b> allows to change the direction of any anchor. As for the first element, we have several options, but a <b>querySelector</b> will be enough.",
+    jq: "JQuery treats the hrefs as attributes, so it is easy to change them. On the contrary, its selector do not take only the first element with a class, so we will use here the <b>first-of-type()</b> selector.",
+    hint: "Dark arts can take you to other scary worlds",
+    jsFunction: js37,
+    jqFunction: jq37,
   },
   {
     dataCheat: 38,
