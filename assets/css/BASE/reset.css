@@ -1,0 +1,23 @@
+/**
+* BASE - RESET 
+*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+.body {
+    --tw-bg-opacity: 1;
+    background-color: rgba(243,244,246,var(--tw-bg-opacity));
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+}

@@ -1,0 +1,61 @@
+/**
+ * MODULE - MODAL
+ */
+
+.modal__parent {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none; 
+    background: rgba(0, 0, 0, 0.8);
+    color: black;
+    transition: opacity 500ms ease-in;
+}
+
+.modal__content {
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+.x {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.visible {
+    display: block;
+}
+
+.modal__content-title {
+    margin-left: 1rem;
+    text-align: center;
+}
+
+.modal__content-js,
+.modal__content-jquery {
+    display: flex;
+    align-items: space-between; 
+}
+
+.modal__content-js--code h4,
+.modal__content-jquery--code h4 {
+    margin-left: 1rem;
+    margin-top: 0.8rem;
+}
+
+.modal__content-js--example {
+    margin: auto;
+}
+
