@@ -2,11 +2,6 @@
 @import url("//db.onlinewebfonts.com/c/33c69019b1d9231e1004f52ae937b0da?family=Neutraface+Text+Bold");
 
 @font-face {
-  font-family: chalkBoy;
-  src: url(/assets/fonts/ChalkboyRegular.otf);
-}
-
-@font-face {
   font-family: blankSpaceSk;
   src: url(/assets/fonts/KgBlankSpaceSketch.ttf);
 }
