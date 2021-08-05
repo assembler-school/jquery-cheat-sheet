@@ -1,0 +1,11 @@
+.header {
+  height: 7rem;
+}
+
+.title {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}

@@ -1,0 +1,75 @@
+main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border-radius: 25px;
+}
+
+.specific {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+  width: 100%;
+}
+
+.common {
+  text-align: center;
+  width: 100%;
+}
+.common p {
+  padding: 0 2rem;
+  word-break: normal;
+}
+.vanilla-wrapper,
+.jquery-wrapper {
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.vanilla-code,
+.vanilla,
+.jquery-code,
+.jquery {
+  width: 100%;
+  height: 50%;
+}
+
+.vanilla > p,
+.jquery > p {
+  cursor: pointer;
+}
+.vanilla-code p {
+  padding-left: 2rem;
+}
+
+.jquery-code p {
+  padding-right: 2rem;
+}
+
+img {
+  width: 60%;
+}
+
+input[type="text"] {
+  width: 50%;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+li:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
