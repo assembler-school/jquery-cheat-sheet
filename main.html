@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS AND JQUERY CHEATSHEET</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="js-vanilla codes\DOMload.js" defer></script>
+    <script src="Jquery codes\DOMload-jquery.js" defer></script>
+    <script src="js-vanilla codes\modal.js" defer></script>
+    <script src="js-vanilla codes\Events-on-btn.js" defer></script>
+    <script src="Jquery codes\Events-on-btn-jq.js" defer></script>
+    <script src="js-vanilla codes\event-draw.js" defer></script>
+    <script src="Jquery codes\event-draw-jq.js" defer></script>
+</head>
+<body>
+    <header id="header">
+        <h1>JS VANILLA & JQUERY CHEATSHEET</h1>
+    </header>
+    <main id="main">
+        <div class="main_container">
+            <div class="events_container">
+                <h3>Events</h3>
+                    <ul class="events_list">
+                        <li class="list_item" id="button-events" data-open="modal">Events on a Button</li>
+                        <li class="list_item" id="draw-events" data-open="modal">Event to draw</li>
+                        <li class="list_item" id="form-events" data-open="modal">Events in Forms</li>
+                        <li class="list_item" id="img-events" data-open="modal">Events on Images</li>
+                    </ul>
+            </div>
+            <div class="func_sel_container">
+                <h3>Functions and Selectors</h3>
+                    <ul class="func_sel_list">
+                        <li class="list_item">Creating and adding elements</li>
+                        <li class="list_item">Working on classes and attributes</li>
+                        <li class="list_item">Show and Hide</li>
+                        <li class="list_item">Iterating and getting elements</li>
+                    </ul>
+            </div>
+        </div>
+    </main>
+    <div class="modal_background is_hidden" id="modal" >
+        <div class="modal_container" id="modal-container">
+        </div>
+    </div>
+    <template id="template">
+        <div class="temp_container">
+            <div class="temp_content" id="temp-content">
+                <div class="working_place" id="working-place"></div>
+                <div class="language_container">
+                    <h5>JS Vanilla</h5>
+                    <div id="js-code" class="text_code"></div>
+                </div>
+                <div class="language_container">
+                    <h5>JQuery</h5>
+                    <div id="jq-code" class="text_code"></div>
+                </div>
+            </div>
+            <button class="close_btn" id="close-btn">&times;</button>
+        </div>
+
+    </template>
+    
+</body>
+</html>
