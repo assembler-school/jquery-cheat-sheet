@@ -95,7 +95,7 @@ let headerPageTemplate = `<template id="header-page-temp"><header id="page-heade
   <option value="function-Show an HTML element on click (display: block)">
   <option value="function-Fade in an HTML element using jQuery">
   <option value="function-Fade out an HTML element using jQuery">
-  <option value="function-Create an HTML element with any text value">
+  <option value="selector-Create an HTML element with any text value">
   <option value="selector-Remove an HTML element with any text value">
   <option value="selector-Append an HTML element with any text value to a parent element">
   <option value="selector-Prepend an HTML element with any text value to a parent element">
@@ -171,7 +171,7 @@ let mainHomeTemplate = `<template id="main-home-temp"><main id="home-main" class
   <option value="function-Show an HTML element on click (display: block)">
   <option value="function-Fade in an HTML element using jQuery">
   <option value="function-Fade out an HTML element using jQuery">
-  <option value="function-Create an HTML element with any text value">
+  <option value="selector-Create an HTML element with any text value">
   <option value="selector-Remove an HTML element with any text value">
   <option value="selector-Append an HTML element with any text value to a parent element">
   <option value="selector-Prepend an HTML element with any text value to a parent element">

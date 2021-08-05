@@ -181,7 +181,7 @@ function setWebSiteContent() {
 		"The setTimeout() method of the WindowOrWorkerGlobalScope mixin sets a timer which executes a function or specified piece of code once the timer expires.",
 		"Perform a custom animation of a set of CSS properties. The .animate() method allows us to create animation effects on any numeric CSS property. The only required parameter is a plain object of CSS properties. This object is similar to the one that can be sent to the .css() method, except that the range of properties is more restrictive.",
 		`<code>var cntSt = 0, cntSi = 0; function doStuffwTimeout(){ ​setTimeout(function(){if(cntSt<300){ntSt++$('#box').css('left', cntSt); doStuffwTimeout();}},2000);</code>`,
-		`<code>$( "#clickme" ).click(function() { $( "#book" ).animate({ width: [ "toggle", "swing" ], height: [ "toggle", "swing" ], opacity: "toggle"}, 2000, "linear", function() {$( this ).after( "<div>Animation complete.</div>" );});});</code>`
+		`<code>$( "#clickme" ).click(function() { $( "#book" ).animate({ width: [ "toggle", "swing" ], height: [ "toggle", "swing" ], opacity: "toggle"}, 2000, "linear", function() {$( this ).after("<div>Animation complete.</div>");});});</code>`
 	);
 
 	//15
