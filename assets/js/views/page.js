@@ -21,24 +21,23 @@ function pageDisplay() {
 		key = getExampleIdKey()[0];
 		example = getExample(key, id);
 
-		//header
 		getHeader();
 		document
 			.getElementById("page-header-logo")
 			.addEventListener("click", goToHome);
 
-		//main
+		//main *****************************************************
 		insertTemplate(wrapper, pageMainTemplate, "page-main-temp");
-		//drag only on desktop
+		//drag only on desktop-------------------------------------
 		if (document.querySelectorAll("div[draggable=true]")) {
 			eventsGrabbing();
 			dropOnArea();
 		}
+		//----------------------------------------------------------
 		insertTitles();
 		insertText();
 		insertExamples();
-
-		//footer
+		//main-end *************************************************
 		getFooter();
 	}
 }
@@ -91,4 +90,4 @@ function stopDragging(e) {
 	e.target.classList.remove("is-dragging");
 }
 
-export { pageDisplay };
+export { pageDisplay, startDragging, stopDragging };
