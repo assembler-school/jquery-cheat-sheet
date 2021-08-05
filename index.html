@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<script src="assets/js/app.js" type="module"></script>
+	</head>
+	<body>
+		<header class="p-5 bg-01">
+			<h1 class="p-0 m-0 text-align-center text-white font-family-02 font-size-xxxl">My jQuery CheatSheet</h1>
+		</header>
+		<main class="mx-center p-5">
+			<section>
+				<h2 class="m-0">Events</h2>
+				<hr />
+				<div id="grid-event-examples" class="example-grid"></div>
+			</section>
+			<section>
+				<h2 class="m-0">Manipulation</h2>
+				<hr />
+				<div id="grid-manipulation-examples" class="example-grid"></div>
+			</section>
+			<section>
+				<h2 class="m-0">Selection</h2>
+				<hr />
+				<div id="grid-selection-examples" class="example-grid"></div>
+			</section>
+			<section id="modal" class="modal hidden">
+				<div class="modal-example">
+					<span data-action="close-modal" class="modal__icon modal__icon--close material-icons">close</span>
+					<h2 id="example-title" class="modal-example__title mb-3">Example</h2>
+					<h3 class="modal-example__subtitle">Vanilla JS</h3>
+					<hr class="modal-example__hr" />
+					<pre id="example-code-vanilla" class="modal-example__code mb-3"></pre>
+					<h3 class="modal-example__subtitle">jQuery</h3>
+					<hr class="modal-example__hr" />
+					<pre id="example-code-jquery" class="modal-example__code mb-3"></pre>
+					<iframe id="example-sandbox" class="modal-example__sandbox" sandbox="allow-modals allow-scripts allow-forms"></iframe>
+				</div>
+			</section>
+		</main>
+
+		<template id="template-example-card">
+			<section data-id class="example-card" data-action="display-modal">
+				<p class="example-card__number"></p>
+				<p class="example-card__title"></p>
+				<span class="example-card__icon material-icons">arrow_drop_up</span>
+			</section>
+		</template>
+	</body>
+</html>

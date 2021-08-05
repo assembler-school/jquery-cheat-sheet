@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>example-11</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../js/vanilla/example-11.js" defer></script>
+		<script src="../js/jquery/example-11.js" defer></script>
+		<link rel="stylesheet" href="../css/style.css" />
+		<style>
+			#ex-11-vanilla-btn:hover,
+			#ex-11-jquery-btn:hover {
+				background-color: var(--color-02);
+			}
+		</style>
+	</head>
+	<body>
+		<main class="font-family-01">
+			<div class="example-grid">
+				<div class="flex flex-column align-items-center p-3 gap-3 example">
+					<h2 class="text-align-center">Vanilla JS</h2>
+					<button id="ex-11-vanilla-btn" class="p-2 bg-01 text-white br-2 bs-black-03">Hover me!</button>
+					<div id="ex-11-vanilla-msg" class="bg-02 text-align-center text-white p-3 br-2 bs-black-03 hidden">
+						<p class="mb-3">This content has been displayed with Vanilla JS with a 'mouseover' event</p>
+						<p><b>Hover again over the button</b> to hide this pop up</p>
+					</div>
+				</div>
+				<div class="flex flex-column align-items-center p-3 gap-3 example">
+					<h2 class="text-align-center">jQuery</h2>
+					<button id="ex-11-jquery-btn" class="p-2 bg-01 text-white br-2 bs-black-03">Hover me!</button>
+					<div id="ex-11-jquery-msg" class="bg-02 text-align-center text-white p-3 br-2 bs-black-03 hidden">
+						<p class="mb-3">This content has been displayed with jQuery with a 'mouseover' event</p>
+						<p><b>Hover again over the button</b> to hide this pop up</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

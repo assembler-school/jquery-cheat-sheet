@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>example-12</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../js/vanilla/example-12.js" defer></script>
+		<script src="../js/jquery/example-12.js" defer></script>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body>
+		<main class="font-family-01">
+			<div class="example-grid">
+				<div class="flex flex-column align-items-stretch p-3 gap-3 example">
+					<h2 class="text-align-center">Vanilla JS</h2>
+					<label for="ex-12-vanilla-chk" class="flex justify-content-center align-items-center gap-2"><input id="ex-12-vanilla-chk" class="p-2" type="checkbox" name="vanilla-chk" /><span>Checkbox change event with Vanilla JS</span></label>
+					<p id="ex-12-vanilla-msg" class="bg-02 text-align-center text-white p-3 br-2 bs-black-03 hidden" data-default="The input field is empty.">The checkbox has been checked</p>
+				</div>
+				<div class="flex flex-column align-items-stretch p-3 gap-3 example">
+					<h2 class="text-align-center">jQuery</h2>
+					<label for="ex-12-jquery-chk" class="flex justify-content-center align-items-center gap-2"><input id="ex-12-jquery-chk" class="p-2" type="checkbox" name="jquery-chk" /><span>Checkbox change event with jQuery</span></label>
+					<p id="ex-12-jquery-msg" class="bg-02 text-align-center text-white p-3 br-2 bs-black-03 hidden" data-default="The input field is empty.">The checkbox has been checked</p>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
