@@ -1,6 +1,6 @@
 import { wrapper } from "../main.js";
 import { templateList } from "../templates.js";
-import { goToMain, goToCheatList } from "../router.js";
+import { goToMain, goToCheatList, goToContent } from "../router.js";
 import { cases } from "../cases.js";
 import { contentPage } from "./content-page.js";
 

@@ -3,11 +3,11 @@ import { templateContent } from "../templates.js";
 import { goToMain, goToCheatList, goToContent } from "../router.js";
 import { cases } from "../cases.js";
 
-function contentPage(e) {
+function contentPage2() {
   //If the clicked element has not got the .case class, don't do anything
   if (!e.target.matches(".case")) return;
 
-  //goToContent();
+  goToContent();
 
   //TODO Delete all the previous event listeners
 
@@ -36,22 +36,25 @@ function contentPage(e) {
 
   cases.forEach((c) => {
     if (c.dataCheat == e.target.dataset.id) {
+      //c.jqFunction();
+      let id = c.dataCheat;
       document.getElementById("js-info").innerHTML = c.js;
       document.getElementById("jq-info").innerHTML = c.jq;
-      document.getElementById("show-js").addEventListener("click", function () {
-        if (jqCheat.classList.contains("cheat--selected"))
-          jqCheat.classList.remove("cheat--selected");
-        jsCheat.classList.add("cheat--selected");
-        view.innerHTML = "";
-        c.jsFunction();
-      });
-      document.getElementById("show-jq").addEventListener("click", function () {
-        if (jsCheat.classList.contains("cheat--selected"))
-          jsCheat.classList.remove("cheat--selected");
-        jqCheat.classList.add("cheat--selected");
-        view.innerHTML = "";
-        c.jqFunction();
-      });
+      c.jsFunction();
+      document
+        .getElementById("show-js")
+        .addEventListener("click", function (c) {
+          if (jqCheat.classList.contains("cheat--selected"))
+            jqCheat.classList.remove("cheat--selected");
+          jsCheat.classList.add("cheat--selected");
+        });
+      document
+        .getElementById("show-jq")
+        .addEventListener("click", function (c) {
+          if (jsCheat.classList.contains("cheat--selected"))
+            jsCheat.classList.remove("cheat--selected");
+          jqCheat.classList.add("cheat--selected");
+        });
     }
   });
 
@@ -61,4 +64,4 @@ function contentPage(e) {
   document.getElementById("go-list").addEventListener("click", goToCheatList);
 }
 
-export { contentPage };
+export { contentPage2 };

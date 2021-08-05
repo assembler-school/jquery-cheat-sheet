@@ -17,7 +17,7 @@ html {
 /*-----------------------------MAIN STYLES--------------------------------*/
 
 .header__nav {
-  margin: 2rem auto;
+  margin: 1rem auto;
   height: 3rem;
   width: 50%;
   background-color: var(--freak);

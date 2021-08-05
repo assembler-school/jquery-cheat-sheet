@@ -71,6 +71,12 @@ import { js36 } from "./js-cases/data-cheat-36.js";
 import { jq36 } from "./jq-cases/data-cheat-36.js";
 import { js37 } from "./js-cases/data-cheat-37.js";
 import { jq37 } from "./jq-cases/data-cheat-37.js";
+import { js38 } from "./js-cases/data-cheat-38.js";
+import { jq38 } from "./jq-cases/data-cheat-38.js";
+import { js39 } from "./js-cases/data-cheat-39.js";
+import { jq39 } from "./jq-cases/data-cheat-39.js";
+import { jq40 } from "./jq-cases/data-cheat-40.js";
+import { jsNo28, jsNo29, jsNo40 } from "./js-cases/no-function.js";
 
 const cases = [
   {
@@ -364,6 +370,7 @@ const cases = [
     js: "There is no such a thing. You should ask Adrián to see a huge and complex function that makes something similar",
     jq: "The <b>.fadeIn()</b> method animates the opacity of the matched elements.",
     hint: "Candles and magic words can open forbiden doors",
+    jsFunction: jsNo28,
     jqFunction: jq28,
   },
   {
@@ -373,6 +380,7 @@ const cases = [
     js: "There is no such a thing in JavaScript. You should ask Adrián to see a huge and complex function that makes something similar",
     jq: "The <b>.fadeOut()</b> method animates the opacity of the matched elements. Once the opacity reaches 0, the display style property is set to none, so the element no longer affects the layout of the page.",
     hint: "The power of the Holy Cross will stop this diabolic ritual",
+    jsFunction: jsNo29,
     jqFunction: jq29,
   },
   {
@@ -467,19 +475,21 @@ const cases = [
     content:
       "Show an alert with the value of the first &lt;input&gt; of the page (Create an &lt;input&gt; element to test this case)",
     saga: "forces-of-good",
+    js: "The <b>alert()</b> method creates a default pop up which shows a given message.",
+    jq: "The <b>alert()</b> method creates a default pop up which shows a given message.",
+    hint: "If we persist in our prayers, the sky will join us eventually",
+    jsFunction: js38,
+    jqFunction: jq38,
   },
   {
     dataCheat: 39,
     content: "Remove all items from a specific selector",
     saga: "forces-of-good",
     js: "1 . Set the node innerHTML as empty-string(“”). 2. Second way is to <b>remove firstChild of the parent node</b> until the node has a children ",
-    // var node = document.getElementById('parent');
-    // node.innerHTML = "";
-    // var node= document.getElementById("parent");
-    // while (node.firstChild) {
-    // node.removeChild(myNode.firstChild);}
-
     jq: "The <b>.empty()<b> method removes not only child (and other descendant) elements, but also any text within the set of matched elements. This is because, according to the DOM specification, any string of text within an element is considered a child node of that element.",
+    hint: "Hold your Cross tightly and exortize all these ghosts!",
+    jsFunction: js39,
+    jqFunction: jq39,
   },
   {
     dataCheat: 40,
@@ -487,6 +497,9 @@ const cases = [
     saga: "forces-of-evil",
     js: "There is the experimental method <b>.animate()</b>. However, as most browsers do not support it, a class must be attached to the element to modify it through CSS",
     jq: "The <b>.animate()</b> method allows us to create animation effects on any numeric CSS property. The only required parameter is a plain object of CSS properties.",
+    hint: "Start the ritual and see how Death grows stronger",
+    jsFunction: jsNo40,
+    jqFunction: jq40,
   },
 ];
 
