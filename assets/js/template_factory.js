@@ -29,13 +29,13 @@ eventBtn.on("click", () => {
     eventConstructors(keyPress, "ev-3", keyVan, keyJQuery);
     eventConstructors(mouseEvent, "ev-4", mouseVan, mouseJQuery);
     eventConstructors(changeInput, "ev-5", changeVan, changejQuery);
-    eventConstructors(loadImg, "ev-6");
-    eventConstructors(errorImg, "ev-7");
-    eventConstructors(submitted, "ev-8");
-    eventConstructors(optionChange, "ev-9");
-    eventConstructors(mouseOver, "ev-10");
-    eventConstructors(changeCheck, "ev-11");
-    eventConstructors(clickedElement, "ev-12");
+    eventConstructors(loadImg, "ev-6", loadImgVan, loadImgJQuery);
+    eventConstructors(errorImg, "ev-7", errorImgVan, errorImgJQuery);
+    eventConstructors(submitted, "ev-8", submittedjQuery, submittedVan);
+    eventConstructors(optionChange, "ev-9", changeSeljQuery, changeSelVan);
+    eventConstructors(mouseOver, "ev-10", mouseOverJQuery, mouseOverVan);
+    eventConstructors(changeCheck, "ev-11", changeCheckVan, changeCheckJQuery);
+    eventConstructors(clickedElement, "ev-12", selectListVan, selectListJQuery);
 
     if (destroyFunctionNavBar && destroySelectorNavBar) {
         destroyFunctionNavBar();
@@ -163,7 +163,7 @@ let selectorBtn = $(
 $(".navigation").prepend(selectorBtn);
 selectorBtn.on("click", () => {
     createSelectorNavBar();
-    eventConstructors(eachCss, "sc-0");
+    eventConstructors(eachCss, "sc-0", eachCssjQ, eachCssVan);
     eventConstructors(PaRent, "sc-1");
     eventConstructors(chiLd, "sc-2");
     eventConstructors(getByKlass, "sc-3");
