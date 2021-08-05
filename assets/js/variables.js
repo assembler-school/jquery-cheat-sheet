@@ -312,28 +312,28 @@ let listObjectsJS = [
   {
     id: `44`,
     title: `change href`,
-    type: `selectors`,
+    type: `functions`,
     code: `document.getElementById(“nameID”).href = ”www.URL.net”;`,
     link: `https://www.w3schools.com/jsref/prop_anchor_href.asp`,
   },
   {
     id: `43`,
     title: `alert`,
-    type: `selectors`,
+    type: `functions`,
     code: `alert(document.querySelector(“input”))`,
     link: `https://www.w3schools.com/jsref/met_win_alert.asp`,
   },
   {
     id: `45`,
     title: `remove all `,
-    type: `selectors`,
+    type: `functions`,
     code: `document.getElementById(“nameID”).innerHTML=’’`,
     link: `https://www.w3schools.com/jsref/prop_html_innerhtml.asp`,
   },
   {
     id: `46`,
     title: `animate`,
-    type: `selectors`,
+    type: `functions`,
     code: `setInterval(function(){ <br>
      setTimeout(function(){ this.style.color=”red” }, 1500); <br>
     

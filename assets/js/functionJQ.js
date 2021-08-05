@@ -11,6 +11,14 @@ function drawItems() {
       .appendTo($(`#${item.type}`));
   }
 }
+function findObjectsJQ(id) {
+  let objectsJQ = JSON.parse(localStorage.getItem("objectsJQ"));
+  for (const objectJQ of objectsJQ) {
+    if (objectJQ.id === id) {
+      return objectJQ;
+    }
+  }
+}
 
 function fillObjectsJQ(objectsJQ) {
   for (const objectJQ of objectsJQ) {
@@ -40,22 +48,18 @@ function fillObjectsJQ(objectsJQ) {
     </div>
   
   </template>`;
-    let toInsertInfo = document.getElementById(`info-${objectJQ.id}`); //*Select were insert template, in html
+    let toInsertInfo = document.querySelector(`#info-${objectJQ.id}`); //*Select were insert template, in html
     toInsertInfo.insertAdjacentHTML("beforeend", infoJQ); //*insert only read teamplate (aka Ghost Template)
-    let contentTemplate = document.getElementById(
-      `infoJQ-${objectJQ.id}`
+    let contentTemplate = document.querySelector(
+      `#infoJQ-${objectJQ.id}`
     ).content; //*select the ghost template
     let copyContent = document.importNode(contentTemplate, true); //*import ghost template as html (as html)
     toInsertInfo.appendChild(copyContent); ////*insert  ghost template (now in the living world!!)
-    document
-      .getElementById(`infoJsButton-${objectJQ.id}`)
-      .addEventListener("click", function () {
-        location.assign(objectJQ.link);
-      });
-    document
-      .getElementById(`tryJsButton-${objectJQ.id}`)
-      .addEventListener("click", function () {
-        alert(objectJQ.code);
-      });
+    $(`#infoJsButton-${objectJQ.id}`).click(function () {
+      location.assign(objectJQ.link);
+    });
+    $(`#tryJsButton-${objectJQ.id}`).click(function () {
+      alert(objectJQ.code);
+    });
   }
 }

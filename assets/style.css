@@ -44,6 +44,7 @@ html {
   text-shadow: 1px 3px fuchsia;
   min-width: 100%;
   max-height: 10vh;
+  z-index: 1;
 }
 
 .top {
@@ -180,10 +181,13 @@ html {
     min-width: calc(100% - 10vw);
     max-width: 100vw;
   }
-
+  .box {
+    max-height: 60vh;
+    min-height: 60vh;
+  }
   .drop-area {
     width: 93%;
-    height: 30vh;
+    min-height: 20vh;
   }
   .boxText {
     font-size: 3vh;
