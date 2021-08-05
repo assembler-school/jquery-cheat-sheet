@@ -54,7 +54,7 @@ let pageMainTemplate = `<template id="page-main-temp"><main id="page-main" class
 <div class="separator-hr"></div>
 <section id="code-examples" class="page-main__code-examples">
 <div id="js-example" class="code-examples__js home-margin--margin-right"></div>
-<div id="jquery-example" class="code-examples__js"></div>
+<div id="jquery-example" class="code-examples__jquery"></div>
 </section>
 </main></template>`;
 

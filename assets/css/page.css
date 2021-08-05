@@ -97,13 +97,23 @@
 
 .page-main__code-examples{
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: space-between;
   padding: var(--global--spacer--sm) var(--global--spacer--md);
   font-size: var(--global--code--FontSize);
+}
 
+.code-examples__js{
+  color: var(--global--primary--js--Color);
+}
+
+.code-examples__jquery{
+  color: var(--global--primary--jquery--Color);
 }
 
 .code-examples__js, .code-examples__jquery{
   width: 50%;
+  background-color: var(--global--dark--Color);
+  padding: var(--global--spacer--xs) var(--global--spacer--sm);
+  border-radius: var(--global--border-radius--1);
 }

@@ -58,7 +58,7 @@
   font-family: secondChanceSk;
   font-size: var(--global--h2--title--FontSize);
   line-height: var(--title--LineHeight);
-  color: var(--global--primary--yellowChalk);
+  color: var(--global--primary--js--Color);
 }
 
 /*TODO: pointer draggable, color of chalkboard if its js code or jquery code
