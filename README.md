@@ -6,7 +6,7 @@ As you can see there is an only html file to display the elements and then in **
 
 ## Demo
 
-https://cherrerotinoco.github.io/jQueryCheatSheet/
+https://cherrerotinoco.github.io/jquery-cheat-sheet/
 
   
 ## Related
