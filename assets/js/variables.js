@@ -318,7 +318,7 @@ let listObjectsJS = [
   },
   {
     id: `43`,
-    title: `show an alert with the value of the first <input> of the page`,
+    title: `alert`,
     type: `selectors`,
     code: `alert(document.querySelector(“input”))`,
     link: `https://www.w3schools.com/jsref/met_win_alert.asp`,

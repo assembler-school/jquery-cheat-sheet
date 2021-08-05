@@ -1,14 +1,3 @@
-for (const item of document.getElementsByClassName("item")) {
-  item.addEventListener("click", moveItem);
-}
-
-document.getElementById("beginButton").addEventListener("click", function () {
-  if (document.getElementById("dropzone").lastChild.className === "item") {
-    saveSelection();
-    dropzoneIn();
-  }
-});
-
 function saveSelection() {
   let selectedIds = [];
   let selection = document.querySelectorAll("#dropzone .item");
