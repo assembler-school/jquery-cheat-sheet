@@ -24,11 +24,13 @@
     --tw-border-opacity: 1;
     padding: 0.5rem;
     background-color: rgb(253, 228, 156);
+}
 
 .section__events-list li:hover {
     cursor: pointer;
     opacity: 0.5;
     transition: 0.4s ease-in-out;
+    transform: scale(0.97);
 }
 
 .section__events-title {

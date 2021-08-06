@@ -46,7 +46,6 @@
 .modal__content-js,
 .modal__content-jquery {
     display: flex;
-    align-items: space-between; 
 }
 
 .modal__content-js--code h4,

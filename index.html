@@ -64,7 +64,9 @@
                 <li data-modal="function16" class="list__item">Show element on click (display: block)</li>
                 <li data-modal="function17" class="list__item">Fade in element using jQuery</li>
                 <li data-modal="function18" class="list__item">Fade out element using jQuery</li>
-        </section><!-- Functions section -->
+            </ul>
+        </section>
+        <!-- Functions section -->
         
         <!-- Selectors section -->
         <section class="section__selectors">
@@ -109,9 +111,9 @@ alert('DOM with JS fully loaded!');
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$(document).ready(function() {
+                    <pre><code>$(document).ready(function() {
 alert('DOM with Jquery fully loaded!');
-});</pre></code>
+});</code></pre>
                 </div>
                 <div class="modal__content-jquery--example"></div>
             </section><!-- Modal Jquery Part -->
@@ -127,9 +129,8 @@ alert('DOM with Jquery fully loaded!');
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnEvent2.addEventListener('click', () => {
-    alert('JS Button clicked!');
-})</pre></code>
+                    <pre><code>btnEvent2.addEventListener('click', () => {
+    alert('JS Button clicked!');})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <button class="btn__event-2--js">JS</button>
@@ -140,9 +141,8 @@ alert('DOM with Jquery fully loaded!');
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__event-2--jquery').on('click', () => {
-alert('JQuery Button!');
-})</pre></code>
+                    <pre></pre><code>$('.btn__event-2--jquery').on('click', () => {
+alert('JQuery Button!');})</code></pre>
                 </div>
             </section>          
         </div>
@@ -189,11 +189,11 @@ btnEvent3.addEventListener('dblclick', () =&gt; {
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>document.addEventListener('keyup', function(event) { 
+                    <pre><code>document.addEventListener('keyup', function(event) { 
     if (event.keyCode === 65) { 
         alert('JS A is pressed!'); 
     } 
-});</pre></code>
+});</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p>Press key "a" with a keycode of 65 for JS</p>
@@ -204,11 +204,11 @@ btnEvent3.addEventListener('dblclick', () =&gt; {
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$(document).keyup(function(event) { 
+                    <pre><code>$(document).keyup(function(event) { 
     if (event.which === 66) { 
         alert('Jquery B is pressed!'); 
     }
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -222,10 +222,10 @@ btnEvent3.addEventListener('dblclick', () =&gt; {
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>let event5 = document.querySelector('.event-5--js');
+                    <pre><code>let event5 = document.querySelector('.event-5--js');
 event5.addEventListener('mouseover', (event) => {
     event.target.style.color = 'red'
-});</pre></code>
+});</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <h1 class="event-5--js">Mouse over me with JS</h1>
@@ -236,9 +236,9 @@ event5.addEventListener('mouseover', (event) => {
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.event-5--jquery').on('mouseover', (event) => event.target.style.color = 'green');
+                    <pre><code>$('.event-5--jquery').on('mouseover', (event) => event.target.style.color = 'green');
 $('.event-5--jquery').on('mouseout', (event) => event.target.style.color = 'black');
-</pre></code>
+</code></pre>
                 </div>
             </section>         
         </div>
@@ -252,8 +252,8 @@ $('.event-5--jquery').on('mouseout', (event) => event.target.style.color = 'blac
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnEvent6.addEventListener('click', () => inputText.value = 'Totochan');
-                    </pre></code>
+                    <pre><code>btnEvent6.addEventListener('click', () => inputText.value = 'Totochan');
+                    </code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <input type="text" class="inputText" value="Totoro">
@@ -267,8 +267,8 @@ $('.event-5--jquery').on('mouseout', (event) => event.target.style.color = 'blac
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__event-6').on('click', () => $('.inputText').val('Chiaki'));
-                    </pre></code>
+                    <pre><code>$('.btn__event-6').on('click', () => $('.inputText').val('Chiaki'));
+                    </code></pre>
                 </div>
                 <div class="modal__content-jquery--example"></div>
             </section>         
@@ -283,10 +283,10 @@ $('.event-5--jquery').on('mouseout', (event) => event.target.style.color = 'blac
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>let btnEvent7 = document.querySelector('.btn__event-7');
+                    <pre><code>let btnEvent7 = document.querySelector('.btn__event-7');
 let myImg = document.querySelector('#myImg')
 btnEvent7.addEventListener('click', () => alert('Image loaded: ' + myImg.complete))
-</pre></code>
+</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <img id="myImgJS" src="https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=827&q=80" alt="tree" width="107" height="98">
@@ -300,12 +300,12 @@ btnEvent7.addEventListener('click', () => alert('Image loaded: ' + myImg.complet
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__event-7').on('click', checkImage);
+                    <pre><code>$('.btn__event-7').on('click', checkImage);
 function checkImage() {
     $('#myImg').load(function() {
         alert('image is loaded')
     })
-}</pre></code>
+}</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                 </div>
@@ -321,12 +321,12 @@ function checkImage() {
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>let btnEvent8 = document.querySelector('.btn__event-8');
+                    <pre><code>let btnEvent8 = document.querySelector('.btn__event-8');
 let myImg8 = document.querySelector('#myImg8')
 btnEvent8.addEventListener('click', checkImage)
 function checkImage() {
     myImg8.addEventListener('error', () => console.log('Image'))
-}</pre></code>
+}</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <img id="myImg8" src="image.gif" alt="tree" width="107" height="98">
@@ -337,12 +337,12 @@ function checkImage() {
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__event-8').on('error', checkImage);
+                    <pre><code>$('.btn__event-8').on('error', checkImage);
 function checkImage() {
     $('#myImg').load(function() {
         alert('image fails to load')
     })
-}</pre></code>
+}</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                 </div>
@@ -358,9 +358,9 @@ function checkImage() {
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>let myForm = document.querySelector("#myForm");
+                    <pre><code>let myForm = document.querySelector("#myForm");
 myForm.addEventListener('submit', () => alert("The form was successfully submitted"))
-</pre></code>
+</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <div>
@@ -382,9 +382,9 @@ myForm.addEventListener('submit', () => alert("The form was successfully submitt
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$("#myForm").submit(function() { 
+                    <pre><code>$("#myForm").submit(function() { 
     alert("The Jquery form has been submitted") 
-     })</pre></code>
+     })</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                 </div>
@@ -400,9 +400,9 @@ myForm.addEventListener('submit', () => alert("The form was successfully submitt
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>let target = document.querySelector('.target')
+                    <pre><code>let target = document.querySelector('.target')
 target.addEventListener('change', () => alert('You have choose another option with JS'))
-</pre></code>
+</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <form>
@@ -417,9 +417,9 @@ target.addEventListener('change', () => alert('You have choose another option wi
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$(".target").change(function() { 
+                    <pre><code>$(".target").change(function() { 
     alert("You have choose another option with Jquery")
-    })</pre></code>
+    })</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                 </div>
@@ -435,22 +435,22 @@ target.addEventListener('change', () => alert('You have choose another option wi
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>let btnEvent11 = document.querySelector('.btn__event-11');
+                    <pre><code>let btnEvent11 = document.querySelector('.btn__event-11');
 btnEvent11.addEventListener('mouseover', (event) => {
     event.target.style.background = 'red'
-    })</pre></code>
+    })</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <button class="btn__event-11--js">JS</button>
-                    <button class="btn__event-11--jquery">Jquery</button</>
+                    <button class="btn__event-11--jquery">Jquery</button>
                 </div>
             </section>
             
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__event-11').on('mouseover', (event) => event.target.style.background = 'green');
-                    </pre></code>
+                    <pre><code>$('.btn__event-11').on('mouseover', (event) => event.target.style.background = 'green');
+                    </code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
 
@@ -467,9 +467,9 @@ btnEvent11.addEventListener('mouseover', (event) => {
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnChecked.addEventListener('click', () => myCheck.checked = true);
+                    <pre><code>btnChecked.addEventListener('click', () => myCheck.checked = true);
 btnUnchecked.addEventListener('click', () => myCheck.checked = false);
-</pre></code>
+</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p><input type="checkbox" id="myCheck"> Are you sure?</p>
@@ -483,12 +483,12 @@ btnUnchecked.addEventListener('click', () => myCheck.checked = false);
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$(".check").click(function(){
+                    <pre><code>$(".check").click(function(){
     $("#myCheck").prop("checked", true);
 });
 $(".uncheck").click(function(){
     $("#myCheck").prop("checked", false);
-});</pre></code>
+});</code></pre>
                 </div>
                 <div class="modal__content-jquery--example"> 
                 </div>
@@ -504,11 +504,11 @@ $(".uncheck").click(function(){
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>let listItems = document.querySelectorAll(".list li")
+                    <pre><code>let listItems = document.querySelectorAll(".list li")
 for (let i = 0; i < listItems.length; i++) {
     listItems[i].addEventListener('click', () => 
     alert(listItems[i].textContent));
-}</pre></code>
+}</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <ul class="list-js">
@@ -522,8 +522,8 @@ for (let i = 0; i < listItems.length; i++) {
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$(".list li").click(function() { alert($(this).html()) })
-                    </pre></code>
+                    <pre><code>$(".list li").click(function() { alert($(this).html()) })
+                    </code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                     <ul class="list-jquery">
@@ -545,11 +545,11 @@ for (let i = 0; i < listItems.length; i++) {
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnFunction1.addEventListener('click', () => {
+                    <pre><code>btnFunction1.addEventListener('click', () => {
     let newBtn = document.createElement("p");
     newBtn.innerHTML = "Santa Clause of JS is coming!"
     function1Text.appendChild(newBtn);
-    })</pre></code>
+    })</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p class="function1">
@@ -562,8 +562,8 @@ for (let i = 0; i < listItems.length; i++) {
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-1').click(function() {
-    $('.function1').append('<p>Santa Clause of Jquery is coming!</p>')})</pre></code>
+                    <pre><code>$('.btn__function-1').click(function() {
+    $('.function1').append('<p>Santa Clause of Jquery is coming!</p>')})</code></pre>
                 </div>
             </section>         
         </div>
@@ -577,28 +577,27 @@ for (let i = 0; i < listItems.length; i++) {
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code>
-                        <pre>btnFunction2.addEventListener('click', () => {
+                    <pre><code>btnFunction2.addEventListener('click', () => {
     let function2 = document.querySelector("#function2");
     function2.remove();
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
-                    <p class="function1">
+                    <div>
                         <p id="function2-js">Bouncing bouncing bouncing</p>
                         <p id="function2-jquery">Jumping jumping jumping</p>
                         <button class="btn__function-2--js">JS</button>
                         <button class="btn__function-2--jquery">Jquery</button>
-                    </p>
+                    </div>
                 </div>
             </section>
             
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-2').click(function() {
+                    <pre><code>$('.btn__function-2').click(function() {
     $('#function2').remove()
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                     
@@ -615,12 +614,11 @@ for (let i = 0; i < listItems.length; i++) {
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code>
-                        <pre>btnFunction3.addEventListener('click', () => {
+                    <pre><code>btnFunction3.addEventListener('click', () => {
     let newEle = document.createElement("p");
     newEle.innerHTML = "Rabbit JS";
     function3.appendChild(newEle);
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <section class="function3">
@@ -636,9 +634,9 @@ for (let i = 0; i < listItems.length; i++) {
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-3').click(function() {
+                    <pre><code>$('.btn__function-3').click(function() {
 $('.function3').append("<p>Rabbit Jquery</p>")
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -652,12 +650,12 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnFunction4.addEventListener('click', () => {
+                    <pre><code>btnFunction4.addEventListener('click', () => {
     let newEle = document.createElement("p");
     let newEleTextNode = document.createTextNode("Rabbit JS");
     newEle.appendChild(newEleTextNode);
     function4.insertBefore(newEle, function4.childNodes[0]);
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <section class="function4">
@@ -673,9 +671,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-4').click(function() {
+                    <pre><code>$('.btn__function-4').click(function() {
     $('.function4').prepend("<p>Rabbit Jquery</p>")
-}))</pre></code>
+}))</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                     
@@ -692,12 +690,12 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>let function5 = document.querySelector(".function5");
+                    <pre><code>let function5 = document.querySelector(".function5");
     btnFunction5.addEventListener("click", () => {
     let newEle = document.createElement("p");
     newEle.innerHTML = "Rabbit JS";
     function5.after(newEle)
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p class="function5">Tiger</p>
@@ -709,9 +707,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-5').click(function() {
+                    <pre><code>$('.btn__function-5').click(function() {
     $('.function5').after("<p>Rabbit Jquery</p>")
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -725,11 +723,11 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnFunction6.addEventListener("click", () => {
+                    <pre><code>btnFunction6.addEventListener("click", () => {
     let newEle = document.createElement("p");
     newEle.innerHTML = "Rabbit JS";
     function6.before(newEle)
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p class="function6">Tiger</p>
@@ -741,9 +739,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-6').click(function() {
+                    <pre><code>$('.btn__function-6').click(function() {
     $('.function6').before("<p>Rabbit Jquery</p>")
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                     
@@ -760,12 +758,11 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code>
-                        <pre>btnFunction7.addEventListener("click", () => {
+                    <pre><code>btnFunction7.addEventListener("click", () => {
     let item = list2.lastElementChild;
     let itemClone = item.cloneNode(true);
     list1.appendChild(itemClone);
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <ul class="list--1">
@@ -785,11 +782,11 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-7').click(function() {
+                    <pre><code>$('.btn__function-7').click(function() {
     let item = $('.list--2 li').last();
     let itemClone = item.clone();
     $('.list--1').append(itemClone)
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -803,10 +800,10 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnFunction8.addEventListener("click", () => {
+                    <pre><code>btnFunction8.addEventListener("click", () => {
     let function8 = document.querySelector(".function8");
     function8.classList.add("addClassJs")
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p class="function8">Hello! I'm Tigger!</p>
@@ -818,9 +815,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-8').click(function() {
+                    <pre><code>$('.btn__function-8').click(function() {
     $('.function8').addClass('addClassJquery')
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -834,10 +831,10 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnFunction9.addEventListener("click", () => {
+                    <pre><code>btnFunction9.addEventListener("click", () => {
     let function9 = document.querySelector(".function9");
     function9.classList.remove("removeClassJS")
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p class="function9 removeClassJS removeClassJquery">Hello! I'm Tigger!</p>
@@ -849,9 +846,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-9').click(function() {
+                    <pre><code>$('.btn__function-9').click(function() {
     $('.function9').removeClass('removeClassJquery')
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -865,10 +862,10 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnFunction10.addEventListener("click", () => {
+                    <pre><code>btnFunction10.addEventListener("click", () => {
     let function10 = document.querySelector(".function10");
     function10.classList.toggle("toggleClass")
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p class="function10 toggleClassJS toggleClassJquery">Hello! I'm Tigger!</p>
@@ -880,9 +877,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-10').click(function() {
+                    <pre><code>$('.btn__function-10').click(function() {
     $('.function10').toggleClass('toggleClass')
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -896,9 +893,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnFunction11.addEventListener("click", () => {
+                    <pre><code>btnFunction11.addEventListener("click", () => {
     disabledBtn11.disabled = true;
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <button class="btn__disabled11">Disabled</button>
@@ -909,9 +906,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-11').click(function() {
+                    <pre><code>$('.btn__function-11').click(function() {
     $('.btn__disabled11').prop('disabled', true)
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                     
@@ -928,9 +925,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnFunction12.addEventListener("click", () => {
+                    <pre><code>btnFunction12.addEventListener("click", () => {
     disabledBtn12.disabled = false;
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <button class="btn__disabled12" disabled>Disabled</button>
@@ -941,9 +938,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-12').click(function() {
+                    <pre><code>$('.btn__function-12').click(function() {
     $('.btn__disabled12').prop('disabled', false)
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -957,13 +954,13 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnFunction13.addEventListener("click", () => {
+                    <pre><code>btnFunction13.addEventListener("click", () => {
     let img13 = document.querySelector("#img--13");
     img13.setAttribute("src", "https://images.unsplash.com/photo")
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
-                    <img id="img--13" alt="placeholder" width="100"> 
+                    <img id="img--13" src="" alt="placeholder" width="100"/> 
                     <button class="btn__function-13">Btn</button>
                 </div>
             </section>
@@ -971,9 +968,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-13').click(function() {
+                    <pre><code>$('.btn__function-13').click(function() {
     $('#img--13').attr('src', "https://images.unsplash.com/photo")
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                     
@@ -990,10 +987,10 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnFunction14.addEventListener("click", () => {
+                    <pre><code>btnFunction14.addEventListener("click", () => {
     let img14 = document.querySelector("#img--14");
     img14.removeAttribute("src")
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <img id="img--14" alt="placeholder" width="100" src="https://images.unsplash.com/photo-1627917597612-a3b56a5be55d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"> 
@@ -1004,9 +1001,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-14').click(function() {
+                    <pre><code>$('.btn__function-14').click(function() {
     $('#img--14').removeAttr('src')
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                     
@@ -1023,10 +1020,10 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnFunction15.addEventListener("click", () => {
+                    <pre><code>btnFunction15.addEventListener("click", () => {
     let function15 = document.querySelector(".function15");
     function15.style.display = "none";
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p class="function15">Hello! I'm Tigger!</p>
@@ -1037,9 +1034,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-15').click(function() {
+                    <pre><code>$('.btn__function-15').click(function() {
     $('.function15').css('display', 'none')
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -1053,11 +1050,10 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code>
-                        <pre>btnFunction16.addEventListener("click", () => {
+                    <pre><code>btnFunction16.addEventListener("click", () => {
     let function16 = document.querySelector(".function16");
     function16.style.display = "block";
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p class="function16" style="display:none;">Hello! I'm Tigger!</p>
@@ -1068,9 +1064,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-16').click(function() {
+                    <pre><code>$('.btn__function-16').click(function() {
     $('.function16').css('display', 'block')
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -1084,9 +1080,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-17').click(function() {
+                    <pre><code>$('.btn__function-17').click(function() {
     $('.function17').fadeIn(2000)
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                     <p class="function17" style="display:none;">Hello! I'm Tigger!</p>
@@ -1104,9 +1100,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__function-18').click(function() {
+                    <pre><code>$('.btn__function-18').click(function() {
     $('.function18').fadeOut(2000)
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                     <p class="function18">Hello! I'm Tigger!</p>
@@ -1125,12 +1121,12 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnSelector1.addEventListener('click', () => {
+                    <pre><code>btnSelector1.addEventListener('click', () => {
     let allElements = document.querySelectorAll('.selector--1');
     allElements.forEach(element => {
         element.style.color = 'green';
     })
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p class="selector--1">Tigger</p>
@@ -1145,11 +1141,11 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__selector-1--jquery').click(function() {
+                    <pre><code>$('.btn__selector-1--jquery').click(function() {
     $('.selector--1').each(function() {
         $( this ).css('color', 'red')
     })
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -1163,10 +1159,10 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnSelector2.addEventListener('click', () => {
+                    <pre><code>btnSelector2.addEventListener('click', () => {
     let spanSelector2 = document.querySelector('.span-selector--2').parentElement;
     spanSelector2.style.fontWeight = '100';
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <quote>“The only reason for being a bee is to make honey. And the only reason for making honey is so I can eat it.”- <span class="span-selector--2">Pooh</span></quote>
@@ -1180,9 +1176,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__selector-2--jquery').click(function() {
+                    <pre><code>$('.btn__selector-2--jquery').click(function() {
     $('.span-selector--2').parent().css('font-weight', '900')
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -1196,12 +1192,12 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnSelector3.addEventListener('click', () => {
+                    <pre><code>btnSelector3.addEventListener('click', () => {
     let listSelector3 = document.querySelector('.list__selector-3').children;
     for (let i = 0; i < listSelector3.length; i++ ) {
         listSelector3[i].style.fontWeight = '200';
     }
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p>The very best anime characters</p>
@@ -1220,11 +1216,11 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__selector-3--jquery').click(function() {
+                    <pre><code>$('.btn__selector-3--jquery').click(function() {
     $('.list__selector-3').children().each(function() {
         $( this ).css('font-weight', '900')
     })
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -1238,12 +1234,12 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnSelector4.addEventListener('click', () => {
+                    <pre><code>btnSelector4.addEventListener('click', () => {
     let itemSelector4 = document.querySelectorAll('.item__selector-4');
     itemSelector4.forEach(element => {
         element.style.fontWeight = '900';
     })
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p>The very best anime characters</p>
@@ -1262,11 +1258,11 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__selector-4--jquery').click(function() {
+                    <pre><code>$('.btn__selector-4--jquery').click(function() {
     $('.item__selector-4').each(function() {
         $( this ).css('font-weight', '100')
     })
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -1280,10 +1276,10 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnSelector5.addEventListener('click', () => {
+                    <pre><code>btnSelector5.addEventListener('click', () => {
     let quoteSelector5 = document.querySelector('#quote__selector-5');
     quoteSelector5.style.fontWeight = '900';   
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <quote id="quote__selector-5">“If you do not at least try, you will never change.” – Doraemon</quote>
@@ -1295,9 +1291,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__selector-5--jquery').click(function() {
+                    <pre><code>$('.btn__selector-5--jquery').click(function() {
     $('#quote__selector-5').css('font-weight', '200')
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -1311,13 +1307,13 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnSelector6.addEventListener('click', () => {
+                    <pre><code>btnSelector6.addEventListener('click', () => {
     let itemSelector6 = document.querySelectorAll('[class~=item__selector-6], [style="display:none"]');
     itemSelector6.forEach(element => {
         element.style.color = 'orange';
         element.style.display = 'block';
     })
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p>The very best anime characters</p>
@@ -1336,9 +1332,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__selector-6--jquery').click(function() {
+                    <pre><code>$('.btn__selector-6--jquery').click(function() {
     $('li.item__selector-6[style="display: none;"]').css({"display": "block", "color": "red"});
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -1352,10 +1348,10 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnSelector7.addEventListener('click', () => {
+                    <pre><code>btnSelector7.addEventListener('click', () => {
     let dropdownList = document.querySelector('#characters');
     let selectedOpt = dropdownList.value;
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <label for="characters">Choose an animate character:</label>
@@ -1376,9 +1372,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__selector-7--jquery').click(function() {
+                    <pre><code>$('.btn__selector-7--jquery').click(function() {
     let optionSelected = $('#characters').find(':selected').val();
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -1392,10 +1388,10 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnSelector8.addEventListener('click', () => {
+                    <pre><code>btnSelector8.addEventListener('click', () => {
     firstElement.setAttribute('href', 'https://www.udacity.com/')
     firstElement.innerHTML = 'Udacity'
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <h4>List of online learning platform:</h4>
@@ -1412,9 +1408,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__selector-8--jquery').click(function() {
+                    <pre><code>$('.btn__selector-8--jquery').click(function() {
     $('.bootcamp__list a:first-child').attr('href', 'https://www.skillshare.com/')
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
@@ -1428,11 +1424,7 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code>
-                        <pre>
-
-                        </pre>
-                    </code>
+                    <pre><code></code></pre>
                 </div>
                 <div class="modal__content-js--example">
   
@@ -1445,11 +1437,7 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code>
-                        <pre>
-
-                        </pre>
-                    </code>
+                    <pre><code></code></pre>             
                 </div>
                 <div class="modal__content-jquery--example">
                     
@@ -1466,10 +1454,10 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>btnSelector10.addEventListener('click', () => {
+                    <pre><code>btnSelector10.addEventListener('click', () => {
     let list10 = document.querySelectorAll('.list__selector-10--js')
     list10.forEach((element) => element.remove())
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-js--example">
                     <p>The very best anime characters</p>
@@ -1489,9 +1477,9 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$('.btn__selector-10--jquery').click(function() {
+                    <pre><code>$('.btn__selector-10--jquery').click(function() {
     $('.list__selector-10--jquery').remove()
-})</pre></code>
+})</code></pre>
                 </div>
                 <div class="modal__content-jquery--example">
                     
@@ -1508,33 +1496,31 @@ $('.function3').append("<p>Rabbit Jquery</p>")
             <section class="modal__content-js">                
                 <div class="modal__content-js--code">
                     <h4>Javascript</h4>
-                    <code><pre>setTimeout(function() {
+                    <pre><code>setTimeout(function() {
     let selector11 = document.querySelector('#selector-11')
     selector11.style.width = '200px'
-},5000)
-
-                    </pre></code>
+},5000)</code></pre>
                 </div>
                 <div class="modal__content-js--example">
-                    <div id="selector-11" id="box" style="background:#98bf21;height:50px;width:50px;margin:6px;"></div>                 
+                    <div id="selector-11" style="background:#98bf21;height:50px;width:50px;margin:6px;"></div>                 
                 </div>
             </section>
             
             <section class="modal__content-jquery">
                 <div class="modal__content-jquery--code">
                     <h4>Jquery</h4>
-                    <code><pre>$(document).ready(function() {
+                    <pre><code>$(document).ready(function() {
     $('#selector-11').delay(5000).animate({width: "80px"})
-})</pre></code>
+})</code></pre>
                 </div>
             </section>         
         </div>
     </article><!-- Modal Selector 11-->
 
     <!-- Scripts -->
-    <script type="text/javascript" src="assets/js/loadModal.js"></script>
-    <script type="text/javascript" src="assets/js/resultJs.js"></script>
-    <script type="text/javascript" src="assets/js/resultJquery.js"></script>
+    <script  src="assets/js/loadModal.js"></script>
+    <script  src="assets/js/resultJs.js"></script>
+    <script  src="assets/js/resultJquery.js"></script>
     <!-- Scripts -->
 </body>
 </html>
