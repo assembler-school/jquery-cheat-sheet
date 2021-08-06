@@ -1,0 +1,45 @@
+body {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 20% 80%;
+}
+
+header {
+  grid-column: span 2;
+  padding-right: 5% ;
+  padding-left: 2%;
+}
+footer {
+  grid-column: span 2;
+}
+nav {
+  padding: 5%;
+}
+main {
+  padding: 10%;
+  padding-top: 0%;
+  padding-bottom: 0%
+}
+
+.textFooter{
+  padding: 30%;
+  padding-top: 0%;
+}
+
+.directionRow{
+  display: flex;
+  flex-direction: row;
+}
+
+.padding{
+  padding: 6%;
+}
+
+.paddingHeader{
+  padding: 2%;
+}
+
+.paddingNav{
+  padding-top: 15%;
+  list-style-type: none;
+}

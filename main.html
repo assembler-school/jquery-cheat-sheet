@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/router.js" defer></script>
+    <title>jQuery</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://www.solucionex.com/sites/default/files/posts/imagen/jquery.png"
+        alt="jquery logo"
+        width="400"
+        height="250"
+      />
+      <div class="directionRow">
+        <p class="paddingHeader createRemoveNav">Create and remove a HTML element</p>
+        <p class="paddingHeader classesNav">Changes classes</p>
+        <p class="paddingHeader cloneNav">Clone</p>
+        <p class="paddingHeader attributesNav">HTML attributes</p>
+        <p class="paddingHeader dataNav">Data</p>
+        <p class="paddingHeader hideShowNav">Hide and show</p>
+        <p class="paddingHeader addListNav">Add list</p>
+        <p class="paddingHeader parentsNav">Parents, child and all</p>
+        <p class="paddingHeader textInputsNav">Text inputs</p>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li class="createRemoveNav paddingNav">Create and remove a HTML element</li>
+        <li class="classesNav paddingNav">Changes classes</li>
+        <li class="cloneNav paddingNav">Clone</li>
+        <li class="attributesNav paddingNav">HTML attributes</li>
+        <li class="dataNav paddingNav">Data</li>
+        <li class="hideShowNav paddingNav">Hide and show</li>
+        <li class="addListNav paddingNav">Add list</li>
+        <li class="parentsNav paddingNav">Parents, child and all</li>
+        <li class="textInputsNav paddingNav">Text inputs</li>
+      </ul>
+    </nav>
+    <main>
+      <div class="hideAllModals createRemoveClass">
+        <h1>Create and remove a HTML element</h1>
+        <button id="addText">Insert</button>
+        <button id="deleteText">Delete</button>
+        <p id="text">Text:</p>
+        <p id="textToRemove">
+          Use .remove() when you want to remove the element itself, as well as
+          everything inside it. In addition to the elements themselves, all
+          bound events and jQuery data associated with the elements are removed.
+        </p>
+      </div>
+      <div class="hideAllModals changeClassesClass">
+        <h1>Changes classes</h1>
+        <button id="addClass">Change class</button>
+        <button id="removeClass">Change class</button>
+        <button id="changeClass">Change class</button>
+        <p id="addClassText">
+          The .addClass() method manipulated the className property of the
+          selected elements, not the class attribute. Once the property was
+          changed, it was the browser that updated the attribute accordingly. An
+          implication of this behavior was that this method only worked for
+          documents with HTML DOM semantics
+        </p>
+        <p id="removeClassText">
+          The .removeClass() method manipulated the className property of the
+          selected elements, not the class attribute. Once the property was
+          changed, it was the browser that updated the attribute accordingly.
+          This means that when the class attribute was updated and the last
+          class name was removed, the browser might have set the attribute's
+          value to an empty string instead of removing the attribute completely.
+          An implication of this behavior was that this method only worked for
+          documents with HTML DOM semantics
+        </p>
+        <p id="changeClassText">
+          This method takes one or more classes as its parameter. In the first
+          version, if an element in the matched set of elements already has the
+          class, then it is removed; if an element does not have the class, then
+          it is added. For example, we can apply .toggleClass() to a simple div>
+        </p>
+      </div>
+      <div class="hideAllModals cloneClass">
+        <h1>Clone</h1>
+        <button id="cloneButton">Clone</button>
+        <p id="textClone">
+          The .clone() method performs a deep copy of the set of matched
+          elements, meaning that it copies the matched elements as well as all
+          of their descendant elements and text nodes.
+        </p>
+      </div>
+      <div class="hideAllModals attributesClass">
+        <h1>HTML attributes</h1>
+        <button id="disabledBtn">button disabled</button>
+        <button id="disableBtn">Disable button</button>
+        <button id="activateBtn">Activate button</button>
+      </div>
+      <div class="hideAllModals dataClass">
+        <h1>Data</h1>
+        <button id="addSrcBtn">Add attibute</button>
+        <button id="deleteSrcBtn">Delete attibute</button>
+        <p>
+          <img
+            id="imgData"
+            src="https://www.solucionex.com/sites/default/files/posts/imagen/jquery.png"
+            alt="jquery logo"
+            width="800"
+            height="500"
+          />
+        </p>
+      </div>
+      <div class="hideAllModals hideShowClass">
+        <h1>Hide and show</h1>
+        <button id="show">Show text</button>
+        <button id="hide">Hide text</button>
+        <button id="fadeIn">Show text with fade</button>
+        <button id="fadeOut">Hide text with fade</button>
+        <p id="showText" class="hideModal">
+          With no parameters, the .hide() method is the simplest way to hide an
+          element.
+        </p>
+        <p id="hideText">
+          With no parameters, the .show() method is the simplest way to display
+          an element.
+        </p>
+
+        <p id="showTextFade" class="hideModal">
+          The .fadeIn() method animates the opacity of the matched elements.
+        </p>
+        <p id="hideTextFade">
+          The .fadeOut() method animates the opacity of the matched elements.
+          Once the opacity reaches 0, the display style property is set to none,
+          so the element no longer affects the layout of the page.
+        </p>
+      </div>
+      <div class="hideAllModals addListClass">
+        <h1>Add list</h1>
+        <button id="showList">Show text</button>
+        <button id="changeTheClass">Change the class</button>
+        <p id="listToAppend">List:</p>
+      </div>
+      <div class="hideAllModals parentsClass">
+        <h1>Parents, child and all</h1>
+        <button id="parentsChange">Change class to parents</button>
+        <button id="childChange">Change class to child</button>
+        <button id="allChange">Change class to all</button>
+        <button id="idChange">Change class to id</button>
+        <div>
+          <p>Parents test</p>
+          <div id="parentsTest"></div>
+        </div>
+        <div id="childTest">
+          <div>
+            <p>Text</p>
+          </div>
+          <div>
+            <p>Text</p>
+          </div>
+        </div>
+        <p class="selectClass">Test class</p>
+        <p class="selectClass">Test class</p>
+        <p>Test no class</p>
+        <p class="selectClass">Test class</p>
+        <p id="idTest">Test to id selector</p>
+      </div>
+      <div class="hideAllModals inputsClass">
+        <h1>Text inputs</h1>
+        <button id="selectHidden">Change color to hidden elements</button>
+        <button id="selectAttribute">Change class to child</button>
+        <button id="showInput">Show input</button>
+        <button id="removeSelector">Remove Selector</button>
+
+        <p class="hideClass hideModal">Test class</p>
+        <p class="hideClass hideModal">Test class</p>
+        <p class="hideClass deleteThis">Test class</p>
+
+        <select name="select">
+          <option value="value1">Value 1</option>
+          <option value="value2" selected>Value 2</option>
+          <option value="value3">Value 3</option>
+        </select>
+
+        <br /><br /><input type="text" id="name" size="10" />
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="directionRow">
+        <p class="padding">Learning Center</p>
+        <p class="padding">Forum</p>
+        <p class="padding">API</p>
+        <p class="padding">Twiter</p>
+        <p class="padding">IRC</p>
+        <p class="padding">GitHub</p>
+      </div>
+
+      <p class="textFooter">
+        Copyright 2021 <a href="https://openjsf.org/"> OpenJS Foundation</a> and
+        jQuery contributors. All rights reserved. See
+        <a href="https://jquery.org/license/">jQuery License</a>
+        for more information. The
+        <a href="https://openjsf.org/">OpenJS Foundation</a>
+        has registered trademarks and uses trademarks. For a list of trademarks
+        of the
+        <a href="https://openjsf.org/">OpenJS Foundation</a>, please see our
+        <a href="https://trademark-policy.openjsf.org/"> Trademark Policy </a>
+        and <a href="https://trademark-list.openjsf.org/"> Trademark List</a>.
+        Trademarks and logos not indicated on the
+        <a href="https://trademark-list.openjsf.org/">
+          list of OpenJS Foundation trademarks</a
+        >
+        are trademarks™ or registered® trademarks of their respective holders.
+        Use of them does not imply any affiliation with or endorsement by them.
+        OpenJS Foundation
+        <a href="https://terms-of-use.openjsf.org/">Terms of Use</a>,
+        <a href="https://privacy-policy.openjsf.org/">Privacy</a>, and
+        <a href="https://www.linuxfoundation.org/cookies">Cookie</a> Policies
+        also apply.
+        <span class="">
+          <a href="https://www.digitalocean.com" class="">
+            Web hosting by Digital Ocean</a
+          >|
+          <a href="https://www.stackpath.com" class="">CDN by StackPath </a>
+        </span>
+      </p>
+    </footer>
+  </body>
+</html>
