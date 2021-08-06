@@ -1,7 +1,7 @@
 let targetItems = document.querySelectorAll(".ul-action--list");
 let clickedItem;
-let modalClose = document.querySelector("#close");
-let modalContainer = document.querySelector("#modal");
+let modalClose = document.querySelector(".btn-modal--close");
+let modalContainer = document.querySelector("#modal-bg");
 let tagBody = document.querySelector(".body")
 
 

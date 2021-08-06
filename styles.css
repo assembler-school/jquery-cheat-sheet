@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
 * {
   margin: 0;
   padding: 0;
@@ -9,62 +7,48 @@
 
 :root {
   --black: rgb(0, 0, 0);
+  --black-rgba--06: rgba(0, 0, 0, 0.6);
+  --black-rgba--026: rgba(0, 0, 0, 0.26);
+  --black-rgba--054: rgba(0, 0, 0, 0.54);
+  --charcoal-rgba--012: rgba(70, 70, 70, 0.12);
   --white: rgb(255, 255, 255);
-  --red: rgb(218, 49, 49);
+  --white-rgba--055: rgba(255, 255, 255, 0.55);
+  --grey-light: rgb(252, 252, 252);
+  --grey-medium: rgba(209, 209, 209);
   --grey: rgb(150, 150, 150);
-  --light-black: rgb(27, 27, 27);
+  --grey-dark-very: rgb(44, 44, 44);
+  --red: rgb(218, 49, 49);
+  --black-light: rgb(27, 27, 27);
   --color1: rgb(120, 212, 212);
   --color2: rgb(233, 124, 233);
   --color3: rgb(109, 192, 127);
 }
 
 body {
-  min-height: 100vh;
-  max-width: 100%;
+  height: 100vh;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto auto;
   background-color: var(--black);
 }
 
-main {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-}
-
-@media (min-width: 900px) {
-  main {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1200px) {
-  main {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 ul {
   margin-bottom: 3rem;
-  width: fit-content;
 }
 
 li {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   list-style: none;
+  margin-top: 0.8rem;
   margin-left: 4rem;
-  margin-bottom: 1rem;
   cursor: pointer;
 }
 
 li:hover {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: var(--light-black);
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--black-light);
 }
 
 h1 {
@@ -72,27 +56,49 @@ h1 {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-left: 5rem;
 }
 
 h2 {
   text-align: center;
-  margin: 3rem 3rem;
+  margin: 2rem 2rem;
 }
 
 footer {
   grid-area: 3 / 1 / span 1 / span 3;
   color: var(--grey);
-  font-size: 1rem;
+  font-size: 0.5rem;
   letter-spacing: 0.5rem;
   text-align: center;
   align-self: center;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 i {
-    color: var(--black);
+  color: var(--black);
+}
+
+.main-container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  min-height: 43rem;
+}
+
+@media (min-width: 900px) {
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .header-container {
@@ -109,7 +115,7 @@ i {
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-left: 1.3rem;
 }
 
@@ -120,20 +126,27 @@ i {
 
 .functions-container {
   background-color: var(--color1);
+  border-radius: 10px;
+  margin: 0.3rem;
 }
 
 .selectors-container {
   background-color: var(--color2);
+  border-radius: 10px;
+  margin: 0.3rem;
 }
 
 .events-container {
   background-color: var(--color3);
+  border-radius: 10px;
+  margin: 0.3rem;
 }
 
 /* MODAL */
 
-/* MODAL (BACKGROUND */
-.modal-main--container {
+/* MODAL (BACKGROUND) */
+
+.modal-bg--container {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: auto; /* Sit on top */
@@ -143,30 +156,83 @@ i {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: hidden; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--black-rgba--06);
 }
 
 /* MODAL CONTENT/BOX */
-.modal-content {
-  background-color: var(--white);
+
+.modal-content--container {
+  position: relative;
+  background-color: var(--grey-light);
+  box-shadow: 0 0 0.5rem 0 var(--grey-medium);
   margin: 12% auto; /* 15% from the top and centered */
-  padding: 1rem;
-  border: 1px solid var(--black);
-  width: 70rem; /* Could be more or less, depending on screen size */
-  height: 40rem;
+  width: 50rem; /* Could be more or less, depending on screen size */
+  height: 30rem;
 }
 
-/* CLOSE BUTTON */
-.modal-close {
-  color: var(--grey);
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+/* MODAL CLOSE BUTTON */
+
+.btn-modal--close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  border: none;
+  background-color: var(--white);
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
 }
 
-.modal-close:hover,
-.modal-close:focus {
-  cursor: pointer;
-  color: var(--red);
+/* MODAL CLOSE MATERIAL ICON */
 
+.material-icons.md-dark.md-inactive {
+  color: var(--black-rgba--026);
+}
+
+.material-icons.md-dark.md-inactive:hover,
+.material-icons.md-dark.md-inactive:focus {
+  color: var(--black-rgba--054);
+}
+
+/* MODAL SELECT OPTIONS JS JQUERY */
+
+.modal-select--container {
+  background-color: var(--white);
+  height: 100px;
+  width: 480px;
+  box-shadow: 
+    inset -10px -10px 15px yellow,
+    inset 10px 10px 15px green;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50px;
+  
+}
+
+.btn1, .btn2 {
+  display: none;
+}
+
+label {
+    font-family: "Poppins", sans-serif;
+    font-size: 27px;
+    padding: 15px 35px;
+    font-weight: 600;
+    color: blue;
+    border-radius: 35px;
+    background-color: red
+}
+
+.btn1, .btn2:checked + label:checked {
+    box-shadow: 
+    inset -10px -10px 15px yellow,
+    inset 10px 10px 15px green;
 }
