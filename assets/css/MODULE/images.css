@@ -13,3 +13,11 @@
     width: 4rem;
     height: 4rem;
 }
+
+.section__events-img:hover,
+.section__functions-img:hover,
+.section__selectors-img:hover,
+.header__title-img:hover {
+    transform: scale(1.3);
+    transition: 0.5s ease-in-out;
+}
