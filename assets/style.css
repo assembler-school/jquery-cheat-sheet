@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+/* Generics */
+body,
+html {
+  font-family: "Press Start 2P", sans-serif;
+  background-image: url(/assets/img/background.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: auto;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  transition: all 0.7s;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  border-radius: 3%;
+  border: solid fuchsia 2px;
+  text-align: center;
+  margin: 2% 1%;
+  padding: 2%;
+  min-height: 20vh;
+  overflow-y: auto;
+}
+.box .title {
+  color: darkblue;
+  text-shadow: 1px 3px fuchsia;
+  min-width: 100%;
+  max-height: 10vh;
+  z-index: 1;
+}
+
+.top {
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.bottom {
+  /*  display: none;
+  opacity: 0;
+  transform: translateX(-100px); */
+}
+
+.events {
+  height: -webkit-fill-available;
+  background-color: #f0da4f86;
+}
+.functions {
+  height: -webkit-fill-available;
+  background-color: rgba(21, 151, 21, 0.623);
+}
+.selectors {
+  height: -webkit-fill-available;
+  background-color: #96e6f4a6;
+}
+.drop-area {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.74);
+}
+.button {
+  outline: fuchsia solid 1px;
+  font-family: "Press Start 2P", sans-serif;
+  color: darkblue;
+  text-shadow: 1px 2px violet;
+  background-color: rgb(220 53 148 / 65%);
+  padding: 0.5% 2%;
+  font-size: 1vw;
+  cursor: pointer;
+  text-align: center;
+
+  height: min-content;
+}
+.swipeRight {
+  outline: 0px;
+  border-radius: 50%;
+  padding: 0.5%;
+  position: absolute;
+  align-self: flex-end;
+  visibility: hidden;
+}
+.swipeLeft {
+  outline: 0px;
+  border-radius: 50%;
+  padding: 0.5%;
+  position: absolute;
+  align-self: flex-start;
+  visibility: hidden;
+}
+.javaScript {
+  flex-direction: column;
+  min-width: 40%;
+  max-width: 100vw;
+  background-color: rgba(255, 255, 255, 0.74);
+}
+.boxText {
+  font-family: monospace;
+  font-size: 1.1vw;
+  height: -webkit-fill-available;
+}
+.info-JSt {
+  font-size: 1.5vw;
+}
+.jQuery {
+  flex-direction: column;
+  min-width: 40%;
+  max-width: 100vw;
+  background-color: rgba(255, 255, 255, 0.74);
+}
+.item {
+  font-family: monospace;
+  margin: 1%;
+  padding: 2%;
+  border: solid white 4px;
+  color: white;
+  text-shadow: 1px 2px grey;
+  border-radius: 3%;
+  height: fit-content;
+  max-height: 5vh;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+
+.deleteButton {
+  background-color: red;
+  border-radius: 50%;
+}
+.popup {
+  display: none;
+  z-index: 10;
+  position: fixed;
+  top: 0vh;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 99, 71, 0.384);
+  padding-top: 15vh;
+}
+
+.popupContent {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px 30px 70px;
+  margin: 0 auto;
+}
+.closeModal {
+  margin-top: 10vh;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.322);
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.021);
+  background: rgba(255, 255, 255, 0.493);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 780px) {
+  html {
+    min-width: 102vw;
+  }
+  .events,
+  .functions,
+  .selectors,
+  .drop-area,
+  .examples,
+  .javaScript,
+  .jQuery {
+    min-width: calc(100% - 10vw);
+    max-width: 100vw;
+  }
+  .box {
+    max-height: 60vh;
+    min-height: 60vh;
+  }
+  .drop-area {
+    width: 93%;
+    min-height: 20vh;
+  }
+  .boxText {
+    font-size: 3vh;
+  }
+  .item {
+    font-size: 4vw;
+  }
+  .flex {
+    height: auto;
+  }
+  .button {
+    margin: 4%;
+    font-size: 4.5vw;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+}
