@@ -20,7 +20,9 @@ function dropzoneIn() {
 }
 
 function dropzoneOut() {
-  document.getElementById("bottom").innerHTML = "";
+  document.getElementById("bottom").innerHTML == ""
+    ? document.getElementById("bottom").innerHTML
+    : (document.getElementById("bottom").innerHTML = "");
   setTimeout(() => {
     let middle = document.getElementById("middle");
     middle.style.display = "flex";

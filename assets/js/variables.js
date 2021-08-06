@@ -1,6 +1,3 @@
-/**
- * Global Variables
- */
 let listObjectsJS = [
   {
     id: "6",
@@ -16,7 +13,9 @@ let listObjectsJS = [
     id: `1`,
     title: `clicked`,
     type: `events`,
-    code: `object.onclick = function(){myScript};`,
+    code: `document.getElementById("clickBite")<br>
+      .addEventListener("click",function(){alert("Click!!!");})<br> 
+    };`,
     link: ` https://www.w3schools.com/jsref/event_onclick.asp `,
   },
   {
@@ -360,8 +359,8 @@ let listObjectsJQ = [
     id: "1",
     title: "click",
     type: "events",
-    code: `$("p").click(function(){ <br>
-      alert("The paragraph was clicked.");<br> 
+    code: `$("#clickBite").click(function(){ <br>
+      alert("Click!!!");<br> 
     });
       `,
     link: "https://www.w3schools.com/jquery/event_click.asp",
@@ -737,23 +736,5 @@ let listObjectsJQ = [
   },
 ];
 localStorage.setItem("objectsJQ", JSON.stringify(listObjectsJQ));
-
-/* let listExamples = [
-  {
-    id: "1",
-    text: `<h1>The onclick Event</h1>
-
-    <p>The onclick event is used to trigger a function when an element is clicked on.</p>
-    
-    <p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
-    
-    <button onclick="myFunction()">Click me</button>
-    
-    <p id="demo"></p>`,
-
-    popUpText: "se ha efectuado example 1 con exito",
-  },
-];
-localStorage.setItem("examples", JSON.stringify(listExamples)); */
 
 let dragged;

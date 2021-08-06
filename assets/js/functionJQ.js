@@ -41,7 +41,7 @@ function fillObjectsJQ(objectsJQ) {
         <button type="button" id="infoJqButton-${objectJQ.id}" class="button">
           +Info
         </button>
-        <button type="button" id="tryJqButton-${objectJQ.id}" class="button">
+        <button type="button" data.id="${objectJQ.id}" id="tryJqButton-${objectJQ.id}" class="button">
           Try!
         </button>
       </div>
@@ -55,11 +55,17 @@ function fillObjectsJQ(objectsJQ) {
     ).content; //*select the ghost template
     let copyContent = document.importNode(contentTemplate, true); //*import ghost template as html (as html)
     toInsertInfo.appendChild(copyContent); ////*insert  ghost template (now in the living world!!)
-    $(`#infoJsButton-${objectJQ.id}`).click(function () {
+    $(`#infoJqButton-${objectJQ.id}`).click(function () {
       location.assign(objectJQ.link);
     });
-    $(`#tryJsButton-${objectJQ.id}`).click(function () {
-      alert(objectJQ.code);
+    $(`#tryJqButton-${objectJQ.id}`).click(function () {
+      tryJq(objectJQ);
     });
   }
+}
+
+function tryJq(objectJQ) {
+  $("popup").style.display = "inherit";
+  let myScript = document.createElement("script");
+  $(myScript).html(objectJQ.code).appendTo($("#codeHere"));
 }

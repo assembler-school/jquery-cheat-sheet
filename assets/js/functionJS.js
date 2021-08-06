@@ -74,7 +74,16 @@ function fillObjectsJS(objectsJS) {
     document
       .getElementById(`tryJsButton-${objectJS.id}`)
       .addEventListener("click", function () {
-        alert(objectJS.code);
+        tryJs(objectJS);
       });
   }
+}
+
+function tryJs(objectJS) {
+  document.getElementById("popup").style.display = "inherit";
+  let myScript = document.createElement("script");
+  myScript.onload = function () {
+    alert(objectJS.code);
+  };
+  document.getElementById("codeHere").appendChild(myScript);
 }

@@ -9,6 +9,10 @@ document.getElementById("beginButton").addEventListener("click", function () {
   }
 });
 
+document.getElementById("closeModal").addEventListener("click", function () {
+  document.getElementById("popup").style.display = "none";
+});
+
 document.addEventListener(
   "drag",
   function () {
