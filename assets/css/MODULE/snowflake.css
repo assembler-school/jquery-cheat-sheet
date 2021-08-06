@@ -1,0 +1,16 @@
+/**
+ * MODULE SNOWFLAKE
+ */
+
+ .fa-snowflake {
+     animation: fall 10s linear forwards;
+     color: #fff;
+     position: absolute;
+     top: -20px;
+ }
+
+ @keyframes fall {
+     to {
+         transform: translateY(100vh);
+     }
+ }
