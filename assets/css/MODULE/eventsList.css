@@ -24,7 +24,6 @@
     --tw-border-opacity: 1;
     padding: 0.5rem;
     background-color: rgb(253, 228, 156);
-}
 
 .section__events-list li:hover {
     cursor: pointer;

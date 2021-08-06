@@ -1,23 +1,23 @@
 .header {
-    width: 90%;
-    margin: auto;
-    padding: .75rem;
-}
-.header__info {
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(179, 226, 131);
+    padding: 1rem;
 }
 
 .header__title {
     text-align: center;
     font-size: 1.5rem;
+    color: #424242;
+    opacity: 0.9;
+    font-style: italic;
 }
 
 .header__title span {
-    --tw-text-opacity: 1;
-    color: rgba(156,163,175,var(--tw-text-opacity))
+    color: #F4511E;
+    opacity: 0.8;
 }
 
-.header__info-logo span {
-    color: rgb(4, 0, 154);
+.header__logo span {
+    color: rgb(84, 67, 107);
+    opacity: 0.8;
 }
