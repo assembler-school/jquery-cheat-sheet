@@ -2,9 +2,9 @@
 /**************** EVENTS ***************/
 
 // Event 1 -
-// window.addEventListener('load', () => { 
-//     alert('DOM with JS fully loaded!');
-// });
+window.addEventListener('load', () => { 
+    document.querySelector('.event1-js').innerHTML ="DOM with JS fully loaded!"
+});
 
 // Event 2
 let btnEvent2 = document.querySelector('.btn__event-2--js')
@@ -38,16 +38,23 @@ btnEvent6.addEventListener('click', () => inputText.value = 'Totochan');
 
 // Event 7  
 let btnEvent7 = document.querySelector('.btn__event-7--js');
-let myImg = document.querySelector('#myImg')
-btnEvent7.addEventListener('click', () => alert('Image loaded: ' + myImg.complete))
+let myImgJS = document.querySelector('#myImgJS')
+btnEvent7.addEventListener('click', () => {
+    myImgJS.onload = function() {        
+        alert(`Image JS loaded`);
+    }
+    myImgJS.setAttribute('src', 'https://images.unsplash.com/photo-1508736375612-66c03035c629?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80');
+})
 
 // Event 8
-let btnEvent8 = document.querySelector('.btn__event-8');
-let myImg8 = document.querySelector('#myImg8')
-btnEvent8.addEventListener('click', checkImage)
-function checkImage() {
-    myImg8.addEventListener('error', () => console.log('Image'))
-}
+let btnEvent8 = document.querySelector('.btn__event-8--js');
+let myImg8Js = document.querySelector('#myImg8Js')
+btnEvent8.addEventListener('click', () => {
+    myImg8Js.onerror = function() {        
+        document.querySelector('.event--8-js').innerHTML = "Image JS fails to load"
+    }
+    myImg8Js.setAttribute('src', 'https://images.unsplash.com/photo');
+})
 
 // Event 9 
 let myForm = document.querySelector("#myFormJS");

@@ -2,11 +2,16 @@
 * MODULE - EVENTS LIST
 */
 
+.section__events {
+    margin-bottom: 1.5rem;
+    margin-top: -1.5rem;
+}
+
 .section__events-list {
     display: flex;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: auto;
     flex-wrap: wrap;
 }
 
@@ -34,6 +39,7 @@
 }
 
 .section__events-title {
-    margin-left: 0.5rem;
+    padding-top: 2rem;
+    margin-left: 3rem;
     font-size: 1.5rem;
 }

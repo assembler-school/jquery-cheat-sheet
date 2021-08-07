@@ -1,0 +1,16 @@
+/**
+ * MODULE LEAVES
+ */
+
+ .fa-leaf {
+    animation: fall 10s linear forwards;
+    color: rgb(252, 134, 33);
+    position: absolute;
+    top: -20px;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}

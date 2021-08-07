@@ -2,9 +2,9 @@
 /**************** EVENTS ***************/
 
 // Event 1 -
-// $(document).ready(function() {
-//     alert('DOM with Jquery fully loaded!');
-// });
+$(document).ready(function() {
+    $('.event1-jquery').html('DOM with Jquery fully loaded!');
+});
 
 // Event 2
 $('.btn__event-2--jquery').on('click', () => {
@@ -30,11 +30,18 @@ $('.btn__event-6--jquery').on('click', () => $('.inputText').val('Chiaki'));
 
 // Event 7 
 $('.btn__event-7--jquery').on('click', checkImage);
-
 function checkImage() {
-    $('#myImgJquery').load(function() {
-        alert('image is loaded')
-    })
+    $("#myImgJquery").on('load', function() {
+        alert('I loaded Jquery image!');
+      }).attr('src', 'https://images.unsplash.com/photo-1508736375612-66c03035c629?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80');
+}
+
+// Event 8
+$('.btn__event-8--jquery').on('click', checkImageEvent8);
+function checkImageEvent8() {
+    $("#myImg8Jquery").on('error', function() {
+        $('.event--8-jquery').html('Image Jquery fails to load');
+      }).attr('src', 'https://images.unsplash.com/3to=format&fit=crop&w=1053&q=80');
 }
 
 // Event 9 

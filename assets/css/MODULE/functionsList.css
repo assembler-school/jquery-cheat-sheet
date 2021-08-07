@@ -2,11 +2,16 @@
 * MODULE - FUNCTIONS LIST
 */
 
+.section__functions {
+    margin-bottom: 1.5rem;
+}
+
+
 .section__functions-list {
     display: flex;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: auto;
     flex-wrap: wrap;
 }
 
@@ -35,5 +40,6 @@
 }
 
 .section__functions-title {
-    margin-left: 0.5rem;
+    margin-left: 3rem;
+    font-size: 1.5rem;
 }

@@ -1,0 +1,16 @@
+/**
+ * MODULE SUN
+ */
+
+ .fa-sun {
+    animation: fall 10s linear forwards;
+    color: rgb(247, 234, 0);
+    position: absolute;
+    top: -20px;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}

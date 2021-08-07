@@ -1,0 +1,27 @@
+/**
+* MODULE EXAMPLES of JS and JQUERY
+**/
+
+.addClassJs {
+    color: blue;
+}
+
+.addClassJquery {
+    font-weight: bold;
+}
+
+.removeClassJS {
+    color: blue;
+}
+
+.removeClassJquery {
+    font-weight: bold;
+}
+
+.toggleClassJS {
+    color: blue;
+}
+
+.toggleClassJquery {
+    font-weight: bold;
+}
