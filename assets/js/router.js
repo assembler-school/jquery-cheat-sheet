@@ -33,9 +33,12 @@ function goToExample(e) {
 	// Type - Title
 	let goToString = document.getElementById("autocomplete-field").value;
 	let goToArray = goToString.split("-");
+
 	let type = goToArray[0];
 	let title = goToArray[1];
+
 	let key = type + "s";
+
 	let example = getExampleTitle(key, title);
 	location.hash = "page/" + key + "/" + example.id;
 }

@@ -6,7 +6,8 @@ function insertTemplate(div, template, id) {
 
 	wrapper.insertAdjacentHTML("beforeend", htmlNode);
 	let templateNode = document.getElementById(id).content;
-	let cloneNode = document.importNode(templateNode, true);
+	//let cloneNode = document.importNode(templateNode, true);
+	let cloneNode = templateNode.cloneNode(true);
 
 	wrapper.lastChild.remove();
 	wrapper.appendChild(cloneNode);
