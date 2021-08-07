@@ -1,4 +1,5 @@
-const html = String.raw;
+const html = String.raw
+//String.raw: Returns a string created from a raw template string
 //need html const for seeing html in js method
 
 let pageIndexTemplate = html`<template id="page-index-temp"></template>
