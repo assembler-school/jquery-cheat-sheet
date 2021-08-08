@@ -15,3 +15,59 @@
      }
  }
 
+ @media (max-width: 1674px) {
+    @keyframes fall {
+        to {
+            transform: translateY(110vh);
+        }
+    }
+} 
+
+@media (max-width: 1484px) {
+    @keyframes fall {
+        to {
+            transform: translateY(120vh);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    @keyframes fall {
+        to {
+            transform: translateY(130vh);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    @keyframes fall {
+        to {
+            transform: translateY(135vh);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    @keyframes fall {
+        to {
+            transform: translateY(145vh);
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    @keyframes fall {
+        to {
+            transform: translateY(160vh);
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    @keyframes fall {
+        to {
+            transform: translateY(210vh);
+        }
+    }
+}
+

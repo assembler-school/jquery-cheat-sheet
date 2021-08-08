@@ -176,45 +176,45 @@ btnFunction10.addEventListener("click", () => {
 
 
 // Function 11
-let btnFunction11 = document.querySelector(".btn__function-11");
-let disabledBtn11 = document.querySelector(".btn__disabled11");
-btnFunction11.addEventListener("click", () => {
-    disabledBtn11.disabled = true;
+let btnFunction11Js = document.querySelector(".btn__function-11--js");
+let disabledBtn11Js = document.querySelector(".btn__disabled11--js");
+btnFunction11Js.addEventListener("click", () => {
+    disabledBtn11Js.disabled = true;
 })
 
 // Function 12
-let btnFunction12 = document.querySelector(".btn__function-12");
-let disabledBtn12 = document.querySelector(".btn__disabled12");
-btnFunction12.addEventListener("click", () => {
-    disabledBtn12.disabled = false;
+let btnFunction12Js = document.querySelector(".btn__function-12--js");
+let disabledBtn12Js = document.querySelector(".btn__disabled12--js");
+btnFunction12Js.addEventListener("click", () => {
+    disabledBtn12Js.disabled = false;
 })
 
 // Function 13
-let btnFunction13 = document.querySelector(".btn__function-13");
-btnFunction13.addEventListener("click", () => {
-    let img13 = document.querySelector("#img--13");
-    img13.setAttribute("src", "https://images.unsplash.com/photo-1627917597612-a3b56a5be55d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80")
+let btnFunction13Js = document.querySelector(".btn__function-13--js");
+btnFunction13Js.addEventListener("click", () => {
+    let img13Js = document.querySelector("#img-13--js");
+    img13Js.setAttribute("src", "assets/image/snoopy/snoopy10.svg")
 })
 
 // Function 14
-let btnFunction14 = document.querySelector(".btn__function-14");
-btnFunction14.addEventListener("click", () => {
-    let img14 = document.querySelector("#img--14");
+let btnFunction14Js = document.querySelector(".btn__function-14--js");
+btnFunction14Js.addEventListener("click", () => {
+    let img14 = document.querySelector("#img-14--js");
     img14.removeAttribute("src")
 })
 
 // Function 15
-let btnFunction15 = document.querySelector(".btn__function-15");
-btnFunction15.addEventListener("click", () => {
-    let function15 = document.querySelector(".function15");
-    function15.style.display = "none";
+let btnFunction15Js = document.querySelector(".btn__function-15--js");
+btnFunction15Js.addEventListener("click", () => {
+    let img15js = document.querySelector("#img-15--js");
+    img15js.style.display = "none";
 })
 
 // Function 16
-let btnFunction16 = document.querySelector(".btn__function-16");
-btnFunction16.addEventListener("click", () => {
-    let function16 = document.querySelector(".function16");
-    function16.style.display = "block";
+let btnFunction16Js = document.querySelector(".btn__function-16--js");
+btnFunction16Js.addEventListener("click", () => {
+    let img16js = document.querySelector("#img-16--js");
+    img16js.style.display = "block";
 })
 
 // Function 17, 18 : use Jquery
@@ -265,7 +265,7 @@ btnSelector5.addEventListener('click', () => {
 // Selector 6 
 let btnSelector6 = document.querySelector('.btn__selector-6--js');
 btnSelector6.addEventListener('click', () => {
-    let itemSelector6 = document.querySelectorAll('[class~=item__selector-6], [style="display:none"]');
+    let itemSelector6 = document.querySelectorAll('[class~=item__selector-6--js], [style="display:none"]');
     itemSelector6.forEach(element => {
         element.style.color = 'orange';
         element.style.display = 'block';

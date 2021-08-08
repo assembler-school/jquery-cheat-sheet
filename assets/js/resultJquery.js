@@ -123,43 +123,43 @@ $('.btn__function-10--jquery').click(function() {
 })
 
 // Function 11
-$('.btn__function-11').click(function() {
-    $('.btn__disabled11').prop('disabled', true)
+$('.btn__function-11--jquery').click(function() {
+    $('.btn__disabled11--jquery').prop('disabled', true)
 })
 
 // Function 12
-$('.btn__function-12').click(function() {
-    $('.btn__disabled12').prop('disabled', false)
+$('.btn__function-12--jquery').click(function() {
+    $('.btn__disabled12--jquery').prop('disabled', false)
 })
 
 // Function 13
-$('.btn__function-13').click(function() {
-    $('#img--13').attr('src', "https://images.unsplash.com/photo-1627917597612-a3b56a5be55d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80")
+$('.btn__function-13--jquery').click(function() {
+    $('#img-13--jquery').attr('src', "assets/image/snoopy/snoopy11.svg")
 })
 
 // Function 14
-$('.btn__function-14').click(function() {
-    $('#img--14').removeAttr('src')
+$('.btn__function-14--jquery').click(function() {
+    $('#img-14--jquery').removeAttr('src')
 })
 
 // Function 15
-$('.btn__function-15').click(function() {
-    $('.function15').css('display', 'none')
+$('.btn__function-15--jquery').click(function() {
+    $('#img-15--jquery').css('display', 'none')
 })
 
 // Function 16
-$('.btn__function-16').click(function() {
-    $('.function16').css('display', 'block')
+$('.btn__function-16--jquery').click(function() {
+    $('#img-16--jquery').css('display', 'block')
 })
 
 // Function 17
-$('.btn__function-17').click(function() {
-    $('.function17').fadeIn(2000)
+$('.btn__function-17-jquey').click(function() {
+    $('#img-17--jquery').fadeIn(2000)
 })
 
 // Function 18
-$('.btn__function-18').click(function() {
-    $('.function18').fadeOut(2000)
+$('.btn__function-18--jquery').click(function() {
+    $('#img-18--jquery').fadeOut(2000)
 })
 
 /**************** SeLECTORS ***************/
@@ -196,7 +196,7 @@ $('.btn__selector-5--jquery').click(function() {
 
 // Selector 6 
 $('.btn__selector-6--jquery').click(function() {
-    $('li.item__selector-6[style="display: none;"]').css({"display": "block", "color": "red"});
+    $('li.item__selector-6--jquery[style="display: none;"]').css({"display": "block", "color": "red"});
 })
 
 // Selector 7
@@ -212,6 +212,12 @@ $('.btn__selector-8--jquery').click(function() {
 })
 
 // Selector 9
+$('.btn__selector-9--jquery').click(function() {
+    var userName = window.prompt("Please Enter Your Name");
+    if (userName != null) {
+        alert(userName)
+    }
+})
 
 // Selector 10
 $('.btn__selector-10--jquery').click(function() {

@@ -23,3 +23,7 @@
     color: rgb(84, 67, 107);
     opacity: 0.8;
 }
+
+.header__logo-span {
+    font-size: 1.5rem;
+}

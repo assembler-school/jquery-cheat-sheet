@@ -54,11 +54,6 @@
     display: flex;
 }
 
-.modal__content-js--code {
-    width: 400px;
-}
-
-
 
 .modal__content-js--code h4,
 .modal__content-jquery--code h4 {

@@ -21,6 +21,12 @@
  @import "MODULE/sun.css";
  @import "MODULE/example.css";
 
+ /**
+ * LAYOUT FOLDER
+ */
+
+ @import "LAYOUT/common.css";
+
 
 
 
