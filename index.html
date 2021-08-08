@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS & JQuery Cheatsheet</title>
+    <link rel="icon" href="favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/main.js" type="module" defer async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--Meter aquí el favicon del browser -->
+    <link rel="icon" type="image/webp" href="" />
+</head>
+
+<body>
+    <main>
+        <section class="topsearchbar">
+            <p class="unicodeblack">&#8592; &#8594;</p>
+            <p class="searchmain">cheatsheetsAreLikeSuperMan.aleluya</p>
+        </section>
+        <article>
+            <section class="top__container">
+                <div id="consolecode" class="top__leftcontainer">
+                    <button id="" class="navbtn section__jsbutton button">JS</button>
+                    <button id="" class="navbtn section__button--jquery button">
+              JQuery
+            </button>
+                    <div id="codecontainer" class="section__codecontainer">
+                        "Please select one of the languages above first."
+                    </div>
+                </div>
+                <div id="consoletext" class="top__rightcontainer">
+                    <button class="section__resultbutton button">Result</button>
+                    <div id="resultcontainer" class="section__resultcontainer">
+                        An example will be displayed here
+                    </div>
+                </div>
+            </section>
+        </article>
+        <ul>
+            <li>Functions & Selectors</li>
+            <li>Events</li>
+        </ul>
+
+        <article class="article__boxfunctions">
+            <div class="article__leftboxfunctions">
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#9998;</p>
+                        <p class="text--white">Create element</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10007;</p>
+                        <p class="text--white">Remove element</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10149;</p>
+                        <p class="text--white">Append to parent</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10150;</p>
+                        <p class="text--white">Prepend to parent</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10565;</p>
+                        <p class="text--white">Create & add element after</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10566;</p>
+                        <p class="text--white">Create and add element before</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#61;</p>
+                        <p class="text--white">Clone element</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#8853;</p>
+                        <p class="text--white">Add a class</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#8887;&#8886;</p>
+                        <p class="text--white">Toggle a class</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#8854;</p>
+                        <p class="text--white">Remove a class</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#8709;</p>
+                        <p class="text--white">Disabled attr to button</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10007;&#8709;</p>
+                        <p class="text--white">Remove disabled attr to button</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#8918;&#8919;</p>
+                        <p class="text--white">Set data-src attr to img</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10007;&#8918;&#8919;</p>
+                        <p class="text--white">Remove data-src attr to img</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x2601;</p>
+                        <p class="text--white">Hide element on click</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x2600;</p>
+                        <p class="text--white">Show element on click</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x272D;</p>
+                        <p class="text--white">Fade in element</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x2729;</p>
+                        <p class="text--white">Fade out element</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x2941;</p>
+                        <p class="text--white">Iterate elements & change style</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10612;</p>
+                        <p class="text--white">Get parent & change font-weight</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10613;</p>
+                        <p class="text--white">
+                            Get children & change font-weight
+                        </p>
+                    </a>
+                </div>
+                <!-- <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x2942;</p>
+                        <p class="text--white">
+                            Get elements with class & change font-weight
+                        </p>
+                    </a>
+                </div> -->
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x2944;</p>
+                        <p class="text--white">
+                            Get item by id & change font-weight
+                        </p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="text--white"></p>
+                        <p class="unicode">&#x2942;&#8709;</p>
+                        <p class="text--white">
+                            Get elements with a class & display:none & change font color
+                        </p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#9745;</p>
+                        <p class="text--white">Get selected options</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#8918;&#8919;&#40;&#x30;&#41;</p>
+                        <p class="text--white">
+                            Change href attr of first element
+                        </p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#40;&#x203C;&#41;</p>
+                        <p class="text--white">
+                            Show alert with value of first "input"
+                        </p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10007;&#x204E;</p>
+                        <p class="text--white">Remove all items</p>
+                    </a>
+                </div>
+                <div class="function__box function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x2042;</p>
+                        <p class="text--white">
+                            Animate item after 2" from page load
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="article__rightboxevents">
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x27F3;</p>
+                        <p class="text--white">HTML doc is loaded</p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x0298;</p>
+                        <p class="text--white">Item is clicked</p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x0298*2</p>
+                        <p class="text--white">Item is double clicked</p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#8471;</p>
+                        <p class="text--white">Pressed key on keyboard</p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#9736;</p>
+                        <p class="text--white">Mouse cursor moved</p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#x2139;&#43;&#43;</p>
+                        <p class="text--white">Value of an text input changed</p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10004;&#x2750;</p>
+                        <p class="text--white">Image is loaded</p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10007;&#x2750;</p>
+                        <p class="text--white">Image fails to load</p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#9777;&#9993;</p>
+                        <p class="text--white">Form is submitted</p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#9745;&#9998;</p>
+                        <p class="text--white">
+                            Option of a select element changed
+                        </p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10148;</p>
+                        <p class="text--white">Mouse over an element</p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#10004;&#9998;</p>
+                        <p class="text--white">Checkbox - checked & unchecked</p>
+                    </a>
+                </div>
+                <div class="function__box--blue function__box--text">
+                    <a href="#link">
+                        <p class="unicode">&#8689;</p>
+                        <p class="text--white">Ul item clicked: display item</p>
+                    </a>
+                </div>
+            </div>
+        </article>
+        <footer class="footer--black">®️ Assembler School Todos los derechos reservados
+        </footer>
+    </main>
+    <script src="./assets/js/jQuery.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/vanillaJS.js"></script>
+</body>
+
+</html>
