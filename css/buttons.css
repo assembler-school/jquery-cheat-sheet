@@ -1,0 +1,7 @@
+.btn__black{
+  padding: 2px;
+  border-radius: 20%;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}

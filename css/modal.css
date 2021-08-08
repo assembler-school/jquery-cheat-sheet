@@ -1,0 +1,79 @@
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #fefefe;
+  margin: 8% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; 
+  height: 60%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__header{
+display: flex;
+justify-content: space-between;
+width: 100%;
+height: 10%;
+}
+
+.modal__js__box{
+  background-color: rgba(196, 186, 196, 0.497);
+  width: 50%;
+  height: 90%;
+  font-weight: bold;
+}
+.modal__jq__box{
+  background-color: rgba(194, 190, 194, 0.605);
+  width: 50%;
+  height: 90%;
+  font-weight: bold;
+}
+
+.modal__exCode__Jq, .modal__exCode__Js{
+  display: flex;
+  justify-content: center;
+  background-color: rgba(169, 169, 169, 0.408);
+  margin-top: 20px;
+}
+
+.modal__title {
+  font-size: larger;
+  color: rgb(115, 115, 115);
+  font-weight: bold;
+}
+
+.img{
+  max-width: 150px;
+  max-height: 150px;
+}

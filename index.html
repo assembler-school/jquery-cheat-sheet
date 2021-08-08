@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/modal.css">
+  <link rel="stylesheet" href="/css/buttons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="js/modal.js" defer></script>
+  <script src="js/vanilla.js" defer></script>
+  <script src="js/jquery.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1 id="header" class="flex-center">jQuery and JS Cheat Sheet</h1>
+  </header>
+  <div class="container">
+    <div class="events">
+      <h2>Events</h2>
+      <ul>
+        <li>HTML document loaded</li>
+        <li>HTML item clicked</li>
+        <li>HTML item double clicked</li>
+        <li>Key pressed on keyboard</li>
+        <li>Mouse cursor moves</li>
+        <li>Value changed on text input</li>
+        <li>Image loaded</li>
+        <li>Image load fail</li>
+        <li>Form submitted</li>
+        <li>Option selected on select element</li>
+        <li>When you position the mouse over an element</li>
+        <li>Checkbox checked or unchecked</li>
+        <li>Show the clicked item of an UL list</li>
+      </ul>
+    </div>
+    <div class="functions">
+      <h2>Functions</h2>
+      <ul>
+        <li>Create an HTML element</li>
+        <li>Remove an HTML element</li>
+        <li>Append an HTML element</li>
+        <li>Prepend an HTML element</li>
+        <li>Create and an HTML element after another element</li>
+        <li>Create and an HTML element before another element</li>
+        <li>Clone an HTML element</li>
+        <li>Add a class to an HTML item</li>
+        <li>Remove a class to an HTML item</li>
+        <li>Toggle the class of an HTML item</li>
+        <li>Add a disabled attribute to an HTML button</li>
+        <li>Remove the disabled attribute of an HTML button</li>
+        <li>Set a data-src attribute to a img element</li>
+        <li>Remove the data-src attribute of the img element</li>
+        <li>Hide an HTML element on click (display: none)</li>
+        <li>Show an HTML element on click (display: block)</li>
+        <li>Fade in an HTML element using jQuery</li>
+        <li>Fade out an HTML element using jQuery</li>
+        <li>Animate an item after 2s from the initial page load</li>
+      </ul>
+    </div>
+    <div class="selectors">
+      <h2>Selectors</h2>
+      <ul>
+        <li>Iterate a collection of elements</li>
+        <li>Get the parent element of a certain element</li>
+        <li>Get the collection of children of a certain element</li>
+        <li>Get all the elements that have a certain class</li>
+        <li>Get an item by id</li>
+        <li>Get all the elements that have a certain class and a certain property</li>
+        <li>Get the selected option of a select element</li>
+        <li>Change an attribute of a first element</li>
+        <li>Show the value of a first input on the page</li>
+        <li>Remove all items from a specific selector</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal__header">
+          <span class="modal__title">Title</span>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal__js__box">JavaScript
+          <div class="modal__exCode__Js">code</div>
+          <div class="modal__exArea"></div>
+          <div class="modal__exResult"></div>
+        </div>
+        <div class="modal__jq__box">Jquery
+          <div class="modal__exCode__Jq">code</div>
+        </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
