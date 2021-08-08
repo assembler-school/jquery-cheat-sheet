@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/styles.css" />
     <script src="/script.js" defer></script>
 </head>
-
 <body class="body">
     <header class="header-container">
         <div class="header-container--inner">
@@ -82,18 +81,19 @@
         <h3>Copyright © 2021 MOceanHi Ltd. All rights reserved.</h3>
     </footer>
 </body>
+ <!-- MODAL -->
 <div class="modal-bg--container" id="modal-bg">
     <div class="modal-content--container">
         <button class="btn btn-modal--close"><i class="material-icons md-dark md-inactive"
                 id="icon-modal--close">highlight_off</i></button>
         <div class="modal-select--container">
             <input class="modal-input--select" type="radio" name="radio" id="btn1"></input>
-            <label for="btn1">JAVASCRIPT</label>
+            <label for="btn1" id="labelJS">JAVASCRIPT</label>
             <input class="modal-input--select" type="radio" name="radio" id="btn2"></input>
-            <label for="btn2">JQUERY</label>
+            <label for="btn2" id="labelJQ">JQUERY</label>
         </div>
-        <div class="div-screen div-screen--js" id="screenJS">D1</div>
+        <div class="div-screen div-screen--js" id="screenJS">JAVASCRIPT</div>
+        <div class="div-screen div-screen--jq" id="screenJQ">JQUERY</div>
     </div>
 </div>
-
 </html>
