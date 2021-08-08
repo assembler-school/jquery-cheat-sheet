@@ -6,6 +6,7 @@ let selectJsBtn = document.querySelector("#btn1");
 let selectJqBtn = document.querySelector("#btn2");
 let screenJs = document.querySelector("#screenJS");
 let screenJq = document.querySelector("#screenJQ");
+let contentContainer = document.querySelector(".modal-content--container");
 var clickedItem;
 
 /* UL LI ITEMS */
@@ -29,9 +30,17 @@ targetItems.forEach((element) => {
 
 /* FUNCTION CLOSE MODAL USING CLOSE ICON */
 
-modalClose.addEventListener("click", (e) => {
+modalClose.addEventListener("click", () => {
   modalContainer.style.display = "none";
 });
+
+/* modalContainer.addEventListener('click', () => {
+  if (e.target == contentContainer) {
+    return null;
+  } else {
+    modalContainer.style.display = "none"
+  }
+}); */
 
 /* FUNCTION DISPLAY SELECTED JAVASCRIPT OR JQUERY SCREEN IN MODAL */
 
@@ -50,12 +59,35 @@ selectJqBtn.addEventListener("click", () => {
 function examples() {
   switch (clickedItem) {
     case "act1":
-      screenJs.textContent = "Hello world";
-      screenJq.textContent = "Hello Marcel";
+      screenJs.innerHTML = `<pre><code>
+      &lt;script&gt;
+      const paragraph = document.createElement("p"); 
+      paragraph.textContent = "This is a new paragraph"; 
+
+      const element = document.getElementById("div1"); 
+      element.appendChild(para); 
+      &lt;/script&gt;
+      </code>
+      </pre>`;
+
+      let btn1 = document.createElement("button");
+      btn1.textContent = "Click me!";
+      screenJs.appendChild(btn1);
+
+      btn1.addEventListener("click", () => {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = "This is a new paragraph";
+
+        screenJs.appendChild(paragraph);
+      });
+
+      screenJq.textContent = `$("container").append($("<div>", {id: "foo", "class": "a"}));`; //  first selector (container) is the one I want things appended to. The second is what I am creating and appending
+
       break;
 
     case "act2":
       screenJs.textContent = "Hello Marcel";
+
       break;
 
     default:
