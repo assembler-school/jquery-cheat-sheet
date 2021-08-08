@@ -144,7 +144,7 @@ i {
 
 /* MODAL */
 
-/* MODAL (BACKGROUND) */
+/* modal (background) */
 
 .modal-bg--container {
   display: none; /* Hidden by default */
@@ -159,22 +159,24 @@ i {
   background-color: var(--black-rgba--06);
 }
 
-/* MODAL CONTENT/BOX */
+/* modal content/box */
 
 .modal-content--container {
+  display: grid;
+  grid-template-rows: 80px 100%;
   position: relative;
   background-color: var(--grey-light);
   box-shadow: 0 0 0.5rem 0 var(--grey-medium);
   margin: 12% auto; /* 15% from the top and centered */
   width: 50rem; /* Could be more or less, depending on screen size */
   height: 30rem;
+  border: none;
 }
 
-/* MODAL CLOSE BUTTON */
+/* modal close button */
 
 .btn-modal--close {
   position: absolute;
-  top: 0;
   right: 0;
   transform: translate(50%, -50%);
   border: none;
@@ -182,9 +184,10 @@ i {
   height: 24px;
   width: 24px;
   border-radius: 50%;
+  
 }
 
-/* MODAL CLOSE MATERIAL ICON */
+/* modal close material  */
 
 .material-icons.md-dark.md-inactive {
   color: var(--black-rgba--026);
@@ -195,44 +198,53 @@ i {
   color: var(--black-rgba--054);
 }
 
-/* MODAL SELECT OPTIONS JS JQUERY */
+/* modal select options JS JQuery */
 
 .modal-select--container {
-  background-color: var(--white);
-  height: 100px;
-  width: 480px;
-  box-shadow: 
-    inset -10px -10px 15px yellow,
-    inset 10px 10px 15px green;
+  
+  height: 80px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 50px;
-  
+  position: relative;
+  overflow: hidden;
 }
 
-.btn1, .btn2 {
+.modal-input--select {
   display: none;
 }
 
+
 label {
-    font-family: "Poppins", sans-serif;
-    font-size: 27px;
-    padding: 15px 35px;
-    font-weight: 600;
-    color: blue;
-    border-radius: 35px;
-    background-color: red
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  margin-top: 0;
+  padding: 225px 35px;
+  width: 50%;
+  font-weight: 600;
+  color: var(--grey-dark-very);
+  background-color: var(--white);
+  text-align: center;
+  justify-self: center;
+  border: none;
+  
+
 }
 
-.btn1, .btn2:checked + label:checked {
-    box-shadow: 
-    inset -10px -10px 15px yellow,
-    inset 10px 10px 15px green;
+input:checked + label {
+    font-size: 20px;
+    background-color: var(--grey-dark-very);
+    color: var(--white);
 }
+
+
+/* MODAL SCREENS JS and JQUERY ON SELECTION */
+
+.div-screen--js {
+    background-color: var(--grey-dark-very);
+    border: none;
+}
+
+
+
