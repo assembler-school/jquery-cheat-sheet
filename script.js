@@ -40,6 +40,7 @@ modalClose.addEventListener("click", () => {
 document.addEventListener('click', (e) => {
   if (e.target == modalContainer) {
     modalContainer.style.display = "none"
+    
   }
 });
 
