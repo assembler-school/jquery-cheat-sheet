@@ -1,0 +1,11 @@
+/**
+ * MODULE - PRE
+ */
+
+pre {
+    color: rgb(4, 0, 154);
+    margin-left: 1rem;
+    white-space:pre-wrap;
+    font-size: 0.9rem;
+    margin-top: -0.8rem;
+}

@@ -1,0 +1,45 @@
+/**
+* MODULE - EVENTS LIST
+*/
+
+.section__events {
+    margin-bottom: 1.5rem;
+    margin-top: -1.5rem;
+}
+
+.section__events-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: auto;
+    flex-wrap: wrap;
+}
+
+.section__events-list li {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    width: 150px;
+    border: 1px solid;
+    border-radius: .5rem;
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    background-color: rgba(255,255,255,var(--tw-bg-opacity));
+    --tw-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),0 1px 2px rgba(102, 119, 136, 0.3);
+    border-color: rgba(229,231,235,var(--tw-border-opacity));
+    --tw-border-opacity: 1;
+    padding: 0.5rem;
+    background-color: rgb(253, 228, 156);
+}
+
+.section__events-list li:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.4s ease-in-out;
+    transform: scale(0.97);
+}
+
+.section__events-title {
+    padding-top: 2rem;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+}

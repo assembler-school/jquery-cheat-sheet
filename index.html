@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery cheat sheet</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css" >
+    <script src="https://kit.fontawesome.com/fde7bbf066.js" crossorigin="anonymous"></script>
+</head>
+<body class="body">
+    <!-- Header --> 
+    <header class="header">       
+        <div class="header__logo">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><rect fill="none" height="24" width="24"/><g><path d="M11.07,11.7c0.29-0.39,0.81-0.56,1.27-0.37c0.17,0.07,0.32,0.18,0.43,0.33c0.22,0.28,0.25,0.59,0.22,0.85 c-0.05,0.33-0.25,0.63-0.54,0.79c0,0-4.87,2.95-5.07,2.69S11.07,11.7,11.07,11.7z M22,10c0,2.5-1,3-1.5,3 c-0.23,0-0.44-0.1-0.62-0.26c-0.48,3.32-2.36,5.31-5.33,5.99c0.11,0.44,0.48,0.77,0.95,0.77l0,0h0.58c0.22,0,0.41,0.15,0.48,0.36 c0.17,0.52,0.66,1.02,1.02,1.32c0.25,0.21,0.24,0.59-0.03,0.78c-0.34,0.24-0.9,0.49-1.79,0.53c-0.18,0.01-0.35-0.07-0.45-0.22 C15.18,22.07,15,21.71,15,21.26c0-0.3,0.04-0.57,0.09-0.8c-0.78-0.16-1.39-0.78-1.55-1.56c-0.49,0.06-1,0.1-1.54,0.1 c-0.88,0-1.7-0.09-2.45-0.25C9.53,18.83,9.5,18.91,9.5,19c0,0.55,0.45,1,1,1l0,0h0.58c0.22,0,0.41,0.15,0.48,0.36 c0.17,0.52,0.66,1.02,1.02,1.32c0.25,0.21,0.24,0.59-0.03,0.78c-0.34,0.24-0.9,0.49-1.79,0.53c-0.18,0.01-0.35-0.07-0.45-0.22 C10.18,22.57,10,22.21,10,21.76c0-0.3,0.04-0.57,0.09-0.8C9.19,20.77,8.5,19.96,8.5,19c0-0.18,0.03-0.36,0.08-0.53 c-2.46-0.86-4.03-2.78-4.46-5.74C3.94,12.9,3.74,13,3.5,13C3,13,2,12.5,2,10c0-2.27,1.7-4.5,3-4.5c0.43,0,0.49,0.49,0.5,0.85 c1.28-1.78,3.26-3.02,5.55-3.29C11.25,2.1,12.13,1.5,13,1.5v1c0,0,0.33-0.5,1-0.5c0.67,0,1,0.5,1,0.5c-0.49,0-0.85,0.35-0.96,0.77 c1.82,0.48,3.39,1.59,4.46,3.08C18.51,5.99,18.57,5.5,19,5.5C20.3,5.5,22,7.73,22,10z M5,11c0,0.81,0.1,1.53,0.25,2.21 c0.18-0.69,0.46-1.33,0.83-1.92c-0.21-0.47-0.34-0.99-0.34-1.54C5.75,7.68,7.43,6,9.5,6c0.96,0,1.84,0.37,2.5,0.97 C12.66,6.37,13.54,6,14.5,6c2.07,0,3.75,1.68,3.75,3.75c0,0.55-0.12,1.07-0.34,1.54c0.37,0.59,0.66,1.24,0.84,1.94 C18.9,12.55,19,11.82,19,11c0-3.86-3.14-7-7-7C8.14,4,5,7.14,5,11z M17.98,15.29c0-0.1,0.02-0.19,0.02-0.29 c0-1.01-0.26-1.95-0.7-2.78c-0.69,0.78-1.68,1.28-2.8,1.28c-0.27,0-0.54-0.03-0.79-0.09c0.14-0.23,0.23-0.49,0.27-0.77 c0.01-0.07,0.01-0.13,0.02-0.19c0.17,0.03,0.33,0.05,0.5,0.05c1.52,0,2.75-1.23,2.75-2.75S16.02,7,14.5,7 c-0.67,0-1.32,0.25-1.83,0.72L12,8.32l-0.67-0.6C10.82,7.25,10.17,7,9.5,7C7.98,7,6.75,8.23,6.75,9.75c0,1.34,0.96,2.46,2.23,2.7 l-0.76,0.83c-0.6-0.22-1.12-0.59-1.53-1.05C6.26,13.06,6,14,6,15c0,0.08,0.01,0.15,0.01,0.24C7.13,17.06,9.14,18,12,18 C14.88,18,16.88,17.09,17.98,15.29z M16,9.75c0,0.97-0.67,1.75-1.5,1.75S13,10.72,13,9.75S13.67,8,14.5,8S16,8.78,16,9.75z M15.25,8.88c0-0.21-0.17-0.38-0.38-0.38S14.5,8.67,14.5,8.88s0.17,0.38,0.38,0.38S15.25,9.08,15.25,8.88z M11,9.75 c0,0.97-0.67,1.75-1.5,1.75S8,10.72,8,9.75S8.67,8,9.5,8S11,8.78,11,9.75z M10.25,8.88c0-0.21-0.17-0.38-0.38-0.38 S9.5,8.67,9.5,8.88s0.17,0.38,0.38,0.38S10.25,9.08,10.25,8.88z"/></g></svg>
+            <span class="header__logo-span">MyCheatSheet</span>
+        </div>      
+        <div class="header__title"> 
+            <h1>Jquery <span>cheatsheet</span> <span><img src="assets/image/snoopy/snoopy5.svg" alt="snoopy" class="header__title-img"></span></h1>
+        </div>
+    </header><!-- Header -->
+
+    <!-- Main -->
+    <main class="main">       
+        <!-- Events section -->
+        <section class="section__events">
+            <h2 class="section__events-title"><span><img src="assets/image/snoopy/snoopy1.svg" alt="snoopy" class="section__events-img"></span> Events</h2>
+            <ul class="section__events-list">
+                <li data-modal="event1" class="list__item">Document loaded</li>
+                <li data-modal="event2" class="list__item">Item clicked</li>
+                <li data-modal="event3" class="list__item">Item db-clicked</li>
+                <li data-modal="event4" class="list__item">Press a key</li>
+                <li data-modal="event5" class="list__item">Moves the mouse cursor</li>
+                <li data-modal="event6" class="list__item">Changes value of text input</li>
+                <li data-modal="event7" class="list__item">Image loaded</li>
+                <li data-modal="event8" class="list__item">Image fails to load</li>
+                <li data-modal="event9" class="list__item">Form submitted</li>
+                <li data-modal="event10" class="list__item">Change option of select element</li>
+                <li data-modal="event11" class="list__item">Position mouse over an element</li>
+                <li data-modal="event12" class="list__item">Checked or unchecked checkbox</li>
+                <li data-modal="event13" class="list__item">Show items of an ul list when clicked</li>
+            </ul>
+        </section><!-- Events section -->
+
+        <!-- Functions section -->
+        <section class="section__functions">
+            <h2 class="section__functions-title"><span><img src="assets/image/snoopy/snoopy4.svg" alt="snoopy" class="section__functions-img"></span> Functions</h2>
+            <ul class="section__functions-list">
+                <li data-modal="function1" class="list__item">Create element</li>
+                <li data-modal="function2" class="list__item">Remove element</li>
+                <li data-modal="function3" class="list__item">Append element </li>
+                <li data-modal="function4" class="list__item">Prepend element </li>
+                <li data-modal="function5" class="list__item">Add element after another</li>
+                <li data-modal="function6" class="list__item">Add element before another</li>
+                <li data-modal="function7" class="list__item">Clone element within other element</li>
+                <li data-modal="function8" class="list__item">Add class</li>
+                <li data-modal="function9" class="list__item">Remove class</li>
+                <li data-modal="function10" class="list__item">Toggle class</li>
+                <li data-modal="function11" class="list__item">Add disabled attribute</li>
+                <li data-modal="function12" class="list__item">Remove disabled attribute</li>
+                <li data-modal="function13" class="list__item">Set data-src to image</li>
+                <li data-modal="function14" class="list__item">Remove data-src attribute from image</li>
+                <li data-modal="function15" class="list__item">Hide element on click (display: none)</li>
+                <li data-modal="function16" class="list__item">Show element on click (display: block)</li>
+                <li data-modal="function17" class="list__item">Fade in element using jQuery</li>
+                <li data-modal="function18" class="list__item">Fade out element using jQuery</li>
+            </ul>
+        </section>
+        <!-- Functions section -->
+        
+        <!-- Selectors section -->
+        <section class="section__selectors">
+            <h2 class="section__selectors-title"><span><img src="assets/image/snoopy/snoopy10.svg" alt="snoopy" class="section__selectors-img"></span> Selectors</h2>
+            <ul class="section__selectors-list">
+                <li data-modal="selector1" class="list__item">Apply change of style on a collection of elements</li>
+                <li data-modal="selector2" class="list__item">Change font weight of parent element</li>
+                <li data-modal="selector3" class="list__item">Change font weight of children elements</li>
+                <li data-modal="selector4" class="list__item">Change font weight of elements with same class</li>
+                <li data-modal="selector5" class="list__item">Change font weight of item with id</li>
+                <li data-modal="selector6" class="list__item">Change color with class and display "none"</li>
+                <li data-modal="selector7" class="list__item">Get options of a select element that selected</li>
+                <li data-modal="selector8" class="list__item">Change href attribute of the first element</li>
+                <li data-modal="selector9" class="list__item">Show alert with value of first input of page </li>
+                <li data-modal="selector10" class="list__item">Remove items from a specific selector</li>
+                <li data-modal="selector11" class="list__item">Animate item after 2s from initial page load</li>
+            </ul> 
+        </section><!-- Selectors section -->
+    </main> <!-- Main-->
+
+    <!-- EVENTS -->
+    <!-- HTML document has been loaded -->
+    <article class="modal__parent" id="event1">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <!-- Modal Title -->
+            <h3 class= "modal__content-title">HTML document has been loaded</h3>
+            <!-- Modal Title -->
+
+            <!-- Modal JS Part -->
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>              
+                    <pre><code>window.addEventListener('load', () => { 
+alert('DOM with JS fully loaded!');
+});</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p class="event1-js"></p>
+                    <p class="event1-jquery"></p>
+                </div>
+            </section><!-- Modal JS Part -->
+
+            <!-- Modal Jquery Part -->
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$(document).ready(function() {
+alert('DOM with Jquery fully loaded!');
+});</code></pre>
+                </div>
+                <div class="modal__content-jquery--example"></div>
+            </section><!-- Modal Jquery Part -->
+           
+        </div>
+    </article><!-- Modal Event1-->
+
+    <!-- HTML item has been clicked-->
+    <article class="modal__parent" id="event2">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">HTML item has been clicked</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    alert('JS Button clicked!');})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <button class="btn__event-2--js">JS</button>
+                    <button class="btn__event-2--jquery">Jquery</button>
+                </div>
+            </section>
+
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre></pre><code>$('.btn').on('click', () => {
+alert('JQuery Button!');})</code></pre>
+                </div>
+            </section>          
+        </div>
+    </article><!-- Modal Event 2-->
+
+    <!-- HTML item has been double clicked-->
+    <article class="modal__parent" id="event3">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">HTML item has been double clicked</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('dblclick', () =&gt; {
+    alert('JS Button dblclick!');
+})</code></pre>
+                
+                </div>
+                <div class="modal__content-js--example">
+                    <button class="btn__event-3--js">JS</button>
+                    <button class="btn__event-3--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').on('dblclick', () =&gt; {
+    alert('JQuery Button dblclick!');
+})</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Event 3-->
+
+    <!-- User presses a key-->
+    <article class="modal__parent" id="event4">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">User presses a key</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>document.addEventListener('keyup', function(event) { 
+    if (event.keyCode === 65) { 
+        alert('JS A is pressed!'); 
+    } 
+});</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p>Press "a" - keycode of 65 for JS</p>
+                    <p>Press "b" - keycode of 66 for Jquery</p>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$(document).keyup(function(event) { 
+    if (event.which === 66) { 
+        alert('Jquery B is pressed!'); 
+    }
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Event 4-->
+
+    <!-- User moves the mouse cursor-->
+    <article class="modal__parent" id="event5">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">User moves the mouse cursor</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>target.addEventListener('mouseover', (event) => {
+    event.target.style.color = 'red'
+});</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <h3 class="event-5--js">Mouse over me with JS</h3>
+                    <h3 class="event-5--jquery">Mouse over me with Jquery</h3>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.target').on('mouseover', (event) => event.target.style.color = 'green');
+$('.target').on('mouseout', (event) => event.target.style.color = 'black');
+</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Event 5-->
+
+    <!-- User Changes a value of a text input-->
+    <article class="modal__parent" id="event6">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">User Changes a value of a text input</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => inputText.value = 'Totochan');
+                    </code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <input type="text" class="inputText" value="Totoro">
+                    <div>
+                        <button class="btn__event-6--js">JS</button>
+                        <button class="btn__event-6--jquery">Jquery</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').on('click', () => $('.inputText').val('Chiaki'));
+                    </code></pre>
+                </div>
+                <div class="modal__content-jquery--example"></div>
+            </section>         
+        </div>
+    </article><!-- Modal Event 6-->
+
+    <!-- An image is loaded-->
+    <article class="modal__parent" id="event7">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">An image is loaded</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btnEvent7.addEventListener('click', () => {
+    myImgJS.onload = function() {        
+        alert(`Image JS loaded`);
+    }
+    myImgJS.setAttribute('src', 'link');
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <img id="myImgJS" src="" alt="js" width="107" height="98">
+                    <img id="myImgJquery" src="" alt="jquery" width="107" height="98">
+                    <div>
+                        <button class="btn__event-7--js">JS</button>
+                        <button class="btn__event-7--jquery">Jquery</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn__event-7--jquery').on('click', checkImage);
+function checkImage() {
+    $("#myImgJquery").on('load', function() {
+        alert('I loaded Jquery image!');
+    }).attr('src', 'link');
+}</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Event 7-->
+
+    <!-- An image fails to load-->
+    <article class="modal__parent" id="event8">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">An image fails to load</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    myImg.onerror = function() {        
+    document.querySelector('.event').innerHTML = "Image JS fails to load"
+    }
+    myImg.setAttribute('src', 'link');
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <img id="myImg8Js" src="" alt="js" width="107" height="98">
+                    <img id="myImg8Jquery" src="" alt="jquery" width="107" height="98">
+                    <div>
+                        <button class="btn__event-8--js">JS</button>
+                        <button class="btn__event-8--jquery">Jquery</button>
+                        <p class="event--8-jquery"></p>
+                        <p class="event--8-js"></p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn__event-8--jquery').on('click', checkImage);
+function checkImage() {
+    $("#myImg8Jquery").on('error', function() {
+        $('.event--8-jquery').html('Image Jquery fails to load');
+        }).attr('src', 'link');
+    }</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Event 8-->
+
+    <!-- A form is submitted-->
+    <article class="modal__parent" id="event9">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">A form is submitted</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>myForm.addEventListener('submit', () => alert("The form was successfully submitted"))
+</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <div>
+                        <form id="myFormJS">
+                            <input type="text" class="inputText" value="" required>
+                            <button class="btn__event-9--js" type="submit">JS</button>
+                            
+                        </form>
+                    </div>
+                    <div>
+                        <form id="myFormJquery">
+                            <input type="text" class="inputText" value="" required>
+                            <button class="btn__event-9--jquery" type="submit">Jquery</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$("#myForm").submit(function() { 
+    alert("The Jquery form has been submitted") 
+     })</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Event 9-->
+
+    <!-- User changes the option of a select element-->
+    <article class="modal__parent" id="event10">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">User changes the option of a select element</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>target.addEventListener('change', () => alert('You have choose another option with JS'))
+</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <form>
+                        <select class="target">
+                          <option value="option1" selected="selected">Option 1</option>
+                          <option value="option2">Option 2</option>
+                        </select>
+                    </form>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$(".target").change(function() { 
+    alert("You have choose another option with Jquery")
+    })</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Event 10-->
+
+    <!-- User positions the mouse over an element-->
+    <article class="modal__parent" id="event11">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">User positions the mouse over an element</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('mouseover', (event) => {
+    event.target.style.background = 'red'
+    })</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <button class="btn__event-11--js">JS</button>
+                    <button class="btn__event-11--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').on('mouseover', (event) => event.target.style.background = 'green');
+                    </code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Event 11-->
+
+    <!-- A checkbox is checked or unchecked-->
+    <article class="modal__parent" id="event12">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">A checkbox is checked or unchecked</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => myCheck.checked = true);
+btnUnchecked.addEventListener('click', () => myCheck.checked = false);
+</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p><input type="checkbox" id="myCheck"> Are you sure?</p>
+                    <button type="button" class="check">Yes JS</button>
+                    <button type="button" class="uncheck">No JS</button>
+                    <button type="button" class="check">Yes Jquery</button>
+                    <button type="button" class="uncheck">No Jquery</button>  
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$(".check").click(function(){
+    $("#myCheck").prop("checked", true);
+});
+$(".uncheck").click(function(){
+    $("#myCheck").prop("checked", false);
+});</code></pre>
+                </div>
+                <div class="modal__content-jquery--example"> 
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Event 12-->
+
+    <!-- Show items of an ul list when clicked-->
+    <article class="modal__parent" id="event13">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Show items of an ul list when clicked</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>for (let i = 0; i < listItems.length; i++) {
+    listItems[i].addEventListener('click', () => 
+    alert(listItems[i].textContent));
+}</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <ul class="list-js">
+                        <li>Orange JS</li>
+                        <li>Apple JS</li>
+                        <li>Banana JS</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$(".list li").click(function() { alert($(this).html())})
+                    </code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                    <ul class="list-jquery">
+                        <li>Orange Jquery</li>
+                        <li>Apple Jquery</li>
+                        <li>Banana Jquery</li>
+                    </ul>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Event 13-->
+
+    <!-- FUNCTIONS -->
+    <!-- Create an HTML element-->
+    <article class="modal__parent" id="function1">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Create an HTML element</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let newBtn = document.createElement("p");
+    newBtn.innerHTML = "Santa Clause of JS is coming!"
+    function1Text.appendChild(newBtn);
+    })</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p class="function1">
+                        <button class="btn__function-1--js">JS</button>
+                        <button class="btn__function-1--jquery">Jquery</button>
+                    </p>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn__function-1').click(function() {
+    $('.function1').append('<p>Santa Clause of Jquery is coming!</p>')})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 1-->
+
+    <!-- Remove an HTML element-->
+    <article class="modal__parent" id="function2">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Remove an HTML element</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let function2 = document.querySelector("#function2");
+    function2.remove();
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <div>
+                        <p id="function2-js">Bouncing bouncing bouncing</p>
+                        <p id="function2-jquery">Jumping jumping jumping</p>
+                        <button class="btn__function-2--js">JS</button>
+                        <button class="btn__function-2--jquery">Jquery</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('#function2').remove()
+})</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                    
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 2-->
+
+    <!-- Append an HTML element-->
+    <article class="modal__parent" id="function3">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Append an HTML element</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let newEle = document.createElement("p");
+    newEle.innerHTML = "Rabbit JS";
+    function3.appendChild(newEle);
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <section class="function3">
+                        <p>Tiger</p>
+                        <p>Eeyore</p>
+                        <p>Pooh</p>
+                    </section>
+                    <button class="btn__function-3--js">JS</button>
+                    <button class="btn__function-3--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+$('.function3').append("<p>Rabbit Jquery</p>")
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 3-->
+
+    <!-- Prepend an HTML element-->
+    <article class="modal__parent" id="function4">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Prepend an HTML element</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let newEle = document.createElement("p");
+    let newEleTextNode = document.createTextNode("Rabbit JS");
+    newEle.appendChild(newEleTextNode);
+    function4.insertBefore(newEle, function4.childNodes[0]);
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <section class="function4">
+                        <p>Tiger</p>
+                        <p>Eeyore</p>
+                        <p>Pooh</p>
+                    </section>
+                    <button class="btn__function-4--js">JS</button>
+                    <button class="btn__function-4--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.function4').prepend("<p>Rabbit Jquery</p>")
+}))</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                    
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 4-->  
+
+    <!-- Create and add an HTML element after another-->
+    <article class="modal__parent" id="function5">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Create and add an HTML element after another</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    let newEle = document.createElement("p");
+    newEle.innerHTML = "Rabbit JS";
+    function5.after(newEle)
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p class="function5">Tiger</p>
+                    <button class="btn__function-5--js">JS</button>
+                    <button class="btn__function-5--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.function5').after("<p>Rabbit Jquery</p>")
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 5 -->
+
+    <!-- Create and add an HTML element before another -->
+    <article class="modal__parent" id="function6">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Create and add an HTML element before another</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    let newEle = document.createElement("p");
+    newEle.innerHTML = "Rabbit JS";
+    function6.before(newEle)
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p class="function6">Tiger</p>
+                    <button class="btn__function-6--js">JS</button>
+                    <button class="btn__function-6--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.function6').before("<p>Rabbit Jquery</p>")
+})</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                    
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 6 -->
+
+    <!-- Clone an HTML element within other element -->
+    <article class="modal__parent" id="function7">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Clone an HTML element within other element</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    let item = list2.lastElementChild;
+    let itemClone = item.cloneNode(true);
+    list1.appendChild(itemClone);
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <ul class="list--1">
+                        <li>Orange</li>
+                        <li>Apple</li>
+                    </ul>
+                
+                    <ul class="list--2">
+                        <li>Pinaple</li>
+                        <li>Banana</li>
+                    </ul>
+                    <button class="btn__function-7--js">JS</button>
+                    <button class="btn__function-7--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    let item = $('.list--2 li').last();
+    let itemClone = item.clone();
+    $('.list--1').append(itemClone)
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 7 -->
+
+    <!-- Add a class to an HTML item -->
+    <article class="modal__parent" id="function8">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Add a class to an HTML item</h3>         
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    let function8 = document.querySelector(".function8");
+    function8.classList.add("addClassJs")
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p class="function8">Hello! I'm Tigger!</p>
+                    <button class="btn__function-8--js">Js</button>
+                    <button class="btn__function-8--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.function8').addClass('addClassJquery')
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 8 -->
+
+    <!-- Remove a class from an HTML item -->
+    <article class="modal__parent" id="function9">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Remove a class from an HTML item</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    let function9 = document.querySelector(".function9");
+    function9.classList.remove("removeClassJS")
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p class="function9 removeClassJS removeClassJquery">Hello! I'm Tigger!</p>
+                    <button class="btn__function-9--js">JS</button>
+                    <button class="btn__function-9--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.function9').removeClass('removeClassJquery')
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 9 -->
+
+    <!-- Toggle a class of an HTML item -->
+    <article class="modal__parent" id="function10">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Toggle a class of an HTML item</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    let function10 = document.querySelector(".function10");
+    function10.classList.toggle("toggleClass")
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p class="function10 toggleClassJS toggleClassJquery">Hello! I'm Tigger!</p>
+                    <button class="btn__function-10--js">JS</button>
+                    <button class="btn__function-10--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.function10').toggleClass('toggleClass')
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 10 -->
+
+    <!-- Add a disabled attribute to an HTML button -->
+    <article class="modal__parent" id="function11">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Add a disabled attribute to an HTML button</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    disabledBtn11.disabled = true;
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <div>
+                        <button class="btn__disabled11--js">Disabled Js</button>
+                        <button class="btn__function-11--js">Js</button>
+                    </div>
+                    <div>
+                        <button class="btn__disabled11--jquery">Disabled Jq</button>
+                        <button class="btn__function-11--jquery">Jquery</button>
+                    </div
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn_').click(function() {
+    $('.btn__disabled11').prop('disabled', true)
+})</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                    
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 11 -->
+
+    <!-- Remove a disabled attribute from an HTML button -->
+    <article class="modal__parent" id="function12">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Remove a disabled attribute from an HTML button</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    disabledBtn12.disabled = false;
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <div>
+                        <button class="btn__disabled12--js" disabled>Disabled Js</button>
+                        <button class="btn__function-12--js">Js</button>
+                    </div>
+                    <div>
+                        <button class="btn__disabled12--jquery" disabled>Disabled Jq</button>
+                        <button class="btn__function-12--jquery">Jquery</button>
+                    </div
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.btn__disabled12').prop('disabled', false)
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 12 -->
+
+    <!-- Set a data-src attribute to an image element -->
+    <article class="modal__parent" id="function13">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Set a data-src attribute to an image element</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    let img13 = document.querySelector("#img--13");
+    img13.setAttribute("src", "https://images.unsplash.com/photo")
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <div>
+                        <img id="img-13--js" src="" alt="Js" width="100" height="100"/> 
+                        <img id="img-13--jquery" src="" alt="Jquery" width="100"/> 
+                    </div>
+                    <div>
+                        <button class="btn__function-13--js">JS</button>
+                        <button class="btn__function-13--jquery">Jquery</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('#img--13').attr('src', "https://images.unsplash.com/photo")
+})</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                    
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 13 -->
+
+    <!-- Remove a data-src attribute from an image element -->
+    <article class="modal__parent" id="function14">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Remove a data-src attribute from an image element</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    let img14 = document.querySelector("#img--14");
+    img14.removeAttribute("src")
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <img id="img-14--js" alt="js" width="100" height="100" src="assets/image/snoopy/snoopy4.svg">
+                    <img id="img-14--jquery" alt="jquery" width="100" height="100" src="assets/image/snoopy/snoopy6.svg">  
+                    <div>
+                        <button class="btn__function-14--js">JS</button>
+                        <button class="btn__function-14--jquery">Jquery</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('#img--14').removeAttr('src')
+})</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                    
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 14 -->
+
+    <!-- Hide an HTML element on click (display: none) -->
+    <article class="modal__parent" id="function15">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Hide an HTML element on click (display: none)</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    let function15 = document.querySelector(".function15");
+    function15.style.display = "none";
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <div>
+                        <img id="img-15--js" alt="js" width="100" height="100" src="assets/image/snoopy/snoopy4.svg">
+                        <img id="img-15--jquery" alt="js" width="100" height="100" src="assets/image/snoopy/snoopy6.svg">
+                    </div>
+                    <div>
+                        <button class="btn__function-15--js">JS</button>
+                        <button class="btn__function-15--jquery">Jquery</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.function15').css('display', 'none')
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 15 -->
+
+    <!-- Show an HTML element on click (display: block) -->
+    <article class="modal__parent" id="function16">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Show an HTML element on click (display: block)</h3>
+            <section class="modal__content-js">
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener("click", () => {
+    let function16 = document.querySelector(".function16");
+    function16.style.display = "block";
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <div>
+                        <img id="img-16--js" alt="js" width="100" height="100" src="assets/image/snoopy/snoopy3.svg" style="display:none;">
+                        <img id="img-16--jquery" alt="js" width="100" height="100" src="assets/image/snoopy/snoopy11.svg" style="display:none;">
+                    </div>
+                    <div>
+                        <button class="btn__function-16--js">JS</button>
+                        <button class="btn__function-16--jquery">Jquery</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.function16').css('display', 'block')
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 16 -->
+
+    <!-- Fade in an HTML element using jQuery -->
+    <article class="modal__parent" id="function17">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Fade in an HTML element using jQuery</h3>            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('element').fadeIn(2000)
+})</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                    <img id="img-17--jquery" alt="js" width="100" height="100" src="assets/image/snoopy/snoopy7.svg" style="display:none;">
+                    <div>
+                        <button class="btn__function-17-jquey">Jquery</button>
+                    </div>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 17 -->
+
+    <!-- Fade out an HTML element using jQuery -->
+    <article class="modal__parent" id="function18">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Fade out an HTML element using jQuery</h3>            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.function18').fadeOut(2000)
+})</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                    <img id="img-18--jquery" alt="js" width="100" height="100" src="assets/image/snoopy/snoopy6.svg">
+                    <button class="btn__function-18--jquery">FadeOut</button>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Function 18 -->
+
+    <!-- SELECTORS -->
+    <!-- Iterate a collection of elements and apply a change of style on them-->
+    <article class="modal__parent" id="selector1">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Iterate a collection of elements and apply a change of style on them</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let allElements = document.querySelectorAll('.selector--1');
+    allElements.forEach(element => {
+        element.style.color = 'green';
+    })
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p class="selector--1">Tigger</p>
+                    <p class="selector--1">Pooh</p>
+                    <p class="selector--1">Eeyore</p>
+                    <p class="selector--1">Rabbit</p>
+                    <button class="btn__selector-1--js">JS</button>
+                    <button class="btn__selector-1--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.selector--1').each(function() {
+        $( this ).css('color', 'red')
+    })
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Selector 1-->
+
+    <!-- Get the parent element of a certain element and change its font weight-->
+    <article class="modal__parent" id="selector2">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Get the parent element of a certain element and change its font weight</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let spanSelector2 = document.querySelector('.span-selector--2').parentElement;
+    spanSelector2.style.fontWeight = '100';
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <quote>“The only reason for being a bee is to make honey. And the only reason for making honey is so I can eat it.”- <span class="span-selector--2">Pooh</span></quote>
+                    <div>
+                        <button class="btn__selector-2--js">JS</button>
+                        <button class="btn__selector-2--jquery">Jquery</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.span-selector--2').parent().css('font-weight', '900')
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Selector 2-->
+
+    <!-- Get the collection of children of a certain element and change its font weight-->
+    <article class="modal__parent" id="selector3">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Get the collection of children of a certain element and change its font weight</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let listSelector3 = document.querySelector('.list__selector-3').children;
+    for (let i = 0; i < listSelector3.length; i++ ) {
+        listSelector3[i].style.fontWeight = '200';
+    }
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p>The very best anime characters</p>
+                    <ul class="list__selector-3">
+                        <li>Naruto</li>
+                        <li>Doraemon</li>
+                        <li>Conan</li>
+                        <li>Totoro</li>
+                        <li>Slump</li>
+                    </ul>
+                    <button class="btn__selector-3--js">JS</button>
+                    <button class="btn__selector-3--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.list__selector-3').children().each(function() {
+        $( this ).css('font-weight', '900')
+    })
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Selector 3-->
+
+    <!-- Get the collection of children of a certain element and change its font weight-->
+    <article class="modal__parent" id="selector4">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Get the collection of children of a certain element and change its font weight</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let itemSelector4 = document.querySelectorAll('.item__selector-4');
+    itemSelector4.forEach(element => {
+        element.style.fontWeight = '900';
+    })
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p>The very best anime characters</p>
+                    <ul>
+                        <li class="item__selector-4">Naruto</li>
+                        <li>Doraemon</li>
+                        <li>Conan</li>
+                        <li class="item__selector-4">Totoro</li>
+                        <li class="item__selector-4">Slump</li>
+                    </ul>
+                    <button class="btn__selector-4--js">JS</button>
+                    <button class="btn__selector-4--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.item__selector-4').each(function() {
+        $( this ).css('font-weight', '100')
+    })
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Selector 4-->
+
+    <!-- Get an item by id and change its font weight-->
+    <article class="modal__parent" id="selector5">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Get an item by id and change its font weight</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let quoteSelector5 = document.querySelector('#quote__selector-5');
+    quoteSelector5.style.fontWeight = '900';   
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <quote id="quote__selector-5">“If you do not at least try, you will never change.” – Doraemon</quote>
+                    <div>
+                        <button class="btn__selector-5--js">JS</button>
+                        <button class="btn__selector-5--jquery">Jquery</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('#quote__selector-5').css('font-weight', '200')
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Selector 5-->
+
+    <!-- Get all the elements that have a certain class and the display property of none and change their font color-->
+    <article class="modal__parent" id="selector6">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Get all the elements that have a certain class and the display property of none and change their font color</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let itemSelector6 = document.querySelectorAll('[class~=item__selector-6], [style="display:none"]');
+    itemSelector6.forEach(element => {
+        element.style.color = 'orange';
+        element.style.display = 'block';
+    })
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <div>
+                        <ul>
+                            <li class="item__selector-6--js" style="display: none;">Naruto</li>
+                            <li>Doraemon</li>
+                            <li class="item__selector-6--js" style="display: none;">Totoro</li>
+                            <li style="display: none;">Slump</li>
+                        </ul>
+                        <ul>
+                            <li class="item__selector-6--jquery" style="display: none;">Naruto</li>
+                            <li>Conan</li>
+                            <li class="item__selector-6--jquery" style="display: none;">Totoro</li>
+                            <li style="display: none;">Slump</li>
+                        </ul>
+                    </div>
+                    <button class="btn__selector-6--js">JS</button>
+                    <button class="btn__selector-6--jquery">Jquery</button>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('li.item__selector-6[style="display: none;"]').css({"display": "block", "color": "red"});
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Selector 6-->
+
+    <!-- Get the options of a select element that are selected (attribute selected)-->
+    <article class="modal__parent" id="selector7">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Get the options of a select element that are selected (attribute selected)</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let dropdownList = document.querySelector('#characters');
+    let selectedOpt = dropdownList.value;
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <label for="characters">Choose an animate character:</label>
+
+                    <select id="characters">
+                        <option value="Tigger">Tigger</option>
+                        <option value="Piglet">Piglet</option>
+                        <option value="Pooh">Pooh</option>
+                        <option value="Eeyore" selected>Eeyore</option>
+                    </select>
+                    <div>
+                        <button class="btn__selector-7--js">JS</button>
+                        <button class="btn__selector-7--jquery">Jquery</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn__selector-7--jquery').click(function() {
+    let optionSelected = $('#characters').find(':selected').val();
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Selector 7-->
+
+    <!-- Change the href attribute of the first element-->
+    <article class="modal__parent" id="selector8">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Change the href attribute of the first element</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    firstElement.setAttribute('href', 'https://www.udacity.com/')
+    firstElement.innerHTML = 'Udacity'
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <h4>List of online learning platform:</h4>
+                    <div class="bootcamp__list">
+                        <a href="https://www.edx.org/">Edx</a><span>,</span>
+                        <a href="https://www.coursera.org/">Coursera</a><span>,</span>        
+                        <a href="https://www.pluralsight.com/">Plural Sight</a>
+                    </div>
+                    <button class="btn__selector-8--js">JS</button>
+                    <button class="btn__selector-8--jquery">Jquery</button>                  
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.bootcamp__list a:first-child').attr('href', 'https://www.skillshare.com/')
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Selector 8-->
+
+    <!-- Show an alert with the value of the first input of the page-->
+    <article class="modal__parent" id="selector9">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Show an alert with the value of the first input of the page</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    var person = prompt('What is ur name ?')
+    if (person != null) {
+        alert(person)
+    }
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example"> 
+                    <button class="btn__selector-9--js">JS</button>
+                    <button class="btn__selector-9--jquery">Jquery</button>
+                    
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    var userName = window.prompt("Please Enter Your Name");
+    if (userName != null) {
+        alert(userName)
+    }
+})</code></pre>             
+                </div>
+                <div class="modal__content-jquery--example">
+                    
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Selector 9-->
+
+    <!-- Remove all items from a specific selector-->
+    <article class="modal__parent" id="selector10">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Remove all items from a specific selector</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>btn.addEventListener('click', () => {
+    let list10 = document.querySelectorAll('.list__selector-10--js')
+    list10.forEach((element) => element.remove())
+})</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <p>The very best anime characters:</p>
+                    <ul>
+                        <li class="list__selector-10--js">Naruto</li>
+                        <li class="list__selector-10--jquery">Doraemon</li>
+                        <li class="list__selector-10--js">Conan</li>
+                        <li class="list__selector-10--jquery">Totoro</li>
+                        <li class="list__selector-10--jquery">Slump</li>
+                    </ul>
+                    <button class="btn__selector-10--js">JS</button>
+                    <button class="btn__selector-10--jquery">Jquery</button>
+                    
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$('.btn').click(function() {
+    $('.list__selector-10--jquery').remove()
+})</code></pre>
+                </div>
+                <div class="modal__content-jquery--example">
+                    
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Selector 10-->
+
+    <!-- Animate an item after 2 seconds -->
+    <article class="modal__parent" id="selector11">
+        <div class="modal__content">
+            <span class="x" draggable="true">&times;</span>
+            <h3 class= "modal__content-title">Animate an item after 2 seconds from the initial page load</h3>
+            <section class="modal__content-js">                
+                <div class="modal__content-js--code">
+                    <h4>Javascript</h4>
+                    <pre><code>setTimeout(function() {
+    let selector11 = document.querySelector('#selector-11')
+    selector11.style.width = '200px'
+},5000)</code></pre>
+                </div>
+                <div class="modal__content-js--example">
+                    <div id="selector-11" style="background:#98bf21;height:50px;width:50px;margin:6px;"></div>                 
+                </div>
+            </section>
+            
+            <section class="modal__content-jquery">
+                <div class="modal__content-jquery--code">
+                    <h4>Jquery</h4>
+                    <pre><code>$(document).ready(function() {
+    $('#selector-11').delay(5000).animate({width: "80px"})
+})</code></pre>
+                </div>
+            </section>         
+        </div>
+    </article><!-- Modal Selector 11-->
+
+    <!-- Scripts -->
+    <script  src="assets/js/loadModal.js"></script>
+    <script  src="assets/js/resultJs.js"></script>
+    <script  src="assets/js/resultJquery.js"></script>
+    <!-- Scripts -->
+</body>
+</html>

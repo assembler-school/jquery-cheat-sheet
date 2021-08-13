@@ -1,0 +1,16 @@
+/**
+* BASE - RESET 
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.body {
+    margin: 0;
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 0.9rem;
+}
+

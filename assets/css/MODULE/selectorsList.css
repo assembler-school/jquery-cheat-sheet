@@ -1,0 +1,40 @@
+/**
+* MODULE - SELECTORS LIST
+*/
+
+.section__selectors-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: auto;
+    flex-wrap: wrap;
+}
+
+.section__selectors-list li {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    margin: 0.5rem;
+    border: 1px solid;
+    border-radius: .5rem;
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    background-color: rgba(255,255,255,var(--tw-bg-opacity));
+    --tw-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),0 1px 2px rgba(102, 119, 136, 0.3);
+    border-color: rgba(229,231,235,var(--tw-border-opacity));
+    --tw-border-opacity: 1;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: rgb(255, 183, 64);
+}
+
+.section__selectors-list li:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.4s ease-in-out;
+    transform: scale(0.97);
+}
+
+.section__selectors-title {
+    margin-left: 3rem;
+    font-size: 1.5rem;
+}

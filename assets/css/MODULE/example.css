@@ -1,0 +1,43 @@
+/**
+* MODULE EXAMPLES of JS and JQUERY
+**/
+
+.addClassJs {
+    color: blue;
+}
+
+.addClassJquery {
+    font-weight: bold;
+}
+
+.removeClassJS {
+    color: blue;
+}
+
+.removeClassJquery {
+    font-weight: bold;
+}
+
+.toggleClassJS {
+    color: blue;
+}
+
+.toggleClassJquery {
+    font-weight: bold;
+}
+
+.btn__disabled11--js:disabled {
+    color: blue;
+}
+
+.btn__disabled11--jquery:disabled {
+    color: red;
+}
+
+.btn__disabled12--js:disabled {
+    color: blue;
+}
+
+.btn__disabled12--jquery:disabled {
+    color: red;
+}
