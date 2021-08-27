@@ -1,0 +1,145 @@
+/* Reset
+Based on minireset.css v0.0.3 
+https://github.com/jgthms/minireset.css */
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: var(--global--normal--FontWeight);
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+img,
+embed,
+iframe,
+object,
+audio,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+/* Base styles*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--global--sans-serif--FontFamily);
+  font-size: var(--global--body--FontSize);
+  font-weight: var(--global--normal--FontWeight);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* width occupies the rest of the fgolden ratio from sidebar*/
+.content {
+  --content--PaddingTop: var(--global--spacer--lg);
+  background-color: var(--global--light--BackgroundColor);
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--content--PaddingTop) 0;
+
+}
+
+/* Links styles*/
+
+a {
+  color: var(--global--link--Color);
+  text-decoration: var(--global--link--TextDecoration);
+}
+
+a:hover {
+  color: var(--global--link--hover--Color);
+  text-decoration: var(--global--link--hover--TextDecoration);
+}
+
+
+
+a {
+  cursor: pointer;
+}
+
+button {
+  letter-spacing: var(--global--letter-spacing--xs);
+  word-spacing: var(--global--letter-spacing--s);
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: pointer;
+  background: none;
+  font-family: secondChanceSk;
+  font-size: var(--global--h6--title--FontSize);
+  padding: 0;
+  border: none;
+}

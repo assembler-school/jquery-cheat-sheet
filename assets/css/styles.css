@@ -1,0 +1,17 @@
+@import url(./common.css);
+@import url(./sidebar.css);
+@import url(./homeMain.css);
+@import url(./header-footer.css);
+@import url(./global-variables.css);
+@import url(./page.css);
+
+
+@media screen and (max-width:768px) {
+  .sidebar{
+    display: none;
+  }
+  
+  .autocomplete__inpu{
+  line-height: var(--global--md--LineHeight);
+  }
+}
