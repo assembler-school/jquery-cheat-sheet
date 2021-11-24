@@ -26,11 +26,17 @@ text-align: center;
     flex-direction: column;
     background: yellow
 }
+.boSlider {
+    display: flex;
+    flex-direction: column;
+}
 
 .textBox {
+    display: flex;
     text-align: center;
     margin: auto;
     width: 20vh;
+    flex-direction: column;
 }
 
 
