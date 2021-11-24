@@ -31,19 +31,6 @@ body {
   grid-template-rows: 15% 1fr;
 }
 
-#title{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    justify-content: center;
-    align-self: center;
-    text-align: center
-}
-p{
-    cursor: pointer;
-}
-p:hover{
-    background-color: blueviolet;
-}
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -61,6 +48,78 @@ input,button,textarea,select {
   font: inherit;
 }
 
+#title{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-content: center;
+    align-self: center;
+    text-align: center
+}
+p{
+    cursor: pointer;
+}
+p:hover{
+    background-color: blueviolet;
+}
+
+.modalDivCss{
+position: absolute;
+background-color: rgb(0, 0, 0,0.5);
+height: 100vh;
+width: 100vw;
+display: flex;
+align-items:center;
+justify-content: center;
+z-index: 1;
+}
+
+.modalDivContentCss{
+position: relative;
+background-color: rgba(102, 52, 52);
+height: 50vh;
+width: 50vw;
+z-index: 2;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 15% 1fr 15%;
+/* grid-template-rows: 1fr 1fr 1fr 1fr; */
+}
+
+.jqueryDiv{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+.jsDiv{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.jqueryDivEx{
+    background-color: rgb(0, 255, 213);
+}
+.jsDivEx{
+    background-color: rgb(217, 255, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
@@ -74,3 +133,5 @@ input,button,textarea,select {
         scroll-behavior: auto !important;
     }
 }
+
+
