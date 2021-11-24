@@ -1,0 +1,57 @@
+header{
+    background-color: blue;
+}
+body{
+    background-color: black;
+}
+main{
+    background-color: blueviolet;
+}
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    border: chocolate;
+    margin: 2%;
+}
+.section-container{
+    width: 30%;
+    margin: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#events-container{
+    background-color: chocolate;
+}
+#functions-container{
+    background-color: royalblue;
+}
+#selectors-container{
+    background-color: red;
+}
+p{
+    cursor: pointer;
+}
+
+/* MODAL */
+.modalTransparent{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgb(0, 0, 0,0.5);
+}
+.modalSmall{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+}
