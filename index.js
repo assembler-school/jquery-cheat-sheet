@@ -4,6 +4,10 @@ var divSelector = document.getElementById("divSelector")
 var pTag = document.getElementsByTagName("p")
 pTagArr = Array.from(pTag)
 
+
+const jquery = ["soy el 1","soy el 2","soy el 3","soy el 4","soy el 5","soy el 6"]
+const js = ["soy el 1js","soy el 2js","soy el 3js","soy el 4js","soy el 5js","soy el 6js"]
+
 pTagArr.forEach((index)=>{
     index.addEventListener("click",(e)=>{
         var modalDiv = document.createElement("div");
@@ -18,11 +22,12 @@ pTagArr.forEach((index)=>{
             // modalDiv.removeEventListener
             }
         })
-        createDivContent(modalContentDiv)
+        createDivContent(modalContentDiv,index)
     })
 })
 
 function createDivContent(modalContentDiv,index){
+    console.log(index)
     var jqueryDiv = document.createElement("div")
     var jqueryDivEx = document.createElement("div")
     var jsDivEx = document.createElement("div")
@@ -41,5 +46,9 @@ function createDivContent(modalContentDiv,index){
 }
 
 function createContent(indexP,jqueryDivEx,jsDivEx){
-    
+    console.log(indexP)
+    indexValue=indexP.dataset.valueevent
+    console.log(indexValue)
+    jqueryDivEx.textContent=jquery[indexValue]
+    jsDivEx.textContent=js[iindexValue]
 }
