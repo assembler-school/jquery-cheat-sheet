@@ -1,0 +1,11 @@
+.flexiMain {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.funSideBar {
+ background: green;
+ color:whitesmoke;
+ height: 70%;
+}
