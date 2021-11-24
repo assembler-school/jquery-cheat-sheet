@@ -1,0 +1,57 @@
+:root{
+    --bodyBackground:#001219;
+    --sections:#94D2BD;
+    --text:#ffffff;
+    --section-text:#E9D8A6;
+}
+
+body{
+    background-color:var(--bodyBackground);
+    color:var(--text);
+    font-family: 'Roboto', sans-serif;
+}
+#logo{
+    position:absolute;
+    width:250px;
+    right:100px;
+    top:400px;
+    z-index:-1;
+}
+
+/* Header */
+header{
+    text-align: center;
+}
+
+/* Main*/
+main{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Sections */
+section{
+    display:flex;
+    flex-direction: column;
+    background-color:var(--sections);
+    width: 300px;
+    padding:20px;
+    line-height: 15px;
+}
+section .title{
+    color:var(--text);
+    text-align: right;
+    border-bottom:2px solid white;
+}
+section .content{
+    color:var(--section-text);
+    
+}
+
+/* Footer */
+footer{
+    position:absolute;
+    bottom:0;
+    right:10px;
+}
