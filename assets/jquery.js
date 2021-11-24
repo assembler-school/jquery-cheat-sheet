@@ -4,10 +4,10 @@
 $(".collapsible").on("click", function () {
   $(this).toggleClass("active");
   let content = $(this).next();
-  if (content.css("display") === "block") {
+  if (content.css("display") === "flex") {
     content.hide();
   } else {
-    content.show();
+    content.css("display", "flex");
   }
 });
 
@@ -20,6 +20,7 @@ $("#searchBox").on("keyup", function () {
       $(this).show();
     } else {
       $(this).hide();
+      $(this).next().hide(); //Hides the collapsible
     }
   });
 });

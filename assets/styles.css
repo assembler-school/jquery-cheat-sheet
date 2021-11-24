@@ -182,6 +182,12 @@ section {
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+  justify-content: space-evenly;
+}
+.flex {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
 }
 footer {
   background-color: #353535;
