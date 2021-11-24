@@ -12,3 +12,9 @@ function createVanilla(btn1, par) {
 par.appendChild(r)
 
 }
+
+function appendVanilla(btn1, par) {
+    let z = document.createElement("p")
+    z.innerText = "I´m a child!... Element "
+par.appendChild(z)
+}

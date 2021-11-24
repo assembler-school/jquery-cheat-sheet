@@ -333,19 +333,19 @@ function createAppend(r) {
     $(container).append(topSlider)
 
     let par = document.createElement("p")
-    $(par).text(`Creating an element in vanilla Js is super simple, you just need to type the following code: let r = document.createElement("p")`)
+    $(par).text(`Now that we have our element created we have to append it as a child for something else to see it, yes, more steps: par.appendChild(z)`)
     $(par).css("display", "none")
     $(topSlider).append(par)
 
     
     let btn1 = document.createElement("button")
-    $(btn1).text("I got the power to create life")
+    $(btn1).text("If I give it a child, is it SFW?")
     $(btn1).addClass("btn1")
     $(par).append(btn1)
 
     $(btn1).on({
         click: function () {
-           createVanilla(btn1, par)
+           appendVanilla(btn1, par)
         }
     })
 
@@ -370,18 +370,20 @@ function createAppend(r) {
     $(container).append(boSlider)
 
     let parBo = document.createElement("p")
-    $(parBo).text(`Jquery offers a super easy way to add an element. Just append the html elements directly for example:  $(parBo).append("<p>EXISTANCE IS PAIN<p>")`)
+    $(parBo).text(`We don´t need to create the entire element here. We can also just pass a previously created element, for ex:  $(btn2).append(test)`)
     $(parBo).css("display", "none")
     $(boSlider).append(parBo)
 
     let btn2 = document.createElement("button")
-    $(btn2).text("I need to fulfill my purpose")
+    $(btn2).text("What is my purpose?")
     $(btn2).addClass("btn1")
     $(parBo).append(btn2)
 
     $(btn2).on({
         click: function () {
-            queryAdd(btn2, parBo)
+            let test = document.createElement("p")
+            $(test).text("I pass butter")
+            queryAppend(btn2, parBo, test)
         },
         mouseenter: function (params) {
             $(this).css("cursor", "pointer")
