@@ -16,15 +16,21 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+text-align: center;
 }
 
 .con {
     display: flex;
-    width: 20vh;
+    width: 35vh;
     justify-content: center;
     flex-direction: column;
     background: yellow
 }
 
+.textBox {
+    text-align: center;
+    margin: auto;
+    width: 20vh;
+}
 
 

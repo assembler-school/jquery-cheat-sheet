@@ -153,6 +153,7 @@ function createCreate(r) {
     $(par).css("display", "none")
     $(topSlider).append(par)
 
+
     $(toH3).on({
         mouseenter: function (params) {
             $(this).css("cursor", "pointer")
@@ -164,7 +165,7 @@ function createCreate(r) {
 
     let boH3 = document.createElement("h3")
     $(boH3).addClass("Jquery")
-    $(boH3).text(r + ":" + " " + "Jquery")
+    $(boH3).text("Jquery")
     $(container).append(boH3)
     
 
@@ -210,9 +211,24 @@ function createRemove(r) {
     $(container).append(topSlider)
 
     let par = document.createElement("p")
-    $(par).text("Dummy text for explaining how this works in vanilla js")
+    $(par).text(`This a code example of how to remove an element using Js vanilla:  let x = document.getElementById("vanilla")
+
+    x.removeChild(btn1)`)
+    $(par).attr("id", "vanilla")
     $(par).css("display", "none")
+    $(par).addClass("textBox")
     $(topSlider).append(par)
+
+    let btn1 = document.createElement("button")
+    $(btn1).text("I´m an ugly button")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1)
+
+    $(btn1).on({
+        click: function () {
+            removeMe(btn1, par)
+        }
+    })
 
     $(toH3).on({
         mouseenter: function (params) {
@@ -225,7 +241,7 @@ function createRemove(r) {
 
     let boH3 = document.createElement("h3")
     $(boH3).addClass("Jquery")
-    $(boH3).text(r + ":" + " " + "Jquery")
+    $(boH3).text("Jquery")
     $(container).append(boH3)
     
 
@@ -237,6 +253,20 @@ function createRemove(r) {
     $(parBo).text("Dummy text for explaining how this works in vanilla js")
     $(parBo).css("display", "none")
     $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("I´m an ugly button")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+
+    $(btn2).on({
+        click: function () {
+            queryRemove(btn2, parBo)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    })
 
     $(boH3).on({
         mouseenter: function (params) {
