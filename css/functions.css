@@ -2,10 +2,29 @@
     display: flex;
     height: 100vh;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .funSideBar {
  background: green;
  color:whitesmoke;
- height: 70%;
+ height: fit-content
 }
+
+.exampleSide {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.con {
+    display: flex;
+    width: 20vh;
+    justify-content: center;
+    flex-direction: column;
+    background: yellow
+}
+
+
+
