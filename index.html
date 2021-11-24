@@ -13,13 +13,37 @@
     <header><h1>jQuery Cheat Sheet</h1></header>
     <nav><input type="text" id="searchBox" placeholder="Search..." /></nav>
     <section>
-      <div>
+      <div class="sectionDiv">
         <h2>Functions</h2>
         <div>
           <button type="button" class="collapsible">
             Create an HTML element
           </button>
-          <div class="content"><p>Some text example</p></div>
+          <div class="content">
+            <div id="Function1V">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <code>var btn = document.createElement("button");</code>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+              </div>
+            </div>
+            <div id="Function1Q">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <code
+                  >var btn = $("&#60;button&#62; This is a button
+                  &#60;/button&#62;");</code
+                >
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div>
           <button type="button" class="collapsible">
@@ -40,8 +64,8 @@
           <div class="content"><p>Some text example</p></div>
         </div>
       </div>
-      <div>
-        <h2>Functions</h2>
+      <div class="sectionDiv">
+        <h2>Selectors</h2>
         <div>
           <button type="button" class="collapsible">
             HTML document has been loaded
@@ -49,8 +73,8 @@
           <div class="content"><p>Some text example</p></div>
         </div>
       </div>
-      <div>
-        <h2>Selectors</h2>
+      <div class="sectionDiv">
+        <h2>Events</h2>
         <div>
           <button type="button" class="collapsible">
             HTML document has been loaded

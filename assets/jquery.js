@@ -23,3 +23,13 @@ $("#searchBox").on("keyup", function () {
     }
   });
 });
+
+//Magic starts here
+
+//Create an HTML element
+$("#Function1Q button").on("click", function () {
+  var btn = $("<button> This is a button </button>");
+  $(this).parent().append(btn);
+});
+
+//Remove an HTML Element
