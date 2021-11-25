@@ -112,6 +112,19 @@ function createFunctions() {
   $(exampleSide).addClass("exampleSide");
   $(main).append(exampleSide);
 
+/// just to mark test code
+
+let container = document.createElement("div");
+  $(container).addClass("con");
+  $(".exampleSide").append(container);
+
+  let toH3 = document.createElement("h3");
+  $(toH3).addClass("Vanilla");
+  $(toH3).text("Click an element from the left side list to see examples");
+  $(container).append(toH3);
+
+//for EACH
+
   listArray.forEach((element) => {
     let z = document.createElement("p");
     $(z).text(element);
@@ -131,6 +144,8 @@ function createFunctions() {
 
 //verifies the innerText of the element and if match calls function to create that example
 function displayExample(r) {
+
+
   if (r === "Create") {
     createCreate(r);
   }
@@ -168,6 +183,18 @@ function displayExample(r) {
   }
   if (r === "Remove the disabled attribute"){
       createRemoveDisabled(r)
+  }
+  if (r === "Set a data-src attribute"){
+      createSetDataSrc(r)
+  }
+  if(r === "Remove the data-src attribute") {
+      createRemoveDataSrc(r)
+  }
+  if(r === "Hide"){
+      createHideExample(r)
+  }
+  if (r === "Show"){
+    createShowElement(r)
   }
 }
 
@@ -1233,4 +1260,356 @@ function createBeClassy(r){
             $(parBo).slideToggle()
         }
     });
+   }
+
+   //Set a data-src attribute
+
+   function createSetDataSrc(r) {
+    let ex = $(".exampleSide")
+    ex.empty()
+
+    let container = document.createElement("div")
+    $(container).addClass("con")
+    $(".exampleSide").append(container)
+
+    let toH3 = document.createElement("h3")
+    $(toH3).addClass("Vanilla")
+    $(toH3).text(r + ":" + " " + "Vanilla")
+    $(container).append(toH3)
+    
+
+    let topSlider = document.createElement("div")
+    $(topSlider).addClass("topSlider")
+    $(container).append(topSlider)
+
+    let par = document.createElement("p")
+    $(par).text(`ask about this`)
+    $(par).css("display", "none")
+    $(topSlider).append(par)
+
+    
+    let btn1 = document.createElement("button")
+    $(btn1).text("I serve the republic")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1)
+
+    $(btn1).on({
+        click: function () {
+           clonate(btn1, par)
+        }
+    })
+
+
+    $(toH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(par).slideToggle()
+        }
+    });
+
+    let boH3 = document.createElement("h3")
+    $(boH3).addClass("Vanilla")
+    $(boH3).text("Jquery")
+    $(container).append(boH3)
+    
+
+    let boSlider = document.createElement("div")
+    $(boSlider).addClass("topSlider")
+    $(container).append(boSlider)
+
+    let parBo = document.createElement("p")
+    $(parBo).text(`Ask about this `)
+    $(parBo).css("display", "none")
+    $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("Long live the Empire!")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+
+    $(btn2).on({
+        click: function () {
+           queryClone(btn2, parBo)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    });
+
+    $(boH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(parBo).slideToggle()
+        }
+    });
+   }
+
+
+   //remove data-src 
+
+   function createRemoveDataSrc(r) {
+    let ex = $(".exampleSide")
+    ex.empty()
+
+    let container = document.createElement("div")
+    $(container).addClass("con")
+    $(".exampleSide").append(container)
+
+    let toH3 = document.createElement("h3")
+    $(toH3).addClass("Vanilla")
+    $(toH3).text(r + ":" + " " + "Vanilla")
+    $(container).append(toH3)
+    
+
+    let topSlider = document.createElement("div")
+    $(topSlider).addClass("topSlider")
+    $(container).append(topSlider)
+
+    let par = document.createElement("p")
+    $(par).text(`ask about this`)
+    $(par).css("display", "none")
+    $(topSlider).append(par)
+
+    
+    let btn1 = document.createElement("button")
+    $(btn1).text("I serve the republic")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1)
+
+    $(btn1).on({
+        click: function () {
+           clonate(btn1, par)
+        }
+    })
+
+
+    $(toH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(par).slideToggle()
+        }
+    });
+
+    let boH3 = document.createElement("h3")
+    $(boH3).addClass("Vanilla")
+    $(boH3).text("Jquery")
+    $(container).append(boH3)
+    
+
+    let boSlider = document.createElement("div")
+    $(boSlider).addClass("topSlider")
+    $(container).append(boSlider)
+
+    let parBo = document.createElement("p")
+    $(parBo).text(`Ask about this `)
+    $(parBo).css("display", "none")
+    $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("Long live the Empire!")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+
+    $(btn2).on({
+        click: function () {
+           queryClone(btn2, parBo)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    });
+
+    $(boH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(parBo).slideToggle()
+        }
+    });
+   }
+
+   //Hide
+
+   function createHideExample(r) {
+    let ex = $(".exampleSide")
+    ex.empty()
+
+    let container = document.createElement("div")
+    $(container).addClass("con")
+    $(".exampleSide").append(container)
+
+    let toH3 = document.createElement("h3")
+    $(toH3).addClass("Vanilla")
+    $(toH3).text(r + ":" + " " + "Vanilla")
+    $(container).append(toH3)
+    
+
+    let topSlider = document.createElement("div")
+    $(topSlider).addClass("topSlider")
+    $(container).append(topSlider)
+
+    let par = document.createElement("p")
+    $(par).text(`You can do this by changing the style like this: ocument.getElementById("dark").style.visibility = "hidden"`)
+    $(par).css("display", "none")
+    $(topSlider).append(par)
+
+    
+    let btn1 = document.createElement("button")
+    $(btn1).text("Put him to sleep")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1) 
+    $(par).append("<p id=dark>Pls sir, I´m afraid of the dark<p>")
+    $(btn1).on({
+        click: function () {
+           vanillaHideF(btn1, par)
+        }
+    })
+
+
+    $(toH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(par).slideToggle()
+        }
+    });
+
+    let boH3 = document.createElement("h3")
+    $(boH3).addClass("Vanilla")
+    $(boH3).text("Jquery")
+    $(container).append(boH3)
+    
+
+    let boSlider = document.createElement("div")
+    $(boSlider).addClass("topSlider")
+    $(container).append(boSlider)
+
+    let parBo = document.createElement("p")
+    $(parBo).text(`As usual it is easier with Jquery: $( ".target" ).hide()`)
+    $(parBo).css("display", "none")
+    $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("Puff!")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+    $(parBo).append("<p class=dark>And for my next trick...<p>")
+    $(btn2).on({
+        click: function () {
+           JqueryHide(btn2, parBo)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    });
+
+    $(boH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(parBo).slideToggle()
+        }
+    }); 
+   }
+
+   //show
+
+   function createShowElement(r) {
+    let ex = $(".exampleSide")
+    ex.empty()
+
+    let container = document.createElement("div")
+    $(container).addClass("con")
+    $(".exampleSide").append(container)
+
+    let toH3 = document.createElement("h3")
+    $(toH3).addClass("Vanilla")
+    $(toH3).text(r + ":" + " " + "Vanilla")
+    $(container).append(toH3)
+    
+
+    let topSlider = document.createElement("div")
+    $(topSlider).addClass("topSlider")
+    $(container).append(topSlider)
+
+    let par = document.createElement("p")
+    $(par).text(`You can do this by changing the style like this: document.getElementById("dark").style.display = "block"`)
+    $(par).css("display", "none")
+    $(topSlider).append(par)
+
+    
+    let btn1 = document.createElement("button")
+    $(btn1).text("Could the real Slim Shady pls stand up")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1)
+    let h = document.createElement("p")
+    h.innerText = "Guess who´s back, guess who´s back, guess who´s back..."
+    h.style.display = "none"
+    $(par).append(h)
+    $(btn1).on({
+        click: function () {
+           vanillaShowF(btn1, par, h)
+        }
+    })
+
+
+    $(toH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(par).slideToggle()
+        }
+    });
+
+    let boH3 = document.createElement("h3")
+    $(boH3).addClass("Vanilla")
+    $(boH3).text("Jquery")
+    $(container).append(boH3)
+    
+
+    let boSlider = document.createElement("div")
+    $(boSlider).addClass("topSlider")
+    $(container).append(boSlider)
+
+    let parBo = document.createElement("p")
+    $(parBo).text(`As usual it is easier with Jquery: $( ".target" ).hide()`)
+    $(parBo).css("display", "none")
+    $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("Play AC/DC")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+    let z = document.createElement("p")
+    z.innerText = "Cause I´m back in Black, I hit the sack..."
+    z.style.display = "none"
+    $(parBo).append(z)
+
+    $(btn2).on({
+        click: function () {
+           JqueryShow(btn2, parBo, z)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    });
+
+    $(boH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(parBo).slideToggle()
+        }
+    }); 
    }

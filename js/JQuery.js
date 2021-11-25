@@ -47,3 +47,11 @@ function disabledQuery(btn2, parBo) {
 function fixDisabledQuery(btn2, parBo) {
 $("#dummy2").prop("disabled", false)
 }
+
+function JqueryHide(btn2, parBo) {
+    $(".dark").hide()
+}
+
+function JqueryShow(btn2, parBo, z) {
+$(z).show()
+}

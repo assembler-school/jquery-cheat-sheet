@@ -55,3 +55,11 @@ function disabledVanilla(btn1, par) {
 function fixDisabledVanilla(btn1, par, x) {
     document.getElementById("dummy").disabled = false
 }
+
+function vanillaHideF(btn1, par) {
+document.getElementById("dark").style.visibility = "hidden";
+}
+
+function vanillaShowF(btn1, par, h){
+    h.style.display = "block";
+}

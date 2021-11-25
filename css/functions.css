@@ -60,3 +60,7 @@ text-align: center;
     color: white;
     background: rgba(41, 184, 241, 0.822);
 }
+
+.darks {
+    display: none;
+}
