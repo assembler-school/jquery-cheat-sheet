@@ -1,4 +1,4 @@
-const exercisesArr= [
+const exercisesArr = [
     {
         dataset:0,
         tittle:"HTML document has been loaded",
@@ -14,6 +14,7 @@ const exercisesArr= [
         functions:function (){exerciseJS1(),exerciseJQ1()},
     },
 ]
+
 function findExercisesFun(index){
     exercise = exercisesArr.find(item => {
         return item.dataset === index;

@@ -18,15 +18,27 @@ function createModal(element, index, cb){
     bigDiv.classList.add("modalTransparent")
     bigDiv.setAttribute("id","modal")
     $("body").append(bigDiv)
+
     let smallDiv = document.createElement("div")
     smallDiv.classList.add("modalSmall")
-    smallDiv.textContent = element.textContent;
     bigDiv.appendChild(smallDiv)
+    
+    let titleDiv = document.createElement("div")
+    titleDiv.classList.add("title-container")
+    titleDiv.textContent = element.textContent;
+    smallDiv.appendChild(titleDiv)
+
+    let jQueryDiv = document.createElement("div")
+    jQueryDiv.classList.add("jQuery-container")
+    smallDiv.appendChild(jQueryDiv)
+
+    let jScriptDiv = document.createElement("div")
+    jScriptDiv.classList.add("javaScript-container")
+    smallDiv.appendChild(jScriptDiv)
     removeModal(bigDiv)
-    cb()
+    cb(jQueryDiv, jScriptDiv)
 }
-    //createContent(smallDiv)
-    //removeModal(bigDiv)
+
 function removeModal(child){
     let bigDivClose = document.getElementById("modal")
     bigDivClose.addEventListener("click",(e)=>{
@@ -36,7 +48,6 @@ function removeModal(child){
         }
     })
 }
-
 
 function exerciseJS0(){
     console.log("hola 0")

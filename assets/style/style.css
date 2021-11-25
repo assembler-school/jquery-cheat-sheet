@@ -1,11 +1,20 @@
 header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: blue;
+    height: 15vh;
 }
 body{
     background-color: black;
 }
 main{
+    height: 85vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
     background-color: blueviolet;
+    margin: auto;
 }
 #container{
     display: flex;
@@ -13,7 +22,7 @@ main{
     align-content: center;
     justify-content: center;
     border: chocolate;
-    margin: 2%;
+    margin: auto;
 }
 .section-container{
     width: 30%;
@@ -49,9 +58,44 @@ p{
     background-color: rgb(0, 0, 0,0.5);
 }
 .modalSmall{
-    width: 300px;
-    height: 300px;
+    width: 50%;
+    height: 50%;
     background-color: black;
     border-radius: 10px;
     z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+/* EXERCISE CONTAINERS */
+.title-container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    color: crimson;
+    background-color: cyan;
+    border-radius: 10px;
+    height: 12%;
+    width: 98%;
+    margin: 1% 1% 0% 1%;
+}
+.jQuery-container{
+    scroll-behavior: smooth;
+    background-color: blue;
+    border-radius: 10px;
+    height: 85%;
+    width: 48.5%;
+    margin: 1% 0% 1% 1%;
+}
+.javaScript-container{
+    scroll-behavior: smooth;
+    background-color: coral;
+    border-radius: 10px;
+    height: 85%;
+    width: 48.5%;
+    margin: 1%;
 }
