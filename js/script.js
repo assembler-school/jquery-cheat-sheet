@@ -160,6 +160,9 @@ function displayExample(r) {
   if (r === "Remove a class"){
       createRemoveClass(r)
   }
+  if(r === "Toggle a class"){
+      createClassToggle(r)
+  }
 }
 
 //create
@@ -940,6 +943,95 @@ function createBeClassy(r){
     $(btn2).on({
         click: function () {
            testName(btn2, parBo)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    });
+
+    $(boH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(parBo).slideToggle()
+        }
+    });
+   }
+
+   //Toggle a class
+
+   function createClassToggle(r) {
+    let ex = $(".exampleSide")
+    ex.empty()
+
+    let container = document.createElement("div")
+    $(container).addClass("con")
+    $(".exampleSide").append(container)
+
+
+
+
+    let toH3 = document.createElement("h3")
+    $(toH3).addClass("Vanilla")
+    $(toH3).text(r + ":" + " " + "Vanilla")
+    $(container).append(toH3)
+    
+
+    let topSlider = document.createElement("div")
+    $(topSlider).addClass("topSlider")
+    $(container).append(topSlider)
+
+    let par = document.createElement("p")
+    $(par).text(`For this we also use the classList: btn1.classList.toggle("trial2") `)
+    $(par).css("display", "none")
+    $(topSlider).append(par)
+
+    
+    let btn1 = document.createElement("button")
+    $(btn1).text("What should I wear now?")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1)
+
+    $(btn1).on({
+        click: function () {
+           vanillaClassToogle(btn1, par)
+        }
+    })
+
+
+    $(toH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(par).slideToggle()
+        }
+    });
+
+    let boH3 = document.createElement("h3")
+    $(boH3).addClass("Vanilla")
+    $(boH3).text("Jquery")
+    $(container).append(boH3)
+    
+
+    let boSlider = document.createElement("div")
+    $(boSlider).addClass("topSlider")
+    $(container).append(boSlider)
+
+    let parBo = document.createElement("p")
+    $(parBo).text(`And it is just as usual here: $(btn2).toggleClass("trial2")`)
+    $(parBo).css("display", "none")
+    $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("Switch the lights on")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+
+    $(btn2).on({
+        click: function () {
+           toogleClassQuery(btn2, parBo)
         },
         mouseenter: function (params) {
             $(this).css("cursor", "pointer")

@@ -35,3 +35,7 @@ function testName(btn2, parBo) {
     console.log("logged")
     
 }
+
+function toogleClassQuery(btn2, parBo) {
+    $(btn2).toggleClass("trial2")
+}

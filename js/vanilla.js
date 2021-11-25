@@ -44,6 +44,6 @@ function removeClassVanilla(btn1, par) {
     btn1.classList.remove("trial2")
 }
 
-function removeClassQuery(btn2, parBo) {
-    
+function vanillaClassToogle(btn1, par) {
+    btn1.classList.toggle("trial2")
 }
