@@ -131,6 +131,10 @@ function  displayExample(r) {
     if(r === "Prepend"){
         createPrepend(r)
     }
+    
+    if(r === "Create and add:after") {
+        afterAdd(r)
+    }
 }
 
 //create
@@ -492,4 +496,92 @@ function createPrepend(r) {
                 $(parBo).slideToggle()
             }
         });
+}
+
+//createAfterAdd
+function afterAdd(r) {
+    let ex = $(".exampleSide")
+    ex.empty()
+
+    let container = document.createElement("div")
+    $(container).addClass("con")
+    $(".exampleSide").append(container)
+
+
+
+
+    let toH3 = document.createElement("h3")
+    $(toH3).addClass("Vanilla")
+    $(toH3).text(r + ":" + " " + "Vanilla")
+    $(container).append(toH3)
+    
+
+    let topSlider = document.createElement("div")
+    $(topSlider).addClass("topSlider")
+    $(container).append(topSlider)
+
+    let par = document.createElement("p")
+    $(par).text(`This all now can be done in a single line too, for example = par.appendChild(document.createElement("p")).innerText = "Father, I´m alive!"`)
+    $(par).css("display", "none")
+    $(topSlider).append(par)
+
+    
+    let btn1 = document.createElement("button")
+    $(btn1).text("I got the power to create life")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1)
+
+    $(btn1).on({
+        click: function () {
+           createAddVanilla(btn1, par)
+        }
+    })
+
+
+    $(toH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(par).slideToggle()
+        }
+    });
+
+    let boH3 = document.createElement("h3")
+    $(boH3).addClass("Vanilla")
+    $(boH3).text("Jquery")
+    $(container).append(boH3)
+    
+
+    let boSlider = document.createElement("div")
+    $(boSlider).addClass("topSlider")
+    $(container).append(boSlider)
+
+    let parBo = document.createElement("p")
+    $(parBo).text(`jQuery is just as simple, or even more. It is enough to just use the append function and create the element inside:  $(parBo).append("<p>So I have created death, destroyer of worlds<p>") `)
+    $(parBo).css("display", "none")
+    $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("I am J. Robert Oppenheimer")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+
+    $(btn2).on({
+        click: function () {
+            queryCreateAdd(btn2, parBo)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    });
+
+    $(boH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(parBo).slideToggle()
+        }
+    });
 }

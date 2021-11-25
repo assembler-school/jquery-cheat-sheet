@@ -21,10 +21,10 @@ text-align: center;
 
 .con {
     display: flex;
-    width: 35vh;
+    width: 42vh;
     justify-content: center;
     flex-direction: column;
-    background: yellow
+    background: yellow;
 }
 .boSlider {
     display: flex;
@@ -49,4 +49,5 @@ text-align: center;
 .topSlider p button {
     width: 60%;
     text-align: center;
+
 }
