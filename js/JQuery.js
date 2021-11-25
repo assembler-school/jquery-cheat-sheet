@@ -59,3 +59,7 @@ $(z).show()
 function fadeInFun(btn2, parBo, x){
     $(x).fadeIn()
 }
+
+function fadeOutFun(btn2, parBo, x){
+    $(x).fadeOut("slow")
+}

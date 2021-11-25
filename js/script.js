@@ -199,6 +199,9 @@ function displayExample(r) {
   if(r === "Fade in"){
       createFades(r)
   }
+  if(r === "Fade out"){
+      createFadeThisOut(r)
+  }
 }
 
 //create
@@ -1722,3 +1725,96 @@ clearInterval(x)
    }
 
 //Fade out
+
+function createFadeThisOut(r) {
+    let ex = $(".exampleSide")
+    ex.empty()
+
+    let container = document.createElement("div")
+    $(container).addClass("con")
+    $(".exampleSide").append(container)
+
+    let toH3 = document.createElement("h3")
+    $(toH3).addClass("Vanilla")
+    $(toH3).text(r + ":" + " " + "Vanilla")
+    $(container).append(toH3)
+    
+
+    let topSlider = document.createElement("div")
+    $(topSlider).addClass("topSlider")
+    $(container).append(topSlider)
+
+    let par = document.createElement("p")
+    $(par).text(`Same pain in the rear as before, but with the array elements ordered backwards`)
+    $(par).css("display", "none")
+    $(topSlider).append(par)
+
+    
+    let btn1 = document.createElement("button")
+    $(btn1).text("Go away, dude")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1)
+    let m = document.createElement("p")
+    $(m).text("I´m leaving, don´t try to stop me")
+    $(m).css("opacity", "1")
+    $(par).append(m)
+
+    $(btn1).on({
+        click: function () {
+           painInTheRear(btn1, par, m)
+        }
+    })
+
+
+    $(toH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(par).slideToggle()
+        }
+    });
+
+    let boH3 = document.createElement("h3")
+    $(boH3).addClass("Vanilla")
+    $(boH3).text("Jquery")
+    $(container).append(boH3)
+    
+
+    let boSlider = document.createElement("div")
+    $(boSlider).addClass("topSlider")
+    $(container).append(boSlider)
+
+    let parBo = document.createElement("p")
+    $(parBo).text(`I love Jquery: $(x).fadeOut()`)
+    $(parBo).css("display", "none")
+    $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("Out")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+    let x = document.createElement("p")
+    $(x).text("K, I´m leaving")
+    $(parBo).append(x)
+
+    $(btn2).on({
+        click: function () {
+           fadeOutFun(btn2, parBo, x)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    });
+
+    $(boH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(parBo).slideToggle()
+        }
+    });
+}
+
+// Iterate a collection of elements

@@ -78,3 +78,18 @@ clearInterval(x)
     }, 1000);
 
 }
+
+function painInTheRear(btn1, par, m){
+    let cry = [1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0 ]
+      let i = 0
+  let x = setInterval(() => {
+    i++
+        m.style.opacity = cry[i]
+          console.log("I work")
+          console.log(i)
+      if( i === 10) {
+  clearInterval(x)
+      }
+      }, 100);
+  
+  }
