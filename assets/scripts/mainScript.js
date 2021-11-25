@@ -17,7 +17,8 @@ function createDiv(name, jsText, jqText) {
 
     divContent = document.getElementById('content')
 
-    divContent.innerHTML = content
+    divContent.innerHTML += content
+    // divContent.innerHTML+= content
 
     showButton = document.getElementById('displayDiv')
     showButton.addEventListener('click', hideFunc)
@@ -32,11 +33,24 @@ var allElements = [
         jsText: `document.createElement('button')`,
         jqText: '${&lt; button &gt; }'
     },
+    {
+        title: `Basutton`,
+        jsText: `document.createElement('button')`,
+        jqText: '${&lt; button &gt; }'
+    },
+    {
+        title: `Basasdasasutton`,
+        jsText: `document.createElement('button')`,
+        jqText: '${&lt; button &gt; }'
+    }
 ]
 
 function pepe() {
     allElements.forEach(function (elem) {
+        console.log(elem)
         createDiv(elem.title, elem.jsText, elem.jqText)
+        // p= createDiv( elem.title, elem.jsText, elem.jqText)
+        // p++
     })
 }
 
