@@ -7,9 +7,7 @@
 }
 
 /* Remove default margin */
-body,h1,h2,h3,h4,p,figure,blockquote,dl,dd {
-  margin: 0;
-}
+
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],ol[role='list'] {
@@ -23,12 +21,13 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 15% 1fr;
+  justify-content: space-around; 
 }
 
 /* A elements that don't have a class get default styles */
@@ -42,12 +41,19 @@ picture {
   max-width: 100%;
   display: block;
 }
-
+h2{
+  font-size: 100px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  border-bottom: solid 5px black;
+}
 /* Inherit fonts for inputs and buttons */
 input,button,textarea,select {
   font: inherit;
 }
-
+h3{
+ margin: 80px auto 30px auto;
+}
 #title{
     grid-column-start: 1;
     grid-column-end: 4;
@@ -57,9 +63,13 @@ input,button,textarea,select {
 }
 p{
     cursor: pointer;
+    border: 1px solid rgba(87, 86, 86, 0.226);
+    width: 80%;
+    margin: 5px;
+    /* padding: 5px; */
 }
 p:hover{
-    background-color: blueviolet;
+    background-color: rgb(229, 242, 248);
 }
 
 .modalDivCss{
@@ -72,43 +82,82 @@ align-items:center;
 justify-content: center;
 z-index: 1;
 }
-
+section{
+  display: flex;
+  flex-direction: column;
+}
+.jqueryDivEx p{
+  padding-left: 20px;
+}
 .modalDivContentCss{
 position: relative;
-background-color: rgba(102, 52, 52);
+background-color: rgba(102, 52, 52, 0);
 height: 50vh;
 width: 50vw;
 z-index: 2;
 display: grid;
 grid-template-columns: 1fr 1fr;
-grid-template-rows: 15% 1fr 15%;
+grid-template-rows: 10% 10% 1fr 10% 10%;
+margin: 120px;
+box-shadow: 5px 5px 85px #222;
+
 /* grid-template-rows: 1fr 1fr 1fr 1fr; */
 }
-
+.titleModal{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.5px black;
+}
 .jqueryDiv{
     grid-column-start: 1;
     grid-column-end: 3;
-    background-color: blue;
+    background-color: #274FA8;
     color: white;
-    text-align: center;
+    text-align: start;
     font-size: 30px;
+    padding-left: 5%;
+    border: solid 0.5px black;
 }
+
+
 .jsDiv{
     grid-column-start: 1;
     grid-column-end: 3;
-    background-color: blue;
+    background-color: #F5CB6A;
+    background-color: ;
     color: white;
-    text-align: center;
+    text-align: end;
     font-size: 30px;
+    padding-right: 5%;
+    border: solid 0.5px black;
 }
-
+.divIntSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .jqueryDivEx{
-    background-color: rgb(0, 255, 213);
+    background-color: #d3dcfa;
+    border: solid 0.5px black;
 }
 .jsDivEx{
-    background-color: rgb(217, 255, 0);
+    background-color: #fdecc4;
+    border: solid 0.5px black;
 }
 
+.CloseDiv{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 
 
