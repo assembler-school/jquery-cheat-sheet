@@ -196,6 +196,9 @@ function displayExample(r) {
   if (r === "Show"){
     createShowElement(r)
   }
+  if(r === "Fade in"){
+      createFades(r)
+  }
 }
 
 //create
@@ -1613,3 +1616,109 @@ function createBeClassy(r){
         }
     }); 
    }
+
+   // Fade in
+
+   function createFades(r) {
+    let ex = $(".exampleSide")
+    ex.empty()
+
+    let container = document.createElement("div")
+    $(container).addClass("con")
+    $(".exampleSide").append(container)
+
+    let toH3 = document.createElement("h3")
+    $(toH3).addClass("Vanilla")
+    $(toH3).text(r + ":" + " " + "Vanilla")
+    $(container).append(toH3)
+    
+
+    let topSlider = document.createElement("div")
+    $(topSlider).addClass("topSlider")
+    $(container).append(topSlider)
+
+    let par = document.createElement("p")
+    $(par).text(`This one made me cry, but here is how this is done: let cry = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+    let i = 0
+let x = setInterval(() => {
+  i++
+      m.style.opacity = cry[i]
+        console.log("I work")
+        console.log(i)
+    if( i === 10) {
+clearInterval(x)
+    }
+    }, 1000); `)
+    $(par).css("display", "none")
+    $(topSlider).append(par)
+
+    
+    let btn1 = document.createElement("button")
+    $(btn1).text("I hope nobody shows up")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1)
+    let m = document.createElement("p")
+    $(m).text("I´m a really bad ninja")
+    $(m).css("opacity", "0.0")
+    $(par).append(m)
+
+    $(btn1).on({
+        click: function () {
+           painInTheAss(btn1, par, m)
+        }
+    })
+
+
+    $(toH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(par).slideToggle()
+        }
+    });
+
+    let boH3 = document.createElement("h3")
+    $(boH3).addClass("Vanilla")
+    $(boH3).text("Jquery")
+    $(container).append(boH3)
+    
+
+    let boSlider = document.createElement("div")
+    $(boSlider).addClass("topSlider")
+    $(container).append(boSlider)
+
+    let parBo = document.createElement("p")
+    $(parBo).text(`This is waay, easier than in vanilla. Here all we need is to use the following method: $(x).fadeIn()  `)
+    $(parBo).css("display", "none")
+    $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("Where is x?")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+    let x = document.createElement("p")
+    $(x).css("display", "none")
+    $(x).text("Sorry, me late")
+    $(parBo).append(x)
+
+    $(btn2).on({
+        click: function () {
+           fadeInFun(btn2, parBo, x)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    });
+
+    $(boH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(parBo).slideToggle()
+        }
+    });
+   }
+
+//Fade out

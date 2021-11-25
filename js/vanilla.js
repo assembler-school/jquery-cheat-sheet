@@ -63,3 +63,18 @@ document.getElementById("dark").style.visibility = "hidden";
 function vanillaShowF(btn1, par, h){
     h.style.display = "block";
 }
+
+function painInTheAss(btn1, par, m){
+  let cry = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+    let i = 0
+let x = setInterval(() => {
+  i++
+      m.style.opacity = cry[i]
+        console.log("I work")
+        console.log(i)
+    if( i === 10) {
+clearInterval(x)
+    }
+    }, 1000);
+
+}

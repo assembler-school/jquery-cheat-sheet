@@ -55,3 +55,7 @@ function JqueryHide(btn2, parBo) {
 function JqueryShow(btn2, parBo, z) {
 $(z).show()
 }
+
+function fadeInFun(btn2, parBo, x){
+    $(x).fadeIn()
+}
