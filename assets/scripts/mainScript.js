@@ -21,24 +21,10 @@ function createDiv(title, idButtonClick, divdisplay, functionIdJs, functionJs, j
 
     divContent.innerHTML += content
 
-    // showButton = document.getElementById(idButtonClick)
-    // divdisplay= document.getElementById(divdisplay)
-    // //showButton.classList.toggle("show");
-    // showButton.addEventListener('click', function() {
-    //     divdisplay.classList.toggle("hide");
-    // })
-    // callFunctionjs = document.getElementById(functionIdJs)
-    // callFunctionjs.addEventListener('click', functionJs)
-    // console.log( callFunctionjs.addEventListener('click', functionJs))
-
-    // callFunctionjq = document.getElementById(functionIdJq)
-    // callFunctionjq.addEventListener('click', functionJq)
-
 }
 
-//createDiv('Button', 'document.createElement("button") ', '${<button/>}')
 
-var allElements = [
+var allSelectors = [
     {
         title: `Create Element`,
         idButtonClick: 'createElementidButtonClick',
@@ -68,11 +54,11 @@ var allElements = [
 ]
 
 function pepe() {
-    allElements.forEach(function (elem) {
+    allSelectors.forEach(function (elem) {
         createDiv(elem.title, elem.idButtonClick, elem.divdisplay, elem.functionIdJs, elem.functionJs, elem.jsText, elem.IdTestResultjs, elem.functionIdJq, elem.functionJq, elem.jqText, elem.IdTestResultjq)
     })
 
-    allElements.forEach(function (elem) {
+    allSelectors.forEach(function (elem) {
         let divdisplay = document.getElementById(elem.divdisplay)
 
         let showButton = document.getElementById(elem.idButtonClick)
@@ -110,8 +96,4 @@ function buttonTest(father) {
     btn.classList.add('btn-danger')
     divtest = document.getElementById(father)
     divtest.appendChild(btn)
-}
-
-function refreshDom() {
-
 }
