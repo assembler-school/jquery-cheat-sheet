@@ -1,5 +1,6 @@
 //Collapsible credits https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible
 //Search credits https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_table
+//Clipboard credits https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2
 
 $(".collapsible").on("click", function () {
   $(this).toggleClass("active");
@@ -34,3 +35,12 @@ $("#Function1Q button").on("click", function () {
 });
 
 //Remove an HTML Element
+$("#Function2Q button").on("click", function () {
+  $(this).next().remove();
+});
+
+// Append an HTML element
+$("#Function3Q button").on("click", function () {
+  var pElement = $("<p> This is a paragraph </p>");
+  $(this).parent().append(pElement);
+});

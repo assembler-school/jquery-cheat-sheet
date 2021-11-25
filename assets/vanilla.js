@@ -8,3 +8,22 @@ document
   });
 
 //Remove an HTML element
+
+document
+  .querySelector("#Function2V button")
+  .addEventListener("click", function () {
+    var pElement = document.querySelector("#Function2V .demo p");
+    pElement.remove();
+  });
+
+// Append an HTML element
+
+document
+  .querySelector("#Function3V button")
+  .addEventListener("click", function () {
+    var pElement = document.createElement("p");
+    pElement.innerText = "This is a paragraph";
+    document.querySelector("#Function3V .demo").append(pElement);
+  });
+
+//Prepend an HTML element
