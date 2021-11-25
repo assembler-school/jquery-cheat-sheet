@@ -157,6 +157,9 @@ function displayExample(r) {
   if(r === "Add a class") {
       createBeClassy(r)
   }
+  if (r === "Remove a class"){
+      createRemoveClass(r)
+  }
 }
 
 //create
@@ -861,3 +864,94 @@ function createBeClassy(r){
             }
         });
     }
+
+    //Remove class
+
+   function createRemoveClass(r){
+    let ex = $(".exampleSide")
+    ex.empty()
+
+    let container = document.createElement("div")
+    $(container).addClass("con")
+    $(".exampleSide").append(container)
+
+
+
+
+    let toH3 = document.createElement("h3")
+    $(toH3).addClass("Vanilla")
+    $(toH3).text(r + ":" + " " + "Vanilla")
+    $(container).append(toH3)
+    
+
+    let topSlider = document.createElement("div")
+    $(topSlider).addClass("topSlider")
+    $(container).append(topSlider)
+
+    let par = document.createElement("p")
+    $(par).text(`Here we just do as follows: btn1.classList.remove("trial2")`)
+    $(par).css("display", "none")
+    $(topSlider).append(par)
+
+    
+    let btn1 = document.createElement("button")
+    $(btn1).text("Pls don´t, I don´t wanna be trashy")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1)
+    $(btn1).addClass("trial2")
+
+    $(btn1).on({
+        click: function () {
+           removeClassVanilla(btn1, par)
+        }
+    })
+
+
+    $(toH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(par).slideToggle()
+        }
+    });
+
+    let boH3 = document.createElement("h3")
+    $(boH3).addClass("Vanilla")
+    $(boH3).text("Jquery")
+    $(container).append(boH3)
+    
+
+    let boSlider = document.createElement("div")
+    $(boSlider).addClass("topSlider")
+    $(container).append(boSlider)
+
+    let parBo = document.createElement("p")
+    $(parBo).text(`Here we just remove the class like this:  $(btn2).removeClass("trial2")`)
+    $(parBo).css("display", "none")
+    $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("Fine, do it. I dare you.")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+    $(btn2).addClass("trial2")
+
+    $(btn2).on({
+        click: function () {
+           testName(btn2, parBo)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    });
+
+    $(boH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(parBo).slideToggle()
+        }
+    });
+   }

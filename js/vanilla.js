@@ -39,3 +39,11 @@ par.appendChild(cl)
 function addClassVanilla(btn1, par){
     btn1.setAttribute("class", "trial")
 }
+
+function removeClassVanilla(btn1, par) {
+    btn1.classList.remove("trial2")
+}
+
+function removeClassQuery(btn2, parBo) {
+    
+}

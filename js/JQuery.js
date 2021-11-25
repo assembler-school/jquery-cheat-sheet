@@ -29,3 +29,9 @@ function queryClone(btn2, parBo) {
 function addClassQuery (btn2, parBo){
 $(btn2).addClass("trial")
 }
+
+function testName(btn2, parBo) {
+    $(btn2).removeClass("trial2")
+    console.log("logged")
+    
+}
