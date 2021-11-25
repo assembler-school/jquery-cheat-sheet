@@ -24,27 +24,39 @@ h2{
     display: grid;
     grid-template-columns: 50% 50%;
 }
+
+.contentTests * {
+    display: flex;
+    flex-direction: column;
+}
+
 .firstLine{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 2% 0 10% 0;
     text-align: center;
 }
+
 h5{
     grid-column-start: 1;
     grid-column-end: 3;
     margin: .5em;
-    text-align: center;
+    text-align: left;
 }
+
 .divTest{
+    font-weight: bolder;
+    font-size: 2em;
     grid-column-start: 1;
     grid-column-end: 3;
     margin: .5em;
     text-align: center;
 }
+
 .hide{
     display: none;
 }
+
 .show{
     display: block;
 }
