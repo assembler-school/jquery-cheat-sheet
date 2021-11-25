@@ -26,3 +26,16 @@ function prependVanilla(btn1, par) {
 function createAddVanilla(btn1, par) {
     par.appendChild(document.createElement("p")).innerText = "Father, I´m alive!"
 }
+
+function createAddbeforeVanilla(btn1, par) {
+    par.insertBefore(document.createElement("p"), btn1).innerText = "Ninja Attack!"
+}
+
+function clonate(btn1, par) {
+let cl = btn1.cloneNode(true)
+par.appendChild(cl)
+}
+
+function addClassVanilla(btn1, par){
+    btn1.setAttribute("class", "trial")
+}

@@ -51,3 +51,12 @@ text-align: center;
     text-align: center;
 
 }
+
+.trial {
+    background: red;
+}
+
+.trial2 {
+    color: white;
+    background: rgba(41, 184, 241, 0.822);
+}

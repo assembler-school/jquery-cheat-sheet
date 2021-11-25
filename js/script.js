@@ -151,6 +151,12 @@ function displayExample(r) {
   if (r === "Create and add:before") {
     createAddBefore(r);
   }
+  if (r === "Clone"){
+      createClone(r)
+  }
+  if(r === "Add a class") {
+      createBeClassy(r)
+  }
 }
 
 //create
@@ -292,7 +298,7 @@ function createRemove(r) {
   $(container).append(boH3);
 
   let boSlider = document.createElement("div");
-  $(boSlider).addClass("boSlider");
+  $(boSlider).addClass("topSlider");
   $(container).append(boSlider);
 
   let parBo = document.createElement("p");
@@ -611,19 +617,19 @@ function createAddBefore(r) {
     $(container).append(topSlider)
 
     let par = document.createElement("p")
-    $(par).text(`This all now can be done in a single line too, for example = par.appendChild(document.createElement("p")).innerText = "Father, I´m alive!"`)
+    $(par).text(`Same as before, we can write it like this:  par.insertBefore(document.createElement("p"), btn1).innerText = "Ninja Attack!"`)
     $(par).css("display", "none")
     $(topSlider).append(par)
 
     
     let btn1 = document.createElement("button")
-    $(btn1).text("I got the power to create life")
+    $(btn1).text("What happens if I click here?")
     $(btn1).addClass("btn1")
     $(par).append(btn1)
 
     $(btn1).on({
         click: function () {
-           createAddVanilla(btn1, par)
+           createAddbeforeVanilla(btn1, par)
         }
     })
 
@@ -648,18 +654,18 @@ function createAddBefore(r) {
     $(container).append(boSlider)
 
     let parBo = document.createElement("p")
-    $(parBo).text(`jQuery is just as simple, or even more. It is enough to just use the append function and create the element inside:  $(parBo).append("<p>So I have created death, destroyer of worlds<p>") `)
+    $(parBo).text(`Same here, we can easily add all in a single line even shorter than in Js, like this: $(parBo).prepend("<p>BANG!p>")`)
     $(parBo).css("display", "none")
     $(boSlider).append(parBo)
 
     let btn2 = document.createElement("button")
-    $(btn2).text("I am J. Robert Oppenheimer")
+    $(btn2).text("You feeling lucky, punk?")
     $(btn2).addClass("btn1")
     $(parBo).append(btn2)
 
     $(btn2).on({
         click: function () {
-            queryCreateAdd(btn2, parBo)
+            queryCreateAddBefore(btn2, parBo)
         },
         mouseenter: function (params) {
             $(this).css("cursor", "pointer")
@@ -675,3 +681,183 @@ function createAddBefore(r) {
         }
     });
 }
+
+//Create Clone 
+
+function createClone(r) {
+    let ex = $(".exampleSide")
+    ex.empty()
+
+    let container = document.createElement("div")
+    $(container).addClass("con")
+    $(".exampleSide").append(container)
+
+
+
+
+    let toH3 = document.createElement("h3")
+    $(toH3).addClass("Vanilla")
+    $(toH3).text(r + ":" + " " + "Vanilla")
+    $(container).append(toH3)
+    
+
+    let topSlider = document.createElement("div")
+    $(topSlider).addClass("topSlider")
+    $(container).append(topSlider)
+
+    let par = document.createElement("p")
+    $(par).text(`In order to clone in vanilla Js we need to select the previous element, clonate it then append it as a  new child: let cl = btn1.cloneNode(true)
+    par.appendChild(cl) `)
+    $(par).css("display", "none")
+    $(topSlider).append(par)
+
+    
+    let btn1 = document.createElement("button")
+    $(btn1).text("I serve the republic")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1)
+
+    $(btn1).on({
+        click: function () {
+           clonate(btn1, par)
+        }
+    })
+
+
+    $(toH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(par).slideToggle()
+        }
+    });
+
+    let boH3 = document.createElement("h3")
+    $(boH3).addClass("Vanilla")
+    $(boH3).text("Jquery")
+    $(container).append(boH3)
+    
+
+    let boSlider = document.createElement("div")
+    $(boSlider).addClass("topSlider")
+    $(container).append(boSlider)
+
+    let parBo = document.createElement("p")
+    $(parBo).text(`Cloning here is as usual, easier: $(btn2).clone().appendTo(parBo)`)
+    $(parBo).css("display", "none")
+    $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("Long live the Empire!")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+
+    $(btn2).on({
+        click: function () {
+           queryClone(btn2, parBo)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    });
+
+    $(boH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(parBo).slideToggle()
+        }
+    });
+}
+
+//add Class
+
+function createBeClassy(r){
+        let ex = $(".exampleSide")
+        ex.empty()
+    
+        let container = document.createElement("div")
+        $(container).addClass("con")
+        $(".exampleSide").append(container)
+    
+    
+    
+    
+        let toH3 = document.createElement("h3")
+        $(toH3).addClass("Vanilla")
+        $(toH3).text(r + ":" + " " + "Vanilla")
+        $(container).append(toH3)
+        
+    
+        let topSlider = document.createElement("div")
+        $(topSlider).addClass("topSlider")
+        $(container).append(topSlider)
+    
+        let par = document.createElement("p")
+        $(par).text(`There are different ways to do this in Js, but the one I use the most is this:  `)
+        $(par).css("display", "none")
+        $(topSlider).append(par)
+    
+        
+        let btn1 = document.createElement("button")
+        $(btn1).text("Pls don´t click me")
+        $(btn1).addClass("btn1")
+        $(par).append(btn1)
+    
+        $(btn1).on({
+            click: function () {
+                $(btn1).text("OMG I´M BLEADING")
+               addClassVanilla(btn1, par)
+            }
+        })
+    
+    
+        $(toH3).on({
+            mouseenter: function (params) {
+                $(this).css("cursor", "pointer")
+            },
+            click: function (params) {
+                $(par).slideToggle()
+            }
+        });
+    
+        let boH3 = document.createElement("h3")
+        $(boH3).addClass("Vanilla")
+        $(boH3).text("Jquery")
+        $(container).append(boH3)
+        
+    
+        let boSlider = document.createElement("div")
+        $(boSlider).addClass("topSlider")
+        $(container).append(boSlider)
+    
+        let parBo = document.createElement("p")
+        $(parBo).text(`Here we can do it in a similar way: $(btn2).addClass("trial") `)
+        $(parBo).css("display", "none")
+        $(boSlider).append(parBo)
+    
+        let btn2 = document.createElement("button")
+        $(btn2).text("I´m not in a funny mood")
+        $(btn2).addClass("btn1")
+        $(parBo).append(btn2)
+    
+        $(btn2).on({
+            click: function () {
+                addClassQuery (btn2, parBo)
+            },
+            mouseenter: function (params) {
+                $(this).css("cursor", "pointer")
+            }
+        });
+    
+        $(boH3).on({
+            mouseenter: function (params) {
+                $(this).css("cursor", "pointer")
+            },
+            click: function (params) {
+                $(parBo).slideToggle()
+            }
+        });
+    }

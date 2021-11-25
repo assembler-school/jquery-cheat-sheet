@@ -15,5 +15,17 @@ function queryPrepend(btn2, parBo) {
 }
 
 function queryCreateAdd(btn2, parBo) {
-    $(parBo).append("<p>So I have created death, destroyer of worlds<p>")
+    $(parBo).append("<p>So I have become death, destroyer of worlds<p>")
+}
+
+function queryCreateAddBefore(btn2, parBo) {
+    $(parBo).prepend("<p>BANG!<p>")
+}
+
+function queryClone(btn2, parBo) {
+    $(btn2).clone().appendTo(parBo)
+}
+
+function addClassQuery (btn2, parBo){
+$(btn2).addClass("trial")
 }
