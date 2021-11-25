@@ -166,6 +166,9 @@ function displayExample(r) {
   if (r === "Add a disabled attribute"){
       createAddDisabled(r)
   }
+  if (r === "Remove the disabled attribute"){
+      createRemoveDisabled(r)
+  }
 }
 
 //create
@@ -1117,13 +1120,105 @@ function createBeClassy(r){
     $(boSlider).append(parBo)
 
     let btn2 = document.createElement("button")
-    $(btn2).text("it was funny tho")
+    $(btn2).text("Pls, no, don´t break my legs")
     $(btn2).addClass("btn1")
     $(parBo).append(btn2)
 
     $(btn2).on({
         click: function () {
            disabledQuery(btn2, parBo)
+        },
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        }
+    });
+
+    $(boH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(parBo).slideToggle()
+        }
+    });
+   }
+
+   // Remove the disabled attribute
+   
+   function createRemoveDisabled(r) {
+    let ex = $(".exampleSide")
+    ex.empty()
+
+    let container = document.createElement("div")
+    $(container).addClass("con")
+    $(".exampleSide").append(container)
+
+
+
+
+    let toH3 = document.createElement("h3")
+    $(toH3).addClass("Vanilla")
+    $(toH3).text(r + ":" + " " + "Vanilla")
+    $(container).append(toH3)
+    
+
+    let topSlider = document.createElement("div")
+    $(topSlider).addClass("topSlider")
+    $(container).append(topSlider)
+
+    let par = document.createElement("p")
+    $(par).text(`For this we have to do it as follows: document.getElementById("dummy").disabled = false`)
+    $(par).css("display", "none")
+    $(topSlider).append(par)
+
+    
+    let btn1 = document.createElement("button")
+    $(btn1).text("Heal thy legs")
+    $(btn1).addClass("btn1")
+    $(par).append(btn1)
+
+ let x = $(par).append("<button id=dummy disabled=`true`>Please Heal me</button>")
+
+    $(btn1).on({
+        click: function () {
+           fixDisabledVanilla(btn1, par, x)
+        }
+    })
+
+
+    $(toH3).on({
+        mouseenter: function (params) {
+            $(this).css("cursor", "pointer")
+        },
+        click: function (params) {
+            $(par).slideToggle()
+        }
+    });
+
+    let boH3 = document.createElement("h3")
+    $(boH3).addClass("Vanilla")
+    $(boH3).text("Jquery")
+    $(container).append(boH3)
+    
+
+    let boSlider = document.createElement("div")
+    $(boSlider).addClass("topSlider")
+    $(container).append(boSlider)
+
+    let parBo = document.createElement("p")
+    $(parBo).text(`Here it is pretty simple too, for example: $('#my-input-id').prop('disabled', false);)`)
+    $(parBo).css("display", "none")
+    $(boSlider).append(parBo)
+
+    let btn2 = document.createElement("button")
+    $(btn2).text("That looks bad")
+    $(btn2).addClass("btn1")
+    $(parBo).append(btn2)
+    $(parBo).append("<button id=dummy2 disabled=`true`>Please Heal me</button>")
+
+    $(btn2).on({
+        click: function () {
+           fixDisabledQuery(btn2, parBo)
         },
         mouseenter: function (params) {
             $(this).css("cursor", "pointer")

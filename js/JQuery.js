@@ -43,3 +43,7 @@ function toogleClassQuery(btn2, parBo) {
 function disabledQuery(btn2, parBo) {
     $(btn2).attr("disabled", "true")
 }
+
+function fixDisabledQuery(btn2, parBo) {
+$("#dummy2").prop("disabled", false)
+}

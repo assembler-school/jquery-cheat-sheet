@@ -51,3 +51,7 @@ function vanillaClassToogle(btn1, par) {
 function disabledVanilla(btn1, par) {
     btn1.setAttribute("disabled", "true")
 }
+
+function fixDisabledVanilla(btn1, par, x) {
+    document.getElementById("dummy").disabled = false
+}
