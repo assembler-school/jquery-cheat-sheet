@@ -1,8 +1,10 @@
 :root{
     --bodyBackground:#001219;
-    --sections:#94D2BD;
     --text:#ffffff;
     --section-text:#E9D8A6;
+    --section-events:#005f73;
+    --section-functions:#0a9496a6;
+    --section-selectors:#4fb3ab9a;
 }
 
 body{
@@ -27,17 +29,27 @@ header{
 main{
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
 }
 
 /* Sections */
 section{
     display:flex;
     flex-direction: column;
-    background-color:var(--sections);
-    width: 300px;
+    width: 250px;
     padding:20px;
-    line-height: 15px;
+    line-height: 18px;
+    border-radius:20px;
+    margin-left:50px;
+}
+/* Specific sections */
+#events{
+    background-color:var(--section-events);
+}
+#functions{
+    background-color: var(--section-functions);
+}
+#selectors{
+    background-color: var(--section-selectors);
 }
 section .title{
     color:var(--text);
@@ -45,8 +57,25 @@ section .title{
     border-bottom:2px solid white;
 }
 section .content{
+    margin-top:20px;
     color:var(--section-text);
+    font-size:13px;   
+}
+.content p{
+    cursor:pointer;
+    padding:8px;
+    border-radius:10px;
+    margin:0;
     
+}
+.content p:nth-child(odd){
+    background-color:#0a949628;
+}
+.content p:hover{
+    background-color: #ffffff2d;
+    font-size:15px;
+    color:#ee9b00;
+    transition:0.3s;
 }
 
 /* Footer */
