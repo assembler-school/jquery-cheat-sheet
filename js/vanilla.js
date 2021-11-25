@@ -47,3 +47,7 @@ function removeClassVanilla(btn1, par) {
 function vanillaClassToogle(btn1, par) {
     btn1.classList.toggle("trial2")
 }
+
+function disabledVanilla(btn1, par) {
+    btn1.setAttribute("disabled", "true")
+}

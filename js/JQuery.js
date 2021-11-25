@@ -39,3 +39,7 @@ function testName(btn2, parBo) {
 function toogleClassQuery(btn2, parBo) {
     $(btn2).toggleClass("trial2")
 }
+
+function disabledQuery(btn2, parBo) {
+    $(btn2).attr("disabled", "true")
+}
