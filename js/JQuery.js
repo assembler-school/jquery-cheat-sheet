@@ -9,3 +9,7 @@ function queryAdd(btn2, parBo) {
 function queryAppend(btn2, parBo, test) {
     $(parBo).append(test)
 }
+
+function queryPrepend(btn2, parBo) {
+    $(parBo).prepend("<p>I´m a timelord!<p>")
+}

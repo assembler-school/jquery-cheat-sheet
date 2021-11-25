@@ -18,3 +18,10 @@ function appendVanilla(btn1, par) {
     z.innerText = "I´m a child!... Element "
 par.appendChild(z)
 }
+
+function prependVanilla(btn1, par) {
+    console.log("preppend")
+    let x = document.createElement("p")
+    x.innerText = "I´m the first child now"
+    par.insertBefore(x, btn1)
+}

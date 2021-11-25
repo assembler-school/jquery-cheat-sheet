@@ -128,6 +128,9 @@ function  displayExample(r) {
     if (r === "Append"){
         createAppend(r)
     }
+    if(r === "Prepend"){
+        createPrepend(r)
+    }
 }
 
 //create
@@ -398,4 +401,95 @@ function createAppend(r) {
             $(parBo).slideToggle()
         }
     });
+}
+
+//createPreppend
+
+function createPrepend(r) {
+        let ex = $(".exampleSide")
+        ex.empty()
+    
+        let container = document.createElement("div")
+        $(container).addClass("con")
+        $(".exampleSide").append(container)
+    
+    
+    
+    
+        let toH3 = document.createElement("h3")
+        $(toH3).addClass("Vanilla")
+        $(toH3).text(r + ":" + " " + "Vanilla")
+        $(container).append(toH3)
+        
+    
+        let topSlider = document.createElement("div")
+        $(topSlider).addClass("topSlider")
+        $(container).append(topSlider)
+    
+        let par = document.createElement("p")
+        $(par).text(`As usual first we need to create the element that we are gonna use in a different line of code and then we preppend it before another child element of that node  like this: par.insertBefore(x, btn1)`)
+        $(par).css("display", "none")
+        $(topSlider).append(par)
+    
+        
+        let btn1 = document.createElement("button")
+        $(btn1).text("No unfunny joke now")
+        $(btn1).addClass("btn1")
+        $(par).append(btn1)
+    
+        $(btn1).on({
+            click: function () {
+               prependVanilla(btn1, par)
+            }
+        })
+    
+    
+        $(toH3).on({
+            mouseenter: function (params) {
+                $(this).css("cursor", "pointer")
+            },
+            click: function (params) {
+                $(par).slideToggle()
+            }
+        });
+    
+        let boH3 = document.createElement("h3")
+        $(boH3).addClass("Vanilla")
+        $(boH3).text("Jquery")
+        $(container).append(boH3)
+        
+    
+        let boSlider = document.createElement("div")
+        $(boSlider).addClass("topSlider")
+        $(container).append(boSlider)
+    
+        let parBo = document.createElement("p")
+        $(parBo).text(`As usual, it is a little easier to do this with Jquery, you can as before create the element, give it text and add it all in the same line like this: par.insertBefore(x, btn1) `)
+        $(parBo).css("display", "none")
+        $(boSlider).append(parBo)
+    
+        let btn2 = document.createElement("button")
+        $(btn2).text("Did I forget something?")
+        $(btn2).addClass("btn1")
+        $(parBo).append(btn2)
+    
+        $(btn2).on({
+            click: function () {
+                let test = document.createElement("p")
+                $(test).text("I pass butter")
+                queryPrepend(btn2, parBo)
+            },
+            mouseenter: function (params) {
+                $(this).css("cursor", "pointer")
+            }
+        });
+    
+        $(boH3).on({
+            mouseenter: function (params) {
+                $(this).css("cursor", "pointer")
+            },
+            click: function (params) {
+                $(parBo).slideToggle()
+            }
+        });
 }
