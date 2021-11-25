@@ -4,17 +4,16 @@ const exercisesArr = [
         tittle:"HTML document has been loaded",
         commandJQ:"ready()",
         commandJS:"ready()",
-        functions:function (){exerciseJS0(),exerciseJQ0()},
+        functions:function (jQueryDiv, jScriptDiv){exerciseJS0(jScriptDiv),exerciseJQ0(jQueryDiv)},
     },
     {
         dataset:1,
         tittle:"HTML document has been loaded",
         commandJQ:"imput",
         commandJS:"imput",
-        functions:function (){exerciseJS1(),exerciseJQ1()},
+        functions:function (jQueryDiv, jScriptDiv){exerciseJS1(jScriptDiv),exerciseJQ1(jQueryDiv)},
     },
 ]
-
 function findExercisesFun(index){
     exercise = exercisesArr.find(item => {
         return item.dataset === index;
@@ -25,11 +24,14 @@ function findExercisesFun(index){
         return exercise;
     }
 }
-function exerciseJQ0(){
-    console.log("holaJQ 0")
+function exerciseJQ0(jQueryDiv){
+    let jQueryDivInnet1 = document.createElement("div")
+    jQueryDivInnet1.classList.add("jQuery-container-inner")
+    jQueryDivInnet1.innerText = "HOLA jquery"
+    jQueryDiv.appendChild(jQueryDivInnet1)
 }
-function exerciseJQ1(){
-    console.log("holaJQ 1")
+function exerciseJQ1(jQueryDiv){
+    console.log("holaJQ 1"+jQueryDiv)
 }
 
 

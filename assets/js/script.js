@@ -35,10 +35,10 @@ function createModal(element, index, cb){
     let jScriptDiv = document.createElement("div")
     jScriptDiv.classList.add("javaScript-container")
     smallDiv.appendChild(jScriptDiv)
+
     removeModal(bigDiv)
     cb(jQueryDiv, jScriptDiv)
 }
-
 function removeModal(child){
     let bigDivClose = document.getElementById("modal")
     bigDivClose.addEventListener("click",(e)=>{
@@ -48,12 +48,15 @@ function removeModal(child){
         }
     })
 }
+function exerciseJS0(jScriptDiv){
 
-function exerciseJS0(){
-    console.log("hola 0")
+    let jScriptDivInner1 = document.createElement("div")
+    jScriptDivInner1.classList.add("jScript-container-inner")
+    jScriptDivInner1.innerText = "HOLA script"
+    jScriptDiv.appendChild(jScriptDivInner1)
 }
-function exerciseJS1(){
-    console.log("hola 1")
+function exerciseJS1(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
 }
 
 
