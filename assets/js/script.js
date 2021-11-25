@@ -6,10 +6,14 @@ console.log(optionPArr)
 
 optionPArr.forEach((element,index) => {
     element.addEventListener("click", function() {
-        createModal(element, removeModal, findExercisesFun(index).functions)
+        if (findExercisesFun(index)){
+            createModal(element, index, findExercisesFun(index).functions)
+        }else{
+            return;
+        }
     })
 });
-function createModal(element, cb, fn){
+function createModal(element, index, cb){
     let bigDiv = document.createElement("div")
     bigDiv.classList.add("modalTransparent")
     bigDiv.setAttribute("id","modal")
@@ -18,12 +22,11 @@ function createModal(element, cb, fn){
     smallDiv.classList.add("modalSmall")
     smallDiv.textContent = element.textContent;
     bigDiv.appendChild(smallDiv)
-    cb(bigDiv)
-    fn(smallDiv)
+    removeModal(bigDiv)
+    cb()
+}
     //createContent(smallDiv)
     //removeModal(bigDiv)
-
-}
 function removeModal(child){
     let bigDivClose = document.getElementById("modal")
     bigDivClose.addEventListener("click",(e)=>{
