@@ -81,3 +81,7 @@ function allPToYellow(btn2, parBo){
         $(this).css("background", "white")
     })
 }
+
+function shootPaintBallOrange(btn2, parBo) {
+    $("#street").css("color", "orange")
+}

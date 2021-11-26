@@ -123,3 +123,7 @@ z.forEach(element => {
     element.style.background = "purple"
 });
     }
+
+    function shootAPaintBall(btn1, par){
+        document.getElementById("Star").style.color = "blue";
+    }

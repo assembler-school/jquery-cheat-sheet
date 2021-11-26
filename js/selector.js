@@ -55,6 +55,9 @@ function createSelectors() {
       if(r === "Get all the elements that have a certain class"){
         createAllElementsClass(r)
       }
+      if(r === "Get an item by id"){
+        createIdElements(r)
+      }
     }
 
 
@@ -324,4 +327,92 @@ function createSelectors() {
       $(parBo).slideToggle();
     },
   });
+  }
+
+  //get an element by id
+
+  function createIdElements(r){
+    let ex = $(".exampleSide");
+    ex.empty();
+  
+    let container = document.createElement("div");
+    $(container).addClass("con");
+    $(".exampleSide").append(container);
+  
+    let toH3 = document.createElement("h3");
+    $(toH3).addClass("Vanilla");
+    $(toH3).text(r + ":" + " " + "Vanilla");
+    $(container).append(toH3);
+  
+    let topSlider = document.createElement("div");
+    $(topSlider).addClass("topSlider");
+    $(container).append(topSlider);
+  
+    let par = document.createElement("p");
+    $(par)
+      .text(`This one of the most intuitive ways of selecting a single element: document.getElementById("id")`);
+    $(par).css("display", "none");
+    $(topSlider).append(par);
+  
+    let btn1 = document.createElement("button");
+    $(btn1).text("Those classists P");
+    $(btn1).addClass("btn1");
+    $(par).append(btn1);
+    $(par).append("<p id=Star>If I turn blue, the selection worked<p>")
+  
+    $(btn1).on({
+      click: function () {
+        shootAPaintBall(btn1, par);
+      },
+    });
+  
+    $(toH3).on({
+      mouseenter: function (params) {
+        $(this).css("cursor", "pointer");
+      },
+      click: function (params) {
+        $(par).slideToggle();
+      },
+    });
+  
+    let boH3 = document.createElement("h3");
+    $(boH3).addClass("Vanilla");
+    $(boH3).text("Jquery");
+    $(container).append(boH3);
+  
+    let boSlider = document.createElement("div");
+    $(boSlider).addClass("topSlider");
+    $(container).append(boSlider);
+  
+    let parBo = document.createElement("p");
+    $(parBo).text(
+      `With this, is even shorter. You just need to write as follows = $(#id) `
+    );
+    $(parBo).css("display", "none");
+    $(boSlider).append(parBo);
+  
+    let btn2 = document.createElement("button");
+    $(btn2).text("I guess yellow is better");
+    $(btn2).addClass("btn1");
+    $(parBo).append(btn2);
+    $(parBo).append("<p id=street>If I turn orange, the selection worked<p>")
+  
+  
+    $(btn2).on({
+      click: function () {
+       shootPaintBallOrange(btn2, parBo);
+      },
+      mouseenter: function (params) {
+        $(this).css("cursor", "pointer");
+      },
+    });
+  
+    $(boH3).on({
+      mouseenter: function (params) {
+        $(this).css("cursor", "pointer");
+      },
+      click: function (params) {
+        $(parBo).slideToggle();
+      },
+    });
   }
