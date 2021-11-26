@@ -11,3 +11,10 @@
  height: fit-content
 }
 
+p.ninjas {
+display: none;
+}
+
+p.magicians {
+    display: none;
+}

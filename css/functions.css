@@ -21,7 +21,7 @@ text-align: center;
 
 .con {
     display: flex;
-    width: 42vh;
+   max-width:  50vh;
     justify-content: center;
     flex-direction: column;
     background: yellow;

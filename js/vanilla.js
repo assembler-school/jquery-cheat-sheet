@@ -127,3 +127,16 @@ z.forEach(element => {
     function shootAPaintBall(btn1, par){
         document.getElementById("Star").style.color = "blue";
     }
+    function dynamite(btn1, par) {
+        Array.from(document.querySelectorAll(".ninjas")).forEach(element => {
+         element.style.display = "block";
+         element.style.color = "green";
+     });
+    }
+    
+    function displaySelection(btn1, par){
+        let r = document.getElementById("rockets").value
+        let z = document.createElement("p")
+        z.innerText = r;
+        par.appendChild(z)
+    }

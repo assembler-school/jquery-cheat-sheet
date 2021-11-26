@@ -85,3 +85,14 @@ function allPToYellow(btn2, parBo){
 function shootPaintBallOrange(btn2, parBo) {
     $("#street").css("color", "orange")
 }
+function magicCarpetRide(btn2, parBo) {
+    $(".magicians").css({
+        "display":"block",
+        "color":"red"
+    })
+}
+function chooseFruits(btn2, parBo){
+    let x = document.createElement("p")
+    $(x).text($("#fruit option:selected").text())
+$(parBo).append(x)
+}
