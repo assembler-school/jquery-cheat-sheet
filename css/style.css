@@ -138,11 +138,30 @@ article{
     height: 100px;
 }
 #modal-main{
-    justify-content:space-evenly;
+    justify-content: center;
 }
 #modal section{
-    margin:10px 0px;
+    margin:10px 10px;
+    width:300px;
     text-align: center;
     padding:0;
     width:auto;
+}
+#modal section #vanilla{
+
+}
+#modal #modal-img{
+
+}
+/* Division line */
+#modal section #jquery::after{
+    border-left:2px solid black;
+}
+#modal section p{
+    font-size:15px;
+}
+
+#modal .snippet{
+    width:230px;
+    height: 100px;
 }
