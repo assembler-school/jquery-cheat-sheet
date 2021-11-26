@@ -140,3 +140,8 @@ z.forEach(element => {
         z.innerText = r;
         par.appendChild(z)
     }
+
+    function changeTheLink(btn1, par){
+         Array.from(document.querySelectorAll("a"))[0].href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+        
+    }

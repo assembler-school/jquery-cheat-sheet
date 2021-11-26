@@ -96,3 +96,7 @@ function chooseFruits(btn2, parBo){
     $(x).text($("#fruit option:selected").text())
 $(parBo).append(x)
 }
+
+function tiredOfJokes(btn2, parBo){
+    let h = $("a").prop("href", "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley")
+}

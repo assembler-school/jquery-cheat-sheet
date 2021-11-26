@@ -65,6 +65,12 @@ function createSelectors() {
     if (r === "Get the options of a select element that are selected"){
       createOptionSelect(r)
     }
+    if(r === "Change the href attribute"){
+      changeHref(r)
+    }
+    if(r === "Show an alert with the value of the first <input> of the page"){
+      showMeThemInputs(r)
+    }
   }
 
     //Get parent element
@@ -617,6 +623,197 @@ $(parBo).append("<select name=rockets id=fruit><option value=Apple>Apple</option
   $(btn2).on({
     click: function () {
       chooseFruits(btn2, parBo);
+    },
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+  });
+
+  $(boH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(parBo).slideToggle();
+    },
+  });
+}
+
+//Change the href attribute
+
+function changeHref(r){
+  let ex = $(".exampleSide");
+  ex.empty();
+
+  let container = document.createElement("div");
+  $(container).addClass("con");
+  $(".exampleSide").append(container);
+
+  let toH3 = document.createElement("h3");
+  $(toH3).addClass("Vanilla");
+  $(toH3).text(r + ":" + " " + "Vanilla");
+  $(container).append(toH3);
+
+  let topSlider = document.createElement("div");
+  $(topSlider).addClass("topSlider");
+  $(container).append(topSlider);
+
+  let par = document.createElement("p");
+  $(par)
+    .text(`This how you change the href from the first anchor element: Array.from(document.querySelectorAll("a"))[0].href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"`);
+  $(par).css("display", "none");
+  $(topSlider).append(par);
+
+  let btn1 = document.createElement("button");
+  $(btn1).text("Click the first attribute after pressing this button to see the change");
+  $(btn1).addClass("btn1");
+  $(par).append(btn1);
+
+  let x = document.createElement("a")
+  $(x).attr("href", "https://www.youtube.com/watch?v=pM3JPhWApvY&ab_channel=wiceone")
+  $(x).text("Extremoduro")
+  $(par).append(x)
+
+  let k = document.createElement("a")
+  $(k).attr("href", "https://www.youtube.com/watch?v=pM3JPhWApvY&ab_channel=wiceone")
+  $(k).text("Extremoduro")
+  $(par).append(k)
+
+  $(btn1).on({
+    click: function () {
+      changeTheLink(btn1, par);
+    },
+  });
+
+  $(toH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(par).slideToggle();
+    },
+  });
+
+  let boH3 = document.createElement("h3");
+  $(boH3).addClass("Vanilla");
+  $(boH3).text("Jquery");
+  $(container).append(boH3);
+
+  let boSlider = document.createElement("div");
+  $(boSlider).addClass("topSlider");
+  $(container).append(boSlider);
+
+  let parBo = document.createElement("p");
+  $(parBo).text(
+    `As usual less steps are necessary with Jquery: $("a").prop("href", "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley")`
+  );
+  $(parBo).css("display", "none");
+  $(boSlider).append(parBo);
+
+  let btn2 = document.createElement("button");
+  $(btn2).text("I´m tired of making jokes");
+  $(btn2).addClass("btn1");
+  $(parBo).append(btn2);
+
+  let g = document.createElement("a")
+  $(g).attr("href", "https://www.youtube.com/watch?v=pM3JPhWApvY&ab_channel=wiceone")
+  $(g).text("Extremoduro")
+  $(parBo).append(g)
+
+  let h = document.createElement("a")
+  $(h).attr("href", "https://www.youtube.com/watch?v=pM3JPhWApvY&ab_channel=wiceone")
+  $(h).text("Extremoduro")
+  $(parBo).append(h)
+
+  $(btn2).on({
+    click: function () {
+      tiredOfJokes(btn2, parBo);
+    },
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+  });
+
+  $(boH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(parBo).slideToggle();
+    },
+  });
+}
+
+// Show an alert with the value of the first <input> of the page
+
+function showMeThemInputs(r){
+  let ex = $(".exampleSide");
+  ex.empty();
+
+  let container = document.createElement("div");
+  $(container).addClass("con");
+  $(".exampleSide").append(container);
+
+  let toH3 = document.createElement("h3");
+  $(toH3).addClass("Vanilla");
+  $(toH3).text(r + ":" + " " + "Vanilla");
+  $(container).append(toH3);
+
+  let topSlider = document.createElement("div");
+  $(topSlider).addClass("topSlider");
+  $(container).append(topSlider);
+
+  let par = document.createElement("p");
+  $(par)
+    .text(`In order to clone in vanilla Js we need to select the previous element, clonate it then append it as a  new child: let cl = btn1.cloneNode(true)
+    par.appendChild(cl) `);
+  $(par).css("display", "none");
+  $(topSlider).append(par);
+
+  let btn1 = document.createElement("button");
+  $(btn1).text("I serve the republic");
+  $(btn1).addClass("btn1");
+  $(par).append(btn1);
+
+  $(btn1).on({
+    click: function () {
+      clonate(btn1, par);
+    },
+  });
+
+  $(toH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(par).slideToggle();
+    },
+  });
+
+  let boH3 = document.createElement("h3");
+  $(boH3).addClass("Vanilla");
+  $(boH3).text("Jquery");
+  $(container).append(boH3);
+
+  let boSlider = document.createElement("div");
+  $(boSlider).addClass("topSlider");
+  $(container).append(boSlider);
+
+  let parBo = document.createElement("p");
+  $(parBo).text(
+    `Cloning here is as usual, easier: $(btn2).clone().appendTo(parBo)`
+  );
+  $(parBo).css("display", "none");
+  $(boSlider).append(parBo);
+
+  let btn2 = document.createElement("button");
+  $(btn2).text("Long live the Empire!");
+  $(btn2).addClass("btn1");
+  $(parBo).append(btn2);
+
+  $(btn2).on({
+    click: function () {
+      queryClone(btn2, parBo);
     },
     mouseenter: function (params) {
       $(this).css("cursor", "pointer");
