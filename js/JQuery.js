@@ -67,3 +67,7 @@ function fadeOutFun(btn2, parBo, x){
 function chaosShouldPrevail(btn2, parBo) {
     $("p").css("background", "blue")
 }
+
+function fatherElementQuery(btn2, parBo) {
+    $(btn2).parent().css("color", "green")
+}

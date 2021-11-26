@@ -101,3 +101,8 @@ function painInTheRear(btn1, par, m){
         element.style.background = "blue";
     });
     }
+
+    function vanillaParents(btn1, par) {
+    let x = btn1.parentElement;
+    x.style.color = "blue"
+    }
