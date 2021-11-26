@@ -63,3 +63,7 @@ function fadeInFun(btn2, parBo, x){
 function fadeOutFun(btn2, parBo, x){
     $(x).fadeOut("slow")
 }
+
+function chaosShouldPrevail(btn2, parBo) {
+    $("p").css("background", "blue")
+}
