@@ -18,11 +18,11 @@ pTagArr.forEach((element,index)=>{
             document.body.removeChild(modalDiv)
             }
         })
-        createDivContent(modalContentDiv,element,index,exercisesArr[index].functions)
+        createDivContent(modalContentDiv,element,index,exercisesArr[index].functions, modalDiv)
     })
 })
 
-function createDivContent(modalContentDiv,element,index,cb){
+function createDivContent(modalContentDiv,element,index,cb, modalDiv){
     var titleModal = document.createElement("div")
     var jqueryDiv = document.createElement("div")
     var jQueryDiv = document.createElement("div")
@@ -41,6 +41,10 @@ function createDivContent(modalContentDiv,element,index,cb){
     jScriptDiv.classList.add("jScriptDiv")
     CloseDiv.classList.add("CloseDiv")
     BtnClose.classList.add("btnClosed")
+    BtnClose.textContent="Close"
+    BtnClose.addEventListener("click",(e)=>{
+        document.body.removeChild(modalDiv)
+        })
     
     modalContentDiv.appendChild(titleModal)
     modalContentDiv.appendChild(jqueryDiv)
@@ -49,8 +53,8 @@ function createDivContent(modalContentDiv,element,index,cb){
     modalContentDiv.appendChild(jsDiv)
     modalContentDiv.appendChild(CloseDiv)
     CloseDiv.appendChild(BtnClose)
-
-    cb()
+    console.log(jScriptDiv)
+    cb(jQueryDiv,jScriptDiv)
 }
 
 

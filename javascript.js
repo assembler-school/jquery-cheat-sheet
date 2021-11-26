@@ -1,4 +1,4 @@
-function exerciseJS0 (){
+function exerciseJS0 (jScriptDiv){
     var divCode = document.createElement("div")
     divCode.classList.add("divCode")
     // jScriptDiv.appendChild(divCode)
@@ -13,7 +13,27 @@ function exerciseJS0 (){
 
 }
 
-function exerciseJS1(){
+function exerciseJS1(jScriptDiv){
+    console.log("wew")
+
+    var divCode = document.createElement("div")
+    divCode.classList.add("divCode")
+    divCode.textContent = 'object.addEventListener("click", myFunction);'
+    console.log(divCode)
+    console.log(jScriptDiv)
+    jScriptDiv.appendChild(divCode)
+
+    var btnTry = document.createElement("button")
+    btnTry.classList.add("btnTry")
+    btnTry.textContent = "Try it"
+    jScriptDiv.appendChild(btnTry)
+
+    btnTry.addEventListener("click",()=>{
+        var divCode2 = document.createElement("div")
+        divCode2.classList.add("divCode2")
+        divCode2.textContent = 'I have been clicked'
+        divCode.appendChild(divCode2)
+    })
 
 }
 function exerciseJS2(){
