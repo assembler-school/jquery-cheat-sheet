@@ -131,6 +131,47 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Create + add an html element after another element
+          </button>
+          <div class="content">
+            <div id="Function5V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    var pElement = document.createElement("p");
+                    pElement.innerText = "Im also a paragraph element";
+                    var previousElement = document.querySelector("#Function5V .demo p");
+                    parentElement.insertBefore(pElement, previousElement.nextSibling);
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p>Im a parapraph element</p>
+              </div>
+            </div>
+            <div id="Function5Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    var pElement = $("&#60;p&#62; This is also a paragraph&#60;/p&#62;"); 
+                    $("#Function5Q button").next().after(pElement);
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p>Im a parapraph element</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="sectionDiv">
         <h2>Selectors</h2>

@@ -63,3 +63,11 @@ $("#Function4Q button").on("click", function () {
   var pElement = $("<p> This is a paragraph </p>");
   $(this).parent().prepend(pElement);
 });
+
+//Create + add an html element after another element
+
+// Prepend an HTML element
+$("#Function5Q button").on("click", function () {
+  var pElement = $("<p> This is also a paragraph </p>");
+  $("#Function5Q button").next().after(pElement);
+});

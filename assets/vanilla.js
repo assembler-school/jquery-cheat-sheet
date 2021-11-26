@@ -36,3 +36,15 @@ document
     pElement.innerText = "This is a paragraph";
     parentElement.insertBefore(pElement, parentElement.firstChild);
   });
+
+//Create + add an html element after another element
+
+document
+  .querySelector("#Function5V button")
+  .addEventListener("click", function () {
+    var pElement = document.createElement("p");
+    var parentElement = document.querySelector("#Function5V .demo");
+    var previousElement = document.querySelector("#Function5V .demo p");
+    pElement.innerText = "Im also a paragraph element";
+    parentElement.insertBefore(pElement, previousElement.nextSibling);
+  });
