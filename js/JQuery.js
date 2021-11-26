@@ -71,3 +71,7 @@ function chaosShouldPrevail(btn2, parBo) {
 function fatherElementQuery(btn2, parBo) {
     $(btn2).parent().css("color", "green")
 }
+
+function redPaintedKids(btn2, parBo) {
+    $(parBo).children().css("color", "red")
+}

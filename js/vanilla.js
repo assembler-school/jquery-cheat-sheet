@@ -106,3 +106,13 @@ function painInTheRear(btn1, par, m){
     let x = btn1.parentElement;
     x.style.color = "blue"
     }
+
+    function killThemKids(btn1, par) {
+    let x = par.childNodes
+ let z =  Array.from(x)
+ console.log(z)
+z.forEach(element => {
+    if(element !== z[0])
+    par.removeChild(element)
+});
+    }

@@ -139,6 +139,8 @@ function createSelectors() {
   });
     }
 
+//collection of Children elements
+
   function  createCollectionOfKids(r) {
     let ex = $(".exampleSide");
   ex.empty();
@@ -158,18 +160,26 @@ function createSelectors() {
 
   let par = document.createElement("p");
   $(par)
-    .text(`This one is pretty simple on Js:  `);
+    .text(`In order to select them you just need to do as follows, we will delete them to show the selection worked: par.childNodes  `);
   $(par).css("display", "none");
   $(topSlider).append(par);
 
   let btn1 = document.createElement("button");
-  $(btn1).text("I serve the republic");
+  $(btn1).text("I am... protection");
   $(btn1).addClass("btn1");
   $(par).append(btn1);
 
+  let z = ["I´m a child", "I´m a child Too", "I´m adopted"]
+
+  z.forEach(element => {
+    let m = document.createElement("p")
+    m.innerText = element
+    $(par).append(m)
+  });
+
   $(btn1).on({
     click: function () {
-      clonate(btn1, par);
+      killThemKids(btn1, par);
     },
   });
 
@@ -193,19 +203,25 @@ function createSelectors() {
 
   let parBo = document.createElement("p");
   $(parBo).text(
-    `Cloning here is as usual, easier: $(btn2).clone().appendTo(parBo)`
+    `As usual, here we just have to use a simple method: $(par).children`
   );
   $(parBo).css("display", "none");
   $(boSlider).append(parBo);
 
   let btn2 = document.createElement("button");
-  $(btn2).text("Long live the Empire!");
+  $(btn2).text("Gonna paint them red");
   $(btn2).addClass("btn1");
   $(parBo).append(btn2);
 
+  z.forEach(element => {
+    let m = document.createElement("p")
+    m.innerText = element
+    $(parBo).append(m)
+  });
+
   $(btn2).on({
     click: function () {
-      queryClone(btn2, parBo);
+      redPaintedKids(btn2, parBo);
     },
     mouseenter: function (params) {
       $(this).css("cursor", "pointer");
