@@ -143,5 +143,14 @@ z.forEach(element => {
 
     function changeTheLink(btn1, par){
          Array.from(document.querySelectorAll("a"))[0].href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
-        
+    }
+
+    function showInputs(par, event){
+alert(document.querySelector("input").value)
+    }
+
+    function vanillaBodyDelete(btn1, par) {
+        console.log("j")
+        while (par.firstChild) {
+            par.removeChild(par.childNodes[0]);}
     }

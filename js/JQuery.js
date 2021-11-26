@@ -100,3 +100,11 @@ $(parBo).append(x)
 function tiredOfJokes(btn2, parBo){
     let h = $("a").prop("href", "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley")
 }
+
+function passTheValue(parBo){
+    alert($("input").val())
+}
+
+function destroyThePage(btn2, parBo){
+    $(body).empty()
+}
