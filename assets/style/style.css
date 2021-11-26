@@ -58,8 +58,8 @@ p{
     background-color: rgb(0, 0, 0,0.5);
 }
 .modalSmall{
-    width: 50%;
-    height: 50%;
+    width: 65%;
+    height: 65%;
     background-color: black;
     border-radius: 10px;
     z-index: 10;
@@ -79,23 +79,90 @@ p{
     color: crimson;
     background-color: cyan;
     border-radius: 10px;
-    height: 12%;
+    height: 10%;
     width: 98%;
     margin: 1% 1% 0% 1%;
 }
 .jQuery-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
     scroll-behavior: smooth;
     background-color: blue;
     border-radius: 10px;
-    height: 85%;
+    height: 74%;
     width: 48.5%;
     margin: 1% 0% 1% 1%;
 }
 .javaScript-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
     scroll-behavior: smooth;
     background-color: coral;
     border-radius: 10px;
-    height: 85%;
+    height: 74%;
     width: 48.5%;
     margin: 1%;
 }
+.buttons-container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    color: crimson;
+    background-color: cyan;
+    border-radius: 10px;
+    height: 10%;
+    width: 98%;
+    margin: 0% 1% 1% 1%;
+}
+
+.buttons-modal{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: darkgreen;
+    margin: 1%;
+    width: 98%;
+}
+
+/* EXERCISE INNER CONTAINERS */
+
+.jScript-container-inner{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    margin: 1%;
+    width: 98%;
+    height: auto;
+    padding:5px;
+}
+.jQuery-container-inner{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    margin: 1%;
+    width: 98%;
+    min-height: 35px;
+    padding:5px;
+}
+ /* EXERCISES */
+ 
+ .poor-class{
+    background-color:rgb(65, 50, 32);
+ }
+
