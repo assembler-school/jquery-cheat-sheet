@@ -27,3 +27,12 @@ document
   });
 
 //Prepend an HTML element
+
+document
+  .querySelector("#Function4V button")
+  .addEventListener("click", function () {
+    var pElement = document.createElement("p");
+    var parentElement = document.querySelector("#Function4V .demo");
+    pElement.innerText = "This is a paragraph";
+    parentElement.insertBefore(pElement, parentElement.firstChild);
+  });

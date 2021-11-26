@@ -57,3 +57,9 @@ $("#Function3Q button").on("click", function () {
   var pElement = $("<p> This is a paragraph </p>");
   $(this).parent().append(pElement);
 });
+
+// Prepend an HTML element
+$("#Function4Q button").on("click", function () {
+  var pElement = $("<p> This is a paragraph </p>");
+  $(this).parent().prepend(pElement);
+});
