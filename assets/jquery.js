@@ -43,7 +43,7 @@ $("code").on("click", function () {
 
 //Create an HTML element
 $("#Function1Q button").on("click", function () {
-  var btn = $("<button> This is a button </button>");
+  let btn = $("<button> This is a button </button>");
   $(this).parent().append(btn);
 });
 
@@ -54,13 +54,13 @@ $("#Function2Q button").on("click", function () {
 
 // Append an HTML element
 $("#Function3Q button").on("click", function () {
-  var pElement = $("<p> This is a paragraph </p>");
+  let pElement = $("<p> This is a paragraph </p>");
   $(this).parent().append(pElement);
 });
 
 // Prepend an HTML element
 $("#Function4Q button").on("click", function () {
-  var pElement = $("<p> This is a paragraph </p>");
+  let pElement = $("<p> This is a paragraph </p>");
   $(this).parent().prepend(pElement);
 });
 
@@ -68,6 +68,6 @@ $("#Function4Q button").on("click", function () {
 
 // Prepend an HTML element
 $("#Function5Q button").on("click", function () {
-  var pElement = $("<p> This is also a paragraph </p>");
+  let pElement = $("<p> This is also a paragraph </p>");
   $("#Function5Q button").next().after(pElement);
 });
