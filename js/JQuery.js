@@ -75,3 +75,9 @@ function fatherElementQuery(btn2, parBo) {
 function redPaintedKids(btn2, parBo) {
     $(parBo).children().css("color", "red")
 }
+
+function allPToYellow(btn2, parBo){
+    $("p").each(function(){
+        $(this).css("background", "white")
+    })
+}

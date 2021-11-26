@@ -52,6 +52,9 @@ function createSelectors() {
       if(r === "Get the collection of children"){
         createCollectionOfKids(r)
       }
+      if(r === "Get all the elements that have a certain class"){
+        createAllElementsClass(r)
+      }
     }
 
 
@@ -222,6 +225,91 @@ function createSelectors() {
   $(btn2).on({
     click: function () {
       redPaintedKids(btn2, parBo);
+    },
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+  });
+
+  $(boH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(parBo).slideToggle();
+    },
+  });
+  }
+
+  // Get all the elements that have a certain class
+
+  function createAllElementsClass(r) {
+    let ex = $(".exampleSide");
+  ex.empty();
+
+  let container = document.createElement("div");
+  $(container).addClass("con");
+  $(".exampleSide").append(container);
+
+  let toH3 = document.createElement("h3");
+  $(toH3).addClass("Vanilla");
+  $(toH3).text(r + ":" + " " + "Vanilla");
+  $(container).append(toH3);
+
+  let topSlider = document.createElement("div");
+  $(topSlider).addClass("topSlider");
+  $(container).append(topSlider);
+
+  let par = document.createElement("p");
+  $(par)
+    .text(`This can be done with classes and tags. As I´m lazy I´m gonna use all P elements instead of creating elements with an specific class. There are many ways of doing this but my favourite is: document.querySelectorAll("p"), this however returns a node list, so as usual to interact with the elements is necessary to convert them to an array.`);
+  $(par).css("display", "none");
+  $(topSlider).append(par);
+
+  let btn1 = document.createElement("button");
+  $(btn1).text("Those classists P");
+  $(btn1).addClass("btn1");
+  $(par).append(btn1);
+
+  $(btn1).on({
+    click: function () {
+      classChange(btn1, par);
+    },
+  });
+
+  $(toH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(par).slideToggle();
+    },
+  });
+
+  let boH3 = document.createElement("h3");
+  $(boH3).addClass("Vanilla");
+  $(boH3).text("Jquery");
+  $(container).append(boH3);
+
+  let boSlider = document.createElement("div");
+  $(boSlider).addClass("topSlider");
+  $(container).append(boSlider);
+
+  let parBo = document.createElement("p");
+  $(parBo).text(
+    `As usual, it is easier with Jquery:  $("p").each(function(){} `
+  );
+  $(parBo).css("display", "none");
+  $(boSlider).append(parBo);
+
+  let btn2 = document.createElement("button");
+  $(btn2).text("I guess yellow is better");
+  $(btn2).addClass("btn1");
+  $(parBo).append(btn2);
+
+  $(btn2).on({
+    click: function () {
+     allPToYellow(btn2, parBo);
     },
     mouseenter: function (params) {
       $(this).css("cursor", "pointer");

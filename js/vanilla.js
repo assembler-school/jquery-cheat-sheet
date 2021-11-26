@@ -116,3 +116,10 @@ z.forEach(element => {
     par.removeChild(element)
 });
     }
+
+    function classChange(btn1, par){
+ 
+        Array.from(document.querySelectorAll("p")).forEach(element => {
+    element.style.background = "purple"
+});
+    }
