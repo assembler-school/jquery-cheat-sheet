@@ -65,9 +65,13 @@ $("#Function4Q button").on("click", function () {
 });
 
 //Create + add an html element after another element
-
-// Prepend an HTML element
 $("#Function5Q button").on("click", function () {
-  let pElement = $("<p> This is also a paragraph </p>");
+  let pElement = $("<p>Im also a paragraph</p>");
   $("#Function5Q button").next().after(pElement);
+});
+
+//Create + add an html element before another element
+$("#Function6Q button").on("click", function () {
+  let pElement = $("<p>Im also a paragraph</p>");
+  $("#Function6Q .demo p").last().before(pElement);
 });

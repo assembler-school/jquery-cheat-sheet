@@ -143,8 +143,8 @@
                 <pre>
                   <code>
                     let pElement = document.createElement("p");
-                    pElement.innerText = "Im also a paragraph element";
-                    let previousElement = document.querySelector("#Function5V .demo p");
+                    pElement.innerText = "Im also a paragraph";
+                    let previousElement = document.querySelector("p");
                     parentElement.insertBefore(pElement, previousElement.nextSibling);
                   </code>
                 </pre>
@@ -160,8 +160,49 @@
                 <p>Code:</p>
                 <pre>
                   <code>
-                    let pElement = $("&#60;p&#62; This is also a paragraph&#60;/p&#62;"); 
-                    $("#Function5Q button").next().after(pElement);
+                    let pElement = $("&#60;p&#62; Im also a paragraph&#60;/p&#62;"); 
+                    $("p").after(pElement);
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p>Im a parapraph element</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">
+            Create + add an html element before another element
+          </button>
+          <div class="content">
+            <div id="Function6V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let pElement = document.createElement("p");
+                    pElement.innerText = "Im also a paragraph";
+                    let lastElement = document.querySelector("p");
+                    parentElement.insertBefore(pElement, lastElement);
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p>Im a parapraph element</p>
+              </div>
+            </div>
+            <div id="Function6Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let pElement = $("&#60;p&#62; Im also a paragraph&#60;/p&#62;"); 
+                    $("p").before(pElement);
                   </code>
                 </pre>
               </div>
