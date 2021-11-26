@@ -54,7 +54,7 @@ function clickDetect(flex1, flex2, flex3, main) {
 
   $(flex2).on({
     click: function (params) {
-      console.log("click");
+      createSelectors()
       $(main).remove();
     },
 
@@ -1799,12 +1799,16 @@ function createIterateEl(r) {
   
     let par = document.createElement("p");
     $(par)
-      .text(`Dummy Text`);
+      .text(`It´s never easy with vanilla:   let x = Array.from(document.querySelectorAll("p"))
+    
+      x.forEach(element => {
+          element.style.background = "blue";
+      });`);
     $(par).css("display", "none");
     $(topSlider).append(par);
   
     let btn1 = document.createElement("button");
-    $(btn1).text("I serve the republic");
+    $(btn1).text("Wish I could paint the world blue");
     $(btn1).addClass("btn1");
     $(par).append(btn1);
   
@@ -1863,10 +1867,3 @@ function createIterateEl(r) {
     });
 }
 
-function dontKnowWhatImDoing(btn1, par) {
-let x = Array.from(document.querySelectorAll("p"))
-
-x.forEach(element => {
-    $(element).css("color", "red")
-});
-}

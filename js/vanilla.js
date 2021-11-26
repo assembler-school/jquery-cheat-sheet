@@ -93,3 +93,11 @@ function painInTheRear(btn1, par, m){
       }, 100);
   
   }
+
+  function dontKnowWhatImDoing(btn1, par) {
+    let x = Array.from(document.querySelectorAll("p"))
+    
+    x.forEach(element => {
+        element.style.background = "blue";
+    });
+    }
