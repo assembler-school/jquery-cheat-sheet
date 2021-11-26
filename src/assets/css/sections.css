@@ -1,0 +1,73 @@
+/* The Modal (background) */
+
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    width: 100%; 
+    height: 100vh;
+    text-align: center;
+  }
+  
+
+  .generalcontent{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .generalcontent>h2{
+    position: absolute;
+    padding-bottom: 90vh;
+  }
+  .generalcontent>div{
+    padding-top: 100px;
+    width: 50%;
+    text-align: center;
+    height: 90vh;
+  }
+  .js{
+    background-color: rgba(239,216,29,255);
+  }
+  .jq{
+    background-color: rgba(8,105,174,255);
+  }
+  .js>.codigocontent{
+    background-color: yellow;
+  }
+  .jq>.codigocontent{
+    background-color: blue;
+  }
+
+  .codigocontent{
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+}
+.testcontent{
+    border:1px solid black;
+    width: 80%;
+    height: 40%;
+    margin: 2% auto;
+
+}
+.resultdiv{
+    height: 50px;
+}
+img{
+  max-width: 300px;
+  max-height: 100px;
+  cursor: pointer;
+}
+.border{
+  border: 1px solid black;
+}
+.btnclass{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: chocolate;
+  font-size: 1.5em;
+}

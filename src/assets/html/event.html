@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer> </script>
+    <script src="/src/assets/js/jquery.js" defer></script>
+    <script src="/src/assets/js/jsvanillaEvents.js" defer></script>
+    <link rel="stylesheet" href="/src/assets/css/sections.css">
+    <title>Events</title>
+</head>
+<body>
+
+<section id="s1" class="documentLoaded">
+<div class="modal-content">
+    <div class="generalcontent">
+        <h2>HTML document has been loaded </h2>
+        <div class="js">
+            <h2>JavaScript</h2>
+            <div class="codigocontent">
+                <code>document.onload()</code>
+            </div>
+            <div class="testcontent">
+                <p>Click the button</p>
+                <button id="jsbtntest1">Click Hear!</button>
+                <div id="jsresult1"></div>
+            </div>
+        </div>
+        <div class="jq">
+            <h2>JQuery</h2>
+            <div class="codigocontent">
+                <code>$(document).ready()</code>
+            </div>
+            <div class="testcontent">
+                <p>Document is Loaded?</p>
+                <button id="jqbtntest1">Click Hear!</button>
+                <div id="jqresult1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<section id="s2" class="elementClick">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>HTML item has been clicked </h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>document.addEventListener("click", () => {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>Do you have clicked?</p>
+                    <button id="jsbtntest2">Click Hear!</button>
+                    <div id="jsresult2"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$(".myvalue").click(() => {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>Do you have clicked?</p>
+                    <button id="jqbtntest2">Click Hear!</button>
+                    <div id="jqresult2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s3" class="elementDbClick">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>HTML item has been doble clicked </h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>document.addEventListener("dblclick", () => {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>Do you have doble clicked?</p>
+                    <button id="jsbtntest3">Click Hear!</button>
+                    <div id="jsresult3"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$(".myvalue").dblclick(() => {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>Do you have doble clicked?</p>
+                    <button id="jqbtntest3">Click Hear!</button>
+                    <div id="jqresult3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s4" class="pressKey">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Presses a key on the keyboard </h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>document.addEventListener('keypress', (e) => {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>Do you have press any key?</p>
+                    <div id="jsresult4"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$(".myvalue").keypress(() => {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>Do you have press any key?</p>
+                    <div id="jqresult4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s5" class="onmousemove">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Moves the mouse cursor</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>document.onmousemove()
+                        onmousemove = function(e){e.x}</code>
+                </div>
+                <div class="testcontent">
+                    <p>Where is your mouse?</p>
+                    <div id="jsresult5"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$(document).bind('mousemove', function (e) {e.pageX}))</code>
+                </div>
+                <div class="testcontent">
+                    <p>Where is your mouse?</p>
+                    <div id="jqresult5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s6" class="changeValue">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Changes a value of an text input</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>select.addEventListener("change", function () { })</code>
+                </div>
+                <div class="testcontent">
+                    <p>have you changed the value?</p>
+                    <select id="jsbtntest6">
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                        <option value="c">c</option>
+                    </select>
+                    <div id="jsresult6"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$('select').on('input', function (e) {});</code>
+                </div>
+                <div class="testcontent">
+                    <p>have you changed the value?</p>
+                    <select id="jqbtntest6">
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                        <option value="c">c</option>
+                    </select>
+                    <div id="jqresult6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s7" class="imgLoad">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>When an image is loaded</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>if(img.complete) { })</code>
+                </div>
+                <div class="testcontent">
+                    <p>the image is load?</p>
+                    <img id="jsbtntest7" src="/src/assets/img/gato.jpg" alt="Gato">
+                    <div id="jsresult7"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$('img').load(function() {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>the image is load?</p>
+                    <img id="jqbtntest7" src="/src/assets/img/gato.jpg" alt="Gato">
+                    <div id="jqresult7"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s8" class="imgNoLoad">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>When an image fails to load,</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>if(img.complete) { })</code>
+                </div>
+                <div class="testcontent">
+                    <p>the image is load?</p>
+                    <img id="jsbtntest7_1" src="/src/assets/img/gato1.jpg" alt="Gato">
+                    <div id="jsresult7_1"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$('img').load(function() {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>the image is load?</p>
+                    <img id="jqbtntest7_1" src="/src/assets/img/gato1.jpg" alt="Gato">
+                    <div id="jqresult7_1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section id="s9" class="formSumbit">//falta implementacion
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>When a form is submitted</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>document.getElementById("myForm").submit();</code>
+                </div>
+                <div class="testcontent">
+                    <p>the form is sumbit?</p>
+                    <form action="" id="jsbtntest8">
+                        <button type="submit">Sumbit</button>
+                    </form>
+                    <div id="jsresult8"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$("#target").submit(function (event) {event.preventDefault()});</code>
+                </div>
+                <div class="testcontent">
+                    <p>the form is sumbit?</p>
+                    <form action="" id="jqbtntest8">
+                        <button type="submit">Sumbit</button>
+                    </form>
+                    <div id="jqresult8"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section id="s10" class="changeValue">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>When the user changes the option of a select element</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>select.addEventListener("change", function () { })</code>
+                </div>
+                <div class="testcontent">
+                    <p>have you changed the value?</p>
+                    <select id="jsbtntest9" onchange = "myFunctionjs9()">
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                        <option value="c">c</option>
+                    </select>
+                    <div id="jsresult9"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$('select').on('input', function (e) {});</code>
+                </div>
+                <div class="testcontent">
+                    <p>have you changed the value?</p>
+                    <select id="jqbtntest9" onchange = "myFunctionjs9()">
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                        <option value="c">c</option>
+                    </select>
+                    <div id="jqresult9"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s11" class="Mouseover">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>When you position the mouse over an element</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>button.onmouseover=function(){}
+                          button.onmouseout=function(){}
+                    </code>
+                </div>
+                <div class="testcontent">
+                    <p>The mouse is over?</p>
+                    <button id="jsbtntest10">Over Hear!</button>
+                    <div id="jsresult10">a</div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$("button").mouseover(function () { }
+                        $("button").mouseout(function () { }
+                    </code>
+                </div>
+                <div class="testcontent">
+                    <p>The mouse is over?</p>
+                    <button id="jqbtntest1">Over Hear!</button>
+                    <div id="jqresult10">a</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s12" class="Checked">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>When a checkbox is checked or unchecked</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>if (input.checked) { }</code>
+                </div>
+                <div class="testcontent">
+                    <p>this is checked?</p>
+                    <input type="checkbox" id="jsbtntest11">
+                    <div id="jsresult11"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$(".checkbox").change(function () {
+                        if (this.checked) {
+                            //Do stuff
+                        }}})
+                    </code>
+                </div>
+                <div class="testcontent">
+                    <p>this is checked?</p>
+                    <input type="checkbox" id="jqbtntest11">
+                    <div id="jqresult11"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section id="s13" class="liClicked">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>When a ul list item is clicked</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>Array.prototype.slice.call(list).forEach(function(a) {
+                        a.addEventListener('click', function(e) { })})</code>
+                </div>
+                <div class="testcontent">
+                    <p>this is checked?</p>
+                    <ul id="jsbtntest12">
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ul>
+                    <div id="jsresult12"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$(".checkbox").change(function () {
+                        if (this.checked) {
+                            //Do stuff
+                        }}})
+                    </code>
+                </div>
+                <div class="testcontent">
+                    <p>this is checked?</p>
+                    <ul id="jqbtntest12">
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ul>
+                    <div id="jqresult12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section id="s14" class="pressKeydown">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Down the key on the keyboard </h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>document.addEventListener('keydown', (e) => {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>Do you have press any key?</p>
+                    <div id="jsresult35"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$(".myvalue").keydown(() => {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>Do you have press any key?</p>
+                    <div id="jqresult35"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s15" class="pressKeyUp">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Presses and up the key on the keyboard </h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>document.addEventListener('keyup', (e) => {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>Do you have press any key?</p>
+                    <div id="jsresult36"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$(".myvalue").keyup(() => {})</code>
+                </div>
+                <div class="testcontent">
+                    <p>Do you have press any key?</p>
+                    <div id="jqresult36"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
