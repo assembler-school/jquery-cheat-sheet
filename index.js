@@ -16,69 +16,46 @@ pTagArr.forEach((element,index)=>{
         modalDiv.addEventListener("click",(e)=>{
             if(e.target.matches(".modalDivCss")){
             document.body.removeChild(modalDiv)
-            // modalDiv.removeEventListener
             }
         })
-        createDivContent(modalContentDiv,element,index)
+        createDivContent(modalContentDiv,element,index,exercisesArr[index].functions)
     })
 })
 
-function createDivContent(modalContentDiv,element,index){
-    console.log(element)
+function createDivContent(modalContentDiv,element,index,cb){
     var titleModal = document.createElement("div")
     var jqueryDiv = document.createElement("div")
-    var jqueryDivEx = document.createElement("div")
-    var jsDivEx = document.createElement("div")
+    var jQueryDiv = document.createElement("div")
+    var jScriptDiv = document.createElement("div")
     var jsDiv = document.createElement("div")
     var CloseDiv = document.createElement("div")
+    var BtnClose = document.createElement("button")
+
     titleModal.classList.add("titleModal")
     titleModal.textContent=element.textContent
     jqueryDiv.classList.add("jqueryDiv")
     jsDiv.classList.add("jsDiv")
     jqueryDiv.textContent="JQUERY: "+exercisesArr[index].commandJQ
     jsDiv.textContent="JavaScript: "+ exercisesArr[index].commandJS
-    jqueryDivEx.classList.add("jqueryDivEx")
-    jsDivEx.classList.add("jsDivEx")
+    jQueryDiv.classList.add("jQueryDiv")
+    jScriptDiv.classList.add("jScriptDiv")
     CloseDiv.classList.add("CloseDiv")
+    BtnClose.classList.add("btnClosed")
+    
     modalContentDiv.appendChild(titleModal)
     modalContentDiv.appendChild(jqueryDiv)
-    modalContentDiv.appendChild(jqueryDivEx)
-    modalContentDiv.appendChild(jsDivEx)
+    modalContentDiv.appendChild(jQueryDiv)
+    modalContentDiv.appendChild(jScriptDiv)
     modalContentDiv.appendChild(jsDiv)
     modalContentDiv.appendChild(CloseDiv)
-
-    
-    createContent(element,jqueryDivEx,jsDivEx)
-    createButon(CloseDiv)
-}
-
-function createContent(element,jqueryDivEx,jsDivEx){
-    console.log(element)
-    indexValue=element.dataset.valueevent
-    console.log(indexValue)
-    jqueryDivEx.textContent=exercisesArr[indexValue]
-    jsDivEx.textContent=JsEx[indexValue]
-    // jqueryDivEx.textContent=exercisesArr[indexValue].link
-    // jsDivEx.textContent=JsEx[indexValue].link
-
-}
-
-function createButon(CloseDiv){
-    console.log("asdsd")
-    var copyBtnJquery = document.createElement("button")
-    var BtnClose = document.createElement("button")
-    var copyBtnJS = document.createElement("button")
-    copyBtnJquery.classList.add("btnCopi")
-    BtnClose.classList.add("btnClosed")
-    copyBtnJS.classList.add("btnCopi")
-    copyBtnJquery.textContent="Copy JQUERY";
-    BtnClose.textContent="close";
-    copyBtnJS.textContent="Copy JavaScript";
-    CloseDiv.appendChild(copyBtnJquery)
     CloseDiv.appendChild(BtnClose)
-    CloseDiv.appendChild(copyBtnJS)
-    
+
+    cb()
 }
+
+
+// createContent(element,jQueryDiv,jScriptDiv,exercisesArr[index].functions)
+    
 
 
 

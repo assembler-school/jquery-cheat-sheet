@@ -130,7 +130,6 @@ box-shadow: 5px 5px 85px #222;
     grid-column-start: 1;
     grid-column-end: 3;
     background-color: #F5CB6A;
-    background-color: ;
     color: white;
     text-align: end;
     font-size: 30px;
@@ -142,13 +141,14 @@ box-shadow: 5px 5px 85px #222;
   flex-direction: column;
   align-items: center;
 }
-.jqueryDivEx{
+.jQueryDiv{
     background-color: #d3dcfa;
     border: solid 0.5px black;
 }
-.jsDivEx{
+.jScriptDiv{
     background-color: #fdecc4;
     border: solid 0.5px black;
+    text-align: right;
 }
 
 .CloseDiv{
@@ -159,7 +159,34 @@ box-shadow: 5px 5px 85px #222;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+button{
+  display: inline-block;
+  padding: 10px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #363638;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+  height: 50px;
+  width: 70%;
+  align-self:center;
+  justify-self: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
 
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 
 
