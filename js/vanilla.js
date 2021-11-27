@@ -239,3 +239,12 @@ document.addEventListener("keydown", (e)=>{
         par.style.color = "blue"
     })
     }
+
+    function createThemForms(btn1, par){
+        $(par).append("<form class=elementals id=elementals><label for=fname>Random form</label> <input type=text id=fnames  name=fnames> <button class=ops>Execute</button></form>")
+       console.log( document.getElementById("elementals"))
+        document.getElementById("elementals").addEventListener("submit", (e)=>{
+            event.preventDefault()
+            par.style.color = "blue"
+        })
+    }

@@ -190,3 +190,13 @@ function erroImage(btn1, par){
         btn1.style.background ="blue"
     })
 }
+
+function formCreations(parBo, btn2){
+    $(btn2).append("<form class=elemental id=elemental><label for=fname>Random form</label> <input type=text id=fname  name=fname> <button class=op>Execute</button></form>")
+    $(".elemental").on({
+        submit: function(){
+            event.preventDefault()
+            $(parBo).css("color", "green")
+        }
+    })
+    }
