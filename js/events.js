@@ -76,6 +76,9 @@ function displayExampEvents(r) {
   if(r === "When the user changes a value of an text input"){
     createThemTextInputs(r)
   }
+  if(r === "When an image is loaded"){
+    imageLoadEvent(r)
+  }
 }
 
 // Check if loaded 
@@ -527,6 +530,102 @@ function createMouseMove(r){
 // When the user changes a value of an text input
 
 function createThemTextInputs(r){
+  let ex = $(".exampleSide");
+  ex.empty();
+
+  let container = document.createElement("div");
+  $(container).addClass("con");
+  $(".exampleSide").append(container);
+
+  let toH3 = document.createElement("h3");
+  $(toH3).addClass("Vanilla");
+  $(toH3).text(r + ":" + " " + "Vanilla");
+  $(container).append(toH3);
+
+  let topSlider = document.createElement("div");
+  $(topSlider).addClass("topSlider");
+  $(container).append(topSlider);
+
+  let par = document.createElement("p");
+  $(par)
+    .text(`The code for this is as follows:     x.addEventListener("change", (e)=>{
+      let pp = document.createElement("p")
+      pp.innerText = x.value
+      par.appendChild(pp)
+     }) `);
+  $(par).css("display", "none");
+  $(topSlider).append(par);
+  $(par).append("<form id=copied><label>Somebody is copying me</label> <input type=text id=copy name=copy><form>")
+
+  let btn1 = document.createElement("button");
+  $(btn1).text("Activate listener");
+  $(btn1).addClass("btn1");
+  $(par).append(btn1);
+
+  $(btn1).on({
+    click: function () {
+     createValueCopy(btn1, par);
+    },
+  });
+
+  $(toH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(par).slideToggle();
+    },
+  });
+
+  let boH3 = document.createElement("h3");
+  $(boH3).addClass("Vanilla");
+  $(boH3).text("Jquery");
+  $(container).append(boH3);
+
+  let boSlider = document.createElement("div");
+  $(boSlider).addClass("topSlider");
+  $(container).append(boSlider);
+
+  let parBo = document.createElement("p");
+  $(parBo).text(
+    `The following code shows how the event listener can be used and written:   $("#copy").on({
+      change: function(){
+          let k = document.createElement("p")
+          $(k).text($("#copy").val())
+          $(btn2).append(k)
+      }
+  })`
+  );
+  $(parBo).css("display", "none");
+  $(boSlider).append(parBo);
+
+  let btn2 = document.createElement("button");
+  $(btn2).text("Code executes after this");
+  $(btn2).addClass("btn1");
+  $(parBo).append(btn2);
+
+  $(btn2).on({
+    click: function () {
+      eventZ(btn2, parBo);
+    },
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+  });
+
+  $(boH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(parBo).slideToggle();
+    },
+  });
+}
+
+//When an image is loaded
+
+function imageLoadEvent(r){
   let ex = $(".exampleSide");
   ex.empty();
 

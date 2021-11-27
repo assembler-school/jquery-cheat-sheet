@@ -154,3 +154,13 @@ function eventM(btn2, parBo)  {
         }
     })
 }
+
+function eventZ(btn2, parBo){
+    $("#copy").on({
+        change: function(){
+            let k = document.createElement("p")
+            $(k).text($("#copy").val())
+            $(btn2).append(k)
+        }
+    })
+}

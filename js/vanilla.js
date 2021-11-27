@@ -219,3 +219,13 @@ document.addEventListener("keydown", (e)=>{
             btn1.style.color = "green"
         })
     }
+
+    function createValueCopy(btn1, par){
+        let x = document.getElementById("copy")
+
+        x.addEventListener("change", (e)=>{
+         let pp = document.createElement("p")
+         pp.innerText = x.value
+         par.appendChild(pp)
+        })
+    }
