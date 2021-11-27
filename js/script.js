@@ -65,7 +65,8 @@ function clickDetect(flex1, flex2, flex3, main) {
 
   $(flex3).on({
     click: function (params) {
-      console.log("click");
+      console.log("click")
+      createEvents();
       $(main).remove();
     },
 

@@ -18,3 +18,9 @@ display: none;
 p.magicians {
     display: none;
 }
+
+.funSideBar3 {
+    background: rgba(255, 255, 0, 0.575);
+    color:black;
+    height: fit-content
+   }
