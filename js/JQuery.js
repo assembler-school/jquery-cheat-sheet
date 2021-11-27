@@ -171,3 +171,22 @@ function imageM(btn2, parBo) {
         $(parBo).css("color", "red")
     })
 }
+
+function loadDidntWork(btn2, parBo) {
+    $(parBo).append("<img src=images/s class=ppp>")
+    $(".ppp").on({
+        error: function(){
+            $(parBo).css("background", "blue")
+        }
+    })
+}
+
+function erroImage(btn1, par){
+    let x = document.createElement("img")
+    x.setAttribute("src", "images/341")
+    par.appendChild(x)
+
+    x.addEventListener("error", (e)=> {
+        btn1.style.background ="blue"
+    })
+}
