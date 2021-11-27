@@ -1,0 +1,11 @@
+:root {
+    --black: rgb(0,0,0);
+    --background: rgb(255, 136, 0);
+    --background-hover: rgb(255, 215, 170);
+    --background-clicked: rgb(255, 176, 85);
+    --background-div: rgb(255, 156, 43);
+    --js: rgba(255, 200, 0, 0.5);
+    --jQuery: rgba(42, 145, 213, 0.5);
+
+    --hover-height: 45px;
+}
