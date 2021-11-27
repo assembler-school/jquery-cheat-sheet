@@ -229,3 +229,13 @@ document.addEventListener("keydown", (e)=>{
          par.appendChild(pp)
         })
     }
+
+    function loadThatImage(btn1, par){
+    let x = document.createElement("img")
+    x.setAttribute("src", "images/coding.jpg")
+    par.appendChild(x)
+
+    x.addEventListener("load", (e)=> {
+        par.style.color = "blue"
+    })
+    }

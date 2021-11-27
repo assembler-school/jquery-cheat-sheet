@@ -164,3 +164,10 @@ function eventZ(btn2, parBo){
         }
     })
 }
+
+function imageM(btn2, parBo) {
+    $(parBo).append("<img class=loadBurning src=images/coding.jpg>")
+    $(".loadBurning").load( function(){
+        $(parBo).css("color", "red")
+    })
+}

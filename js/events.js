@@ -644,8 +644,8 @@ function imageLoadEvent(r){
 
   let par = document.createElement("p");
   $(par)
-    .text(`Here is the event for that:     document.addEventListener("mousemove", (e)=>{
-      btn1.style.color = "green"
+    .text(`This is the code we use to do an action when an image or some other element is loaded:   x.addEventListener("load", (e)=> {
+      par.style.color = "blue"
   })`);
   $(par).css("display", "none");
   $(topSlider).append(par);
@@ -657,7 +657,7 @@ function imageLoadEvent(r){
 
   $(btn1).on({
     click: function () {
-      mouseMoveEvents(btn1, par);
+      loadThatImage(btn1, par);
     },
   });
 
@@ -681,11 +681,9 @@ function imageLoadEvent(r){
 
   let parBo = document.createElement("p");
   $(parBo).text(
-    `Here goes the event code:     $(document).on({
-      mousemove: function(){
-          $(btn2).css("position", "absolute")
-      }
-  }) `
+    `As usual it requires less code with jquery to do the same:   $(".loadBurning").load( function(){
+      $(parBo).css("color", "red")
+  })`
   );
   $(parBo).css("display", "none");
   $(boSlider).append(parBo);
@@ -697,7 +695,7 @@ function imageLoadEvent(r){
 
   $(btn2).on({
     click: function () {
-      eventM(btn2, parBo);
+      imageM(btn2, parBo);
     },
     mouseenter: function (params) {
       $(this).css("cursor", "pointer");
