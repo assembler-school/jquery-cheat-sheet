@@ -196,3 +196,13 @@ alert(document.querySelector("input").value)
            par.appendChild(k)
        }) 
     }
+
+    function doubleClickChekerVanilla(btn1, par){
+let x = document.createElement("button")
+x.innerText = "Twice, pls"
+par.appendChild(x)
+
+x.addEventListener("dblclick", (e)=> {
+    x.style.background = "blue"
+})
+    }
