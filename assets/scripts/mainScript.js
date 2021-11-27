@@ -261,12 +261,82 @@ var allFunctions = [
     },
 ]
 
+var allSelectors = [
+    {
+        title: `Iterate a collection of elements`,
+        idButtonClick: 'iterateCollectionidButtonClick',
+        divdisplay: 'iterateCollectiondivdisplay',
+        functionIdJs: 'iterateCollectionfunctionIdJs',
+        functionJs: () => { iterateCollectionfunctionJs() },
+        jsText: " allP = document.querySelectorAll('p') <br> allP.forEach(element => { <br> element.classList.add('pClassGreen') <br> });",
+        IdTestResultjs: 'iterateCollectionIdTestResultjs',
+        functionIdJq: 'iterateCollectionfunctionIdJq',
+        functionJq: () => { iterateCollectionfunctionJq() },
+        jqText: "$('p').each(function (indexInArray, valueOfElement) { <br> $(valueOfElement).addClass('pClassGreen') <br> })",
+        IdTestResultjq: 'iterateCollectionIdTestResultjq'
+    },
+    {
+        title: `Parent Element`,
+        idButtonClick: 'parentElementidButtonClick',
+        divdisplay: 'parentElementdivdisplay',
+        functionIdJs: 'parentElementfunctionIdJs',
+        functionJs: () => { parentElementfunctionJs() },
+        jsText: " parent= pOne.parentElement <br> parent.style.fontWeight = 'bolder';",
+        IdTestResultjs: 'parentElementIdTestResultjs',
+        functionIdJq: 'parentElementfunctionIdJq',
+        functionJq: () => { parentElementfunctionJq() },
+        jqText: " el.parent().css('fontWeight' , 'bolder')",
+        IdTestResultjq: 'parentElementIdTestResultjq'
+    },
+    {
+        title: `Children Element`,
+        idButtonClick: 'childrenElementidButtonClick',
+        divdisplay: 'childrenElementdivdisplay',
+        functionIdJs: 'childrenElementfunctionIdJs',
+        functionJs: () => { childrenElementfunctionJs() },
+        jsText: " children= divOne.childrenElement <br> children.style.fontWeight = 'bolder';",
+        IdTestResultjs: 'childrenElementIdTestResultjs',
+        functionIdJq: 'childrenElementfunctionIdJq',
+        functionJq: () => { childrenElementfunctionJq() },
+        jqText: " $('#div1id').children().css('fontWeight' , 'bolder')",
+        IdTestResultjq: 'childrenElementIdTestResultjq'
+    },
+    {
+        title: `Class Element`,
+        idButtonClick: 'classElementidButtonClick',
+        divdisplay: 'classElementdivdisplay',
+        functionIdJs: 'classElementfunctionIdJs',
+        functionJs: () => { classElementfunctionJs() },
+        jsText: " elems = document.getElementsByClassName('pdif') <br> for (var i = 0; i < elems.length; ++i) { <br> elems[i].style.fontWeight = 'bolder'; <br>}  " ,
+        IdTestResultjs: 'classElementIdTestResultjs',
+        functionIdJq: 'classElementfunctionIdJq',
+        functionJq: () => { classElementfunctionJq() },
+        jqText: " $('.pdifjq').css('font-weight', 'bolder'); ",
+        IdTestResultjq: 'classElementIdTestResultjq'
+    },
+    {
+        title: `Get Element By Id`,
+        idButtonClick: 'getElementbyididButtonClick',
+        divdisplay: 'getElementbyiddivdisplay',
+        functionIdJs: 'getElementbyidfunctionIdJs',
+        functionJs: () => { getElementbyidfunctionJs() },
+        jsText: "  pOneId= document.getElementById('pOneidjs') <br> pOneId.style.fontWeight = 'bolder';  " ,
+        IdTestResultjs: 'getElementbyidIdTestResultjs',
+        functionIdJq: 'getElementbyidfunctionIdJq',
+        functionJq: () => { getElementbyidfunctionJq() },
+        jqText: " $('#pOneidjq').css('fontWeight' , 'bolder') ",
+        IdTestResultjq: 'getElementbyidIdTestResultjq'
+    },
+]
+
+
+
 function pepe() {
-    allFunctions.forEach(function (elem) {
+    allSelectors.forEach(function (elem) {
         createDiv(elem.title, elem.idButtonClick, elem.divdisplay, elem.functionIdJs, elem.functionJs, elem.jsText, elem.IdTestResultjs, elem.functionIdJq, elem.functionJq, elem.jqText, elem.IdTestResultjq)
     })
 
-    allFunctions.forEach(function (elem) {
+    allSelectors.forEach(function (elem) {
         let divdisplay = document.getElementById(elem.divdisplay)
 
         let showButton = document.getElementById(elem.idButtonClick)

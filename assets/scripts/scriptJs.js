@@ -235,7 +235,7 @@ function fadeOutfunctionJs() {
     buttonTest('fadeOutIdTestResultjs', 'fadeoutbtn')
     let main= document.getElementById('fadeOutIdTestResultjs')
     btn= document.getElementById('fadeoutbtn')
-
+    
     let pOne = document.createElement("p")
     pOne.innerText= 'This is a P '
     main.appendChild(pOne)
@@ -245,3 +245,5 @@ function fadeOutfunctionJs() {
         pOne.style.opacity= '0';
     })
 }
+
+
