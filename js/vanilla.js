@@ -213,3 +213,9 @@ document.addEventListener("keydown", (e)=>{
 })
 
     }
+
+    function mouseMoveEvents(btn1, par){
+        document.addEventListener("mousemove", (e)=>{
+            btn1.style.color = "green"
+        })
+    }

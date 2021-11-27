@@ -70,6 +70,12 @@ function displayExampEvents(r) {
   if( r === "Presses a key"){
     keyDownCheck(r)
   }
+  if(r === "Moves the mouse cursor"){
+    createMouseMove(r)
+  }
+  if(r === "When the user changes a value of an text input"){
+    createThemTextInputs(r)
+  }
 }
 
 // Check if loaded 
@@ -364,7 +370,7 @@ function keyDownCheck(r){
   $(topSlider).append(par);
 
   let btn1 = document.createElement("button");
-  $(btn1).text("Only click me once");
+  $(btn1).text("Click to active listener");
   $(btn1).addClass("btn1");
   $(par).append(btn1);
 
@@ -411,6 +417,188 @@ function keyDownCheck(r){
   $(btn2).on({
     click: function () {
       eventD(btn2, parBo);
+    },
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+  });
+
+  $(boH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(parBo).slideToggle();
+    },
+  });
+}
+
+//Mouse Move
+
+function createMouseMove(r){
+  let ex = $(".exampleSide");
+  ex.empty();
+
+  let container = document.createElement("div");
+  $(container).addClass("con");
+  $(".exampleSide").append(container);
+
+  let toH3 = document.createElement("h3");
+  $(toH3).addClass("Vanilla");
+  $(toH3).text(r + ":" + " " + "Vanilla");
+  $(container).append(toH3);
+
+  let topSlider = document.createElement("div");
+  $(topSlider).addClass("topSlider");
+  $(container).append(topSlider);
+
+  let par = document.createElement("p");
+  $(par)
+    .text(`Here is the event for that:     document.addEventListener("mousemove", (e)=>{
+      btn1.style.color = "green"
+  })`);
+  $(par).css("display", "none");
+  $(topSlider).append(par);
+
+  let btn1 = document.createElement("button");
+  $(btn1).text("Activate listener");
+  $(btn1).addClass("btn1");
+  $(par).append(btn1);
+
+  $(btn1).on({
+    click: function () {
+      mouseMoveEvents(btn1, par);
+    },
+  });
+
+  $(toH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(par).slideToggle();
+    },
+  });
+
+  let boH3 = document.createElement("h3");
+  $(boH3).addClass("Vanilla");
+  $(boH3).text("Jquery");
+  $(container).append(boH3);
+
+  let boSlider = document.createElement("div");
+  $(boSlider).addClass("topSlider");
+  $(container).append(boSlider);
+
+  let parBo = document.createElement("p");
+  $(parBo).text(
+    `Here goes the event code:     $(document).on({
+      mousemove: function(){
+          $(btn2).css("position", "absolute")
+      }
+  }) `
+  );
+  $(parBo).css("display", "none");
+  $(boSlider).append(parBo);
+
+  let btn2 = document.createElement("button");
+  $(btn2).text("Code executes after this");
+  $(btn2).addClass("btn1");
+  $(parBo).append(btn2);
+
+  $(btn2).on({
+    click: function () {
+      eventM(btn2, parBo);
+    },
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+  });
+
+  $(boH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(parBo).slideToggle();
+    },
+  });
+}
+
+// When the user changes a value of an text input
+
+function createThemTextInputs(r){
+  let ex = $(".exampleSide");
+  ex.empty();
+
+  let container = document.createElement("div");
+  $(container).addClass("con");
+  $(".exampleSide").append(container);
+
+  let toH3 = document.createElement("h3");
+  $(toH3).addClass("Vanilla");
+  $(toH3).text(r + ":" + " " + "Vanilla");
+  $(container).append(toH3);
+
+  let topSlider = document.createElement("div");
+  $(topSlider).addClass("topSlider");
+  $(container).append(topSlider);
+
+  let par = document.createElement("p");
+  $(par)
+    .text(`Here is the event for that:     document.addEventListener("mousemove", (e)=>{
+      btn1.style.color = "green"
+  })`);
+  $(par).css("display", "none");
+  $(topSlider).append(par);
+
+  let btn1 = document.createElement("button");
+  $(btn1).text("Activate listener");
+  $(btn1).addClass("btn1");
+  $(par).append(btn1);
+
+  $(btn1).on({
+    click: function () {
+      mouseMoveEvents(btn1, par);
+    },
+  });
+
+  $(toH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(par).slideToggle();
+    },
+  });
+
+  let boH3 = document.createElement("h3");
+  $(boH3).addClass("Vanilla");
+  $(boH3).text("Jquery");
+  $(container).append(boH3);
+
+  let boSlider = document.createElement("div");
+  $(boSlider).addClass("topSlider");
+  $(container).append(boSlider);
+
+  let parBo = document.createElement("p");
+  $(parBo).text(
+    `Here goes the event code:     $(document).on({
+      mousemove: function(){
+          $(btn2).css("position", "absolute")
+      }
+  }) `
+  );
+  $(parBo).css("display", "none");
+  $(boSlider).append(parBo);
+
+  let btn2 = document.createElement("button");
+  $(btn2).text("Code executes after this");
+  $(btn2).addClass("btn1");
+  $(parBo).append(btn2);
+
+  $(btn2).on({
+    click: function () {
+      eventM(btn2, parBo);
     },
     mouseenter: function (params) {
       $(this).css("cursor", "pointer");

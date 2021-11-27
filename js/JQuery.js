@@ -131,8 +131,8 @@ function queryButtonCreate(btn2, parBo){
     })
 }
 
-function queryButtonCreate2(btn2, parBo){                                                                                                                    
-    $(parBo).append("<button class=unique>I´m a griddy little button</>")
+function queryButtonCreate2(btn2, parBo){
+$(parBo).append("<button class=unique>I´m a griddy little button</>")
     $(".unique").on({
         dblclick: function(){
             $(this).css("background", "red")
@@ -144,6 +144,13 @@ function eventD(btn2, parBo){
     $(document).on({
         keydown: function (){
             $(btn2).css("color", "red")
+        }
+    })
+}
+function eventM(btn2, parBo)  {
+    $(document).on({
+        mousemove: function(){
+            $(btn2).css("position", "absolute")
         }
     })
 }
