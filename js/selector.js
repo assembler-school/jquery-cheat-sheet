@@ -74,6 +74,9 @@ function createSelectors() {
     if(r === "Remove all items"){
       createRemoveItems(r)
     }
+    if(r === "Animate an item"){
+      createAnimationFun(r)
+    }
   }
 
     //Get parent element
@@ -897,6 +900,99 @@ function createRemoveItems(r){
   $(btn2).on({
     click: function () {
       destroyThePage(btn2, parBo);
+    },
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+  });
+
+  $(boH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(parBo).slideToggle();
+    },
+  });
+}
+
+// Animeta elements
+
+function createAnimationFun(r){
+  let ex = $(".exampleSide");
+  ex.empty();
+
+  let container = document.createElement("div");
+  $(container).addClass("con");
+  $(".exampleSide").append(container);
+
+  let toH3 = document.createElement("h3");
+  $(toH3).addClass("Vanilla");
+  $(toH3).text(r + ":" + " " + "Vanilla");
+  $(container).append(toH3);
+
+  let topSlider = document.createElement("div");
+  $(topSlider).addClass("topSlider");
+  $(container).append(topSlider);
+
+  let par = document.createElement("p");
+  $(par)
+    .text(`It was ask to be animated 2 seconds after page load. For demo purposes we are gonna do it 2 seconds after button click.In order to do that we are gonna put the animation inside a set timeout.`);
+  $(par).css("display", "none");
+  $(topSlider).append(par);
+
+  let btn1 = document.createElement("button");
+  $(btn1).text("Leave");
+  $(btn1).addClass("btn1");
+  $(par).append(btn1);
+  let m = document.createElement("p");
+  $(m).text("I´m leaving, don´t try to stop me");
+  $(m).css("opacity", "1");
+  $(m).attr("id", "meh")
+  $(par).append(m);
+
+  $(btn1).on({
+    click: function () {
+      timeOfYourLife(btn1, par, m);
+    },
+  });
+
+  $(toH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(par).slideToggle();
+    },
+  });
+
+  let boH3 = document.createElement("h3");
+  $(boH3).addClass("Vanilla");
+  $(boH3).text("Jquery");
+  $(container).append(boH3);
+
+  let boSlider = document.createElement("div");
+  $(boSlider).addClass("topSlider");
+  $(container).append(boSlider);
+
+  let parBo = document.createElement("p");
+  $(parBo).text(
+    `to add a delay to the animation, we add the delay method before the animation, all other animations after that will be delayed too: $("#carmen").delay(2000).animate({
+      width: "500px"
+  }, 2000); `
+  );
+  $(parBo).css("display", "none");
+  $(boSlider).append(parBo);
+
+  let btn2 = document.createElement("button");
+  $(btn2).text("Where did she go?");
+  $(btn2).addClass("btn1");
+  $(parBo).append(btn2);
+  $(parBo).append("<p id=carmen style=background:white>My name is Carmen San Diego<p>")
+
+  $(btn2).on({
+    click: function () {
+      letsDance(btn2, parBo);
     },
     mouseenter: function (params) {
       $(this).css("cursor", "pointer");

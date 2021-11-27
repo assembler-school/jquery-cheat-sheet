@@ -108,3 +108,10 @@ function passTheValue(parBo){
 function destroyThePage(btn2, parBo){
     $(body).empty()
 }
+
+function letsDance(btn2, parBo){
+    console.log($("#carmen"))
+    $("#carmen").delay(2000).animate({
+        width: "500px"
+    }, 2000).fadeOut(4000);
+}

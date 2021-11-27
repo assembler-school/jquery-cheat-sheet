@@ -154,3 +154,23 @@ alert(document.querySelector("input").value)
         while (par.firstChild) {
             par.removeChild(par.childNodes[0]);}
     }
+
+    function  timeOfYourLife(btn1, par){
+    let timing = setTimeout(() => {
+        let cry = [1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0 ]
+        let i = 0
+    let x = setInterval(() => {
+        let m = document.getElementById("meh")
+      i++
+          m.style.opacity = cry[i]
+            console.log("I work")
+            console.log(i)
+        if( i === 10) {
+    clearInterval(x)
+        }
+        }, 100);
+      
+    
+    }, 2000);
+
+    }
