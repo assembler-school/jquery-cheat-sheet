@@ -206,3 +206,10 @@ x.addEventListener("dblclick", (e)=> {
     x.style.background = "blue"
 })
     }
+
+    function keyDownEvents(btn1, par){
+document.addEventListener("keydown", (e)=>{
+    btn1.style.color = "blue";
+})
+
+    }
