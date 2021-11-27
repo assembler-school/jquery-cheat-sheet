@@ -120,16 +120,65 @@ function removeDisabledfunctionJq() {
     })
 }
 
-function setDataSrcfunctionJq() {
-    buttonTest('setDataSrcIdTestResultjq', 'removeDisabledbtnjq')
-    buttonTest('setDataSrcIdTestResultjq', 'removeDisabledjq')
-    $('#removeDisabledjq').attr('disabled', true)
-    $('#removeDisabledbtnjq').on('click', function () {
-        $('#removeDisabledjq').attr('disabled', false)
-    })
-    $('#removeDisabledjq').on('click', function () {
-        let el = $("<p>" + 'This is a P' + "</p>");
-        $(el).insertAfter($('#removeDisabledjq'))
+function removeDataSrcfunctionJq() {
+    buttonTest('removeDataSrcIdTestResultjq', 'removeDatasrcbtnjq')
+    let imageJq= $('<img>').attr('src', './assets/css/img/10592-EGO-LV1-6-Planet-Eclipse--68-Cal-Fire-Opal-gold---rot.jpg')
+    $('#removeDataSrcIdTestResultjq')
+    imageJq.addClass('my-img')
+    $('#removeDataSrcIdTestResultjq').append(imageJq)
+    $(imageJq).attr('data-src', 'This is a Data Src')
+    let el = $("<p></p>").text(imageJq.attr('data-src')).insertAfter($(imageJq))
 
+    $('#removeDatasrcbtnjq').on('click', function () {
+        $(imageJq).removeAttr('data-src')
+        el.text("Don't have Data-src");
+        $(el).insertAfter($(imageJq))
+    })
+}
+
+
+function hideHTMLfunctionJq() {
+    buttonTest('hideHTMLIdTestResultjq', 'hideHTMLbtnjq')
+    let el = $("<p>").text(" This is a P")
+    $('#hideHTMLIdTestResultjq').append(el)
+
+    $('#hideHTMLbtnjq').on('click', function () {
+        $(el).hide()
+    })
+}
+
+function showHTMLfunctionJq() {
+    buttonTest('showHTMLIdTestResultjq', 'showHTMLbtnjq')
+    let el = $("<p>").text(" This is a P")
+    $('#showHTMLIdTestResultjq').append(el)
+    $(el).hide()
+
+    $('#showHTMLbtnjq').on('click', function () {
+        $(el).show()
+    })
+}
+
+function fadeInfunctionJq() {
+    buttonTest('fadeInIdTestResultjq', 'fadeInbtnjq')
+    let el = $("<p>").text(" This is a P")
+    el.attr('id', 'fadeInjq')
+    $('#fadeInIdTestResultjq').append(el)
+    $("#fadeInjq").css('opacity' , '0');
+
+    $('#fadeInbtnjq').on('click', function () {
+        $("#fadeInjq").css('transition' , 'opacity 3s');
+        $("#fadeInjq").css('opacity' , '100%');
+        // $('#fadeInjq').fadeIn("slow");
+    })
+}
+
+function fadeOutfunctionJq() {
+    buttonTest('fadeOutIdTestResultjq', 'fadeoutbtnjq')
+    let el = $("<p>").text(" This is a P")
+    el.attr('id', 'fadeoutjq')
+    $('#fadeOutIdTestResultjq').append(el)
+
+    $('#fadeoutbtnjq').on('click', function () {
+        $('#fadeoutjq').fadeOut();
     })
 }

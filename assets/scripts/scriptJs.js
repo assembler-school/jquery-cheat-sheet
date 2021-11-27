@@ -146,24 +146,102 @@ function removeDisabledfunctionJs() {
 
 function setDataSrcfunctionJs() {
     buttonTest('setDataSrcIdTestResultjs', 'setDataSrcbtn')
-    //buttonTest('setDataSrcIdTestResultjs', 'removeDisabledjs')
+    let main= document.getElementById('setDataSrcIdTestResultjs')
 
     btn= document.getElementById('setDataSrcbtn')
-    //let btnTwo= document.getElementById('removeDisabledjs')
+    let image = document.createElement("img")
+    image.src = './assets/css/img/10592-EGO-LV1-6-Planet-Eclipse--68-Cal-Fire-Opal-gold---rot.jpg';
+    main.appendChild(image);
+
+    let pOne = document.createElement("p")
+    pOne.innerText= "Don't have Data-src"
+    image.after(pOne)
+
+    btn.addEventListener('click', function () {
+        image.setAttribute('data-src', 'This is a Data Src');
+        pOne.innerText= image.getAttribute('data-src')
+        image.after(pOne)
+    } )
+}
+
+function removeDataSrcfunctionJs() {
+    buttonTest('removeDataSrcIdTestResultjs', 'removeDataSrcbtn')
+    let main= document.getElementById('removeDataSrcIdTestResultjs')
+
+    btn= document.getElementById('removeDataSrcbtn')
 
     let image = document.createElement("img")
-    image.className = 'my-img';
-    image.src = '/assets/css/img/10592-EGO-LV1-6-Planet-Eclipse--68-Cal-Fire-Opal-gold---rot.jpg';
-    document.body.appendChild();
-        btnTwo.after(pOne)
-        pOne.innerText= "Don't have Data-src"
-    
-    //     btnTwo.addEventListener('click', function () {
-    //     let pOne = document.createElement("p")
-    //     btnTwo.after(pOne)
-    //     pOne.innerText=
-    // })
+    image.src = './assets/css/img/10592-EGO-LV1-6-Planet-Eclipse--68-Cal-Fire-Opal-gold---rot.jpg';
+    main.appendChild(image);
+    image.setAttribute('data-src', 'This is a Data Src');
+
+    let pOne = document.createElement("p")
+    pOne.innerText= image.getAttribute('data-src')
+    image.after(pOne)
+
     btn.addEventListener('click', function () {
-        
+        image.removeAttribute('data-src')
+        pOne.innerText= "Don't have Data-src"
+        image.after(pOne)
     } )
+}
+
+function hideHTMLfunctionJs() {
+    buttonTest('hideHTMLIdTestResultjs', 'hideHTMLbtn')
+    let main= document.getElementById('hideHTMLIdTestResultjs')
+    btn= document.getElementById('hideHTMLbtn')
+
+    let pOne = document.createElement("p")
+    pOne.innerText= 'This is a P '
+    main.appendChild(pOne)
+
+    btn.addEventListener('click', function () {
+        pOne.style.display= 'none'
+    })
+}
+
+function showHTMLfunctionJs() {
+    buttonTest('showHTMLIdTestResultjs', 'showHTMLbtn')
+    let main= document.getElementById('showHTMLIdTestResultjs')
+    btn= document.getElementById('showHTMLbtn')
+
+    let pOne = document.createElement("p")
+    pOne.innerText= 'This is a P '
+    pOne.style.display= 'none'
+    main.appendChild(pOne)
+
+    btn.addEventListener('click', function () {
+        pOne.style.display= 'block'
+    })
+}
+
+function fadeInfunctionJs() {
+    buttonTest('fadeInIdTestResultjs', 'fadeInbtn')
+    let main= document.getElementById('fadeInIdTestResultjs')
+    btn= document.getElementById('fadeInbtn')
+
+    let pOne = document.createElement("p")
+    pOne.innerText= 'This is a P '
+    main.appendChild(pOne)
+    pOne.style.opacity="0";
+
+    btn.addEventListener('click', function () {
+        pOne.style.transition="opacity 1s";
+        pOne.style.opacity= '100%';
+    })
+}
+
+function fadeOutfunctionJs() {
+    buttonTest('fadeOutIdTestResultjs', 'fadeoutbtn')
+    let main= document.getElementById('fadeOutIdTestResultjs')
+    btn= document.getElementById('fadeoutbtn')
+
+    let pOne = document.createElement("p")
+    pOne.innerText= 'This is a P '
+    main.appendChild(pOne)
+
+    btn.addEventListener('click', function () {
+        pOne.style.transition="opacity 1s";
+        pOne.style.opacity= '0';
+    })
 }
