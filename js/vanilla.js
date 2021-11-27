@@ -174,3 +174,25 @@ alert(document.querySelector("input").value)
     }, 2000);
 
     }
+
+    function  loadCheck(btn1, par) {
+        console.log("before")
+        if (document.readyState === "complete"){
+            console.log("after")
+            let j = document.createElement("p");
+            j.innerText = "Of course it is loaded... YOU´RE SEEING THE PAGE"
+            par.appendChild(j)
+        }
+    }
+
+    function createButton(btn1, par){
+       let x = document.createElement("button")
+       x.innerText = "Okay, yeah, I have the code now."
+       par.appendChild(x)
+
+       x.addEventListener("click", (e)=>{
+           let k = document.createElement("p")
+           k.innerText = "I´m alive"
+           par.appendChild(k)
+       }) 
+    }

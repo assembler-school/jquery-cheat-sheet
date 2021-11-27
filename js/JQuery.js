@@ -115,3 +115,18 @@ function letsDance(btn2, parBo){
         width: "500px"
     }, 2000).fadeOut(4000);
 }
+
+function checkIfReady(btn2, parBo){
+    if ($(document).ready()){
+       $(parBo).append("<p>Yup, I loaded<p>")
+    }
+}
+
+function queryButtonCreate(btn2, parBo){
+    $(parBo).append("<button class=clicky>Click me to run the event listener.</button>")
+    $(".clicky").on({
+        click: function(){
+            $(parBo).append("<p>Thank you for my life</p>")
+        }
+    })
+}
