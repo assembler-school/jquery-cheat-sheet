@@ -95,3 +95,8 @@ $("#Function9Q button").on("click", function () {
 $("#Function10Q button").on("click", function () {
   $("#Function10Q .demo p").toggleClass("bgPastelBlue");
 });
+
+//Add a disabled attribute to an HTML button
+$("#Function11Q button").on("click", function () {
+  $("#Function11Q .demo button").last().prop("disabled", true);
+});

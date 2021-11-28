@@ -97,3 +97,14 @@ document
     let pElement = document.querySelector("#Function10V .demo p");
     pElement.classList.toggle("bgPastelBlue");
   });
+
+//Add a disabled attribute to an HTML button
+
+document
+  .querySelector("#Function11V button")
+  .addEventListener("click", function () {
+    let pElement = document.querySelector(
+      "#Function11V .demo button:last-child"
+    );
+    pElement.disabled = true;
+  });
