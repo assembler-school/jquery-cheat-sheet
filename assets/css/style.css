@@ -60,3 +60,24 @@ h5{
 .show{
     display: block;
 }
+
+p{
+    background-color: blue;
+}
+span{
+    background-color: green;
+}
+
+#menu ul, li{
+    font-size: large;
+    color: black;
+}
+.pClassGreen{
+    background-color: green;
+}
+.pdif{
+    background-color: blue;
+}
+.pdifjq{
+    background-color: blue;
+}
