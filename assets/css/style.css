@@ -17,6 +17,7 @@ li a{
     color: white;
     text-decoration: none;
 }
+
 .navbar li{
     margin: 0 auto;
     list-style: none;
@@ -63,6 +64,14 @@ h5{
     grid-column-end: 3;
     margin: .5em;
     text-align: center;
+}
+
+#cursorElementIdTestResultjs{
+    background-color: blue;
+}
+
+#dblclickElementIdTestResultjs{
+    background-color: blue;
 }
 
 .hide{

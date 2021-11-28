@@ -120,6 +120,22 @@ function removeDisabledfunctionJq() {
     })
 }
 
+function setDataSrcfunctionJq() {
+    buttonTest('setDataSrcIdTestResultjq', 'setDatasrcbtnjq')
+    let imageJq = $('<img>').attr('src', './assets/css/img/10592-EGO-LV1-6-Planet-Eclipse--68-Cal-Fire-Opal-gold---rot.jpg')
+    $('#setDataSrcIdTestResultjq')
+    imageJq.addClass('my-img')
+    $('#setDataSrcIdTestResultjq').append(imageJq)
+    let el = $("<p>").text("Don't have Data-src").insertAfter($(imageJq))
+
+    $('#setDatasrcbtnjq').on('click', function () {
+        $(imageJq).attr('data-src', 'This is a Data Src')
+        el.text(imageJq.attr('data-src')).insertAfter($(imageJq))
+        $(el).insertAfter($(imageJq))
+    })
+}
+
+
 function removeDataSrcfunctionJq() {
     buttonTest('removeDataSrcIdTestResultjq', 'removeDatasrcbtnjq')
     let imageJq = $('<img>').attr('src', './assets/css/img/10592-EGO-LV1-6-Planet-Eclipse--68-Cal-Fire-Opal-gold---rot.jpg')
@@ -176,9 +192,8 @@ function fadeOutfunctionJq() {
     let el = $("<p>").text(" This is a P")
     el.attr('id', 'fadeoutjq')
     $('#fadeOutIdTestResultjq').append(el)
-    $("#fadeoutjq").css('opacity', '0');
 
     $('#fadeoutbtnjq').on('click', function () {
-        $('#fadeoutjq').fadeOut(); ("slow");
+        $('#fadeoutjq').fadeOut('slow');
     })
 }

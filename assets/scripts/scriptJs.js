@@ -16,7 +16,7 @@ function dblclickElementfunctionIdJs() {
     let dblclick = document.getElementById("dblclickElementfunctionIdJs")
     dblclick.addEventListener("dblclick", () => {
         let pe = document.createElement("p")
-        pe = "js click"
+        pe = "js Doble click"
         document.getElementById("dblclickElementIdTestResultjs").innerHTML = pe
     })
 }
@@ -27,7 +27,6 @@ function keyListenerjs() {
         let pruebajs = document.createElement("p")
         pruebajs = ` You pressed ${e.key}`
         document.getElementById("keyElementIdTestResultjs").innerHTML = pruebajs
-        // document.querySelector('p').innerHTML = `You pressed ${e.key}`;
     }, false);
 }
 
@@ -43,7 +42,6 @@ function cursorElementfunctionIdJs() {
 
 function valueInputElementfunctionIdJs() {
     let input = document.createElement("input")
-    // input.setAttribute("a", "b", "c")
     document.getElementById("valueInputElementIdTestResultjs").appendChild(input)
     document.getElementById("valueInputElementIdTestResultjs").addEventListener("change", function () {
         alert("Input Changed")
@@ -120,10 +118,8 @@ function changSelectInputElementfunctionIdJs() {
 }
 
 function posiMouseElementfunctionIdJs() {
-    // $("#outer").mouseover(function () { })
     let boton = document.createElement("button")
     boton.textContent = "mouseover"
-    // boton.setAttribute("value", "mouseover")
     document.getElementById("posiMouseElementIdTestResultjs").appendChild(boton)
     document.getElementById("posiMouseElementIdTestResultjs").addEventListener("mouseover", () => {
         let texto = document.createElement("p")
@@ -138,7 +134,6 @@ function checkboxElementfunctionIdJs() {
     inputcheckbox.setAttribute("type", "checkbox")
     let checkresult = document.getElementById("checkboxElementIdTestResultjs")
     checkresult.appendChild(inputcheckbox)
-    // checkresult.checked=true
     checkresult.addEventListener("change", () => {
         if (inputcheckbox.checked == true) {
             alert("you have checked the box")
