@@ -1,0 +1,33 @@
+body {
+  background: rgba(0, 0, 0, 0.781);
+}
+
+.homeCon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+}
+
+.f1 {
+  background: green;
+  padding: 10%;
+  margin-right: 2%;
+}
+
+.f2 {
+  background: red;
+  padding: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.f3 {
+  background: yellow;
+  padding: 10%;
+  margin-left: 2%;
+}

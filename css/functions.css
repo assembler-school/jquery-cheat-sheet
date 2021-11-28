@@ -1,0 +1,60 @@
+.flexiMain {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.funSideBar {
+  background: green;
+  color: whitesmoke;
+  height: fit-content;
+}
+
+.exampleSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.con {
+  display: flex;
+  max-width: 50vh;
+  justify-content: center;
+  flex-direction: column;
+  background: yellow;
+}
+.boSlider {
+  display: flex;
+  flex-direction: column;
+}
+
+.textBox {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  width: 20vh;
+  flex-direction: column;
+}
+
+.topSlider p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topSlider p button {
+  width: 60%;
+  text-align: center;
+}
+
+.trial {
+  background: red;
+}
+
+.trial2 {
+  color: white;
+  background: rgba(41, 184, 241, 0.822);
+}

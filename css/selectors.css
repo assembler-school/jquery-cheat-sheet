@@ -1,0 +1,26 @@
+.flexiMain {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.funSideBar2 {
+  background: rgba(226, 65, 65, 0.753);
+  color: whitesmoke;
+  height: fit-content;
+}
+
+p.ninjas {
+  display: none;
+}
+
+p.magicians {
+  display: none;
+}
+
+.funSideBar3 {
+  background: rgba(255, 255, 0, 0.575);
+  color: black;
+  height: fit-content;
+}
