@@ -157,3 +157,16 @@ document
     );
     pElement.style.display = "block";
   });
+
+//SELECTORS
+
+//Iterate a collection of elements
+
+document
+  .querySelector("#Selector1V button")
+  .addEventListener("click", function () {
+    let pElements = document.querySelectorAll("#Selector1V .demo p");
+    pElements.forEach((element) => {
+      element.classList.add("bgPastelBlue");
+    });
+  });

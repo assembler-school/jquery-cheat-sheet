@@ -142,3 +142,12 @@ $(document).ready(function () {
     $(".sectionDiv").animate({ opacity: 1 }, 600);
   }, 600);
 });
+
+// SELECTORS
+
+//Iterate a collection of elements
+$("#Selector1Q button").on("click", function () {
+  $("#Selector1Q .demo p").each(function (index, element) {
+    $(element).addClass("bgPastelBlue");
+  });
+});

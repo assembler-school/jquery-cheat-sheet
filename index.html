@@ -694,9 +694,51 @@
         <h2>Selectors</h2>
         <div>
           <button type="button" class="collapsible">
-            HTML document has been loaded
+            Iterate a collection of elements
           </button>
-          <div class="content"><p>Some text example</p></div>
+          <div class="content">
+            <div id="Selector1V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let pElements = document.querySelectorAll("p");
+                    pElements.forEach((element) => {
+                      element.classList.add("bgPastelBlue");
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p>I am the first paragraph</p>
+                <p>I am the second parapgraph</p>
+                <p>I am the third paragraph</p>
+                <p>I am the fourth paragraph</p>
+              </div>
+            </div>
+            <div id="Selector1Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("p").each(function (index, element) {
+                      $(element).addClass("bgPastelBlue");
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p>I am the first paragraph</p>
+                <p>I am the second parapgraph</p>
+                <p>I am the third paragraph</p>
+                <p>I am the fourth paragraph</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="sectionDiv">
