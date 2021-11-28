@@ -12,7 +12,7 @@ function createEvents() {
     "When the user changes the option of a select element",
     "When you position the mouse over an element",
     "When a checkbox is checked or unchecked",
-    "When a ul list item is clicked, show the item that was clicked"
+    "When a ul list item is clicked, show the item that was clicked",
   ];
 
   let main = document.createElement("div");
@@ -58,48 +58,48 @@ function createEvents() {
 }
 
 function displayExampEvents(r) {
-  if(r === "HTML document has been loaded"){
-    createCheckIfLoaded(r)
+  if (r === "HTML document has been loaded") {
+    createCheckIfLoaded(r);
   }
-  if(r === "Clicked"){
-    checkIfClicked(r)
+  if (r === "Clicked") {
+    checkIfClicked(r);
   }
-  if(r === "Double clicked"){
-    doubleClickListener(r)
+  if (r === "Double clicked") {
+    doubleClickListener(r);
   }
-  if( r === "Presses a key"){
-    keyDownCheck(r)
+  if (r === "Presses a key") {
+    keyDownCheck(r);
   }
-  if(r === "Moves the mouse cursor"){
-    createMouseMove(r)
+  if (r === "Moves the mouse cursor") {
+    createMouseMove(r);
   }
-  if(r === "When the user changes a value of an text input"){
-    createThemTextInputs(r)
+  if (r === "When the user changes a value of an text input") {
+    createThemTextInputs(r);
   }
-  if(r === "When an image is loaded"){
-    imageLoadEvent(r)
+  if (r === "When an image is loaded") {
+    imageLoadEvent(r);
   }
-  if(r === "When an image fails to load"){
-    badImage(r)
+  if (r === "When an image fails to load") {
+    badImage(r);
   }
-  if(r === "When a form is submitted"){
-    formSubmited(r)
+  if (r === "When a form is submitted") {
+    formSubmited(r);
   }
-  if(r === "When the user changes the option of a select element"){
-    changingOptions(r)
+  if (r === "When the user changes the option of a select element") {
+    changingOptions(r);
   }
-  if(r === "When you position the mouse over an element"){
-    mouseCreateOver(r)
+  if (r === "When you position the mouse over an element") {
+    mouseCreateOver(r);
   }
-  if(r === "When a checkbox is checked or unchecked"){
-  checkTheChecker(r)
-} 
-  if( r === "When a ul list item is clicked, show the item that was clicked"){
-    checkUlItemClick(r)
+  if (r === "When a checkbox is checked or unchecked") {
+    checkTheChecker(r);
   }
+  if (r === "When a ul list item is clicked, show the item that was clicked") {
+    checkUlItemClick(r);
   }
+}
 
-// Check if loaded 
+// Check if loaded
 
 function createCheckIfLoaded(r) {
   let ex = $(".exampleSide");
@@ -119,8 +119,9 @@ function createCheckIfLoaded(r) {
   $(container).append(topSlider);
 
   let par = document.createElement("p");
-  $(par)
-    .text(`Here after clicking the button we will check if the document is loaded. If it is, an element will show up saying "Yup, wasn´t it obvious?". However the to do an event listener for this is simply windows.onload()`);
+  $(par).text(
+    `Here after clicking the button we will check if the document is loaded. If it is, an element will show up saying "Yup, wasn´t it obvious?". However the to do an event listener for this is simply windows.onload()`
+  );
   $(par).css("display", "none");
   $(topSlider).append(par);
 
@@ -154,9 +155,7 @@ function createCheckIfLoaded(r) {
   $(container).append(boSlider);
 
   let parBo = document.createElement("p");
-  $(parBo).text(
-    `here we just use ($(document).ready()`
-  );
+  $(parBo).text(`here we just use ($(document).ready()`);
   $(parBo).css("display", "none");
   $(boSlider).append(parBo);
 
@@ -334,9 +333,7 @@ function doubleClickListener(r) {
   $(container).append(boSlider);
 
   let parBo = document.createElement("p");
-  $(parBo).text(
-    `try it`
-  );
+  $(parBo).text(`try it`);
   $(parBo).css("display", "none");
   $(boSlider).append(parBo);
 
@@ -366,7 +363,7 @@ function doubleClickListener(r) {
 
 //Presses a key
 
-function keyDownCheck(r){
+function keyDownCheck(r) {
   let ex = $(".exampleSide");
   ex.empty();
 
@@ -456,7 +453,7 @@ function keyDownCheck(r){
 
 //Mouse Move
 
-function createMouseMove(r){
+function createMouseMove(r) {
   let ex = $(".exampleSide");
   ex.empty();
 
@@ -547,7 +544,7 @@ function createMouseMove(r){
 
 // When the user changes a value of an text input
 
-function createThemTextInputs(r){
+function createThemTextInputs(r) {
   let ex = $(".exampleSide");
   ex.empty();
 
@@ -573,7 +570,9 @@ function createThemTextInputs(r){
      }) `);
   $(par).css("display", "none");
   $(topSlider).append(par);
-  $(par).append("<form id=copied><label>Somebody is copying me</label> <input type=text id=copy name=copy><form>")
+  $(par).append(
+    "<form id=copied><label>Somebody is copying me</label> <input type=text id=copy name=copy><form>"
+  );
 
   let btn1 = document.createElement("button");
   $(btn1).text("Activate listener");
@@ -582,7 +581,7 @@ function createThemTextInputs(r){
 
   $(btn1).on({
     click: function () {
-     createValueCopy(btn1, par);
+      createValueCopy(btn1, par);
     },
   });
 
@@ -643,7 +642,7 @@ function createThemTextInputs(r){
 
 //When an image is loaded
 
-function imageLoadEvent(r){
+function imageLoadEvent(r) {
   let ex = $(".exampleSide");
   ex.empty();
 
@@ -822,7 +821,7 @@ function badImage(r) {
 }
 
 // When a form is submitted
-function formSubmited(r){
+function formSubmited(r) {
   let ex = $(".exampleSide");
   ex.empty();
 
@@ -840,7 +839,8 @@ function formSubmited(r){
   $(container).append(topSlider);
 
   let par = document.createElement("p");
-  $(par).text(`The following function was written for the submit event:document.getElementById("elementals").addEventListener("submit", (e)=>{
+  $(par)
+    .text(`The following function was written for the submit event:document.getElementById("elementals").addEventListener("submit", (e)=>{
   event.preventDefault()
     par.style.color = "blue"
 })`);
@@ -853,7 +853,7 @@ function formSubmited(r){
   $(par).append(btn1);
   $(btn1).on({
     click: function () {
-     createThemForms(btn1, par);
+      createThemForms(btn1, par);
     },
   });
 
@@ -911,7 +911,7 @@ function formSubmited(r){
   });
 }
 // When the user changes the option of a select element
-function changingOptions(r){
+function changingOptions(r) {
   let ex = $(".exampleSide");
   ex.empty();
 
@@ -1024,8 +1024,7 @@ function mouseCreateOver(r) {
   $(container).append(topSlider);
 
   let par = document.createElement("p");
-  $(par)
-    .text(`Easy :  par.addEventListener("mouseover", (e)=>{
+  $(par).text(`Easy :  par.addEventListener("mouseover", (e)=>{
       par.style.color = "red"
   })`);
   $(par).css("display", "none");
@@ -1093,7 +1092,7 @@ function mouseCreateOver(r) {
 
 // When a checkbox is checked or unchecked
 
-function checkTheChecker(r){
+function checkTheChecker(r) {
   let ex = $(".exampleSide");
   ex.empty();
 
@@ -1192,12 +1191,11 @@ function checkTheChecker(r){
       $(parBo).slideToggle();
     },
   });
-
 }
 
 //When a ul list item is clicked, show the item that was clicked
 
-function checkUlItemClick(r){
+function checkUlItemClick(r) {
   let ex = $(".exampleSide");
   ex.empty();
 
@@ -1249,7 +1247,7 @@ function checkUlItemClick(r){
 
   $(btn1).on({
     click: function () {
-     letsGetToWork(btn1, par);
+      letsGetToWork(btn1, par);
     },
   });
 
@@ -1273,19 +1271,11 @@ function checkUlItemClick(r){
 
   let parBo = document.createElement("p");
   $(parBo).text(
-    `Here clicking the check button will run the actual code:     $(".checkings2").on({
+    ` Here we select the second child of tis list. $( "li:nth-child(2)" ).on({
       click: function(){
-          $(".car2").on({
-              change: function(){
-                 if( $(this).prop("checked") === true){
-                     $(parBo).css("color", "blue")
-                 }
-                 else {
-                  $(parBo).css("color", "black")
-                 }
-              }
-              
-          }) `
+          $(this).css("color", "blue")
+      }
+  }) `
   );
   $(parBo).css("display", "none");
   $(boSlider).append(parBo);
@@ -1297,7 +1287,7 @@ function checkUlItemClick(r){
 
   $(btn2).on({
     click: function () {
-     itIsFinallyOver(btn2, parBo);
+      itIsFinallyOver(btn2, parBo);
     },
     mouseenter: function (params) {
       $(this).css("cursor", "pointer");

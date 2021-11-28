@@ -54,7 +54,7 @@ function clickDetect(flex1, flex2, flex3, main) {
 
   $(flex2).on({
     click: function (params) {
-      createSelectors()
+      createSelectors();
       $(main).remove();
     },
 
@@ -65,7 +65,7 @@ function clickDetect(flex1, flex2, flex3, main) {
 
   $(flex3).on({
     click: function (params) {
-      console.log("click")
+      console.log("click");
       createEvents();
       $(main).remove();
     },
@@ -201,8 +201,8 @@ function displayExample(r) {
   if (r === "Fade out") {
     createFadeThisOut(r);
   }
-  if (r === "Iterate a collection of elements"){
-      createIterateEl(r)
+  if (r === "Iterate a collection of elements") {
+    createIterateEl(r);
   }
 }
 
@@ -1782,89 +1782,88 @@ function createFadeThisOut(r) {
 // Iterate a collection of elements
 
 function createIterateEl(r) {
-    let ex = $(".exampleSide");
-    ex.empty();
-  
-    let container = document.createElement("div");
-    $(container).addClass("con");
-    $(".exampleSide").append(container);
-  
-    let toH3 = document.createElement("h3");
-    $(toH3).addClass("Vanilla");
-    $(toH3).text(r + ":" + " " + "Vanilla");
-    $(container).append(toH3);
-  
-    let topSlider = document.createElement("div");
-    $(topSlider).addClass("topSlider");
-    $(container).append(topSlider);
-  
-    let par = document.createElement("p");
-    $(par)
-      .text(`It´s never easy with vanilla:   let x = Array.from(document.querySelectorAll("p"))
+  let ex = $(".exampleSide");
+  ex.empty();
+
+  let container = document.createElement("div");
+  $(container).addClass("con");
+  $(".exampleSide").append(container);
+
+  let toH3 = document.createElement("h3");
+  $(toH3).addClass("Vanilla");
+  $(toH3).text(r + ":" + " " + "Vanilla");
+  $(container).append(toH3);
+
+  let topSlider = document.createElement("div");
+  $(topSlider).addClass("topSlider");
+  $(container).append(topSlider);
+
+  let par = document.createElement("p");
+  $(par)
+    .text(`It´s never easy with vanilla:   let x = Array.from(document.querySelectorAll("p"))
     
       x.forEach(element => {
           element.style.background = "blue";
       });`);
-    $(par).css("display", "none");
-    $(topSlider).append(par);
-  
-    let btn1 = document.createElement("button");
-    $(btn1).text("Wish I could paint the world blue");
-    $(btn1).addClass("btn1");
-    $(par).append(btn1);
-  
-    $(btn1).on({
-      click: function () {
-        dontKnowWhatImDoing(btn1, par);
-      },
-    });
-  
-    $(toH3).on({
-      mouseenter: function (params) {
-        $(this).css("cursor", "pointer");
-      },
-      click: function (params) {
-        $(par).slideToggle();
-      },
-    });
-  
-    let boH3 = document.createElement("h3");
-    $(boH3).addClass("Vanilla");
-    $(boH3).text("Jquery");
-    $(container).append(boH3);
-  
-    let boSlider = document.createElement("div");
-    $(boSlider).addClass("topSlider");
-    $(container).append(boSlider);
-  
-    let parBo = document.createElement("p");
-    $(parBo).text(
-      `As always it is easier: $( "li" ).each(function(){console.log("Hola")} `
-    );
-    $(parBo).css("display", "none");
-    $(boSlider).append(parBo);
-  
-    let btn2 = document.createElement("button");
-    $(btn2).text("Let´s blow up the F-ing code");
-    $(btn2).addClass("btn1");
-    $(parBo).append(btn2);
-  
-    $(btn2).on({
-      click: function () {
-        chaosShouldPrevail(btn2, parBo);
-      },
-      mouseenter: function (params) {
-        $(this).css("cursor", "pointer");
-      },
-    });
-  
-    $(boH3).on({
-      mouseenter: function (params) {
-        $(this).css("cursor", "pointer");
-      },
-      click: function (params) {
-        $(parBo).slideToggle();
-      },
-    });
-}
+  $(par).css("display", "none");
+  $(topSlider).append(par);
 
+  let btn1 = document.createElement("button");
+  $(btn1).text("Wish I could paint the world blue");
+  $(btn1).addClass("btn1");
+  $(par).append(btn1);
+
+  $(btn1).on({
+    click: function () {
+      dontKnowWhatImDoing(btn1, par);
+    },
+  });
+
+  $(toH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(par).slideToggle();
+    },
+  });
+
+  let boH3 = document.createElement("h3");
+  $(boH3).addClass("Vanilla");
+  $(boH3).text("Jquery");
+  $(container).append(boH3);
+
+  let boSlider = document.createElement("div");
+  $(boSlider).addClass("topSlider");
+  $(container).append(boSlider);
+
+  let parBo = document.createElement("p");
+  $(parBo).text(
+    `As always it is easier: $( "li" ).each(function(){console.log("Hola")} `
+  );
+  $(parBo).css("display", "none");
+  $(boSlider).append(parBo);
+
+  let btn2 = document.createElement("button");
+  $(btn2).text("Let´s blow up the F-ing code");
+  $(btn2).addClass("btn1");
+  $(parBo).append(btn2);
+
+  $(btn2).on({
+    click: function () {
+      chaosShouldPrevail(btn2, parBo);
+    },
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+  });
+
+  $(boH3).on({
+    mouseenter: function (params) {
+      $(this).css("cursor", "pointer");
+    },
+    click: function (params) {
+      $(parBo).slideToggle();
+    },
+  });
+}
