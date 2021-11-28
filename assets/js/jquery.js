@@ -1,84 +1,131 @@
-const exercisesArr = [
-    {
-        dataset:13,
-        tittle:"HTML document has been loaded",
-        commandJQ:"ready()",
-        commandJS:"ready()",
-        functions:function (jQueryDiv, jScriptDiv){exerciseJS13(jScriptDiv),exerciseJQ13(jQueryDiv)},
-    },
-    {
-        dataset:14,
-        tittle:"HTML document has been loaded",
-        commandJQ:"imput",
-        commandJS:"imput",
-        functions:function (jQueryDiv, jScriptDiv){exerciseJS14(jScriptDiv,),exerciseJQ14(jQueryDiv,)},
-    },
-    {
-        dataset:15,
-        tittle:"HTML document has been loaded",
-        commandJQ:"imput",
-        commandJS:"imput",
-        functions:function (jQueryDiv, jScriptDiv,){exerciseJS15(jScriptDiv,),exerciseJQ15(jQueryDiv,)},
-    },
-    {
-        dataset:16,
-        tittle:"HTML document has been loaded",
-        functions:function (jQueryDiv, jScriptDiv,){exerciseJS16(jScriptDiv,),exerciseJQ16(jQueryDiv,)},
-    },
-    {
-        dataset:17,
-        tittle:"HTML document has been loaded",
-        functions:function (jQueryDiv, jScriptDiv,){exerciseJS17(jScriptDiv,),exerciseJQ17(jQueryDiv,)},
-    },
-    {
-        dataset:18,
-        tittle:"HTML document has been loaded",
-        functions:function (jQueryDiv, jScriptDiv,){exerciseJS18(jScriptDiv,),exerciseJQ18(jQueryDiv,)},
-    },
-    {
-        dataset:19,
-        tittle:"HTML document has been loaded",
-        functions:function (jQueryDiv, jScriptDiv,){exerciseJS19(jScriptDiv,),exerciseJQ19(jQueryDiv,)},
-    },
-    {
-        dataset:20,
-        tittle:"HTML document has been loaded",
-        functions:function (jQueryDiv, jScriptDiv,){exerciseJS20(jScriptDiv,),exerciseJQ20(jQueryDiv,)},
-    },
-    {
-        dataset:21,
-        tittle:"HTML document has been loaded",
-        functions:function (jQueryDiv, jScriptDiv,){exerciseJS21(jScriptDiv,),exerciseJQ21(jQueryDiv,)},
-    },
-    {
-        dataset:22,
-        tittle:"HTML document has been loaded",
-        functions:function (jQueryDiv, jScriptDiv,){exerciseJS22(jScriptDiv,),exerciseJQ22(jQueryDiv,)},
-    },
-    {
-        dataset:23,
-        tittle:"HTML document has been loaded",
-        functions:function (jQueryDiv, jScriptDiv,){exerciseJS23(jScriptDiv,),exerciseJQ23(jQueryDiv,)},
-    },
-    {
-        dataset:24,
-        tittle:"HTML document has been loaded",
-        functions:function (jQueryDiv, jScriptDiv,){exerciseJS24(jScriptDiv,),exerciseJQ24(jQueryDiv,)},
-    },
-    {
-        dataset:25,
-        tittle:"HTML document has been loaded",
-        functions:function (jQueryDiv, jScriptDiv,){exerciseJS25(jScriptDiv,),exerciseJQ25(jQueryDiv,)},
-    },
-]
-function findExercisesFun(index){
-    exercise = exercisesArr.find(item => {
-        return item.dataset === index;
-    })
-    if(exercise == null){
-        return console.log("do not exist");
-    }else{
-        return exercise;
+
+function exerciseJQ0(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+    //content exercise here
+    `<code>
+     = $("document").<input type='text' id="input-solution" size="7" >().$("#solution-box").text("Congratulations! TIP:")
+    </code>
+    `
+    //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+    //content exercise here
+    `
+    `
+    //content exercise here
+    +"</div>")
+
+    //$("#solution-box").append(`<button id="btn-test" class="exercise-btn">Push me!</button>`)
+
+    $("#solution-button").on("click",validateSolutionFun)
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="ready"){
+            $(function(){$("#solution-box").text("Congratulations! TIP:you can use the short-hand $(function(){}) or $(window).on('load',function(){})" )})
+        }else{
+            $("#solution-box").text("try again")
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("ready")
+    }
+}
+function exerciseJQ1(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+    //content exercise here
+    `<code>
+     = $("#solution-button").on('<input type='text' id="input-solution" size="7" >',()=>{$("#solution-box").text("clicked!!")})
+    </code>
+    `
+    //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+    //content exercise here
+    `
+    `
+    //content exercise here
+    +"</div>")
+
+    //$("#solution-box").append(`<button id="btn-test" class="exercise-btn">BTN-TEST</button>`)
+
+    $("#solution-button").on("click",validateSolutionFun)
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="click"){
+            $("#solution-box").text("clicked!!")
+        }else{
+            $("#solution-box").text("try again")
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("click")
+    }
+}
+function exerciseJQ2(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+    //content exercise here
+    `<code>
+     = $("#solution-button").on('<input type='text' id="input-solution" size="7" >',()=>{$("#solution-box").text("dOblE clickED!!")})
+    </code>
+    `
+    //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+    //content exercise here
+    `
+    `
+    //content exercise here
+    +"</div>")
+
+    //$("#solution-box").append(`<button id="btn-test" class="exercise-btn">BTN-TEST</button>`)
+
+    $("#solution-button").on("dblclick",validateSolutionFun)
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="dblclick"){
+            $("#solution-box").text("dOblE clickED!!")
+        }else{
+            $("#solution-box").text("try again")
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("dblclick")
+    }
+}
+function exerciseJQ3(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+    //content exercise here
+    `<code>
+     = $("#solution-button").on('<input type='text' id="input-solution" size="7" >',()=>{$("#solution-box").text("You just keypres the" + e.target + "key")})
+    </code>
+    `
+    //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+    //content exercise here
+    `
+    `
+    //content exercise here
+    +"</div>")
+
+    //$("#solution-box").append(`<button id="btn-test" class="exercise-btn">BTN-TEST</button>`)
+
+    $("#solution-button").on("click",validateSolutionFun)
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="keypress"){
+            console.log("entré")
+            $(document).on("keypress", function (e) {
+                console.log(e.which)
+                console.log(e.target)
+                $("#solution-box").text("You just keypres the " + String.fromCharCode(e.which) + " key")
+            })
+        }else{
+            $("#solution-box").text("try again")
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("keypress")
     }
 }
 function exerciseJQ13(jQueryDiv){
@@ -468,7 +515,8 @@ function exerciseJQ25(jQueryDiv){
 
     function validateSolutionFun(){
         if( $("#input-solution").val()=="attr"){
-            $("#img1").attr("src","/assets/img/great.jpg")
+            $( "#img1" ).attr( "src" , "/assets/img/great.jpg" );
+            $( "#img1" ).data("-src", "hola" );
         }else{
             $("#solution-box").append('<div id="div2">Try Again!</div>')
         }
@@ -478,3 +526,159 @@ function exerciseJQ25(jQueryDiv){
         $("#input-solution").val("attr")
     }
 }
+function exerciseJQ26(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+     //content exercise here
+    `<code>
+    $("#img1").<input type='text' id="input-solution" size="10">("src")
+    </code>
+    `
+     //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+     //content exercise here
+    `
+    `
+     //content exercise here
+    +"</div>")
+    $("#solution-box").append('<img id="img1" data-src="/assets/img/great.jpg" src="/assets/img/great.jpg" alt="">')
+
+    $("#solution-button").on("click",validateSolutionFun)
+
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="removeData"){
+            $("#img1").removeData(data-src)
+        }else{
+            $("#solution-box").append('<div id="div2">Try Again!</div>')
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("removeData")
+    }
+}
+function exerciseJQ27(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+     //content exercise here
+    `<code>
+    $("#img1").<input type='text' id="input-solution" size="4">()
+    </code>
+    `
+     //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+     //content exercise here
+    `
+    `
+     //content exercise here
+    +"</div>")
+    $("#solution-box").append('<img id="img1" data-src="/assets/img/great.jpg" src="/assets/img/great.jpg" alt="">')
+
+    $("#solution-button").on("click",validateSolutionFun)
+
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="hide"){
+            $("#img1").hide()
+        }else{
+            $("#solution-box").append('<div id="div2">Try Again!</div>')
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("hide")
+    }
+}
+function exerciseJQ28(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+     //content exercise here
+    `<code>
+    $("#img1").<input type='text' id="input-solution" size="4">()
+    </code>
+    `
+     //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+     //content exercise here
+    `
+    `
+     //content exercise here
+    +"</div>")
+    $("#solution-box").append('<img id="img1" data-src="/assets/img/great.jpg" src="/assets/img/great.jpg" alt="" style="display:none">')
+
+    $("#solution-button").on("click",validateSolutionFun)
+
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="show"){
+            $("#img1").show()
+        }else{
+            $("#solution-box").append('<div id="div2">Try Again!</div>')
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("show")
+    }
+}
+function exerciseJQ29(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+     //content exercise here
+    `<code>
+    $("#img1").<input type='text' id="input-solution" size="7">()
+    </code>
+    `
+     //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+     //content exercise here
+    `
+    `
+     //content exercise here
+    +"</div>")
+    $("#solution-box").append('<img id="img1" data-src="/assets/img/great.jpg" src="/assets/img/great.jpg" alt="" style="display:none">')
+
+    $("#solution-button").on("click",validateSolutionFun)
+
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="fadeIn"){
+            $("#img1").fadeIn()
+        }else{
+            $("#solution-box").append('<div id="div2">Try Again!</div>')
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("fadeIn")
+    }
+}
+function exerciseJQ30(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+     //content exercise here
+    `<code>
+    $("#img1").<input type='text' id="input-solution" size="7">()
+    </code>
+    `
+     //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+     //content exercise here
+    `
+    `
+     //content exercise here
+    +"</div>")
+    $("#solution-box").append('<img id="img1" data-src="/assets/img/great.jpg" src="/assets/img/great.jpg" alt="">')
+
+    $("#solution-button").on("click",validateSolutionFun)
+
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="fadeOut"){
+            $("#img1").fadeOut()
+        }else{
+            $("#solution-box").append('<div id="div2">Try Again!</div>')
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("fadeOut")
+    }
+}
+

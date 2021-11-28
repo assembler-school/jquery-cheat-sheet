@@ -7,6 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="/assets/js/script.js" defer></script>
     <script src="/assets/js/jquery.js" defer></script>
+    <script src="/assets/js/arrayObject.js" defer></script>
+    <script src="/assets/js/createContent.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/style/style_reset.css">
     <link rel="stylesheet" href="/assets/style/style.css">
@@ -19,40 +21,40 @@
         <div id="container">
             <section id="events-container" class="section-container">
                 <h2>Events</h2>
-                <p class="eventP" data-valueEvent="1">HTML document has been loaded</p>
-                <p class="eventP" data-valueEvent="2">clicked</p>
-                <p class="eventP" data-valueEvent="3">double clicked</p>
-                <p class="eventP" data-valueEvent="4">presses a key</p>
-                <p class="eventP" data-valueEvent="5">moves the mouse cursor</p>
-                <p class="eventP" data-valueEvent="6">changes a value </p>
-                <p class="eventP" data-valueEvent="7">image is loaded</p>
-                <p class="eventP" data-valueEvent="8">image fails to load</p>
-                <p class="eventP" data-valueEvent="9">form is submitted</p>
-                <p class="eventP" data-valueEvent="10">changes the option of a select element</p>
-                <p class="eventP" data-valueEvent="11">position the mouse over an element</p>
-                <p class="eventP" data-valueEvent="12">position the mouse over an element</p>
-                <p class="eventP" data-valueEvent="13">ul list item is clicked</p>
+                <p class="eventP" data-valueEvent="1">0 HTML document has been loaded</p>
+                <p class="eventP" data-valueEvent="2">1 clicked</p>
+                <p class="eventP" data-valueEvent="3">2 double clicked</p>
+                <p class="eventP" data-valueEvent="4">3 presses a key</p>
+                <p class="eventP" data-valueEvent="5">4 moves the mouse cursor</p>
+                <p class="eventP" data-valueEvent="6">5 changes a value </p>
+                <p class="eventP" data-valueEvent="7">6 image is loaded</p>
+                <p class="eventP" data-valueEvent="8">7 image fails to load</p>
+                <p class="eventP" data-valueEvent="9">8 form is submitted</p>
+                <p class="eventP" data-valueEvent="10">9 changes the option of a select element</p>
+                <p class="eventP" data-valueEvent="11">10 position the mouse over an element</p>
+                <p class="eventP" data-valueEvent="12">11 position the mouse over an element</p>
+                <p class="eventP" data-valueEvent="13">12 ul list item is clicked</p>
             </section>
             <section id="functions-container" class="section-container">
                 <h2>Functions</h2>
-                <p class="functionP" data-valueFuntion="1">Create an HTML element with any text value</p>
-                <p class="functionP" data-valueFuntion="2">Remove an HTML element with any text value</p>
-                <p class="functionP" data-valueFuntion="3">Append an HTML element with any text value to a parent element</p>
-                <p class="functionP" data-valueFuntion="4">Prepend an HTML element with any text value to a parent element</p>
-                <p class="functionP" data-valueFuntion="5">Create and add  an HTML element with any text value after another element</p>
-                <p class="functionP" data-valueFuntion="6">Create and add an HTML element with any text value before another element</p>
-                <p class="functionP" data-valueFuntion="7">Clone an HTML element within other element</p>
-                <p class="functionP" data-valueFuntion="8">Add a class to an HTML item</p>
-                <p class="functionP" data-valueFuntion="9">Remove a class to an HTML item</p>
-                <p class="functionP" data-valueFuntion="10">Toggle a class of an HTML item</p>
-                <p class="functionP" data-valueFuntion="11">Add a disabled attribute to an HTML button</p>
-                <p class="functionP" data-valueFuntion="12">Remove the disabled attribute of an HTML button</p>
-                <p class="functionP" data-valueFuntion="13">Set a data-src attribute to a img element</p>
-                <p class="functionP" data-valueFuntion="14">Remove the data-src attribute of the img element</p>
-                <p class="functionP" data-valueFuntion="15">Hide an HTML element on click (display: none)</p>
-                <p class="functionP" data-valueFuntion="16">Show an HTML element on click (display: block)</p>
-                <p class="functionP" data-valueFuntion="17">Fade in an HTML element using jQuery</p>
-                <p class="functionP" data-valueFuntion="18">Fade out an HTML element using jQuery</p>
+                <p class="functionP" data-valueFuntion="1">13 Create an HTML element with any text value</p>
+                <p class="functionP" data-valueFuntion="2">14 Remove an HTML element with any text value</p>
+                <p class="functionP" data-valueFuntion="3">15 Append an HTML element with any text value to a parent element</p>
+                <p class="functionP" data-valueFuntion="4">16 Prepend an HTML element with any text value to a parent element</p>
+                <p class="functionP" data-valueFuntion="5">17 Create and add  an HTML element with any text value after another element</p>
+                <p class="functionP" data-valueFuntion="6">18 Create and add an HTML element with any text value before another element</p>
+                <p class="functionP" data-valueFuntion="7">19 Clone an HTML element within other element</p>
+                <p class="functionP" data-valueFuntion="8">20 Add a class to an HTML item</p>
+                <p class="functionP" data-valueFuntion="9">21 Remove a class to an HTML item</p>
+                <p class="functionP" data-valueFuntion="10">22 Toggle a class of an HTML item</p>
+                <p class="functionP" data-valueFuntion="11">23 Add a disabled attribute to an HTML button</p>
+                <p class="functionP" data-valueFuntion="12">24 Remove the disabled attribute of an HTML button</p>
+                <p class="functionP" data-valueFuntion="13">25 Set a data-src attribute to a img element</p>
+                <p class="functionP" data-valueFuntion="14">26 Remove the data-src attribute of the img element</p>
+                <p class="functionP" data-valueFuntion="15">27 Hide an HTML element on click (display: none)</p>
+                <p class="functionP" data-valueFuntion="16"> 28Show an HTML element on click (display: block)</p>
+                <p class="functionP" data-valueFuntion="17">29 Fade in an HTML element using jQuery</p>
+                <p class="functionP" data-valueFuntion="18">30 Fade out an HTML element using jQuery</p>
             </section>
             <section id="selectors-container" class="section-container">
                 <h2>Selectors</h2>
