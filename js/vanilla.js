@@ -277,3 +277,38 @@ else {
 }
 })
 }
+
+function letsGetToWork(btn1, par){
+    let x = document.createElement("ul")
+    par.appendChild(x)
+let k = ["Element1", "Element2", "Element3"]
+
+k.forEach(element => {
+ l = document.createElement("li")
+let m = l.innerText = element
+ par.appendChild(l)   
+
+ l.addEventListener("click", (e)=>{
+if (m === "Element1"){
+ let w =   document.createElement("p")
+ w.innerText = m
+ par.appendChild(w)
+
+}
+if (m === "Element2"){
+    let w =   document.createElement("p")
+    w.innerText = m
+    par.appendChild(w)
+   
+   }
+   if (m === "Element3"){
+    let w =   document.createElement("p")
+    w.innerText = m
+    par.appendChild(w)
+   
+   }
+ })
+});
+
+
+}

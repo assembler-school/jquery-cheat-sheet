@@ -240,3 +240,12 @@ function formCreations(parBo, btn2){
     })
 }
 
+function  itIsFinallyOver(btn2, parBo){
+    $(parBo).append("<ul class=done><li>Element1</li><li>Element2</li><li>Element3</li></ul>")
+  $( "li:nth-child(2)" ).on({
+      click: function(){
+          $(this).css("color", "blue")
+      }
+  })
+}
+
