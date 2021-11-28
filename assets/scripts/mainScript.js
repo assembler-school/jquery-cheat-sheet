@@ -59,19 +59,19 @@ function functionsF(arrayName) {
     })
 }
 
-callEvents= document.getElementById('navBarEvents')
-callEvents.addEventListener('click', ()=> {
+callEvents = document.getElementById('navBarEvents')
+callEvents.addEventListener('click', () => {
     cleanDiv()
     functionsF(allEvents)
 })
 
-callFunctions= document.getElementById('navBarFunctions')
-callFunctions.addEventListener('click', ()=> {
+callFunctions = document.getElementById('navBarFunctions')
+callFunctions.addEventListener('click', () => {
     cleanDiv()
     functionsF(allFunctions)
 })
-callSelectors= document.getElementById('navBarSelectors')
-callSelectors.addEventListener('click', ()=> {
+callSelectors = document.getElementById('navBarSelectors')
+callSelectors.addEventListener('click', () => {
     cleanDiv()
     functionsF(allSelectors)
 })
