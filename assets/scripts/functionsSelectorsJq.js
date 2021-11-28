@@ -153,3 +153,18 @@ function removeallitemsElementfunctionIdJq() {
         p1.remove()
     })
 }
+
+function animateitemfunctionJq() {
+    buttonTest('animateitemIdTestResultjq', 'animateitemjq')
+    let main = $("#animateitemIdTestResultjq")
+    let  btnjq = $("#animateitemjq")
+    let p = $("<p>background animation</p>")
+    p.attr("id", "animatejq")
+    main.append(p)
+    btnjq.on("click", ()=>{
+        setTimeout(() => {
+            p.css("animationName", "example")
+            p.css("animationDuration", "5s")
+        }, 2000);
+    })
+}

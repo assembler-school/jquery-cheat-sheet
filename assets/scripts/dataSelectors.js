@@ -135,11 +135,11 @@ var allSelectors = [
         divdisplay: 'animateitemdivdisplay',
         functionIdJs: 'animateitemfunctionIdJs',
         functionJs: () => { animateitemfunctionJs() },
-        jsText: "  pOneId= document.animateitem('pOneidjs') <br> pOneId.style.fontWeight = 'bolder';  ",
+        jsText: "setTimeout(() => {animationHTML.style.animationName = 'example';animationHTML.style.animationDuration = '5s';}, 2000);",
         IdTestResultjs: 'animateitemIdTestResultjs',
         functionIdJq: 'animateitemfunctionIdJq',
         functionJq: () => { animateitemfunctionJq() },
-        jqText: " $('#pOneidjq').css('fontWeight' , 'bolder') ",
+        jqText: "setTimeout(() => {p.css('animationName', 'example')p.css('animationDuration', '5s')},2000);",
         IdTestResultjq: 'animateitemIdTestResultjq'
     }
 ]
