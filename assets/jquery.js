@@ -75,3 +75,8 @@ $("#Function6Q button").on("click", function () {
   let pElement = $("<p>Im also a paragraph</p>");
   $("#Function6Q .demo p").last().before(pElement);
 });
+
+//Clone an HTML element
+$("#Function7Q button").on("click", function () {
+  $("#Function7Q .demo p").first().clone().appendTo("#Function7Q .demo");
+});

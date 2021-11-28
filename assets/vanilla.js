@@ -60,3 +60,13 @@ document
     pElement.innerText = "Im also a paragraph";
     parentElement.insertBefore(pElement, lastElement);
   });
+
+//Clone an HTML element
+
+document
+  .querySelector("#Function7V button")
+  .addEventListener("click", function () {
+    let pElement = document.querySelector("#Function7V .demo p");
+    let clonedElement = pElement.cloneNode(true);
+    pElement.parentElement.append(clonedElement);
+  });
