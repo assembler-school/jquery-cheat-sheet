@@ -6,6 +6,16 @@
     --section-functions:#0a9496a6;
     --section-selectors:#4fb3ab9a;
 }
+@keyframes animateModal {
+    from {
+    left: 30%;
+      opacity: 1;
+    }
+    to {
+    left:100%;
+      opacity: 0;
+    }
+  }
 @font-face {
     font-family: 'blackboardfont'; 
     src: url(../assets/fonts/KGTenThousandReasons.ttf); /*URL to font*/
@@ -207,4 +217,8 @@ article{
 }
 .display{
     display:none;
+}
+.animation{
+    animation-name: animateModal;
+    animation-duration:0.6s;
 }

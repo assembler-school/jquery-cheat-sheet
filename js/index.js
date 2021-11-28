@@ -60,7 +60,8 @@ function createModal(obj){
                                     const buttonJquery=$("<button id='jqueryBtn'>Press me to see how it works!</button>");
                                     $(buttonJquery).one("click",obj.jqueryMethod);
                                     $(".demo").eq(0).append(buttonVanilla);
-                                    $(".demo").eq(1).append(buttonJquery);           
+                                    $(".demo").eq(1).append(buttonJquery);      
+                                    $("#modal").hide();     
             }
 //remove modal
 function removeModal(){
@@ -68,14 +69,24 @@ function removeModal(){
     $("#modal").remove();
 }
 
+function animateBeforeClose(){
+    $("#modal").addClass("animation");
+    setTimeout(removeModal,600)
 
+}
+function animateAfterStart(e){
+    $("#modal").fadeIn(600)
+    
+    
+}
 //event listeners for paragrahs when document is loaded
 
 $(function(){
     $(".item").each(function(idx,element){
         $(element).on("click",function(e){
             //TODO hacer funcion que filtre el nombre del target y encuentre el objeto en el array
-                createModal(filterElement(e.target));
+            createModal(filterElement(e.target));
+            animateAfterStart()
         })
     })
 })
