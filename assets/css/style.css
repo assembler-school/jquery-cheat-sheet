@@ -7,7 +7,7 @@ nav{
     margin-left: 10%;
 }
 
-li{
+.navbar li{
     margin: 0 auto;
     list-style: none;
     color: white;
