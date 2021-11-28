@@ -27,9 +27,11 @@ li a{
     display: grid;
     grid-template-columns: 70% 30%;
 }
+
 h2{
     text-align: center;
 }
+
 .contentTests{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -90,4 +92,11 @@ span{
 }
 .pdifjq{
     background-color: blue;
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
 }

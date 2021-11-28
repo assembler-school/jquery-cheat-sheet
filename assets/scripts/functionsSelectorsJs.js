@@ -96,3 +96,62 @@ function getElementbyidfunctionJs() {
     })
 }
 
+function getOptionsfunctionJs() {
+    buttonTest('getOptionsIdTestResultjs', 'getoptionsjs')
+    let main = document.getElementById('getOptionsIdTestResultjs')
+    btn = document.getElementById('getoptionsjs')
+
+    for (let index = 0; index < 4; index++) {
+        let pOne = document.createElement("p")
+        pOne.innerText = 'This is a P '
+        pOne.setAttribute('class', 'pdif')
+        main.appendChild(pOne)
+    }
+
+    let ptwo = document.createElement("p")
+    ptwo.innerText = 'This is a P '
+    ptwo.setAttribute('class', 'pdif')
+    ptwo.setAttribute('id', 'ptwoidjs')
+    main.appendChild(ptwo)
+
+    btn.addEventListener('click', function () {
+        pOption= document.querySelectorAll('.pdif[id]')
+        pOption[0].style.fontWeight = 'bolder';
+    })
+}
+
+
+function valueFirstinputfunctionJs() {
+    buttonTest('valueFirstinputIdTestResultjs', 'valuefirstinputjs')
+    let main = document.getElementById('valueFirstinputIdTestResultjs')
+    btn = document.getElementById('valuefirstinputjs')
+
+    let ptwo = document.createElement("input")
+    ptwo.setAttribute('placeholder', 'write something here')
+    main.appendChild(ptwo)
+
+    btn.addEventListener('click', function () {
+        inputvaluejs= document.querySelector('input').value
+        console.log(inputvaluejs)
+        alert(inputvaluejs)
+    })
+}
+
+function animateitemfunctionJs() {
+    buttonTest('animateitemIdTestResultjs', 'animateitemjs')
+    let main = document.getElementById('animateitemIdTestResultjs')
+    btn = document.getElementById('animateitemjs')
+
+    let ptwo = document.createElement("p")
+    ptwo.innerText = 'This is a P '
+    ptwo.setAttribute('id', 'animatejs')
+    main.appendChild(ptwo)
+
+    btn.addEventListener('click', function () {
+        let animationHTML = document.getElementById('animatejs');
+        setTimeout(() => {
+            animationHTML.style.animationName = 'example';
+            animationHTML.style.animationDuration = '2s';
+        }, 2000);
+    })
+}

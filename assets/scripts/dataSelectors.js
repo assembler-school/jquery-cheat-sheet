@@ -65,7 +65,7 @@ var allSelectors = [
         IdTestResultjq: 'getElementbyidIdTestResultjq'
     },
     {
-        title: `Get all the elements that have a certain class and the display property of none and change their font color and the display itself so it’s visible`,
+        title: `Get all the elements`,
         idButtonClick: 'displaynoneandblockElementidButtonClick',
         divdisplay: 'displaynoneandblockElementdivdisplay',
         functionIdJs: 'displaynoneandblockElementfunctionIdJs',
@@ -76,5 +76,44 @@ var allSelectors = [
         functionJq: () => {displaynoneandblockElementfunctionIdJq()},
         jqText: '$("li.submenu a[href="#"]").click(function (e) {e.preventDefault();$("ul.ul_submenu").css("display", "block");})',
         IdTestResultjq: 'displaynoneandblockElementIdTestResultjq'
-    }
+    },
+    {
+        title: `Get the options of a select element that are selected`,
+        idButtonClick: 'getOptionsidButtonClick',
+        divdisplay: 'getOptionsdivdisplay',
+        functionIdJs: 'getOptionsfunctionIdJs',
+        functionJs: () => { getOptionsfunctionJs() },
+        jsText: "    pOption= document.querySelectorAll('.pdif[id]') <br> pOption[0].style.fontWeight = 'bolder'; " ,
+        IdTestResultjs: 'getOptionsIdTestResultjs',
+        functionIdJq: 'getOptionsfunctionIdJq',
+        functionJq: () => { getOptionsfunctionJq() },
+        jqText: "   $('.pdifjq[id]').css('fontWeight' , 'bolder') ",
+        IdTestResultjq: 'getOptionsIdTestResultjq'
+    },
+    {
+        title: `Show an alert with the value of the first input of the page`,
+        idButtonClick: 'valueFirstinputidButtonClick',
+        divdisplay: 'valueFirstinputdivdisplay',
+        functionIdJs: 'valueFirstinputfunctionIdJs',
+        functionJs: () => { valueFirstinputfunctionJs() },
+        jsText: "  pOneId= document.valueFirstinput('pOneidjs') <br> pOneId.style.fontWeight = 'bolder';  " ,
+        IdTestResultjs: 'valueFirstinputIdTestResultjs',
+        functionIdJq: 'valueFirstinputfunctionIdJq',
+        functionJq: () => { valueFirstinputfunctionJq() },
+        jqText: " $('#pOneidjq').css('fontWeight' , 'bolder') ",
+        IdTestResultjq: 'valueFirstinputIdTestResultjq'
+    },
+    {
+        title: `Animate an item after 2 seconds `,
+        idButtonClick: 'animateitemidButtonClick',
+        divdisplay: 'animateitemdivdisplay',
+        functionIdJs: 'animateitemfunctionIdJs',
+        functionJs: () => { animateitemfunctionJs() },
+        jsText: "  pOneId= document.animateitem('pOneidjs') <br> pOneId.style.fontWeight = 'bolder';  " ,
+        IdTestResultjs: 'animateitemIdTestResultjs',
+        functionIdJq: 'animateitemfunctionIdJq',
+        functionJq: () => { animateitemfunctionJq() },
+        jqText: " $('#pOneidjq').css('fontWeight' , 'bolder') ",
+        IdTestResultjq: 'animateitemIdTestResultjq'
+    },
 ]

@@ -65,3 +65,41 @@ function getElementbyidfunctionJq() {
         $('#pOneidjq').css('fontWeight' , 'bolder')
     })
 }
+
+function getOptionsfunctionJq() {
+    buttonTest('getOptionsIdTestResultjq', 'getoptionsjq')
+    for (let index = 0; index < 4; index++) {
+        let el= $("<p>").text(" This is a P").addClass('pdifjq')
+        $('#getOptionsIdTestResultjq').append(el)
+    }
+    let el= $("<p>").text(" This is a P").addClass('pdifjq').attr('id', 'pOneidjq')
+    $('#getOptionsIdTestResultjq').append(el)
+
+    $('#getoptionsjq').on('click', function () {
+        $('.pdifjq[id]').css('fontWeight' , 'bolder')
+    })
+}
+
+function valueFirstinputfunctionJq() {
+    buttonTest('valueFirstinputIdTestResultjq', 'valuefirstinputjq')
+    let el= $("<input>").attr('placeholder', 'write something here')
+    $('#valueFirstinputIdTestResultjq').append(el)
+
+    $('#valuefirstinputjq').on('click', function () {
+        inputvaluejq= $('input').first().val();
+        console.log(inputvaluejq)
+        alert(inputvaluejq)
+    })
+}
+
+function animateitemfunctionJq() {
+    buttonTest('valueFirstinputIdTestResultjq', 'valuefirstinputjq')
+    let el= $("<input>").attr('placeholder', 'write something here')
+    $('#valueFirstinputIdTestResultjq').append(el)
+
+    $('#valuefirstinputjq').on('click', function () {
+        inputvaluejq= $('input').first().val();
+        console.log(inputvaluejq)
+        alert(inputvaluejq)
+    })
+}
