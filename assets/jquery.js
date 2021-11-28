@@ -80,3 +80,8 @@ $("#Function6Q button").on("click", function () {
 $("#Function7Q button").on("click", function () {
   $("#Function7Q .demo p").first().clone().appendTo("#Function7Q .demo");
 });
+
+//Add a class to an HTML item
+$("#Function8Q button").on("click", function () {
+  $("#Function8Q .demo p").addClass("bgPastelBlue");
+});

@@ -70,3 +70,12 @@ document
     let clonedElement = pElement.cloneNode(true);
     pElement.parentElement.append(clonedElement);
   });
+
+//Add a class to an HTML item
+
+document
+  .querySelector("#Function8V button")
+  .addEventListener("click", function () {
+    let pElement = document.querySelector("#Function8V .demo p");
+    pElement.classList.add("bgPastelBlue");
+  });
