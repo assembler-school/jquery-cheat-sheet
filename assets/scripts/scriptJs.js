@@ -182,14 +182,6 @@ testresultform.addEventListener("change", ()=>{
         })
     }
 
-
-    // Selectors
-    function displaynoneandblockElementfunctionIdJs(){
-        let content1= document.createElement("p").textContent("content 1")
-        let content2= document.createElement("p").textContent("content 2")
-        content1.setAttribute("class", "contentdisplaynone")
-        content2.setAttribute("class", "contentdisplaynone")
-    }
 function appendElementfunctionJs() {
     var main = document.getElementById('appendElementIdTestResultjs')
     let pOne = document.createElement("p")

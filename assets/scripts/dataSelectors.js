@@ -70,11 +70,37 @@ var allSelectors = [
         divdisplay: 'displaynoneandblockElementdivdisplay',
         functionIdJs: 'displaynoneandblockElementfunctionIdJs',
         functionJs: () => {displaynoneandblockElementfunctionIdJs()},
-        jsText: 'li.setAttribute("id", "p1li"); li2.setAttribute("id", "p2li"); document.getElementById("p1li").addEventListener("click", (e)=>{alert("selected one")})document.getElementById("p2li").addEventListener("click", ()=>{alert("selected two")})',
+        jsText: 'function getElemsNoneClass() {let allElems = document.getElementsByClassName("allElems");for (const elem of allElems) {if (elem.style.display == "none") {elem.style.display = "block";elem.style.color = "red";}}}',
         IdTestResultjs: 'displaynoneandblockElementIdTestResultjs',
         functionIdJq: 'displaynoneandblockElementfunctionIdJq',
         functionJq: () => {displaynoneandblockElementfunctionIdJq()},
-        jqText: '$("li.submenu a[href="#"]").click(function (e) {e.preventDefault();$("ul.ul_submenu").css("display", "block");})',
+        jqText: '$(".elem").each(function (index, element) {if ($(this).css("display") == "none") {$(this).css("display", "block");$(this).css("color", "black");}});',
         IdTestResultjq: 'displaynoneandblockElementIdTestResultjq'
+    },
+    {
+        title: `Change the href attribute of the first a element`,
+        idButtonClick: 'changehrefattributeElementidButtonClick',
+        divdisplay: 'changehrefattributeElementdivdisplay',
+        functionIdJs: 'changehrefattributeElementfunctionIdJs',
+        functionJs: () => {changehrefattributeElementfunctionIdJs()},
+        jsText: 'let firstA = document.querySelector("a");firstA.href = "AAA";',
+        IdTestResultjs: 'changehrefattributeElementIdTestResultjs',
+        functionIdJq: 'changehrefattributeElementfunctionIdJq',
+        functionJq: () => {changehrefattributeElementfunctionIdJq()},
+        jqText: 'let firstA = $("a").first();firstA.attr("href", "nuevoSrc");',
+        IdTestResultjq: 'changehrefattributeElementIdTestResultjq'
+    },
+    {
+        title: `Remove all items from a specific selector`,
+        idButtonClick: 'removeallitemsElementidButtonClick',
+        divdisplay: 'removeallitemsElementdivdisplay',
+        functionIdJs: 'removeallitemsElementfunctionIdJs',
+        functionJs: () => {removeallitemsElementfunctionIdJs()},
+        jsText: ' let allElems = document.querySelectorAll(".allElems");for (const elem of allElems) {elem.remove();};',
+        IdTestResultjs: 'removeallitemsElementIdTestResultjs',
+        functionIdJq: 'removeallitemsElementfunctionIdJq',
+        functionJq: () => {removeallitemsElementfunctionIdJq()},
+        jqText: '$(".allElems").remove();',
+        IdTestResultjq: 'removeallitemsElementIdTestResultjq'
     }
 ]
