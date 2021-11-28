@@ -316,37 +316,353 @@ functionsList[1].jquerySnippet=`<code>
                          $(element).remove()
                     </code>`
 //Append an HTML element
-function appendHtmlElementJquery(){}
+function appendHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p></p>`)
+    const btn=$("<button>Click me to append the paragraph</button>")
+        btn.on("click", function(){
+            p.text("paragraph appened!")
+            demo.append(p)
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+}
+functionsList[2].jqueryMethod=function(){
+    appendHtmlElementJquery();
+}
+functionsList[2].jquerySnippet=`<code>
+                         $(element).append(myDiv)
+                    </code>`
 //Prepend an HTML element 
-function prependHtmlElementJquery(){}
+function prependHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Parent</p>`)
+    const p1=$("<p></p>")
+    const btn=$("<button>Click me to append the paragraph</button>")
+        btn.on("click", function(){
+            p1.text("paragraph prepened!")
+            p.prepend(p1)
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p)
+}
+functionsList[3].jqueryMethod=function(){
+    prependHtmlElementJquery();
+}
+functionsList[3].jquerySnippet=`<code>
+                         $(element).prepend(myDiv)
+                    </code>`
 //Create and add an HTML element after another element 
-function createAfterHtmlElementJquery(){}
+function createAfterHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Parent</p>`)
+    const p1=$("<p></p>")
+    const btn=$("<button>Click me to append the 'p' after the parent paragraph</button>")
+        btn.on("click", function(){
+            p1.text("paragraph created after the p parent")
+            p.after(p1)
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[4].jqueryMethod=function(){
+    createAfterHtmlElementJquery();
+}
+functionsList[4].jquerySnippet=`<code>
+                         $(element).after(myDiv)
+                    </code>`
 //Create and add an HTML element before another element 
-function createBeforeHtmlElementJquery(){}
+function createBeforeHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Parent</p>`)
+    const p1=$("<p></p>")
+    const btn=$("<button>Click me to append the 'p' after the parent paragraph</button>")
+        btn.on("click", function(){
+            p1.text("paragraph created after the p parent")
+            p.before(p1)
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[5].jqueryMethod=function(){
+    createBeforeHtmlElementJquery();
+}
+functionsList[5].jquerySnippet=`<code>
+                         $(element).before(myDiv)
+                    </code>`
 //Clone an HTML element within other element
-function cloneHtmlElementJquery(){}
+function cloneHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Parent</p>`)
+    const p1=$("<p></p>")
+    const btn=$("<button>Click me to clone the parent paragraph</button>")
+        btn.one("click", function(){
+            p.clone().appendTo(p)
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[6].jqueryMethod=function(){
+    cloneHtmlElementJquery();
+}
+functionsList[6].jquerySnippet=`<code>
+                         $(element).clone().appendTo("myDiv")
+                    </code>`
 //Add a class to an HTML item
-function addClassHtmlElementJquery(){}
+function addClassHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Paragraph</p>`)
+    const btn=$("<button>Click me to add a class to the paragraph</button>")
+        btn.one("click", function(){
+            p.addClass("title")
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[7].jqueryMethod=function(){
+    addClassHtmlElementJquery();
+}
+functionsList[7].jquerySnippet=`<code>
+                         $(element).addClass("myClass")
+                    </code>`
 //Remove a class to an HTML item
-function removeClassHtmlElementJquery(){}
+function removeClassHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Paragraph</p>`)
+    p.addClass("title")
+    const btn=$("<button>Click me to remove the class to the paragraph</button>")
+        btn.one("click", function(){
+            p.removeClass("title")
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[8].jqueryMethod=function(){
+    removeClassHtmlElementJquery();
+}
+functionsList[8].jquerySnippet=`<code>
+                         $(element).removeClass("myClass")
+                    </code>`
 //Toggle a class of an HTML item
-function toggleClassHtmlElementJquery(){}
+function toggleClassHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Paragraph</p>`)
+    const btn=$("<button>Click me to toggle the class to the paragraph</button>")
+        btn.on("click", function(){
+            p.toggleClass("title")
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[9].jqueryMethod=function(){
+    toggleClassHtmlElementJquery();
+}
+functionsList[9].jquerySnippet=`<code>
+                         $(element).toggleClass("myClass")
+                    </code>`
 //Add a disabled attribute to an HTML button
-function disabledAttrHtmlElementJquery(){}
+function disabledAttrHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const mybtn=$(`<button>Im active!</button>`)
+    const btn=$("<button>Click me to disable the active button</button>")
+        btn.one("click", function(){
+            mybtn.prop("disabled", true)
+            mybtn.text("Im disabled!")
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(mybtn)
+}
+functionsList[10].jqueryMethod=function(){
+    disabledAttrHtmlElementJquery();
+}
+functionsList[10].jquerySnippet=`<code>
+                         $(element).prop("disabled",true)
+                    </code>`
 //Remove the disabled attribute of an HTML button
-function removedisabledAttrHtmlElementJquery(){}
+function removedisabledAttrHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const mybtn=$(`<button>Im active!</button>`)
+    mybtn.prop("disabled", true)
+    mybtn.text("Im disabled!")
+    const btn=$("<button>Click me to active the button</button>")
+        btn.one("click", function(){
+            mybtn.removeAttr("disabled");
+            mybtn.text("Im active!")
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(mybtn)
+}
+functionsList[11].jqueryMethod=function(){
+    removedisabledAttrHtmlElementJquery();
+}
+functionsList[11].jquerySnippet=`<code>
+                         $(element).removeAttr("disabled")
+                    </code>`
 //Set a data-src attribute to a img element
-function dataSrcHtmlElementJquery(){}
+function dataSrcHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const img=$(`<img>`)
+    img.addClass("imgExample")
+    const btn=$("<button>Click me to assign to img a data-src</button>")
+        btn.one("click", function(){
+            img.attr("data-src","../assets/img/imageloaded.png");
+            img.attr(img.data())
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(img)
+}
+functionsList[12].jqueryMethod=function(){
+    dataSrcHtmlElementJquery();
+}
+functionsList[12].jquerySnippet=`<code>
+                         $(element).attr("data-src","value")
+                    </code>`
 //Remove the data-src attribute of the img element
-function removeDataSrcHtmlElementJquery(){}
+function removeDataSrcHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const img=$(`<img>`)
+    img.addClass("imgExample")
+    const btn=$("<button>Click me to remove to img a data-src</button>")
+    img.attr("data-src","../assets/img/imageloaded.png");
+    img.attr(img.data())
+        btn.one("click", function(){
+            img.removeAttr("data-src").removeData("src");
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(img)
+}
+functionsList[13].jqueryMethod=function(){
+    removeDataSrcHtmlElementJquery();
+}
+functionsList[13].jquerySnippet=`<code>
+                         $(element).removeAttr("data-src").removeData("src")
+                    </code>`
 //Hide an HTML element on click (display: none)
-function hideHtmlElementJquery(){}
+function hideHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Paragraph</p>`)
+    const btn=$("<button>Click me to hide the paragraph</button>")
+        btn.on("click", function(){
+            p.hide()
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[14].jqueryMethod=function(){
+    hideHtmlElementJquery();
+}
+functionsList[14].jquerySnippet=`<code>
+                         $(element).hide()
+                    </code>`
+    
 //Show an HTML element on click (display: block)
-function blockHtmlElementJquery(){}
+function blockHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Paragraph</p>`)
+    const btn=$("<button>Click me to show the paragraph</button>")
+    p.hide()
+        btn.on("click", function(){
+            p.show()
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[15].jqueryMethod=function(){
+    blockHtmlElementJquery();
+}
+functionsList[15].jquerySnippet=`<code>
+                         $(element).show()
+                    </code>`
 //Fade in an HTML element using jQuery
+function fadeInHtmlElementJquery(n,method){
+    const demo=$(".demo").eq(n)
+    const p=$(`<p>Paragraph</p>`)
+    const btn=$("<button>Click me to 'fade in' the paragraph</button>")
+    p.hide()
+        btn.on("click", function(){
+            p.fadeIn()
+        })
+    $("#"+method+"Btn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[16].jqueryMethod=function(){
+    fadeInHtmlElementJquery(1,"jquery");
+}
+functionsList[16].jquerySnippet=`<code>
+                         $(element).fadeIn()
+                    </code>`
+//vanilla
+functionsList[16].vanillaMethod=function(){
+    fadeInHtmlElementJquery(0,"vanilla");
+}
+functionsList[16].vanillaSnippet=`<code>
+                         $(element).fadeIn()
+                    </code>`
 //Fade out an HTML element using jQuery
+function fadeOutHtmlElementJquery(n, method){
+    const demo=$(".demo").eq(n,method)
+    const p=$(`<p>Paragraph</p>`)
+    const btn=$("<button>Click me to 'fade out' the paragraph</button>")
+    p.hide()
+        btn.on("click", function(){
+            p.fadeOut()
+        })
+    $("#"+method+"Btn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[17].jqueryMethod=function(){
+    fadeOutHtmlElementJquery(1,"jquery");
+}
+functionsList[17].jquerySnippet=`<code>
+                         $(element).fadeOut()
+                    </code>`
+//vanilla
+functionsList[17].vanillaMethod=function(){
+    fadeOutHtmlElementJquery(0,"vanilla");
+}
+functionsList[17].vanillaSnippet=`<code>
+                         $(element).fadeOut()
+                    </code>`
+
 //Animate an item after 2 seconds from the initial page load
-function animateHtmlElementJquery(){}
+function animateHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Paragraph</p>`)
+    const btn=$("<button>Click me to animate the paragraph</button>")
+        btn.on("click", function(){
+            p.animate({
+                fontSize:"20px"
+            },1000)
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[18].jqueryMethod=function(){
+    animateHtmlElementJquery();
+}
+functionsList[18].jquerySnippet=`<code>
+                         $(element).animate({
+                            p.animate({
+                                fontSize:"20px"
+                            },1000)
+                         })
+                    </code>`
 //Selectors section
 //Iterate a collection of elements and apply a change of style on them
 function changeStyleHtmlElementJquery(){}
