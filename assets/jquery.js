@@ -115,3 +115,8 @@ $("#Function13Q button").on("click", function () {
 $("#Function14Q button").on("click", function () {
   $("#Function14Q .demo img").removeAttr("data-src", "example");
 });
+
+//Hide an HTML element on click (display: none)
+$("#Function15Q button").on("click", function () {
+  $("#Function15Q .demo button").toggle();
+});

@@ -137,3 +137,12 @@ document
     let pElement = document.querySelector("#Function14V .demo img");
     pElement.removeAttribute("data-src");
   });
+
+//Hide an HTML element on click (display: none)
+
+document
+  .querySelector("#Function15V button")
+  .addEventListener("click", function () {
+    let pElement = document.querySelector("#Function15V .demo button");
+    pElement.style.display = "none";
+  });

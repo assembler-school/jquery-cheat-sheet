@@ -377,7 +377,7 @@
                 <pre>
                   <code>
                     let buttonElement = document.querySelector("button");
-                    pElement.disabled = true;
+                    buttonElement.disabled = true;
                   </code>
                 </pre>
               </div>
@@ -415,7 +415,7 @@
                 <pre>
                   <code>
                     let buttonElement = document.querySelector("button");
-                    pElement.disabled = false;
+                    buttonElement.disabled = false;
                   </code>
                 </pre>
               </div>
@@ -453,7 +453,7 @@
                 <pre>
                   <code>
                     let imgElement = document.querySelector("img");
-                    pElement.setAttribute("data-src", "example");
+                    imgElement.setAttribute("data-src", "example");
                   </code>
                 </pre>
               </div>
@@ -491,7 +491,7 @@
                 <pre>
                   <code>
                     let imgElement = document.querySelector("img");
-                    pElement.removeAttribute("data-src", "example");
+                    imgElement.removeAttribute("data-src", "example");
                   </code>
                 </pre>
               </div>
@@ -521,6 +521,46 @@
                   alt=""
                   data-src="example"
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">
+            Hide an HTML element on click (display: none)
+          </button>
+          <div class="content">
+            <div id="Function15V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let buttonElement = document.querySelector("button");
+                    buttonElement.addEventListener("click", function (){
+                      buttonElement.style.display = "none";
+                    })
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+              </div>
+            </div>
+            <div id="Function15Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("button").on("click", function () {
+                      $(this).toggle();
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
               </div>
             </div>
           </div>
