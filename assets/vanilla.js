@@ -170,3 +170,14 @@ document
       element.classList.add("bgPastelBlue");
     });
   });
+
+//Get the parent element of a certain element
+
+document
+  .querySelector("#Selector2V button")
+  .addEventListener("click", function () {
+    let parentElement = document.querySelector(
+      "#Selector2V .demo button"
+    ).parentNode;
+    parentElement.classList.add("bgPastelBlue");
+  });

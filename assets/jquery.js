@@ -151,3 +151,8 @@ $("#Selector1Q button").on("click", function () {
     $(element).addClass("bgPastelBlue");
   });
 });
+
+//Get the parent element of a certain element
+$("#Selector2Q button").on("click", function () {
+  $(this).parent().addClass("bgPastelBlue");
+});
