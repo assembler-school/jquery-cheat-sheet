@@ -121,7 +121,7 @@ $("#Function15Q button").on("click", function () {
   $("#Function15Q .demo button").hide();
 });
 
-//Show an HTML element on click (display: block)
-$("#Function16Q button").on("click", function () {
-  $("#Function16Q .demo button").last().show();
+//Fade in an HTML element using jQuery
+$("#Function17Q button").on("click", function () {
+  $("#Function17Q .demo img").fadeIn();
 });
