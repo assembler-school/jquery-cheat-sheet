@@ -1,3 +1,4 @@
+
 //HTML document has been loaded
 function htmlDocumentLoadedjquery(){
     $(".demo").eq(1).append(`<p>The document is loaded!</p>`)
@@ -254,19 +255,24 @@ eventsList[11].jquerySnippet=`<code>
 function itemListClickedjquery(){
     const demo=$(".demo").eq(1)
     const p=$(`<p></p>`)
+    const btn=$("<button>Click one of the list items</button>")
     const ul=$("<ul>");
     const option1=$(`<li>option1</li>`)
     const option2=$(`<li>option2</li>`)
-        $("li").each(function(idx,element){
-            element.on("click",function(){
-                p.text(`You selected the ${element}!`)
-                demo.append(p)
-    
-            })
-    })
+    $("#jqueryBtn").remove();
+    demo.append(btn)
     demo.append(ul);
     ul.append(option1)
     ul.append(option2)
+    $("li").each(function(idx,element){
+        console.log(element);
+        $(element).css("cursor","pointer")
+        $(element).on("click",function(){
+            p.text(`You selected the ${element.textContent}!`)
+            demo.append(p)
+            
+        })
+    })
 }
 eventsList[12].jqueryMethod=function(){
     itemListClickedjquery();
@@ -274,8 +280,8 @@ eventsList[12].jqueryMethod=function(){
 eventsList[12].jquerySnippet=`<code>
                              $("elementlist").each(
                                  function(i,element){
-                                element.on("click",function(){
-                                p.text("You selected the"+ element)
+                                $(element).on("click",function(){
+                                p.text("You selected the"+ element.textcontent)
                         </code>`
 //Functions section
 //Create an HTML element
@@ -665,22 +671,219 @@ functionsList[18].jquerySnippet=`<code>
                     </code>`
 //Selectors section
 //Iterate a collection of elements and apply a change of style on them
-function changeStyleHtmlElementJquery(){}
+function changeStyleHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Paragraph</p>`)
+    const btn=$("<button>Click me to change the font size of the paragraph</button>")
+    btn.on("click", function(){
+        console.log($(".pExample"));
+        $(".pExample").css("fontSize","20px")
+    })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    for(let i=0;i<2;i++){
+         demo.append($(`<p class="pExample">Paragraph</p>`))
+    }
+}
+selectorsList[0].jqueryMethod=function(){
+    changeStyleHtmlElementJquery();
+}
+selectorsList[0].jquerySnippet=`<code>
+                         $(element).css("fontSize","20px")
+                    </code>`
 //Get the parent element of a certain element and change its font weight
-function getParentHtmlElementJquery(){}
+function getParentHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Parent</p>`)
+    const child=$(`<p>Child</p>`)
+    const btn=$("<button>Click me tochange the font weight of the parent paragraph</button>")
+    btn.on("click", function(){
+        child.parent().css("fontWeight","bold");
+    })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+    p.append(child);
+}
+selectorsList[1].jqueryMethod=function(){
+    getParentHtmlElementJquery();
+}
+selectorsList[1].jquerySnippet=`<code>
+                         child.parent().css("fontWeight","bold");
+                    </code>`
 //Get the collection of children of a certain element and change its font weight
-function collectionChildrenHtmlElementJquery(){}
+function collectionChildrenHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const parent=$(`<p>Parent</p>`)
+    const btn=$("<button>Click me to change the font weight of the paragraph</button>")
+    btn.on("click", function(){
+        parent.children().css("fontWeight","bolder")
+    })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(parent);
+    for(let i=0;i<2;i++){
+         parent.append($(`<p class="pExample">Child</p>`))
+    }
+}
+selectorsList[2].jqueryMethod=function(){
+    collectionChildrenHtmlElementJquery();
+}
+selectorsList[2].jquerySnippet=`<code>
+                         parent.children().css("fontWeight","bolder");
+                    </code>`
 //Get all the elements that have a certain class and change their font weight
-function fontWeightOfCollectionHtmlElementJquery(){}
+function fontWeightOfClassCollectionHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const btn=$("<button>Click me to change the font weight of the class pExample</button>")
+    btn.on("click", function(){
+        $(".pExample").css("fontWeight","bolder")
+    })
+    $("#jqueryBtn").remove()
+     demo.append(btn);
+    for(let i=0;i<2;i++){
+        demo.append($(`<p class="pExample">Child</p>`))
+    }
+}
+    selectorsList[3].jqueryMethod=function(){
+        fontWeightOfClassCollectionHtmlElementJquery();
+    }
+    selectorsList[3].jquerySnippet=`<code>
+                             $(".myClass").css("fontWeight","bolder");
+                        </code>`
 //Get an item by id
-function getIdHtmlElementJquery(){}
+function getIdHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p id="pId">Paragraph</p>`)
+
+    const btn=$("<button>Click me to get the id and change the color!</button>")
+    btn.on("click", function(){
+        $("#pId").css("color","green");
+    })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+selectorsList[4].jqueryMethod=function(){
+    getIdHtmlElementJquery();
+}
+selectorsList[4].jquerySnippet=`<code>
+                         $("#myId").css("color","green");
+                    </code>`
+    
 //Get all the elements that have a certain class and the display property of none 
-function hideCollectionHtmlElementJquery(){}
+function hideCollectionHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const btn=$("<button>Click me to do display none in the class pExample</button>")
+    btn.on("click", function(){
+        $(".pExample").css("display","none")
+    })
+    $("#jqueryBtn").remove()
+     demo.append(btn);
+    for(let i=0;i<2;i++){
+        demo.append($(`<p class="pExample">Paragraph to dissapear</p>`))
+    }
+}
+    selectorsList[5].jqueryMethod=function(){
+        hideCollectionHtmlElementJquery();
+    }
+    selectorsList[5].jquerySnippet=`<code>
+                             $(".myClass").css("display","none")
+                        </code>`
 //Get the options of a select element that are selected
-function getOptionsJquery(){}
+function getOptionsJquery(){
+    const demo=$(".demo").eq(1)
+    const btn=$("<button>Select one or more options!</button>")
+    const select=$("<select multiple></select>")
+    const p=$("<p></p>")
+    select.on("click", function(){
+        
+        p.text(`you selected the ${select.val()}`)
+        demo.append(p)
+    })
+    $("#jqueryBtn").remove()
+     demo.append(btn);
+     demo.append(select)
+    for(let i=1;i<3;i++){
+        select.append($(`<option>option-${i}</option>`))
+    }
+}
+    selectorsList[6].jqueryMethod=function(){
+        getOptionsJquery();
+    }
+    selectorsList[6].jquerySnippet=`<code>
+    select.on("click", function(){
+        
+        p.text("you selected the "+select.val())
+        })
+                        </code>`
 //Change an attribute of a first element
-function changeAttributeFirstElementHtmlElementJquery(){}
+function changeAttributeFirstElementHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const btn=$("<button>Click me to change attribute to the first li element</button>")
+    const ul=$("<ul></ul>")
+    const p=$("<p></p>")
+    btn.on("click", function(){
+        $("li").first().attr("style","color:red;")
+    })
+    $("#jqueryBtn").remove()
+     demo.append(btn);
+     demo.append(ul);
+    for(let i=1;i<3;i++){
+        ul.append($(`<li>option-${i}</li>`))
+    }
+}
+    selectorsList[7].jqueryMethod=function(){
+        changeAttributeFirstElementHtmlElementJquery();
+    }
+    selectorsList[7].jquerySnippet=`<code>
+    select.on("click", function(){
+        
+        $("li").first().attr("style","color:red;")
+        })
+                        </code>`
 //Show an alert with the value of the first input of the page
-function alertOnChangeInputJquery(){}
+function alertOnChangeInputJquery(){
+    const demo=$(".demo").eq(1)
+    const btn=$(`<button>Write something!</button>`)
+    const p=$(`<p></p>`)
+    const input=$("<input>");
+
+    input.first().on("change",function(){
+        alert(`You changed the input to ${input.val()}!`)
+        demo.append(p)
+    })
+    $("#jqueryBtn").remove();
+    demo.append(btn);
+    demo.append(input);
+}
+selectorsList[8].jqueryMethod=function(){
+    alertOnChangeInputJquery();
+}
+selectorsList[8].jquerySnippet=`<code>
+                           input.first().on("change",function(){
+                               alert("you changed it")
+                           });
+                        </code>`
 //Remove all items from a specific selector
-function removeItemsFromSpecificSelectorJquery(){}
+function removeItemsFromSpecificSelectorJquery(){
+    const demo=$(".demo").eq(1)
+    const btn=$("<button>Click me to remove the list</button>")
+    const ul=$("<ul></ul>")
+    const p=$("<p></p>")
+    btn.on("click", function(){
+        $("li").remove()
+    })
+    $("#jqueryBtn").remove()
+     demo.append(btn);
+     demo.append(ul);
+    for(let i=1;i<3;i++){
+        ul.append($(`<li>option-${i}</li>`))
+    }
+}
+selectorsList[9].jqueryMethod=function(){
+    removeItemsFromSpecificSelectorJquery();
+}
+selectorsList[9].jquerySnippet=`<code>
+                        $("li").remove()
+                    </code>`

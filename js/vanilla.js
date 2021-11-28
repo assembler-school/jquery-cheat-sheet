@@ -286,6 +286,7 @@ function itemListClickedVanilla(){
     for(let i=1;i<3;i++){
         const li = document.createElement("li");
         li.innerText="item-"+i;
+        li.style.cursor="pointer"
         li.addEventListener("click",function(){
             p.innerText=`You selected the ${li.innerText}`
             demo.appendChild(p)
