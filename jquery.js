@@ -23,7 +23,6 @@ function exerciseJQ3(jQueryDiv){
     $(".jQueryDiv").append(`<div class="pText">  ( "#target" ).keypress(function()</div>`)
     $(".jQueryDiv").append("<div class='btnTry' >Press key</div>")
     $("window").on("keypress",()=>{$(".pText").append(" <div class='divCode2'>keypress has been realized </div>")
-    console.log("perra")
     })
     
 }
@@ -49,28 +48,39 @@ function exerciseJQ6(jQueryDiv){
     $("img").load(()=>{$(".jQueryDiv").append(" <div class='divCode2'>image has been loaded </div>")})})
 }
 function exerciseJQ7(jQueryDiv){
-    
+      /* imagen no cargada falta */
 }
 function exerciseJQ8(jQueryDiv){
-    
+     /*form is submitted */
 }
 function exerciseJQ9(jQueryDiv){
-    
+     /*changes the option of a select element */
 }
 function exerciseJQ10(jQueryDiv){
-    
+    $(".jQueryDiv").append(`<div class="pText"> $( "#target" ).on( "mouseover", handler )</div>`)
+    $(".jQueryDiv").append("<div class='btnTry' >move mouse</div>")
+    $(".btnTry").on("mouseover",()=>{$(".pText").append(" <div class='divCode2'>passed over me </div>")
+    $(".btnTry").off()
+    })
 }
 function exerciseJQ11(jQueryDiv){
-    
+  /*●	When a checkbox is checked or unchecked */
 }
+
 function exerciseJQ12(jQueryDiv){
-    
+    /*●	When a ul list item is clicked, show the item that was clicked */
 }
 function exerciseJQ13(jQueryDiv){
-    
+    $(".jQueryDiv").append(` <div class="pText"> '$( ".inner" ).append( "Test" );'</div>`)
+    $(".jQueryDiv").append("<button class='btnTry' >try it</button>")
+    $(".btnTry").on("click",()=>{$(".pText").append(" <div class='divCode2'>I have been created </div>")
+    })
 }
 function exerciseJQ14(jQueryDiv){
-    
+    $(".jQueryDiv").append(` $( "div" ).remove();'</div>`)
+    $(".jQueryDiv").append("<button class='btnTry' >click me</button>")
+    $(".btnTry").on("click",()=>{$(".btnTry").remove()
+    })
 }
 function exerciseJQ15(jQueryDiv){
     

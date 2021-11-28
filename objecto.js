@@ -72,8 +72,8 @@ const exercisesArr= [
     {
         dataset:10,
         tittle:"position the mouse over an element",
-        commandJQ:"hover()",
-        commandJS:"hover()",
+        commandJQ:"mouseover()",
+        commandJS:"mouseover()",
         functions: function(jQueryDiv,jScriptDiv){exerciseJQ10(jQueryDiv),exerciseJS10(jScriptDiv)}
     },
     {
@@ -92,23 +92,23 @@ const exercisesArr= [
     },
     {
         dataset:13,
-        tittle:"HTML document has been loaded",
-        commandJQ:"ready()",
+        tittle:"Create an HTML element with any text value",
+        commandJQ:"append()",
+        commandJS:"createElement()",
+        functions: function(jQueryDiv,jScriptDiv){exerciseJQ13(jQueryDiv),exerciseJS13(jScriptDiv)}
+    },
+    {
+        dataset:0,
+        tittle:"Remove an HTML element with any text value",
+        commandJQ:"remove()",
         commandJS:"onload()",
-        functions: function(){exerciseJQ13(),exerciseJS13()}
+        functions: function(jQueryDiv,jScriptDiv){exerciseJQ14(jQueryDiv),exerciseJS14(jScriptDiv)}
     },
     {
         dataset:0,
         tittle:"HTML document has been loaded",
-        commandJQ:"ready()",
-        commandJS:"onload()",
-        functions: function(){exerciseJQ0(),exerciseJS0()}
-    },
-    {
-        dataset:0,
-        tittle:"HTML document has been loaded",
-        commandJQ:"ready()",
-        commandJS:"onload()",
+        commandJQ:"append()",
+        commandJS:"add()",
         functions: function(){exerciseJQ0(),exerciseJS0()}
     },
     {

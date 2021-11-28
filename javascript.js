@@ -116,31 +116,74 @@ function exerciseJS5(jScriptDiv){
     })
 }
 function exerciseJS6(jScriptDiv){
-    
+    /* imagen cargada falta */
 }
 function exerciseJS7(jScriptDiv){
-    
+      /* imagen no cargada falta */
 }
 function exerciseJS8(jScriptDiv){
-    
+   /*form is submitted */
 }
 function exerciseJS9(jScriptDiv){
-    
+    /*changes the option of a select element */
 }
 function exerciseJS10(jScriptDiv){
-    
+    var divCode = document.createElement("div")
+    divCode.classList.add("divCode")
+    divCode.textContent = 'object.addEventListener("mouseover", myScript);'
+    jScriptDiv.appendChild(divCode)
+
+    var btnTry = document.createElement("button")
+    btnTry.classList.add("btnTry")
+    btnTry.textContent = "passes over me"
+    jScriptDiv.appendChild(btnTry)
+
+    btnTry.addEventListener("mouseover",function  (){
+        var divCode2 = document.createElement("div")
+        divCode2.classList.add("divCode2")
+        divCode2.textContent = 'passed over me'
+        divCode.appendChild(divCode2)
+        btnTry.removeEventListener("mousemove",hover)
+    })
 }
 function exerciseJS11(jScriptDiv){
-    
+    /*●	When a checkbox is checked or unchecked */
 }
 function exerciseJS12(jScriptDiv){
-    
+    /*●	When a ul list item is clicked, show the item that was clicked */
 }
 function exerciseJS13(jScriptDiv){
-    
+    var divCode = document.createElement("div")
+    divCode.classList.add("divCode")
+    divCode.textContent = 'document.createElement("object");'
+    jScriptDiv.appendChild(divCode)
+
+    var btnTry = document.createElement("button")
+    btnTry.classList.add("btnTry")
+    btnTry.textContent = "Try it"
+    jScriptDiv.appendChild(btnTry)
+
+    btnTry.addEventListener("click",()=>{
+        var divCode2 = document.createElement("div")
+        divCode2.classList.add("divCode2")
+        divCode2.textContent = 'I have been created'
+        divCode.appendChild(divCode2)
+    })
 }
 function exerciseJS14(jScriptDiv){
-    
+    var divCode = document.createElement("div")
+    divCode.classList.add("divCode")
+    divCode.textContent = 'myobj.remove();'
+    jScriptDiv.appendChild(divCode)
+
+    var btnTry = document.createElement("div")
+    btnTry.classList.add("btnTry")
+    btnTry.textContent = "click me"
+    jScriptDiv.appendChild(btnTry)
+
+    btnTry.addEventListener("click",()=>{
+        btnTry.remove()
+    })
 }
 function exerciseJS15(jScriptDiv){
     
