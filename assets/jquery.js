@@ -130,3 +130,15 @@ $("#Function17Q button").on("click", function () {
 $("#Function18Q button").on("click", function () {
   $("#Function18Q .demo img").fadeOut();
 });
+
+//Animate an item after 2s from the initial page load
+$("#Function19Q button").on("click", function () {
+  location.reload();
+});
+
+$(document).ready(function () {
+  $(".sectionDiv").css("opacity", 0);
+  setTimeout(() => {
+    $(".sectionDiv").animate({ opacity: 1 }, 600);
+  }, 600);
+});
