@@ -1,12 +1,22 @@
 body{
-    width: 80%;
+    width: 90%;
 }
 nav{
     width: 100%;
     display: grid;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
+#content{
+    width: 100%;
+    display: grid;
+    margin-left: 5%;
+}
+
+li a{
+    color: white;
+    text-decoration: none;
+}
 .navbar li{
     margin: 0 auto;
     list-style: none;

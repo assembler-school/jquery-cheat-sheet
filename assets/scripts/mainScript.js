@@ -1,5 +1,7 @@
 
 function createaDiv(title, idButtonClick, divdisplay, functionIdJs, functionJs, jsText, IdTestResultjs, functionIdJq, functionJq, jqText, IdTestResultjq) {
+    divContent = document.getElementById('content')
+
     let content = `<div class="lineItem">`
     content += `<h2>${title} </h2> <button id="${idButtonClick}" class="btn btn-secondary btn-lg" >Click to See more </button>
     </div>`
@@ -18,11 +20,13 @@ function createaDiv(title, idButtonClick, divdisplay, functionIdJs, functionJs, 
 
     content += `</div>`
 
-    divContent = document.getElementById('content')
-
     divContent.innerHTML += content
 }
 
+function cleanDiv() {
+    divContent = document.getElementById('content')
+    divContent.innerHTML = ''
+}
 
 function buttonTest(father, id) {
     var btn = document.createElement('button')
@@ -55,4 +59,19 @@ function functionsF(arrayName) {
     })
 }
 
+callEvents= document.getElementById('navBarEvents')
+callEvents.addEventListener('click', ()=> {
+    cleanDiv()
+    functionsF(allEvents)
+})
 
+callFunctions= document.getElementById('navBarFunctions')
+callFunctions.addEventListener('click', ()=> {
+    cleanDiv()
+    functionsF(allFunctions)
+})
+callSelectors= document.getElementById('navBarSelectors')
+callSelectors.addEventListener('click', ()=> {
+    cleanDiv()
+    functionsF(allSelectors)
+})
