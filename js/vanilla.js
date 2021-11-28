@@ -258,3 +258,9 @@ document.addEventListener("keydown", (e)=>{
         par.appendChild(x)
     })
     }
+
+    function absolutism(btn1, par){
+       par.addEventListener("mouseover", (e)=>{
+           par.style.color = "red"
+       })
+    }

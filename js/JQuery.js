@@ -211,3 +211,11 @@ function formCreations(parBo, btn2){
         }
     })
     }
+    
+    function absolutist(btn2, parBo){
+        $(parBo).on({
+            mouseenter: function(){
+                $(this).css("color", "green")
+            }
+        })
+    }
