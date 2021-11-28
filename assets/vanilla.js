@@ -108,3 +108,14 @@ document
     );
     pElement.disabled = true;
   });
+
+//Remove the disabled attribute to an HTML button
+
+document
+  .querySelector("#Function12V button")
+  .addEventListener("click", function () {
+    let pElement = document.querySelector(
+      "#Function12V .demo button:last-child"
+    );
+    pElement.disabled = false;
+  });

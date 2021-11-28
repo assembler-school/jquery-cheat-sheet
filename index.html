@@ -403,6 +403,44 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Remove the disabled attribute to an HTML button
+          </button>
+          <div class="content">
+            <div id="Function12V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let buttonElement = document.querySelector("button");
+                    pElement.disabled = false;
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <button disabled="true">This will be enabled</button>
+              </div>
+            </div>
+            <div id="Function12Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("button").prop("disabled", false);
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <button disabled="true">This will be enabled</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="sectionDiv">
         <h2>Selectors</h2>

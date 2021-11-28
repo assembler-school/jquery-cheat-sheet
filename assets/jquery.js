@@ -100,3 +100,8 @@ $("#Function10Q button").on("click", function () {
 $("#Function11Q button").on("click", function () {
   $("#Function11Q .demo button").last().prop("disabled", true);
 });
+
+//Remove the disabled attribute to an HTML button
+$("#Function12Q button").on("click", function () {
+  $("#Function12Q .demo button").last().prop("disabled", false);
+});
