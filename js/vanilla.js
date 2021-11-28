@@ -264,3 +264,16 @@ document.addEventListener("keydown", (e)=>{
            par.style.color = "red"
        })
     }
+
+    function whoChecksThechekers(btn1, par){
+        $(par).append("<input type=checkbox id=car1 name=car1 value=Car> <button id=checkings>Check</button><label for=car1>Just check me</label>")
+
+document.getElementById("checkings").addEventListener("click", (e)=>{
+if(document.getElementById("car1").checked){
+    par.style.background = "pink"
+}
+else {
+    par.style.background = "yellow"  
+}
+})
+}

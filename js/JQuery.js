@@ -219,3 +219,24 @@ function formCreations(parBo, btn2){
             }
         })
     }
+
+    function lastChecks(btn2, parBo){
+        $(parBo).append("<input type=checkbox  class=car2 id=car2 name=car2 value=Car> <button class=checkings2>Check</button><label for=car1>Just check me</label>")
+    $(".checkings2").on({
+        click: function(){
+            $(".car2").on({
+                change: function(){
+                   if( $(this).prop("checked") === true){
+                       $(parBo).css("color", "blue")
+                   }
+                   else {
+                    $(parBo).css("color", "black")
+                   }
+                }
+                
+            })
+        }
+    
+    })
+}
+
