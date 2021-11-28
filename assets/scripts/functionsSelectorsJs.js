@@ -186,17 +186,15 @@ function animateitemfunctionJs() {
     buttonTest('animateitemIdTestResultjs', 'animateitemjs')
     let main = document.getElementById('animateitemIdTestResultjs')
     btn = document.getElementById('animateitemjs')
-
     let ptwo = document.createElement("p")
-    ptwo.innerText = 'This is a P '
+    ptwo.innerText = 'background animation'
     ptwo.setAttribute('id', 'animatejs')
     main.appendChild(ptwo)
-
     btn.addEventListener('click', function () {
         let animationHTML = document.getElementById('animatejs');
         setTimeout(() => {
             animationHTML.style.animationName = 'example';
-            animationHTML.style.animationDuration = '2s';
+            animationHTML.style.animationDuration = '5s';
         }, 2000);
     })
 }
