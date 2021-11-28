@@ -46,7 +46,7 @@ section{
 #events{
     background-color:var(--section-events);
 }
-#functions{
+#functions,#functions2{
     background-color: var(--section-functions);
 }
 #selectors{
@@ -67,6 +67,7 @@ section .content{
     padding:8px;
     border-radius:10px;
     margin:0;
+    transition:0.3s;
     
 }
 .content p:nth-child(odd){
@@ -74,9 +75,7 @@ section .content{
 }
 .content p:hover{
     background-color: #ffffff2d;
-    font-size:15px;
     color:#ee9b00;
-    transition:0.3s;
 }
 
 /* Footer */
@@ -98,10 +97,10 @@ footer{
 }
 #modal{
     position: absolute;
-    left: 35%;
-    top: 30%; 
-    width:700px;
-    height: 500px;
+    left: 30%;
+    top: 25%; 
+    width:800px;
+    height: 600px;
     background-image:url(../assets/img/modal-bg.png);
     background-repeat: no-repeat;
     background-size:cover;
@@ -110,7 +109,7 @@ footer{
 }
 #modal header{
     text-align: center;
-    margin-top:10px;
+    margin-top:30px;
 }
 /* The blackboard */
 #blackboard{
@@ -119,19 +118,20 @@ footer{
 /* article */
 article{
     text-align:center;
+    color:#E9D8A6;
+    margin-bottom:20px;
 }
 /* Imgs */
 #modal #exit{
     position:absolute;
     right:70px;
-    top:60px;
+    top:80px;
     width:60px;
     cursor:pointer;
-    transition:1s;
+    transition:0.7s;
 }
 #modal #exit:hover{
     width:70px;
-    transition: 1s;
 }
 #modal #modal-img{
     width:100px;
@@ -142,17 +142,11 @@ article{
 }
 #modal section{
     margin:10px 10px;
-    width:300px;
+    width:260px;
     text-align: center;
     padding:0;
-    width:auto;
 }
-#modal section #vanilla{
 
-}
-#modal #modal-img{
-
-}
 /* Division line */
 #modal section #jquery::after{
     border-left:2px solid black;
@@ -160,8 +154,30 @@ article{
 #modal section p{
     font-size:15px;
 }
+#modal section button{
+    padding:10px;
+    color:#003566;
+    border:none;
+    font-weight: bold;
+    font-size:15px;
+    background-color:#f1faee;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.5s;
+    margin:0 0 10px 0;
+    
+}
+#modal section button:hover{
+    opacity: 0.8;
+    background-color: #FFD60A;
+}
 
 #modal .snippet{
-    width:230px;
     height: 100px;
+}
+#modal .imgExample{
+    width:70px;
+}
+.display{
+    display:none;
 }
