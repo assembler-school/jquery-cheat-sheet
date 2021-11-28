@@ -119,3 +119,13 @@ document
     );
     pElement.disabled = false;
   });
+
+//Set a data-src attribute to a img element
+
+document
+  .querySelector("#Function13V button")
+  .addEventListener("click", function () {
+    let pElement = document.querySelector("#Function13V .demo img");
+    pElement.setAttribute("data-src", "example");
+    console.log("TESTTT");
+  });

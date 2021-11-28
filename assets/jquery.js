@@ -105,3 +105,8 @@ $("#Function11Q button").on("click", function () {
 $("#Function12Q button").on("click", function () {
   $("#Function12Q .demo button").last().prop("disabled", false);
 });
+
+//Set a data-src attribute to a img element
+$("#Function13Q button").on("click", function () {
+  $("#Function13Q .demo img").attr("data-src", "example");
+});
