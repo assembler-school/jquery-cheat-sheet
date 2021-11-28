@@ -125,3 +125,8 @@ $("#Function15Q button").on("click", function () {
 $("#Function17Q button").on("click", function () {
   $("#Function17Q .demo img").fadeIn();
 });
+
+//Fade out an HTML element using jQuery
+$("#Function18Q button").on("click", function () {
+  $("#Function18Q .demo img").fadeOut();
+});
