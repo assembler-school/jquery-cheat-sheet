@@ -101,5 +101,21 @@ function animateitemfunctionJq() {
         inputvaluejq= $('input').first().val();
         console.log(inputvaluejq)
         alert(inputvaluejq)
+function displaynoneandblockElementfunctionIdJq(){
+    buttonTest('displaynoneandblockElementIdTestResultjq', 'callmebaby2')
+    let contentoft =$("<p></p>")
+    let contentoft1 =$("<p></p>")
+    contentoft.text("content 1").css("display", "none")
+    contentoft1.text("content 2").css("display", "none")
+    $("#displaynoneandblockElementIdTestResultjq").append(contentoft)
+    $("#displaynoneandblockElementIdTestResultjq").append(contentoft1)
+    $("#callmebaby2").on("click",()=>{
+        if (contentoft.css('display') == 'none' && contentoft1.css('display') == 'none' ){
+            contentoft.css('display', 'block')
+            contentoft1.css('display', 'block')
+        } else if(contentoft.css('display') == 'block' && contentoft1.css('display') == 'block' ){
+            contentoft.css('display', 'none')
+            contentoft1.css('display', 'none')
+        }
     })
 }

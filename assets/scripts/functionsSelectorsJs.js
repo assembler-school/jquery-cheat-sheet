@@ -95,6 +95,51 @@ function getElementbyidfunctionJs() {
         pOneId.style.fontWeight = 'bolder';
     })
 }
+  // Selectors
+  function displaynoneandblockElementfunctionIdJs(){
+    buttonTest('displaynoneandblockElementIdTestResultjs', 'callmebaby')
+    let content1= document.createElement("p")
+    content1.textContent ="content 1"
+    let content2= document.createElement("p")
+    content2.textContent="content 2"
+    content1.setAttribute("class", "contentdisplaynone")
+    content2.setAttribute("class", "contentdisplaynone")
+    let pr= document.getElementById("displaynoneandblockElementIdTestResultjs")
+    pr.appendChild(content1)
+    pr.appendChild(content2)
+    content1.style.display= "none"
+    content2.style.display= "none"
+    document.getElementById("callmebaby").addEventListener("click", ()=>{
+        if (content1.style.display == "none" && content2.style.display == "none"){
+            content1.style.display = "block"
+            content2.style.display= "block"
+            content2.style.color="red"
+            content1.style.display="green"
+        } else if( content1.style.display == "block" && content2.style.display == "block"){
+            content1.style.display = "none"
+            content2.style.display= "none"
+        }
+    })
+}
+
+function changehrefattributeElementfunctionIdJs(){
+    let a1=document.createElement("a")
+    let a2=document.createElement("a")
+    let a3=document.createElement("a")
+    a1.href="link1"
+    a1.textContent='<a href="link1">link 1</a>'
+    document.getElementById("changehrefattributeElementIdTestResultjs").appendChild(a1)
+    a2.textContent='<a href="link2">link 2</a>'
+    a3.textContent='<a href="link3">link 3</a>'
+    a2.href="link2"
+    document.getElementById("changehrefattributeElementIdTestResultjs").appendChild(a2)
+    a3.href="link3"
+    document.getElementById("changehrefattributeElementIdTestResultjs").appendChild(a3)
+    buttonTest('changehrefattributeElementIdTestResultjs', 'changehref')
+    document.getElementById("changehref").addEventListener("click", ()=>{
+        a1.textContent='<a href="linkchanged">link 1</a>'
+    })
+}
 
 function getOptionsfunctionJs() {
     buttonTest('getOptionsIdTestResultjs', 'getoptionsjs')
@@ -154,4 +199,27 @@ function animateitemfunctionJs() {
             animationHTML.style.animationDuration = '2s';
         }, 2000);
     })
+}
+
+function removeallitemsElementfunctionIdJs(){
+    let p1= document.createElement("p")
+    let p2= document.createElement("p")
+    let p3= document.createElement("p")
+    p1.textContent="content1"
+    p2.textContent="content2"
+    p3.textContent="content3"
+    document.getElementById("removeallitemsElementIdTestResultjs").appendChild(p1)
+    document.getElementById("removeallitemsElementIdTestResultjs").appendChild(p2)
+    document.getElementById("removeallitemsElementIdTestResultjs").appendChild(p3)
+    buttonTest('removeallitemsElementIdTestResultjs', 'removelementall')
+    document.getElementById("removelementall").addEventListener("click", ()=>{
+        p2.remove()
+    })
+}
+
+function displaynoneandblockElementfunctionIdJs() {
+    let content1 = document.createElement("p").textContent("content 1")
+    let content2 = document.createElement("p").textContent("content 2")
+    content1.setAttribute("class", "contentdisplaynone")
+    content2.setAttribute("class", "contentdisplaynone")
 }
