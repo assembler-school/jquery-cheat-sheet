@@ -248,3 +248,13 @@ document.addEventListener("keydown", (e)=>{
             par.style.color = "blue"
         })
     }
+
+    function  changeInputType(btn1, par){
+        $(par).append("<label for=cars>Choose a car</label><select name=cars id=cars class=cars><option value=Tesla>Tesla</option><option value=Ferrari>Ferrari</option>")
+  let k =  document.getElementById("cars")
+  k.addEventListener("change", (e)=> {
+        let x = document.createElement("p")
+        x.innerText = k.value
+        par.appendChild(x)
+    })
+    }

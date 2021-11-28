@@ -200,3 +200,14 @@ function formCreations(parBo, btn2){
         }
     })
     }
+
+    function selectChanges(btn2, parBo){
+        $(parBo).append("<label for=car>Choose a car</label><select name=car id=car class=car><option value=Tesla>Tesla</option><option value=Ferrari>Ferrari</option>")
+    $(".car").on({
+        change: function(){
+            let x = document.createElement("p")
+            $(x).text($(".car").val())
+            $(parBo).append(x)
+        }
+    })
+    }
