@@ -85,3 +85,8 @@ $("#Function7Q button").on("click", function () {
 $("#Function8Q button").on("click", function () {
   $("#Function8Q .demo p").addClass("bgPastelBlue");
 });
+
+//Remove a class to an HTML item
+$("#Function9Q button").on("click", function () {
+  $("#Function9Q .demo p").removeClass("bgPastelBlue");
+});

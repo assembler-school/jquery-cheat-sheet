@@ -79,3 +79,12 @@ document
     let pElement = document.querySelector("#Function8V .demo p");
     pElement.classList.add("bgPastelBlue");
   });
+
+//Remove a class to an HTML item
+
+document
+  .querySelector("#Function9V button")
+  .addEventListener("click", function () {
+    let pElement = document.querySelector("#Function9V .demo p");
+    pElement.classList.remove("bgPastelBlue");
+  });
