@@ -96,7 +96,7 @@ function getElementbyidfunctionJs() {
     })
 }
   // Selectors
-  function displaynoneandblockElementfunctionIdJs(){
+    function displaynoneandblockElementfunctionIdJs(){
     buttonTest('displaynoneandblockElementIdTestResultjs', 'callmebaby')
     let content1= document.createElement("p")
     content1.textContent ="content 1"
@@ -114,7 +114,7 @@ function getElementbyidfunctionJs() {
             content1.style.display = "block"
             content2.style.display= "block"
             content2.style.color="red"
-            content1.style.display="green"
+            content1.style.color="green"
         } else if( content1.style.display == "block" && content2.style.display == "block"){
             content1.style.display = "none"
             content2.style.display= "none"
@@ -217,9 +217,9 @@ function removeallitemsElementfunctionIdJs(){
     })
 }
 
-function displaynoneandblockElementfunctionIdJs() {
-    let content1 = document.createElement("p").textContent("content 1")
-    let content2 = document.createElement("p").textContent("content 2")
-    content1.setAttribute("class", "contentdisplaynone")
-    content2.setAttribute("class", "contentdisplaynone")
-}
+// function displaynoneandblockElementfunctionIdJs() {
+//     let content1 = document.createElement("p").textContent("content 1")
+//     let content2 = document.createElement("p").textContent("content 2")
+//     content1.setAttribute("class", "contentdisplaynone")
+//     content2.setAttribute("class", "contentdisplaynone")
+// }

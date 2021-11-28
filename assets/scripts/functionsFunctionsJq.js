@@ -1,11 +1,11 @@
-function createElementfunctionJq () {
+function createElementfunctionJq() {
     var el = $("<span>" + 'text ' + "<span>");
     $('#createElementIdTestResultjq').append(el);
 
 }
 
 function removeElementfunctionJq() {
-    buttonTest('removeElementIdTestResultjq',  "button-testjq")
+    buttonTest('removeElementIdTestResultjq', "button-testjq")
     setTimeout(() => {
         $("#button-testjq").remove();
     }, 3000);
@@ -16,7 +16,7 @@ function appendElementfunctionJq() {
     let el = $("<p>" + 'This is a P ' + "</p>");
     main.append(el)
     setTimeout(() => {
-        let span = $('<span>'+ 'this is a Span' +'</span>')
+        let span = $('<span>' + 'this is a Span' + '</span>')
         $(el).append(span)
     }, 3000);
 }
@@ -25,7 +25,7 @@ function prependElementfunctionJq() {
     var main = $('#prependElementIdTestResultjq')
     let el = $("<p>" + 'This is a P ' + "</p>");
     setTimeout(() => {
-        let span = $('<span>'+ 'this is a Span' +'</span>')
+        let span = $('<span>' + 'this is a Span' + '</span>')
         main.append(el).prepend(span)
     }, 3000);
 }
@@ -122,7 +122,7 @@ function removeDisabledfunctionJq() {
 
 function removeDataSrcfunctionJq() {
     buttonTest('removeDataSrcIdTestResultjq', 'removeDatasrcbtnjq')
-    let imageJq= $('<img>').attr('src', './assets/css/img/10592-EGO-LV1-6-Planet-Eclipse--68-Cal-Fire-Opal-gold---rot.jpg')
+    let imageJq = $('<img>').attr('src', './assets/css/img/10592-EGO-LV1-6-Planet-Eclipse--68-Cal-Fire-Opal-gold---rot.jpg')
     $('#removeDataSrcIdTestResultjq')
     imageJq.addClass('my-img')
     $('#removeDataSrcIdTestResultjq').append(imageJq)
@@ -163,12 +163,11 @@ function fadeInfunctionJq() {
     let el = $("<p>").text(" This is a P")
     el.attr('id', 'fadeInjq')
     $('#fadeInIdTestResultjq').append(el)
-    $("#fadeInjq").css('opacity' , '0');
+    $("#fadeInjq").css('opacity', '0');
 
     $('#fadeInbtnjq').on('click', function () {
-        $("#fadeInjq").css('transition' , 'opacity 3s');
-        $("#fadeInjq").css('opacity' , '100%');
-        // $('#fadeInjq').fadeIn("slow");
+        $("#fadeInjq").css('transition', 'opacity 3s');
+        $("#fadeInjq").css('opacity', '100%');
     })
 }
 
@@ -177,9 +176,9 @@ function fadeOutfunctionJq() {
     let el = $("<p>").text(" This is a P")
     el.attr('id', 'fadeoutjq')
     $('#fadeOutIdTestResultjq').append(el)
-    $("#fadeoutjq").css('opacity' , '0');
+    $("#fadeoutjq").css('opacity', '0');
 
     $('#fadeoutbtnjq').on('click', function () {
-        $('#fadeoutjq').fadeOut();("slow");
+        $('#fadeoutjq').fadeOut(); ("slow");
     })
 }

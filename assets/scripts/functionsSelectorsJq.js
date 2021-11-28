@@ -101,6 +101,9 @@ function animateitemfunctionJq() {
         inputvaluejq= $('input').first().val();
         console.log(inputvaluejq)
         alert(inputvaluejq)
+    })
+}
+
 function displaynoneandblockElementfunctionIdJq(){
     buttonTest('displaynoneandblockElementIdTestResultjq', 'callmebaby2')
     let contentoft =$("<p></p>")
@@ -111,11 +114,42 @@ function displaynoneandblockElementfunctionIdJq(){
     $("#displaynoneandblockElementIdTestResultjq").append(contentoft1)
     $("#callmebaby2").on("click",()=>{
         if (contentoft.css('display') == 'none' && contentoft1.css('display') == 'none' ){
+            contentoft.css('color', 'red')
             contentoft.css('display', 'block')
+            contentoft1.css('color', 'green')
             contentoft1.css('display', 'block')
         } else if(contentoft.css('display') == 'block' && contentoft1.css('display') == 'block' ){
             contentoft.css('display', 'none')
             contentoft1.css('display', 'none')
         }
+    })
+}
+
+function changehrefattributeElementfunctionIdJq(){
+    let a1 = $('<a href="link1"></a>')
+    let a2 = $('<a href="link1"></a>')
+    let a3 = $('<a href="link1"></a>')
+    a1.text('<a href="link1">link 1</a>')
+    a2.text('<a href="link2">link 2</a>')
+    a3.text('<a href="link2">link 2</a>')
+    $("#changehrefattributeElementIdTestResultjq").append(a1)
+    $("#changehrefattributeElementIdTestResultjq").append(a2)
+    $("#changehrefattributeElementIdTestResultjq").append(a3)
+    buttonTest('changehrefattributeElementIdTestResultjq', 'changehrefjq')
+    $("#changehrefjq").on("click", ()=>{
+        a1.text('<a href="linkchanged">link changed</a>')
+    })
+}
+
+function removeallitemsElementfunctionIdJq(){
+    let p1= $("<p>content1</p>")
+    let p2= $("<p>content2</p>")
+    let p3= $("<p>content3</p>")
+    $("#removeallitemsElementIdTestResultjq").append(p1)
+    $("#removeallitemsElementIdTestResultjq").append(p2)
+    $("#removeallitemsElementIdTestResultjq").append(p3)
+    buttonTest('removeallitemsElementIdTestResultjq', 'removelementalljq')
+    $("#removelementalljq").on("click", ()=>{
+        p1.remove()
     })
 }
