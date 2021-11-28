@@ -101,7 +101,6 @@ function changSelectInputElementfunctionIdJq() {
 }
 
 function posiMouseElementfunctionIdJq() {
-    // $("#outer").mouseover(function () { })
     let boton = $("<button>mouseoverinJQ</button>")
     $("#posiMouseElementIdTestResultjq").append(boton)
     $("#posiMouseElementIdTestResultjq").on("mouseover", () => {
@@ -123,6 +122,7 @@ function checkboxElementfunctionIdJq() {
         }
     })
 }
+
 function ullistElementfunctionIdJq() {
     let uljq = $("<ul></ul>")
     let lijq1 = $("<li>·option 1</li>")
