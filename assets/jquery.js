@@ -118,5 +118,10 @@ $("#Function14Q button").on("click", function () {
 
 //Hide an HTML element on click (display: none)
 $("#Function15Q button").on("click", function () {
-  $("#Function15Q .demo button").toggle();
+  $("#Function15Q .demo button").hide();
+});
+
+//Show an HTML element on click (display: block)
+$("#Function16Q button").on("click", function () {
+  $("#Function16Q .demo button").last().show();
 });

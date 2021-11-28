@@ -146,3 +146,14 @@ document
     let pElement = document.querySelector("#Function15V .demo button");
     pElement.style.display = "none";
   });
+
+//Show an HTML element on click (display: block)
+
+document
+  .querySelector("#Function16V button")
+  .addEventListener("click", function () {
+    let pElement = document.querySelector(
+      "#Function16V .demo button:last-child"
+    );
+    pElement.style.display = "block";
+  });

@@ -554,13 +554,56 @@
                 <pre>
                   <code>
                     $("button").on("click", function () {
-                      $(this).toggle();
+                      $(this).hide();
                     });
                   </code>
                 </pre>
               </div>
               <div class="demo">
                 <button>Press me</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">
+            Show an HTML element on click (display: block)
+          </button>
+          <div class="content">
+            <div id="Function16V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let buttonElement = document.querySelector("button");
+                    buttonElement.addEventListener("click", function (){
+                      let otherButton = document.querySelector("#otherButton");
+                      otherButton.style.display = "block";
+                    })
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <button style="display: none">Surprise!</button>
+              </div>
+            </div>
+            <div id="Function16Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("button").on("click", function () {
+                      $("#otherButton").show();
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <button style="display: none">Surprise!</button>
               </div>
             </div>
           </div>
