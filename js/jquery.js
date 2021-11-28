@@ -25,8 +25,7 @@ eventsList[1].jqueryMethod=function(){
     htmlItemClickedjquery();
 }
 eventsList[1].jquerySnippet=`<code>
-                                $("item").on
-                                ("click",function(){})
+                                $("item").on("click",function(){})
                             </code>`
 //item has benn double clicked
 function htmlItemDoubleClickedjquery(){
@@ -46,8 +45,7 @@ eventsList[2].jqueryMethod=function(){
     htmlItemDoubleClickedjquery();
 }
 eventsList[2].jquerySnippet=`<code>
-                                $("item").on
-                                ("dblclick",function(){})
+                                $("item").on("dblclick",function(){})
                             </code>`
 //user presses a key on the keyboard 
 function pressKeyjquery(){
@@ -66,8 +64,7 @@ eventsList[3].jqueryMethod=function(){
     pressKeyjquery();
 }
 eventsList[3].jquerySnippet=`<code>
-                                $("item").on
-                                ("keypress",function(){})
+                                $("item").on("keypress",function(){})
                             </code>`
 //user moves the mouse cursor
 function movesCursorjquery(){
@@ -86,8 +83,7 @@ eventsList[4].jqueryMethod=function(){
     movesCursorjquery();
 }
 eventsList[4].jquerySnippet=`<code>
-                            $("item").on
-                            ("mousemove",function(){})
+                            $("item").on("mousemove",function(){})
                         </code>`
 //user changes a value of an text input
 function changeValueInputjquery(){
@@ -108,9 +104,10 @@ eventsList[5].jqueryMethod=function(){
     changeValueInputjquery();
 }
 eventsList[5].jquerySnippet=`<code>
-                            $("item").on
-                            ("change",function(){})
-                            p.text("You changed the value to "+input.val())!)
+                            $("item").on("change",function(){
+                                p.text("You changed the value to "+input.val())!)
+
+                            })
                         </code>`
 //image is loaded
 function imageIsLoadedjquery(){
@@ -171,8 +168,9 @@ eventsList[8].jqueryMethod=function(){
 }
 eventsList[8].jquerySnippet=`<code>
                             $("item").on
-                            ("submit",function(){})
-                            p.text("Form submited"!)
+                            ("submit",function(){
+                                p.text("Form submited"!)
+                            })
                         </code>`
 //user changes the option of a select element
 function changeValueSelectjquery(){
@@ -195,8 +193,9 @@ eventsList[9].jqueryMethod=function(){
 }
 eventsList[9].jquerySnippet=`<code>
                             $("item").on
-                            ("change",function(){})
-                            p.text("You selected the"+item.val()!)
+                            ("change",function(){
+                                p.text("You selected the"+item.val()!)
+                            })
                         </code>`
 //When you position the mouse over an element
 function mouseOverjquery(){
@@ -219,9 +218,10 @@ eventsList[10].jqueryMethod=function(){
     mouseOverjquery();
 }
 eventsList[10].jquerySnippet=`<code>
-                            $("item").on
-                            ("mouseover",function(){})
-                            p.text("Hi world"!)
+                            $("item").on("mouseover",function(){
+                                p.text("Hi world"!)
+
+                            })
                         </code>`
 //When a checkbox is checked or unchecked
 function checkboxCheckedJquery(){
@@ -247,9 +247,10 @@ eventsList[11].jqueryMethod=function(){
     checkboxCheckedJquery();
 }
 eventsList[11].jquerySnippet=`<code>
-                            $("item").on
-                            ("change",function(){})
-                            if(checkbox.is(":checked")){
+                            $("item").on("change",function(){
+                                if(checkbox.is(":checked"))
+
+                            })
                         </code>`
 //When a ul list item is clicked, show the item that was clicked
 function itemListClickedjquery(){
@@ -278,8 +279,7 @@ eventsList[12].jqueryMethod=function(){
     itemListClickedjquery();
 }
 eventsList[12].jquerySnippet=`<code>
-                             $("elementlist").each(
-                                 function(i,element){
+                             $("elementlist").each(function(i,element){
                                 $(element).on("click",function(){
                                 p.text("You selected the"+ element.textcontent)
                         </code>`
@@ -758,7 +758,7 @@ function getIdHtmlElementJquery(){
 
     const btn=$("<button>Click me to get the id and change the color!</button>")
     btn.on("click", function(){
-        $("#pId").css("color","green");
+        $("#pId").text("picked!")
     })
     $("#jqueryBtn").remove()
     demo.append(btn);
@@ -768,7 +768,7 @@ selectorsList[4].jqueryMethod=function(){
     getIdHtmlElementJquery();
 }
 selectorsList[4].jquerySnippet=`<code>
-                         $("#myId").css("color","green");
+                         $("#myId").text("picked!");
                     </code>`
     
 //Get all the elements that have a certain class and the display property of none 

@@ -26,27 +26,33 @@ function createModal(obj){
                             <main id="modal-main">
                                 <section class="vanilla">
                                     <h2>Vanilla JS</h2>
-                                    <div class="demo">
+                                    <div class="demo5">
                                     <p class="snippet">${obj.vanillaSnippet}</p>
-                                        <!--VanillaDemo-->
+                                    <!--VanillaDemo-->
+                                    <div class="demo"></div>
                                     </div>
+                                    <img src="../assets/img/snippet.png" class="modal-img" id="vanillaMiniBoard">
                                 </section>
+                                    <img src="../assets/img/line-chalked.png" id="modal-line">
                                     
-                                    <img src="../assets/img/modal_prog.svg" id="modal-img">
                                     
                                 <section class="jquery">
                                     <h2>jQuery</h2>
-                                    <div class="demo">
+                                    <div class="demo5">
                                     <p class="snippet">${obj.jquerySnippet}</p>
-                                        <!--jQueryDemo-->
+                                    <!--jQueryDemo-->
+                                    <div class="demo">
+                                    
                                     </div>
+                                    </div>
+                                    <img src="../assets/img/snippet.png" class="modal-img" id="jqueryMiniBoard">
                                 </section>
                             </main>
                         </div>
                     </div>
                                     `)
                                     //event listener if click out the modal and exit button
-                                    $("#exit").on("click", removeModal);
+                                    $("#exit").on("click", animateBeforeClose);
                                     $("#background-modal").on("click",removeModal);
                                     //create button example
                                     const buttonVanilla=$("<button id='vanillaBtn'>Press me to see how it works!</button>");

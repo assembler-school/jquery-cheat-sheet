@@ -37,8 +37,7 @@ eventsList[1].vanillaMethod=function(){
     htmlItemClickedVanilla();
 }
 eventsList[1].vanillaSnippet=`<code>
-                                    example.addEventListener
-                                    ("click",function(){}
+                                    example.addEventListener("click",=>(){}
                                 </code>`
 
 //item has been double clicked
@@ -60,8 +59,7 @@ eventsList[2].vanillaMethod=function(){
     htmlItemDoubleClickedVanilla();
 }
 eventsList[2].vanillaSnippet=`<code>
-                                    example.addEventListener
-                                    ("dblclick",function(){}
+                                    example.addEventListener("dblclick",()=>{}
                                 </code>`
 //user presses a key on the keyboard 
 function pressKeyVanilla(){
@@ -80,8 +78,7 @@ eventsList[3].vanillaMethod=function(){
     pressKeyVanilla();
 }
 eventsList[3].vanillaSnippet=`<code>
-                                    example.addEventListener
-                                    ("keypress",function(){}
+                                    example.addEventListener("keypress",()=>{}
                                 </code>`
 //user moves the mouse cursor
 function movesCursorVanilla(){
@@ -100,8 +97,7 @@ eventsList[4].vanillaMethod=function(){
     movesCursorVanilla();
 }
 eventsList[4].vanillaSnippet=`<code>
-                                    example.addEventListener
-                                    ("mousemove",function(){}
+                                    example.addEventListener("mousemove",()=>{}
                                 </code>`
 //user changes a value of an text input
 function changeValueInputVanilla(){
@@ -124,8 +120,7 @@ eventsList[5].vanillaMethod=function(){
     changeValueInputVanilla();
 }
 eventsList[5].vanillaSnippet=`<code>
-                                    input.addEventListener
-                                    ("change",function(){}
+                                    input.addEventListener("change",()=>{}
                                 </code>`
 //image is loaded
 function imageIsLoadedVanilla(){
@@ -145,8 +140,7 @@ eventsList[6].vanillaMethod=function(){
     imageIsLoadedVanilla();
 }
 eventsList[6].vanillaSnippet=`<code>
-                                    img.addEventListener
-                                    ("load",function(){}
+                                    img.addEventListener("load",()=>{}
                                 </code>`
 //image fails to load
 function imageFailsVanilla(){
@@ -166,8 +160,7 @@ eventsList[7].vanillaMethod=function(){
     imageFailsVanilla();
 }
 eventsList[7].vanillaSnippet=`<code>
-                                    img.addEventListener
-                                    ("error",function(){}
+                                    img.addEventListener("error",()=>{}
                                 </code>`
 //form is submitted
 function formSubmitVanilla(){
@@ -188,8 +181,7 @@ eventsList[8].vanillaMethod=function(){
     formSubmitVanilla();
 }
 eventsList[8].vanillaSnippet=`<code>
-                                    input.addEventListener
-                                    ("submit",function(){}
+                                    input.addEventListener("submit",()=>{}
                                 </code>`
 //user changes the option of a select element
 function changeValueSelectVanilla(){
@@ -217,8 +209,7 @@ eventsList[9].vanillaMethod=function(){
     changeValueSelectVanilla();
 }
 eventsList[9].vanillaSnippet=`<code>
-                                input.addEventListener
-                                ("change",function(){}
+                                input.addEventListener("change",()=>{}
                             </code>`
 //When you position the mouse over an element
 function mouseOverVanilla(){
@@ -241,8 +232,7 @@ function mouseOverVanilla(){
         mouseOverVanilla();
     }
     eventsList[10].vanillaSnippet=`<code>
-                                    example.addEventListener
-                                    ("mouseover",function(){}
+                                    example.addEventListener("mouseover",()=>{}
                                 </code>`
 
 //When a checkbox is checked or unchecked
@@ -271,8 +261,7 @@ eventsList[11].vanillaMethod=function(){
     checkboxVanilla();
 }
 eventsList[11].vanillaSnippet=`<code>
-                                    input.addEventListener
-                                    ("change",function(){
+                                    input.addEventListener("change",()=>{
                                         if(input.checked)
                                     }
                                 </code>`
@@ -302,8 +291,7 @@ eventsList[12].vanillaMethod=function(){
     itemListClickedVanilla();
 }
 eventsList[12].vanillaSnippet=`<code>
-                                    input.addEventListener
-                                    ("change",function(){
+                                    input.addEventListener("change",()=>{
                                         if(input.checked)
                                     }
                                 </code>`
@@ -327,8 +315,7 @@ functionsList[0].vanillaMethod=function(){
     createHtmlElementVanilla();
 }
 functionsList[0].vanillaSnippet=`<code>
-                                    let element=
-                                    document.CreateElement("div");
+                                    element=document.CreateElement("div");
                                 </code>`
 //Remove an HTML element
 function removeHtmlElementVanilla(){
@@ -349,8 +336,7 @@ functionsList[1].vanillaMethod=function(){
     removeHtmlElementVanilla();
 }
 functionsList[1].vanillaSnippet=`<code>
-                                    let element=
-                                    element.remove();
+                                   element=element.remove();
                                 </code>`
 //Append an HTML element
 function appendHtmlElementVanilla(){
@@ -414,8 +400,7 @@ functionsList[4].vanillaMethod=function(){
     createAfterHtmlElementVanilla();
 }
 functionsList[4].vanillaSnippet=`<code>
-                                    element.insertAdjacentElement
-                                    ("afterend",myDiv);
+                                    p.insertAdjacentElement("afterend",myDiv);
                                 </code>`
 //Create and add an HTML element before another element 
 function createBeforeHtmlElementVanilla(){
@@ -436,8 +421,7 @@ functionsList[5].vanillaMethod=function(){
     createBeforeHtmlElementVanilla();
 }
 functionsList[5].vanillaSnippet=`<code>
-                                    element.insertAdjacentElement
-                                    ("beforebegin",myDiv);;
+                                   p.insertAdjacentElement("beforebegin",myDiv);;
                                 </code>`
 //Clone an HTML element within other element
 function cloneHtmlElementVanilla(){
@@ -720,7 +704,7 @@ selectorsList[0].vanillaMethod=function(){
     changeStyleHtmlElementVanilla();
 }
 selectorsList[0].vanillaSnippet=`<code>
-                                   const list=document.querySelectorAll(".list");
+                                   list=document.querySelectorAll(".list");
                                     list.forEach(element=>{
                                         element.style.color="brown";
                                     })
@@ -835,8 +819,7 @@ selectorsList[4].vanillaMethod=function(){
     getIdHtmlElementVanilla();
 }
 selectorsList[4].vanillaSnippet=`<code>
-                                const element=
-                                document.getElementById("myDiv");  
+element=document.getElementById("myDiv");  
                                 </code>`
 //Get all the elements that have a certain class and the display property of none                                 
 function hideCollectionHtmlElementVanilla(){
@@ -904,8 +887,7 @@ selectorsList[6].vanillaMethod=function(){
     getOptionsVanilla();
 }
 selectorsList[6].vanillaSnippet=`<code>
-                                input.addEventListener
-                                ("change",function(){}
+                                input.addEventListener("change",()=>{}
                             </code>`
 //Change an attribute of a first element
 function changeAttributeFirstElementHtmlElementVanilla(){
@@ -918,7 +900,7 @@ function changeAttributeFirstElementHtmlElementVanilla(){
     p1.innerText="Second Element"
     exampleBtn.innerText="Click me to edit the first element attribute";
     exampleBtn.addEventListener("click", function(){
-        p.setAttribute("style","color:green");
+        p.setAttribute("style","color:blue");
     })
     demo.removeChild(demo.lastChild);
     demo.appendChild(exampleBtn);
@@ -930,8 +912,7 @@ selectorsList[7].vanillaMethod=function(){
     changeAttributeFirstElementHtmlElementVanilla();
 }
 selectorsList[7].vanillaSnippet=`<code>
-                            element.setAttribute
-                            ("style","color:green")
+                            element.setAttribute("style","color:blue")
                                 </code>`
 //Show an alert with the value of the first input of the page                                
 function alertOnChangeInputVanilla(){
@@ -954,7 +935,6 @@ selectorsList[8].vanillaMethod=function(){
     alertOnChangeInputVanilla(); 
 }
 selectorsList[8].vanillaSnippet=`<code>
-                            element.setAttribute
                             input.addEventListener("change",()=>{
                                 alert("you changed the first input of the page")
                             })
@@ -986,8 +966,8 @@ selectorsList[9].vanillaMethod=function(){
     removeItemsFromSpecificSelectorVanilla();
 }
 selectorsList[9].vanillaSnippet=`<code>
-                                   const listItems=document.querySelectorAll(".list");
-                                    listItems.forEach(element=>{
+                                   list=document.querySelectorAll(".list");
+                                    list.forEach(element=>{
                                         element.remove()
                                     });
                                 </code>`

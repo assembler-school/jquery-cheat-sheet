@@ -6,7 +6,10 @@
     --section-functions:#0a9496a6;
     --section-selectors:#4fb3ab9a;
 }
-
+@font-face {
+    font-family: 'blackboardfont'; 
+    src: url(../assets/fonts/KGTenThousandReasons.ttf); /*URL to font*/
+}
 body{
     background-color:var(--bodyBackground);
     color:var(--text);
@@ -96,16 +99,18 @@ footer{
     background-color:rgba(0, 0, 0, 0.431)
 }
 #modal{
+    font-family:"blackboardfont",'Roboto', sans-serif;
     position: absolute;
     left: 30%;
     top: 25%; 
-    width:800px;
-    height: 600px;
+    width:1250px;
+    height: 650px;
     background-image:url(../assets/img/modal-bg.png);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     z-index:3;
+    cursor:url("../assets/cursors/Handwriting.cur"),auto;
 }
 #modal header{
     text-align: center;
@@ -133,26 +138,43 @@ article{
 #modal #exit:hover{
     width:70px;
 }
-#modal #modal-img{
-    width:100px;
-    height: 100px;
+/* IMAGES */
+#modal #modal-line{
+    position:absolute;
+    height: 400px;
+    top:100px;
+    left:550px;
 }
+/* SNIPPET MINI BOARD */
+#modal .modal-img{
+    width:500px;
+    height: 400px;
+    top:100px;
+    z-index: -1;
+}
+#modal #vanillaMiniBoard{
+    position:absolute;
+    left:100px;
+}
+#modal #jqueryMiniBoard{
+    position:absolute;
+    right:30px;
+}
+/* SNIPPET MINI BOARD */
 #modal-main{
-    justify-content: center;
+    justify-content: space-around;
 }
 #modal section{
     margin:10px 10px;
-    width:260px;
-    text-align: center;
+   
+    text-align: left;
     padding:0;
 }
-
-/* Division line */
-#modal section #jquery::after{
-    border-left:2px solid black;
+#modal section h2{
+    text-align:center;
 }
 #modal section p{
-    font-size:15px;
+    font-size:13px;
 }
 #modal section button{
     padding:10px;
@@ -167,13 +189,18 @@ article{
     margin:0 0 10px 0;
     
 }
+#modal .demo5{
+    display:flex;
+    flex-direction: column;
+    gap: 60px;
+}
 #modal section button:hover{
     opacity: 0.8;
     background-color: #FFD60A;
 }
-
 #modal .snippet{
     height: 100px;
+    z-index: 4;
 }
 #modal .imgExample{
     width:70px;
