@@ -1,10 +1,20 @@
 //imports+
+
+jQuery(function(){
+    $("section").hide()
+    $("section").eq(0).fadeIn(300)
+    $("section").eq(1).fadeIn(600)
+    $("section").eq(2).fadeIn(900)
+    $("section").eq(3).fadeIn(1200)
+    
+})
 //declarations
 let eventsList=[];
 let functionsList=[];
 let selectorsList=[];
 var times=0;
 var timesquery=1;
+//onload
 //Modal creation
 function createModal(obj){
     times=0;
@@ -71,7 +81,7 @@ function removeModal(){
 
 function animateBeforeClose(){
     $("#modal").addClass("animation");
-    setTimeout(removeModal,600)
+    setTimeout(removeModal,500)
 
 }
 function animateAfterStart(e){
