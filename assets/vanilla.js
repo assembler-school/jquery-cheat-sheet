@@ -127,5 +127,13 @@ document
   .addEventListener("click", function () {
     let pElement = document.querySelector("#Function13V .demo img");
     pElement.setAttribute("data-src", "example");
-    console.log("TESTTT");
+  });
+
+//Remove the data-src attribute of the img element
+
+document
+  .querySelector("#Function14V button")
+  .addEventListener("click", function () {
+    let pElement = document.querySelector("#Function14V .demo img");
+    pElement.removeAttribute("data-src");
   });

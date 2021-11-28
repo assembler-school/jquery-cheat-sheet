@@ -110,3 +110,8 @@ $("#Function12Q button").on("click", function () {
 $("#Function13Q button").on("click", function () {
   $("#Function13Q .demo img").attr("data-src", "example");
 });
+
+//Remove the data-src attribute of the img element
+$("#Function14Q button").on("click", function () {
+  $("#Function14Q .demo img").removeAttr("data-src", "example");
+});
