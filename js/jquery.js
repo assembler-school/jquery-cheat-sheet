@@ -112,24 +112,209 @@ eventsList[5].jquerySnippet=`<code>
                             p.text("You changed the value to "+input.val())!)
                         </code>`
 //image is loaded
-function imageIsLoadedjquery(){}
+function imageIsLoadedjquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p></p>`)
+    const img=$("<img src='../assets/img/imageloaded.png'>");
+    img.addClass("imgExample")
+       img.ready(function(){
+           p.text(`The img was loaded!`);
+           demo.append(img)
+           demo.append(p)
+        })
+}
+eventsList[6].jqueryMethod=function(){
+    imageIsLoadedjquery();
+}
+eventsList[6].jquerySnippet=`<code>
+                            $("item").ready(function(){
+                                p.text("The img was loaded!");
+                            })
+                        </code>`
 //image fails to load
-function imageFailsjquery(){}
+function imageFailsjquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p></p>`)
+    const img=$("<img src='../assets/img/imageloade.png'>");
+    img.addClass("imgExample")
+       img.on("error",function(){
+           p.text(`img failed to load!`),
+          demo.append(img),
+          demo.append(p)
+
+       })
+}
+eventsList[7].jqueryMethod=function(){
+    imageFailsjquery();
+}
+eventsList[7].jquerySnippet=`<code>
+                            $("item").ready(function(){
+                                p.text("img failed to load!");
+                            })
+                        </code>`
 //form is submitted
-function formSubmitjquery(){}
+function formSubmitjquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p></p>`)
+    const input=$("<input type='submit' value='Send form'>");
+
+    input.on("click",function(e){
+        e.preventDefault()
+        p.text(`You submit the form!`)
+        demo.append(p)
+    })
+    demo.append(input);
+}
+eventsList[8].jqueryMethod=function(){
+    formSubmitjquery();
+}
+eventsList[8].jquerySnippet=`<code>
+                            $("item").on
+                            ("submit",function(){})
+                            p.text("Form submited"!)
+                        </code>`
 //user changes the option of a select element
-function changeValueSelectjquery(){}
+function changeValueSelectjquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p></p>`)
+    const select=$("<select>");
+    for(let i=1;i<3;i++){
+        const option=$(`<option>option-${i}</option>`)
+        select.append(option);
+    }
+    select.on("change",function(e){
+        
+        p.text(`You selected the ${select.val()}!`)
+        demo.append(p)
+    })
+    demo.append(select);
+}
+eventsList[9].jqueryMethod=function(){
+    changeValueSelectjquery();
+}
+eventsList[9].jquerySnippet=`<code>
+                            $("item").on
+                            ("change",function(){})
+                            p.text("You selected the"+item.val()!)
+                        </code>`
 //When you position the mouse over an element
-function mouseOverjquery(){}
+function mouseOverjquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p></p>`)
+    const btn=$("<button>Move the cursor around me!</button>");
+    
+    btn.on("mouseover",function(e){
+        
+        p.text(`You are moving the cursor around me!`)
+        demo.append(p)
+    })
+    btn.on("mouseout",function(e){
+        p.text(`You are NOT moving the cursor around me!`)
+    })
+    $("#jqueryBtn").remove();
+    demo.append(btn);
+}
+eventsList[10].jqueryMethod=function(){
+    mouseOverjquery();
+}
+eventsList[10].jquerySnippet=`<code>
+                            $("item").on
+                            ("mouseover",function(){})
+                            p.text("Hi world"!)
+                        </code>`
 //When a checkbox is checked or unchecked
-function checkboxjquJquery(){}
+function checkboxCheckedJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p></p>`)
+    const btn=$("<button>Check and uncheck!</button>")
+    const checkbox=$("<input type='checkbox'>")
+    checkbox.on("change",function(e){
+        if(checkbox.is(":checked")){
+            p.text(`The checkbox is on!`)
+            demo.append(p)
+
+        }else{
+            p.text(`The checkbox is off!`)
+        }
+
+    })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(checkbox)
+}
+eventsList[11].jqueryMethod=function(){
+    checkboxCheckedJquery();
+}
+eventsList[11].jquerySnippet=`<code>
+                            $("item").on
+                            ("change",function(){})
+                            if(checkbox.is(":checked")){
+                        </code>`
 //When a ul list item is clicked, show the item that was clicked
-function itemListClickedjquery(){}
+function itemListClickedjquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p></p>`)
+    const ul=$("<ul>");
+    const option1=$(`<li>option1</li>`)
+    const option2=$(`<li>option2</li>`)
+        $("li").each(function(idx,element){
+            element.on("click",function(){
+                p.text(`You selected the ${element}!`)
+                demo.append(p)
+    
+            })
+    })
+    demo.append(ul);
+    ul.append(option1)
+    ul.append(option2)
+}
+eventsList[12].jqueryMethod=function(){
+    itemListClickedjquery();
+}
+eventsList[12].jquerySnippet=`<code>
+                             $("elementlist").each(
+                                 function(i,element){
+                                element.on("click",function(){
+                                p.text("You selected the"+ element)
+                        </code>`
 //Functions section
 //Create an HTML element
-function createHtmlElementJquery(){}
+function createHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p></p>`)
+    const btn=$("<button>Click me to create a paragraph</button>")
+        btn.on("click", function(){
+            p.text("Hi world!")
+            demo.append(p)
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+}
+functionsList[0].jqueryMethod=function(){
+    createHtmlElementJquery();
+}
+functionsList[0].jquerySnippet=`<code>
+                             $("&lt;p&gt;Hello world!&lt;/p&gt;")
+                        </code>`
 //Remove an HTML element
-function removeHtmlElementJquery(){}
+function removeHtmlElementJquery(){
+    const demo=$(".demo").eq(1)
+    const p=$(`<p>Dont delete me please :'(</p>`)
+    const btn=$("<button>Click me to delete the paragraph</button>")
+        btn.on("click", function(){
+            p.text("Hi world!")
+            p.remove()
+        })
+    $("#jqueryBtn").remove()
+    demo.append(btn);
+    demo.append(p);
+}
+functionsList[1].jqueryMethod=function(){
+removeHtmlElementJquery();
+}
+functionsList[1].jquerySnippet=`<code>
+                         $(element).remove()
+                    </code>`
 //Append an HTML element
 function appendHtmlElementJquery(){}
 //Prepend an HTML element 

@@ -227,11 +227,11 @@ function mouseOverVanilla(){
     const p=document.createElement("p");
     exampleBtn.innerText="Move the cursor around me!"
     exampleBtn.addEventListener("mouseover",(e)=>{
-            p.innerText=`you moving the mouse over me!`
+            p.innerText=`You are moving the cursor!`
             demo.appendChild(p)
     })
     exampleBtn.addEventListener("mouseout",(e)=>{
-        p.innerText=`you NOT moving the mouse over me!`
+        p.innerText=`you are NOT moving the cursor around me!`
         demo.appendChild(p)
     })
     demo.removeChild(demo.lastChild);
@@ -281,12 +281,13 @@ function itemListClickedVanilla(){
     const demo = document.getElementsByClassName("demo")[0];
     const exampleBtn = document.createElement("button");
     const ul = document.createElement("ul");
+    const p=document.createElement("p");
     exampleBtn.innerText="Click one list item!";
     for(let i=1;i<3;i++){
         const li = document.createElement("li");
         li.innerText="item-"+i;
         li.addEventListener("click",function(){
-            p.innerText=`You selected the${li.innerText}`
+            p.innerText=`You selected the ${li.innerText}`
             demo.appendChild(p)
         })
         ul.appendChild(li);
