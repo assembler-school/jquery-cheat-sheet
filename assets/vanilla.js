@@ -88,3 +88,12 @@ document
     let pElement = document.querySelector("#Function9V .demo p");
     pElement.classList.remove("bgPastelBlue");
   });
+
+//Toggle a class to an HTML item
+
+document
+  .querySelector("#Function10V button")
+  .addEventListener("click", function () {
+    let pElement = document.querySelector("#Function10V .demo p");
+    pElement.classList.toggle("bgPastelBlue");
+  });

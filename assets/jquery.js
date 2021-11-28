@@ -90,3 +90,8 @@ $("#Function8Q button").on("click", function () {
 $("#Function9Q button").on("click", function () {
   $("#Function9Q .demo p").removeClass("bgPastelBlue");
 });
+
+//Toggle a class to an HTML item
+$("#Function10Q button").on("click", function () {
+  $("#Function10Q .demo p").toggleClass("bgPastelBlue");
+});
