@@ -1,4 +1,3 @@
-
 var allFunctions = [
     {
         title: `Create Element`,
