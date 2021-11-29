@@ -253,3 +253,14 @@ document
     let input = document.querySelectorAll("#Selector9V input")[0].value;
     alert(input);
   });
+
+//Remove all items from a specific selector
+
+document
+  .querySelector("#Selector10V button")
+  .addEventListener("click", function () {
+    let pElements = document.querySelectorAll("#Selector10V p");
+    pElements.forEach((element) => {
+      element.remove();
+    });
+  });

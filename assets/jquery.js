@@ -192,3 +192,8 @@ $("#Selector8Q button").on("click", function () {
 $("#Selector9Q button").on("click", function () {
   alert($("#Selector9Q input:first").val());
 });
+
+//Remove all items from a specific selector
+$("#Selector10Q button").on("click", function () {
+  $("#Selector10Q p").remove();
+});

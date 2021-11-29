@@ -1092,6 +1092,52 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Remove all items from a specific selector
+          </button>
+          <div class="content">
+            <div id="Selector10V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let pElements = document.querySelectorAll("p");
+                    pElements.forEach((element) => {
+                      element.remove();
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p>I am the first paragraph</p>
+                <p>I am the second parapgraph</p>
+                <p>I am the third paragraph</p>
+                <p>I am the fourth paragraph</p>
+              </div>
+            </div>
+            <div id="Selector10Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("p").remove();
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p>I am the first paragraph</p>
+                <p>I am the second parapgraph</p>
+                <p>I am the third paragraph</p>
+                <p>I am the fourth paragraph</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="sectionDiv">
         <h2>Events</h2>
