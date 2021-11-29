@@ -316,3 +316,14 @@ document
       span.innerText = event.pageX + ", " + event.pageY;
     });
   });
+
+//Value changed on text input
+document
+  .querySelector("#Event6V button")
+  .addEventListener("click", function () {
+    let input = document.querySelector("#Event6V input");
+    let span = document.querySelector("#Event6V span");
+    input.addEventListener("input", function (event) {
+      span.innerText = event.target.value;
+    });
+  });

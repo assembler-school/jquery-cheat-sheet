@@ -234,3 +234,10 @@ $("#Event5Q button").on("click", function () {
     $("#Event5Q span").text(event.pageX + ", " + event.pageY);
   });
 });
+
+//Value changed on text input
+$("#Event6Q button").on("click", function () {
+  $("#Event6Q input").on("input", function (event) {
+    $("#Event6Q span").text(event.target.value);
+  });
+});
