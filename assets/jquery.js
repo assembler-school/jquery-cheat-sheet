@@ -214,3 +214,8 @@ $("#Event1Q button").on("click", function () {
 $("#Event2Q button").on("click", function () {
   $(this).text($(this).text() + " Clicked");
 });
+
+//HTML element clicked
+$("#Event3Q button").on("dblclick", function () {
+  $(this).text($(this).text() + " Double clicked");
+});

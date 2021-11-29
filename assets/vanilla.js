@@ -288,3 +288,11 @@ document
     let button = document.querySelector("#Event2V button");
     button.innerText += " Clicked";
   });
+
+//HTML element double clicked
+document
+  .querySelector("#Event3V button")
+  .addEventListener("dblclick", function () {
+    let button = document.querySelector("#Event3V button");
+    button.innerText += " Double clicked";
+  });

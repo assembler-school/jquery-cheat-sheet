@@ -1224,6 +1224,46 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            HTML item double clicked
+          </button>
+          <div class="content">
+            <div id="Event3V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    document.querySelector("button").addEventListener("dblclick", function () {
+                      let button = document.querySelector("button");
+                      button.innerText += " Double clicked";
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+              </div>
+            </div>
+            <div id="Event3Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("button").on("dblclick", function () {
+                      $(this).text($(this).text() + " Double clicked");
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>Made at Assembler School</footer>
