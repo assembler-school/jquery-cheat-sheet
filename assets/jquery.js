@@ -182,3 +182,8 @@ $("#Selector7Q button").on("click", function () {
   let selectedOption = $("#Selector7Q select").val();
   $("#Selector7Q span").text(selectedOption);
 });
+
+//Change the href attribute of the first element
+$("#Selector8Q button").on("click", function () {
+  $("#Selector8Q a:first").attr("href", "https://duckduckgo.com/");
+});

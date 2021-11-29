@@ -1012,6 +1012,48 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Change the href attribute of the first element
+          </button>
+          <div class="content">
+            <div id="Selector8V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let links = document.querySelectorAll("a");
+                    links[0].href = "https://duckduckgo.com/";
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <a href="https://google.es/">Google</a>
+                <a href="https://assemblerschool.com/">Assembler</a>
+                <a href="https://www.apple.com/es/">Apple</a>
+              </div>
+            </div>
+            <div id="Selector8Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("a:first").attr("href", "https://duckduckgo.com/");
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <a href="https://google.es/">Google</a>
+                <a href="https://assemblerschool.com/">Assembler</a>
+                <a href="https://www.apple.com/es/">Apple</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="sectionDiv">
         <h2>Events</h2>

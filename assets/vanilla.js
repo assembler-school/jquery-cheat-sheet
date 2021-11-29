@@ -235,3 +235,12 @@ document
     let selectedOption = document.querySelector("#Selector7V select").value;
     document.querySelector("#Selector7V span").innerText = selectedOption;
   });
+
+//Change the href attribute of the first element
+
+document
+  .querySelector("#Selector8V button")
+  .addEventListener("click", function () {
+    let links = document.querySelectorAll("#Selector8V a");
+    links[0].href = "https://duckduckgo.com/";
+  });
