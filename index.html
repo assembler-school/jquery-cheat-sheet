@@ -1264,6 +1264,48 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Key pressed on keyboard
+          </button>
+          <div class="content">
+            <div id="Event4V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let span = document.querySelector("span");
+                    document.addEventListener("keydown", function keyboardV(event) {
+                      span.innerText = event.key;
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <span></span>
+              </div>
+            </div>
+            <div id="Event4Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $(document).on("keydown", function keyboardQ(event) {
+                      $("span").text(event.key);
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>Made at Assembler School</footer>

@@ -296,3 +296,13 @@ document
     let button = document.querySelector("#Event3V button");
     button.innerText += " Double clicked";
   });
+
+//Key pressed on keyboard
+document
+  .querySelector("#Event4V button")
+  .addEventListener("click", function () {
+    let span = document.querySelector("#Event4V span");
+    document.addEventListener("keydown", function keyboardV(event) {
+      span.innerText = event.key;
+    });
+  });

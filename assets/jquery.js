@@ -219,3 +219,11 @@ $("#Event2Q button").on("click", function () {
 $("#Event3Q button").on("dblclick", function () {
   $(this).text($(this).text() + " Double clicked");
 });
+
+//Key pressed on keyboard
+
+$("#Event4Q button").on("click", function () {
+  $(document).on("keydown", function keyboardQ(event) {
+    $("#Event4Q span").text(event.key);
+  });
+});
