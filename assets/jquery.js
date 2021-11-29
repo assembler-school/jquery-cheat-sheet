@@ -171,3 +171,8 @@ $("#Selector4Q button").on("click", function () {
 $("#Selector5Q button").on("click", function () {
   $("#pSelect5Q").css("font-weight", "bold");
 });
+
+//Get all the elements that have a certain class and property
+$("#Selector6Q button").on("click", function () {
+  $(".selector6Q:hidden").css({ display: "block", color: "blue" });
+});

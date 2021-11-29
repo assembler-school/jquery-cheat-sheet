@@ -212,3 +212,17 @@ document
     let pElement = document.getElementById("pSelect5V");
     pElement.style.fontWeight = "bold";
   });
+
+//Get all the elements that have a certain class and property
+
+document
+  .querySelector("#Selector6V button")
+  .addEventListener("click", function () {
+    let elements = document.querySelectorAll(".selector6V");
+    elements.forEach((element) => {
+      if (element.style.display == "none") {
+        element.style.display = "block";
+        element.style.color = "blue";
+      }
+    });
+  });

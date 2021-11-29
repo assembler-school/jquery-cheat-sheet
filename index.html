@@ -914,6 +914,55 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Get all the elements that have a certain class and property
+          </button>
+          <div class="content">
+            <div id="Selector6V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let elements = document.querySelectorAll(".selector6V");
+                    elements.forEach((element) => {
+                      if (element.style.display == "none") {
+                        element.style.display = "block";
+                        element.style.color = "blue";
+                      }
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p class="selector6V">I am the first paragraph</p>
+                <p class="selector6V" style="display: none;">I am the second parapgraph</p>
+                <p class="selector6V" style="display: none;">I am the third paragraph</p>
+                <p class="selector6V">I am the fourth paragraph</p>
+              </div>
+            </div>
+            <div id="Selector6Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $(".selector6Q:hidden").css({ display: "block", color: "blue" });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p class="selector6Q">I am the first paragraph</p>
+                <p class="selector6Q" style="display: none;">I am the second parapgraph</p>
+                <p class="selector6Q" style="display: none;">I am the third paragraph</p>
+                <p class="selector6Q">I am the fourth paragraph</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="sectionDiv">
         <h2>Events</h2>
