@@ -1,0 +1,238 @@
+:root{
+    --bodyBackground:#001219;
+    --text:#ffffff;
+    --section-text:#E9D8A6;
+    --section-events:#005f73;
+    --section-functions:#0a9496a6;
+    --section-selectors:#4fb3ab9a;
+}
+@keyframes animateModal {
+    from {
+    left: 30%;
+      opacity: 1;
+    }
+    to {
+    left:100%;
+      opacity: 0;
+    }
+  }
+@font-face {
+    font-family: 'blackboardfont'; 
+    src: url(../assets/fonts/KGTenThousandReasons.ttf); /*URL to font*/
+}
+@media (max-width: 1850px){
+    #mainBody{ 
+        display:grid;
+        grid-template-columns: 30% 30%;
+        grid-template-rows: 1fr 1fr;
+    }
+
+}
+@media (max-width:1000px){
+    #mainBody{ 
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+}
+body{
+    background-color:var(--bodyBackground);
+    color:var(--text);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+#logo{
+    position:absolute;
+    width:250px;
+    right:100px;
+    top:400px;
+    z-index:-1;
+}
+
+/* Header */
+header{
+    text-align: center;
+}
+
+/* Main*/
+main{
+    display:flex;
+    flex-direction: row;
+}
+
+/* Sections */
+section{
+    display:flex;
+    flex-direction: column;
+    width: 250px;
+    padding:20px;
+    line-height: 18px;
+    border-radius:20px;
+    margin:50px;
+}
+/* Specific sections */
+#events{
+    background-color:var(--section-events);
+}
+#functions,#functions2{
+    background-color: var(--section-functions);
+}
+#selectors{
+    background-color: var(--section-selectors);
+}
+section .title{
+    color:var(--text);
+    text-align: right;
+    border-bottom:2px solid white;
+}
+section .content{
+    margin-top:20px;
+    color:var(--section-text);
+    font-size:13px;   
+}
+.content p{
+    cursor:pointer;
+    padding:8px;
+    border-radius:10px;
+    margin:0;
+    transition:0.3s;
+    
+}
+.content p:nth-child(odd){
+    background-color:#0a949628;
+}
+.content p:hover{
+    background-color: #ffffff2d;
+    color:#ee9b00;
+}
+
+/* Footer */
+footer{
+    position:absolute;
+    bottom:0;
+    right:10px;
+}
+
+/* Modal window */
+#background-modal{
+    width: 100%; 
+    height: 100%; 
+    position:fixed; 
+    top: 0; 
+    left: 0;
+    z-index:2;
+    background-color:rgba(0, 0, 0, 0.431)
+}
+#modal{
+    font-family:"blackboardfont",'Roboto', sans-serif;
+    position: absolute;
+    left: 17%;
+    top: 17%; 
+    width:1250px;
+    height: 650px;
+    background-image:url(../assets/img/modal-bg.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    z-index:3;
+    cursor:url("../assets/cursors/Handwriting.cur"),auto;
+}
+#modal header{
+    text-align: center;
+    margin-top:30px;
+}
+/* The blackboard */
+#blackboard{
+    margin-top:40px;
+}
+/* article */
+article{
+    text-align:center;
+    color:#E9D8A6;
+    margin-bottom:20px;
+}
+/* Imgs */
+#modal #exit{
+    position:absolute;
+    right:70px;
+    top:80px;
+    width:60px;
+    cursor:pointer;
+    transition:0.7s;
+}
+#modal #exit:hover{
+    width:70px;
+}
+/* IMAGES */
+#modal #modal-line{
+    position:absolute;
+    height: 400px;
+    top:100px;
+    left:550px;
+}
+/* SNIPPET MINI BOARD */
+#modal .modal-img{
+    width:500px;
+    height: 400px;
+    top:100px;
+    z-index: -1;
+}
+#modal #vanillaMiniBoard{
+    position:absolute;
+    left:100px;
+}
+#modal #jqueryMiniBoard{
+    position:absolute;
+    right:30px;
+}
+/* SNIPPET MINI BOARD */
+#modal-main{
+    justify-content: space-around;
+}
+#modal section{
+    margin:10px 10px;
+   
+    text-align: left;
+    padding:0;
+}
+#modal section h2{
+    text-align:center;
+}
+#modal section p{
+    font-size:13px;
+}
+#modal section button{
+    padding:10px;
+    color:#003566;
+    border:none;
+    font-weight: bold;
+    font-size:15px;
+    background-color:#f1faee;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.5s;
+    margin:0 0 10px 0;
+    
+}
+#modal .demo5{
+    display:flex;
+    flex-direction: column;
+    gap: 60px;
+}
+#modal section button:hover{
+    opacity: 0.8;
+    background-color: #FFD60A;
+}
+#modal .snippet{
+    height: 100px;
+    z-index: 4;
+}
+#modal .imgExample{
+    width:70px;
+}
+.display{
+    display:none;
+}
+.animation{
+    animation-name: animateModal;
+    animation-duration:0.5s;
+}
