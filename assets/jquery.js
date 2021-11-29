@@ -154,20 +154,20 @@ $("#Selector1Q button").on("click", function () {
 
 //Get the parent element of a certain element
 $("#Selector2Q button").on("click", function () {
-  $(this).parent().addClass("bgPastelBlue");
+  $(this).parent().css("font-weight", "bold");
 });
 
 //Get the collection of children of a certain element
 $("#Selector3Q button").on("click", function () {
-  $(this).parent().children().addClass("bgPastelBlue");
+  $(this).parent().children().css("font-weight", "bold");
 });
 
 //Get all the elements that have a certain class
 $("#Selector4Q button").on("click", function () {
-  $(".selector4Q").addClass("bgPastelBlue");
+  $(".selector4Q").css("font-weight", "bold");
 });
 
 //Get an item by id
 $("#Selector5Q button").on("click", function () {
-  $("#pSelect5Q").addClass("bgPastelBlue");
+  $("#pSelect5Q").css("font-weight", "bold");
 });

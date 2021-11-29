@@ -179,7 +179,7 @@ document
     let parentElement = document.querySelector(
       "#Selector2V .demo button"
     ).parentNode;
-    parentElement.classList.add("bgPastelBlue");
+    parentElement.style.fontWeight = "bold";
   });
 
 //Get the collection of children of a certain element
@@ -189,7 +189,7 @@ document
   .addEventListener("click", function () {
     let childElements = document.querySelector("#Selector3V .demo").children;
     for (let i = 0; i < childElements.length; i++) {
-      childElements[i].classList.add("bgPastelBlue");
+      childElements[i].style.fontWeight = "bold";
     }
   });
 
@@ -200,7 +200,7 @@ document
   .addEventListener("click", function () {
     let classElements = document.getElementsByClassName("selector4V");
     for (let i = 0; i < classElements.length; i++) {
-      classElements[i].classList.add("bgPastelBlue");
+      classElements[i].style.fontWeight = "bold";
     }
   });
 
@@ -210,5 +210,5 @@ document
   .querySelector("#Selector5V button")
   .addEventListener("click", function () {
     let pElement = document.getElementById("pSelect5V");
-    pElement.classList.add("bgPastelBlue");
+    pElement.style.fontWeight = "bold";
   });
