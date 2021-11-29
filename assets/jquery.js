@@ -197,3 +197,15 @@ $("#Selector9Q button").on("click", function () {
 $("#Selector10Q button").on("click", function () {
   $("#Selector10Q p").remove();
 });
+
+//EVENTS
+
+//HTML document loaded
+let domLoadedQ = false;
+$(document).ready(function () {
+  domLoadedQ = true;
+});
+
+$("#Event1Q button").on("click", function () {
+  $("#Event1Q span").text(domLoadedQ);
+});

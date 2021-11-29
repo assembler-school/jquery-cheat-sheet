@@ -264,3 +264,19 @@ document
       element.remove();
     });
   });
+
+//EVENTS
+
+//HTML document loaded
+
+let domLoadedV = false;
+document.addEventListener("DOMContentLoaded", () => {
+  domLoadedV = true;
+});
+
+document
+  .querySelector("#Event1V button")
+  .addEventListener("click", function () {
+    let spanElement = document.querySelector("#Event1V span");
+    spanElement.innerText = domLoadedV;
+  });

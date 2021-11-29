@@ -1145,7 +1145,44 @@
           <button type="button" class="collapsible">
             HTML document has been loaded
           </button>
-          <div class="content"><p>Some text example</p></div>
+          <div class="content">
+            <div id="Event1V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let domLoadedV = false;
+                    document.addEventListener("DOMContentLoaded", () => {
+                      domLoadedV = true;
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <span></span>
+              </div>
+            </div>
+            <div id="Event1Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let domLoadedQ = false;
+                    $(document).ready(function () {
+                      domLoadedQ = true;
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <span></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
