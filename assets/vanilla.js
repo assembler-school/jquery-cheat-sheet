@@ -203,3 +203,12 @@ document
       classElements[i].classList.add("bgPastelBlue");
     }
   });
+
+//Get all the elements that have a certain class
+
+document
+  .querySelector("#Selector5V button")
+  .addEventListener("click", function () {
+    let pElement = document.getElementById("pSelect5V");
+    pElement.classList.add("bgPastelBlue");
+  });

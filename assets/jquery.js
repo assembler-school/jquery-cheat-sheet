@@ -166,3 +166,8 @@ $("#Selector3Q button").on("click", function () {
 $("#Selector4Q button").on("click", function () {
   $(".selector4Q").addClass("bgPastelBlue");
 });
+
+//Get an item by id
+$("#Selector5Q button").on("click", function () {
+  $("#pSelect5Q").addClass("bgPastelBlue");
+});
