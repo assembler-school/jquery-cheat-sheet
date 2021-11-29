@@ -280,3 +280,11 @@ document
     let spanElement = document.querySelector("#Event1V span");
     spanElement.innerText = domLoadedV;
   });
+
+//HTML element clicked
+document
+  .querySelector("#Event2V button")
+  .addEventListener("click", function () {
+    let button = document.querySelector("#Event2V button");
+    button.innerText += " Clicked";
+  });

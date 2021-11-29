@@ -209,3 +209,8 @@ $(document).ready(function () {
 $("#Event1Q button").on("click", function () {
   $("#Event1Q span").text(domLoadedQ);
 });
+
+//HTML element clicked
+$("#Event2Q button").on("click", function () {
+  $(this).text($(this).text() + " Clicked");
+});

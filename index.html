@@ -1184,6 +1184,46 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            HTML item clicked
+          </button>
+          <div class="content">
+            <div id="Event2V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    document.querySelector("button").addEventListener("click", function () {
+                      let button = document.querySelector("button");
+                      button.innerText += " Clicked";
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+              </div>
+            </div>
+            <div id="Event2Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("button").on("click", function () {
+                      $(this).text($(this).text() + " Clicked");
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>Made at Assembler School</footer>
