@@ -1306,6 +1306,48 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Mouse cursor moves
+          </button>
+          <div class="content">
+            <div id="Event5V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let span = document.querySelector("span");
+                    document.addEventListener("mousemove", function (event) {
+                      span.innerText = event.pageX + ", " + event.pageY;
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <span></span>
+              </div>
+            </div>
+            <div id="Event5Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $(document).on("mousemove", function (event) {
+                      $("span").text(event.pageX + ", " + event.pageY);
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>Made at Assembler School</footer>

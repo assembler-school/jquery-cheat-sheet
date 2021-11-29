@@ -227,3 +227,10 @@ $("#Event4Q button").on("click", function () {
     $("#Event4Q span").text(event.key);
   });
 });
+
+//Mouse cursor moves
+$("#Event5Q button").on("click", function () {
+  $(document).on("mousemove", function (event) {
+    $("#Event5Q span").text(event.pageX + ", " + event.pageY);
+  });
+});

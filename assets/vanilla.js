@@ -306,3 +306,13 @@ document
       span.innerText = event.key;
     });
   });
+
+//Mouse cursor moves
+document
+  .querySelector("#Event5V button")
+  .addEventListener("click", function () {
+    let span = document.querySelector("#Event5V span");
+    document.addEventListener("mousemove", function (event) {
+      span.innerText = event.pageX + ", " + event.pageY;
+    });
+  });
