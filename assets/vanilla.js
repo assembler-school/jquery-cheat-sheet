@@ -226,3 +226,12 @@ document
       }
     });
   });
+
+//Get the selected option of a select element
+
+document
+  .querySelector("#Selector7V button")
+  .addEventListener("click", function () {
+    let selectedOption = document.querySelector("#Selector7V select").value;
+    document.querySelector("#Selector7V span").innerText = selectedOption;
+  });

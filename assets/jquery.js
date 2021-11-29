@@ -176,3 +176,9 @@ $("#Selector5Q button").on("click", function () {
 $("#Selector6Q button").on("click", function () {
   $(".selector6Q:hidden").css({ display: "block", color: "blue" });
 });
+
+//Get the selected option of a select element
+$("#Selector7Q button").on("click", function () {
+  let selectedOption = $("#Selector7Q select").val();
+  $("#Selector7Q span").text(selectedOption);
+});
