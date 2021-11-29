@@ -784,6 +784,52 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Get the collection of children of a certain element
+          </button>
+          <div class="content">
+            <div id="Selector3V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let childElements = document.querySelector("div").children;
+                    for (let i = 0; i &#60 childElements.length; i++) {
+                      childElements[i].classList.add("bgPastelBlue");
+                    }
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p>I am the first paragraph</p>
+                <p>I am the second parapgraph</p>
+                <p>I am the third paragraph</p>
+                <p>I am the fourth paragraph</p>
+              </div>
+            </div>
+            <div id="Selector3Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("div").children().addClass("bgPastelBlue");
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <p>I am the first paragraph</p>
+                <p>I am the second parapgraph</p>
+                <p>I am the third paragraph</p>
+                <p>I am the fourth paragraph</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="sectionDiv">
         <h2>Events</h2>

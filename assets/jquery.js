@@ -156,3 +156,8 @@ $("#Selector1Q button").on("click", function () {
 $("#Selector2Q button").on("click", function () {
   $(this).parent().addClass("bgPastelBlue");
 });
+
+//Get the collection of children of a certain element
+$("#Selector3Q button").on("click", function () {
+  $(this).parent().children().addClass("bgPastelBlue");
+});

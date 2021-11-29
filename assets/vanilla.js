@@ -181,3 +181,14 @@ document
     ).parentNode;
     parentElement.classList.add("bgPastelBlue");
   });
+
+//Get the collection of children of a certain element
+
+document
+  .querySelector("#Selector3V button")
+  .addEventListener("click", function () {
+    let childElements = document.querySelector("#Selector3V .demo").children;
+    for (let i = 0; i < childElements.length; i++) {
+      childElements[i].classList.add("bgPastelBlue");
+    }
+  });
