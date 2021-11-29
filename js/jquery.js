@@ -623,7 +623,6 @@ function fadeOutHtmlElementJquery(n, method){
     const demo=$(".demo").eq(n,method)
     const p=$(`<p>Paragraph</p>`)
     const btn=$("<button>Click me to 'fade out' the paragraph</button>")
-    p.hide()
         btn.on("click", function(){
             p.fadeOut()
         })
