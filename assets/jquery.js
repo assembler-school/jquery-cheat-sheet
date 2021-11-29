@@ -161,3 +161,8 @@ $("#Selector2Q button").on("click", function () {
 $("#Selector3Q button").on("click", function () {
   $(this).parent().children().addClass("bgPastelBlue");
 });
+
+//Get all the elements that have a certain class
+$("#Selector4Q button").on("click", function () {
+  $(".selector4Q").addClass("bgPastelBlue");
+});

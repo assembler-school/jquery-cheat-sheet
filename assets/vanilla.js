@@ -192,3 +192,14 @@ document
       childElements[i].classList.add("bgPastelBlue");
     }
   });
+
+//Get all the elements that have a certain class
+
+document
+  .querySelector("#Selector4V button")
+  .addEventListener("click", function () {
+    let classElements = document.getElementsByClassName("selector4V");
+    for (let i = 0; i < classElements.length; i++) {
+      classElements[i].classList.add("bgPastelBlue");
+    }
+  });
