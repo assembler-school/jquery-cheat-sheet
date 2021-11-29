@@ -27,16 +27,16 @@ $("#searchBox").on("keyup", function () {
 });
 
 $("code").on("mouseenter", function () {
-  $(this).append("<span id='clipboard'>Copy to clipboard</span>");
+  $(this).parent().append("<span id='clipboard'>Copy to clipboard</span>");
 });
 
 $("code").on("mouseout", function () {
-  $(this).find("span").remove();
+  $(this).parent().find("span").remove();
 });
 
 $("code").on("click", function () {
   navigator.clipboard.writeText($(this).text());
-  $(this).find("span").text("Copied");
+  $(this).parent().find("span").text("Copied");
 });
 
 //Magic starts here
