@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer> </script>
-    <script src="/src/assets/js/jquery.js" defer></script>
+    <script src="/src/assets/js/jqueryEvents.js" defer></script>
     <script src="/src/assets/js/jsvanillaEvents.js" defer></script>
     <link rel="stylesheet" href="/src/assets/css/sections.css">
     <title>Events</title>
@@ -249,39 +252,6 @@
         </div>
     </div>
 </section>
-<!-- <section id="s9" class="formSumbit">//falta implementacion
-    <div class="modal-content">
-        <div class="generalcontent">
-            <h2>When a form is submitted</h2>
-            <div class="js">
-                <h2>JavaScript</h2>
-                <div class="codigocontent">
-                    <code>document.getElementById("myForm").submit();</code>
-                </div>
-                <div class="testcontent">
-                    <p>the form is sumbit?</p>
-                    <form action="" id="jsbtntest8">
-                        <button type="submit">Sumbit</button>
-                    </form>
-                    <div id="jsresult8"></div>
-                </div>
-            </div>
-            <div class="jq">
-                <h2>JQuery</h2>
-                <div class="codigocontent">
-                    <code>$("#target").submit(function (event) {event.preventDefault()});</code>
-                </div>
-                <div class="testcontent">
-                    <p>the form is sumbit?</p>
-                    <form action="" id="jqbtntest8">
-                        <button type="submit">Sumbit</button>
-                    </form>
-                    <div id="jqresult8"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 <section id="s10" class="changeValue">
     <div class="modal-content">
         <div class="generalcontent">
@@ -308,7 +278,7 @@
                 </div>
                 <div class="testcontent">
                     <p>have you changed the value?</p>
-                    <select id="jqbtntest9" onchange = "myFunctionjs9()">
+                    <select id="jqbtntest9" onchange = "myFunctionjq9()">
                         <option value="a">a</option>
                         <option value="b">b</option>
                         <option value="c">c</option>
@@ -345,7 +315,7 @@
                 </div>
                 <div class="testcontent">
                     <p>The mouse is over?</p>
-                    <button id="jqbtntest1">Over Hear!</button>
+                    <button id="jqbtntest10">Over Hear!</button>
                     <div id="jqresult10">a</div>
                 </div>
             </div>
@@ -385,48 +355,6 @@
         </div>
     </div>
 </section>
-<!-- <section id="s13" class="liClicked">
-    <div class="modal-content">
-        <div class="generalcontent">
-            <h2>When a ul list item is clicked</h2>
-            <div class="js">
-                <h2>JavaScript</h2>
-                <div class="codigocontent">
-                    <code>Array.prototype.slice.call(list).forEach(function(a) {
-                        a.addEventListener('click', function(e) { })})</code>
-                </div>
-                <div class="testcontent">
-                    <p>this is checked?</p>
-                    <ul id="jsbtntest12">
-                        <li>a</li>
-                        <li>b</li>
-                        <li>c</li>
-                    </ul>
-                    <div id="jsresult12"></div>
-                </div>
-            </div>
-            <div class="jq">
-                <h2>JQuery</h2>
-                <div class="codigocontent">
-                    <code>$(".checkbox").change(function () {
-                        if (this.checked) {
-                            //Do stuff
-                        }}})
-                    </code>
-                </div>
-                <div class="testcontent">
-                    <p>this is checked?</p>
-                    <ul id="jqbtntest12">
-                        <li>a</li>
-                        <li>b</li>
-                        <li>c</li>
-                    </ul>
-                    <div id="jqresult12"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 <section id="s14" class="pressKeydown">
     <div class="modal-content">
         <div class="generalcontent">

@@ -1,3 +1,11 @@
+var titles=document.querySelectorAll(".generalcontent>h2")
+for (const tit of titles) {
+    tit.addEventListener("click",function(){
+        window.location.href="/src/assets/index.html"
+    })
+}
+
+
 //? selectors
 
 //todo get a parent

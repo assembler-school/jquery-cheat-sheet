@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer> </script>
-    <script src="/src/assets/js/jquery.js" defer></script>
+    <script src="/src/assets/js/jquerySelected.js" defer></script>
     <script src="/src/assets/js/jsVanillaSelector.js" defer></script>
     <link rel="stylesheet" href="/src/assets/css/sections.css">
     <title>Selectors</title>
 </head>
 <body>
-    <section class="ParentElement40">
+    <section id="s36" class="ParentElement40">
         <div class="modal-content">
             <div class="generalcontent">
                 <h2>Get a parent element</h2>
@@ -35,14 +38,16 @@
                     </div>
                     <div class="testcontent">
                         <p>Get a button parent</p>
+                        <div class="parentButton">
                         <button id="jqbtntest40">Click Hear!</button>
+                        </div>
                         <div id="jqresult40"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section  class="CollectionChildren41">
+    <section id="s37"  class="CollectionChildren41">
         <div class="modal-content">
             <div class="generalcontent">
                 <h2>Get a collection childre</h2>
@@ -81,7 +86,7 @@
             </div>
         </div>
     </section>
-    <section class="AllOfClass42">
+    <section id="s38" class="AllOfClass42">
         <div class="modal-content">
             <div class="generalcontent">
                 <h2>Get all elements whith a class</h2>
@@ -106,15 +111,15 @@
                     <div class="testcontent">
                         <p>Get element with the class is a</p>
                         <button id="jqbtntest42">Click Hear!</button>
-                        <div id="jqb">class:b</div>
-                        <div id="jqa">class:a</div>
-                        <div id="jqb">class:b</div>
+                        <div class="jqb">class:b</div>
+                        <div class="jqa">class:a</div>
+                        <div class="jqb">class:b</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="itemById43">
+    <section id="s39" class="itemById43">
         <div class="modal-content">
             <div class="generalcontent">
                 <h2>Get element by Id</h2>
@@ -140,16 +145,16 @@
                     <div class="testcontent">
                         <p>Get a element with the id:a</p>
                         <button id="jqbtntest43">Click Hear!</button>
-                        <div id="j1result43_1">id:a</div>
-                        <div id="j1result43_2">id:b</div>
-                        <div id="j1result43_3">id:c</div>
+                        <div id="jqresult43_1">id:a</div>
+                        <div id="jqresult43_2">id:b</div>
+                        <div id="jqresult43_3">id:c</div>
                         <div id="jqresult43"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="AllForAttr44">
+    <section id="s40" class="AllForAttr44">
         <div class="modal-content">
             <div class="generalcontent">
                 <h2>Get elements for attributs</h2>
@@ -182,7 +187,7 @@
             </div>
         </div>
     </section>
-    <section class="selectValue45">
+    <section id="s41" class="selectValue45">
         <div class="modal-content">
             <div class="generalcontent">
                 <h2>Get a value for the input</h2>
@@ -208,7 +213,7 @@
                     </div>
                     <div class="testcontent">
                         <p>Get the value is selected</p>
-                        <select id="jqbtntest45">
+                        <select id="jqbtntest45" onchange="myFunctionjq45()">
                             <option value="a">a</option>
                             <option value="b">b</option>
                             <option value="c">c</option>
@@ -219,7 +224,7 @@
             </div>
         </div>
     </section>
-    <section class="ValueInputs46">
+    <section id="s42" class="ValueInputs46">
         <div class="modal-content">
             <div class="generalcontent">
                 <h2>Get the value inputs</h2>
@@ -241,14 +246,14 @@
                     </div>
                     <div class="testcontent">
                         <p>this is checked?</p>
-                        <input type="checkbox" id="jqbtntest46">
+                        <input type="checkbox" id="jqbtntest46" >
                         <div id="jqresult46"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="firstElement47">
+    <section id="s43" class="firstElement47">
         <div class="modal-content">
             <div class="generalcontent">
                 <h2>Get a first element</h2>

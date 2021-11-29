@@ -1,3 +1,13 @@
+
+var titles=document.querySelectorAll(".generalcontent>h2")
+console.log(titles)
+
+for (const tit of titles) {
+    tit.addEventListener("click",function(){
+        window.location.href="/src/assets/index.html"
+    })
+}
+
 //? keyboard
 //todo When the user presses a key on the keyboard
 var jsresult4=document.getElementById("jsresult4")
@@ -29,8 +39,11 @@ jsbtn3.addEventListener("dblclick", () => {
 })
 //todo  to see where the mouse moves
 var jsresult5=document.getElementById("jsresult5")
-var jsbtn5=document.getElementById("jsbtntest5")
 onmousemove = function (e) {
+    jstest5(e)
+    jqtest5(e)
+}
+function jstest5(e){
     jsresult5.innerHTML = `mouse location = X: ${e.x}, Y: ${e.y}` ;
 }
 //todo When you position the mouse over an element

@@ -1,3 +1,13 @@
+var titles=document.querySelectorAll(".generalcontent>h2")
+console.log(titles)
+
+for (const tit of titles) {
+    tit.addEventListener("click",function(){
+        window.location.href="/src/assets/index.html"
+    })
+}
+
+
 //?CREATE AND PLACE
 //todo Create an HTML element with any text value 
 var jsbtn13=document.getElementById('jsbtntest13')
