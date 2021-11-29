@@ -244,3 +244,12 @@ document
     let links = document.querySelectorAll("#Selector8V a");
     links[0].href = "https://duckduckgo.com/";
   });
+
+//Show the value of a first input on the page
+
+document
+  .querySelector("#Selector9V button")
+  .addEventListener("click", function () {
+    let input = document.querySelectorAll("#Selector9V input")[0].value;
+    alert(input);
+  });

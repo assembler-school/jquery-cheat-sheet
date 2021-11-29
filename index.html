@@ -1054,6 +1054,44 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Show the value of a first input on the page
+          </button>
+          <div class="content">
+            <div id="Selector9V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let input = document.querySelectorAll("#Selector9V input")[0].value;
+                    alert(input);
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <input type="text" placeholder="Try it">
+              </div>
+            </div>
+            <div id="Selector9Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    alert($("input:first").val());
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <input type="text" placeholder="Try it">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="sectionDiv">
         <h2>Events</h2>

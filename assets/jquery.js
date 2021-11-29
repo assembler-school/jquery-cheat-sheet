@@ -187,3 +187,8 @@ $("#Selector7Q button").on("click", function () {
 $("#Selector8Q button").on("click", function () {
   $("#Selector8Q a:first").attr("href", "https://duckduckgo.com/");
 });
+
+//Show the value of a first input on the page
+$("#Selector9Q button").on("click", function () {
+  alert($("#Selector9Q input:first").val());
+});
