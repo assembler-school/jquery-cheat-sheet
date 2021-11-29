@@ -105,6 +105,39 @@ function exerciseJS29(jScriptDiv){
 function exerciseJS30(jScriptDiv){
     console.log("hola 1"+jScriptDiv)
 }
+function exerciseJS31(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
+}
+function exerciseJS32(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
+}
+function exerciseJS33(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
+}
+function exerciseJS34(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
+}
+function exerciseJS35(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
+}
+function exerciseJS36(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
+}
+function exerciseJS37(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
+}
+function exerciseJS38(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
+}
+function exerciseJS39(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
+}
+function exerciseJS40(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
+}
+function exerciseJS41(jScriptDiv){
+    console.log("hola 1"+jScriptDiv)
+}
 
 
 

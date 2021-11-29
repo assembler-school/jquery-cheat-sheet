@@ -128,6 +128,96 @@ function exerciseJQ3(jQueryDiv){
         $("#input-solution").val("keypress")
     }
 }
+function exerciseJQ4(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+    //content exercise here
+    `<code>
+     = $("#solution-button").on('<input type='text' id="input-solution" size="7" >',()=>{$("#solution-box").text("I am moving the mouse: " + counter+ " times")})
+    </code>
+    `
+    //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+    //content exercise here
+    `
+    `
+    //content exercise here
+    +"</div>")
+
+    //$("#solution-box").append(`<button id="btn-test" class="exercise-btn">BTN-TEST</button>`)
+
+    $("#solution-button").on("click",validateSolutionFun)
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="mousemove"){
+            console.log("entré")
+            let counter = 0;
+            $(document).on("mousemove", counterFun)
+            function counterFun(){
+                while (counter <= 120000) {
+                    $("#solution-box").text("I am moving the mouse: " + counter+ " times")
+                    if (counter>=110000){
+                        $(document).off("mousemove", counterFun)
+                        return;
+                    }
+                counter ++;
+                console.log(counter)
+                }
+                return;
+            }
+        }else{
+            $("#solution-box").text("try again")
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("mousemove")
+    }
+}
+function exerciseJQ5(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+    //content exercise here
+    `<code>
+     = $("#solution-button").on('<input type='text' id="input-solution" size="7" >',()=>{$("#solution-box").text("I am moving the mouse: " + counter+ " times")})
+    </code>
+    `
+    //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+    //content exercise here
+    `
+    `
+    //content exercise here
+    +"</div>")
+
+    //$("#solution-box").append(`<button id="btn-test" class="exercise-btn">BTN-TEST</button>`)
+
+    $("#solution-button").on("click",validateSolutionFun)
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="mousemove"){
+            console.log("entré")
+            let counter = 0;
+            $(document).on("mousemove", counterFun)
+            function counterFun(){
+                while (counter <= 120000) {
+                    $("#solution-box").text("I am moving the mouse: " + counter+ " times")
+                    if (counter>=110000){
+                        $(document).off("mousemove", counterFun)
+                        return;
+                    }
+                counter ++;
+                console.log(counter)
+                }
+                return;
+            }
+        }else{
+            $("#solution-box").text("try again")
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("mousemove")
+    }
+}
 function exerciseJQ13(jQueryDiv){
     $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
     //content exercise here
@@ -681,4 +771,162 @@ function exerciseJQ30(jQueryDiv){
         $("#input-solution").val("fadeOut")
     }
 }
+function exerciseJQ31(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+     //content exercise here
+    `<code>
+    $("#solution-box").<input type='text' id="input-solution" size="5">( (i,x) => {
+        $(x).addClass("poor-class");
+    })
+    </code>
+    `
+     //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+     //content exercise here
+    `<div id="parent">I am a div parent
+        <h1 id="firstChild">I am a H1 first child</h1>
+        <ul>I am an ul
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+            <li>list item 4</li>
+        </ul>
+        <h2>I am a H2 XAO!</h2>
+    </div>
+`
+     //content exercise here
+    +"</div>")
+
+    $("#solution-button").on("click",validateSolutionFun)
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="each"){//solution
+            $("#solution-box").each( (i,x) => {//function to do on the solution
+                $(x).addClass("poor-class");
+            })
+        }else{
+                $("#solution-box").append('<div id="div2">Try Again!</div>')
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("each")//solution
+    }
+}
+function exerciseJQ32(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+     //content exercise here
+    `<code>
+    $("#firstChild").<input type='text' id="input-solution" size="6">().addClass("poor-class");
+    </code>
+    `
+     //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+     //content exercise here
+    `<div >I am a div parent
+        <h1>I am an H1</h1>
+        <ul id="parent">I am an ul 
+            <li id="firstChild">list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+            <li>list item 4</li>
+        </ul>
+        <h2>I am a H2 XAO!</h2>
+    </div>
+`
+     //content exercise here
+    +"</div>")
+
+    $("#solution-button").on("click",validateSolutionFun)
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="parent"){//solution
+            $("#firstChild").parent().addClass("poor-class");
+        }else{
+                $("#solution-box").append('<div id="div2">Try Again!</div>')
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("parent")//solution
+    }
+}
+function exerciseJQ33(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+     //content exercise here
+    `<code>
+    $("#parent").<input type='text' id="input-solution" size="6">().addClass("poor-class");
+    </code>
+    `
+     //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+     //content exercise here
+    `<div >I am a div parent
+        <h1 >I am an H1</h1>
+        <ul id="parent">I am an ul 
+            <li id="firstChild">list item 1</li>
+            <li class="certainClass">list item 2</li>
+            <li>list item 3</li>
+            <li class="certainClass">list item 4</li>
+        </ul>
+        <h2>I am a H2 XAO!</h2>
+    </div>
+`
+     //content exercise here
+    +"</div>")
+
+    $("#solution-button").on("click",validateSolutionFun)
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="children"){//solution
+            $("#parent").children().addClass("poor-class");
+        }else{
+                $("#solution-box").append('<div id="div2">Try Again!</div>')
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("children")//solution
+    }
+}
+function exerciseJQ34(jQueryDiv){
+    $(jQueryDiv).append("<div class='jQuery-container-inner'>"+
+     //content exercise here
+    `<code>
+    $(".certainClass").<input type='text' id="input-solution" size="6">().addClass("poor-class");
+    </code>
+    `
+     //content exercise here
+    +"</div>")
+    $(jQueryDiv).append("<div class='jQuery-container-inner' id='solution-box'>"+
+     //content exercise here
+    `<div >I am a div parent
+        <h1 >I am an H1</h1>
+        <ul id="parent">I am an ul 
+            <li id="firstChild">list item 1</li>
+            <li class="certainClass">list item 2</li>
+            <li>list item 3</li>
+            <li class="certainClass">list item 4</li>
+        </ul>
+        <h2>I am a H2 XAO!</h2>
+    </div>
+`
+     //content exercise here
+    +"</div>")
+
+    $("#solution-button").on("click",validateSolutionFun)
+    function validateSolutionFun(){
+        if( $("#input-solution").val()=="children"){//solution
+            $(".certainClass").addClass("poor-class");
+        }else{
+                $("#solution-box").append('<div id="div2">Try Again!</div>')
+        }
+    }
+    $("#show-solution-button").on("click",showSolutionFun)
+    function showSolutionFun(){
+        $("#input-solution").val("children")//solution
+    }
+}
+
+
 

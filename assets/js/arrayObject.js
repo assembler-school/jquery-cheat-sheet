@@ -16,6 +16,14 @@ const exercisesArr = [
         functions:function (jQueryDiv, jScriptDiv){exerciseJS3(jScriptDiv),exerciseJQ3(jQueryDiv)},
     },
     {
+        dataset:4,
+        functions:function (jQueryDiv, jScriptDiv){exerciseJS4(jScriptDiv),exerciseJQ4(jQueryDiv)},
+    },
+    {
+        dataset:5,
+        functions:function (jQueryDiv, jScriptDiv){exerciseJS4(jScriptDiv),exerciseJQ4(jQueryDiv)},
+    },
+    {
         dataset:13,
         functions:function (jQueryDiv, jScriptDiv){exerciseJS13(jScriptDiv),exerciseJQ13(jQueryDiv)},
     },
@@ -86,5 +94,49 @@ const exercisesArr = [
     {
         dataset:30,
         functions:function (jQueryDiv, jScriptDiv,){exerciseJS30(jScriptDiv,),exerciseJQ30(jQueryDiv,)},
-        },
+    },
+    {
+        dataset:31,
+        functions:function (jQueryDiv, jScriptDiv,){exerciseJS31(jScriptDiv,),exerciseJQ31(jQueryDiv,)},
+    },
+    {
+        dataset:32,
+        functions:function (jQueryDiv, jScriptDiv,){exerciseJS32(jScriptDiv,),exerciseJQ32(jQueryDiv,)},
+    },
+    {
+        dataset:33,
+        functions:function (jQueryDiv, jScriptDiv,){exerciseJS33(jScriptDiv,),exerciseJQ33(jQueryDiv,)},
+    },
+    {
+        dataset:34,
+        functions:function (jQueryDiv, jScriptDiv,){exerciseJS34(jScriptDiv,),exerciseJQ34(jQueryDiv,)},
+    },
+    {
+        dataset:35,
+        functions:function (jQueryDiv, jScriptDiv,){exerciseJS35(jScriptDiv,),exerciseJQ35(jQueryDiv,)},
+    },
+    {
+        dataset:36,
+        functions:function (jQueryDiv, jScriptDiv,){exerciseJS36(jScriptDiv,),exerciseJQ36(jQueryDiv,)},
+    },
+    {
+        dataset:37,
+        functions:function (jQueryDiv, jScriptDiv,){exerciseJS37(jScriptDiv,),exerciseJQ37(jQueryDiv,)},
+    },
+    {
+        dataset:38,
+        functions:function (jQueryDiv, jScriptDiv,){exerciseJS38(jScriptDiv,),exerciseJQ38(jQueryDiv,)},
+    },
+    {
+        dataset:39,
+        functions:function (jQueryDiv, jScriptDiv,){exerciseJS39(jScriptDiv,),exerciseJQ39(jQueryDiv,)},
+    },
+    {
+        dataset:40,
+        functions:function (jQueryDiv, jScriptDiv,){exerciseJS40(jScriptDiv,),exerciseJQ40(jQueryDiv,)},
+    },
+    {
+        dataset:41,
+        functions:function (jQueryDiv, jScriptDiv,){exerciseJS41(jScriptDiv,),exerciseJQ41(jQueryDiv,)},
+    },
 ]
