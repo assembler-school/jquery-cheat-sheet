@@ -1,0 +1,41 @@
+.title{
+    font-weight: bolder;
+    font-size: 35px;
+    height: var(--hover-height);
+}
+
+.title:hover{
+    background-color: var(--background);
+}
+
+.functions{
+    margin-top: 10px;
+}
+
+.clicked{
+    background-color: var(--background-clicked);
+    min-height: var(--hover-height);
+}
+
+.comparation{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.comparation pre{
+    background-color: var(--background-div);   
+    width: 100%;
+    min-height: var(--hover-height);
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comparation .java-script{
+    background-color: var(--js);
+}
+
+.comparation .jQuery{
+    background-color: var(--jQuery);
+}
