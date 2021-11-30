@@ -7,7 +7,6 @@ $('#jqbtntest40').on("click",function(){
 })
 
 //todo collection children
-
 $("#jqbtntest41_1").on("click",function(){
     var arr=[]
     for (const x of $('#jqbtntest41').children()) {

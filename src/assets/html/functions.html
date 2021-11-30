@@ -184,7 +184,7 @@
             <div class="jq">
                 <h2>JQuery</h2>
                 <div class="codigocontent">
-                    <code>$(element).insertAfter(button);</code>
+                    <code>$(element).after(button);</code>
                 </div>
                 <div class="testcontent">
                     <p>Insert after the text</p>
@@ -213,7 +213,7 @@
             <div class="jq">
                 <h2>JQuery</h2>
                 <div class="codigocontent">
-                    <code>$(element).insertBefore(button);</code>
+                    <code>$(element).before(button);</code>
                 </div>
                 <div class="testcontent">
                     <p>Insert befor the text</p>
@@ -575,48 +575,5 @@
         </div>
     </div>
 </section>
-<section id="s35" class="changeStyle">
-    <div class="modal-content">
-        <div class="generalcontent">
-            <h2>change the style of the collection</h2>
-            <div class="js">
-                <h2>JavaScript</h2>
-                <div class="codigocontent">
-                    <code>Array.prototype.slice.call(list).forEach(function(a) {
-                        a.addEventListener('click', function(e) { })})</code>
-                </div>
-                <div class="testcontent">
-                    <p>change the style of the list</p>
-                    <ul id="jsbtntest12">
-                        <li>a</li>
-                        <li>b</li>
-                        <li>c</li>
-                    </ul>
-                    <div id="jsresult12"></div>
-                </div>
-            </div>
-            <div class="jq">
-                <h2>JQuery</h2>
-                <div class="codigocontent">
-                    <code>$(".checkbox").change(function () {
-                        if (this.checked) {
-                            //Do stuff
-                        }}})
-                    </code>
-                </div>
-                <div class="testcontent">
-                    <p>change the style of the list</p>
-                    <ul id="jqbtntest12">
-                        <li>a</li>
-                        <li>b</li>
-                        <li>c</li>
-                    </ul>
-                    <div id="jqresult12"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 </body>
 </html>
