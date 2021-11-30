@@ -119,11 +119,12 @@ jqbtntest27.on("click",function(){
 var jqbtntest28 = $("#jqbtntest28");
 var jqresult28 = $("#jqresult28");
 jqbtntest28.on("click",function(){
-    if(jqresult28.disabled==false){
-        jqresult28.text("disabled:true")
-        jqresult28.disabled=true
+    console.log(jqresult28.prop("disabled"));
+    if(jqresult28.prop("disabled")==false){
+        jqresult28.text("disabledtrue")
+        jqresult28.prop("disabled","true")
     }else{
-        jqresult28.disabled=false
+        jqresult28.prop("disabled","false")
         jqresult28.text("disabled:false")
     }
 })
@@ -147,11 +148,7 @@ jqbtntest30.on("click",function(){
 var jqbtntest29 = $("#jqbtntest29");
 var jqresult29 = $("#jqresult29");
 jqbtntest29.on("click",function(){
-    if(jqresult29){
-        jqresult29.hide();
-    }else{
-        jqresult29.show();
-    }
+        jqresult29.toggle();
 })
 
 //todo animate
