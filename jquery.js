@@ -71,7 +71,7 @@ function exerciseJQ12(jQueryDiv){
     /*●	When a ul list item is clicked, show the item that was clicked */
 }
 function exerciseJQ13(jQueryDiv){
-    $(".jQueryDiv").append(` <div class="pText"> '$( ".inner" ).append( "Test" );'</div>`)
+    $(".jQueryDiv").append(` <div class="pText"> '$( ".inner" ).create( "Test" );'</div>`)
     $(".jQueryDiv").append("<button class='btnTry' >try it</button>")
     $(".btnTry").on("click",()=>{$(".pText").append(" <div class='divCode2'>I have been created </div>")
     })
@@ -83,10 +83,18 @@ function exerciseJQ14(jQueryDiv){
     })
 }
 function exerciseJQ15(jQueryDiv){
-    
+    $(".jQueryDiv").append(` <div class="pText"> '$( ".object" ).append( "Test" );'</div>`)
+    $(".jQueryDiv").append("<ul class='pTex1'> <li>element1</li><li>element2</li><li>element3</li> </ul>")
+    $(".jQueryDiv").append("<button class='btnTry' >try it</button>")
+    $(".btnTry").on("click",()=>{$(".pTex1").append(" <li>Apended item</div>")
+    })
 }
 function exerciseJQ16(jQueryDiv){
-    
+    $(".jQueryDiv").append(` <div class="pText"> '$( ".object" ).append( "Test" );'</div>`)
+    $(".jQueryDiv").append("<ul class='pTex1'> <li>element1</li><li>element2</li><li>element3</li> </ul>")
+    $(".jQueryDiv").append("<button class='btnTry' >try it</button>")
+    $(".btnTry").on("click",()=>{$(".pTex1").prepend(" <li>Apended item</div>")
+    })
 }
 function exerciseJQ17(jQueryDiv){
     

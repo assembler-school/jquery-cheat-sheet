@@ -186,10 +186,73 @@ function exerciseJS14(jScriptDiv){
     })
 }
 function exerciseJS15(jScriptDiv){
-    
+    var divCode = document.createElement("div")
+    divCode.classList.add("divCode")
+    divCode.textContent = 'object.append("Prepended item")'
+    jScriptDiv.appendChild(divCode)
+
+    var ulCode = document.createElement("ul")
+    divCode.classList.add("divCode")
+    jScriptDiv.appendChild(ulCode)
+
+    var liCode1 = document.createElement("li")
+    liCode1.classList.add("divCode")
+    liCode1.textContent = 'element1'
+    ulCode.appendChild(liCode1)
+
+    var liCode2 = document.createElement("li")
+    liCode2.classList.add("divCode")
+    liCode2.textContent = 'element2'
+    ulCode.appendChild(liCode2)
+
+    var liCode3 = document.createElement("li")
+    liCode3.classList.add("divCode")
+    liCode3.textContent = 'element3'
+    ulCode.appendChild(liCode3)
+
+    var btnTry = document.createElement("button")
+    btnTry.classList.add("btnTry")
+    btnTry.textContent = "Try it"
+    jScriptDiv.appendChild(btnTry)
+
+    btnTry.addEventListener("click",()=>{
+        ulCode.append("Apended item")
+    })
 }
+
 function exerciseJS16(jScriptDiv){
-    
+    var divCode = document.createElement("div")
+    divCode.classList.add("divCode")
+    divCode.textContent = 'object.prepend("Prepended item")'
+    jScriptDiv.appendChild(divCode)
+
+    var ulCode = document.createElement("ul")
+    divCode.classList.add("divCode")
+    jScriptDiv.appendChild(ulCode)
+
+    var liCode1 = document.createElement("li")
+    liCode1.classList.add("divCode")
+    liCode1.textContent = 'element1'
+    ulCode.appendChild(liCode1)
+
+    var liCode2 = document.createElement("li")
+    liCode2.classList.add("divCode")
+    liCode2.textContent = 'element2'
+    ulCode.appendChild(liCode2)
+
+    var liCode3 = document.createElement("li")
+    liCode3.classList.add("divCode")
+    liCode3.textContent = 'element3'
+    ulCode.appendChild(liCode3)
+
+    var btnTry = document.createElement("button")
+    btnTry.classList.add("btnTry")
+    btnTry.textContent = "Try it"
+    jScriptDiv.appendChild(btnTry)
+
+    btnTry.addEventListener("click",()=>{
+        ulCode.prepend("Prepended item")
+    })
 }
 function exerciseJS17(jScriptDiv){
     

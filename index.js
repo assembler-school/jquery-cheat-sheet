@@ -65,20 +65,23 @@ function createDivContent(modalContentDiv,element,index,cb, modalDiv){
 
 
 
-// function callFun (num) {
-//     console.log("entro")
-//     // var a = "a" 
-//     // var b = element.toString()
-//     var x = num
-//     var y = num.toString()
+function callFun (num) {
+    console.log("entro")
+    // var a = "a" 
+    // var b = element.toString()
+    var x = num
+    var y = num.toString()
+    var z= "a"+y
+    console.log(z)
+    z()
     
-//     console.log(x)
-    
+}
 
+// function callFun(num){
+// num()
+// }
 
-// function a1(){console.log("sdfsdfs   que siiiiid")}
-// function a2(){console.log("cxvxcvxcv")}
+function a1(){console.log("sdfsdfs   que siiiiid")}
+function a2(){console.log("cxvxcvxcv")}
 
-// callFun(a2)
-
-
+callFun(a2)

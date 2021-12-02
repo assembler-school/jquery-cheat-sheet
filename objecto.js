@@ -88,49 +88,49 @@ const exercisesArr= [
         tittle:"HTML document has been loaded",
         commandJQ:"ready()",
         commandJS:"onload()",
-        functions: function(){exerciseJQ12(),exerciseJS12()}
+        functions: function(jQueryDiv,jScriptDiv){exerciseJQ12(jQueryDiv),exerciseJS12(jScriptDiv)}
     },
     {
         dataset:13,
         tittle:"Create an HTML element with any text value",
-        commandJQ:"append()",
+        commandJQ:"create()",
         commandJS:"createElement()",
         functions: function(jQueryDiv,jScriptDiv){exerciseJQ13(jQueryDiv),exerciseJS13(jScriptDiv)}
     },
     {
-        dataset:0,
+        dataset:14,
         tittle:"Remove an HTML element with any text value",
         commandJQ:"remove()",
-        commandJS:"onload()",
+        commandJS:"removed()",
         functions: function(jQueryDiv,jScriptDiv){exerciseJQ14(jQueryDiv),exerciseJS14(jScriptDiv)}
     },
     {
-        dataset:0,
-        tittle:"HTML document has been loaded",
+        dataset:15,
+        tittle:"Append an HTML element ",
         commandJQ:"append()",
-        commandJS:"add()",
-        functions: function(){exerciseJQ0(),exerciseJS0()}
+        commandJS:"append()",
+        functions: function(jQueryDiv,jScriptDiv){exerciseJQ15(jQueryDiv),exerciseJS15(jScriptDiv)}
     },
     {
-        dataset:0,
-        tittle:"HTML document has been loaded",
-        commandJQ:"ready()",
-        commandJS:"onload()",
-        functions: function(){exerciseJQ0(),exerciseJS0()}
+        dataset:16,
+        tittle:"Prepend an HTML element",
+        commandJQ:"prepend()",
+        commandJS:"prepend()",
+        functions: function(jQueryDiv,jScriptDiv){exerciseJQ16(jQueryDiv),exerciseJS16(jScriptDiv)}
     },
     {
-        dataset:0,
-        tittle:"HTML document has been loaded",
-        commandJQ:"ready()",
-        commandJS:"onload()",
-        functions: function(){exerciseJQ0(),exerciseJS0()}
+        dataset:17,
+        tittle:"Create and add an HTML with after",
+        commandJQ:"after()",
+        commandJS:"after()",
+        functions: function(jQueryDiv,jScriptDiv){exerciseJQ17(jQueryDiv),exerciseJS17(jScriptDiv)}
     },
     {
-        dataset:0,
-        tittle:"HTML document has been loaded",
+        dataset:18,
+        tittle:"reate and add an HTML with beforer",
         commandJQ:"ready()",
         commandJS:"onload()",
-        functions: function(){exerciseJQ0(),exerciseJS0()}
+        functions: function(jQueryDiv,jScriptDiv){exerciseJQ18(jQueryDiv),exerciseJS18(jScriptDiv)}
     },
     {
         dataset:0,
