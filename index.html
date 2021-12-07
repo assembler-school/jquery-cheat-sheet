@@ -1669,6 +1669,58 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Show the clicked item of an UL list
+          </button>
+          <div class="content">
+            <div id="Event13V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    document.querySelector("ol").addEventListener("click", function (event) {
+                      document.querySelector("span").innerText =
+                        "Value clicked: " + event.target.innerText;
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <p>List:</p>
+                <ol>
+                    <li>Monday</li>
+                    <li>Tuesday</li>
+                    <li>Wednesday</li>
+                </ol>
+                <span></span>
+              </div>
+            </div>
+            <div id="Event13Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("ol").on("click", function (event) {
+                      $("span").text("Value clicked: " + $(event.target).text());
+                    });                    
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <p>List:</p>
+                <ol>
+                    <li>Monday</li>
+                    <li>Tuesday</li>
+                    <li>Wednesday</li>
+                </ol>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>Made at Assembler School</footer>

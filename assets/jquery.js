@@ -293,3 +293,8 @@ $("#Event12Q input").on("change", function (event) {
     $("#Event12Q span").text("Unchecked");
   }
 });
+
+//Show the clicked item of an UL list
+$("#Event13Q ol").on("click", function (event) {
+  $("#Event13Q span").text("Value clicked: " + $(event.target).text());
+});

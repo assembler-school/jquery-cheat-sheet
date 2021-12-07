@@ -394,3 +394,11 @@ document
       document.querySelector("#Event12V span").innerText = "Unchecked";
     }
   });
+
+//Show the clicked item of an UL list
+document
+  .querySelector("#Event13V ol")
+  .addEventListener("click", function (event) {
+    document.querySelector("#Event13V span").innerText =
+      "Value clicked: " + event.target.innerText;
+  });
