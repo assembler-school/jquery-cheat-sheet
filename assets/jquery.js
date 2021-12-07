@@ -271,3 +271,8 @@ $("#queryForm").on("submit", function (event) {
   event.preventDefault();
   $("#Event9Q span").text("Form Submited!");
 });
+
+//Option selected on select element
+$("#Event10Q select").on("change", function () {
+  $("#Event10Q span").text("Value is: " + $("#Event10Q select").val());
+});

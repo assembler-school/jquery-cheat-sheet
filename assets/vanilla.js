@@ -363,3 +363,11 @@ document
     event.preventDefault();
     document.querySelector("#Event9V span").innerText = "Form Submited!";
   });
+
+//Option select on select element
+document
+  .querySelector("#Event10V select")
+  .addEventListener("change", function (event) {
+    document.querySelector("#Event10V span").innerText =
+      "Value is: " + event.target.value;
+  });

@@ -1498,7 +1498,7 @@
                   <code>
                     document.querySelector("form").addEventListener("submit", function(event) {
                       event.preventDefault();
-                      document.querySelector("span").innerText("Form Submited!");
+                      document.querySelector("span").innerText = "Form Submited!";
                     })
                   </code>
                 </pre>
@@ -1529,6 +1529,55 @@
                   <input type="text">
                   <input type="submit">
                 </form>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">
+            Option selected on select element
+          </button>
+          <div class="content">
+            <div id="Event10V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    document.querySelector("select").addEventListener("change", function(event) {
+                      document.querySelector("span").innerText = "Value is: " + event.target.value;;
+                    })
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <select>
+                  <option>Option A</option>
+                  <option>Option B</option>
+                  <option>Option C</option>
+              </select>
+                <span></span>
+              </div>
+            </div>
+            <div id="Event10Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("select").on("change", function () {
+                      $("span").text("Value is: " + $("select").val());
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <select>
+                  <option>Option A</option>
+                  <option>Option B</option>
+                  <option>Option C</option>
+              </select>
                 <span></span>
               </div>
             </div>
