@@ -383,3 +383,14 @@ document
   .addEventListener("mouseleave", function (event) {
     event.target.innerText = "Mouse is not over";
   });
+
+//Checkbox checked or unchecked
+document
+  .querySelector("#Event12V input")
+  .addEventListener("change", function (event) {
+    if (event.target.checked) {
+      document.querySelector("#Event12V span").innerText = "Checked";
+    } else {
+      document.querySelector("#Event12V span").innerText = "Unchecked";
+    }
+  });

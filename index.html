@@ -1622,6 +1622,53 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Checkbox checked or unchecked
+          </button>
+          <div class="content">
+            <div id="Event12V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    document.querySelector("input").addEventListener("change", function (event) {
+                      if (event.target.checked) {
+                        document.querySelector("span").innerText = "Checked";
+                      } else {
+                        document.querySelector("span").innerText = "Unchecked";
+                      }
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <input type="checkbox"><span>Unchecked</span>
+              </div>
+            </div>
+            <div id="Event12Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("input").on("change", function (event) {
+                      if ($(event.target).is(":checked")) {
+                        $("span").text("Checked");
+                      } else {
+                        $("span").text("Unchecked");
+                      }
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <input type="checkbox"><span>Unchecked</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>Made at Assembler School</footer>

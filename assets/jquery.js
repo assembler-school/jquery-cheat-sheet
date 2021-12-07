@@ -284,3 +284,12 @@ $("#Event11Q span").on("mouseover", function (event) {
 $("#Event11Q span").on("mouseleave", function (event) {
   $(event.target).text("Mouse is not over");
 });
+
+//Checkbox checked or unchecked
+$("#Event12Q input").on("change", function (event) {
+  if ($(event.target).is(":checked")) {
+    $("#Event12Q span").text("Checked");
+  } else {
+    $("#Event12Q span").text("Unchecked");
+  }
+});
