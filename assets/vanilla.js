@@ -342,3 +342,16 @@ document
   .addEventListener("click", function () {
     document.querySelector("#Event7V span").innerText = imgloadedVanilla;
   });
+
+//Image load
+let imgloadedFailVanilla = false;
+document.querySelector("#Event8V img").addEventListener("error", function () {
+  imgloadedFailVanilla = true;
+});
+document.querySelector("#Event8V img").setAttribute("src", "fail.jpg");
+
+document
+  .querySelector("#Event8V button")
+  .addEventListener("click", function () {
+    document.querySelector("#Event8V span").innerText = imgloadedFailVanilla;
+  });

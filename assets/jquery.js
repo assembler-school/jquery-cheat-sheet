@@ -253,3 +253,15 @@ $("#Event7Q img")
 $("#Event7Q button").on("click", function () {
   $("#Event7Q span").text(imgloadedQuery);
 });
+
+//Image load failed
+let imgloadFailQuery = false;
+$("#Event8Q img")
+  .on("error", function () {
+    imgloadedFailQuery = true;
+  })
+  .attr("src", "fail.jpg");
+
+$("#Event8Q button").on("click", function () {
+  $("#Event8Q span").text(imgloadedFailQuery);
+});
