@@ -1485,6 +1485,55 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Form submited
+          </button>
+          <div class="content">
+            <div id="Event9V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    document.querySelector("form").addEventListener("submit", function(event) {
+                      event.preventDefault();
+                      document.querySelector("span").innerText("Form Submited!");
+                    })
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <form id="vanillaForm">
+                  <input type="text">
+                  <input type="submit">
+                </form>
+                <span></span>
+              </div>
+            </div>
+            <div id="Event9Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("form").on("sumbit", function (event) {
+                      event.preventDefault();
+                      $("span").text("Form Submited!");
+                    })
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <form id="queryForm">
+                  <input type="text">
+                  <input type="submit">
+                </form>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>Made at Assembler School</footer>

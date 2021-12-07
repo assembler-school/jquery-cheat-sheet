@@ -355,3 +355,11 @@ document
   .addEventListener("click", function () {
     document.querySelector("#Event8V span").innerText = imgloadedFailVanilla;
   });
+
+//Form submited
+document
+  .querySelector("#vanillaForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    document.querySelector("#Event9V span").innerText = "Form Submited!";
+  });

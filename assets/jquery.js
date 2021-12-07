@@ -265,3 +265,9 @@ $("#Event8Q img")
 $("#Event8Q button").on("click", function () {
   $("#Event8Q span").text(imgloadedFailQuery);
 });
+
+//Form submited
+$("#queryForm").on("submit", function (event) {
+  event.preventDefault();
+  $("#Event9Q span").text("Form Submited!");
+});
