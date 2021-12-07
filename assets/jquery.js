@@ -241,3 +241,15 @@ $("#Event6Q button").on("click", function () {
     $("#Event6Q span").text(event.target.value);
   });
 });
+
+//Image loaded
+let imgloadedQuery = false;
+$("#Event7Q img")
+  .on("load", function () {
+    imgloadedQuery = true;
+  })
+  .attr("src", "https://via.placeholder.com/150");
+
+$("#Event7Q button").on("click", function () {
+  $("#Event7Q span").text(imgloadedQuery);
+});

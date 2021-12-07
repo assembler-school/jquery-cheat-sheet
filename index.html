@@ -1393,6 +1393,52 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            Image loaded
+          </button>
+          <div class="content">
+            <div id="Event7V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let imgLoaded = false;
+                    document.querySelector("img").addEventListener("load", function() {
+                      imgLoaded = true;
+                    })
+                    document.querySelector("img").setAttribute("src","image.jpg");
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <span></span>
+                <img src="" alt="">
+              </div>
+            </div>
+            <div id="Event7Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    let imgLoaded = false;
+                    $("img").on("load", function () {
+                      imgLoaded = true
+                    }).attr("src","image.jpg")
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <button>Press me</button>
+                <span></span>
+                <img src="" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>Made at Assembler School</footer>

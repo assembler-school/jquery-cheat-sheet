@@ -327,3 +327,18 @@ document
       span.innerText = event.target.value;
     });
   });
+
+//Image load
+let imgloadedVanilla = false;
+document.querySelector("#Event7V img").addEventListener("load", function () {
+  imgloadedVanilla = true;
+});
+document
+  .querySelector("#Event7V img")
+  .setAttribute("src", "https://via.placeholder.com/150");
+
+document
+  .querySelector("#Event7V button")
+  .addEventListener("click", function () {
+    document.querySelector("#Event7V span").innerText = imgloadedVanilla;
+  });
