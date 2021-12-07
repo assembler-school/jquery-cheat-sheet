@@ -276,3 +276,11 @@ $("#queryForm").on("submit", function (event) {
 $("#Event10Q select").on("change", function () {
   $("#Event10Q span").text("Value is: " + $("#Event10Q select").val());
 });
+
+//When you position the mouse over an element
+$("#Event11Q span").on("mouseover", function (event) {
+  $(event.target).text("Mouse is over");
+});
+$("#Event11Q span").on("mouseleave", function (event) {
+  $(event.target).text("Mouse is not over");
+});

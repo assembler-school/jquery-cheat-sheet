@@ -1583,6 +1583,45 @@
             </div>
           </div>
         </div>
+        <div>
+          <button type="button" class="collapsible">
+            When you position the mouse over an element (JQUERY NOT WORKING)
+          </button>
+          <div class="content">
+            <div id="Event11V" class="flex">
+              <div class="theory">
+                <h3>JS Vanilla</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    document.querySelector("select").addEventListener("change", function(event) {
+                      document.querySelector("span").innerText = "Value is: " + event.target.value;;
+                    })
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <span>Mouse is not over</span>
+              </div>
+            </div>
+            <div id="Event11Q" class="flex">
+              <div class="theory">
+                <h3>jQuery</h3>
+                <p>Code:</p>
+                <pre>
+                  <code>
+                    $("select").on("change", function () {
+                      $("span").text("Value is: " + $("select").val());
+                    });
+                  </code>
+                </pre>
+              </div>
+              <div class="demo">
+                <span">Mouse is not over</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>Made at Assembler School</footer>

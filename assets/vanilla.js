@@ -371,3 +371,15 @@ document
     document.querySelector("#Event10V span").innerText =
       "Value is: " + event.target.value;
   });
+
+//When you position the mouse over an element
+document
+  .querySelector("#Event11V span")
+  .addEventListener("mouseover", function (event) {
+    event.target.innerText = "Mouse is over";
+  });
+document
+  .querySelector("#Event11V span")
+  .addEventListener("mouseleave", function (event) {
+    event.target.innerText = "Mouse is not over";
+  });
