@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer> </script>
+    <script src="/src/assets/js/jquerySelected.js" defer></script>
+    <script src="/src/assets/js/jsVanillaSelector.js" defer></script>
+    <link rel="stylesheet" href="/src/assets/css/sections.css">
+    <title>Selectors</title>
+</head>
+<body>
+    <section id="s36" class="ParentElement40">
+        <div class="modal-content">
+            <div class="generalcontent">
+                <h2>Get a parent element</h2>
+                <div class="js">
+                    <h2>JavaScript</h2>
+                    <div class="codigocontent">
+                        <code>element.parentElement;</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get a button parent</p>
+                        <div class="parentButton">
+                            <button id="jsbtntest40">Click Hear!</button>
+                        </div>
+                        <div id="jsresult40"></div>
+                    </div>
+                </div>
+                <div class="jq">
+                    <h2>JQuery</h2>
+                    <div class="codigocontent">
+                        <code>$(Selection).parent()</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get a button parent</p>
+                        <div class="parentButton">
+                        <button id="jqbtntest40">Click Hear!</button>
+                        </div>
+                        <div id="jqresult40"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="s37"  class="CollectionChildren41">
+        <div class="modal-content">
+            <div class="generalcontent">
+                <h2>Get a collection childre</h2>
+                <div class="js">
+                    <h2>JavaScript</h2>
+                    <div class="codigocontent">
+                        <code>myElement.children;</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get a collection childre of the list</p>
+                        <button id="jsbtntest41_1">Click Hear!</button>
+                        <ul id="jsbtntest41">
+                            <li>a</li>
+                            <li>b</li>
+                            <li>c</li>
+                        </ul>
+                        <div id="jsresult41"></div>
+                    </div>
+                </div>
+                <div class="jq">
+                    <h2>JQuery</h2>
+                    <div class="codigocontent">
+                        <code>$(Selection).children()</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get a collection childre of the list</p>
+                        <button id="jqbtntest41_1">Click Hear!</button>
+                        <ul id="jqbtntest41">
+                            <li>a</li>
+                            <li>b</li>
+                            <li>c</li>
+                        </ul>
+                        <div id="jqresult41"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="s38" class="AllOfClass42">
+        <div class="modal-content">
+            <div class="generalcontent">
+                <h2>Get all elements whith a class</h2>
+                <div class="js">
+                    <h2>JavaScript</h2>
+                    <div class="codigocontent">
+                        <code>document.getElementsByClassName("class")</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get element with the class is a</p>
+                        <button id="jsbtntest42">Click Hear!</button>
+                        <div class="jsa">class:a</div>
+                        <div class="jsb">class:b</div>
+                        <div class="jsa">class:a</div>
+                    </div>
+                </div>
+                <div class="jq">
+                    <h2>JQuery</h2>
+                    <div class="codigocontent">
+                        <code>$(".class")</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get element with the class is a</p>
+                        <button id="jqbtntest42">Click Hear!</button>
+                        <div class="jqb">class:b</div>
+                        <div class="jqa">class:a</div>
+                        <div class="jqb">class:b</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="s39" class="itemById43">
+        <div class="modal-content">
+            <div class="generalcontent">
+                <h2>Get element by Id</h2>
+                <div class="js">
+                    <h2>JavaScript</h2>
+                    <div class="codigocontent">
+                        <code>document.getElementById("Id");</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get a element with the id:b</p>
+                        <button id="jsbtntest43">Click Hear!</button>
+                        <div id="jsresult43_1">id:a</div>
+                        <div id="jsresult43_2">id:b</div>
+                        <div id="jsresult43_3">id:c</div>
+                        <div id="jsresult43"></div>
+                    </div>
+                </div>
+                <div class="jq">
+                    <h2>JQuery</h2>
+                    <div class="codigocontent">
+                        <code>$('#Id')</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get a element with the id:a</p>
+                        <button id="jqbtntest43">Click Hear!</button>
+                        <div id="jqresult43_1">id:a</div>
+                        <div id="jqresult43_2">id:b</div>
+                        <div id="jqresult43_3">id:c</div>
+                        <div id="jqresult43"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="s40" class="AllForAttr44">
+        <div class="modal-content">
+            <div class="generalcontent">
+                <h2>Get elements for attributs</h2>
+                <div class="js">
+                    <h2>JavaScript</h2>
+                    <div class="codigocontent">
+                        <code>document.querySelectorAll('option[selected]');</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get elements with the src atributs</p>
+                        <button id="jsbtntest44">Click Hear!</button>
+                        <div id="jsresult44.1">class:a</div>
+                        <div id="jsresult44.2">class:b</div>
+                        <div id="jsresult44.3" src="">class:a</div>
+                    </div>
+                </div>
+                <div class="jq">
+                    <h2>JQuery</h2>
+                    <div class="codigocontent">
+                        <code>$('option[selected]');</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get elements with the src atributs</p>
+                        <button id="jqbtntest44">Click Hear!</button>
+                        <div id="jqresult44.1" src=''>class:b</div>
+                        <div id="jqresult44.2">class:a</div>
+                        <div id="jqresult44.3">class:b</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="s41" class="selectValue45">
+        <div class="modal-content">
+            <div class="generalcontent">
+                <h2>Get a value for the input</h2>
+                <div class="js">
+                    <h2>JavaScript</h2>
+                    <div class="codigocontent">
+                        <code>select.value</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get the value is selected</p>
+                        <select id="jsbtntest45" onchange="myFunctionjs45()">
+                            <option value="a">a</option>
+                            <option value="b">b</option>
+                            <option value="c">c</option>
+                        </select>
+                        <div id="jsresult45"></div>
+                    </div>
+                </div>
+                <div class="jq">
+                    <h2>JQuery</h2>
+                    <div class="codigocontent">
+                        <code>$('select').val()</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get the value is selected</p>
+                        <select id="jqbtntest45" onchange="myFunctionjq45()">
+                            <option value="a">a</option>
+                            <option value="b">b</option>
+                            <option value="c">c</option>
+                        </select>
+                        <div id="jqresult45"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="s42" class="ValueInputs46">
+        <div class="modal-content">
+            <div class="generalcontent">
+                <h2>Get the value inputs</h2>
+                <div class="js">
+                    <h2>JavaScript</h2>
+                    <div class="codigocontent">
+                        <code>select.value</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>this is checked?</p>
+                        <input type="checkbox" id="jsbtntest46">
+                        <div id="jsresult46"></div>
+                    </div>
+                </div>
+                <div class="jq">
+                    <h2>JQuery</h2>
+                    <div class="codigocontent">
+                        <code>$('select').val()</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>this is checked?</p>
+                        <input type="checkbox" id="jqbtntest46" >
+                        <div id="jqresult46"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="s43" class="firstElement47">
+        <div class="modal-content">
+            <div class="generalcontent">
+                <h2>Get a first element</h2>
+                <div class="js">
+                    <h2>JavaScript</h2>
+                    <div class="codigocontent">
+                        <code>button.append(element)</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get a first element of the div</p>
+                        <button id="jsbtntest47">Click Hear!</button>
+                        <div id="jsresult47">
+                            <div>a</div>
+                            <div>b</div>
+                            <div>c</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jq">
+                    <h2>JQuery</h2>
+                    <div class="codigocontent">
+                        <code>$('element').first();</code>
+                    </div>
+                    <div class="testcontent">
+                        <p>Get a first element of the div</p>
+                        <button id="jqbtntest47">Click Hear!</button>
+                        <div id="jqresult47">
+                            <div>a</div>
+                            <div>b</div>
+                            <div>c</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

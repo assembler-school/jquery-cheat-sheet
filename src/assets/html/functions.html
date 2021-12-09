@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer> </script>
+    <script src="/src/assets/js/jqueryFunctions.js" defer></script>
+    <script src="/src/assets/js/jsvanillaFunctions.js" defer></script>
+    <link rel="stylesheet" href="/src/assets/css/sections.css">
+    <title>functions</title>
+</head>
+<body>
+
+<section id="s16" class="createElement13">
+<div class="modal-content">
+    <div class="generalcontent">
+        <h2>Create HTML element</h2>
+        <div class="js">
+            <h2>JavaScript</h2>
+            <div class="codigocontent">
+                <code>document.createElement("div");</code>
+            </div>
+            <div class="testcontent">
+                <p>Create new element</p>
+                <button id="jsbtntest13">Click Hear!</button>
+                <div id="jsresult13"></div>
+            </div>
+        </div>
+        <div class="jq">
+            <h2>JQuery</h2>
+            <div class="codigocontent">
+                <code>$("< div>< /div>")</code>
+            </div>
+            <div class="testcontent">
+                <p>Create new element</p>
+                <button id="jqbtntest13">Click Hear!</button>
+                <div id="jqresult13"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<section id="s17" class="removeElement14">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Remove HTML element </h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>element.remove();</code>
+                </div>
+                <div class="testcontent">
+                    <p>Remove the div</p>
+                    <button id="jsbtntest14">Click Hear!</button>
+                    <div id="jsresult14">remove me</div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$("element").remove();</code>
+                </div>
+                <div class="testcontent">
+                    <p>Remove the div</p>
+                    <button id="jqbtntest14">Click Hear!</button>
+                    <div id="jqresult14">remove me</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s18" class="removeAllElements15">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Remove all elements whith a class</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>for (const elem of allElems) {
+                        elem.remove();
+                    };</code>
+                </div>
+                <div class="testcontent">
+                    <p>Remove elements with class a</p>
+                    <button id="jsbtntest15">Click Hear!</button>
+                    <div class="jsa">class:a</div>
+                    <div class="jsb">class:b</div>
+                    <div class="jsa">class:a</div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$('.allElems').remove();</code>
+                </div>
+                <div class="testcontent">
+                    <p>Remove elements with class a</p>
+                    <button id="jqbtntest15">Click Hear!</button>
+                    <div class="jqb">class:b</div>
+                    <div class="jqa">class:a</div>
+                    <div class="jqb">class:b</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s19" class="apendElement16">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Apend a element </h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>button.append(element)</code>
+                </div>
+                <div class="testcontent">
+                    <p>Append a element in the Text</p>
+                    <button id="jsbtntest16">Click Hear!</button>
+                    <div id="jsresult16" class="border"><div>texto</div></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$("button").append(element);</code>
+                </div>
+                <div class="testcontent">
+                    <p>Append a element in the Text</p>
+                    <button id="jqbtntest16">Click Hear!</button>
+                    <div id="jqresult16" class="border"><div>text</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s20" class="prependElement17">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Prepend a element</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>button.prepend(element);</code>
+                </div>
+                <div class="testcontent">
+                    <p>Prepend a element in the text</p>
+                    <button id="jsbtntest17">Click Hear!</button>
+                    <div id="jsresult17" class="border"><div>text</div></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$("button").prepend(element);</code>
+                </div>
+                <div class="testcontent">
+                    <p>Prepend a element in the text</p>
+                    <button id="jqbtntest17">Click Hear!</button>
+                    <div id="jqresult17" class="border"><div>text</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s21" class="createAddAfter18">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Create and add after</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>.insertAdjacentElement("afterEnd", el)}</code>
+                </div>
+                <div class="testcontent">
+                    <p>Insert after the text</p>
+                    <button id="jsbtntest18">Click Hear!</button>
+                    <div id="jsresult18" class="border">text</div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$(element).after(button);</code>
+                </div>
+                <div class="testcontent">
+                    <p>Insert after the text</p>
+                    <button id="jqbtntest18">Click Hear!</button>
+                    <div id="jqresult18" class="border">text</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s22" class="createAddBefor19">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Create and add befor</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>.insertAdjacentElement("beforebegin", el)</code>
+                </div>
+                <div class="testcontent">
+                    <p>Insert befor the text</p>
+                    <button id="jsbtntest19">Click Hear!</button>
+                    <div id="jsresult19" class="border">text</div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$(element).before(button);</code>
+                </div>
+                <div class="testcontent">
+                    <p>Insert befor the text</p>
+                    <button id="jqbtntest19">Click Hear!</button>
+                    <div id="jqresult19" class="border">text</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s23"class="cloneElement20">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Clone Element</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>newElement = oldElement.cloneNode(true);</code>
+                </div>
+                <div class="testcontent">
+                    <p>Clon Element</p>
+                    <img id="jsbtntest20" src="/src/assets/img/gato.jpg" alt="Gato">
+                    <div id="jsresult20"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>newElement = $("oldElement").clone()</code>
+                </div>
+                <div class="testcontent">
+                    <p>Clon Element</p>
+                    <img id="jqbtntest20" src="/src/assets/img/gato.jpg" alt="Gato">
+                    <div id="jqresult20"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s24" class="AddClass21">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Add a new clas</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>element.classList.add("mystyle");</code>
+                </div>
+                <div class="testcontent">
+                    <p>Add a class</p>
+                    <button id="jsbtntest21">Click Hear!</button>
+                    <div id="jsresult21"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$("element").addClass("mystyle");</code>
+                </div>
+                <div class="testcontent">
+                    <p>Add a class</p>
+                    <button id="jqbtntest21">Click Hear!</button>
+                    <div id="jqresult21"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s25" class="RemoveClass22">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Remove a class</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>element.classList.remove("mystyle");</code>
+                </div>
+                <div class="testcontent">
+                    <p>Remove a clas with button</p>
+                    <button id="jsbtntest22" class="btnclass">Click Hear!</button>
+                    <div id="jsresult22"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$("element").removeClass("mystyle")</code>
+                </div>
+                <div class="testcontent">
+                    <p>Remove a clas with button</p>
+                    <button id="jqbtntest22" class="btnclass">Click Hear!</button>
+                    <div id="jqresult22"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s26" class="ToggleClass23">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Toggel a class</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>element.classList.toggle("mystyle");</code>
+                </div>
+                <div class="testcontent">
+                    <p>Toggel a clas with a button</p>
+                    <button id="jsbtntest23">Click Hear!</button>
+                    <div id="jsresult23"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$("element").toggleClass("mystyle"); </code>
+                </div>
+                <div class="testcontent">
+                    <p>Toggel a clas with a button</p>
+                    <button id="jqbtntest23">Click Hear!</button>
+                    <div id="jqresult23"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s27" class="addAttr24">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Add a Attribute</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>element.setAttribute("attr","value attr")</code>
+                </div>
+                <div class="testcontent">
+                    <p>Add a Attribute with button</p>
+                    <button id="jsbtntest24">Click Hear!</button>
+                    <div id="jsresult24"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$("element").attr("attr", "value attr");</code>
+                </div>
+                <div class="testcontent">
+                    <p>Add a Attribute with button</p>
+                    <button id="jqbtntest24">Click Hear!</button>
+                    <div id="jqresult24"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s28" class="removeAttr25">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Remove a Attribute</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>element.removeAttribute("attr")</code>
+                </div>
+                <div class="testcontent">
+                    <p>Remove a Attribute with button</p>
+                    <button id="jsbtntest25">Click Hear!</button>
+                    <div><button id="jsresult25" disabled=true>disabled:true</button></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$("element").removeAttr("attr")</code>
+                </div>
+                <div class="testcontent">
+                    <p>Remove a Attribute with button</p>
+                    <button id="jqbtntest25">Click Hear!</button>
+                    <div><button id="jqresult25" disabled=true>disabled:true</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s29" class="addDataAttr26">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Add Data attribute</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>element.setAttribute("data-pre")</code>
+                </div>
+                <div class="testcontent">
+                    <p>add the data-src attribute</p>
+                    <img id="jsbtntest26" src="/src/assets/img/gato.jpg" alt="Gato">
+                    <div id="jsresult26"></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code> element.data("pre")</code>
+                </div>
+                <div class="testcontent">
+                    <p>add the data-src attribute</p>
+                    <img id="jqbtntest26" src="/src/assets/img/gato.jpg" alt="Gato">
+                    <div id="jqresult26"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s30" class="removeDataAttr27">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Remove Data attribute</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>element.removeAttribute("data-pre")</code>
+                </div>
+                <div class="testcontent">
+                    <p>remove the data-src attribute</p>
+                    <img id="jsbtntest27" data-src="/src/assets/img/gato.jpg" src="/src/assets/img/gato.jpg" alt="Gato">
+                    <div id="jsresult27">/src/assets/img/gato.jpg</div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>element.removeAttr("data-pre")
+                        element.removeData("pre")
+                    </code>
+                </div>
+                <div class="testcontent">
+                    <p>remove the data-src attribute</p>
+                    <img id="jqbtntest27" data-src="/src/assets/img/gato.jpg" src="/src/assets/img/gato.jpg" alt="Gato">
+                    <div id="jqresult27">/src/assets/img/gato.jpg</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s31" class="changeAttr28">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Change the attribut</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>element.attr=val attr</code>
+                </div>
+                <div class="testcontent">
+                    <p>Change the attribut of the button</p>
+                    <button id="jsbtntest28">Click Hear!</button>
+                    <div><button id="jsresult28" disabled=true>disabled:true</button></div>
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>element.attr=val attr</code>
+                </div>
+                <div class="testcontent">
+                    <p>Change the attribut of the button</p>
+                    <button id="jqbtntest28">Click Hear!</button>
+                    <div><button id="jqresult28" disabled=true>disabled:true</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s32" class="HideShow29">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Hide and Show</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>element.style.display = 'block';
+                        element.style.display = 'none';
+                    </code>
+                </div>
+                <div class="testcontent">
+                    <p>the image is hiden?</p>
+                    <button id="jsbtntest29">Click Hear!</button>
+                    <img id="jsresult29" src="/src/assets/img/gato.jpg" alt="Gato" style="display: block;">
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>element.show()
+                        element.hide()
+                        element.toggle()
+                    </code>
+                </div>
+                <div class="testcontent">
+                    <p>the image is hiden?</p>
+                    <button id="jqbtntest29">Click Hear!</button>
+                    <img id="jqresult29" src="/src/assets/img/gato.jpg" alt="Gato" style="display: block;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s33" class="FadeInFadeOut30">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>FedeIn FedeOut</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$(".checkbox").change(function () {
+                        if (this.checked) {
+                            //Do stuff
+                        }}})
+                    </code>
+                </div>
+                <div class="testcontent">
+                    <p>the image is hiden?</p>
+                    <button id="jqbtntest30">Fade Out</button> <br>
+                    <img id="jqresult30" src="/src/assets/img/gato.jpg" alt="Gato">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="s34" class="animate31">
+    <div class="modal-content">
+        <div class="generalcontent">
+            <h2>Animates</h2>
+            <div class="js">
+                <h2>JavaScript</h2>
+                <div class="codigocontent">
+                    <code>animationHTML.style.animationName = 'example';
+                        animationHTML.style.transition = '2s';</code>
+                </div>
+                <div class="testcontent">
+                    <p>animate the imge</p>
+                    <button id="jsbtntest31">Click Hear!</button>
+                    <img id="jsresult31" src="/src/assets/img/gato.jpg" alt="Gato" style="display: block;">
+                </div>
+            </div>
+            <div class="jq">
+                <h2>JQuery</h2>
+                <div class="codigocontent">
+                    <code>$("img").animate()</code>
+                </div>
+                <div class="testcontent">
+                    <p>animate the imge</p>
+                    <button id="jqbtntest31">Click Hear!</button>
+                    <img id="jqresult31" src="/src/assets/img/gato.jpg" alt="Gato" style="display: block;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
