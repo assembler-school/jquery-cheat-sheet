@@ -1,0 +1,115 @@
+body{
+    width: 90%;
+}
+nav{
+    width: 100%;
+    display: grid;
+    margin-left: 5%;
+}
+
+#content{
+    width: 100%;
+    display: grid;
+    margin-left: 5%;
+}
+
+li a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar li{
+    margin: 0 auto;
+    list-style: none;
+    color: white;
+}
+
+.lineItem{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+h2{
+    text-align: center;
+}
+
+.contentTests{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.contentTests * {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstLine{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2% 0 10% 0;
+    text-align: center;
+}
+
+h5{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: .5em;
+    text-align: left;
+}
+
+.divTest{
+    font-weight: bolder;
+    font-size: 2em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: .5em;
+    text-align: center;
+}
+
+#cursorElementIdTestResultjs{
+    background-color: blue;
+}
+
+#dblclickElementIdTestResultjs{
+    background-color: blue;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+p{
+    background-color: blue;
+}
+span{
+    background-color: green;
+}
+
+#menu ul, li{
+    font-size: large;
+    color: black;
+}
+.pClassGreen{
+    background-color: green;
+}
+.pdif{
+    background-color: blue;
+}
+.pdifjq{
+    background-color: blue;
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    10%   {background-color: rgb(113, 236, 230);}
+    25%  {background-color: rgb(243, 75, 229);}
+    45%  {background-color: rgb(22, 32, 44);}
+    50%  {background-color: rgb(223, 195, 41);}
+    75%  {background-color: rgb(206, 154, 189);}
+    90% {background-color: rgb(238, 238, 238);}
+    100% {background-color: green;}
+}
