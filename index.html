@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>JQUERY AND JAVASCRIPT CHEAT SHEET</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+</head>
+<body class="body">
+    <header class="header-container">
+        <div class="header-container--inner">
+            <div class="logo">MOceanHi</div>
+            <h1 class="header-container--title">jQuery and Javascript Cheat Sheet</h1>
+            <div class="logo-info">by Marcel Durgante</div>
+        </div>
+    </header>
+    <main class="main-container" id="main-cont">
+        <div class="functions-container col-3">
+            <h2>Functions</h2>
+            <ul class="ul-action--list">
+                <li id="act1">Create an HTML element</li>
+                <li id="act2">Remove an HTML element</li>
+                <li id="act3">Append an HTML element</li>
+                <li id="act4">Prepend an HTML element</li>
+                <li id="act5">Create and add HTML element after an element</li>
+                <li id="act6">Create and add HTML element before an element</li>
+                <li id="act7">Clone an HTML element</li>
+                <li id="act8">Add class to HTML item</li>
+                <li id="act9">Remove class to HTML item</li>
+                <li id="act10">Toggle class of HTML item</li>
+                <li id="act11">Add disabled attribute to HTML button</li>
+                <li id="act12">Remove disabled attribute of HTML button</li>
+                <li id="act13">Set data-src attribute to img element</li>
+                <li id="act14">Remove data-src attribute of img element</li>
+                <li id="act15">Hide HTML element on click (display: none)</li>
+                <li id="act16">Show HTML element on click (display: block)</li>
+                <li id="act17">Fade in HTML element with jQuery</li>
+                <li id="act18">Fade out HTML element with jQuery</li>
+                <li id="act19">Animate item after 2s from initial page load</li>
+            </ul>
+        </div>
+        <div class="selectors-container col-3">
+            <h2>Selectors</h2>
+            <ul class="ul-action--list">
+                <li id="act20">Iterate collection of elements</li>
+                <li id="act21">Get parent element of certain element</li>
+                <li id="act22">Get collection of children of certain element</li>
+                <li id="act23">Get all elements that have a certain class</li>
+                <li id="act24">Get item by id</li>
+                <li id="act25">Get all elements that have a certain class and property</li>
+                <li id="act26">Get selected option of a select element</li>
+                <li id="act27">Change attribute of a first element</li>
+                <li id="act28">Show value of a first input on the page</li>
+                <li id="act29">Remove all items from a specific selector</li>
+            </ul>
+        </div>
+        <div class="events-container col-3">
+            <h2>Events</h2>
+            <ul class="ul-action--list">
+                <li id="act30">HTML document has been loaded</li>
+                <li id="act31">HTML item clicked</li>
+                <li id="act32">HTML item double clicked</li>
+                <li id="act33">Checkbox checked or unchecked</li>
+                <li id="act34">Select element option changed</li>
+                <li id="act35">Text value on input is changed</li>
+                <li id="act36">Form submitted</li>
+                <li id="act37">Key is pressed on keyboard</li>
+                <li id="act38">Mouse positioned over element</li>
+                <li id="act39">Mouse cursor's being moved</li>
+                <li id="act40">Image loaded</li>
+                <li id="act41">Image fail to load</li>
+                <li id="act42">Show the clicked item of an UL list</li>
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <h3>Copyright © 2021 MOceanHi Ltd. All rights reserved.</h3>
+    </footer>
+</body>
+ <!-- MODAL -->
+<div class="modal-bg--container" id="modal-bg">
+    <div class="modal-content--container">
+        <button class="btn btn-modal--close"><i class="material-icons md-dark md-inactive"
+                id="icon-modal--close">highlight_off</i></button>
+        <div class="modal-select--container">
+            <input class="modal-input--select" type="radio" name="radio" id="btnJS1"></input>
+            <label for="btnJS1" id="labelJS">JAVASCRIPT</label>
+            <input class="modal-input--select" type="radio" name="radio" id="btnJQ1"></input>
+            <label for="btnJQ1" id="labelJQ">JQUERY</label>
+        </div>
+        <div class="div-screen div-screen--js" id="screenJS">JAVASCRIPT</div>
+        <div class="div-screen div-screen--jq" id="screenJQ">JQUERY</div>
+    </div>
+</div>
+</html>

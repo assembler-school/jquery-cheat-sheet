@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --black: rgb(0, 0, 0);
+  --black-rgba--06: rgba(0, 0, 0, 0.6);
+  --black-rgba--026: rgba(0, 0, 0, 0.26);
+  --black-rgba--054: rgba(0, 0, 0, 0.54);
+  --charcoal-rgba--012: rgba(70, 70, 70, 0.12);
+  --white: rgb(255, 255, 255);
+  --white-rgba--055: rgba(255, 255, 255, 0.55);
+  --grey-light: rgb(252, 252, 252);
+  --grey-medium: rgba(209, 209, 209);
+  --grey: rgb(150, 150, 150);
+  --grey-dark-very: rgb(44, 44, 44);
+  --red: rgb(218, 49, 49);
+  --black-light: rgb(27, 27, 27);
+  --color1: rgb(120, 212, 212);
+  --color2: rgb(233, 124, 233);
+  --color3: rgb(109, 192, 127);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  background-color: var(--black);
+}
+
+ul {
+  margin-bottom: 3rem;
+}
+
+li {
+  font-size: 0.9rem;
+  list-style: none;
+  margin-top: 0.8rem;
+  margin-left: 4rem;
+  cursor: pointer;
+}
+
+li:hover {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--black-light);
+}
+
+h1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  font-size: 2rem;
+  margin-left: 5rem;
+}
+
+h2 {
+  text-align: center;
+  margin: 2rem 2rem;
+}
+
+footer {
+  grid-area: 3 / 1 / span 1 / span 3;
+  color: var(--grey);
+  font-size: 0.5rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  align-self: center;
+  padding: 0.5rem;
+}
+
+i {
+  color: var(--black);
+}
+
+.main-container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  min-height: 43rem;
+}
+
+@media (min-width: 900px) {
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.header-container {
+  grid-area: 1 / 1 / span 1 / span 3;
+  background-color: var(--black);
+}
+
+.header-container--inner {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 30% 70%;
+  color: var(--grey);
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+  margin-left: 1.3rem;
+}
+
+.logo-info {
+  font-size: 1rem;
+  margin-left: 1.3rem;
+}
+
+.functions-container {
+  background-color: var(--color1);
+  border-radius: 10px;
+  margin: 0.3rem;
+}
+
+.selectors-container {
+  background-color: var(--color2);
+  border-radius: 10px;
+  margin: 0.3rem;
+}
+
+.events-container {
+  background-color: var(--color3);
+  border-radius: 10px;
+  margin: 0.3rem;
+}
+
+/* MODAL */
+
+/* modal (background) */
+
+.modal-bg--container {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: auto; /* Sit on top */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: var(--black-rgba--06);
+}
+
+/* modal content/box */
+
+.modal-content--container {
+  display: grid;
+  grid-template-rows: 50px 100%;
+  position: relative;
+  background-color: var(--grey-light);
+  margin: 12% auto; /* 15% from the top and centered */
+  width: 50rem; /* Could be more or less, depending on screen size */
+  height: 30rem;
+}
+
+/* modal close button */
+
+.btn-modal--close {
+  position: absolute;
+  right: 0;
+  transform: translate(50%, -50%);
+  border: none;
+  background-color: var(--white);
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+/* modal close material  */
+
+.material-icons.md-dark.md-inactive {
+  color: var(--black-rgba--026);
+}
+
+.material-icons.md-dark.md-inactive:hover,
+.material-icons.md-dark.md-inactive:focus {
+  color: var(--black-rgba--054);
+}
+
+/* modal select options JS JQuery */
+
+.modal-select--container {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.modal-input--select {
+  display: none;
+}
+
+label {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  margin-top: 0;
+  padding: 30px 35px;
+  height: 80px;
+  width: 50%;
+  font-weight: 600;
+  text-align: center;
+  justify-self: center;
+  overflow-y: hidden;
+}
+
+#labelJS {
+  background-color: var(--grey-dark-very);
+  color: var(--white);
+}
+
+#labelJQ {
+  color: var(--grey-dark-very);
+  background-color: var(--grey-light);
+}
+
+/* MODAL SCREENS JS and JQUERY ON SELECTION */
+
+.div-screen--js {
+  display: none;
+  background-color: var(--grey-dark-very);
+  padding-left: 5px;
+  color: var(--white);
+}
+
+.div-screen--jq {
+  display: none;
+  background-color: var(--grey-light);
+  padding-top: 5px;
+  padding-left: 5px;
+}
